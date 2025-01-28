@@ -1,0 +1,76 @@
+{
+    "full_chat": {
+        "id": "0b211878584fabc4f1951f252ca9970bf4ad37c6a72ad62aa1dc45da92dbea0e",
+        "about": "Yma o Hyd. Real Welsh Nationalists. The sons of Glyndwr. The daughters of Rebecca. Not those anti English pro immigrant drongos like Plaid, Yes Cymru or Welsh Labour . If you want to message me  @WelshNationalistJoe   Joe Marsh.",
+        "pts": 49609,
+        "participants_count": 3515
+    },
+    "chats": [
+        {
+            "id": "0b211878584fabc4f1951f252ca9970bf4ad37c6a72ad62aa1dc45da92dbea0e",
+            "title": "8677a74275dc85a05689740c3e8c7b353bbf331bee4866d404c11b00d69a474c",
+            "date": "2022-11-14T15:50:12+00:00",
+            "broadcast": true,
+            "access_hash": 6160503246179665272,
+            "access_hashes": {
+                "elisa": 6160503246179665272
+            }
+        }
+    ],
+    "metrics": {
+        "in_recommendation": [
+            "3b2994a8791af9295427608f90d23a4a87216c74bfd647af4c4274d551ad0566",
+            "2a6d82202d59630782483ba2fdec8707387c3934c04f803f36da86161a1fd036",
+            "e632e4837b62217275dfbc9708675d96dcb4a53b27e75043eab4365a70427506",
+            "3499ca12c216cc4311a388007a35558600df1910fa52f5b7ded3002567bd025b",
+            "fe4a904fdd3f528e77a801942a26917e267fa49feca2d7a9339222c9d50a3b3b",
+            "3e1af4f0a2e2d7ce819944d2faa8ba07599647da3238e0193a221a4dad948ad9"
+        ],
+        "distance_from_seed": 2,
+        "seed": "c9d2cac5c80263d8de2856ba64c849e134d56285152353caafcaa5055ecb1ec4",
+        "language": "EN",
+        "pts": 49609,
+        "participants_count": 3515
+    },
+    "extended": {
+        "recommended_channels": [
+            "ac173d342ee6152123901eca32bfc7d089a7023d0bf0463cedbac595d81cc9cd",
+            "84cf7a5e0a4435b1a26b2970458b1867315a0d697cc9339564c82ed696861d30",
+            "3b2994a8791af9295427608f90d23a4a87216c74bfd647af4c4274d551ad0566",
+            "148715d3dc52d62f67f0da61e58b5a1f4101f539a98bd0fd87e9649657ec9f34",
+            "f272381dcedc91fc1918b04c33405f43d5f232bfeda80bd171423c438ea58ada",
+            "d62c2194bb9c3cb26beb691e044ac52a52bf63a3388ac13581af4eff3fba1d61",
+            "e632e4837b62217275dfbc9708675d96dcb4a53b27e75043eab4365a70427506",
+            "5611f939b4cbac528c37e0e33520ed1ffc2ad1ef51245bfe48c79d5e30d1ba46",
+            "3499ca12c216cc4311a388007a35558600df1910fa52f5b7ded3002567bd025b",
+            "102375a0556cc83ba7bb94867329d782f01c510afaea605bfc64253c0e5cf4c0",
+            "7b6fb9833955bdc9751de03810c2ce0f9d5f528d9aed67695df99dc70c95fb51",
+            "d92517a00c88297f4516a6b42211458442ad19e7e287269a3dd06aacefaafde0",
+            "fdb933cbc482a47f56197f7776565a0533e528db98369f17d1055c9d0f19cd14",
+            "01f80da4f487d7ac31797aa0e040c7cbbb22d175d4916a13342cece70daf1ec7",
+            "fed552d4d7ac8c7df1c936139e6f2f9cc084f9c4e03a136f00e4a573df1aed55",
+            "4c27d48d2b69a1e1930d438c4aebd3be94d3f7709e80cf2c723536c4abc0f5c6",
+            "7d87d4642e9591e10fff7afc3c1daaffcaf571efdcec3dead25872b7b1a16073",
+            "09436b4996f4ae63eaccfd65cf8310df1d4065f38743af0dba9ca8d7f27d0448",
+            "67ec103cc927bb75719999b9ef4bbac52fb61f3e4cb304263c7ffd2e1ecfff93",
+            "09675012dd1d950e6719d08f59e815aa129bde9b9e139d71c7b4b3af3867ce48",
+            "0bb931a9eae315b675563be6463c726a7333fd62b0726ddc46eb2958ffb05c50",
+            "89d30573e7af0e6faa57d90d8647bd8ddd3f7f784ea5f814ceccca2230391c81",
+            "2fbc0c1faf829b883162b815a6e5d6667b9b16494693e4d1f91de60916f38fc3",
+            "e8b663744765845758d964ca8b289cfa61a76eb454e30c94da763607f4d36bd3",
+            "bac8bb9cc112b0ff15fdb9a2081ceb3c37bd7aa7a58fa1ab771e670615dc9033",
+            "d8c6636a9c0da3cabf6bb224044b54513d86957418c9bac5e3bf4a229b6921d1",
+            "2caf03d90ea5f9417be03fde9425c95c98a3f58412f7d947a04665e2b1c536d8",
+            "6ac139aff1fc39e4e3f495c0e171a3de8c54e510aa8cd02c8c83783c2574ed09",
+            "08b7140512ec8e6e12c67e4442490a07f7b7f36bff0421edceb579e404d756fe",
+            "fe4a904fdd3f528e77a801942a26917e267fa49feca2d7a9339222c9d50a3b3b"
+        ],
+        "participation_score": {
+            "participation_score": 22,
+            "n_out_recommended": 30
+        },
+        "message_count": 5022,
+        "url_count": 1982
+    },
+    "last_queried_at": "2025-01-15T12:09:27.993177+00:00"
+}

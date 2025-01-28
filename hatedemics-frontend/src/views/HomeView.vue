@@ -1,0 +1,43 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+
+// This starter template is using Vue 3 <script setup> SFCs
+// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+// import HelloWorld from '@/components/HelloWorld.vue';
+
+// const jsonLd = JSON.stringify(
+//   {
+//     '@schema': 'https://json.schemastore.org/jsonld.json',
+//     '@context': 'http://schema.org',
+//     '@type': 'WebSite',
+//     name: 'Vite Vue3 Vuetify3 Beta TypeScript Startar',
+//     url: 'https://github.com/logue/vite-vuetify-ts-starter',
+//     description: 'Vite Vue3 Vuetify3 Beta TypeScript Demo'
+//   },
+//   null,
+//   2
+// );
+import { useGlobal } from '@/store';
+
+/** Global Store */
+const globalStore = useGlobal();
+const msg = ref('Hello from HomeView');
+const showSnackbar = (message: string) => globalStore.setMessage(message);
+
+</script>
+
+<template>
+  <v-container>
+    <!-- <hello-world msg="⚡Hello Vue 3.3 + Vuetify 3 + TypeScript + Vite⚡" /> -->
+    <h1>{{ msg }}</h1>
+        <v-btn @click="showSnackbar('Test')">Snackbar test</v-btn>
+
+  </v-container>
+  <!-- <teleport to="head">
+    <meta name="keyword" content="template,typescript,vue3,vuetify,vite,vite-template,volar" />
+    <meta name="description" content="Vite Vue3 Vuetify TypeScript Demo" />
+    <component :is="'script'" type="application/ld+json">
+      {{ jsonLd }}
+    </component>
+  </teleport> -->
+</template>
