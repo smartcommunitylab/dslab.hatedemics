@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { version } from 'vuetify';
-
 import Meta from '@/Meta';
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
 
 const title = import.meta.env.VITE_APP_TITLE;
 
@@ -19,7 +21,7 @@ defineProps({
     <v-responsive class="align-center text-center fill-height">
       <v-img src="@/assets/logo.svg" alt="vuetify" :width="256" class="logo mx-auto" />
       <h1 class="text-h2 font-weight-bold mb-3">
-        Welcome to the Vuetify
+        {{ t("welcome.title") }}
         <v-code tag="code">{{ 'v' + version }}</v-code>
       </h1>
       <p>{{ msg }}</p>

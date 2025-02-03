@@ -15,7 +15,7 @@ import InspectorView from '@/views/InspectorView.vue';
 import DiscussionView from '@/views/DiscussionView.vue';
 import CounterspeechWriting from '@/views/CounterspeechWriting.vue';
 import Channels from '@/views/Channels.vue';
-
+import Login from '@/views/LoginView.vue';
 // Pinia Store
 
 // Unimplemented in Vuetify 3.5.6
@@ -25,6 +25,16 @@ import Channels from '@/views/Channels.vue';
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
+    name: 'Login',
+    component: Login
+  },
+  // {
+  //   path: '/changepassword',
+  //   name: 'changePassword',
+  //   component: changePassword
+  // },
+  {
+    path: '/home',
     name: 'Home',
     component: HomeView
   },

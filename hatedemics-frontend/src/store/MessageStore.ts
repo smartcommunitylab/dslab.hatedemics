@@ -1,25 +1,25 @@
 // store/channels/index.
 import { API } from "@/services";
-import type { APIResponse, Channel } from "@/services/types";
+import type { APIResponse, Message } from "@/services/types";
 import type { AxiosError } from "axios";
 import { defineStore } from "pinia";
 import { ref } from 'vue';
 
-export const useChannelsStore = defineStore("channelsStore", () => {
+export const useMessagesStore = defineStore("messagesStore", () => {
 
-  const channels = ref<Channel[]>([]);
+  const messages = ref<Message[]>([]);
 
-  function initChannels(data: Channel[]) {
-    channels.value = data;
+  function initMessages(data: Message[]) {
+    messages.value = data;
   }
 
 
-  async function dispatchGetChannels(): Promise<APIResponse<null>> {
+  async function dispatchGetMessages(): Promise<APIResponse<null>> {
     try {
-      const { status, data } = await API.channels.getChannels();
+      const { status, data } = await API.messages.getMessages(1);
       if (status === 200) {
         // initChannels(data.content);
-        initChannels(data);
+        initMessages(data);
         return {
           success: true,
           content: null,
@@ -41,8 +41,8 @@ export const useChannelsStore = defineStore("channelsStore", () => {
   }
 
   return {
-    channels,
-    initChannels,
-    dispatchGetChannels,
+    messages,
+    initMessages,
+    dispatchGetMessages,
   };
 });

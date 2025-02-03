@@ -5,15 +5,38 @@ export type APIResponse<T> = {
     content: T;
     status?: number;
   }
-
-//   Channel Type
-  export type Channel = {
-    full_chat: FullChat
-    chats: Chat[]
-    metrics: Metrics
-    extended: Extended
-    last_queried_at: string
-  }
+export type Channel = {
+  date: string
+  about: string
+  pts: number
+  broadcast: boolean
+  participants_count: number
+  id: string
+  linked_chats_ids: string
+  last_queried_at: string
+  distance_from_seed: number
+  language: string
+  n_in_recommendation: number
+  n_out_recommended: string
+  participation_score: string
+  message_count: string
+  unknown_domains: string
+  known_domains: string
+  IRI: string
+  sdIRI: string
+  dIRI: string
+  unrel: string
+  
+}
+//   Channel Type TODO da rifare
+  // export type Channel = {
+  //   id:string
+  //   full_chat: FullChat
+  //   chats: Chat[]
+  //   metrics: Metrics
+  //   extended: Extended
+  //   last_queried_at: string
+  // }
   
   export type FullChat = {
     id: string
