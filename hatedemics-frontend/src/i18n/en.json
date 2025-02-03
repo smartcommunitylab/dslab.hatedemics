@@ -1,6 +1,19 @@
 {
     "welcome": {
         "title":"Welcome to Hatedemics"
+    },
+    "channelInfo":{
+        "title":"Title",
+        "description":"Description:",
+        "nMessages":"Number of messages:",
+        "nUsers":"Number of users:",
+        "languages":"Languages:",
+        "iri": "Infodemic Risk:",
+        "hateSpeech": "Hate Speech Risk:",
+        "lastUpdate": "Last update:",
+        "mainTopics": "Main topics:",
+        "messages": "Messages"
+
     }
 
 }

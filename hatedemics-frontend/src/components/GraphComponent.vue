@@ -26,13 +26,13 @@ const config: GraphConfigInterface<Node, Link> = {
   curvedLinks: true,
   renderHoveredNodeRing: true,
   hoveredNodeRingColor: "#4B5BBF",
-  simulation: {
-    linkDistance: 1,
-    linkSpring: 2,
-    repulsion: 0.2,
-    gravity: 0.1,
-    decay: 100000
-  },
+  // simulation: {
+  //   linkDistance: 1,
+  //   linkSpring: 2,
+  //   repulsion: 0.2,
+  //   gravity: 0.1,
+  //   decay: 100000
+  // },
   events: {
     onClick: (node, i, pos, event) => {
       if (node && i !== undefined) {
