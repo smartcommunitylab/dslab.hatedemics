@@ -12,7 +12,9 @@
         "hateSpeech": "Hate Speech Risk:",
         "lastUpdate": "Last update:",
         "mainTopics": "Main topics:",
-        "messages": "Messages"
+        "messages": "Messages",
+        "emptySelection":"No selection yet. Please select a channel"
+
 
     }
 

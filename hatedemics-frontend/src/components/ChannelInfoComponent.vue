@@ -18,7 +18,7 @@ const goToChats = () => {
 }
 </script>
 <template>
-  <v-card class="mx-auto" max-width="344">
+  <v-card class="mx-auto" max-width="344" v-if="channelsStore.selectedChannel">
     <v-card-text>
       <div>{{ channelsStore.selectedChannel?.id }}</div>
       <p v-if="channelsStore.selectedChannel?.about">
@@ -54,5 +54,8 @@ const goToChats = () => {
       <v-btn color="deep-purple-accent-4" text="Learn More" variant="text" @click="goToChats()">{{ t("channelInfo.messages") }}</v-btn>
     </v-card-actions>
   </v-card>
+  <div v-else>
+    {{ t("channelInfo.emptySelection") }}
+  </div>
 
 </template>

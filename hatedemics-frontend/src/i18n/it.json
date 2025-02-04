@@ -12,7 +12,8 @@
         "hateSpeech": "Hate Speech Risk:",
         "lastUpdate": "Ultimo aggiornamento:",
         "mainTopics": "Principali argomenti:",
-        "messages": "Messaggi"
+        "messages": "Messaggi",
+        "emptySelection":"Nessuna selezione. Scegliere un canale per visualizzare le statistiche"
     }
 
 }
