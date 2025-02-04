@@ -34,7 +34,7 @@ const updateGrap = (lang:string) => {
 const handleClick = ( row:any) =>{
   console.log("Clicked item: ", row)
   channelsStore.selectChannel(channelsStore.channels.filter(c => {
-          console.log(c);
+          // console.log(c);
           return c.id === row.id})[0])
 }
 watch(selectedChannel, (newValue,oldValue) => {

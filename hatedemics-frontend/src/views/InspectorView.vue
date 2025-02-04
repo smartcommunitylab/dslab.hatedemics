@@ -11,6 +11,10 @@ const topic = ref('Topic and stat of single chat');
   <v-container>
     <h1>{{ msg }}</h1>
     <h1>{{ topic }}</h1>
+    <v-row>
+      <v-col>
+      </v-col>
+      </v-row>
   </v-container>
 
 </template>

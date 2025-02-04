@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "@cosmograph/cosmograph": "^1.4.2",
-    "@cosmograph/cosmos": "^1.6.1",
     "@mdi/font": "^7.4.47",
     "axios": "^1.7.9",
     "core-js": "^3.39.0",
