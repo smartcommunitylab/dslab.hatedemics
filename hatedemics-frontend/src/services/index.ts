@@ -1,8 +1,9 @@
 //services/index.ts
 import channelApi from "./channels/channelsApi.ts";
-import messageApi from "./messages/messagesApi.ts";
-
+import chatApi from "./chats/chatsApi.ts";
+import topicsApi from "./topics/topicsApi.ts";
 export const API = {
     channels: channelApi,
-    messages: messageApi,
+    chats: chatApi,
+    topics: topicsApi
 };

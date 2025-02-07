@@ -16,7 +16,7 @@ export const useMessagesStore = defineStore("messagesStore", () => {
 
   async function dispatchGetMessages(): Promise<APIResponse<null>> {
     try {
-      const { status, data } = await API.messages.getMessages(1);
+      const { status, data } = await API.chats.getChats(1);
       if (status === 200) {
         // initChannels(data.content);
         initMessages(data);

@@ -1,30 +1,38 @@
 // store/channels/index.
 import { API } from "@/services";
-import type { APIResponse, Channel } from "@/services/types";
+import type { APIResponse, Channel, ChannelInfo } from "@/services/types";
 import type { AxiosError } from "axios";
 import { defineStore } from "pinia";
 import { ref } from 'vue';
 
 export const useChannelsStore = defineStore("channelsStore", () => {
-  const selectedChannel = ref<Channel>();
+  const selectedChannelInfo = ref<ChannelInfo>();
+  const channelsInfo = ref<ChannelInfo[]>([]);
   const channels = ref<Channel[]>([]);
+  const selectedChannel = ref<Channel>();
 
+  function initChannelsInfo(data: ChannelInfo[]) {
+    channelsInfo.value = data;
+  }
   function initChannels(data: Channel[]) {
     channels.value = data;
-    // selectedChannel.value = data[0];
   }
+  function selectChannelInfo(channel:ChannelInfo){
+    selectedChannelInfo.value = channel
+    console.log("selected")
+  };
   function selectChannel(channel:Channel){
     selectedChannel.value = channel
     console.log("selected")
   };
-  const unselectChannel = () => (selectedChannel.value = undefined);
+  
+  const unselectChannel = () => (selectedChannelInfo.value = undefined);
 
   async function dispatchGetChannels(): Promise<APIResponse<null>> {
     try {
-      const { status, data } = await API.channels.getChannels();
+      const { status, data } = await API.channels.getChannelsInfo();
       if (status === 200) {
-        // initChannels(data.content);
-        initChannels(data);
+        initChannelsInfo(data);
         return {
           success: true,
           content: null,
@@ -48,8 +56,12 @@ export const useChannelsStore = defineStore("channelsStore", () => {
   return {
     channels,
     selectedChannel,
+    channelsInfo,
+    selectedChannelInfo,
+    initChannelsInfo,
     initChannels,
     selectChannel,
+    selectChannelInfo,
     unselectChannel,
     dispatchGetChannels,
   };

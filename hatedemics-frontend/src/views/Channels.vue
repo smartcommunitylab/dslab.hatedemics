@@ -3,29 +3,28 @@ import { ref, reactive } from "vue";
 // import GraphComponent from '@/components/GraphComponent.vue';
 import GraphComponent from "@/components/GraphComponent.vue";
 import ChannelInfoComponent from "@/components/ChannelInfoComponent.vue";
-const msg = ref("Hello from Channels");
-const search = ref("");
 import { onMounted } from "vue";
 import { useChannelsStore } from "../store/ChannelStore";
-import type { Channel } from "@/services/types";
 import { useI18n, type Locale } from "vue-i18n";
 import { useConfig } from "@/store";
 import { watch } from 'vue'
 import { storeToRefs } from "pinia";
-
-const languages= [{language:'Italiano',value:'IT'},{language:'English',value:'EN'},{language:'Espanol',value:'ES'}]
+import type { ChannelInfo } from "@/services/types";
 const { t } = useI18n();
+const msg = ref("");
+const search = ref("");
+const languages= [{language:'Italiano',value:'IT'},{language:'English',value:'EN'},{language:'Espanol',value:'ES'}]
 const channelsStore = useChannelsStore();
 const channels = ref<any[]>([]);
 const configStore = useConfig();
-const { selectedChannel } = storeToRefs(channelsStore)
+const { selectedChannelInfo } = storeToRefs(channelsStore)
   const selectedLanguage = ref<string>();
 
 const headers = reactive<any[]>([
-  { title: "ID", key: "id" },
-  { title: "# messages", key: "count" },
-  {title:"# partecipants",key:"participants_count"},
-  {title:"# expanded",key:"IRI"},
+  { title: t("channel.header.id"), key: "id" },
+  { title: t("channel.header.messages"), key: "count" },
+  {title:t("channel.header.partecipants"),key:"participants_count"},
+  {title:t("channel.header.IRI"),key:"IRI"},
 ]);
 
 const updateGrap = (lang:string) => {
@@ -33,25 +32,21 @@ const updateGrap = (lang:string) => {
 };
 const handleClick = ( row:any) =>{
   console.log("Clicked item: ", row)
-  channelsStore.selectChannel(channelsStore.channels.filter(c => {
-          // console.log(c);
+  channelsStore.selectChannelInfo(channelsStore.channelsInfo.filter(c => {
           return c.id === row.id})[0])
 }
-watch(selectedChannel, (newValue,oldValue) => {
+watch(selectedChannelInfo, (newValue,oldValue) => {
     console.log('selectedNode',newValue)
-    // if (newValue)
-    //   graph.selectNodeById(newValue.id)
-    // graph.selectNodeByIndex(i);
-    // graph.zoomToNodeByIndex(i);
   })
 onMounted(async () => {
   const { success, status } = await channelsStore.dispatchGetChannels();
 //add info of number
+ msg.value=t("channel.title")
   if (!success) {
     alert("Ups, something happened 🙂");
     console.log("Api status ->", status);
   } else {
-    channels.value = channelsStore.channels.map((item) => ({
+    channels.value = channelsStore.channelsInfo?.map((item:ChannelInfo) => ({
       id: item.id,
       count: item.message_count,
       participants_count:item.participants_count,
@@ -64,9 +59,9 @@ onMounted(async () => {
 </script>
 
 <template>
-  <v-container>
+  <v-container :fluid="true">
     <v-row>
-      <v-col>
+      <v-col cols="8">
         <h1>{{ msg }}</h1>
         <v-select
           label="Language"
@@ -78,11 +73,14 @@ onMounted(async () => {
         >
         </v-select>
         <GraphComponent />
+        
       </v-col>
-      <v-col>
+      <v-col cols="4">
         <h1>info</h1>
         <ChannelInfoComponent />
-        <v-text-field
+      </v-col>
+    </v-row>
+    <v-row><v-col><v-text-field
           v-model="search"
           label="Search"
           prepend-inner-icon="mdi-magnify"
@@ -94,7 +92,7 @@ onMounted(async () => {
           <template v-slot:item="props">
             <tr
               @click="handleClick(props.item)"
-              :class="{ selected: props.item.id === selectedChannel?.id }"
+              :class="{ selected: props.item.id === selectedChannelInfo?.id }"
             >
               <td class="text-xs-right">{{ props.item.id }}</td>
               <td class="text-xs-right">{{ props.item.participants_count }}</td>
@@ -102,9 +100,7 @@ onMounted(async () => {
               <td class="text-xs-right">{{ props.item.IRI }}</td>
             </tr>
           </template>
-        </v-data-table>
-      </v-col>
-    </v-row>
+        </v-data-table></v-col></v-row>
   </v-container>
 </template>
 <style scoped>

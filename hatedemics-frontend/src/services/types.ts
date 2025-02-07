@@ -5,7 +5,7 @@ export type APIResponse<T> = {
     content: T;
     status?: number;
   }
-export type Channel = {
+export type ChannelInfo = {
   date: string
   about: string
   pts: number
@@ -29,61 +29,54 @@ export type Channel = {
   
 }
 //   Channel Type TODO da rifare
-  // export type Channel = {
-  //   id:string
-  //   full_chat: FullChat
-  //   chats: Chat[]
-  //   metrics: Metrics
-  //   extended: Extended
-  //   last_queried_at: string
-  // }
-  
-  export type FullChat = {
-    id: string
-    about: string
-    pts: number
-    
-    participants_count: number
-  }
-  
-  export type Chat = {
-    id: string
-    title: string
-    date: string
-    broadcast: boolean
-    access_hash: number
-    access_hashes: AccessHashes
-  }
-  
-  export type AccessHashes = {
-    elisa: number
-  }
-  
-  export type Metrics = {
-    in_recommendation: string[]
-    distance_from_seed: number
-    seed: string
-    language: string
-    IRI: number
-    HRI: number
-    pts: number
-    checkworthy:number
-    participants_count: number
-    main_topics: string[]
-    targets: string[]
-  }
-  
-  export type Extended = {
-    recommended_channels: string[]
-    participation_score: ParticipationScore
-    message_count: number
-    url_count: number
-  }
-  
-  export type ParticipationScore = {
-    participation_score: number
-    n_out_recommended: number
-  }
+export type Channel = {
+  full_chat: FullChat
+  chats: Chat[]
+  metrics: Metrics
+  extended: Extended
+  last_queried_at: string
+}
+
+export type FullChat = {
+  id: string
+  about: string
+  pts: number
+  participants_count: number
+}
+
+export type Chat = {
+  id: string
+  title: string
+  date: string
+  broadcast: boolean
+  access_hash: number
+  access_hashes: AccessHashes
+}
+
+export type AccessHashes = {
+  elisa: number
+}
+
+export type Metrics = {
+  in_recommendation: string[]
+  distance_from_seed: number
+  seed: string
+  language: string
+  pts: number
+  participants_count: number
+}
+
+export type Extended = {
+  recommended_channels: string[]
+  participation_score: ParticipationScore
+  message_count: number
+  url_count: number
+}
+
+export type ParticipationScore = {
+  participation_score: number
+  n_out_recommended: number
+}
 
 
 //   Message Type
@@ -215,6 +208,11 @@ export type Reaction = {
   _: string
   emoticon: string
 }
+export type Topic = {
+    id: string
+    presence: number
+  hate: number
+  topic: string}
 
 
   //Type for Infodemics ?

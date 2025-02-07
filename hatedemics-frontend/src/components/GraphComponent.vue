@@ -7,11 +7,11 @@ import { watch } from 'vue'
 import { storeToRefs } from 'pinia';
 
 const channelsStore = useChannelsStore();
-const { selectedChannel } = storeToRefs(channelsStore)
+const { selectedChannelInfo } = storeToRefs(channelsStore)
 let graph: Cosmograph<Node, Link>;
 
 let config = {}
-watch(selectedChannel, (newValue,oldValue) => {
+watch(selectedChannelInfo, (newValue,oldValue) => {
     console.log('selectedNode',newValue)
     if (newValue){
       //select node by id (from 0 to x)
@@ -28,14 +28,15 @@ watch(selectedChannel, (newValue,oldValue) => {
     }
   })
 const graphElement = useTemplateRef('graphElement')
-const msg = ref('Hello from GraphComponent');
+// const msg = ref('Hello from GraphComponent');
 // Set the data
 onMounted(() => {
 
   const config={
   backgroundColor: "#151515",
-  nodeSize: 1,
-  nodeColor: "#4B5BBF",
+  nodeSize: (n:Node) => n.size,
+  nodeColor: (n:Node) => n.color,
+  nodeLabelAccessor:(n:Node) => n.name,
   nodeGreyoutOpacity: 0.1,
   linkWidth: 0.1,
   linkColor: "#5F74C2",
@@ -45,22 +46,27 @@ onMounted(() => {
   renderHoveredNodeRing: true,
   hoveredNodeRingColor:'red',
   focusedNodeRingColor: 'yellow',
-
   disableSimulation:true,
   simulation: {
     linkDistance: 1,
     linkSpring: 2,
     repulsion: 0.2,
     gravity: 0.1,
-    decay: 100000
+    decay: 100000,
+    simulationFriction: 0.1,
+  simulationLinkSpring: 0.5, 
+  simulationLinkDistance: 2.0,
   },
-  onClick: (node, i, pos, event) => {
+/*************  ✨ Codeium Command ⭐  *************/
+  /**
+/******  4ca4f437-0516-4d8c-bf12-a5d7bdeb7d7f  *******/  onClick: (node:Node, i?: number) => {
       if (node && i !== undefined) {
         // graph.selectNodeById(node.id);
         // graph.zoomToNodeById(node.id);
         graph.selectNode(node);
+        graph.focusNode(node);
          graph.zoomToNode(node);
-        channelsStore.selectChannel(channelsStore.channels.filter(c => {
+        channelsStore.selectChannelInfo(channelsStore.channelsInfo.filter(c => {
           return c.id === node.name
         })[0])
 
@@ -74,10 +80,11 @@ onMounted(() => {
 
 graph = new Cosmograph(graphElement.value!, config);
 graph.setData(nodes, links);
-graph.setZoomLevel(0.9);
-setTimeout(() => {
-    graph.pause();
-}, 5000);
+// graph.setZoomLevfitViewel(0.9);
+graph.fitView()
+// setTimeout(() => {
+//     graph.pause();
+// }, 5000);
 // }
 
 // // Create a Cosmograph instance with the target element
@@ -89,13 +96,13 @@ setTimeout(() => {
 
 <template>
   <v-container>
-    <h1>{{ msg }}</h1>
+    <!-- <h1>{{ msg }}</h1> -->
     <div ref="graphElement"></div>
   </v-container>
 </template>
 <style lang="css" scoped>
 canvas {
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
 }
 </style>

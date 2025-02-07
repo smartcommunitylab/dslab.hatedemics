@@ -7,10 +7,13 @@ import {
 } from 'vue';import { useChannelsStore } from "../store/ChannelStore";
 import { useI18n } from "vue-i18n";
 import { useRouter } from 'vue-router';
+import { storeToRefs } from 'pinia';
 const { t } = useI18n();
 const channelsStore = useChannelsStore();
 const router = useRouter();
-const isExtended: ComputedRef<boolean> = computed(() => (channelsStore?.selectedChannel?.IRI ? true : false));
+const { selectedChannelInfo } = storeToRefs(channelsStore)
+
+const isExtended: ComputedRef<boolean> = computed(() => (selectedChannelInfo?.value?.IRI ? true : false));
 const goToChats = () => {
   router.push({
     name: 'Inspector',
@@ -18,35 +21,35 @@ const goToChats = () => {
 }
 </script>
 <template>
-  <v-card class="mx-auto" max-width="344" v-if="channelsStore.selectedChannel">
+  <v-card class="mx-auto" max-width="344" v-if="selectedChannelInfo">
     <v-card-text>
-      <div>{{ channelsStore.selectedChannel?.id }}</div>
-      <p v-if="channelsStore.selectedChannel?.about">
-        {{ t("channelInfo.description") }} {{ channelsStore.selectedChannel?.about }}
+      <div>{{ selectedChannelInfo?.id }}</div>
+      <p v-if="selectedChannelInfo?.about">
+        {{ t("channelInfo.description") }} {{ selectedChannelInfo?.about }}
       </p>
-      <p v-if="channelsStore.selectedChannel?.message_count">
+      <p v-if="selectedChannelInfo?.message_count">
         {{ t("channelInfo.nMessages") }}
-        {{ channelsStore.selectedChannel?.message_count }}
+        {{ selectedChannelInfo?.message_count }}
       </p>
-      <p v-if="channelsStore.selectedChannel?.participants_count">
+      <p v-if="selectedChannelInfo?.participants_count">
         {{ t("channelInfo.nUsers") }}
-        {{ channelsStore.selectedChannel?.participants_count }}
+        {{ selectedChannelInfo?.participants_count }}
       </p>
-      <p v-if="channelsStore.selectedChannel?.language">
-        {{ t("channelInfo.languages") }} {{ channelsStore.selectedChannel?.language }}
+      <p v-if="selectedChannelInfo?.language">
+        {{ t("channelInfo.languages") }} {{ selectedChannelInfo?.language }}
       </p>
-      <p v-if="channelsStore.selectedChannel?.IRI">
-        {{ t("channelInfo.iri") }} {{ channelsStore.selectedChannel?.IRI }}
+      <p v-if="selectedChannelInfo?.IRI">
+        {{ t("channelInfo.iri") }} {{ selectedChannelInfo?.IRI }}
       </p>
-      <p v-if="channelsStore.selectedChannel?.sdIRI">
-        {{ t("channelInfo.hateSpeech") }} {{ channelsStore.selectedChannel?.sdIRI }}
+      <p v-if="selectedChannelInfo?.sdIRI">
+        {{ t("channelInfo.hateSpeech") }} {{ selectedChannelInfo?.sdIRI }}
       </p>
-      <p v-if="channelsStore.selectedChannel?.last_queried_at">
+      <p v-if="selectedChannelInfo?.last_queried_at">
         {{ t("channelInfo.lastUpdate") }}
-        {{ new Date(channelsStore.selectedChannel?.last_queried_at).toUTCString() }}
+        {{ new Date(selectedChannelInfo?.last_queried_at).toUTCString() }}
       </p>
-      <p v-if="channelsStore.selectedChannel?.IRI">
-        {{ t("channelInfo.mainTopics") }} {{ channelsStore.selectedChannel?.IRI }}
+      <p v-if="selectedChannelInfo?.IRI">
+        {{ t("channelInfo.mainTopics") }} {{ selectedChannelInfo?.IRI }}
       </p>
     </v-card-text>
 
