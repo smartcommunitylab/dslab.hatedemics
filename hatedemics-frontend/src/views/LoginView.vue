@@ -1,9 +1,11 @@
 <script setup lang="ts">
-// import dataService from './dataService'
+// import API.dialogs from './API.dialogs'
 import { onMounted, ref } from 'vue';
 import { useLoginStore } from '../store/LoginStore'
 import { useRouter, useRoute } from 'vue-router'
 import { useGlobal } from '@/store';
+import { API } from "@/services";
+
 const globalStore = useGlobal();
 
 const router = useRouter();
@@ -19,31 +21,24 @@ const showSnackbar = (message: string) => globalStore.setMessage(message);
 const regole = ref([
   
 ])
-function submit() {
-  globalStore.setMessage("Benvenuti");
-  router.push({
-    name: 'Home',
-    // query: {
-    //   ...route.query,
-    //   ...query,
-    // },
-  })
-  // const self = this
-  //     this.loading = true
-  //     dataService
-  //       .getToken(this.username, this.password)
-  //       .then(function (data) {
-  //         self.loginStore.updateBearer(data.data.access_token)
-  //         self.loginStore.updateUser(self.username, data.data.user_id, data.data.is_admin, data.data.project_manager)
-  //         self.loading = false
-  //         self.$router.push({ name: 'projects' })
-  //       })
-  //       .catch(function (error) {
-  //         self.snackbar = true
-  //         self.loading = false
-  //       })
-  //   }
-}
+async function submit() {
+  // const { status, data } = await API.chats.getChats(1);
+  try {
+
+  const { status, data } = await API.login.login(username.value, password.value);
+  loading.value = true;
+
+  if (status === 200) {
+    loginStore.updateBearer(data.access_token)
+          loginStore.updateUser(username.value, data.user_id, data.is_admin, data.project_manager)
+          loading.value = false
+          router.push({ name: 'projects' })
+  }
+} catch (error) {
+
+  }
+
+    }
  onMounted(() => {
    if (localStorage.getItem('token')) {
      //Tries to load projects with stored token. If '401' goes back to 'login'

@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import useWordCloud from './useWordCloud'
+const { Vue3WordCloud } = useWordCloud();
 
 const words = ref([['romance', 19], ['horror', 3], ['fantasy', 7], ['adventure', 3]])
 const onWordClick = function(word:string) {
@@ -7,13 +9,11 @@ const onWordClick = function(word:string) {
 			}
 </script>
 <template>
-<vue-word-cloud :words="words">
-  <template v-slot="props">
-  <div v-if="props">
-    <div :title="props.weight" style="cursor: pointer;" @click="onWordClick(props.word)">
-      {{ props.text }}
+<vue3-word-cloud :words="words">
+  <template v-slot:name="{text, weight, word}">
+    <div :title="weight" style="cursor: pointer;" @click="onWordClick(word)">
+      {{ text }}
     </div>
-  </div>
   </template>
-</vue-word-cloud>
+</vue3-word-cloud>
 </template>

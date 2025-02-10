@@ -1,5 +1,5 @@
 // the axios instance and types
-import axios from "axios";
+import axios from 'axios';
 import http from "@/services/api";
 import { type APIResponse } from "@/services/types";
 export type Node = {

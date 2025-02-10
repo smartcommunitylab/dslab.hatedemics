@@ -20,11 +20,13 @@
     "core-js": "^3.39.0",
     "pinia": "^2.3.1",
     "pinia-plugin-persistedstate": "^4.2.0",
+    "splitpanes": "^3.1.5",
     "vue": "^3.5.13",
     "vue-i18n": "^11.1.0",
     "vue-router": "^4.5.0",
+    "vue3-word-cloud": "^1.0.4",
     "vuetify": "^3.7.7",
-    "vuewordcloud": "^19.0.0",
+    "vuewordcloud": "^18.7.12",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {

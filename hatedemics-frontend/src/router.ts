@@ -16,6 +16,11 @@ import DiscussionView from '@/views/DiscussionView.vue';
 import CounterspeechWriting from '@/views/CounterspeechWriting.vue';
 import Channels from '@/views/Channels.vue';
 import Login from '@/views/LoginView.vue';
+import annotationInterface from '@/components/AnnotationInterface.vue'
+import ProjectsView from '@/components/ProjectsList.vue'
+import tasks from '@/components/TaskList.vue'
+
+
 // Pinia Store
 
 // Unimplemented in Vuetify 3.5.6
@@ -58,9 +63,34 @@ const routes: RouteRecordRaw[] = [
     component: DiscussionView
   },
   {
-    path: '/writing',
+    path: '/projects',
+    name: 'projects',
+    component: ProjectsView
+  },
+  {
+    path: '/projects/writing',
     name: 'Counterspeech',
     component: CounterspeechWriting
+  },
+  {
+    path: '/projects/writing/:projectID/tasks/:taskID/annotate',
+    name: 'annotation',
+    component: annotationInterface
+  },
+  {
+    path: '/projects/writing/:projectID/tasks/:taskID/annotate/parent/:annotationParent',
+    name: 'annotation_parent',
+    component: annotationInterface
+  },
+  {
+    path: '/projects/writing/:projectID/tasks/:taskID/annotate/:annotationID',
+    name: 'annotation_edit',
+    component: annotationInterface
+  },
+  {
+    path: '/projects/writing/:projectID/tasks/',
+    name: 'tasks',
+    component: tasks
   },
   {
     path: '/about',

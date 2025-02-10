@@ -17,17 +17,17 @@ const items: DrawerMenuItem[] = [
     items: [
       {
         title: 'Channels',
-        icon: 'mdi-account',
+        icon: 'mdi-graph',
         to: { name: 'Channels' }
       },
       {
         title: 'Inspector',
-        icon: 'mdi-account',
+        icon: 'mdi-text-box',
         to: { name: 'Inspector' }
       },
       {
         title: 'Discussion',
-        icon: 'mdi-account',
+        icon: 'mdi-forum',
         to: { name: 'Discussion' }
       }
     ],
@@ -35,8 +35,8 @@ const items: DrawerMenuItem[] = [
   },
   {
     title: 'Counterspeech Writing',
-    icon: 'mdi-home',
-    to: { name: 'Counterspeech' }
+    icon: 'mdi-chat',
+    to: { name: 'projects' }
   },
 
   {
