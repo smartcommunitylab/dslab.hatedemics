@@ -8,20 +8,30 @@ import { ref } from 'vue';
 export const useTopicsStore = defineStore("topicsStore", () => {
   const topics = ref<Topic[]>([]);
   const selectedTopic = ref<Topic>();
-  function initTopics(data: Topic[]) {
-    topics.value = data;
+  function initTopics(data: any) {
+    topics.value = Object.keys(data.topics).map(function (key) {
+      return {
+        name: data.topics[key]["topic-name"],
+        count_percentage: data.topics[key]["topic-count_percentage"],
+        hs_percentage: data.topics[key]["topic-hs_percentage"],
+        cw_percentage: data.topics[key]["topic-cw_percentage"],
+        npw: data.npw.topics[key]["topic-npw"],
+        hate_npw: data.npw.topics[key]["topic-hate_npw"],
+        nonhate_npw: data.npw.topics[key]["topic-nonhate_npw"]
+      };
+    });
   }
 
-  function selectTopic(channel:Topic){
+  function selectTopic(channel: Topic) {
     selectedTopic.value = channel
     console.log("selected")
   };
-  
+
   const unselectTopic = () => (selectedTopic.value = undefined);
 
-  async function dispatchGetTopics(id:string): Promise<APIResponse<null>> {
+  async function dispatchGetTopics(id: string): Promise<APIResponse<null>> {
     try {
-        //TODO
+      //TODO
       const { status, data } = await API.topics.getTopics(id);
       if (status === 200) {
         initTopics(data);

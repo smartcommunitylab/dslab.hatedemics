@@ -1,6 +1,6 @@
 <script>
 import { API } from "@/services";
-
+import axios from 'axios';
 export default {
   name: 'dialog-dialogue',
   props: [

@@ -1,37 +1,38 @@
 {
     "welcome": {
-        "title":"Welcome to Hatedemics"
+        "title": "Welcome to Hatedemics"
     },
-    "inspect":{
-        "title":"Topics"
+    "inspect": {
+        "title": "Topics"
     },
-    "channel":{
-        "title":"Channels"
+    "channel": {
+        "title": "Channels"
     },
-    "channelTable":{
-        "header":{
-            "id":"ID",
-            "messages":"Messages",
-            "partecipants":"Participants",
-            "IRI":"Infodemic Risk"
+    "channelTable": {
+        "header": {
+            "id": "ID",
+            "messages": "Messages",
+            "partecipants": "Participants",
+            "IRI": "Infodemic Risk"
         }
     },
-    "topicsTable":
-    {"title":"Title"},
-    "channelInfo":{
-        "title":"Title",
-        "description":"Description:",
-        "nMessages":"Number of messages:",
-        "nUsers":"Number of users:",
-        "languages":"Languages:",
+    "topicsTable": {
+        "title": "Title"
+    },
+    "channelInfo": {
+        "title": "Title",
+        "description": "Description:",
+        "nMessages": "Number of messages:",
+        "nUsers": "Number of users:",
+        "languages": "Languages:",
         "iri": "Infodemic Risk:",
         "hateSpeech": "Hate Speech Risk:",
         "lastUpdate": "Last update:",
         "mainTopics": "Main topics:",
         "messages": "Messages",
-        "emptySelection":"No selection yet. Please select a channel"
-
-
+        "emptySelection": "No selection yet. Please select a channel"
+    },
+    "message":{
+        "title": "Message"
     }
-
 }

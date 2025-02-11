@@ -13,12 +13,6 @@ const channelsStore = useChannelsStore();
 const router = useRouter();
 const { selectedChannelInfo } = storeToRefs(channelsStore)
 
-const isExtended: ComputedRef<boolean> = computed(() => (selectedChannelInfo?.value?.IRI ? true : false));
-const goToChats = () => {
-  router.push({
-    name: 'Inspector',
-  })
-}
 </script>
 <template>
   <v-card class="mx-auto" v-if="selectedChannelInfo">

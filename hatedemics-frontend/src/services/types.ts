@@ -1,10 +1,12 @@
 //types.ts file 
 
+import type { AnyMxRecord } from "node:dns";
+
 export type APIResponse<T> = {
-    success: boolean
-    content: T;
-    status?: number;
-  }
+  success: boolean
+  content: T;
+  status?: number;
+}
 export type ChannelInfo = {
   date: string
   about: string
@@ -26,7 +28,7 @@ export type ChannelInfo = {
   sdIRI: string
   dIRI: string
   unrel: string
-  
+
 }
 //   Channel Type TODO da rifare
 export type Channel = {
@@ -46,11 +48,11 @@ export type FullChat = {
 
 export type Chat = {
   id: string
-  title: string
-  date: string
-  broadcast: boolean
-  access_hash: number
-  access_hashes: AccessHashes
+  // title: string
+  // date: string
+  // broadcast: boolean
+  // access_hash: number
+  // access_hashes: AccessHashes
 }
 
 export type AccessHashes = {
@@ -81,7 +83,7 @@ export type ParticipationScore = {
 
 //   Message Type
 
-export type Message= {
+export type Message = {
   _: string
   id: number
   peer_id: PeerId
@@ -126,12 +128,12 @@ export type Message= {
   text_mentions?: any[]
 }
 
-export type PeerId ={
+export type PeerId = {
   _: string
   channel_id: string
 }
 
-export type Action ={
+export type Action = {
   _: string
   title: string
 }
@@ -208,21 +210,24 @@ export type Reaction = {
   _: string
   emoticon: string
 }
-export type Topic = {
-    id: string
-    presence: number
-  hate: number
-  topic: string}
+export type Topic = { 
+  name: string,
+   count_percentage: number,
+    hs_percentage: number,
+    cw_percentage: number,
+    npw:any,
+    hate_npw:any,
+    nonhate_npw:any }
 
 
-  //Type for Infodemics ?
-  export type Infodemics = {
-    urls: string[]
-    unknown_domains: number
-    known_domains: number
-    IRI: number[]
-    sdIRI: number[]
-    dIRI: number[]
-    unrel: number[]
-  }
-  
+
+//Type for Infodemics ?
+export type Infodemics = {
+  urls: string[]
+  unknown_domains: number
+  known_domains: number
+  IRI: number[]
+  sdIRI: number[]
+  dIRI: number[]
+  unrel: number[]
+}

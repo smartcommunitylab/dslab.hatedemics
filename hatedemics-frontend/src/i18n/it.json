@@ -1,35 +1,38 @@
 {
     "welcome": {
-        "title":"Benvenuti in Hatedemics"
+        "title": "Benvenuti in Hatedemics"
     },
-    "inspect":{
-        "title":"Topics"
+    "inspect": {
+        "title": "Topics"
     },
-    "channel":{
-        "title":"Canali"
+    "channel": {
+        "title": "Canali"
     },
-    "channelTable":{
-        "header":{
-            "id":"ID",
-            "messages":"Messaggi",
-            "partecipants":"Utenti",
-            "IRI":"Infodemic Risk"
+    "channelTable": {
+        "header": {
+            "id": "ID",
+            "messages": "Messaggi",
+            "partecipants": "Utenti",
+            "IRI": "Infodemic Risk"
         }
     },
-    "topicsTable":
-    {"title":"Titolo"},
-    "channelInfo":{
-        "title":"Titolo",
-        "description":"Descrizione:",
-        "nMessages":"Numero di messaggi:",
-        "nUsers":"Numero di utenti:",
-        "languages":"Lingue:",
+    "topicsTable": {
+        "title": "Titolo"
+    },
+    "channelInfo": {
+        "title": "Titolo",
+        "description": "Descrizione:",
+        "nMessages": "Numero di messaggi:",
+        "nUsers": "Numero di utenti:",
+        "languages": "Lingue:",
         "iri": "Infodemic Risk:",
         "hateSpeech": "Hate Speech Risk:",
         "lastUpdate": "Ultimo aggiornamento:",
         "mainTopics": "Principali argomenti:",
         "messages": "Messaggi",
-        "emptySelection":"Nessuna selezione. Scegliere un canale per visualizzare le statistiche"
+        "emptySelection": "Nessuna selezione. Scegliere un canale per visualizzare le statistiche"
+    },
+    "message": {
+        "title": "Messaggi"
     }
-
 }

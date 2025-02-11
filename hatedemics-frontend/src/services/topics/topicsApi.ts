@@ -6,7 +6,7 @@ import { type APIResponse, type Topic } from "../types";
 
 async function getTopics(id: string) {
   // return await http.get<APIResponse<Message[]>>(`messages/${id}`);
-  return await axios.get('http://localhost:5173/public/allTopics.json')
+  return await axios.get('http://localhost:5173/public/topics1.json')
 
 }
 

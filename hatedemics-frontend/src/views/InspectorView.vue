@@ -13,15 +13,19 @@ import ChannelInfoComponent from "@/components/ChannelInfoComponent.vue";
 import SideBarInfoComponent from "@/components/SideBarInfoComponent.vue"
 const { t } = useI18n();
 const channelsStore = useChannelsStore();
+const chatStore = useChatsStore();
 const topicsStore = useTopicsStore();
-const selectedChannelInspect = ref<ChannelInfo>();
+// const selectedChannelInspect = ref<ChannelInfo>();
 const msg = ref<string>();
 const selectedChatInspect = ref<Chat>();
   const { selectedChannelInfo, channelsInfo } = storeToRefs(channelsStore);
+  const { selectedChat, chats } = storeToRefs(chatStore);
   const { selectedTopic, topics } = storeToRefs(topicsStore);
-const chats = ref<Chat[]>([]);
 
 onMounted(async () => {
+  // if (!selectedChannelInfo.value) {
+  //   sele
+  // }
   const { success, status } = await topicsStore.dispatchGetTopics("id");
   //add info of number
   msg.value = t("inspect.title");
@@ -29,21 +33,19 @@ onMounted(async () => {
     alert("Ups, something happened 🙂");
     console.log("Api status ->", status);
   } else {
-    topics.value = topicsStore.topics?.map((item: Topic) => ({
-      id: item.id,
-      presence: item.presence,
-      hate: item.hate,
-      topic: item.topic,
-    }));
+    // topics.value = topicsStore.topics?.map((item: Topic,index:number) => ({
+    //   id: index,
+    //   name: item.name,
+    //   count_percentage: item.count_percentage,
+    //   hs_percentage: item.hs_percentage,
+    //   cw_percentage:item.cw_percentage,
+    // }));
     console.log(topicsStore.topics);
   }
 });
 
 const updateChannel = (channel: ChannelInfo) => {
   channelsStore.selectChannelInfo(channel);
-  //update chats selection
-  // chats.value=channel
-
 };
 const updateChat = (chat: Chat) => {
   console.log(chat);
@@ -56,8 +58,9 @@ const updateChat = (chat: Chat) => {
     <v-row>
       <v-col>
         <v-autocomplete
+          return-object
           label="channels"
-          v-model="selectedChannelInspect"
+          v-model="selectedChannelInfo"
           :items="channelsInfo"
           item-title="id"
           item-value="id"
@@ -69,8 +72,8 @@ const updateChat = (chat: Chat) => {
           label="chats"
           v-model="selectedChatInspect"
           :items="chats"
-          item-title="chat"
-          item-value="chat"
+          item-title="id"
+          item-value="id"
           @update:model-value="updateChat"
         ></v-select>
       </v-col>

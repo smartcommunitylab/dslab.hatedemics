@@ -4,12 +4,14 @@ import type { APIResponse, Channel, ChannelInfo } from "@/services/types";
 import type { AxiosError } from "axios";
 import { defineStore } from "pinia";
 import { ref } from 'vue';
-
+import { useChatsStore } from "./ChatStore";
+ 
 export const useChannelsStore = defineStore("channelsStore", () => {
   const selectedChannelInfo = ref<ChannelInfo>();
   const channelsInfo = ref<ChannelInfo[]>([]);
   const channels = ref<Channel[]>([]);
   const selectedChannel = ref<Channel>();
+  const chatStore = useChatsStore();
 
   function initChannelsInfo(data: ChannelInfo[]) {
     channelsInfo.value = data;
@@ -19,6 +21,8 @@ export const useChannelsStore = defineStore("channelsStore", () => {
   }
   function selectChannelInfo(channel:ChannelInfo){
     selectedChannelInfo.value = channel
+    chatStore.initChats([{id:channel.id},{id:channel.linked_chats_ids}])
+    chatStore.selectChat({id:channel.linked_chats_ids});
     console.log("selected")
   };
   function selectChannel(channel:Channel){

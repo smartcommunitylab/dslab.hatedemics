@@ -11,16 +11,16 @@ import { useRouter } from 'vue-router';
 import { storeToRefs } from 'pinia';
 const { t } = useI18n();
 const topicsStore = useTopicsStore();
-const { topics } = storeToRefs(topicsStore)
+const { topics, selectedTopic } = storeToRefs(topicsStore)
 
 // const topics = ref<any[]>([]);
 const router = useRouter();
 const search = ref("");
 const headers = reactive<any[]>([
-  { title: "ID", key: "id" },
-  { title: "Topics", key: "topic" },
-  {title:"% in the channel",key:"presence"},
-  {title:"% hate in the topic",key:"hate"},
+  { title: "Title", key: "name" },
+  { title: "% in the channel", key: "count_percentage" },
+  {title:"% cw",key:"cw_percentage"},
+  {title:"% hs",key:"hs_percentage"},
 ]);
 const handleClick = ( row:any) =>{
   console.log("Clicked item: ", row) 
@@ -43,10 +43,10 @@ const handleClick = ( row:any) =>{
             <tr
               @click="handleClick(props.item)"
             >
-              <td class="text-xs-right">{{ props.item.id }}</td>
-              <td class="text-xs-right">{{ props.item.topic }}</td>
-              <td class="text-xs-right">{{ props.item.presence }}</td>
-              <td class="text-xs-right">{{ props.item.hate }}</td>
+              <td class="text-xs-right">{{ props.item.name }}</td>
+              <td class="text-xs-right">{{ props.item.count_percentage }}</td>
+              <td class="text-xs-right">{{ props.item.cw_percentage }}</td>
+              <td class="text-xs-right">{{ props.item.hs_percentage }}</td>
             </tr>
           </template>
         </v-data-table>

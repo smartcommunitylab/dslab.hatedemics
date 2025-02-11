@@ -12,6 +12,7 @@ import { useMessagesStore } from '../store/MessageStore';
 import { useI18n } from 'vue-i18n';
 import { storeToRefs } from 'pinia';
 import type { Message } from '@/services/types';
+import SideBarInfoComponent from "@/components/SideBarInfoComponent.vue"
 
 const messagesStore = useMessagesStore();
 const { messages } = storeToRefs(messagesStore);
@@ -41,8 +42,8 @@ onMounted(async () => {
       </v-col>
       </v-row>
     <v-row>
-      <v-col>
-      <ChatInfoComponent />
+      <v-col cols="2">
+      <SideBarInfoComponent :actions="false"/>
       </v-col>
       <v-col>
       <ChatTableComponent />
