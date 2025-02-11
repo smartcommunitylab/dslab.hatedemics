@@ -32,7 +32,7 @@ async function submit() {
     loginStore.updateBearer(data.access_token)
           loginStore.updateUser(username.value, data.user_id, data.is_admin, data.project_manager)
           loading.value = false
-          router.push({ name: 'projects' })
+          router.push({ name: 'Channels' })
   }
 } catch (error) {
 

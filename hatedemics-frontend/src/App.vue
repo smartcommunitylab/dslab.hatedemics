@@ -17,7 +17,10 @@ import { useTheme } from 'vuetify';
 import logo from '@/assets/logo.svg';
 import AppBarMenuComponent from '@/components/AppBarMenuComponent.vue';
 import DrawerComponent from '@/components/DrawerComponent.vue';
+import { useRouter, useRoute } from 'vue-router'
 
+const router = useRouter()
+const route = useRoute()
 /** Vuetify Theme */
 const theme = useTheme();
 
@@ -70,11 +73,11 @@ onMounted(() => {
 
 <template>
   <v-app :theme="isDark">
-    <v-navigation-drawer v-model="drawer" temporary>
+    <v-navigation-drawer v-model="drawer" temporary v-if="!route.meta.hideNavbar">
       <drawer-component />
     </v-navigation-drawer>
 
-    <v-app-bar>
+    <v-app-bar v-if="!route.meta.hideSideMenu">
       <v-app-bar-nav-icon @click="drawer = !drawer" />
       <v-app-bar-title tag="h1">{{ title }}</v-app-bar-title>
       <v-spacer />

@@ -21,10 +21,10 @@ const { selectedChannelInfo } = storeToRefs(channelsStore)
   const selectedLanguage = ref<string>();
 
 const headers = reactive<any[]>([
-  { title: t("channel.header.id"), key: "id" },
-  { title: t("channel.header.messages"), key: "count" },
-  {title:t("channel.header.partecipants"),key:"participants_count"},
-  {title:t("channel.header.IRI"),key:"IRI"},
+  { title: t("channelTable.header.id"), key: "id" },
+  { title: t("channelTable.header.messages"), key: "count" },
+  {title:t("channelTable.header.partecipants"),key:"participants_count"},
+  {title:t("channelTable.header.IRI"),key:"IRI"},
 ]);
 
 const updateGrap = (lang:string) => {

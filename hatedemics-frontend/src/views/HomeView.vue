@@ -5,7 +5,7 @@ import { useI18n } from "vue-i18n";
 
 const { t } = useI18n();
 const globalStore = useGlobal();
-const msg = ref('Hello from HomeView');
+// const msg = ref('Hello from HomeView');
 const showSnackbar = (message: string) => globalStore.setMessage(message);
 
 </script>
@@ -13,9 +13,15 @@ const showSnackbar = (message: string) => globalStore.setMessage(message);
 <template>
   <v-container>
     <!-- <hello-world msg="⚡Hello Vue 3.3 + Vuetify 3 + TypeScript + Vite⚡" /> -->
-    <h1>{{ msg }}</h1>
+    <!-- <h1>{{ msg }}</h1> -->
     <div>{{ t("welcome.title") }}</div>
-    <v-btn @click="showSnackbar('Test')">Snackbar test</v-btn>
+    <v-img
+  :width="300"
+  aspect-ratio="16/9"
+  cover
+  src="@/assets/hate.png"
+></v-img>
+    <!-- <v-btn @click="showSnackbar('Test')">Snackbar test</v-btn> -->
 
   </v-container>
   <!-- <teleport to="head">

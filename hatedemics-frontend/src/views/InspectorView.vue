@@ -9,6 +9,8 @@ import { useI18n } from "vue-i18n";
 import { useTopicsStore } from "@/store/TopicStore";
 import { useChannelsStore } from "@/store/ChannelStore";
 import { useChatsStore } from "@/store/ChatStore";
+import ChannelInfoComponent from "@/components/ChannelInfoComponent.vue";
+import SideBarInfoComponent from "@/components/SideBarInfoComponent.vue"
 const { t } = useI18n();
 const channelsStore = useChannelsStore();
 const topicsStore = useTopicsStore();
@@ -39,6 +41,9 @@ onMounted(async () => {
 
 const updateChannel = (channel: ChannelInfo) => {
   channelsStore.selectChannelInfo(channel);
+  //update chats selection
+  // chats.value=channel
+
 };
 const updateChat = (chat: Chat) => {
   console.log(chat);
@@ -46,7 +51,7 @@ const updateChat = (chat: Chat) => {
 </script>
 
 <template>
-  <v-container>
+  <v-container :fluid="true">
     <h1>{{ msg }}</h1>
     <v-row>
       <v-col>
@@ -75,13 +80,13 @@ const updateChat = (chat: Chat) => {
       <v-col> </v-col>
     </v-row>
     <v-row>
-      <v-col>
-        <ChatInfoComponent />
+      <v-col cols="2">
+      <SideBarInfoComponent :actions="false"/>
       </v-col>
-      <v-col>
+      <v-col  cols="6">
         <TopicsTableComponent />
       </v-col>
-      <v-col>
+      <v-col cols="4">
         <WordCloudComponent />
       </v-col>
     </v-row>

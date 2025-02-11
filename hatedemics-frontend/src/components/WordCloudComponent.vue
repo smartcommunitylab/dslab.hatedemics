@@ -7,11 +7,22 @@ const words = ref([['romance', 19], ['horror', 3], ['fantasy', 7], ['adventure',
 const onWordClick = function(word:string) {
 				console.log(word)
 			}
+
 </script>
 <template>
-<vue3-word-cloud :words="words">
+
+<vue3-word-cloud   
+                :animation-duration="1000"
+								:animation-easing="'linear'"
+								:animation-overlap="1/5"
+								:color="['#ffd077', '#3bc4c7', '#3a9eea', '#ff4e69', '#461e47']"
+								:enter-animation="'animated bounceIn'"
+								:font-size-ratio="0"
+								:leave-animation="'animated hinge'"
+
+								:words="words">
   <template v-slot:name="{text, weight, word}">
-    <div :title="weight" style="cursor: pointer;" @click="onWordClick(word)">
+    <div :title="weight" style="cursor: pointer;" @click="onWordClick(word)"  >
       {{ text }}
     </div>
   </template>

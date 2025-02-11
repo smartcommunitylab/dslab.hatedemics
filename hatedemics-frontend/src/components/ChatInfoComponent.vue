@@ -10,6 +10,7 @@ import { useRouter } from 'vue-router';
 const { t } = useI18n();
 const channelsStore = useChannelsStore();
 const router = useRouter();
+const { actions = true } = defineProps<{ actions?: Boolean}>()
 const isExtended: ComputedRef<boolean> = computed(() => (channelsStore?.selectedChannelInfo?.IRI ? true : false));
 const goToChats = () => {
   router.push({
@@ -18,7 +19,7 @@ const goToChats = () => {
 }
 </script>
 <template>
-  <v-card class="mx-auto" max-width="344" v-if="channelsStore.selectedChannel">
+  <v-card class="mx-auto"  v-if="channelsStore.selectedChannel">
     <v-card-text>
       <div>{{ channelsStore.selectedChannelInfo?.id }}</div>
       <p v-if="channelsStore.selectedChannelInfo?.about">
@@ -50,7 +51,7 @@ const goToChats = () => {
       </p>
     </v-card-text>
 
-    <v-card-actions v-if="isExtended">
+    <v-card-actions v-if="isExtended && actions">
       <v-btn color="deep-purple-accent-4" text="Learn More" variant="text" @click="goToChats()">{{ t("channelInfo.messages") }}</v-btn>
     </v-card-actions>
   </v-card>

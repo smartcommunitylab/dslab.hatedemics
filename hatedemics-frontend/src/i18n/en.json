@@ -2,6 +2,22 @@
     "welcome": {
         "title":"Welcome to Hatedemics"
     },
+    "inspect":{
+        "title":"Topics"
+    },
+    "channel":{
+        "title":"Channels"
+    },
+    "channelTable":{
+        "header":{
+            "id":"ID",
+            "messages":"Messages",
+            "partecipants":"Participants",
+            "IRI":"Infodemic Risk"
+        }
+    },
+    "topicsTable":
+    {"title":"Title"},
     "channelInfo":{
         "title":"Title",
         "description":"Description:",

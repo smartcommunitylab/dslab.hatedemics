@@ -31,17 +31,11 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'Login',
-    component: Login
-  },
-  // {
-  //   path: '/changepassword',
-  //   name: 'changePassword',
-  //   component: changePassword
-  // },
-  {
-    path: '/home',
-    name: 'Home',
-    component: HomeView
+    component: Login,
+    meta: {
+      hideNavbar: true,
+      hideSideMenu:true
+     }
   },
   {
     path: '/dashboard',

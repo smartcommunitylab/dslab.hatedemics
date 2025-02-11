@@ -4,20 +4,13 @@ import type DrawerMenuItem from '@/interfaces/DrawerMenuItemInterface';
 /** Drawer menu items */
 const items: DrawerMenuItem[] = [
   {
-    title: 'Home',
-    icon: 'mdi-home',
-    to: { name: 'Home' }
-  },
-  {
-    title: '-' // Divider
-  },
-  {
     title: 'Channel Dashboard',
     icon: 'mdi-information',
     items: [
       {
         title: 'Channels',
         icon: 'mdi-graph',
+        active: true,
         to: { name: 'Channels' }
       },
       {
