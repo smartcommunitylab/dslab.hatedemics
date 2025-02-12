@@ -1,4 +1,8 @@
 {
+    "login":{
+"success":"Login successful",
+"button":"Login"
+    },
     "welcome": {
         "title": "Welcome to Hatedemics"
     },

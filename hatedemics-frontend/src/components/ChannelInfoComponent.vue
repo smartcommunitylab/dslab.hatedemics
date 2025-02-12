@@ -54,7 +54,7 @@ const goToChats = () => {
     </v-card-text>
 
     <v-card-actions v-if="isExtended">
-      <v-btn color="deep-purple-accent-4" text="Learn More" variant="text" @click="goToChats()">{{ t("channelInfo.messages") }}</v-btn>
+      <v-btn color="primary" text="Learn More" variant="text" @click="goToChats()">{{ t("channelInfo.messages") }}</v-btn>
     </v-card-actions>
   </v-card>
   <div v-else>

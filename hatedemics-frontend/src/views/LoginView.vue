@@ -5,9 +5,10 @@ import { useLoginStore } from '../store/LoginStore'
 import { useRouter, useRoute } from 'vue-router'
 import { useGlobal } from '@/store';
 import { API } from "@/services";
+import { useI18n } from 'vue-i18n';
 
 const globalStore = useGlobal();
-
+const { t } = useI18n();
 const router = useRouter();
 const route = useRoute()
 const loginStore = useLoginStore();
@@ -32,6 +33,7 @@ async function submit() {
     loginStore.updateBearer(data.access_token)
           loginStore.updateUser(username.value, data.user_id, data.is_admin, data.project_manager)
           loading.value = false
+          showSnackbar(t('login.success'))
           router.push({ name: 'Channels' })
   }
 } catch (error) {
@@ -54,7 +56,8 @@ async function submit() {
         <!-- Login handling: if successful, button becomes a spinner and waits for auth. If successful, redirects to 'projects'-->
         <v-sheet class="mx-6" width="300px">
           <div class="text-h4 py-4">Login</div>
-          <v-form @submit.prevent="submit" v-model="goodLogin">
+          <v-form @submit.prevent="submit" v-model="goodLogin"     color="primary"
+>
             <v-text-field label="Username" v-model="username" :rules="regole"></v-text-field>
             <!-- 'type' is 'password' in order to show **** instead of abcd-->
             <v-text-field
@@ -64,7 +67,8 @@ async function submit() {
               :rules="regole"
             ></v-text-field>
             <v-btn type="submit" class="ma-2" :loading="loading" :disabled="isButtonDisabled"
-              >Login</v-btn
+            color="primary"
+            >{{ t('login.button') }}</v-btn
             >
           </v-form>
         </v-sheet>

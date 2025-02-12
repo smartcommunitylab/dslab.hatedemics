@@ -1,4 +1,8 @@
 {
+    "login": {
+        "success": "Login effettuato con successo",
+        "button": "Login"
+    },
     "welcome": {
         "title": "Benvenuti in Hatedemics"
     },

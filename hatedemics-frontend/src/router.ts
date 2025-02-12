@@ -129,7 +129,7 @@ router.beforeEach(
     // globalStore.setLoading(true);
 
     // Hide snack bar
-    globalStore.setMessage('');
+    setTimeout(() => globalStore.setMessage(''),1000);
     next();
   }
 );

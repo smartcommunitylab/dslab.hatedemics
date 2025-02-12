@@ -45,7 +45,7 @@ onMounted(async () => {
       <v-col cols="2">
       <SideBarInfoComponent :actions="false"/>
       </v-col>
-      <v-col>
+      <v-col cols="10">
       <ChatTableComponent />
       </v-col>
       </v-row>

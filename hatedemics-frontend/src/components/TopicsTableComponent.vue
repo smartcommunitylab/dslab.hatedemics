@@ -9,6 +9,7 @@ import {
 import { useI18n } from "vue-i18n";
 import { useRouter } from 'vue-router';
 import { storeToRefs } from 'pinia';
+import type { Topic } from '@/services/types';
 const { t } = useI18n();
 const topicsStore = useTopicsStore();
 const { topics, selectedTopic } = storeToRefs(topicsStore)
@@ -22,8 +23,9 @@ const headers = reactive<any[]>([
   {title:"% cw",key:"cw_percentage"},
   {title:"% hs",key:"hs_percentage"},
 ]);
-const handleClick = ( row:any) =>{
-  console.log("Clicked item: ", row) 
+const handleClick = ( item:Topic) =>{
+  // console.log("Clicked item: ", row) 
+  topicsStore.selectTopic(item)
   
 }
 </script>
@@ -38,10 +40,12 @@ const handleClick = ( row:any) =>{
           hide-details
           single-line
         ></v-text-field>
-        <v-data-table :headers="headers" :items="topics" :search="search">
+        <v-data-table :headers="headers" :items="topics" :search="search" return-object>
           <template v-slot:item="props">
             <tr
               @click="handleClick(props.item)"
+              :class="{ selected: props.item.name === selectedTopic?.name }"
+
             >
               <td class="text-xs-right">{{ props.item.name }}</td>
               <td class="text-xs-right">{{ props.item.count_percentage }}</td>
@@ -52,3 +56,8 @@ const handleClick = ( row:any) =>{
         </v-data-table>
 </v-container>
 </template>
+<style scoped>
+.selected {
+  background: rgb(var(--v-theme-secondary)) !important;
+}
+</style>

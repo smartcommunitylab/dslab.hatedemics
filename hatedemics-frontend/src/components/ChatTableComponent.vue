@@ -20,10 +20,10 @@ const headers = reactive<any[]>([
   { title: "Message", key: "message" },
   { title: "User", key: "from_id.user_id" },
   {title:"Date",key:"date"},
-  {title:"Hate",key:"IRI"},
-  {title:"Topic",key:"IRI"},
-  {title:"Check Worthy",key:"IRI"},
-  {title:"Reactions",key:"IRI"},
+  // {title:"Hate",key:"IRI"},
+  // {title:"Topic",key:"IRI"},
+  // {title:"Check Worthy",key:"IRI"},
+  {title:"Reactions",key:"reactions"},
 ]);
 const handleClick = ( row:any) =>{
   console.log("Clicked item: ", row)
@@ -48,7 +48,7 @@ const handleClick = ( row:any) =>{
               <td class="text-xs-right">{{ props.item.message }}</td>
               <td class="text-xs-right">{{ props.item.from_id.user_id }}</td>
               <td class="text-xs-right">{{ props.item.date }}</td>
-              <td class="text-xs-right">{{ props.item.IRI }}</td>
+              <td class="text-xs-right">{{ props.item.reactions?.results?.length }}</td>
             </tr>
           </template>
         </v-data-table>

@@ -1,7 +1,5 @@
 //types.ts file 
 
-import type { AnyMxRecord } from "node:dns";
-
 export type APIResponse<T> = {
   success: boolean
   content: T;

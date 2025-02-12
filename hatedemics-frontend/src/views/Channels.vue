@@ -30,10 +30,9 @@ const headers = reactive<any[]>([
 const updateGrap = (lang:string) => {
   console.log('change file of channels and reload everything '+lang)
 };
-const handleClick = ( row:any) =>{
-  console.log("Clicked item: ", row)
-  channelsStore.selectChannelInfo(channelsStore.channelsInfo.filter(c => {
-          return c.id === row.id})[0])
+const handleClick = ( item:ChannelInfo) =>{
+  console.log("Clicked item: ", item)
+  channelsStore.selectChannelInfo(item)
 }
 watch(selectedChannelInfo, (newValue,oldValue) => {
     console.log('selectedNode',newValue)
@@ -73,14 +72,15 @@ onMounted(async () => {
         >
         </v-select>
         <GraphComponent />
-        
       </v-col>
       <v-col cols="4">
         <h1>info</h1>
         <ChannelInfoComponent />
       </v-col>
     </v-row>
-    <v-row><v-col><v-text-field
+    <v-row
+      ><v-col
+        ><v-text-field
           v-model="search"
           label="Search"
           prepend-inner-icon="mdi-magnify"
@@ -88,7 +88,7 @@ onMounted(async () => {
           hide-details
           single-line
         ></v-text-field>
-        <v-data-table :headers="headers" :items="channels" :search="search">
+        <v-data-table :headers="headers" :items="channels" :search="search" return-object>
           <template v-slot:item="props">
             <tr
               @click="handleClick(props.item)"
@@ -100,11 +100,13 @@ onMounted(async () => {
               <td class="text-xs-right">{{ props.item.IRI }}</td>
             </tr>
           </template>
-        </v-data-table></v-col></v-row>
+        </v-data-table></v-col
+      ></v-row
+    >
   </v-container>
 </template>
 <style scoped>
 .selected {
-  background: #7d92f5 !important;
+  background: var(--v-theme-primary) !important;
 }
 </style>
