@@ -16,7 +16,7 @@
         "header": {
             "id": "ID",
             "messages": "Messages",
-            "partecipants": "Participants",
+            "partecipants": "Utenti",
             "IRI": "Infodemic Risk"
         }
     },

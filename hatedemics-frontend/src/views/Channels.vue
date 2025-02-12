@@ -15,13 +15,13 @@ const msg = ref("");
 const search = ref("");
 const languages= [{language:'Italiano',value:'IT'},{language:'English',value:'EN'},{language:'Espanol',value:'ES'}]
 const channelsStore = useChannelsStore();
-const channels = ref<any[]>([]);
+// const channels = ref<any[]>([]);
 const configStore = useConfig();
-const { selectedChannelInfo } = storeToRefs(channelsStore)
+const { channelsInfo,selectedChannelInfo } = storeToRefs(channelsStore)
   const selectedLanguage = ref<string>();
 
 const headers = reactive<any[]>([
-  { title: t("channelTable.header.id"), key: "id" },
+  // { title: t("channelTable.header.id"), key: "id" },
   { title: t("channelTable.header.messages"), key: "count" },
   {title:t("channelTable.header.partecipants"),key:"participants_count"},
   {title:t("channelTable.header.IRI"),key:"IRI"},
@@ -45,12 +45,13 @@ onMounted(async () => {
     alert("Ups, something happened 🙂");
     console.log("Api status ->", status);
   } else {
-    channels.value = channelsStore.channelsInfo?.map((item:ChannelInfo) => ({
-      id: item.id,
-      count: item.message_count,
-      participants_count:item.participants_count,
-      IRI:item.IRI
-    }));
+    // channels.value = channelsStore.channelsInfo?.map((item:ChannelInfo) => ({
+      // id: item.id,
+      // count: item.message_count,
+      // participants_count:item.participants_count,
+      // IRI:item.IRI
+      // ...item
+    // }));
     console.log(channelsStore.channels);
   }
   selectedLanguage.value = languages[0].value;
@@ -60,7 +61,7 @@ onMounted(async () => {
 <template>
   <v-container :fluid="true">
     <v-row>
-      <v-col cols="8">
+      <v-col cols="6">
         <h1>{{ msg }}</h1>
         <v-select
           label="Language"
@@ -72,15 +73,7 @@ onMounted(async () => {
         >
         </v-select>
         <GraphComponent />
-      </v-col>
-      <v-col cols="4">
-        <h1>info</h1>
-        <ChannelInfoComponent />
-      </v-col>
-    </v-row>
-    <v-row
-      ><v-col
-        ><v-text-field
+        <v-text-field
           v-model="search"
           label="Search"
           prepend-inner-icon="mdi-magnify"
@@ -88,20 +81,29 @@ onMounted(async () => {
           hide-details
           single-line
         ></v-text-field>
-        <v-data-table :headers="headers" :items="channels" :search="search" return-object>
+        <v-data-table :headers="headers" :items="channelsInfo" :search="search" return-object>
           <template v-slot:item="props">
             <tr
               @click="handleClick(props.item)"
               :class="{ selected: props.item.id === selectedChannelInfo?.id }"
             >
-              <td class="text-xs-right">{{ props.item.id }}</td>
+              <!-- <td class="text-xs-right">{{ props.item.id }}</td> -->
               <td class="text-xs-right">{{ props.item.participants_count }}</td>
-              <td class="text-xs-right">{{ props.item.count }}</td>
+              <td class="text-xs-right">{{ props.item.message_count }}</td>
               <td class="text-xs-right">{{ props.item.IRI }}</td>
             </tr>
           </template>
-        </v-data-table></v-col
-      ></v-row
+        </v-data-table>
+      </v-col>
+      <v-col cols="6">
+        <h1>info</h1>
+        <ChannelInfoComponent />
+
+        
+      </v-col>
+    </v-row>
+    <v-row
+      ><v-col></v-col></v-row
     >
   </v-container>
 </template>

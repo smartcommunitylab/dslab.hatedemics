@@ -41,16 +41,16 @@ const routes: RouteRecordRaw[] = [
     path: '/dashboard',
     name: 'Dashboard',
     component: DashboardView
+  },{
+    path: '/dashboard/channels',
+    name: 'Channels',
+    component: Channels
   },
   {
     path: '/dashboard/channels',
     name: 'Inspector',
     component: InspectorView
-  },  {
-    path: '/dashboard/channels',
-    name: 'Channels',
-    component: Channels
-  },
+  },  
   {
     path: '/dashboard/discussion',
     name: 'Discussion',
