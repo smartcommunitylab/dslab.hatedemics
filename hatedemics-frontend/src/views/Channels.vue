@@ -107,6 +107,6 @@ onMounted(async () => {
 </template>
 <style scoped>
 .selected {
-  background: var(--v-theme-primary) !important;
+  background: rgb(var(--v-theme-secondary)) !important;
 }
 </style>

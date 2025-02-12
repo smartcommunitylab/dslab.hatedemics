@@ -1,13 +1,14 @@
 // the axios instance and types
 import axios from 'axios';
-import http from "@/services/api";
-import { type APIResponse } from "@/services/types";
+import { type ChannelInfo } from "@/services/types";
 export type Node = {
     id: string;
     name: string;
     extended: boolean
     color: string,
-    size: number
+    size: number,
+    iri: number
+    // channelInfo: ChannelInfo
 };
 
 export type Link = {
@@ -36,7 +37,8 @@ for (let node = 0; node < nodesData.data.length; node += 1) {
          name: `${nodesData.data[node].channel_id}`, 
          extended: nodesData.data[node].iri != -1 ,
          color:'#4B5BBF',
-         size:nodesData.data[node].iri+1});
+         iri: nodesData.data[node].iri,
+         size:nodesData.data[node].iri+2});
 
 }
 for (let link = 0; link < linksData.data.length; link += 1) {

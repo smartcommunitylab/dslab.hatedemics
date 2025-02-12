@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch } from "vue";
+import { onMounted, ref, watch } from "vue";
 import useWordCloud from "./useWordCloud";
 import { useTopicsStore } from "@/store/TopicStore";
 import { storeToRefs } from "pinia";
@@ -12,7 +12,7 @@ const typeItems = ref([
   { type: "hate npw", value: "hate_npw" },
   { type: "nonhate npw", value: "nonhate_npw" },
 ]);
-const selectedType = ref<string>();
+const selectedType = ref<string>(typeItems.value[0].value);
 const onWordClick = function (word: string) {
   console.log(word);
 };
@@ -41,6 +41,12 @@ function updateWords() {
     }
   );
 }
+onMounted(async () => {
+  if (!selectedTopic?.value && topics.value.length > 0) {
+    topicsStore.selectTopic(topics.value[0]);
+  }
+
+})
 </script>
 <template>
   <v-select

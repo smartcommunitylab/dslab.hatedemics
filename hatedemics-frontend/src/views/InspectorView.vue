@@ -17,7 +17,7 @@ const chatStore = useChatsStore();
 const topicsStore = useTopicsStore();
 // const selectedChannelInspect = ref<ChannelInfo>();
 const msg = ref<string>();
-const selectedChatInspect = ref<Chat>();
+// const selectedChatInspect = ref<Chat>();
   const { selectedChannelInfo, channelsInfo } = storeToRefs(channelsStore);
   const { selectedChat, chats } = storeToRefs(chatStore);
   const { selectedTopic, topics } = storeToRefs(topicsStore);
@@ -70,7 +70,7 @@ const updateChat = (chat: Chat) => {
       <v-col>
         <v-select
           label="chats"
-          v-model="selectedChatInspect"
+          v-model="selectedChat"
           :items="chats"
           item-title="id"
           item-value="id"

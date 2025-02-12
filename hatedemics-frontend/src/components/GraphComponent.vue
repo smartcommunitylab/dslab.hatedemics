@@ -22,9 +22,12 @@ watch(selectedChannelInfo, (newValue,oldValue) => {
         return n.name == newValue.id
       })[0];
       if (node){
-      graph.selectNode(node)
-      // graph.selectNodeByIndex(i);
-      graph.zoomToNode(node);}
+        graph.selectNode(node);
+        graph.focusNode(node);
+      // graph.selectNode(node)
+      // // graph.selectNodeByIndex(i);
+      // graph.zoomToNode(node);
+      }
     }
   })
 const graphElement = useTemplateRef('graphElement')
@@ -33,11 +36,14 @@ const graphElement = useTemplateRef('graphElement')
 onMounted(() => {
 
   const config={
-  backgroundColor: "#151515",
+  // backgroundColor: "#333333",
   nodeSize: (n:Node) => n.size,
-  nodeColor: (n:Node) => n.color,
-  nodeLabelAccessor:(n:Node) => n.name,
+  nodeColor: (n:Node) => getColor(n.iri),
+  nodeLabelColor: (n:Node) =>  getColor(n.iri),
+  hoveredNodeLabelColor: (n:Node) =>  getColor(n.iri),
+  nodeLabelAccessor:(n:Node) => n.id,
   nodeGreyoutOpacity: 0.1,
+  initialZoomLevel:0.5,
   linkWidth: 0.1,
   linkColor: "#5F74C2",
   linkArrows: false,
@@ -57,20 +63,19 @@ onMounted(() => {
   simulationLinkSpring: 0.5, 
   simulationLinkDistance: 2.0,
   },
-/*************  ✨ Codeium Command ⭐  *************/
-  /**
-/******  4ca4f437-0516-4d8c-bf12-a5d7bdeb7d7f  *******/  onClick: (node:Node, i?: number) => {
+ onClick: (node:Node, i?: number) => {
       if (node && i !== undefined) {
         // graph.selectNodeById(node.id);
         // graph.zoomToNodeById(node.id);
         graph.selectNode(node);
         graph.focusNode(node);
-         graph.zoomToNode(node);
+        //  graph.zoomToNode(node);
         channelsStore.selectChannelInfo(channelsStore.channelsInfo.filter(c => {
           return c.id === node.name
         })[0])
 
-      } else {
+      } 
+      else {
         graph.unselectNodes();
         channelsStore.unselectChannel();
       }
@@ -92,6 +97,18 @@ graph.fitView()
 // cosmograph.setData(nodes, links);
 
 })
+
+function getColor(iri: number) {
+  if (iri < 0) {
+    return '#8B5CBF'
+  } else if (iri <= 0 && iri < 0.2) {
+    return '#9FCE6D'
+  } else if (iri <= 0.2 && iri <= 0.5) {
+    return '#76D5D3'
+  }
+ else return '#C76466'
+  
+}
 </script>
 
 <template>
