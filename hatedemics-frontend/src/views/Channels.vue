@@ -13,12 +13,12 @@ import type { ChannelInfo } from "@/services/types";
 const { t } = useI18n();
 const msg = ref("");
 const search = ref("");
-const languages= [{language:'Italiano',value:'IT'},{language:'English',value:'EN'},{language:'Espanol',value:'ES'}]
+const languages= [{language:'Italiano',value:'it'},{language:'English',value:'en'},{language:'Espanol',value:'es'}]
 const channelsStore = useChannelsStore();
 // const channels = ref<any[]>([]);
 const configStore = useConfig();
-const { channelsInfo,selectedChannelInfo } = storeToRefs(channelsStore)
-  const selectedLanguage = ref<string>();
+const { channelsInfo,selectedChannelInfo,selectedLanguage } = storeToRefs(channelsStore)
+  // const selectedLanguage = ref<string>('it');
 
 const headers = reactive<any[]>([
   // { title: t("channelTable.header.id"), key: "id" },
@@ -27,7 +27,7 @@ const headers = reactive<any[]>([
   {title:t("channelTable.header.IRI"),key:"IRI"},
 ]);
 
-const updateGrap = (lang:string) => {
+const changeData = (lang:string) => {
   console.log('change file of channels and reload everything '+lang)
 };
 const handleClick = ( item:ChannelInfo) =>{
@@ -38,6 +38,7 @@ watch(selectedChannelInfo, (newValue,oldValue) => {
     console.log('selectedNode',newValue)
   })
 onMounted(async () => {
+  await channelsStore.selectLanguage('it');
   const { success, status } = await channelsStore.dispatchGetChannels();
 //add info of number
  msg.value=t("channel.title")
@@ -52,7 +53,6 @@ onMounted(async () => {
       // IRI:item.IRI
       // ...item
     // }));
-    console.log(channelsStore.channels);
   }
   selectedLanguage.value = languages[0].value;
 });
@@ -61,7 +61,7 @@ onMounted(async () => {
 <template>
   <v-container :fluid="true">
     <v-row>
-      <v-col cols="6">
+      <v-col cols="8">
         <h1>{{ msg }}</h1>
         <v-select
           label="Language"
@@ -69,7 +69,7 @@ onMounted(async () => {
           :items="languages"
           item-title="language"
           item-value="value"
-          @update:model-value="updateGrap"
+          @update:model-value="changeData"
         >
         </v-select>
         <GraphComponent />
@@ -95,8 +95,8 @@ onMounted(async () => {
           </template>
         </v-data-table>
       </v-col>
-      <v-col cols="6">
-        <h1>info</h1>
+      <v-col cols="4">
+        <h1>{{ t("channel.infoTitle") }}</h1>
         <ChannelInfoComponent />
 
         

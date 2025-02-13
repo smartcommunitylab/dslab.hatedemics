@@ -6,9 +6,18 @@ import { defineStore } from "pinia";
 import { ref } from 'vue';
 
 export const useTopicsStore = defineStore("topicsStore", () => {
+  const generic =ref<any>({});
   const topics = ref<Topic[]>([]);
   const selectedTopic = ref<Topic>();
   function initTopics(data: any) {
+    generic.value['chat_description'] = data["chat_description"];
+    generic.value['chat_name'] = data["chat_name"];
+    generic.value['hs_percentage'] = data["hs_percentage"];
+    generic.value['cw_percentage'] = data["cw_percentage"];
+    generic.value['topics']=Object.keys(data.topics).map(function (key) {
+      return {
+        name: data.topics[key]["topic-name"],
+      }});
     topics.value = Object.keys(data.topics).map(function (key) {
       return {
         name: data.topics[key]["topic-name"],
@@ -57,6 +66,7 @@ export const useTopicsStore = defineStore("topicsStore", () => {
 
   return {
     topics,
+    generic,
     selectedTopic,
     initTopics,
     selectTopic,

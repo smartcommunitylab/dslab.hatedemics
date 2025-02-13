@@ -82,48 +82,29 @@ export type ParticipationScore = {
 //   Message Type
 
 export type Message = {
-  _: string
-  id: number
-  peer_id: PeerId
   date: string
-  action?: Action
-  out: boolean
-  mentioned: boolean
-  media_unread: boolean
-  silent: boolean
-  post: boolean
-  legacy: boolean
   from_id: any
-  reply_to: any
-  ttl_period: any
-  message?: string
-  from_scheduled?: boolean
-  edit_hide?: boolean
-  pinned?: boolean
-  noforwards?: boolean
-  invert_media?: boolean
-  offline?: boolean
-  from_boosts_applied: any
-  saved_peer_id: any
-  fwd_from?: FwdFrom
-  via_bot_id: any
-  via_business_bot_id: any
-  media?: Media
-  reply_markup: any
-  entities?: any[]
-  views?: number
-  forwards?: number
-  replies: any
-  edit_date?: string
-  post_author: any
-  grouped_id?: number
-  reactions?: Reactions
-  restriction_reason?: any[]
-  quick_reply_shortcut_id: any
-  effect: any
-  factcheck: any
-  text_urls?: any[]
-  text_mentions?: any[]
+  fwd_from_date: any
+  fwd_from_id: any
+  fwd_from_msg_id: any
+  id: string
+  media_type: string
+  message: string
+  nr_forwards: string
+  nr_reactions: string
+  nr_replies: string
+  nr_views: string
+  preprocessed_message: string
+  reactions: Reactions
+  replies_to_msg_id: any
+  replies_to_msg_text: any
+  text_mentions: any[]
+  text_urls: string[]
+  via_bot_id: any,
+  hate_label?: string,
+  checkworthy_label?: string,
+  topic?: string,
+  target?: string,
 }
 
 export type PeerId = {

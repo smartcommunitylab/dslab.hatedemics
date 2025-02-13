@@ -34,7 +34,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <v-container>
+  <v-container :fluid="true">
     <h1>{{ msg }}</h1>
 <!-- {{ messagesStore.messages }} -->
 <v-row>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref, useTemplateRef, type Ref } from 'vue';
 import { Cosmograph } from '@cosmograph/cosmograph'
-import { nodes, links, type Node, type Link } from "@/services/data-gen";
+import { initData, nodes, links, type Node, type Link } from "@/services/data-gen";
 import { useChannelsStore } from '@/store/ChannelStore';
 import { watch } from 'vue'
 import { storeToRefs } from 'pinia';
@@ -33,10 +33,10 @@ watch(selectedChannelInfo, (newValue,oldValue) => {
 const graphElement = useTemplateRef('graphElement')
 // const msg = ref('Hello from GraphComponent');
 // Set the data
-onMounted(() => {
-
+onMounted(async () => {
+  await initData();
   const config={
-  // backgroundColor: "#333333",
+  backgroundColor: "#ffffff",
   nodeSize: (n:Node) => n.size,
   nodeColor: (n:Node) => getColor(n.iri),
   nodeLabelColor: (n:Node) =>  getColor(n.iri),
@@ -44,10 +44,10 @@ onMounted(() => {
   nodeLabelAccessor:(n:Node) => n.id,
   nodeGreyoutOpacity: 0.1,
   initialZoomLevel:0.5,
-  linkWidth: 0.1,
+  linkWidth: 1,
   linkColor: "#5F74C2",
   linkArrows: false,
-  linkGreyoutOpacity: 0.2,
+  linkGreyoutOpacity: 0.9,
   curvedLinks: true,
   renderHoveredNodeRing: true,
   hoveredNodeRingColor:'red',

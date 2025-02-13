@@ -9,32 +9,37 @@ import { useChatsStore } from "./ChatStore";
 export const useChannelsStore = defineStore("channelsStore", () => {
   const selectedChannelInfo = ref<ChannelInfo>();
   const channelsInfo = ref<ChannelInfo[]>([]);
-  const channels = ref<Channel[]>([]);
-  const selectedChannel = ref<Channel>();
+  const selectedLanguage = ref<string>();
+  // const channels = ref<Channel[]>([]);
+  // const selectedChannel = ref<Channel>();
   const chatStore = useChatsStore();
 
   function initChannelsInfo(data: ChannelInfo[]) {
     channelsInfo.value = data;
   }
-  function initChannels(data: Channel[]) {
-    channels.value = data;
-  }
+  // function initChannels(data: Channel[]) {
+  //   channels.value = data;
+  // }
   function selectChannelInfo(channel:ChannelInfo){
     selectedChannelInfo.value = channel
     chatStore.initChats([{id:channel.id},{id:channel.linked_chats_ids}])
     chatStore.selectChat({id:channel.linked_chats_ids});
     console.log("selected")
   };
-  function selectChannel(channel:Channel){
-    selectedChannel.value = channel
-    console.log("selected")
-  };
+  
+  function selectLanguage(language:string){
+    selectedLanguage.value = language;
+  }
+  // function selectChannel(channel:Channel){
+  //   selectedChannel.value = channel
+  //   console.log("selected")
+  // };
   
   const unselectChannel = () => (selectedChannelInfo.value = undefined);
 
   async function dispatchGetChannels(): Promise<APIResponse<null>> {
     try {
-      const { status, data } = await API.channels.getChannelsInfo();
+      const { status, data } = await API.channels.getChannelsInfo(selectedLanguage.value!);
       if (status === 200) {
         initChannelsInfo(data);
         return {
@@ -58,13 +63,15 @@ export const useChannelsStore = defineStore("channelsStore", () => {
   }
 
   return {
-    channels,
-    selectedChannel,
+    // channels,
+    // selectedChannel,
     channelsInfo,
     selectedChannelInfo,
+    selectedLanguage,
+    selectLanguage,
     initChannelsInfo,
-    initChannels,
-    selectChannel,
+    // initChannels,
+    // selectChannel,
     selectChannelInfo,
     unselectChannel,
     dispatchGetChannels,

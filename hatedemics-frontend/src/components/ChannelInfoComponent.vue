@@ -2,18 +2,26 @@
 import {
   computed,
 
+  onMounted,
+
   type ComputedRef,
 
 } from 'vue';import { useChannelsStore } from "../store/ChannelStore";
 import { useI18n } from "vue-i18n";
 import { useRouter } from 'vue-router';
 import { storeToRefs } from 'pinia';
+import { useTopicsStore } from "@/store/TopicStore";
+const topicsStore = useTopicsStore();
 const { t } = useI18n();
 const channelsStore = useChannelsStore();
 const router = useRouter();
 const { selectedChannelInfo } = storeToRefs(channelsStore)
+const { generic,topics } = storeToRefs(topicsStore);
 
 const isExtended: ComputedRef<boolean> = computed(() => (selectedChannelInfo?.value?.IRI ? true : false));
+  onMounted(async () => {
+    const { success, status } = await topicsStore.dispatchGetTopics("id");
+  })
 const goToChats = () => {
   router.push({
     name: 'Inspector',
@@ -40,24 +48,35 @@ const goToChats = () => {
         <span class="font-weight-bold"> {{ t("channelInfo.nUsers") }}</span>
         {{ selectedChannelInfo?.participants_count }}
       </div>
-      <div v-if="selectedChannelInfo?.language">
+      <div v-if="selectedChannelInfo?.language!=''">
         <span class="font-weight-bold">{{ t("channelInfo.languages") }}</span> {{ selectedChannelInfo?.language }}
       </div>
-      <div v-if="selectedChannelInfo?.IRI">
+      <div v-if="selectedChannelInfo?.IRI!=undefined">
         <span class="font-weight-bold">{{ t("channelInfo.iri") }}</span> {{ selectedChannelInfo?.IRI }}
       </div>
-      <div v-if="selectedChannelInfo?.sdIRI">
-        <span class="font-weight-bold">{{ t("channelInfo.hateSpeech") }} </span>{{ selectedChannelInfo?.sdIRI }}
+      <div v-if="generic?.hs_percentage!=undefined">
+        <span class="font-weight-bold">{{ t("channelInfo.hs_percentage") }} </span>{{ generic?.hs_percentage }}
       </div>
+      <div v-if="generic?.cw_percentage!=undefined">
+        <span class="font-weight-bold">{{ t("channelInfo.cw_percentage") }} </span>{{ generic?.cw_percentage }}
+      </div>
+      
       <div v-if="selectedChannelInfo?.last_queried_at">
         <span class="font-weight-bold">{{ t("channelInfo.lastUpdate") }}</span>
         {{ new Date(selectedChannelInfo?.last_queried_at).toUTCString() }}
       </div>
-      <div v-if="selectedChannelInfo?.IRI">
-        <span class="font-weight-bold">{{ t("channelInfo.iri") }} </span>{{ selectedChannelInfo?.IRI }}
-      </div>
       <div v-if="selectedChannelInfo?.about">
         <span class="font-weight-bold">{{ t("channelInfo.about") }}</span> {{ selectedChannelInfo?.about }}
+      </div>
+      <div v-if="generic">
+        <span class="font-weight-bold">{{ t("channelInfo.topics") }}</span>
+          <div
+            v-for="topic in generic?.topics"
+            :key="topic.id"
+            color="primary"
+          >
+            {{ topic.name }}
+        </div>
       </div>
       </v-card-text>
       <v-card-actions v-if="isExtended">

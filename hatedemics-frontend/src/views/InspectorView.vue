@@ -11,6 +11,8 @@ import { useChannelsStore } from "@/store/ChannelStore";
 import { useChatsStore } from "@/store/ChatStore";
 import ChannelInfoComponent from "@/components/ChannelInfoComponent.vue";
 import SideBarInfoComponent from "@/components/SideBarInfoComponent.vue"
+import { useRouter } from 'vue-router';
+const router = useRouter();
 const { t } = useI18n();
 const channelsStore = useChannelsStore();
 const chatStore = useChatsStore();
@@ -40,7 +42,7 @@ onMounted(async () => {
     //   hs_percentage: item.hs_percentage,
     //   cw_percentage:item.cw_percentage,
     // }));
-    console.log(topicsStore.topics);
+    // console.log(topicsStore.topics);
   }
 });
 
@@ -50,6 +52,10 @@ const updateChannel = (channel: ChannelInfo) => {
 const updateChat = (chat: Chat) => {
   console.log(chat);
 };
+const goToChats = () => {
+  router.push({ name: 'Discussion' }) 
+
+}
 </script>
 
 <template>
@@ -76,6 +82,9 @@ const updateChat = (chat: Chat) => {
           item-value="id"
           @update:model-value="updateChat"
         ></v-select>
+      </v-col>
+      <v-col>
+        <v-btn color="primary" text="Learn More" variant="text" @click="goToChats()">{{ t("channelInfo.messages") }}</v-btn>
       </v-col>
     </v-row>
 

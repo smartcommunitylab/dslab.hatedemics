@@ -10,7 +10,8 @@
         "title": "Topics"
     },
     "channel": {
-        "title": "Channels"
+        "title": "Channels",
+        "infoTitle": "Channel information"
     },
     "channelTable": {
         "header": {
@@ -34,8 +35,10 @@
         "lastUpdate": "Last update:",
         "mainTopics": "Main topics:",
         "messages": "Messages",
-        "emptySelection": "No selection yet. Please select a channel"
-    },
+        "emptySelection": "No selection yet. Please select a channel",
+        "topics": "Topics",
+        "hs_percentage": "Hate Speech %",
+        "cw_percentage": "Check Worthy %"    },
     "message":{
         "title": "Message"
     }
