@@ -25,6 +25,7 @@
         "title": "Titolo"
     },
     "channelInfo": {
+        "channelId": "ID Canale:",
         "title": "Titolo",
         "description": "Descrizione:",
         "nMessages": "Numero di messaggi:",
@@ -35,6 +36,8 @@
         "lastUpdate": "Ultimo aggiornamento:",
         "mainTopics": "Principali argomenti:",
         "messages": "Messaggi",
+        "channels": "Canali",
+        "chats": "Chat",
         "emptySelection": "Nessuna selezione. Scegliere un canale per visualizzare le statistiche",
         "noData": "Nessun dato disponibile",
         "topics": "Argomenti",

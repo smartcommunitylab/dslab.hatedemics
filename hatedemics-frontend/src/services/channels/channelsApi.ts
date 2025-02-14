@@ -6,7 +6,7 @@ import { type APIResponse, type Channel } from "../types";
 async function getChannelsInfo(selectedLanguage:string) {
 //   return await http.get<APIResponse<Channel[]>>("channels");
 // return await axios.get('http://localhost:5173/public/channels/allChannels.json')
-return await axios.get(`http://localhost:5173/public/channels/${selectedLanguage}.json`)
+return await axios.get(`/public/channels/${selectedLanguage}.json`)
 
 
 }

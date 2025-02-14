@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, reactive } from "vue";
 // import GraphComponent from '@/components/GraphComponent.vue';
-import GraphComponent from "@/components/GraphComponent.vue";
+import GraphComponent from "@/components/GraphComponentNew.vue";
 import ChannelInfoComponent from "@/components/ChannelInfoComponent.vue";
 import { onMounted } from "vue";
 import { useChannelsStore } from "../store/ChannelStore";
@@ -19,12 +19,13 @@ const channelsStore = useChannelsStore();
 const configStore = useConfig();
 const { channelsInfo,selectedChannelInfo,selectedLanguage } = storeToRefs(channelsStore)
   // const selectedLanguage = ref<string>('it');
-
+const sortBy = ref<any>([{ key: 'IRI', order: 'desc' }])
 const headers = reactive<any[]>([
   // { title: t("channelTable.header.id"), key: "id" },
-  { title: t("channelTable.header.messages"), key: "count" },
-  {title:t("channelTable.header.partecipants"),key:"participants_count"},
-  {title:t("channelTable.header.IRI"),key:"IRI"},
+  { title: t("channelTable.header.messages"), key: "message_count",            sortable: true,
+},
+  {title:t("channelTable.header.partecipants"),key:"participants_count",sortable: true},
+  {title:t("channelTable.header.IRI"),key:"IRI",sortable: true},
 ]);
 
 const changeData = (lang:string) => {
@@ -56,6 +57,13 @@ onMounted(async () => {
   }
   selectedLanguage.value = languages[0].value;
 });
+
+const onSortChange = (sort:any) => {
+  if (sort.length > 0) {
+    const { key, order } = sort[0]; // Vuetify fornisce il key e l'ordine
+    channelsStore.selectOrder(key, order);
+  }
+};
 </script>
 
 <template>
@@ -81,15 +89,23 @@ onMounted(async () => {
           hide-details
           single-line
         ></v-text-field>
-        <v-data-table :headers="headers" :items="channelsInfo" :search="search" return-object>
+        <v-data-table
+          :headers="headers"
+          :items="channelsInfo"
+          :search="search"
+          @update:sort-by="onSortChange"
+          v-model:sort-by="sortBy"
+          return-object
+          density="compact"
+        >
           <template v-slot:item="props">
             <tr
               @click="handleClick(props.item)"
               :class="{ selected: props.item.id === selectedChannelInfo?.id }"
             >
               <!-- <td class="text-xs-right">{{ props.item.id }}</td> -->
-              <td class="text-xs-right">{{ props.item.participants_count }}</td>
               <td class="text-xs-right">{{ props.item.message_count }}</td>
+              <td class="text-xs-right">{{ props.item.participants_count }}</td>
               <td class="text-xs-right">{{ props.item.IRI }}</td>
             </tr>
           </template>
@@ -98,17 +114,13 @@ onMounted(async () => {
       <v-col cols="4">
         <h1>{{ t("channel.infoTitle") }}</h1>
         <ChannelInfoComponent />
-
-        
       </v-col>
     </v-row>
-    <v-row
-      ><v-col></v-col></v-row
-    >
+    <v-row><v-col></v-col></v-row>
   </v-container>
 </template>
 <style scoped>
 .selected {
-  background: rgb(var(--v-theme-secondary)) !important;
+  background: orange !important;
 }
 </style>

@@ -25,6 +25,7 @@
         "title": "Title"
     },
     "channelInfo": {
+        "channelId": "Channel ID:",
         "title": "Title",
         "description": "Description:",
         "nMessages": "Number of messages:",
@@ -37,6 +38,8 @@
         "messages": "Messages",
         "emptySelection": "No selection yet. Please select a channel",
         "topics": "Topics",
+        "channels": "Channels",
+        "chats": "Chats",
         "hs_percentage": "Hate Speech %",
         "cw_percentage": "Check Worthy %"    },
     "message":{

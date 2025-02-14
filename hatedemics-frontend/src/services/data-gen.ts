@@ -9,15 +9,17 @@ export type Node = {
     id: string;
     name: string;
     extended: boolean
-    color: string,
-    size: number,
-    iri: number
+    // color: string,
+    // size: number,
+    iri: number,
+    out_degree: number;
+  in_degree: number;
     // channelInfo: ChannelInfo
 };
 
 export type Link = {
-    source: string;
-    target: string;
+    source_id: string;
+    target_id: string;
 };
 
 const links: Link[] = [];
@@ -44,13 +46,15 @@ async function initData() {
         nodes.push({ id: `${nodesData.data[node].channel_int}`,
              name: `${nodesData.data[node].channel_id}`, 
              extended: nodesData.data[node].iri != -1 ,
-             color:'#4B5BBF',
+            //  color:'#4B5BBF',
              iri: nodesData.data[node].iri,
-             size:nodesData.data[node].iri+2});
+            //  size:nodesData.data[node].iri* 20 + 5,
+             out_degree: nodesData.data[node].out_degree,
+             in_degree: nodesData.data[node].in_degree});
     
     }
     for (let link = 0; link < linksData.data.length; link += 1) {
-        links.push({ source: `${linksData.data[link].source_int}`, target: `${linksData.data[link].target_int}` });
+        links.push({ source_id: `${linksData.data[link].source_int}`, target_id: `${linksData.data[link].target_int}` });
     }  
 }
 

@@ -33,10 +33,11 @@ watch(selectedChannelInfo, (newValue,oldValue) => {
 const graphElement = useTemplateRef('graphElement')
 // const msg = ref('Hello from GraphComponent');
 // Set the data
+
 onMounted(async () => {
   await initData();
   const config={
-  backgroundColor: "#ffffff",
+  backgroundColor: "gray",
   nodeSize: (n:Node) => n.size,
   nodeColor: (n:Node) => getColor(n.iri),
   nodeLabelColor: (n:Node) =>  getColor(n.iri),
@@ -46,9 +47,9 @@ onMounted(async () => {
   initialZoomLevel:0.5,
   linkWidth: 1,
   linkColor: "#5F74C2",
-  linkArrows: false,
+  linkArrows: true,
   linkGreyoutOpacity: 0.9,
-  curvedLinks: true,
+  curvedLinks: false,
   renderHoveredNodeRing: true,
   hoveredNodeRingColor:'red',
   focusedNodeRingColor: 'yellow',

@@ -10,16 +10,14 @@ export const useChannelsStore = defineStore("channelsStore", () => {
   const selectedChannelInfo = ref<ChannelInfo>();
   const channelsInfo = ref<ChannelInfo[]>([]);
   const selectedLanguage = ref<string>();
-  // const channels = ref<Channel[]>([]);
-  // const selectedChannel = ref<Channel>();
   const chatStore = useChatsStore();
-
+  const sort = ref<any>({ key: "iri", order: "desc"}); 
   function initChannelsInfo(data: ChannelInfo[]) {
     channelsInfo.value = data;
   }
-  // function initChannels(data: Channel[]) {
-  //   channels.value = data;
-  // }
+  function selectOrder(key:string,order:string) {
+    sort.value = { key: key, order: order};
+  }
   function selectChannelInfo(channel:ChannelInfo){
     selectedChannelInfo.value = channel
     chatStore.initChats([{id:channel.id},{id:channel.linked_chats_ids}])
@@ -68,6 +66,8 @@ export const useChannelsStore = defineStore("channelsStore", () => {
     channelsInfo,
     selectedChannelInfo,
     selectedLanguage,
+    sort,
+    selectOrder,
     selectLanguage,
     initChannelsInfo,
     // initChannels,

@@ -58,6 +58,6 @@ const handleClick = ( item:Topic) =>{
 </template>
 <style scoped>
 .selected {
-  background: rgb(var(--v-theme-secondary)) !important;
+  background: orange !important;
 }
 </style>

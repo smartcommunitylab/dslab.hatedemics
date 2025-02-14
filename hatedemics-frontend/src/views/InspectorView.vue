@@ -1,103 +1,109 @@
 <script setup lang="ts">
-import { onMounted, ref, watch } from "vue";
-import WordCloudComponent from "@/components/WordCloudComponent.vue";
-import TopicsTableComponent from "@/components/TopicsTableComponent.vue";
-import ChatInfoComponent from "@/components/ChatInfoComponent.vue";
-import { storeToRefs } from "pinia";
-import type { Channel, ChannelInfo, Chat, Topic } from "@/services/types";
+import { onMounted, ref } from "vue";
+import { useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
+import { storeToRefs } from "pinia";
+
 import { useTopicsStore } from "@/store/TopicStore";
 import { useChannelsStore } from "@/store/ChannelStore";
 import { useChatsStore } from "@/store/ChatStore";
-import ChannelInfoComponent from "@/components/ChannelInfoComponent.vue";
-import SideBarInfoComponent from "@/components/SideBarInfoComponent.vue"
-import { useRouter } from 'vue-router';
+
+import WordCloudComponent from "@/components/WordCloudComponent.vue";
+import TopicsTableComponent from "@/components/TopicsTableComponent.vue";
+import SideBarInfoComponent from "@/components/SideBarInfoComponent.vue";
+
+import type { ChannelInfo, Chat } from "@/services/types";
+
 const router = useRouter();
 const { t } = useI18n();
+
 const channelsStore = useChannelsStore();
 const chatStore = useChatsStore();
 const topicsStore = useTopicsStore();
-// const selectedChannelInspect = ref<ChannelInfo>();
-const msg = ref<string>();
-// const selectedChatInspect = ref<Chat>();
-  const { selectedChannelInfo, channelsInfo } = storeToRefs(channelsStore);
-  const { selectedChat, chats } = storeToRefs(chatStore);
-  const { selectedTopic, topics } = storeToRefs(topicsStore);
+
+const { selectedChannelInfo, channelsInfo } = storeToRefs(channelsStore);
+const { selectedChat, chats } = storeToRefs(chatStore);
+const { topics } = storeToRefs(topicsStore);
+
+const msg = ref<string>(t("inspect.title"));
 
 onMounted(async () => {
-  // if (!selectedChannelInfo.value) {
-  //   sele
-  // }
   const { success, status } = await topicsStore.dispatchGetTopics("id");
-  //add info of number
-  msg.value = t("inspect.title");
   if (!success) {
-    alert("Ups, something happened 🙂");
-    console.log("Api status ->", status);
-  } else {
-    // topics.value = topicsStore.topics?.map((item: Topic,index:number) => ({
-    //   id: index,
-    //   name: item.name,
-    //   count_percentage: item.count_percentage,
-    //   hs_percentage: item.hs_percentage,
-    //   cw_percentage:item.cw_percentage,
-    // }));
-    // console.log(topicsStore.topics);
+    console.error("API error, status:", status);
   }
 });
 
 const updateChannel = (channel: ChannelInfo) => {
   channelsStore.selectChannelInfo(channel);
 };
-const updateChat = (chat: Chat) => {
-  console.log(chat);
-};
-const goToChats = () => {
-  router.push({ name: 'Discussion' }) 
 
-}
+const updateChat = (chat: Chat) => {
+  console.log("Chat selezionata:", chat);
+};
+
+const goToChats = () => {
+  router.push({ name: "Discussion" });
+};
 </script>
 
 <template>
-  <v-container :fluid="true">
-    <h1>{{ msg }}</h1>
+  <v-container fluid>
+    <h1 class="text-h4 font-weight-bold mb-4">{{ msg }}</h1>
+
     <v-row>
-      <v-col>
+      <!-- Selezione Canali -->
+      <v-col cols="4">
         <v-autocomplete
           return-object
-          label="channels"
+          :label="t('channelInfo.channels')"
           v-model="selectedChannelInfo"
           :items="channelsInfo"
           item-title="id"
           item-value="id"
+          variant="outlined"
+          density="comfortable"
           @update:model-value="updateChannel"
-        ></v-autocomplete>
+        />
       </v-col>
-      <v-col>
+
+      <!-- Selezione Chat -->
+      <v-col cols="4">
         <v-select
-          label="chats"
+          :label="t('channelInfo.chats')"
           v-model="selectedChat"
           :items="chats"
           item-title="id"
           item-value="id"
+          variant="outlined"
+          density="comfortable"
           @update:model-value="updateChat"
-        ></v-select>
+        />
       </v-col>
-      <v-col>
-        <v-btn color="primary" text="Learn More" variant="text" @click="goToChats()">{{ t("channelInfo.messages") }}</v-btn>
+
+      <!-- Bottone Navigazione -->
+      <v-col cols="4" class="d-flex align-center">
+        <v-btn
+          color="primary"
+          variant="elevated"
+          @click="goToChats"
+        >
+          {{ t("channelInfo.messages") }}
+        </v-btn>
       </v-col>
     </v-row>
 
-    <v-row>
-      <v-col> </v-col>
-    </v-row>
+    <v-divider class="my-4" />
+
     <v-row>
       <v-col cols="2">
-      <SideBarInfoComponent :actions="false"/>
+        <SideBarInfoComponent :actions="false" />
       </v-col>
-      <v-col  cols="6">
+
+      <v-col cols="6">
         <TopicsTableComponent />
       </v-col>
+
       <v-col cols="4">
         <WordCloudComponent />
       </v-col>

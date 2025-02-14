@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-const { t } = useI18n();
 import ChatTableComponent from '@/components/ChatTableComponent.vue'
-import ChatInfoComponent from '@/components/ChatInfoComponent.vue'
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 // import GraphComponent from '@/components/GraphComponent.vue';
@@ -13,10 +11,17 @@ import { useI18n } from 'vue-i18n';
 import { storeToRefs } from 'pinia';
 import type { Message } from '@/services/types';
 import SideBarInfoComponent from "@/components/SideBarInfoComponent.vue"
+import type { ChannelInfo, Chat } from "@/services/types";
+import { useChannelsStore } from "@/store/ChannelStore";
+import { useChatsStore } from "@/store/ChatStore";
+const { t } = useI18n();
 
+const channelsStore = useChannelsStore();
+const chatStore = useChatsStore();
 const messagesStore = useMessagesStore();
 const { messages } = storeToRefs(messagesStore);
-
+const { selectedChannelInfo, channelsInfo } = storeToRefs(channelsStore);
+const { selectedChat, chats } = storeToRefs(chatStore);
 onMounted(async () => {
   const { success, status } = await messagesStore.dispatchGetMessages();
   //add info of number
@@ -31,6 +36,14 @@ onMounted(async () => {
     console.log(messagesStore.messages);
   }
 });
+
+const updateChannel = (channel: ChannelInfo) => {
+  channelsStore.selectChannelInfo(channel);
+};
+
+const updateChat = (chat: Chat) => {
+  console.log("Chat selezionata:", chat);
+};
 </script>
 
 <template>
@@ -38,8 +51,37 @@ onMounted(async () => {
     <h1>{{ msg }}</h1>
 <!-- {{ messagesStore.messages }} -->
 <v-row>
-      <v-col>
+  <v-row>
+      <!-- Selezione Canali -->
+      <v-col cols="4">
+        <v-autocomplete
+          return-object
+          :label="t('channelInfo.channels')"
+          v-model="selectedChannelInfo"
+          :items="channelsInfo"
+          item-title="id"
+          item-value="id"
+          variant="outlined"
+          density="comfortable"
+          @update:model-value="updateChannel"
+        />
       </v-col>
+
+      <!-- Selezione Chat -->
+      <v-col cols="4">
+        <v-select
+          :label="t('channelInfo.chats')"
+          v-model="selectedChat"
+          :items="chats"
+          item-title="id"
+          item-value="id"
+          variant="outlined"
+          density="comfortable"
+          @update:model-value="updateChat"
+        />
+      </v-col>
+
+    </v-row>
       </v-row>
     <v-row>
       <v-col cols="2">

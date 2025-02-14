@@ -7,10 +7,10 @@ import { type APIResponse, type Message } from "../types";
 async function getChats(id: number) {
   // return await http.get<APIResponse<Message[]>>(`messages/${id}`);
   // let messages = await axios.get('http://localhost:5173/public/chats/allMessages.json')
-  let messages = await axios.get(`http://localhost:5173/public/chats/${Math.floor(Math.random() * 2) + 1}.json`)
+  let messages = await axios.get(`http://localhost:5173/public/chats/1.json`)
   let worthData = await axios.get('http://localhost:5173/public/chats/allworth.json')
   for (let i = 0; i < 1000; i++) {
-    if (worthData.data[i]) {
+    if (messages.data[i] &&worthData.data[i]) {
       messages.data[i].hate_label = worthData.data[i].hate_label
       messages.data[i].checkworthy_label = worthData.data[i].checkworthy_label
       messages.data[i].topic= worthData.data[i].topic
