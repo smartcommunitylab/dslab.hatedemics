@@ -56,7 +56,7 @@ The Application represents a Spring boot application and can be run accordingly:
 Pass the variables as environment or as spring properties, e.g.
 
     ```sh
-    java -P-Dspring.datasource.url=jdbc:sqlite:/path/to/data.db -jar target/hatedemics-backend-0.0.1-SNAPSHOT.jar
+    java -Dspring.datasource.url=jdbc:sqlite:/path/to/data.db -Ddata.path=/path/to/data  -jar target/hatedemics-backend-0.0.1-SNAPSHOT.jar
     ```
 
 
