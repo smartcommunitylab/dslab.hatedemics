@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
-@RestController
+@RestController("ChannelController")
 @RequestMapping("/api/channels")
 public class TelegramChannelController {
 
