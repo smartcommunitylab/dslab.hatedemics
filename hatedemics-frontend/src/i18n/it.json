@@ -25,6 +25,7 @@
         "title": "Titolo"
     },
     "channelInfo": {
+        "about": "Informazioni:",
         "channelId": "ID Canale:",
         "title": "Titolo",
         "description": "Descrizione:",
@@ -41,8 +42,8 @@
         "emptySelection": "Nessuna selezione. Scegliere un canale per visualizzare le statistiche",
         "noData": "Nessun dato disponibile",
         "topics": "Argomenti",
-        "hs_percentage": "Hate Speech %",
-        "cw_percentage": "Check Worthy %"
+        "hs_percentage": "Hate Speech:",
+        "cw_percentage": "Check Worthy:"
     },
     "message": {
         "title": "Messaggi"

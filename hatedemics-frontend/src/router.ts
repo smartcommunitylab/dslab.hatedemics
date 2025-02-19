@@ -19,6 +19,7 @@ import Login from '@/views/LoginView.vue';
 import annotationInterface from '@/components/AnnotationInterface.vue'
 import ProjectsView from '@/components/ProjectsList.vue'
 import tasks from '@/components/TaskList.vue'
+import loginApi from './services/login/loginApi';
 
 
 // Pinia Store
@@ -96,44 +97,24 @@ const routes: RouteRecordRaw[] = [
   }
 ];
 
-/** Vue Router */
 const router: Router = createRouter({
-  /**
-   * History Mode
-   *
-   * @see {@link https://router.vuejs.org/guide/essentials/history-mode.html }
-   */
-  history: createWebHistory(import.meta.env.BASE_URL), // createWebHashHistory(import.meta.env.BASE_URL)
-  /*
-  scrollBehavior: (to, _from, savedPosition) => {
-    let scrollTo: number | string = 0;
-
-    if (to.hash) {
-      scrollTo = to.hash;
-    } else if (savedPosition) {
-      scrollTo = savedPosition.top;
-    }
-    return goTo(scrollTo);
-  },
-  */
+  history: createWebHistory(import.meta.env.BASE_URL), 
   routes
 });
 
 // Global before guards
-// https://router.vuejs.org/guide/advanced/navigation-guards.html#global-before-guards}
-router.beforeEach(
-  async (to: RouteLocationNormalized, from: RouteLocationNormalized, next: NavigationGuardNext) => {
-    const globalStore = useGlobal();
-    // Show Loading
-    // comment out for https://github.com/logue/vite-vuetify-ts-starter/issues/16
-    // globalStore.setLoading(true);
+router.beforeEach(async (to, from, next) => {
+  const isAuth = await loginApi.isAuthenticated();
 
-    // Hide snack bar
-    setTimeout(() => globalStore.setMessage(''),1000);
+  if (!isAuth && to.name !== 'Login') {
+    // Se l'utente non è autenticato e prova ad accedere a una pagina protetta, lo rimandiamo al login
+    next({ name: 'Login' });
+
+  } else {
+    // Se tutto è ok, continuiamo normalmente
     next();
   }
-);
-
+});
 // Global After Hooks
 // https://router.vuejs.org/guide/advanced/navigation-guards.html#global-after-hooks}
 router.afterEach(() => {
@@ -142,29 +123,5 @@ router.afterEach(() => {
   globalStore.setLoading(false);
 });
 
-/*
-const scrollBehavior = async (
-  to: RouteLocationNormalized,
-  _from: RouteLocationNormalized,
-  savedPosition: RouteLocation
-): Promise<any> => {
-  let scrollpos = {};
-  if (to.hash) {
-    scrollpos = {
-      el: to.hash,
-      behavior: 'smooth',
-    };
-  } else if (savedPosition) {
-    scrollpos = savedPosition;
-  } else {
-    scrollpos = { top: 0 };
-  }
-  return await new Promise((resolve, _reject) => {
-    setTimeout(() => {
-      resolve(scrollpos);
-    }, 600);
-  });
-};
-*/
 
 export default router;

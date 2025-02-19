@@ -50,17 +50,13 @@ import { useLoginStore } from '@/store/LoginStore'
       '/users/me/changepassword?old_password=' + oldPassword + '&new_password=' + newPassword
     )
   }
-  async  function isAuthenticated() {
-    axios
-      .get('/users/me')
-      .then(function () {
-        // console.log('true')
-        return true
-      })
-      .catch(function () {
-        // console.log('false')
-        return false
-      })
+  async function isAuthenticated(): Promise<boolean> {
+    try {
+      await axios.get('/users/me');
+      return true;
+    } catch (error) {
+      return false;
+    }
   }
 export default {
   login,

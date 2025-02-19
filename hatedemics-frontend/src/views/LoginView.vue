@@ -50,30 +50,27 @@ async function submit() {
 </script>
 
 <template>
-<v-container class="fill-height" align="center">
+  <v-container class="fill-height d-flex justify-center align-center">
     <v-row>
       <v-col>
-        <!-- Login handling: if successful, button becomes a spinner and waits for auth. If successful, redirects to 'projects'-->
-        <v-sheet class="mx-6" width="300px">
-          <div class="text-h4 py-4">Login</div>
-          <v-form @submit.prevent="submit" v-model="goodLogin"     color="primary"
->
+        <v-sheet class="mx-auto pa-8" width="400px" elevation="3">
+          <div class="text-h4 py-4 text-center">Login</div>
+          <v-form @submit.prevent="submit" v-model="goodLogin" color="primary">
             <v-text-field label="Username" v-model="username" :rules="regole"></v-text-field>
-            <!-- 'type' is 'password' in order to show **** instead of abcd-->
-            <v-text-field
-              label="Password"
-              v-model="password"
-              type="password"
-              :rules="regole"
-            ></v-text-field>
-            <v-btn type="submit" class="ma-2" :loading="loading" :disabled="isButtonDisabled"
-            color="primary"
-            >{{ t('login.button') }}</v-btn
+            <v-text-field label="Password" v-model="password" type="password" :rules="regole"></v-text-field>
+            <v-btn 
+              type="submit" 
+              class="ma-2" 
+              :loading="loading" 
+              :disabled="isButtonDisabled"
+              color="primary" 
+              block
             >
+              {{ t('login.button') }}
+            </v-btn>
           </v-form>
         </v-sheet>
       </v-col>
     </v-row>
   </v-container>
-
 </template>

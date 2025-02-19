@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted, watch } from "vue";
 import Sigma from "sigma";
 import forceAtlas2 from "graphology-layout-forceatlas2";
 import Graph from "graphology";
-import { initData, nodes, links, type Node, type Link } from "@/services/data-gen";
+import { initData, nodes, links, type Node } from "@/services/data-gen";
 import { useChannelsStore } from '@/store/ChannelStore';
-import { watch } from 'vue'
 import { storeToRefs } from 'pinia';
+
 const channelsStore = useChannelsStore();
-const { selectedChannelInfo,sort } = storeToRefs(channelsStore)
+const { selectedChannelInfo, sort } = storeToRefs(channelsStore);
 const graph = new Graph();
 const sigmaContainer = ref<HTMLElement | null>(null);
 const tooltip = ref<{ show: boolean; x: number; y: number; node: Node | null }>({
@@ -19,107 +19,71 @@ const tooltip = ref<{ show: boolean; x: number; y: number; node: Node | null }>(
 });
 
 let sigmaInstance: Sigma | null = null;
+const originalAttributes = new Map<string, { color: string; size: number }>();
+let selectedNode: string | null = null;
 
-watch(sort, (newValue,oldValue) => {
-  console.log('sort',newValue)
-  // fillChart(newValue.key);
-})
+const getColorFromIri = (iri: number) => {
+  if (iri < 0) return "#000000"; // violetto
+
+  // Scala di colori dal grigio (#3C3C3C) al rosso (#C13032)
+  const r1 = 60, g1 = 60, b1 = 60;   // Grigio scuro
+  const r2 = 193, g2 = 48, b2 = 50;  // Rosso scuro
+
+  // Interpolazione lineare tra i due colori
+  const r = Math.round(r1 + (r2 - r1) * iri);
+  const g = Math.round(g1 + (g2 - g1) * iri);
+  const b = Math.round(b1 + (b2 - b1) * iri);
+
+  return `rgb(${r}, ${g}, ${b})`;
+};
 
 const resetGraph = () => {
-  graph.clear(); // Rimuove tutti i nodi e gli archi
+  graph.clear();
 };
-const fillChart = (order:any) => {
+
+const fillChart = () => {
   resetGraph();
-  // Funzione per determinare il colore in base al degree
-  // const getColor = (node: Node) => {
-  //   if (node.out_degree > 40) return "red";
-  //   if (node.in_degree > 20) return "green";
-  //   return "blue";
-  // };
-  const getColorFromIri = (iri: number) => {
-  const scale = ["#0000ff", "#0044ff", "#0088ff", "#00ccff", "#00ffff", "#00ff88", "#00ff00", "#ffff00", "#ff8800", "#ff0000"];
-  const index = Math.min(Math.floor(iri * (scale.length - 1)), scale.length - 1);
-  return scale[index]; // Mappa iri su una scala di colori
-};
-  // Aggiunta dei nodi con colore e dimensioni
-  const originalAttributes = new Map<string, { color: string; size: number }>();
+
   nodes.forEach(node => {
     if (!graph.hasNode(node.id)) {
-      const key = sort.value.key as keyof Node;
-      //TODO
-      // const nodeSize = (node[key] as number) * 20 + 5;
       const nodeSize = (node.iri as number) * 4 + 10;
-    const nodeColor = getColorFromIri(node.iri);   // Colore iniziale
-    graph.addNode(node.id, {
-      x: Math.random() * 10,
-      y: Math.random() * 10,
-      size: nodeSize, // Evitiamo nodi troppo piccoli
-      label: node.id,
-      color: nodeColor,
-      ...node
-    });
-    originalAttributes.set(node.id, { color: nodeColor, size: nodeSize });
-  }
-  });
-
-  // Aggiunta degli archi
-  links.forEach(edge => {
-    if (graph.hasNode(edge.source_id) && graph.hasNode(edge.target_id)) {
-      if (!graph.hasEdge(edge.source_id, edge.target_id))
-      graph.addEdge(edge.source_id, edge.target_id, { color: "gray", size: 1 });
+      const nodeColor = getColorFromIri(node.iri);
+      graph.addNode(node.id, {
+        x: Math.random() * 10,
+        y: Math.random() * 10,
+        size: nodeSize,
+        label: node.id,
+        color: nodeColor,
+        ...node
+      });
+      originalAttributes.set(node.id, { color: nodeColor, size: nodeSize });
     }
   });
 
-  // Applichiamo il layout ForceAtlas2
-  forceAtlas2.assign(graph, { iterations: 100, settings: { gravity: 1 } });
-  const container = document.getElementById("sigma-container") as HTMLElement;
-  // Creiamo la visualizzazione con Sigma.js
-  sigmaInstance = new Sigma(graph, sigmaContainer.value as HTMLElement,{allowInvalidContainer: true});
+  links.forEach(edge => {
+    if (graph.hasNode(edge.source_id) && graph.hasNode(edge.target_id)) {
+      if (!graph.hasEdge(edge.source_id, edge.target_id)){
+      const sourceColor = graph.getNodeAttribute(edge.source_id, "color");
+    const targetColor = graph.getNodeAttribute(edge.target_id, "color");
+    const edgeColor = getEdgeColor(sourceColor, targetColor);
+    graph.addEdge(edge.source_id, edge.target_id, { color: edgeColor, size: 1 });
+      }
+    }
+  });
 
+  forceAtlas2.assign(graph, { iterations: 100, settings: { gravity: 1 } });
+  sigmaInstance = new Sigma(graph, sigmaContainer.value as HTMLElement, { allowInvalidContainer: true });
   // Gestione tooltip al passaggio del mouse
   sigmaInstance.on("enterNode", ({ node }) => {
     const nodeData = graph.getNodeAttributes(node) as Node;
-    tooltip.value = { show: true, x : event!.clientX, y: event!.clientY, node: nodeData };
+    tooltip.value = { show: true, x : event!.clientX+10, y: event!.clientY+10, node: nodeData };
   });
-  let selectedNode: string | null = null;
-  const selectNode= (node: string)=> {
-  selectedNode = node;
-
-  // Reset colori
-  graph.forEachNode(n => {
-    graph.setNodeAttribute(n, "color", "blue");
-    graph.setNodeAttribute(n, "size", nodes?.find(x => x?.id === n)?.iri * 4 + 10 || 10);
+  sigmaInstance.on("clickNode", ({ node }) => {
+    selectNode(node);
+    let nodeAttributes = graph.getNodeAttributes(node);
+    channelsStore.selectChannelInfo(channelsStore.channelsInfo.find(c => c.id === nodeAttributes.name));
   });
-
-  graph.forEachEdge(edge => {
-    graph.setEdgeAttribute(edge, "color", "gray");
-  });
-
-  // Evidenzia il nodo selezionato
-  graph.setNodeAttribute(node, "color", "red");
-  graph.setNodeAttribute(node, "size", 10);
-
-  // Evidenzia i link collegati
-  graph.forEachEdge(edge => {
-    if (graph.source(edge) === node || graph.target(edge) === node) {
-      graph.setEdgeAttribute(edge, "color", "orange");
-      graph.setNodeAttribute(graph.source(edge), "color", "orange");
-      graph.setNodeAttribute(graph.target(edge), "color", "orange");
-    }
-  });
-
-  sigmaInstance?.refresh();
-}
-// Gestore dell'evento click sui nodi
-sigmaInstance.on("clickNode", ({ node }) => {
-  selectNode(node);
-  
-  let nodeAttributes = graph.getNodeAttributes(node);
-  channelsStore.selectChannelInfo(channelsStore.channelsInfo.filter(c => {
-          return c.id === nodeAttributes.name
-        })[0])
-});
-watch(selectedChannelInfo, (newValue,oldValue) => {
+  watch(selectedChannelInfo, (newValue,oldValue) => {
     console.log('selectedNode',newValue)
     if (newValue){
       //select node by id (from 0 to x)
@@ -139,43 +103,94 @@ watch(selectedChannelInfo, (newValue,oldValue) => {
       }
     }
   })
-sigmaInstance.on("clickStage", () => {
-  selectedNode = null;
-
-// Reset colori e dimensioni usando gli attributi originali
-graph.forEachNode(n => {
-  const original = originalAttributes.get(n);
-  if (original) {
-    graph.setNodeAttribute(n, "color", original.color);
-    graph.setNodeAttribute(n, "size", original.size);
-  }
-});
-
-graph.forEachEdge(edge => {
-  graph.setEdgeAttribute(edge, "color", "gray");
-});
-channelsStore.unselectChannel();
-sigmaInstance?.refresh();
-});
-  sigmaInstance.on("leaveNode", () => {
-    tooltip.value.show = false;
+  sigmaInstance.on("clickStage", () => {
+    selectedNode = null;
+    resetHighlighting();
+    channelsStore.unselectChannel();
+    sigmaInstance?.refresh();
   });
 }
-onMounted(async () => {
-  resetGraph(); // Pulisce il grafo prima di rigenerarlo
+const getEdgeColor = (sourceColor: string, targetColor: string) => {
+  const rgbSource = sourceColor.match(/\d+/g)?.map(Number) || [60, 60, 60];
+  const rgbTarget = targetColor.match(/\d+/g)?.map(Number) || [60, 60, 60];
 
-  await initData(); // Carichiamo i dati prima di visualizzare il grafo
-  fillChart(sort)  
+  const r = Math.round((rgbSource[0] + rgbTarget[0]) / 2);
+  const g = Math.round((rgbSource[1] + rgbTarget[1]) / 2);
+  const b = Math.round((rgbSource[2] + rgbTarget[2]) / 2);
+
+  return `rgb(${r}, ${g}, ${b})`;
+};
+const selectNode = (node: string) => {
+  selectedNode = node;
+  resetHighlighting();
+
+  graph.setNodeAttribute(node, "color", "#ff6600");
+  graph.setNodeAttribute(node, "size", (nodes.find(n => n.id === node)?.iri * 4 + 12) || 12);
+
+  graph.forEachEdge(edge => {
+    if (graph.source(edge) === node || graph.target(edge) === node) {
+      graph.setEdgeAttribute(edge, "color", "orange");
+      const targetNode = graph.source(edge) === node ? graph.target(edge) : graph.source(edge);
+      graph.setNodeAttribute(targetNode, "color", "#ffa500");
+    }
+  });
+
+  sigmaInstance?.refresh();
+}
+// const selectNode = (node: string) => {
+//   selectedNode = node;
+//   resetHighlighting();
+
+//   // Nodo selezionato in giallo (#FFD700)
+//   graph.setNodeAttribute(node, "color", "#FFD700");
+//   graph.setNodeAttribute(node, "size", (nodes.find(n => n.id === node)?.iri * 4 + 12) || 12);
+
+//   graph.forEachEdge(edge => {
+//     if (graph.source(edge) === node || graph.target(edge) === node) {
+//       graph.setEdgeAttribute(edge, "color", "#FFC700"); // Giallo più tenue per i link
+//       const targetNode = graph.source(edge) === node ? graph.target(edge) : graph.source(edge);
+//       graph.setNodeAttribute(targetNode, "color", "#FFD700");
+//     }
+//   });
+
+//   sigmaInstance?.refresh();
+// };
+
+const resetHighlighting = () => {
+  graph.forEachNode(n => {
+    const original = originalAttributes.get(n);
+    if (original) {
+      graph.setNodeAttribute(n, "color", original.color);
+      graph.setNodeAttribute(n, "size", original.size);
+    }
+  });
+
+  graph.forEachEdge(edge => {
+    const source = graph.getNodeAttribute(graph.source(edge), "color");
+    const target = graph.getNodeAttribute(graph.target(edge), "color");
+    const originalEdgeColor = getEdgeColor(source, target);
+    graph.setEdgeAttribute(edge, "color", originalEdgeColor);
+  });
+
+  sigmaInstance?.refresh();
+};
+
+onMounted(async () => {
+  resetGraph();
+  await initData();
+  fillChart();
 });
 
 onUnmounted(() => {
   if (sigmaInstance) {
     sigmaInstance.kill();
-    sigmaInstance = null; // Resetta l'istanza per evitare problemi
-  }});
+    sigmaInstance = null;
+  }
+});
 </script>
+
 <template>
-  <div ref="sigmaContainer" style="width: 100%; height: 600px; position: relative" :settings="{}"></div>
+  <div ref="sigmaContainer" style="width: 100%; height: 400px; position: relative"></div>
   <div
     v-if="tooltip.show"
     :style="{ left: tooltip.x + 'px', top: tooltip.y + 'px' }"
@@ -183,6 +198,7 @@ onUnmounted(() => {
   >
     <strong>ID:</strong> {{ tooltip.node?.id }} <br />
     <strong>IRI:</strong> {{ tooltip.node?.iri.toFixed(3) }} <br />
+    <strong>HS:</strong> {{ tooltip.node?.hs.toFixed(3) }} <br />
     <strong>Out Degree:</strong> {{ tooltip.node?.out_degree }} <br />
     <strong>In Degree:</strong> {{ tooltip.node?.in_degree }}
   </div>

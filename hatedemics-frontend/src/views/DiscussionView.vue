@@ -47,12 +47,11 @@ const updateChat = (chat: Chat) => {
 </script>
 
 <template>
-  <v-container :fluid="true">
-    <h1>{{ msg }}</h1>
-<!-- {{ messagesStore.messages }} -->
-<v-row>
-  <v-row>
-      <!-- Selezione Canali -->
+  <v-container fluid>
+    <h1 class="text-h4 font-weight-bold mb-4">{{ msg }}</h1>
+
+    <!-- Selettori di Canale e Chat -->
+    <v-row>
       <v-col cols="4">
         <v-autocomplete
           return-object
@@ -67,7 +66,6 @@ const updateChat = (chat: Chat) => {
         />
       </v-col>
 
-      <!-- Selezione Chat -->
       <v-col cols="4">
         <v-select
           :label="t('channelInfo.chats')"
@@ -80,16 +78,20 @@ const updateChat = (chat: Chat) => {
           @update:model-value="updateChat"
         />
       </v-col>
-
     </v-row>
-      </v-row>
+
+    <v-divider class="my-4" />
+
+    <!-- Layout con Sidebar e Tabella -->
     <v-row>
-      <v-col cols="2">
-      <SideBarInfoComponent :actions="false"/>
+      <v-col cols="3">
+        <SideBarInfoComponent :actions="false" />
       </v-col>
-      <v-col cols="10">
-      <ChatTableComponent />
+
+      <v-col cols="9">
+        <ChatTableComponent />
       </v-col>
-      </v-row>
+    </v-row>
   </v-container>
 </template>
+

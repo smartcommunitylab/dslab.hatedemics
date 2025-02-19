@@ -25,6 +25,7 @@
         "title": "Title"
     },
     "channelInfo": {
+        "about": "About:",
         "channelId": "Channel ID:",
         "title": "Title",
         "description": "Description:",
@@ -40,8 +41,8 @@
         "topics": "Topics",
         "channels": "Channels",
         "chats": "Chats",
-        "hs_percentage": "Hate Speech %",
-        "cw_percentage": "Check Worthy %"    },
+        "hs_percentage": "Hate Speech:",
+        "cw_percentage": "Check Worthy:"    },
     "message":{
         "title": "Message"
     }

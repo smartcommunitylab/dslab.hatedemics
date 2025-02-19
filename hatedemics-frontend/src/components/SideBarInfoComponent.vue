@@ -87,7 +87,7 @@ onMounted(async () => {
       </v-card-text>
     </v-card>
 
-    <v-alert v-else type="info" class="mt-4">
+    <v-alert v-else type="info" class="mt-4" color="primary">
       {{ t("channelInfo.emptySelection") }}
     </v-alert>
   </v-container>

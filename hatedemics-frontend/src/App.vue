@@ -10,7 +10,6 @@ import {
   type Ref,
   type WritableComputedRef
 } from 'vue';
-
 import { useTheme } from 'vuetify';
 
 // Components
@@ -52,7 +51,8 @@ const snackbarVisibility: Ref<boolean> = ref(false);
 const snackbarText: ComputedRef<string> = computed(() => globalStore.message);
 
 /** Toggle Dark mode */
-const isDark: ComputedRef<string> = computed(() => (configStore.theme ? 'dark' : 'light'));
+// const isDark: ComputedRef<string> = computed(() => (configStore.theme ? 'dark' : 'light'));
+  const isDark: ComputedRef<string> = computed(() => (configStore.theme ? 'darkTheme' : 'lightTheme'));
 
 // When snackbar text has been set, show snackbar.
 watch(
@@ -73,11 +73,11 @@ onMounted(() => {
 
 <template>
   <v-app :theme="isDark">
-    <v-navigation-drawer v-model="drawer" temporary v-if="!route.meta.hideNavbar">
+    <v-navigation-drawer v-model="drawer" temporary v-if="!route.meta.hideNavbar" class="bg-primary text-on-primary">
       <drawer-component />
     </v-navigation-drawer>
 
-    <v-app-bar v-if="!route.meta.hideSideMenu">
+    <v-app-bar v-if="!route.meta.hideSideMenu" class="bg-primary text-on-primary">
       <v-app-bar-nav-icon @click="drawer = !drawer" />
       <v-app-bar-title tag="h1">{{ title }}</v-app-bar-title>
       <v-spacer />
@@ -110,7 +110,7 @@ onMounted(() => {
       </template>
     </v-snackbar>
 
-    <v-footer app elevation="3">
+    <v-footer app elevation="3" color="primary">
       <span class="mr-5">2025 &copy;</span>
     </v-footer>
   </v-app>

@@ -1,126 +1,156 @@
 <script setup lang="ts">
-import { ref, reactive } from "vue";
-// import GraphComponent from '@/components/GraphComponent.vue';
-import GraphComponent from "@/components/GraphComponentNew.vue";
-import ChannelInfoComponent from "@/components/ChannelInfoComponent.vue";
-import { onMounted } from "vue";
-import { useChannelsStore } from "../store/ChannelStore";
-import { useI18n, type Locale } from "vue-i18n";
+import { ref, reactive, watch, onMounted } from "vue";
+import { useI18n } from "vue-i18n";
 import { useConfig } from "@/store";
-import { watch } from 'vue'
+import { useChannelsStore } from "@/store/ChannelStore";
 import { storeToRefs } from "pinia";
 import type { ChannelInfo } from "@/services/types";
+import GraphComponent from "@/components/GraphComponentNew.vue";
+import ChannelInfoComponent from "@/components/ChannelInfoComponent.vue";
+
 const { t } = useI18n();
+const channelsStore = useChannelsStore();
+const configStore = useConfig();
+const { channelsInfo, selectedChannelInfo, selectedLanguage } = storeToRefs(channelsStore);
+
 const msg = ref("");
 const search = ref("");
-const languages= [{language:'Italiano',value:'it'},{language:'English',value:'en'},{language:'Espanol',value:'es'}]
-const channelsStore = useChannelsStore();
-// const channels = ref<any[]>([]);
-const configStore = useConfig();
-const { channelsInfo,selectedChannelInfo,selectedLanguage } = storeToRefs(channelsStore)
-  // const selectedLanguage = ref<string>('it');
-const sortBy = ref<any>([{ key: 'IRI', order: 'desc' }])
-const headers = reactive<any[]>([
-  // { title: t("channelTable.header.id"), key: "id" },
-  { title: t("channelTable.header.messages"), key: "message_count",            sortable: true,
-},
-  {title:t("channelTable.header.partecipants"),key:"participants_count",sortable: true},
-  {title:t("channelTable.header.IRI"),key:"IRI",sortable: true},
+const languages = [
+  { language: "Italiano", value: "it" },
+  { language: "English", value: "en" },
+  { language: "Español", value: "es" },
+];
+
+const sortBy = ref([{ key: "IRI", order: "desc" }]);
+
+const headers = reactive([
+  { title: t("channelTable.header.messages"), key: "message_count", sortable: true },
+  { title: t("channelTable.header.partecipants"), key: "participants_count", sortable: true },
+  { title: t("channelTable.header.IRI"), key: "IRI", sortable: true },
 ]);
 
-const changeData = (lang:string) => {
-  console.log('change file of channels and reload everything '+lang)
+const changeData = (lang: string) => {
+  console.log("Change file of channels and reload everything " + lang);
 };
-const handleClick = ( item:ChannelInfo) =>{
-  console.log("Clicked item: ", item)
-  channelsStore.selectChannelInfo(item)
-}
-watch(selectedChannelInfo, (newValue,oldValue) => {
-    console.log('selectedNode',newValue)
-  })
+
+const handleClick = (item: ChannelInfo) => {
+  console.log("Clicked item: ", item);
+  channelsStore.selectChannelInfo(item);
+};
+
+watch(selectedChannelInfo, (newValue) => {
+  console.log("selectedNode", newValue);
+});
+
 onMounted(async () => {
-  await channelsStore.selectLanguage('it');
+  await channelsStore.selectLanguage("it");
   const { success, status } = await channelsStore.dispatchGetChannels();
-//add info of number
- msg.value=t("channel.title")
+  msg.value = t("channel.title");
+
   if (!success) {
-    alert("Ups, something happened 🙂");
-    console.log("Api status ->", status);
-  } else {
-    // channels.value = channelsStore.channelsInfo?.map((item:ChannelInfo) => ({
-      // id: item.id,
-      // count: item.message_count,
-      // participants_count:item.participants_count,
-      // IRI:item.IRI
-      // ...item
-    // }));
+    console.error("API error ->", status);
+    alert("Oops, something went wrong!");
   }
+
   selectedLanguage.value = languages[0].value;
 });
 
-const onSortChange = (sort:any) => {
+const onSortChange = (sort: any) => {
   if (sort.length > 0) {
-    const { key, order } = sort[0]; // Vuetify fornisce il key e l'ordine
+    const { key, order } = sort[0];
     channelsStore.selectOrder(key, order);
   }
 };
 </script>
 
 <template>
-  <v-container :fluid="true">
+  <v-container fluid>
     <v-row>
+      <!-- Sezione principale -->
       <v-col cols="8">
-        <h1>{{ msg }}</h1>
-        <v-select
-          label="Language"
-          v-model="selectedLanguage"
-          :items="languages"
-          item-title="language"
-          item-value="value"
-          @update:model-value="changeData"
-        >
-        </v-select>
-        <GraphComponent />
-        <v-text-field
-          v-model="search"
-          label="Search"
-          prepend-inner-icon="mdi-magnify"
-          variant="outlined"
-          hide-details
-          single-line
-        ></v-text-field>
-        <v-data-table
-          :headers="headers"
-          :items="channelsInfo"
-          :search="search"
-          @update:sort-by="onSortChange"
-          v-model:sort-by="sortBy"
-          return-object
-          density="compact"
-        >
-          <template v-slot:item="props">
-            <tr
-              @click="handleClick(props.item)"
-              :class="{ selected: props.item.id === selectedChannelInfo?.id }"
-            >
-              <!-- <td class="text-xs-right">{{ props.item.id }}</td> -->
-              <td class="text-xs-right">{{ props.item.message_count }}</td>
-              <td class="text-xs-right">{{ props.item.participants_count }}</td>
-              <td class="text-xs-right">{{ props.item.IRI }}</td>
-            </tr>
-          </template>
-        </v-data-table>
+        <v-card class="pa-4 bg-surface" elevation="2">
+          <v-card-title class="text-h5 font-weight-bold text-primary">
+            {{ msg }}
+          </v-card-title>
+          <v-divider class="mb-4"></v-divider>
+
+          <v-select
+            label="Language"
+            v-model="selectedLanguage"
+            :items="languages"
+            item-title="language"
+            item-value="value"
+            variant="outlined"
+            density="compact"
+            color="primary"
+            class="mb-4"
+            @update:model-value="changeData"
+          />
+
+          <GraphComponent class="mb-4" />
+
+          <v-text-field
+            v-model="search"
+            label="Search"
+            prepend-inner-icon="mdi-magnify"
+            variant="outlined"
+            hide-details
+            single-line
+            color="primary"
+            class="mb-4"
+          ></v-text-field>
+
+          <v-data-table
+            :headers="headers"
+            :items="channelsInfo"
+            :search="search"
+            @update:sort-by="onSortChange"
+            v-model:sort-by="sortBy"
+            return-object
+            density="compact"
+            hover
+            class="elevation-2"
+          >
+            <template v-slot:item="{ item }">
+              <tr
+                @click="handleClick(item)"
+                :class="{ selected: item.id === selectedChannelInfo?.id }"
+                class="hover-row"
+              >
+                <td class="text-left">{{ item.message_count }}</td>
+                <td class="text-left">{{ item.participants_count }}</td>
+                <td class="text-left">{{ item.IRI }}</td>
+              </tr>
+            </template>
+          </v-data-table>
+        </v-card>
       </v-col>
+
+      <!-- Sezione info canale -->
       <v-col cols="4">
-        <h1>{{ t("channel.infoTitle") }}</h1>
-        <ChannelInfoComponent />
+        <v-card class="pa-4 bg-surface" elevation="2">
+          <v-card-title class="text-h5 font-weight-bold text-secondary">
+            {{ t("channel.infoTitle") }}
+          </v-card-title>
+          <v-divider class="mb-4"></v-divider>
+          <ChannelInfoComponent />
+        </v-card>
       </v-col>
     </v-row>
-    <v-row><v-col></v-col></v-row>
   </v-container>
 </template>
+
 <style scoped>
+/* Selezione riga tabella */
 .selected {
-  background: orange !important;
+  background-color: rgb(var(--v-theme-primary)) !important;
+  color: rgb(var(--v-theme-on-primary)) !important;
+  transition: background 0.2s;
+}
+
+/* Hover sulla tabella */
+.hover-row:hover {
+  /* background-color: var(--v-theme-surface-lighten-2) !important; */
+  cursor: pointer;
 }
 </style>

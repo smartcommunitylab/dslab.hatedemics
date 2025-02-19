@@ -28,6 +28,8 @@ const handleClick = ( item:Topic) =>{
   topicsStore.selectTopic(item)
   
 }
+const sortBy = ref([{ key: "hs_percentage", order: "desc" }]);
+
 </script>
 <template>
     <v-container>
@@ -40,11 +42,16 @@ const handleClick = ( item:Topic) =>{
           hide-details
           single-line
         ></v-text-field>
-        <v-data-table :headers="headers" :items="topics" :search="search" return-object>
+        <v-data-table :headers="headers" :items="topics" :search="search" @update:sort-by="onSortChange"
+            v-model:sort-by="sortBy"
+            return-object
+            density="compact"
+            hover>
           <template v-slot:item="props">
             <tr
               @click="handleClick(props.item)"
               :class="{ selected: props.item.name === selectedTopic?.name }"
+              class="hover-row"
 
             >
               <td class="text-xs-right">{{ props.item.name }}</td>
@@ -57,7 +64,16 @@ const handleClick = ( item:Topic) =>{
 </v-container>
 </template>
 <style scoped>
+/* Selezione riga tabella */
 .selected {
-  background: orange !important;
+  background-color: rgb(var(--v-theme-primary)) !important;
+  color: rgb(var(--v-theme-on-primary)) !important;
+  transition: background 0.2s;
+}
+
+/* Hover sulla tabella */
+.hover-row:hover {
+  /* background-color: var(--v-theme-surface-lighten-2) !important; */
+  cursor: pointer;
 }
 </style>

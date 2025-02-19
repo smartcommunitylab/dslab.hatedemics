@@ -65,17 +65,23 @@ onMounted(async () => {
     @update:model-value="updateTypes"
   ></v-select>
   <vue3-word-cloud
-    :animation-duration="1000"
-    :animation-easing="'linear'"
-    :animation-overlap="1 / 5"
-    :color="([, weight]: [string, number]) => weight > 10 ? 'DeepPink' : weight > 5 ? 'RoyalBlue' : 'Indigo'"
-    :enter-animation="'animated bounceIn'"
-    :font-size-ratio="0"
-    :leave-animation="'animated hinge'"
-    :words="words"
-  >
+  :animation-duration="1000"
+  :animation-easing="'linear'"
+  :animation-overlap="1 / 5"
+  onmouseover=""
+  :color="([, weight]: [string, number]) => {
+  const red = Math.floor(255 * weight);
+  const orange = Math.floor(100 * weight);
+  return `rgb(${red}, ${orange}, 0)`; // Aggiunge un po' di giallo per virare verso l'arancione
+}"
+:font-family="'Love Ya Like A Sister, serif'"
+:enter-animation="'animated bounceIn'"
+  :font-size-ratio="0"
+  :leave-animation="'animated hinge'"
+  :words="words"
+>
     <template v-slot:name="{ text, weight, word }">
-      <div :title="weight" style="cursor: pointer" @click="onWordClick(word)">
+      <div :title="weight" style="cursor: pointer" @click="onWordClick(word)" >
         {{ text }}
       </div>
     </template>

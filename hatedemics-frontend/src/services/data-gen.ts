@@ -11,6 +11,7 @@ export type Node = {
     extended: boolean
     // color: string,
     // size: number,
+    hs:number,
     iri: number,
     out_degree: number;
   in_degree: number;
@@ -47,6 +48,7 @@ async function initData() {
              name: `${nodesData.data[node].channel_id}`, 
              extended: nodesData.data[node].iri != -1 ,
             //  color:'#4B5BBF',
+            hs:nodesData.data[node].hs,
              iri: nodesData.data[node].iri,
             //  size:nodesData.data[node].iri* 20 + 5,
              out_degree: nodesData.data[node].out_degree,

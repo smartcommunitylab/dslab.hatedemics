@@ -27,7 +27,7 @@ const goToChats = () => {
 
 <template>
   <v-container>
-    <v-card v-if="selectedChannelInfo" class="mx-auto pa-4">
+    <v-card v-if="selectedChannelInfo" class="mx-auto pa-4" elevation="0">
       <v-card-title v-if="selectedChannelInfo?.about" class="text-h6 font-weight-bold">
         {{ selectedChannelInfo.about }}
       </v-card-title>
@@ -53,7 +53,7 @@ const goToChats = () => {
             {{ selectedChannelInfo.language }}
           </v-list-item>
 
-          <v-list-item v-if="selectedChannelInfo?.IRI !== undefined">
+          <v-list-item v-if="selectedChannelInfo?.IRI !== null">
             <span class="font-weight-bold">{{ t("channelInfo.iri") }}:</span> 
             {{ selectedChannelInfo.IRI }}
           </v-list-item>
@@ -90,13 +90,15 @@ const goToChats = () => {
       </v-card-text>
 
       <v-card-actions v-if="isExtended">
-        <v-btn color="primary" variant="text" @click="goToChats">
-          {{ t("channelInfo.messages") }}
+        <v-col cols="12" class="d-flex justify-center">
+          <v-btn color="primary" variant="elevated" @click="goToChats">
+          {{ t("channelInfo.topics") }}
         </v-btn>
+          </v-col>
       </v-card-actions>
     </v-card>
 
-    <v-alert v-else type="info" class="mt-4">
+    <v-alert v-else type="info" class="mt-4" color="primary">
       {{ t("channelInfo.emptySelection") }}
     </v-alert>
   </v-container>
