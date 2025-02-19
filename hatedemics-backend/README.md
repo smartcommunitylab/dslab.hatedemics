@@ -71,4 +71,8 @@ Pass the variables as environment or as spring properties, e.g.
     ```sh
     docker run -p 8080:8080 hatedemics-backend
     ```
-To correctly use with DB and with data folders, environment and volumes should be configured.
+To correctly use with DB and with data folders, environment and volumes should be configured:
+
+    ```sh
+    docker run -p 8080:8080 -v /path/to/db/my.db/:/db/data.db -v /path/to/data/:/data  hatedemics-backend
+    ```
