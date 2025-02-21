@@ -2,7 +2,9 @@ import { useLoginStore } from '@/store/LoginStore';
 import loginApi from './login/loginApi';
 import axios from 'axios';
 const axiosInstance = axios.create({
-  baseURL: "http://0.0.0.0:8510" ,
+  baseURL: import.meta.env.VITE_APP_AXIOS_URL,
+  // baseURL: "http://0.0.0.0:8510" ,
+  // http://localhost:8080/api
 });
 axiosInstance.interceptors.request.use(
   function (config) {

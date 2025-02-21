@@ -68,6 +68,9 @@ const onSnackbarChanged = async () => {
 
 onMounted(() => {
   document.title = title;
+  console.log(import.meta.env.VITE_APP_AXIOS_URL);
+  console.log(import.meta.env);
+
 });
 </script>
 

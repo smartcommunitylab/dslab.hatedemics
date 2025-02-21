@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { useChannelsStore } from "../store/ChannelStore";
 import { storeToRefs } from 'pinia';
-
+import axiosInstance from './api';
 
 
 export type Node = {
@@ -29,13 +29,13 @@ async function getEdges() {
     const channelsStore = useChannelsStore();
     const {selectedLanguage } = storeToRefs(channelsStore)
     //   return await http.get<APIResponse<Channel[]>>("edges");
-    return await axios.get(`http://localhost:5173/public/graph/${selectedLanguage.value?selectedLanguage.value:'it'}/edges.json`)
+    return await axiosInstance.get(`network/edges/all`,{params:{language:selectedLanguage.value?selectedLanguage.value:'it'}})
 }
 async function getNodes() {
     const channelsStore = useChannelsStore();
 const {selectedLanguage } = storeToRefs(channelsStore)
     //   return await http.get<APIResponse<Channel[]>>("nodes");
-    return await axios.get(`http://localhost:5173/public/graph/${selectedLanguage.value?selectedLanguage.value:'it'}/nodes.json`)
+    return await axiosInstance.get(`network/nodes/all`,{params:{language:selectedLanguage.value?selectedLanguage.value:'it'}})
 }
 async function initData() {
     const linksData = await getEdges();

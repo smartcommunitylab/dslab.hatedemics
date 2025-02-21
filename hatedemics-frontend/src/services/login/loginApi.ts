@@ -1,4 +1,4 @@
-import axios from '../api'
+import axiosInstance from './../api';
 import router from '@/router'
 import { useLoginStore } from '@/store/LoginStore'
 
@@ -9,7 +9,7 @@ import { useLoginStore } from '@/store/LoginStore'
     router.push({ name: 'login' })
   }
   async function login(username:string, password:string) {
-    return axios.post(
+    return axiosInstance.post(
       '/token',
       {
         username: username,
@@ -24,12 +24,12 @@ import { useLoginStore } from '@/store/LoginStore'
   }
 
   async function getUsers() {
-    return axios.get('/users/')
+    return axiosInstance.get('/users/')
   }
 
   //Returns '201 created' if successful
   async function createUser(email:string, username:string, password:string) {
-    return axios.post('/users/', {
+    return axiosInstance.post('/users/', {
       email: email,
       username: username,
       password: password
@@ -37,7 +37,7 @@ import { useLoginStore } from '@/store/LoginStore'
   }
 
   async function editUser(email:string, username:string, password:string, userID:string) {
-    return axios.patch(String('/users/' + userID + '/edit/'), {
+    return axiosInstance.patch(String('/users/' + userID + '/edit/'), {
       email: email,
       username: username,
       password: password
@@ -46,13 +46,13 @@ import { useLoginStore } from '@/store/LoginStore'
 
   //Returns '204 no content' if successful
   async function changePassword(oldPassword:string, newPassword:string) {
-    return axios.patch(
+    return axiosInstance.patch(
       '/users/me/changepassword?old_password=' + oldPassword + '&new_password=' + newPassword
     )
   }
   async function isAuthenticated(): Promise<boolean> {
     try {
-      await axios.get('/users/me');
+      await axiosInstance.get('/users/me');
       return true;
     } catch (error) {
       return false;

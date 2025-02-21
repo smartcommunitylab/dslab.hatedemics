@@ -2,7 +2,7 @@ import { writeFileSync } from 'node:fs';
 import { fileURLToPath, URL } from 'node:url';
 
 import vue from '@vitejs/plugin-vue';
-import { defineConfig, type UserConfig } from 'vite';
+import { defineConfig, type UserConfig,loadEnv } from 'vite';
 
 import { visualizer } from 'rollup-plugin-visualizer';
 import { checker } from 'vite-plugin-checker';
@@ -17,11 +17,13 @@ import pkg from './package.json';
  * @see {@link https://vitejs.dev/config/}
  */
 export default defineConfig(({ command, mode }): UserConfig => {
+  const env = loadEnv(mode, process.cwd(), '');
+
   const config: UserConfig = {
     // https://vitejs.dev/config/shared-options.html#base
     base: './',
     // https://vitejs.dev/config/shared-options.html#define
-    define: { 'process.env': {} },
+    define: { 'process.env': env },
     plugins: [
       // Vue3
       vue({
