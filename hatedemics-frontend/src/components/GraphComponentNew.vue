@@ -23,19 +23,16 @@ const originalAttributes = new Map<string, { color: string; size: number }>();
 let selectedNode: string | null = null;
 
 const getColorFromIri = (iri: number) => {
-  if (iri < 0) return "#000000"; // violetto
+  if (iri < 0) return "#4F4F4F"; // Nero per valori negativi
 
-  // Scala di colori dal grigio (#3C3C3C) al rosso (#C13032)
-  const r1 = 60, g1 = 60, b1 = 60;   // Grigio scuro
-  const r2 = 193, g2 = 48, b2 = 50;  // Rosso scuro
-
-  // Interpolazione lineare tra i due colori
-  const r = Math.round(r1 + (r2 - r1) * iri);
-  const g = Math.round(g1 + (g2 - g1) * iri);
-  const b = Math.round(b1 + (b2 - b1) * iri);
+  // Verde puro (#00FF00) → Rosso puro (#FF0000)
+  const r = Math.round(255 * iri);       // Aumenta dal 0 al 255
+  const g = Math.round(255 * (1 - iri)); // Diminuisce da 255 a 0
+  const b = 0;                           // Mantiene sempre zero (no blu)
 
   return `rgb(${r}, ${g}, ${b})`;
 };
+
 
 const resetGraph = () => {
   graph.clear();
@@ -54,6 +51,8 @@ const fillChart = () => {
         size: nodeSize,
         label: node.id,
         color: nodeColor,
+        borderColor:'#000000',
+        borderWith:2,
         ...node
       });
       originalAttributes.set(node.id, { color: nodeColor, size: nodeSize });
