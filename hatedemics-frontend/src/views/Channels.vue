@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref, reactive, watch, onMounted } from "vue";
 import { useI18n } from "vue-i18n";
-import { useConfig } from "@/store";
 import { useChannelsStore } from "@/store/ChannelStore";
 import { storeToRefs } from "pinia";
 import type { ChannelInfo } from "@/services/types";
@@ -10,56 +9,79 @@ import ChannelInfoComponent from "@/components/ChannelInfoComponent.vue";
 
 const { t } = useI18n();
 const channelsStore = useChannelsStore();
-const configStore = useConfig();
-const { channelsInfo, selectedChannelInfo, selectedLanguage } = storeToRefs(channelsStore);
+const { channelsInfo, selectedChannelInfo, selectedLanguage } = storeToRefs(
+  channelsStore
+);
 
 const msg = ref("");
 const search = ref("");
+const page = ref(1); // Vuetify inizia da 1
+const itemsPerPage = ref(10);
+const totalItems = ref(0); // Da aggiornare con la risposta API
+
 const languages = [
-  { language: "Italiano", value: "it" },
-  { language: "English", value: "en" },
-  { language: "Español", value: "es" },
+  { language: "Italiano", value: "IT" },
+  { language: "English", value: "EN" },
+  { language: "Español", value: "ES" },
+  { language: "Polacco", value: "PL" },
+  { language: "Maltese", value: "ML" },
 ];
 
 const sortBy = ref([{ key: "IRI", order: "desc" }]);
 
 const headers = reactive([
   { title: t("channelTable.header.messages"), key: "message_count", sortable: true },
-  { title: t("channelTable.header.partecipants"), key: "participants_count", sortable: true },
+  {
+    title: t("channelTable.header.partecipants"),
+    key: "participants_count",
+    sortable: true,
+  },
   { title: t("channelTable.header.IRI"), key: "IRI", sortable: true },
 ]);
+const pagination = reactive({
+  page: 0,
+  size: 10,
+  sort: "IRI,desc",
+});
+const fetchChannels = async () => {
 
-const changeData = (lang: string) => {
-  console.log("Change file of channels and reload everything " + lang);
+  const { success, status, total, content } = await channelsStore.dispatchGetChannels({
+    page: pagination.page, // API parte da 0
+    size: pagination.size,
+    sort: pagination.sort,
+  });
+
+  if (success && total) {
+    totalItems.value = total; // Aggiorna il numero totale degli elementi
+    console.log("Total items: ", totalItems.value);
+    console.log("Pagination opetions: ", pagination);
+  } else {
+    console.error("Errore API ->", status);
+    alert("Oops, something went wrong!");
+  }
 };
+
+// Aggiorna i dati quando cambia la lingua, la pagina o la dimensione della pagina
+watch([selectedLanguage, pagination], fetchChannels, { deep: true });
+onMounted(fetchChannels);
 
 const handleClick = (item: ChannelInfo) => {
   console.log("Clicked item: ", item);
   channelsStore.selectChannelInfo(item);
 };
-
-watch(selectedChannelInfo, (newValue) => {
-  console.log("selectedNode", newValue);
-});
-
-onMounted(async () => {
-  await channelsStore.selectLanguage("it");
-  const { success, status } = await channelsStore.dispatchGetChannels();
-  msg.value = t("channel.title");
-
-  if (!success) {
-    console.error("API error ->", status);
-    alert("Oops, something went wrong!");
-  }
-
-  selectedLanguage.value = languages[0].value;
-});
-
 const onSortChange = (sort: any) => {
   if (sort.length > 0) {
-    const { key, order } = sort[0];
-    channelsStore.selectOrder(key, order);
+    const { key, order } = sort[0]; // Estraggo il primo criterio di ordinamento
+    pagination.sort = `${key},${order}`;
+  } else {
+    pagination.sort = "IRI,desc"; // Default sorting
   }
+  fetchChannels();
+};
+const onPaginationChange = (options: any) => {
+  pagination.page = options.page -1;
+  pagination.size = options.itemsPerPage;
+  fetchChannels();
 };
 </script>
 
@@ -84,7 +106,6 @@ const onSortChange = (sort: any) => {
             density="compact"
             color="primary"
             class="mb-4"
-            @update:model-value="changeData"
           />
 
           <GraphComponent class="mb-4" />
@@ -100,16 +121,19 @@ const onSortChange = (sort: any) => {
             class="mb-4"
           ></v-text-field>
 
-          <v-data-table
-            :headers="headers"
+          <v-data-table-server
+          :headers="headers"
             :items="channelsInfo"
             :search="search"
-            @update:sort-by="onSortChange"
-            v-model:sort-by="sortBy"
+            :items-length="totalItems"
+            :items-per-page="pagination.size"
+            :page="pagination.page +1 "
             return-object
             density="compact"
             hover
             class="elevation-2"
+            @update:sort-by="onSortChange"
+            @update:options="onPaginationChange"
           >
             <template v-slot:item="{ item }">
               <tr
@@ -119,10 +143,10 @@ const onSortChange = (sort: any) => {
               >
                 <td class="text-left">{{ item.message_count }}</td>
                 <td class="text-left">{{ item.participants_count }}</td>
-                <td class="text-left">{{ item.IRI }}</td>
+                <td class="text-left">{{ item.iri }}</td>
               </tr>
             </template>
-          </v-data-table>
+          </v-data-table-server>
         </v-card>
       </v-col>
 

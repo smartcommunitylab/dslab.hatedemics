@@ -6,10 +6,9 @@ import { type APIResponse, type Topic } from "../types";
 
 async function getTopics(id: string) {
   // return await http.get<APIResponse<Message[]>>(`messages/${id}`);
-  return await axiosInstance.get(`http://localhost:5173/public/topics/${Math.floor(Math.random() * 2) + 1}.json`)
+  return await axiosInstance.get(`/chats/${id}`)
 
 }
-
 export default {
     getTopics,
 };

@@ -9,7 +9,7 @@ import { useChatsStore } from "./ChatStore";
 export const useChannelsStore = defineStore("channelsStore", () => {
   const selectedChannelInfo = ref<ChannelInfo>();
   const channelsInfo = ref<ChannelInfo[]>([]);
-  const selectedLanguage = ref<string>();
+  const selectedLanguage = ref<string>('IT');
   const chatStore = useChatsStore();
   const sort = ref<any>({ key: "iri", order: "desc"}); 
   function initChannelsInfo(data: ChannelInfo[]) {
@@ -35,24 +35,36 @@ export const useChannelsStore = defineStore("channelsStore", () => {
   
   const unselectChannel = () => (selectedChannelInfo.value = undefined);
 
-  async function dispatchGetChannels(): Promise<APIResponse<null>> {
+  async function dispatchGetChannels({ page = 0, size = 10, sort = "IRI,desc" }): Promise<APIResponse<null>> {
     try {
-      const { status, data } = await API.channels.getChannelsInfo(selectedLanguage.value!);
+      const { status, data } = await API.channels.getChannelsInfo(selectedLanguage.value!,{
+        page, size, sort 
+      });
       if (status === 200) {
-        initChannelsInfo(data);
-        return {
-          success: true,
-          content: null,
-        };
+        initChannelsInfo(data.content);
+        return { success: true, total: data.totalElements, content: data.content };
+      } else {
+        return { success: false, status: status,content: null };
       }
     } catch (error) {
       const _error = error as AxiosError<string>;
-      return {
-        success: false,
-        status: _error.response?.status,
-        content: null,
-      };
+      return { success: false, status: _error.response?.status, content: null};
     }
+    //   if (status === 200) {
+    //     initChannelsInfo(data);
+    //     return {
+    //       success: true,
+    //       content: null,
+    //     };
+    //   }
+    // } catch (error) {
+    //   const _error = error as AxiosError<string>;
+    //   return {
+    //     success: false,
+    //     status: _error.response?.status,
+    //     content: null,
+    //   };
+    // }
     return {
       success: false,
       content: null,

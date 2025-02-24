@@ -4,28 +4,30 @@ export type APIResponse<T> = {
   success: boolean
   content: T;
   status?: number;
+  total?: number;
+
 }
 export type ChannelInfo = {
+  id: string
   date: string
+  last_queried_at: string
   about: string
   pts: number
   broadcast: boolean
   participants_count: number
-  id: string
   linked_chats_ids: string
-  last_queried_at: string
   distance_from_seed: number
   language: string
   n_in_recommendation: number
-  n_out_recommended: string
-  participation_score: string
-  message_count: string
-  unknown_domains: string
-  known_domains: string
-  IRI: string
-  sdIRI: string
-  dIRI: string
-  unrel: string
+  n_out_recommended: number
+  participation_score: number
+  message_count: number
+  unknown_domains: number
+  known_domains: number
+  sdIRI: number
+  dIRI: number
+  unrel: number
+  iri: number
 
 }
 //   Channel Type TODO da rifare
@@ -35,6 +37,11 @@ export type Channel = {
   metrics: Metrics
   extended: Extended
   last_queried_at: string
+}
+export type Pageable = {
+    page: number
+    size: number
+    sort: string
 }
 
 export type FullChat = {

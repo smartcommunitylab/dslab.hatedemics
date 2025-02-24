@@ -29,13 +29,13 @@ async function getEdges() {
     const channelsStore = useChannelsStore();
     const {selectedLanguage } = storeToRefs(channelsStore)
     //   return await http.get<APIResponse<Channel[]>>("edges");
-    return await axiosInstance.get(`network/edges/all`,{params:{language:selectedLanguage.value?selectedLanguage.value:'it'}})
+    return await axiosInstance.get(`network/edges/all`,{params:{language:selectedLanguage.value?selectedLanguage.value:'IT'}})
 }
 async function getNodes() {
     const channelsStore = useChannelsStore();
 const {selectedLanguage } = storeToRefs(channelsStore)
     //   return await http.get<APIResponse<Channel[]>>("nodes");
-    return await axiosInstance.get(`network/nodes/all`,{params:{language:selectedLanguage.value?selectedLanguage.value:'it'}})
+    return await axiosInstance.get(`network/nodes/all`,{params:{language:selectedLanguage.value?selectedLanguage.value:'IT'}})
 }
 async function initData() {
     const linksData = await getEdges();

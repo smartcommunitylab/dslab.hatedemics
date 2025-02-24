@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { computed, onMounted, type ComputedRef } from 'vue';
+import { computed, onMounted, watch, type ComputedRef } from 'vue';
 import { useChannelsStore } from "../store/ChannelStore";
 import { useI18n } from "vue-i18n";
 import { useRouter } from 'vue-router';
 import { storeToRefs } from 'pinia';
 import { useTopicsStore } from "@/store/TopicStore";
+import type { ChannelInfo } from '@/services/types';
 
 const { t } = useI18n();
 const router = useRouter();
@@ -14,15 +15,21 @@ const channelsStore = useChannelsStore();
 const { selectedChannelInfo } = storeToRefs(channelsStore);
 const { generic } = storeToRefs(topicsStore);
 
-const isExtended: ComputedRef<boolean> = computed(() => !!selectedChannelInfo?.value?.IRI);
+const isExtended: ComputedRef<boolean> = computed(() => !!selectedChannelInfo?.value?.iri);
 
 onMounted(async () => {
-  await topicsStore.dispatchGetTopics("id");
+  await topicsStore.dispatchGetTopics(selectedChannelInfo?.value?.id!);
 });
 
 const goToChats = () => {
   router.push({ name: 'Inspector' });
 };
+
+watch(selectedChannelInfo, async (newVal) => {
+  if (newVal && newVal.id) { 
+    await topicsStore.dispatchGetTopics(newVal.id);
+  }
+}, { immediate: true }); 
 </script>
 
 <template>

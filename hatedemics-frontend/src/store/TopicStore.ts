@@ -16,7 +16,7 @@ export const useTopicsStore = defineStore("topicsStore", () => {
     generic.value['cw_percentage'] = data["cw_percentage"];
     generic.value['topics']=Object.keys(data.topics).map(function (key) {
       return {
-        name: data.topics[key]["topic-name"],
+        name: data.topics[key]["topic_label"],
       }});
     topics.value = Object.keys(data.topics).map(function (key) {
       return {
@@ -39,8 +39,14 @@ export const useTopicsStore = defineStore("topicsStore", () => {
   const unselectTopic = () => (selectedTopic.value = undefined);
 
   async function dispatchGetTopics(id: string): Promise<APIResponse<null>> {
+    if (!id) {
+      return {
+        success: false,
+        content: null,
+        status: 400,
+      };
+    }
     try {
-      //TODO
       const { status, data } = await API.topics.getTopics(id);
       if (status === 200) {
         initTopics(data);

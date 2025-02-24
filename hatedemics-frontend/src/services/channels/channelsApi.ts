@@ -1,25 +1,15 @@
 // the axios instance and types
 import axiosInstance from './../api';
 import http from "../api";
-import { type APIResponse, type Channel } from "../types";
+import { type APIResponse, type Channel, type Pageable } from "../types";
 
-async function getChannelsInfo(selectedLanguage:string) {
-//   return await http.get<APIResponse<Channel[]>>("channels");
-// return await axiosInstance.get('http://localhost:5173/public/channels/allChannels.json')
-return await axiosInstance.get(`/public/channels/${selectedLanguage}.json`)
-
-
+async function getChannelsInfo(selectedLanguage: string, pageParams: Pageable) {
+    if (pageParams.size == -1) return await axiosInstance.get(`/channels/all`, { params: { language: selectedLanguage ? selectedLanguage : 'IT' } })
+    return await axiosInstance.get(`/channels`, { params: { language: selectedLanguage ? selectedLanguage : 'IT', ...pageParams, } })
 }
-async function getChannels() {
-    //   return await http.get<APIResponse<Channel[]>>("channels");
-    // let channelsInfo=await axiosInstance.get('http://localhost:5173/public/allChannels.json')
-    // let channels = [];
-    return await axiosInstance.get('api/channels/allChannels.json')
-    // for (let channelInfo in channelsInfo)
-
-    //     channels.push(await axios.get('http://localhost:5173/public/'+channelsInfo[channelInfo].id+'.json'))
-    // 
-    }
+async function getChannels(selectedLanguage: string) {
+    return await axiosInstance.get(`channels`, { params: { language: selectedLanguage ? selectedLanguage : 'IT' } })
+}
 
 export default {
     getChannelsInfo,
