@@ -88,9 +88,11 @@ watch(selectedChannelInfo, async (newVal) => {
           <v-list-item v-if="generic?.topics?.length">
             <span class="font-weight-bold">{{ t("channelInfo.topics") }}:</span>
             <ul class="ml-4 mt-1">
-              <li v-for="topic in generic.topics" :key="topic.id">
-                {{ topic.name }}
-              </li>
+              <template v-for="topic in generic.topics" :key="topic.id">
+                <li v-if="topic.name != 'not assigned'">
+                  {{ topic.name }}
+                </li>
+              </template>
             </ul>
           </v-list-item>
         </v-list>
