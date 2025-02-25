@@ -11,7 +11,7 @@ public interface TelegramMessageRepository extends JpaRepository<TelegramMessage
 
     Page<TelegramMessage> findByLanguage(String language, Pageable pageable);
 
-    @Query("SELECT m FROM TelegramMessage m WHERE m.channel_id = ?1")
+    @Query("SELECT m FROM TelegramMessage m WHERE m.channelId = ?1")
     Page<TelegramMessage> findByChatId(String chatId, Pageable pageable);
 
 }
