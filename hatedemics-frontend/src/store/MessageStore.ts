@@ -37,11 +37,8 @@ export const useMessagesStore = defineStore("messagesStore", () => {
               page, size, sort
             });
             if (status === 200) {
-        initMessages(data);
-        return {
-          success: true,
-          content: null,
-        };
+        initMessages(data.content);
+        return { success: true, total: data.totalElements, content: data.content };
       }
     } catch (error) {
       const _error = error as AxiosError<string>;
