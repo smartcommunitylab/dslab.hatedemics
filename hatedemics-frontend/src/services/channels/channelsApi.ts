@@ -11,8 +11,11 @@ async function getChannelsInfo(selectedLanguage: string, pageParams: Pageable) {
 async function getChannels(selectedLanguage: string) {
     return await axiosInstance.get(`channels`, { params: { language: selectedLanguage ? selectedLanguage : 'IT' } })
 }
-
+async function getChannel(idChannel: string) {
+    return await axiosInstance.get(`channels/${idChannel}`)
+}
 export default {
     getChannelsInfo,
-    getChannels
+    getChannels,
+    getChannel
 };

@@ -12,6 +12,16 @@ import type { ChannelInfo } from "./types";
             };
     })
     }
+    export function processingSingleChannelInfo(item: ChannelInfo) {
+      return {
+
+        ...item,
+        linked_chats_ids: item.linked_chats_ids
+          ? JSON.parse(item.linked_chats_ids.replace(/'/g, '"'))
+          : []
+
+      };
+  }
 
     export function toCamelCaseParams(params: Record<string, any>): Record<string, any> {
       const camelCaseParams: Record<string, any> = {};

@@ -75,12 +75,14 @@ const fillChart = () => {
   // Gestione tooltip al passaggio del mouse
   sigmaInstance.on("enterNode", ({ node }) => {
     const nodeData = graph.getNodeAttributes(node) as Node;
-    tooltip.value = { show: true, x : event!.clientX+10, y: event!.clientY+10, node: nodeData };
+
+    tooltip.value = { show: true, x : event!.clientX+2, y: event!.clientY+2, node: nodeData };
   });
   sigmaInstance.on("clickNode", ({ node }) => {
     selectNode(node);
     let nodeAttributes = graph.getNodeAttributes(node);
-    channelsStore.selectChannelInfo(channelsStore.channelsInfo.find(c => c.id === nodeAttributes.name));
+    let channel = channelsStore?.channelsInfo.find(c => c.id === nodeAttributes.name);
+    channelsStore.selectChannelInfo(channel? channel : nodeAttributes.name);
   });
   watch(selectedChannelInfo, (newValue,oldValue) => {
     console.log('selectedNode',newValue)
@@ -120,12 +122,12 @@ const getEdgeColor = (sourceColor: string, targetColor: string) => {
   return `rgb(${r}, ${g}, ${b})`;
 };
 const selectNode = (node: string) => {
+  if (nodes){
   selectedNode = node;
   resetHighlighting();
-
   graph.setNodeAttribute(node, "color", "#ff6600");
-  graph.setNodeAttribute(node, "size", (nodes.find(n => n.id === node)?.iri * 4 + 12) || 12);
-
+  const nodeData = nodes.find(n => n.id === node);
+  graph.setNodeAttribute(node, "size", (nodeData ? nodeData.iri * 4 + 12 : 12));
   graph.forEachEdge(edge => {
     if (graph.source(edge) === node || graph.target(edge) === node) {
       graph.setEdgeAttribute(edge, "color", "orange");
@@ -135,6 +137,7 @@ const selectNode = (node: string) => {
   });
 
   sigmaInstance?.refresh();
+}
 }
 // const selectNode = (node: string) => {
 //   selectedNode = node;
@@ -190,17 +193,18 @@ onUnmounted(() => {
 
 <template>
   <div ref="sigmaContainer" style="width: 100%; height: 400px; position: relative"></div>
+  <template     v-if="tooltip.show"
+  >
+
   <div
-    v-if="tooltip.show"
     :style="{ left: tooltip.x + 'px', top: tooltip.y + 'px' }"
     class="tooltip"
   >
     <strong>ID:</strong> {{ tooltip.node?.id }} <br />
-    <strong>IRI:</strong> {{ tooltip.node?.iri.toFixed(3) }} <br />
-    <strong>HS:</strong> {{ tooltip.node?.hs.toFixed(3) }} <br />
-    <strong>Out Degree:</strong> {{ tooltip.node?.out_degree }} <br />
-    <strong>In Degree:</strong> {{ tooltip.node?.in_degree }}
+    <strong>IRI:</strong> {{ tooltip.node?.iri}} <br />
+    <strong>HS:</strong> {{ tooltip.node?.hs?.toFixed(3) }} <br />
   </div>
+  </template>
 </template>
 
 <style>
