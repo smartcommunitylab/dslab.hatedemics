@@ -2,6 +2,7 @@
 import axiosInstance from './../api';
 import http from "../api";
 import { type APIResponse, type Message, type Pageable } from "../types";
+import { toCamelCaseParams } from '../utility';
 
 
 // async function getChats(id: number) {
@@ -22,9 +23,9 @@ import { type APIResponse, type Message, type Pageable } from "../types";
 // }
 async function getChats(id:string, pageParams: Pageable) {
   // console.log("getChats",'http://localhost:8080/api/messages/chat/bbed2d968dd6d545e36e727ecb31d43639396eb8443e0c4aa3360a17544776ba?page=0&size=10&sort=date,desc')
-  console.log("getChats",`/messages/chat/${id}`, { params: { ...pageParams } })
+  // console.log("getChats",`/messages/chat/${id}`, { params: { ...pageParams } })
 
-  return  await axiosInstance.get(`/messages/chat/${id}`, { params: { ...pageParams } })
+  return  await axiosInstance.get(`/messages/chat/${id}`, { params: { ...(toCamelCaseParams(pageParams)) } })
 }
 
 export default {

@@ -13,6 +13,7 @@ const typeItems = ref([
   { type: "nonhate npw", value: "nonhate_npw" },
 ]);
 const selectedType = ref<string>(typeItems.value[0].value);
+
 const onWordClick = function (word: string) {
   console.log(word);
 };
@@ -42,9 +43,9 @@ function updateWords() {
   );
 }
 onMounted(async () => {
-  // if (!selectedTopic?.value && topics.value.length > 0) {
-  //   topicsStore.selectTopic(topics.value[0]);
-  // }
+  if (!selectedTopic?.value && topics.value.length > 0) {
+    topicsStore.selectTopic(topics.value[1]);
+  }
 
 })
 </script>

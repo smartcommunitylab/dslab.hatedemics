@@ -27,12 +27,12 @@ const { topics } = storeToRefs(topicsStore);
 
 const msg = ref<string>(t("inspect.title"));
 
-onMounted(async () => {
-  const { success, status } =   await topicsStore.dispatchGetTopics(selectedChannelInfo?.value?.id!);
-  if (!success) {
-    console.error("API error, status:", status);
-  }
-});
+// onMounted(async () => {
+//   const { success, status } =   await topicsStore.dispatchGetTopics(selectedChannelInfo?.value?.id!);
+//   if (!success) {
+//     console.error("API error, status:", status);
+//   }
+// });
 
 const updateChannel = (channel: ChannelInfo) => {
   channelsStore.selectChannelInfo(channel);

@@ -18,6 +18,7 @@ const search = ref("");
 const page = ref(1); // Vuetify inizia da 1
 const itemsPerPage = ref(10);
 const totalItems = ref(0); // Da aggiornare con la risposta API
+const loading = ref(false);
 const itemsPerPageOptions =  [
               { title: '10', value: 10 },
               { title: '50', value: 50 },
@@ -49,7 +50,8 @@ const pagination = reactive({
   sort: "IRI,desc",
 });
 const fetchChannels = async () => {
-
+  loading.value = true; // Avvia il loading
+  try{
   const { success, status, total, content } = await channelsStore.dispatchGetChannels({
     page: pagination.page, // API parte da 0
     size: pagination.size,
@@ -64,6 +66,9 @@ const fetchChannels = async () => {
     console.error("Errore API ->", status);
     alert("Oops, something went wrong!");
   }
+} finally {
+  loading.value = false; // Disattiva il loading
+}
 };
 
 // Aggiorna i dati quando cambia la lingua, la pagina o la dimensione della pagina
@@ -127,6 +132,7 @@ const onPaginationChange = (options: any) => {
           ></v-text-field>
 
           <v-data-table-server
+          :loading="loading"
           :headers="headers"
             :items="channelsInfo"
             :search="search"

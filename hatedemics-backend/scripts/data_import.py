@@ -58,17 +58,17 @@ def import_data(path, db, lang):
     # Load channel data
     df = load_channel_data(path, lang)
     df['language'] = lang
-    df.to_sql('channels', con=engine, if_exists='replace')
+    df.to_sql('channels', con=engine, if_exists='append')
 
     # Load graph data
     graph_data, edge_data = load_graph_data(path, lang)
     graph_data['language'] = lang
     edge_data['language'] = lang    
-    graph_data.to_sql('graph_nodes', con=engine, if_exists='replace')
-    edge_data.to_sql('graph_edges', con=engine, if_exists='replace')
+    graph_data.to_sql('graph_nodes', con=engine, if_exists='append')
+    edge_data.to_sql('graph_edges', con=engine, if_exists='append')
 
     chat_data = load_chats(path, lang)
-    chat_data.to_sql('chats', con=engine, if_exists='replace')
+    chat_data.to_sql('chats', con=engine, if_exists='append')
 
     # Load messages data
     process_messages_data(path, lang, engine)

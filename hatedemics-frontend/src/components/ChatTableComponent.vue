@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { reactive, ref, watch } from 'vue';
+import { onMounted, reactive, ref, watch } from 'vue';
 import { useI18n } from "vue-i18n";
 import { useRouter } from "vue-router";
 import { useMessagesStore } from '@/store/MessageStore';
 import { storeToRefs } from 'pinia';
 import { useChatsStore } from '@/store/ChatStore';
+import { useChannelsStore } from '@/store/ChannelStore';
 
 const { t } = useI18n();
 const router = useRouter();
@@ -15,6 +16,8 @@ const page = ref(1);
 const itemsPerPage = ref(10);
 const sortBy = ref([{ key: "date", order: "desc" }]); // Default: ordina per data desc
 const chatsStore = useChatsStore();
+const channelStore = useChannelsStore();
+const { selectedChannelInfo } = storeToRefs(channelStore);
 const { selectedChat } = storeToRefs(chatsStore);
 const totalItems = ref(0); 
 const headers = [
@@ -44,6 +47,7 @@ const menu = ref(false);
 const menuX = ref(0);
 const menuY = ref(0);
 const selectedMessage = ref<any>(null);
+  const loading = ref(false);
 
   const pagination = reactive({
   page: 0,
@@ -64,9 +68,24 @@ const startDialogue = () => {
   }
   menu.value = false;
 };
-
+const onSortChange = (sort: any) => {
+  if (sort.length > 0) {
+    const { key, order } = sort[0]; // Estraggo il primo criterio di ordinamento
+    pagination.sort = `${key},${order}`;
+  } else {
+    pagination.sort = "date,desc"; // Default sorting
+  }
+  fetchMessages();
+};
+const onPaginationChange = (options: any) => {
+  pagination.page = options.page -1;
+  pagination.size = options.itemsPerPage;
+  fetchMessages();
+};
 // Funzione per recuperare i dati dal server
 const fetchMessages = async () => {
+  loading.value = true; // Avvia il loading
+try {
   const { success, status, total, content } = await messagesStore.dispatchGetMessages(selectedChat.value!, {
     page: pagination.page, // API parte da 0
     size: pagination.size,
@@ -80,13 +99,17 @@ const fetchMessages = async () => {
     console.error("Errore API ->", status);
     alert("Oops, something went wrong!");
   }
+} finally {
+  loading.value = false; // Disattiva il loading
+}
 };
 
 // Osserva le variazioni e ricarica i dati
-watch([search, page, itemsPerPage, sortBy], fetchMessages);
+watch([search, page, itemsPerPage, sortBy,selectedChat,selectedChannelInfo], fetchMessages);
 
 // Carica i dati iniziali
-fetchMessages();
+// onMounted(fetchMessages);
+
 </script>
 
 <template>
@@ -103,6 +126,7 @@ fetchMessages();
 
     <v-data-table-server
             :headers="headers"
+            :loading="loading"
             :items="messages"
             :search="search"
             :items-length="totalItems"

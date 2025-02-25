@@ -14,36 +14,37 @@ import SideBarInfoComponent from "@/components/SideBarInfoComponent.vue"
 import type { ChannelInfo, Chat } from "@/services/types";
 import { useChannelsStore } from "@/store/ChannelStore";
 import { useChatsStore } from "@/store/ChatStore";
+import { useTopicsStore } from '@/store/TopicStore';
+const topicsStore = useTopicsStore();
 const { t } = useI18n();
-
 const channelsStore = useChannelsStore();
 const chatStore = useChatsStore();
 const messagesStore = useMessagesStore();
 const { messages } = storeToRefs(messagesStore);
 const { selectedChannelInfo, channelsInfo } = storeToRefs(channelsStore);
 const { selectedChat, chats } = storeToRefs(chatStore);
-onMounted(async () => {
-  const { success, status } = await messagesStore.dispatchGetMessages();
-  //add info of number
-  msg.value = t("message.title");
-  if (!success) {
-    alert("Ups, something happened 🙂");
-    console.log("Api status ->", status);
-  } else {
-    messages.value = messagesStore.messages?.map((item: Message) => ({
-      ...item
-    }));
-    console.log(messagesStore.messages);
-  }
-});
+// onMounted(async () => {
+//   const { success, status } = await messagesStore.dispatchGetMessages();
+//   //add info of number
+//   msg.value = t("message.title");
+//   if (!success) {
+//     alert("Ups, something happened 🙂");
+//     console.log("Api status ->", status);
+//   } else {
+//     messages.value = messagesStore.messages?.map((item: Message) => ({
+//       ...item
+//     }));
+//     console.log(messagesStore.messages);
+//   }
+// });
 
 const updateChannel = (channel: ChannelInfo) => {
   channelsStore.selectChannelInfo(channel);
 };
 
-const updateChat = (chat: Chat) => {
-  console.log("Chat selezionata:", chat);
-};
+const updateChat = (chatId: string) => {
+  chatStore.selectChat(chatId);
+  topicsStore.dispatchGetTopics(chatId);};
 </script>
 
 <template>
