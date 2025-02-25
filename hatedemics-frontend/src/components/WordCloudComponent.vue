@@ -42,9 +42,9 @@ function updateWords() {
   );
 }
 onMounted(async () => {
-  if (!selectedTopic?.value && topics.value.length > 0) {
-    topicsStore.selectTopic(topics.value[0]);
-  }
+  // if (!selectedTopic?.value && topics.value.length > 0) {
+  //   topicsStore.selectTopic(topics.value[0]);
+  // }
 
 })
 </script>

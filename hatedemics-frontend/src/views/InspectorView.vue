@@ -28,7 +28,7 @@ const { topics } = storeToRefs(topicsStore);
 const msg = ref<string>(t("inspect.title"));
 
 onMounted(async () => {
-  const { success, status } = await topicsStore.dispatchGetTopics("id");
+  const { success, status } =   await topicsStore.dispatchGetTopics(selectedChannelInfo?.value?.id!);
   if (!success) {
     console.error("API error, status:", status);
   }
@@ -36,10 +36,13 @@ onMounted(async () => {
 
 const updateChannel = (channel: ChannelInfo) => {
   channelsStore.selectChannelInfo(channel);
+  // chatStore.initChats([{id:channel.id},{id:channel.linked_chats_ids}])
 };
 
-const updateChat = (chat: Chat) => {
-  console.log("Chat selezionata:", chat);
+const updateChat = (chatId: string) => {
+  chatStore.selectChat(chatId);
+  topicsStore.dispatchGetTopics(chatId);
+  console.log("Chat selezionata:", chatId);
 };
 
 const goToChats = () => {
@@ -98,39 +101,6 @@ const goToChats = () => {
       <!-- Colonna Destra: Selettori sopra, WordCloud sotto -->
       <v-col cols="3">
         <v-row>
-          <!-- <v-col cols="12">
-            <v-autocomplete
-              return-object
-              :label="t('channelInfo.channels')"
-              v-model="selectedChannelInfo"
-              :items="channelsInfo"
-              item-title="id"
-              item-value="id"
-              variant="outlined"
-              density="comfortable"
-              @update:model-value="updateChannel"
-            />
-          </v-col>
-
-          <v-col cols="12">
-            <v-select
-              :label="t('channelInfo.chats')"
-              v-model="selectedChat"
-              :items="chats"
-              item-title="id"
-              item-value="id"
-              variant="outlined"
-              density="comfortable"
-              @update:model-value="updateChat"
-            />
-          </v-col> -->
-
-          <!-- <v-col cols="12" class="d-flex justify-center">
-            <v-btn color="primary" variant="elevated" @click="goToChats">
-              {{ t("channelInfo.messages") }}
-            </v-btn>
-          </v-col> -->
-
           <v-col cols="12" class="mt-4">
             <WordCloudComponent />
           </v-col>

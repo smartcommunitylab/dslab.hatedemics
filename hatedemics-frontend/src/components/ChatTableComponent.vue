@@ -1,18 +1,25 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { reactive, ref, watch } from 'vue';
 import { useI18n } from "vue-i18n";
 import { useRouter } from "vue-router";
 import { useMessagesStore } from '@/store/MessageStore';
 import { storeToRefs } from 'pinia';
+import { useChatsStore } from '@/store/ChatStore';
 
 const { t } = useI18n();
 const router = useRouter();
 const messagesStore = useMessagesStore();
-const { messages } = storeToRefs(messagesStore);
+const { messages } = storeToRefs(messagesStore); // Aggiunto `totalMessages`
 const search = ref("");
-
+const page = ref(1);
+const itemsPerPage = ref(10);
+const sortBy = ref([{ key: "date", order: "desc" }]); // Default: ordina per data desc
+const chatsStore = useChatsStore();
+const { selectedChat } = storeToRefs(chatsStore);
+const totalItems = ref(0); 
 const headers = [
-  { title: t("Message"), key: "message", align: "start", sortable: true },
+  
+  { title: t("Message"), key: "message",  sortable: true },
   { title: t("Date"), key: "date", sortable: true },
   { title: t("User"), key: "from_id", sortable: true },
   { title: t("Media Type"), key: "media_type", align: "center" },
@@ -22,6 +29,7 @@ const headers = [
   { title: t("Topic"), key: "topic", sortable: true },
 ];
 
+// Mappa icone media type
 const getIcon = (type: string) => {
   switch (type) {
     case 'photo': return 'mdi-image';
@@ -37,6 +45,11 @@ const menuX = ref(0);
 const menuY = ref(0);
 const selectedMessage = ref<any>(null);
 
+  const pagination = reactive({
+  page: 0,
+  size: 10,
+  sort: "date,desc",
+});
 const openMenu = (event: MouseEvent, item: any) => {
   event.stopPropagation(); 
   menu.value = true;
@@ -47,10 +60,33 @@ const openMenu = (event: MouseEvent, item: any) => {
 
 const startDialogue = () => {
   if (selectedMessage.value) {
-    router.push({ name: "annotation", params: { projectID: 1,taskID:1} });
+    router.push({ name: "annotation", params: { projectID: 1, taskID: 1 } });
   }
   menu.value = false;
 };
+
+// Funzione per recuperare i dati dal server
+const fetchMessages = async () => {
+  const { success, status, total, content } = await messagesStore.dispatchGetMessages(selectedChat.value!, {
+    page: pagination.page, // API parte da 0
+    size: pagination.size,
+    sort: pagination.sort,
+  });
+  if (success && total) {
+    totalItems.value = total; // Aggiorna il numero totale degli elementi
+    console.log("Total items: ", totalItems.value);
+    console.log("Pagination opetions: ", pagination);
+  } else {
+    console.error("Errore API ->", status);
+    alert("Oops, something went wrong!");
+  }
+};
+
+// Osserva le variazioni e ricarica i dati
+watch([search, page, itemsPerPage, sortBy], fetchMessages);
+
+// Carica i dati iniziali
+fetchMessages();
 </script>
 
 <template>
@@ -65,14 +101,19 @@ const startDialogue = () => {
       class="mb-4"
     ></v-text-field>
 
-    <v-data-table
-      :headers="headers"
-      :items="messages"
-      :search="search"
-      class="elevation-2"
-      density="comfortable"
-      hover
-      @click:row="(event, { item }) => openMenu(event, item)"
+    <v-data-table-server
+            :headers="headers"
+            :items="messages"
+            :search="search"
+            :items-length="totalItems"
+            :items-per-page="pagination.size"
+            :page="pagination.page +1 "
+            return-object
+            density="compact"
+            hover
+            class="elevation-2"
+            @update:sort-by="onSortChange"
+            @update:options="onPaginationChange"
     >
       <template v-slot:item.media_type="{ item }">
         <v-icon :icon="getIcon(item.media_type)" size="24"></v-icon>
@@ -85,7 +126,7 @@ const startDialogue = () => {
       <template v-slot:item.checkworthy_label="{ item }">
         <v-icon :icon="item.checkworthy_label ? 'mdi-check-circle' : 'mdi-close-circle'" :color="item.checkworthy_label ? 'green' : 'red'" />
       </template>
-    </v-data-table>
+    </v-data-table-server>
 
     <!-- Menu contestuale -->
     <v-menu v-model="menu" :style="{ top: `${menuY}px`, left: `${menuX}px` }" absolute offset-y>

@@ -15,7 +15,7 @@ export type ChannelInfo = {
   pts: number
   broadcast: boolean
   participants_count: number
-  linked_chats_ids: string
+  linked_chats_ids: any
   distance_from_seed: number
   language: string
   n_in_recommendation: number

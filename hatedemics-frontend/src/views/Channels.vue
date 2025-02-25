@@ -18,7 +18,12 @@ const search = ref("");
 const page = ref(1); // Vuetify inizia da 1
 const itemsPerPage = ref(10);
 const totalItems = ref(0); // Da aggiornare con la risposta API
-
+const itemsPerPageOptions =  [
+              { title: '10', value: 10 },
+              { title: '50', value: 50 },
+              { title: '100', value: 100 },
+      { title: '150', value: 150 },
+    ];
 const languages = [
   { language: "Italiano", value: "IT" },
   { language: "English", value: "EN" },
@@ -128,6 +133,7 @@ const onPaginationChange = (options: any) => {
             :items-length="totalItems"
             :items-per-page="pagination.size"
             :page="pagination.page +1 "
+            :items-per-page-options="itemsPerPageOptions"
             return-object
             density="compact"
             hover

@@ -8,15 +8,15 @@ import { ref } from 'vue';
 export const useChatsStore = defineStore("chatsStore", () => {
   
   const chats = ref<Chat[]>([]);
-  const selectedChat = ref<Chat>();
+  const selectedChat = ref<string>();
 
   
   function initChats(data: Chat[]) {
     chats.value = data;
   }
   
-  function selectChat(chat:Chat){
-    selectedChat.value = chat
+  function selectChat(chatId:string){
+    selectedChat.value = chatId
     console.log("selected")
   };
   

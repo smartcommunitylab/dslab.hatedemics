@@ -46,7 +46,9 @@ const sortBy = ref([{ key: "hs_percentage", order: "desc" }]);
             v-model:sort-by="sortBy"
             return-object
             density="compact"
-            hover>
+            hover
+            hide-default-footer
+            >
           <template v-slot:item="props">
             <tr
               @click="handleClick(props.item)"

@@ -20,7 +20,7 @@ export const useTopicsStore = defineStore("topicsStore", () => {
       }});
     topics.value = Object.keys(data.topics).map(function (key) {
       return {
-        name: data.topics[key]["topic-name"],
+        name: data.topics[key]["topic_label"],
         count_percentage: data.topics[key]["topic-count_percentage"],
         hs_percentage: data.topics[key]["topic-hs_percentage"],
         cw_percentage: data.topics[key]["topic-cw_percentage"],
