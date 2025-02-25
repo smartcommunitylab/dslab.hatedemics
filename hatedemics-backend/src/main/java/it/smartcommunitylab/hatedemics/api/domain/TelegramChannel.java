@@ -2,6 +2,9 @@ package it.smartcommunitylab.hatedemics.api.domain;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -13,21 +16,41 @@ public class TelegramChannel {
     @Id
     private String id;
     private Date date;
-    private Date last_queried_at;
+    @Column(name = "last_queried_at")
+    @JsonProperty("last_queried_at")
+    private Date lastQueriedAt;
     private String about;
     private Integer pts;
     private Boolean broadcast;
-    private Integer participants_count;
-    private String linked_chats_ids;
-    private Integer distance_from_seed;
+    @Column(name = "participants_count")
+    @JsonProperty("participants_count")
+    private Integer participantsCount;
+    @JsonProperty("linked_chats_ids")
+    @Column(name = "linked_chats_ids")
+    private String linkedChatsIds;
+    @JsonProperty("distance_from_seed")
+    @Column(name = "distance_from_seed")
+    private Integer distanceFromSeed;
     private String language;
-    private Integer n_in_recommendation;
-    private Integer n_out_recommended;
-    private Double participation_score;
-    private Integer message_count;
-    private Integer unknown_domains, known_domains;
+    @JsonProperty("n_in_recommendation")
+    @Column(name = "n_in_recommendation")
+    private Integer nInRecommendation;
+    @JsonProperty("n_out_recommended")
+    @Column(name = "n_out_recommended")
+    private Integer nOutRecommended;
+    @JsonProperty("participation_score")
+    @Column(name = "participation_score")
+    private Double participationScore;
+    @JsonProperty("message_count")
+    @Column(name = "message_count")
+    private Integer messageCount;
+    @JsonProperty("unknown_domains")
+    @Column(name = "unknown_domains")
+    private Integer unknownDomains;
+    @JsonProperty("known_domains")
+    @Column(name = "known_domains")
+    private Integer knownDomains;
     private Double IRI, sdIRI, dIRI, unrel;
-    
     public String getId() {
         return id;
     }
@@ -40,11 +63,11 @@ public class TelegramChannel {
     public void setDate(Date date) {
         this.date = date;
     }
-    public Date getLast_queried_at() {
-        return last_queried_at;
+    public Date getLastQueriedAt() {
+        return lastQueriedAt;
     }
-    public void setLast_queried_at(Date last_queried_at) {
-        this.last_queried_at = last_queried_at;
+    public void setLastQueriedAt(Date lastQueriedAt) {
+        this.lastQueriedAt = lastQueriedAt;
     }
     public String getAbout() {
         return about;
@@ -64,23 +87,23 @@ public class TelegramChannel {
     public void setBroadcast(Boolean broadcast) {
         this.broadcast = broadcast;
     }
-    public Integer getParticipants_count() {
-        return participants_count;
+    public Integer getParticipantsCount() {
+        return participantsCount;
     }
-    public void setParticipants_count(Integer participants_count) {
-        this.participants_count = participants_count;
+    public void setParticipantsCount(Integer participantsCount) {
+        this.participantsCount = participantsCount;
     }
-    public String getLinked_chats_ids() {
-        return linked_chats_ids;
+    public String getLinkedChatsIds() {
+        return linkedChatsIds;
     }
-    public void setLinked_chats_ids(String linked_chats_ids) {
-        this.linked_chats_ids = linked_chats_ids;
+    public void setLinkedChatsIds(String linkedChatsIds) {
+        this.linkedChatsIds = linkedChatsIds;
     }
-    public Integer getDistance_from_seed() {
-        return distance_from_seed;
+    public Integer getDistanceFromSeed() {
+        return distanceFromSeed;
     }
-    public void setDistance_from_seed(Integer distance_from_seed) {
-        this.distance_from_seed = distance_from_seed;
+    public void setDistanceFromSeed(Integer distanceFromSeed) {
+        this.distanceFromSeed = distanceFromSeed;
     }
     public String getLanguage() {
         return language;
@@ -88,41 +111,41 @@ public class TelegramChannel {
     public void setLanguage(String language) {
         this.language = language;
     }
-    public Integer getN_in_recommendation() {
-        return n_in_recommendation;
+    public Integer getnInRecommendation() {
+        return nInRecommendation;
     }
-    public void setN_in_recommendation(Integer n_in_recommendation) {
-        this.n_in_recommendation = n_in_recommendation;
+    public void setnInRecommendation(Integer nInRecommendation) {
+        this.nInRecommendation = nInRecommendation;
     }
-    public Integer getN_out_recommended() {
-        return n_out_recommended;
+    public Integer getnOutRecommended() {
+        return nOutRecommended;
     }
-    public void setN_out_recommended(Integer n_out_recommended) {
-        this.n_out_recommended = n_out_recommended;
+    public void setnOutRecommended(Integer nOutRecommended) {
+        this.nOutRecommended = nOutRecommended;
     }
-    public Double getParticipation_score() {
-        return participation_score;
+    public Double getParticipationScore() {
+        return participationScore;
     }
-    public void setParticipation_score(Double participation_score) {
-        this.participation_score = participation_score;
+    public void setParticipationScore(Double participationScore) {
+        this.participationScore = participationScore;
     }
-    public Integer getMessage_count() {
-        return message_count;
+    public Integer getMessageCount() {
+        return messageCount;
     }
-    public void setMessage_count(Integer message_count) {
-        this.message_count = message_count;
+    public void setMessageCount(Integer messageCount) {
+        this.messageCount = messageCount;
     }
-    public Integer getUnknown_domains() {
-        return unknown_domains;
+    public Integer getUnknownDomains() {
+        return unknownDomains;
     }
-    public void setUnknown_domains(Integer unknown_domains) {
-        this.unknown_domains = unknown_domains;
+    public void setUnknownDomains(Integer unknownDomains) {
+        this.unknownDomains = unknownDomains;
     }
-    public Integer getKnown_domains() {
-        return known_domains;
+    public Integer getKnownDomains() {
+        return knownDomains;
     }
-    public void setKnown_domains(Integer known_domains) {
-        this.known_domains = known_domains;
+    public void setKnownDomains(Integer knownDomains) {
+        this.knownDomains = knownDomains;
     }
     public Double getIRI() {
         return IRI;
@@ -149,7 +172,6 @@ public class TelegramChannel {
         this.unrel = unrel;
     }
 
-    
     
 
 }
