@@ -6,7 +6,7 @@ import { useMessagesStore } from '@/store/MessageStore';
 import { storeToRefs } from 'pinia';
 import { useChatsStore } from '@/store/ChatStore';
 import { useChannelsStore } from '@/store/ChannelStore';
-
+import { formatDate } from "@/services/utility";
 const { t } = useI18n();
 const router = useRouter();
 const messagesStore = useMessagesStore();
@@ -21,15 +21,14 @@ const { selectedChannelInfo } = storeToRefs(channelStore);
 const { selectedChat } = storeToRefs(chatsStore);
 const totalItems = ref(0); 
 const headers = [
-  
-  { title: t("Message"), key: "message",  sortable: true },
-  { title: t("Date"), key: "date", sortable: true },
-  { title: t("User"), key: "from_id", sortable: true },
-  { title: t("Media Type"), key: "media_type", align: "center" },
-  { title: t("Reactions"), key: "nr_reactions", sortable: true },
-  { title: t("Hate Label"), key: "hate_label", sortable: true },
-  { title: t("Checkworthy Label"), key: "checkworthy_label", sortable: true },
-  { title: t("Topic"), key: "topic", sortable: true },
+  { title: t("message.header.date"), key: "date", sortable: true },
+  { title: t("message.header.message"), key: "message",  sortable: true },
+  { title: t("message.header.from"), key: "from_id", sortable: true },
+  { title: t("message.header.mediaType"), key: "media_type", align: "center" },
+  { title: t("message.header.reactions"), key: "nr_reactions", sortable: true },
+  { title: t("message.header.hateLabel"), key: "hate_label", sortable: true },
+  { title: t("message.header.checkLabel"), key: "checkworthy_label", sortable: true },
+  { title: t("message.header.topic"), key: "topic_label", sortable: true },
 ];
 
 // Mappa icone media type
@@ -68,6 +67,13 @@ const startDialogue = () => {
   }
   menu.value = false;
 };
+const jumpToConversation = () => {
+  if (selectedMessage.value) {
+    //TODO
+    // reorder list by date and start from here
+  }
+  menu.value = false;
+}
 const onSortChange = (sort: any) => {
   if (sort.length > 0) {
     const { key, order } = sort[0]; // Estraggo il primo criterio di ordinamento
@@ -93,10 +99,7 @@ try {
   });
   if (success && total) {
     totalItems.value = total; // Aggiorna il numero totale degli elementi
-    console.log("Total items: ", totalItems.value);
-    console.log("Pagination opetions: ", pagination);
   } else {
-    console.error("Errore API ->", status);
     alert("Oops, something went wrong!");
   }
 } finally {
@@ -138,9 +141,16 @@ watch([search, page, itemsPerPage, sortBy,selectedChat,selectedChannelInfo], fet
             class="elevation-2"
             @update:sort-by="onSortChange"
             @update:options="onPaginationChange"
+            @click:row="(event: MouseEvent, { item }: any) => openMenu(event, item)"
+
     >
+    <template v-slot:item.date="{ item }">
+      <td class="text-left">{{ formatDate(item.date) }}</td>
+
+      </template>
       <template v-slot:item.media_type="{ item }">
         <v-icon :icon="getIcon(item.media_type)" size="24"></v-icon>
+
       </template>
 
       <template v-slot:item.hate_label="{ item }">
@@ -156,8 +166,11 @@ watch([search, page, itemsPerPage, sortBy,selectedChat,selectedChannelInfo], fet
     <v-menu v-model="menu" :style="{ top: `${menuY}px`, left: `${menuX}px` }" absolute offset-y>
       <v-list>
         <v-list-item @click="startDialogue">
-          <v-list-item-title> {{ t("Inizia dialogo") }} </v-list-item-title>
+          <v-list-item-title> {{ t("message.dialog.start") }} </v-list-item-title>
+        </v-list-item>        <v-list-item @click="jumpToConversation">
+          <v-list-item-title> {{ t("message.dialog.jump") }} </v-list-item-title>
         </v-list-item>
+
       </v-list>
     </v-menu>
   </v-container>

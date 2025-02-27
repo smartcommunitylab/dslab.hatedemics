@@ -44,6 +44,21 @@
         "hs_percentage": "Hate Speech:",
         "cw_percentage": "Check Worthy:"    },
     "message":{
-        "title": "Message"
+        "title": "Message",
+        "header": {
+            "id": "ID",
+            "date": "Date",
+            "message": "Message",
+            "from": "From",
+            "mediaType": "Type",
+            "reactions": "Reactions",
+            "hateLabel": "Hate Speech",
+            "checkLabel": "Check Worthy",
+            "topic": "Topic"
+        },
+        "dialog":{
+            "start": "Start a new conversation",
+            "jump": "Go to conversation"
+        }
     }
 }

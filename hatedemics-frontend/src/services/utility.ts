@@ -1,6 +1,8 @@
 import type { ChannelInfo } from "./types";
+import { useI18n } from 'vue-i18n';
+import { useLocale } from 'vuetify';
 
-  export function processingChannelInfo(data: ChannelInfo[]) {
+export function processingChannelInfo(data: ChannelInfo[]) {
     return data.map((item) => {
       return {
         
@@ -48,3 +50,25 @@ import type { ChannelInfo } from "./types";
     
       return camelCaseParams;
     }
+    export const formatDate = (date: string | Date, locale?: string): string => {
+      const userLocale = locale || getCurrentLocale();
+      
+      return new Intl.DateTimeFormat(userLocale, {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+      }).format(new Date(date));
+    };
+    
+    // Funzione per ottenere il locale corrente da vue-i18n o Vuetify
+    const getCurrentLocale = (): string => {
+      try {
+        const { locale } = useI18n();
+        return locale.value;
+      } catch {
+        const { current } = useLocale();
+        return current.value;
+      }
+    };

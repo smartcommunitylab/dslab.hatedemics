@@ -46,6 +46,21 @@
         "cw_percentage": "Check Worthy:"
     },
     "message": {
-        "title": "Messaggi"
+        "title": "Messaggi",
+        "header": {
+            "id": "ID",
+            "date": "Data",
+            "message": "Messaggio",
+            "from": "Da",
+            "mediaType": "Tipo",
+            "reactions": "Reazioni",
+            "hateLabel": "Hate Speech",
+            "checkLabel": "Check Worthy",
+            "topic": "Argomento"
+        },
+        "dialog":{
+            "start": "Inizia una nuova conversazione",
+            "jump": "Vai alla conversazione"
+        }
     }
 }

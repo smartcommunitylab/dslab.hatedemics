@@ -6,6 +6,7 @@ import { useRouter } from 'vue-router';
 import { storeToRefs } from 'pinia';
 import { useTopicsStore } from "@/store/TopicStore";
 import type { ChannelInfo } from '@/services/types';
+import { formatDate } from '@/services/utility';
 
 const { t } = useI18n();
 const router = useRouter();
@@ -34,17 +35,21 @@ watch(selectedChannelInfo, async (newVal) => {
 
 <template>
   <v-container>
-    <v-card v-if="selectedChannelInfo" class="mx-auto pa-4" elevation="0">
-      <v-card-title v-if="selectedChannelInfo?.about" class="text-h6 font-weight-bold">
+    <v-card v-if="selectedChannelInfo" class="mx-auto pa-4" elevation="0" >
+       <!-- <v-card-title v-if="selectedChannelInfo?.about">
         {{ selectedChannelInfo.about }}
-      </v-card-title>
-      
-      <v-card-subtitle v-if="selectedChannelInfo?.id">
-        {{ t("channelInfo.channelId") }}: {{ selectedChannelInfo.id }}
-      </v-card-subtitle>
+      </v-card-title> -->
 
       <v-card-text class="bg-surface-light pt-4">
         <v-list dense>
+          <v-list-item v-if="selectedChannelInfo?.about">
+            <span class="font-weight-bold">{{ t("channelInfo.about") }}</span> 
+            {{ selectedChannelInfo.about }}
+          </v-list-item>
+          <v-list-item v-if="selectedChannelInfo?.id">
+            <span class="font-weight-bold">{{ t("channelInfo.channelId") }} </span>{{ selectedChannelInfo.id }}
+
+          </v-list-item>
           <v-list-item v-if="selectedChannelInfo?.message_count">
             <span class="font-weight-bold">{{ t("channelInfo.nMessages") }}</span> 
             {{ selectedChannelInfo.message_count }}
@@ -77,13 +82,10 @@ watch(selectedChannelInfo, async (newVal) => {
 
           <v-list-item v-if="selectedChannelInfo?.last_queried_at">
             <span class="font-weight-bold">{{ t("channelInfo.lastUpdate") }}</span> 
-            {{ new Date(selectedChannelInfo.last_queried_at).toUTCString() }}
+            {{ formatDate(selectedChannelInfo.last_queried_at) }}
           </v-list-item>
 
-          <v-list-item v-if="selectedChannelInfo?.about">
-            <span class="font-weight-bold">{{ t("channelInfo.about") }}</span> 
-            {{ selectedChannelInfo.about }}
-          </v-list-item>
+
 
           <v-list-item v-if="generic?.topics?.length">
             <span class="font-weight-bold">{{ t("channelInfo.topics") }}</span>

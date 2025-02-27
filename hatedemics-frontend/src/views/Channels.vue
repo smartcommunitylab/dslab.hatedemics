@@ -6,7 +6,7 @@ import { storeToRefs } from "pinia";
 import type { ChannelInfo } from "@/services/types";
 import GraphComponent from "@/components/GraphComponentNew.vue";
 import ChannelInfoComponent from "@/components/ChannelInfoComponent.vue";
-
+import { formatDate } from "@/services/utility";
 const { t } = useI18n();
 const channelsStore = useChannelsStore();
 const { channelsInfo, selectedChannelInfo, selectedLanguage } = storeToRefs(
@@ -36,6 +36,7 @@ const languages = [
 const sortBy = ref([{ key: "IRI", order: "desc" }]);
 
 const headers = reactive([
+  { title: t("channelTable.header.date"), key: "date", sortable: true },
   { title: t("channelTable.header.messages"), key: "message_count", sortable: true },
   {
     title: t("channelTable.header.partecipants"),
@@ -153,6 +154,7 @@ const onPaginationChange = (options: any) => {
                 :class="{ selected: item.id === selectedChannelInfo?.id }"
                 class="hover-row"
               >
+              <td class="text-left">{{ formatDate(item.date) }}</td>
                 <td class="text-left">{{ item.message_count }}</td>
                 <td class="text-left">{{ item.participants_count }}</td>
                 <td class="text-left">{{ item.iri }}</td>
