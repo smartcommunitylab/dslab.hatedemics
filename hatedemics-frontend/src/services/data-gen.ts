@@ -19,12 +19,12 @@ export type Node = {
 };
 
 export type Link = {
-    source_id: string;
-    target_id: string;
+    source: string;
+    target: string;
 };
 
-const links: Link[] = [];
-const nodes: Node[] = [];
+let links: Link[] = [];
+let nodes: Node[] = [];
 async function getEdges() {
     const channelsStore = useChannelsStore();
     const {selectedLanguage } = storeToRefs(channelsStore)
@@ -38,6 +38,8 @@ const {selectedLanguage } = storeToRefs(channelsStore)
     return await axiosInstance.get(`network/nodes/all`,{params:{language:selectedLanguage.value?selectedLanguage.value:'IT'}})
 }
 async function initData() {
+    nodes=[];
+    links=[];
     const linksData = await getEdges();
     const nodesData = await getNodes();
 
@@ -49,14 +51,14 @@ async function initData() {
              extended: nodesData.data[node].iri != -1 ,
             //  color:'#4B5BBF',
             hs:nodesData.data[node].hs,
-             iri: nodesData.data[node].iri,
+             iri: parseFloat(nodesData.data[node].iri),
             //  size:nodesData.data[node].iri* 20 + 5,
              out_degree: nodesData.data[node].out_degree,
              in_degree: nodesData.data[node].in_degree});
     
     }
     for (let link = 0; link < linksData.data.length; link += 1) {
-        links.push({ source_id: `${linksData.data[link].source_int}`, target_id: `${linksData.data[link].target_int}` });
+        links.push({ source: `${linksData.data[link].source_int}`, target: `${linksData.data[link].target_int}` });
     }  
 }
 
