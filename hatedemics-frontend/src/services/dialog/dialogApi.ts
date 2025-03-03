@@ -1,24 +1,24 @@
-import axiosInstance from './../api';
+import axiosHatedemicsInstance from "../hatedemicsApi"
 
 
 export default {
   
 
   changeActiveState: function (userID: string) {
-    return axiosInstance.patch(String('/users/' + userID + '/changeactivestate/'))
+    return axiosHatedemicsInstance.patch(String('/users/' + userID + '/changeactivestate/'))
   },
 
   deleteUser: function (userID: string) {
-    return axiosInstance.delete('/users/' + userID)
+    return axiosHatedemicsInstance.delete('/users/' + userID)
   },
 
   getProjects: function () {
-    return axiosInstance.get('/projects/')
+    return axiosHatedemicsInstance.get('/projects/')
   },
 
   //TODO: data handling
   createProject: function (name: any, isActive: any, users_list: any, users_manage: any) {
-    return axiosInstance.post('/projects/', {
+    return axiosHatedemicsInstance.post('/projects/', {
       name: name,
       is_active: isActive,
       users_list: users_list,
@@ -27,11 +27,11 @@ export default {
   },
 
   getProjectByID: function (projectID: string) {
-    return axiosInstance.get(String('/projects/' + projectID))
+    return axiosHatedemicsInstance.get(String('/projects/' + projectID))
   },
 
   editProject: function (projectID: string, name: any, isActive: any, users_list: any, users_manage: any) {
-    return axiosInstance.patch('/projects/' + projectID + '/edit', {
+    return axiosHatedemicsInstance.patch('/projects/' + projectID + '/edit', {
       name: name,
       is_active: isActive,
       users_list: users_list,
@@ -40,7 +40,7 @@ export default {
   },
 
   assignUserToProject: function (projectID: string, userID: any, isAdmin: any) {
-    return axiosInstance.put(
+    return axiosHatedemicsInstance.put(
       '/projects/' + projectID + '/assignuser',
       {},
       {
@@ -53,17 +53,17 @@ export default {
   },
 
   removeUserFromProject: function (projectID: string, userID: any) {
-    return axiosInstance.delete('/projects/' + projectID + '/revokeuser', {
+    return axiosHatedemicsInstance.delete('/projects/' + projectID + '/revokeuser', {
       params: { user_id: userID }
     })
   },
 
   deleteProject: function (projectID: string) {
-    return axiosInstance.delete('/projects/' + projectID)
+    return axiosHatedemicsInstance.delete('/projects/' + projectID)
   },
 
   getProjectFiles: function (projectID: string) {
-    return axiosInstance.get('/projects/' + projectID + '/file/')
+    return axiosHatedemicsInstance.get('/projects/' + projectID + '/file/')
   },
 
   uploadFiles: function (projectID: string, files: any) {
@@ -73,7 +73,7 @@ export default {
       form.append('files', file)
       console.log(form)
     }
-    return axiosInstance({
+    return axiosHatedemicsInstance({
       method: 'post',
       url: '/projects/' + projectID + '/file/',
       data: form
@@ -83,7 +83,7 @@ export default {
   deleteProjectFiles: function (projectID: string, documentID: any) {
     const requestBody = [documentID]
     console.log(typeof documentID)
-    return axiosInstance.delete('/projects/' + projectID + '/file/delete', {
+    return axiosHatedemicsInstance.delete('/projects/' + projectID + '/file/delete', {
       data: requestBody
     })
   },
@@ -101,7 +101,7 @@ export default {
     taskFilesList: any,
     tryout = false
   ) {
-    return axiosInstance.post('/projects/' + projectID + '/tasks/', {
+    return axiosHatedemicsInstance.post('/projects/' + projectID + '/tasks/', {
       name: taskName,
       start_type: taskStartType,
       inside_type: taskInsideType,
@@ -116,12 +116,12 @@ export default {
   },
 
   getTaskInfo: function (projectID: string, taskID: string) {
-    return axiosInstance.get('/projects/' + projectID + '/tasks/' + taskID)
+    return axiosHatedemicsInstance.get('/projects/' + projectID + '/tasks/' + taskID)
   },
 
   //Not working. Is it useful?
   isAuthenticated: function () {
-    axiosInstance
+    axiosHatedemicsInstance
       .get('/users/me')
       .then(function () {
         // console.log('true')
@@ -135,32 +135,32 @@ export default {
 
   //Gets data from the endpoint specified during project creation
   getTaskData: function (endpoint: string) {
-    return axiosInstance.get(endpoint)
+    return axiosHatedemicsInstance.get(endpoint)
   },
 
   deleteTask: function (projectID: string, taskID: string) {
-    return axiosInstance.delete('/projects/' + projectID + '/tasks/' + taskID)
+    return axiosHatedemicsInstance.delete('/projects/' + projectID + '/tasks/' + taskID)
   },
 
   activateTask: function (projectID: string, taskID: string) {
-    return axiosInstance.patch('/projects/' + projectID + '/tasks/' + taskID + '/activate')
+    return axiosHatedemicsInstance.patch('/projects/' + projectID + '/tasks/' + taskID + '/activate')
   },
 
   deactivateTask: function (projectID: string, taskID: string) {
-    return axiosInstance.patch('/projects/' + projectID + '/tasks/' + taskID + '/deactivate')
+    return axiosHatedemicsInstance.patch('/projects/' + projectID + '/tasks/' + taskID + '/deactivate')
   },
 
   //This call only works when there is no ending "slash" symbol
   getFileContent: function (projectID: string, fileID: string) {
-    return axiosInstance.get('/projects/' + projectID + '/file/' + fileID + '/content')
+    return axiosHatedemicsInstance.get('/projects/' + projectID + '/file/' + fileID + '/content')
   },
 
   getAllAnnotations: function (projectID: string, taskID: string) {
-    return axiosInstance.get('/projects/' + projectID + '/tasks/' + taskID + '/annotations')
+    return axiosHatedemicsInstance.get('/projects/' + projectID + '/tasks/' + taskID + '/annotations')
   },
 
   createAnnotation: function (projectID: string, taskID: string, annotations: any, comment: any, parent: any) {
-    return axiosInstance.post('/projects/' + projectID + '/tasks/' + taskID + '/annotations/', {
+    return axiosHatedemicsInstance.post('/projects/' + projectID + '/tasks/' + taskID + '/annotations/', {
       annotations: annotations,
       comment: comment,
       parent: parent
@@ -168,11 +168,11 @@ export default {
   },
 
   getAnnotation: function (projectID: string, taskID: string, annotationID: string) {
-    return axiosInstance.get('/projects/' + projectID + '/tasks/' + taskID + '/annotations/' + annotationID)
+    return axiosHatedemicsInstance.get('/projects/' + projectID + '/tasks/' + taskID + '/annotations/' + annotationID)
   },
 
   editAnnotation: function (projectID: string, taskID: string, annotationID: string, annotations: any, comment: any) {
-    return axiosInstance.patch(
+    return axiosHatedemicsInstance.patch(
       '/projects/' + projectID + '/tasks/' + taskID + '/annotations/' + annotationID,
       {
         annotations: annotations,
@@ -182,19 +182,19 @@ export default {
   },
 
   deleteAnnotation: function (projectID: string, taskID: string, annotationID: string) {
-    return axiosInstance.delete(
+    return axiosHatedemicsInstance.delete(
       '/projects/' + projectID + '/tasks/' + taskID + '/annotations/' + annotationID
     )
   },
 
   closeAnnotation: function (projectID: string, taskID: string, annotationID: string) {
-    return axiosInstance.patch(
+    return axiosHatedemicsInstance.patch(
       '/projects/' + projectID + '/tasks/' + taskID + '/annotations/' + annotationID + '/close'
     )
   },
 
   reopenAnnotation: function (projectID: string, taskID: string, annotationID: string) {
-    return axiosInstance.patch(
+    return axiosHatedemicsInstance.patch(
       '/projects/' + projectID + '/tasks/' + taskID + '/annotations/' + annotationID + '/reopen'
     )
   }

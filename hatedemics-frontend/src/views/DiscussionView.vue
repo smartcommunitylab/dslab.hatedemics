@@ -49,7 +49,7 @@ const updateChat = (chatId: string) => {
 
 <template>
   <v-container fluid>
-    <h1 class="text-h4 font-weight-bold mb-4">{{ msg }}</h1>
+    <!-- <h1 class="text-h4 font-weight-bold mb-4">{{ msg }}</h1> -->
 
     <!-- Selettori di Canale e Chat -->
     <v-row>
@@ -85,12 +85,13 @@ const updateChat = (chatId: string) => {
 
     <!-- Layout con Sidebar e Tabella -->
     <v-row>
-      <v-col cols="3">
-        <SideBarInfoComponent :actions="false" />
-      </v-col>
+
 
       <v-col cols="9">
         <ChatTableComponent />
+      </v-col>
+      <v-col cols="3">
+        <SideBarInfoComponent :actions="false" />
       </v-col>
     </v-row>
   </v-container>

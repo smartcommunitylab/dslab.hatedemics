@@ -15,6 +15,7 @@
     },
     "channelTable": {
         "header": {
+            "date": "Date",
             "id": "ID",
             "messages": "Messages",
             "partecipants": "Utenti",
@@ -54,7 +55,9 @@
             "reactions": "Reactions",
             "hateLabel": "Hate Speech",
             "checkLabel": "Check Worthy",
-            "topic": "Topic"
+            "topic": "Topic",
+            "target": "Target",
+            "keywordsMatch": "Keywords Match"
         },
         "dialog":{
             "start": "Start a new conversation",

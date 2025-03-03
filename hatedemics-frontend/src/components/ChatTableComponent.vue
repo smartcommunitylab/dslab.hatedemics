@@ -6,7 +6,7 @@ import { useMessagesStore } from '@/store/MessageStore';
 import { storeToRefs } from 'pinia';
 import { useChatsStore } from '@/store/ChatStore';
 import { useChannelsStore } from '@/store/ChannelStore';
-import { formatDate } from "@/services/utility";
+import { formatDate, isEmptyOrSpaces } from "@/services/utility";
 const { t } = useI18n();
 const router = useRouter();
 const messagesStore = useMessagesStore();
@@ -20,6 +20,12 @@ const channelStore = useChannelsStore();
 const { selectedChannelInfo } = storeToRefs(channelStore);
 const { selectedChat } = storeToRefs(chatsStore);
 const totalItems = ref(0); 
+const itemsPerPageOptions =  [
+              { title: '10', value: 10 },
+              { title: '50', value: 50 },
+              { title: '100', value: 100 },
+      { title: '150', value: 150 },
+    ];
 const headers = [
   { title: t("message.header.date"), key: "date", sortable: true },
   { title: t("message.header.message"), key: "message",  sortable: true },
@@ -29,6 +35,7 @@ const headers = [
   { title: t("message.header.hateLabel"), key: "hate_label", sortable: true },
   { title: t("message.header.checkLabel"), key: "checkworthy_label", sortable: true },
   { title: t("message.header.topic"), key: "topic_label", sortable: true },
+  { title: t("message.header.target"), key: "target", sortable: true },
 ];
 
 // Mappa icone media type
@@ -106,7 +113,12 @@ try {
   loading.value = false; // Disattiva il loading
 }
 };
-
+// Funzione per determinare la classe della riga in base al target
+const getRowClass = (item: any) => {
+  return {
+   class: !isEmptyOrSpaces(item?.item?.target) ? "has-target" : ""
+  };
+};
 // Osserva le variazioni e ricarica i dati
 watch([search, page, itemsPerPage, sortBy,selectedChat,selectedChannelInfo], fetchMessages);
 
@@ -117,7 +129,7 @@ watch([search, page, itemsPerPage, sortBy,selectedChat,selectedChannelInfo], fet
 
 <template>
   <v-container fluid>
-    <v-text-field
+    <!-- <v-text-field
       v-model="search"
       :label="t('Search')"
       prepend-inner-icon="mdi-magnify"
@@ -125,16 +137,18 @@ watch([search, page, itemsPerPage, sortBy,selectedChat,selectedChannelInfo], fet
       hide-details
       single-line
       class="mb-4"
-    ></v-text-field>
+    ></v-text-field> -->
 
     <v-data-table-server
             :headers="headers"
             :loading="loading"
             :items="messages"
+            :row-props="getRowClass"
             :search="search"
             :items-length="totalItems"
             :items-per-page="pagination.size"
             :page="pagination.page +1 "
+            :items-per-page-options="itemsPerPageOptions"
             return-object
             density="compact"
             hover
@@ -148,6 +162,10 @@ watch([search, page, itemsPerPage, sortBy,selectedChat,selectedChannelInfo], fet
       <td class="text-left">{{ formatDate(item.date) }}</td>
 
       </template>
+      <template v-slot:item.from_id="{ item }">
+        <span v-if="item.from_id">{{item.from_id}}</span>
+        <span v-else>NA</span>
+      </template>
       <template v-slot:item.media_type="{ item }">
         <v-icon :icon="getIcon(item.media_type)" size="24"></v-icon>
 
@@ -160,14 +178,22 @@ watch([search, page, itemsPerPage, sortBy,selectedChat,selectedChannelInfo], fet
       <template v-slot:item.checkworthy_label="{ item }">
         <v-icon :icon="item.checkworthy_label ? 'mdi-check-circle' : 'mdi-close-circle'" :color="item.checkworthy_label ? 'green' : 'red'" />
       </template>
+      <template v-slot:item.target="{ item }">
+        <span v-if="!isEmptyOrSpaces(item?.target!)">{{item.target}}</span>
+        <span v-else>NA</span>      </template>
     </v-data-table-server>
 
     <!-- Menu contestuale -->
     <v-menu v-model="menu" :style="{ top: `${menuY}px`, left: `${menuX}px` }" absolute offset-y>
       <v-list>
-        <v-list-item @click="startDialogue">
-          <v-list-item-title> {{ t("message.dialog.start") }} </v-list-item-title>
-        </v-list-item>        <v-list-item @click="jumpToConversation">
+        <v-list-item 
+  @click="startDialogue" 
+  :disabled="isEmptyOrSpaces(selectedMessage?.target!)"
+  :class="{'has-target': selectedMessage?.target, 'no-target': !selectedMessage?.target}"
+>
+  <v-list-item-title> {{ t("message.dialog.start") }} </v-list-item-title>
+</v-list-item>
+    <v-list-item @click="jumpToConversation">
           <v-list-item-title> {{ t("message.dialog.jump") }} </v-list-item-title>
         </v-list-item>
 
@@ -177,8 +203,15 @@ watch([search, page, itemsPerPage, sortBy,selectedChat,selectedChannelInfo], fet
 </template>
 
 <style scoped>
+/* Default hover */
 .v-data-table :deep(tbody tr:hover) {
   background-color: rgba(0, 0, 0, 0.05);
   cursor: pointer;
 }
+
+/* Hover su righe con target */
+.v-data-table :deep(tbody tr.has-target:hover) {
+  background-color: rgba(255, 0, 0, 0.2) !important; /* Rosso chiaro */
+}
+
 </style>

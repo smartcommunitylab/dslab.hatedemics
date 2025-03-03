@@ -88,23 +88,24 @@ const goToChats = () => {
           </v-col>
     </v-row>
     <v-row>
-      <!-- Colonna Sinistra: Sidebar con più spazio -->
-      <v-col cols="3">
-        <SideBarInfoComponent :actions="false" />
-      </v-col>
+
 
       <!-- Colonna Centrale: Tabella -->
       <v-col cols="6">
         <TopicsTableComponent />
       </v-col>
 
-      <!-- Colonna Destra: Selettori sopra, WordCloud sotto -->
+      <!-- Colonna sin: Selettori sopra, WordCloud sotto -->
       <v-col cols="3">
         <v-row>
           <v-col cols="12" class="mt-4">
             <WordCloudComponent />
           </v-col>
         </v-row>
+      </v-col>
+            <!-- Colonna dx: Sidebar con più spazio -->
+            <v-col cols="3">
+        <SideBarInfoComponent :actions="false" />
       </v-col>
     </v-row>
   </v-container>

@@ -15,10 +15,12 @@
     },
     "channelTable": {
         "header": {
+            "date": "Data",
             "id": "ID",
             "messages": "Messaggi",
             "partecipants": "Utenti",
-            "IRI": "Infodemic Risk"
+            "IRI": "Infodemic Risk",
+            "hs": "Hate Speech"
         }
     },
     "topicsTable": {
@@ -56,7 +58,9 @@
             "reactions": "Reazioni",
             "hateLabel": "Hate Speech",
             "checkLabel": "Check Worthy",
-            "topic": "Argomento"
+            "topic": "Argomento",
+            "target": "Destinatario",
+            "keywordsMatch": "Parole chiave"
         },
         "dialog":{
             "start": "Inizia una nuova conversazione",

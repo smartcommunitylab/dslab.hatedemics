@@ -7,12 +7,12 @@ import { storeToRefs } from 'pinia';
 import type { NodeObject } from "three-forcegraph";
 
 const channelsStore = useChannelsStore();
-const { selectedChannelInfo } = storeToRefs(channelsStore);
+const { selectedChannelInfo, selectedLanguage } = storeToRefs(channelsStore);
 const defaultLinkColors = new Map();
 const graphContainer = ref<HTMLElement | null>(null);
 const isFullScreen = ref(false);
 let graphInstance: any = null;
-const colorBy = ref("disabled"); 
+const colorBy = ref("disabled");
 const sizeBy = ref("disabled");
 let selectedNode: string | null = null;
 const tooltip = ref<{ show: boolean; x: number; y: number; node: any | null }>({
@@ -27,12 +27,12 @@ const tooltip = ref<{ show: boolean; x: number; y: number; node: any | null }>({
 // // Verde puro (#00FF00) → Rosso puro (#FF0000)
 // const r = Math.round(255 * iri);       // Aumenta dal 0 al 255
 // const g = Math.round(255 * (1 - iri)); // Diminuisce da 255 a 0
-// const b = 0;   
+// const b = 0;
 //   return `rgb(${r}, ${g}, ${b})`;
 // };
 
 const getColorByValue = (value: number, min: number, max: number) => {
-  if (value === undefined || value === null) return "gray"; 
+  if (value === undefined || value === null || value === -1) return "gray";
   const normalized = (value - min) / (max - min); // Normalizza tra 0 e 1
   const r = Math.floor(255 * (1 - normalized)); // Più alto → più verde
   const g = Math.floor(255 * normalized);
@@ -79,6 +79,22 @@ const getNodeSize = (node: any, sizeBy: string) => {
       return 8; // Default size
   }
 };
+
+watch(selectedLanguage, async (newValue,oldValue) => {
+  if (newValue === oldValue) return;
+
+  await initData();
+
+if (graphInstance) {
+  graphInstance = null; // Cancella l'istanza
+  if (graphContainer.value) graphContainer.value.innerHTML = ''; // Pulisce il container
+}
+
+initializeGraph();
+resizeGraph();
+
+});
+
 watch(sizeBy, (newValue) => {
   if (graphInstance) {
     graphInstance.nodeVal((node: any) => getNodeSize(node, newValue));
@@ -89,7 +105,7 @@ watch(sizeBy, (newValue) => {
 watch(colorBy, (newValue) => {
   if (graphInstance) {
     graphInstance.nodeColor((node: any) => getNodeColor(node, newValue));
-    graphInstance.refresh();  
+    graphInstance.refresh();
   }
 });
 
@@ -117,13 +133,15 @@ const initializeGraph = () => {
   graphContainer.value.innerHTML = '';
   graphInstance =  new ForceGraph3D(graphContainer.value)
   .graphData({ nodes, links })
+  // .linkDirectionalArrowLength(3.5) // Aggiunge frecce
+  // .linkDirectionalArrowRelPos(1)  // Posiziona le frecce alla fine
   .nodeLabel(node => {
       const nodeData = node as Node;
       return `<strong>ID:</strong> ${nodeData.id} <br />
               <strong>IRI:</strong> ${nodeData.iri} <br />
               <strong>HS:</strong> ${nodeData.hs?.toFixed(3)}`;
     })
-    // .nodeAutoColorBy(colorBy.value) 
+    // .nodeAutoColorBy(colorBy.value)
     .nodeColor((node: any) => getNodeColor(node, colorBy.value))
     .nodeVal((node: any) => getNodeSize(node, sizeBy.value))
     .linkWidth(1)
@@ -134,9 +152,11 @@ const initializeGraph = () => {
     .onNodeClick(node => {
        zoomToNode(node);
         selectNode(node);
-      
+
     }).onBackgroundClick(() => {
       selectedNode = null;
+      colorBy.value = "disabled";
+      sizeBy.value = "disabled";
       resetHighlighting();
     });
     setTimeout(() => {
@@ -217,19 +237,49 @@ onUnmounted(() => {
   }
 });
 
+
 const resizeGraph = () => {
   if (graphContainer.value && graphInstance) {
     const width = graphContainer.value.clientWidth;
     const height = graphContainer.value.clientHeight;
 
+  //   const width = window.innerWidth;
+  // const height = window.innerHeight;
+//   const width = graphContainer.value.offsetWidth;
+// const height = graphContainer.value.offsetHeight;
+console.log("clientWidth:", graphContainer.value.clientWidth, graphContainer.value.clientHeight); // 🔍 Debug
+console.log("Window size:", window.innerWidth, window.innerHeight); // 🔍 Debug
+console.log("offsetWidth size:", graphContainer.value.offsetWidth, graphContainer.value.offsetHeight); // 🔍 Debug
+    if (width === 0 || height === 0) {
+      console.warn("Il container ha larghezza/altezza 0! ResizeGraph potrebbe non funzionare.");
+      return;
+    }
     const renderer = graphInstance.renderer();
     renderer.setSize(width, height);
     renderer.domElement.style.width = `${width}px`;
     renderer.domElement.style.height = `${height}px`;
 
+    console.log("Container size:", graphContainer.value.clientWidth, graphContainer.value.clientHeight);
+
     const camera = graphInstance.camera();
     camera.aspect = width / height; // Mantieni il corretto aspect ratio
+    camera.updateMatrixWorld(); // Aggiorna la matrice del mondo
     camera.updateProjectionMatrix(); // Aggiorna la matrice di proiezione
+
+    graphInstance.refresh(); // Forza l'aggiornamento
+
+  //   const width = window.innerWidth;
+  // const height = window.innerHeight;
+
+  // graphInstance.width(width).height(height);
+
+  // // Prendi la camera dalla scena di 3d-force-graph
+  // const camera = graphInstance.camera();
+  // camera.aspect = width / height;
+  // camera.updateProjectionMatrix(); // ⚡ Questo forza l'aggiornamento
+
+  // graphInstance.renderer().setSize(width, height);
+  // graphInstance.refresh();
   }
 };
 // Osserva cambiamenti nel DOM per gestire il ridimensionamento corretto di `.scene-container`
@@ -317,7 +367,7 @@ function zoomToNode(node: NodeObject) {
       <option value="in_degree">Dimensione per in</option>
     </select>
     <div ref="graphContainer" class="graph-container"></div>
-    <div 
+    <div
       v-if="tooltip.show"
       class="tooltip"
       :style="{ left: tooltip.x + 'px', top: tooltip.y + 'px' }"

@@ -1,6 +1,7 @@
 import axiosInstance from './../api';
 import router from '@/router'
 import { useLoginStore } from '@/store/LoginStore'
+import axiosHatedemicsInstance from '../hatedemicsApi';
 
 
  async function logout() {
@@ -10,7 +11,7 @@ import { useLoginStore } from '@/store/LoginStore'
   }
   async function login(username:string, password:string) {
     return axiosInstance.post(
-      '/token',
+      import.meta.env.VITE_APP_HATEDEMICS_API_URL+'/token',
       {
         username: username,
         password: password
@@ -24,12 +25,15 @@ import { useLoginStore } from '@/store/LoginStore'
   }
 
   async function getUsers() {
-    return axiosInstance.get('/users/')
+    //TODO
+    return axiosHatedemicsInstance.get('/users/')
   }
 
   //Returns '201 created' if successful
   async function createUser(email:string, username:string, password:string) {
-    return axiosInstance.post('/users/', {
+        //TODO
+
+    return axiosHatedemicsInstance.post('/users/', {
       email: email,
       username: username,
       password: password
@@ -37,7 +41,9 @@ import { useLoginStore } from '@/store/LoginStore'
   }
 
   async function editUser(email:string, username:string, password:string, userID:string) {
-    return axiosInstance.patch(String('/users/' + userID + '/edit/'), {
+        //TODO
+
+    return axiosHatedemicsInstance.patch(String('/users/' + userID + '/edit/'), {
       email: email,
       username: username,
       password: password

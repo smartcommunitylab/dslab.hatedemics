@@ -61,7 +61,9 @@ export function processingChannelInfo(data: ChannelInfo[]) {
         minute: '2-digit',
       }).format(new Date(date));
     };
-    
+    export function isEmptyOrSpaces(str: string | null): boolean {
+      return str === null || str.match(/^ *$/) !== null;
+  }
     // Funzione per ottenere il locale corrente da vue-i18n o Vuetify
     const getCurrentLocale = (): string => {
       try {

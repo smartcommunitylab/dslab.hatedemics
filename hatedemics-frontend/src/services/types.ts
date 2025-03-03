@@ -112,6 +112,7 @@ export type Message = {
   checkworthy_label?: string,
   topic?: string,
   target?: string,
+  keywords_match?: string,
 }
 
 export type PeerId = {

@@ -30,7 +30,6 @@ const languages = [
   { language: "English", value: "EN" },
   { language: "Español", value: "ES" },
   { language: "Polacco", value: "PL" },
-  { language: "Maltese", value: "ML" },
 ];
 
 const sortBy = ref([{ key: "IRI", order: "desc" }]);
@@ -100,7 +99,7 @@ const onPaginationChange = (options: any) => {
   <v-container fluid>
     <v-row>
       <!-- Sezione principale -->
-      <v-col cols="8">
+      <v-col cols="9">
         <v-card class="pa-4 bg-surface" elevation="2">
           <v-card-title class="text-h5 font-weight-bold text-primary">
             {{ msg }}
@@ -121,7 +120,7 @@ const onPaginationChange = (options: any) => {
 
           <GraphComponent class="mb-4" />
 
-          <v-text-field
+          <!-- <v-text-field
             v-model="search"
             label="Search"
             prepend-inner-icon="mdi-magnify"
@@ -130,7 +129,7 @@ const onPaginationChange = (options: any) => {
             single-line
             color="primary"
             class="mb-4"
-          ></v-text-field>
+          ></v-text-field> -->
 
           <v-data-table-server
           :loading="loading"
@@ -165,14 +164,14 @@ const onPaginationChange = (options: any) => {
       </v-col>
 
       <!-- Sezione info canale -->
-      <v-col cols="4">
-        <v-card class="pa-4 bg-surface" elevation="2">
+      <v-col cols="3">
+        <!-- <v-card class="pa-4 bg-surface" elevation="2">
           <v-card-title class="text-h5 font-weight-bold text-secondary">
             {{ t("channel.infoTitle") }}
           </v-card-title>
-          <v-divider class="mb-4"></v-divider>
+          <v-divider class="mb-4"></v-divider> -->
           <ChannelInfoComponent />
-        </v-card>
+        <!-- </v-card> -->
       </v-col>
     </v-row>
   </v-container>

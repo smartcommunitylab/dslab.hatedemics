@@ -31,7 +31,6 @@ export const useVariablesStore = defineStore('variables', {
         { complete: 'English', apiFormat: 'en' },
         { complete: 'Spanish', apiFormat: 'es' },
         { complete: 'Polish', apiFormat: 'pl' },
-        { complete: 'Maltese', apiFormat: 'mt' },
       ],
       initialExternalGround: {
         name: "",
