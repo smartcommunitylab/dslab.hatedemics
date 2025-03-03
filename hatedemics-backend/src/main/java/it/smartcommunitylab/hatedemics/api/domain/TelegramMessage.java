@@ -96,6 +96,14 @@ public class TelegramMessage {
     @Column(name = "checkworthy_label")
     private Double checkworthyLabel;
 
+    @JsonProperty("target")
+    @Column(name = "target")
+    private String target;
+
+    @JsonProperty("keywords_match")
+    @Column(name = "keywords_match")
+    private String keywordsMatch;
+
     @JsonProperty("media_type")
     @Column(name = "media_type")
     private String mediaType;  

@@ -32,8 +32,8 @@ def to_json_str(x):
     return json.dumps(x)
 
 def process_messages_data(path, lang, engine):
-    with engine.connect() as conn:
-        conn.execute(text('DROP TABLE IF EXISTS messages'))    
+    # with engine.connect() as conn:
+        #  conn.execute(text('DROP TABLE IF EXISTS messages'))    
 
     for root, dirs, files in os.walk(f'{path}/{lang}/messages'):
         for file in files:
