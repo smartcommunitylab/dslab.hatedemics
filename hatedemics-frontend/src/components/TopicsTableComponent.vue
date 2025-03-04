@@ -33,7 +33,7 @@ const sortBy = ref([{ key: "hs_percentage", order: "desc" }]);
 </script>
 <template>
     <v-container>
-        {{ t("topicsTable.title") }}
+        <!-- {{ t("topicsTable.title") }}
           <v-text-field
           v-model="search"
           label="Search"
@@ -41,7 +41,7 @@ const sortBy = ref([{ key: "hs_percentage", order: "desc" }]);
           variant="outlined"
           hide-details
           single-line
-        ></v-text-field>
+        ></v-text-field> -->
         <v-data-table :headers="headers" :items="topics" :search="search" @update:sort-by="onSortChange"
             v-model:sort-by="sortBy"
             return-object

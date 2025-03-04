@@ -118,7 +118,7 @@ const onPaginationChange = (options: any) => {
             class="mb-4"
           />
 
-          <GraphComponent class="mb-4" />
+          <GraphComponent :key="selectedLanguage" class="mb-4" />
 
           <!-- <v-text-field
             v-model="search"

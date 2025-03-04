@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, watch } from "vue";
+import { ref, onMounted, onUnmounted, watch, nextTick } from "vue";
 import ForceGraph3D from "3d-force-graph";
 import { initData, nodes, links, type Node } from "@/services/data-gen";
 import { useChannelsStore } from '@/store/ChannelStore';
 import { storeToRefs } from 'pinia';
 import type { NodeObject } from "three-forcegraph";
+import elementResizeDetectorMaker from "https://esm.sh/element-resize-detector";
 
 const channelsStore = useChannelsStore();
 const { selectedChannelInfo, selectedLanguage } = storeToRefs(channelsStore);
@@ -80,20 +81,20 @@ const getNodeSize = (node: any, sizeBy: string) => {
   }
 };
 
-watch(selectedLanguage, async (newValue,oldValue) => {
-  if (newValue === oldValue) return;
+// watch(selectedLanguage, async (newValue,oldValue) => {
+//   if (newValue === oldValue) return;
 
-  await initData();
+//   await initData();
 
-if (graphInstance) {
-  graphInstance = null; // Cancella l'istanza
-  if (graphContainer.value) graphContainer.value.innerHTML = ''; // Pulisce il container
-}
+// if (graphInstance) {
+//   graphInstance = null; // Cancella l'istanza
+//   if (graphContainer.value) graphContainer.value.innerHTML = ''; // Pulisce il container
+// }
 
-initializeGraph();
-resizeGraph();
+// initializeGraph();
+// // resizeGraph();
 
-});
+// });
 
 watch(sizeBy, (newValue) => {
   if (graphInstance) {
@@ -159,10 +160,10 @@ const initializeGraph = () => {
       sizeBy.value = "disabled";
       resetHighlighting();
     });
-    setTimeout(() => {
-    observeSceneContainer();
-    resizeGraph();
-  }, 100);
+  //   setTimeout(() => {
+  //   observeSceneContainer();
+  //   resizeGraph();
+  // }, 100);
 };
 
 const selectNode = (node: any) => {
@@ -216,16 +217,20 @@ document.addEventListener("fullscreenchange", () => {
 // Listener per aggiornare il full screen state
 document.addEventListener("fullscreenchange", () => {
   isFullScreen.value = !!document.fullscreenElement;
-  setTimeout(resizeGraph, 200);
+  // setTimeout(resizeGraph, 200);
 });
 
 // Gestione eventi di resize della finestra
-window.addEventListener("resize", () => {
-  resizeGraph();
-});
+// window.addEventListener("resize", () => {
+//   resizeGraph();
+// });
 onMounted(async () => {
   await initData();
   initializeGraph();
+  const erd = elementResizeDetectorMaker();
+  erd.listenTo(graphContainer.value, el => {
+    graphInstance.width(el.offsetWidth).height(el.offsetHeight);
+  });
 });
 
 onUnmounted(() => {
@@ -238,65 +243,67 @@ onUnmounted(() => {
 });
 
 
-const resizeGraph = () => {
-  if (graphContainer.value && graphInstance) {
-    const width = graphContainer.value.clientWidth;
-    const height = graphContainer.value.clientHeight;
+// const resizeGraph = async () => {
+//   await nextTick();
 
-  //   const width = window.innerWidth;
-  // const height = window.innerHeight;
-//   const width = graphContainer.value.offsetWidth;
-// const height = graphContainer.value.offsetHeight;
-console.log("clientWidth:", graphContainer.value.clientWidth, graphContainer.value.clientHeight); // 🔍 Debug
-console.log("Window size:", window.innerWidth, window.innerHeight); // 🔍 Debug
-console.log("offsetWidth size:", graphContainer.value.offsetWidth, graphContainer.value.offsetHeight); // 🔍 Debug
-    if (width === 0 || height === 0) {
-      console.warn("Il container ha larghezza/altezza 0! ResizeGraph potrebbe non funzionare.");
-      return;
-    }
-    const renderer = graphInstance.renderer();
-    renderer.setSize(width, height);
-    renderer.domElement.style.width = `${width}px`;
-    renderer.domElement.style.height = `${height}px`;
+//   if (graphContainer.value && graphInstance) {
+//     const width = graphContainer.value.offsetWidth;
+//     const height = graphContainer.value.offsetHeight;
 
-    console.log("Container size:", graphContainer.value.clientWidth, graphContainer.value.clientHeight);
+//   //   const width = window.innerWidth;
+//   // const height = window.innerHeight;
+// //   const width = graphContainer.value.offsetWidth;
+// // const height = graphContainer.value.offsetHeight;
+// console.log("clientWidth:", graphContainer.value.clientWidth, graphContainer.value.clientHeight); // 🔍 Debug
+// console.log("Window size:", window.innerWidth, window.innerHeight); // 🔍 Debug
+// console.log("offsetWidth size:", graphContainer.value.offsetWidth, graphContainer.value.offsetHeight); // 🔍 Debug
+//     if (width === 0 || height === 0) {
+//       console.warn("Il container ha larghezza/altezza 0! ResizeGraph potrebbe non funzionare.");
+//       return;
+//     }
+//     const renderer = graphInstance.renderer();
+//     renderer.setSize(width, height);
+//     renderer.domElement.style.width = `${width}px`;
+//     renderer.domElement.style.height = `${height}px`;
 
-    const camera = graphInstance.camera();
-    camera.aspect = width / height; // Mantieni il corretto aspect ratio
-    camera.updateMatrixWorld(); // Aggiorna la matrice del mondo
-    camera.updateProjectionMatrix(); // Aggiorna la matrice di proiezione
+//     console.log("Container size:", graphContainer.value.clientWidth, graphContainer.value.clientHeight);
 
-    graphInstance.refresh(); // Forza l'aggiornamento
+//     const camera = graphInstance.camera();
+//     camera.aspect = width / height; // Mantieni il corretto aspect ratio
+//     camera.updateMatrixWorld(); // Aggiorna la matrice del mondo
+//     camera.updateProjectionMatrix(); // Aggiorna la matrice di proiezione
 
-  //   const width = window.innerWidth;
-  // const height = window.innerHeight;
+//     graphInstance.refresh(); // Forza l'aggiornamento
 
-  // graphInstance.width(width).height(height);
+//   //   const width = window.innerWidth;
+//   // const height = window.innerHeight;
 
-  // // Prendi la camera dalla scena di 3d-force-graph
-  // const camera = graphInstance.camera();
-  // camera.aspect = width / height;
-  // camera.updateProjectionMatrix(); // ⚡ Questo forza l'aggiornamento
+//   // graphInstance.width(width).height(height);
 
-  // graphInstance.renderer().setSize(width, height);
-  // graphInstance.refresh();
-  }
-};
+//   // // Prendi la camera dalla scena di 3d-force-graph
+//   // const camera = graphInstance.camera();
+//   // camera.aspect = width / height;
+//   // camera.updateProjectionMatrix(); // ⚡ Questo forza l'aggiornamento
+
+//   // graphInstance.renderer().setSize(width, height);
+//   // graphInstance.refresh();
+//   }
+// };
 // Osserva cambiamenti nel DOM per gestire il ridimensionamento corretto di `.scene-container`
-const observeSceneContainer = () => {
-  if (!graphContainer.value) return;
+// const observeSceneContainer = () => {
+//   if (!graphContainer.value) return;
 
-  const observer = new MutationObserver(() => {
-    const sceneContainer = graphContainer.value?.querySelector('.scene-container') as HTMLElement;
-    if (sceneContainer) {
-      sceneContainer.style.width = graphContainer?.value?.clientWidth + "px";
-      sceneContainer.style.height = graphContainer?.value?.clientHeight + "px";
-      resizeGraph();
-    }
-  });
+//   const observer = new MutationObserver(() => {
+//     const sceneContainer = graphContainer.value?.querySelector('.scene-container') as HTMLElement;
+//     if (sceneContainer) {
+//       sceneContainer.style.width = graphContainer?.value?.clientWidth + "px";
+//       sceneContainer.style.height = graphContainer?.value?.clientHeight + "px";
+//       resizeGraph();
+//     }
+//   });
 
-  observer.observe(graphContainer.value, { childList: true, subtree: true });
-};
+//   observer.observe(graphContainer.value, { childList: true, subtree: true });
+// };
 
 function zoomToNode(node: NodeObject) {
   if (!node) return;
@@ -387,8 +394,10 @@ function zoomToNode(node: NodeObject) {
 }
 
 .graph-container {
-  width: 100%;
-  height: 100%;
+  width: 100%;  /* Adatta il contenitore */
+  height: 100%; /* Imposta un'altezza adatta */
+  border: 1px solid #ccc; /* Aiuta a visualizzare i confini */
+  margin: auto;
 }
 
 .fullscreen-btn {
