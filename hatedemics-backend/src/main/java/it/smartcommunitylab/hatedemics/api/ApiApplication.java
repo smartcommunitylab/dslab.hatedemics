@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import it.smartcommunitylab.hatedemics.api.domain.User;
 import it.smartcommunitylab.hatedemics.api.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -27,6 +28,9 @@ public class ApiApplication {
 	@Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
+	@Value("${users.file}")	
+	private String usersFile;
+
     public static void main(String[] args) {
         SpringApplication.run(ApiApplication.class, args);
     }
@@ -46,7 +50,7 @@ public class ApiApplication {
         return args -> {
             ObjectMapper mapper = new ObjectMapper();
 
-            List<User> users = mapper.readValue(new File("users.json"), new TypeReference<List<User>>() {});
+            List<User> users = mapper.readValue(new File(usersFile), new TypeReference<List<User>>() {});
 			users.forEach(u -> {
 				if (userRepository.findByUsername(u.getUsername()) != null) {
 					return;
