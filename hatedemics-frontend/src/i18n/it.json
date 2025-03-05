@@ -23,8 +23,45 @@
             "hs": "Hate Speech"
         }
     },
+    "language": {
+        "en": "Inglese",
+        "it": "Italiano",
+        "es": "Spagnolo",
+        "pl": "Polacco"
+    },
+    "graphInteraction": {
+        "color": {
+            "disable": "Disabilita colore",
+            "iri": "Infodemic Risk",
+            "hs": "Hate Speech",
+            "in": "In degree",
+            "out": "Out degree"
+        },
+        "size": {
+            "disable": "Disabilita dimensione",
+            "iri": "Infodemic Risk",
+            "hs": "Hate Speech",
+            "in": "In degree",
+            "out": "Out degree"
+        },
+        "tooltip": {
+            "id": "ID Canale:",
+            "iri": "Infodemic Risk:",
+            "hs": "Hate Speech:"
+        },
+        "fs": {
+            "exit": "Finestra",
+            "go": "Fullscreen"
+        }
+    },
     "topicsTable": {
-        "title": "Titolo"
+        "title": "Titolo",
+        "header":{
+            "title":"Titolo",
+            "count":"% di messaggi",
+            "hs":"% di Hate Speech",
+            "cw":"% di Check Worthy"
+        }
     },
     "channelInfo": {
         "about": "Informazioni:",
@@ -62,7 +99,7 @@
             "target": "Destinatario",
             "keywordsMatch": "Parole chiave"
         },
-        "dialog":{
+        "dialog": {
             "start": "Inizia una nuova conversazione",
             "jump": "Vai alla conversazione"
         }

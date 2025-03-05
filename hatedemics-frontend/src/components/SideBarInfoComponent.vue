@@ -66,10 +66,6 @@ onMounted(async () => {
             {{ generic.cw_percentage }}%
           </v-list-item>
 
-          <v-list-item v-if="selectedChannelInfo?.last_queried_at">
-            <span class="font-weight-bold">{{ t("channelInfo.lastUpdate") }}</span>
-            {{ formatDate(selectedChannelInfo.last_queried_at) }}
-          </v-list-item>
 
           <v-list-item v-if="dataEntries.length">
             <span class="font-weight-bold">{{ t("channelInfo.topics") }}</span>

@@ -23,20 +23,7 @@ const messagesStore = useMessagesStore();
 const { messages } = storeToRefs(messagesStore);
 const { selectedChannelInfo, channelsInfo } = storeToRefs(channelsStore);
 const { selectedChat, chats } = storeToRefs(chatStore);
-// onMounted(async () => {
-//   const { success, status } = await messagesStore.dispatchGetMessages();
-//   //add info of number
-//   msg.value = t("message.title");
-//   if (!success) {
-//     alert("Ups, something happened 🙂");
-//     console.log("Api status ->", status);
-//   } else {
-//     messages.value = messagesStore.messages?.map((item: Message) => ({
-//       ...item
-//     }));
-//     console.log(messagesStore.messages);
-//   }
-// });
+
 
 const updateChannel = (channel: ChannelInfo) => {
   channelsStore.selectChannelInfo(channel);

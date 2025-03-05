@@ -6,7 +6,8 @@ import { useChannelsStore } from '@/store/ChannelStore';
 import { storeToRefs } from 'pinia';
 import type { NodeObject } from "three-forcegraph";
 import elementResizeDetectorMaker from "https://esm.sh/element-resize-detector";
-
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
 const channelsStore = useChannelsStore();
 const { selectedChannelInfo, selectedLanguage } = storeToRefs(channelsStore);
 const defaultLinkColors = new Map();
@@ -217,13 +218,9 @@ document.addEventListener("fullscreenchange", () => {
 // Listener per aggiornare il full screen state
 document.addEventListener("fullscreenchange", () => {
   isFullScreen.value = !!document.fullscreenElement;
-  // setTimeout(resizeGraph, 200);
 });
 
-// Gestione eventi di resize della finestra
-// window.addEventListener("resize", () => {
-//   resizeGraph();
-// });
+
 onMounted(async () => {
   await initData();
   initializeGraph();
@@ -242,68 +239,6 @@ onUnmounted(() => {
   }
 });
 
-
-// const resizeGraph = async () => {
-//   await nextTick();
-
-//   if (graphContainer.value && graphInstance) {
-//     const width = graphContainer.value.offsetWidth;
-//     const height = graphContainer.value.offsetHeight;
-
-//   //   const width = window.innerWidth;
-//   // const height = window.innerHeight;
-// //   const width = graphContainer.value.offsetWidth;
-// // const height = graphContainer.value.offsetHeight;
-// console.log("clientWidth:", graphContainer.value.clientWidth, graphContainer.value.clientHeight); // 🔍 Debug
-// console.log("Window size:", window.innerWidth, window.innerHeight); // 🔍 Debug
-// console.log("offsetWidth size:", graphContainer.value.offsetWidth, graphContainer.value.offsetHeight); // 🔍 Debug
-//     if (width === 0 || height === 0) {
-//       console.warn("Il container ha larghezza/altezza 0! ResizeGraph potrebbe non funzionare.");
-//       return;
-//     }
-//     const renderer = graphInstance.renderer();
-//     renderer.setSize(width, height);
-//     renderer.domElement.style.width = `${width}px`;
-//     renderer.domElement.style.height = `${height}px`;
-
-//     console.log("Container size:", graphContainer.value.clientWidth, graphContainer.value.clientHeight);
-
-//     const camera = graphInstance.camera();
-//     camera.aspect = width / height; // Mantieni il corretto aspect ratio
-//     camera.updateMatrixWorld(); // Aggiorna la matrice del mondo
-//     camera.updateProjectionMatrix(); // Aggiorna la matrice di proiezione
-
-//     graphInstance.refresh(); // Forza l'aggiornamento
-
-//   //   const width = window.innerWidth;
-//   // const height = window.innerHeight;
-
-//   // graphInstance.width(width).height(height);
-
-//   // // Prendi la camera dalla scena di 3d-force-graph
-//   // const camera = graphInstance.camera();
-//   // camera.aspect = width / height;
-//   // camera.updateProjectionMatrix(); // ⚡ Questo forza l'aggiornamento
-
-//   // graphInstance.renderer().setSize(width, height);
-//   // graphInstance.refresh();
-//   }
-// };
-// Osserva cambiamenti nel DOM per gestire il ridimensionamento corretto di `.scene-container`
-// const observeSceneContainer = () => {
-//   if (!graphContainer.value) return;
-
-//   const observer = new MutationObserver(() => {
-//     const sceneContainer = graphContainer.value?.querySelector('.scene-container') as HTMLElement;
-//     if (sceneContainer) {
-//       sceneContainer.style.width = graphContainer?.value?.clientWidth + "px";
-//       sceneContainer.style.height = graphContainer?.value?.clientHeight + "px";
-//       resizeGraph();
-//     }
-//   });
-
-//   observer.observe(graphContainer.value, { childList: true, subtree: true });
-// };
 
 function zoomToNode(node: NodeObject) {
   if (!node) return;
@@ -357,21 +292,21 @@ function zoomToNode(node: NodeObject) {
 <template>
   <div class="graph-wrapper">
     <button class="fullscreen-btn" @click="toggleFullScreen">
-      {{ isFullScreen ? "Exit Fullscreen" : "Go Fullscreen" }}
+      {{  t('graphInteraction.fs.go') }}
     </button>
     <select v-model="colorBy" class="color-selector">
-      <option value="disabled">Disabilita colore</option>
-      <option value="iri">Colora per IRI</option>
-      <option value="hs">Colora per HS</option>
-      <option value="out_degree">Colora per out</option>
-      <option value="in_degree">Colora per in</option>
+      <option value="disabled">{{ t('graphInteraction.color.disable') }}</option>
+      <option value="iri">{{ t('graphInteraction.color.iri') }}</option>
+      <option value="hs">{{ t('graphInteraction.color.hs') }}</option>
+      <option value="out_degree">{{ t('graphInteraction.color.out') }}</option>
+      <option value="in_degree">{{ t('graphInteraction.color.in') }}</option>
     </select>
     <select v-model="sizeBy" class="size-selector">
-      <option value="disabled">Disabilita dimensione</option>
-      <option value="iri">Dimensione per IRI</option>
-      <option value="hs">Dimensione per HS</option>
-      <option value="out_degree">Dimensione per out</option>
-      <option value="in_degree">Dimensione per in</option>
+      <option value="disabled">{{ t('graphInteraction.size.disable') }}</option>
+      <option value="iri">{{ t('graphInteraction.size.iri') }}</option>
+      <option value="hs">{{ t('graphInteraction.size.hs') }}</option>
+      <option value="out_degree">{{ t('graphInteraction.size.out') }}</option>
+      <option value="in_degree">{{ t('graphInteraction.size.in') }}</option>
     </select>
     <div ref="graphContainer" class="graph-container"></div>
     <div
@@ -379,9 +314,9 @@ function zoomToNode(node: NodeObject) {
       class="tooltip"
       :style="{ left: tooltip.x + 'px', top: tooltip.y + 'px' }"
     >
-      <strong>ID:</strong> {{ tooltip.node?.id }} <br />
-      <strong>IRI:</strong> {{ tooltip.node?.iri }} <br />
-      <strong>HS:</strong> {{ parseFloat(tooltip.node?.hs)?.toFixed(3) }} <br />
+      <strong>{{ t('graphInteraction.tooltip.id') }}</strong> {{ tooltip.node?.id }} <br />
+      <strong>{{ t('graphInteraction.tooltip.iri') }}</strong> {{ tooltip.node?.iri }} <br />
+      <strong>{{ t('graphInteraction.tooltip.hs') }}</strong> {{ parseFloat(tooltip.node?.hs)?.toFixed(3) }} <br />
     </div>
   </div>
 </template>

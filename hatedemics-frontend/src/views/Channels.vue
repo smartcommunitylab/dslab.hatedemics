@@ -26,10 +26,10 @@ const itemsPerPageOptions =  [
       { title: '150', value: 150 },
     ];
 const languages = [
-  { language: "Italiano", value: "IT" },
-  { language: "English", value: "EN" },
-  { language: "Español", value: "ES" },
-  { language: "Polacco", value: "PL" },
+  { language: t("language.it"), value: "IT" },
+  { language: t("language.en"), value: "EN" },
+  { language: t("language.es"), value: "ES" },
+  { language: t("language.pl"), value: "PL" },
 ];
 
 const sortBy = ref([{ key: "IRI", order: "desc" }]);
@@ -64,7 +64,6 @@ const fetchChannels = async () => {
     console.log("Pagination opetions: ", pagination);
   } else {
     console.error("Errore API ->", status);
-    alert("Oops, something went wrong!");
   }
 } finally {
   loading.value = false; // Disattiva il loading

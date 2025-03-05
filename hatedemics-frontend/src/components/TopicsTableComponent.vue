@@ -18,10 +18,10 @@ const { topics, selectedTopic } = storeToRefs(topicsStore)
 const router = useRouter();
 const search = ref("");
 const headers = reactive<any[]>([
-  { title: "Title", key: "name" },
-  { title: "% in the channel", key: "count_percentage" },
-  {title:"% cw",key:"cw_percentage"},
-  {title:"% hs",key:"hs_percentage"},
+  { title: t('topicsTable.header.title'), key: "name" },
+  { title: t('topicsTable.header.count'), key: "count_percentage" },
+  {title:t('topicsTable.header.cw'),key:"cw_percentage"},
+  {title:t('topicsTable.header.hs'),key:"hs_percentage"},
 ]);
 const handleClick = ( item:Topic) =>{
   // console.log("Clicked item: ", row) 

@@ -1,7 +1,7 @@
 {
-    "login":{
-"success":"Login successful",
-"button":"Login"
+    "login": {
+        "success": "Login successful",
+        "button": "Login"
     },
     "welcome": {
         "title": "Welcome to Hatedemics"
@@ -22,8 +22,45 @@
             "IRI": "Infodemic Risk"
         }
     },
+    "language": {
+        "en": "English",
+        "it": "Italian",
+        "es": "Spanish",
+        "pl": "Polish"
+    },
+    "graphInteraction": {
+        "color": {
+            "disable": "Disable color",
+            "iri": "Infodemic Risk",
+            "hs": "Hate Speech",
+            "in": "In degree",
+            "out": "Out degree"
+        },
+        "size": {
+            "disable": "Disable label",
+            "iri": "Infodemic Risk",
+            "hs": "Hate Speech",
+            "in": "In degree",
+            "out": "Out degree"
+        },
+        "tooltip": {
+            "id": "Channel ID:",
+            "iri": "Infodemic Risk:",
+            "hs": "Hate Speech:"
+        },
+        "fs": {
+            "exit": "Exit",
+            "go": "Fullscreen"
+        }
+    },
     "topicsTable": {
-        "title": "Title"
+        "title": "Title",
+        "header":{
+            "title":"Title",
+            "count":"% of messages",
+            "hs":"% of Hate Speech",
+            "cw":"% of Check Worthy"
+        }
     },
     "channelInfo": {
         "about": "About:",
@@ -43,8 +80,9 @@
         "channels": "Channels",
         "chats": "Chats",
         "hs_percentage": "Hate Speech:",
-        "cw_percentage": "Check Worthy:"    },
-    "message":{
+        "cw_percentage": "Check Worthy:"
+    },
+    "message": {
         "title": "Message",
         "header": {
             "id": "ID",
@@ -59,7 +97,7 @@
             "target": "Target",
             "keywordsMatch": "Keywords Match"
         },
-        "dialog":{
+        "dialog": {
             "start": "Start a new conversation",
             "jump": "Go to conversation"
         }
