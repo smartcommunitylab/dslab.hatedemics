@@ -17,7 +17,13 @@ const { selectedChannelInfo } = storeToRefs(channelsStore);
 const { generic } = storeToRefs(topicsStore);
 
 const isExtended: ComputedRef<boolean> = computed(() => !!selectedChannelInfo?.value?.iri);
-  const dataEntries = computed(() => Object.entries(generic?.value.wordclouds));
+  const dataEntries = computed(() => {
+    if (generic?.value?.wordclouds === undefined) {
+      return [];
+    }
+    return
+    Object.entries(generic?.value?.wordclouds)
+  });
 
 onMounted(async () => {
   await topicsStore.dispatchGetTopics(selectedChannelInfo?.value?.id!);
