@@ -35,7 +35,6 @@ public class ProxyController {
     private String password;
 
     private static String token;
-    private static Long expiration;
 
     @RequestMapping("/gen/**")
     public ResponseEntity<?> generationProxy(HttpServletRequest request) throws IOException {
@@ -84,7 +83,7 @@ public class ProxyController {
     }
 
     private String createToken() {
-        if (token == null || System.currentTimeMillis() > expiration) {
+        if (token == null) {
             login(username, password);
         }
         return "Bearer " + token;
@@ -99,7 +98,5 @@ public class ProxyController {
         @SuppressWarnings({ "unchecked" })
         Map<String,?> response = restTemplate.postForEntity(url, requestBody, Map.class).getBody();
         token = response.get("access_token").toString();
-
-        expiration = System.currentTimeMillis() + Long.parseLong(response.get("exp").toString()) * 1000;
     }
 }
