@@ -63,7 +63,10 @@ public class ProxyController {
             headers.add(headerName, request.getHeader(headerName));
         }
         if (customHeaders != null) {
-            customHeaders.forEach(headers::add);
+            customHeaders.forEach((k,v) -> {
+                headers.remove(k);
+                headers.add(k, v);
+            });
         }
         headers.remove("content-length");
         headers.remove("host");
