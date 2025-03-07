@@ -19,9 +19,9 @@ public class TelegramChannelController {
     @GetMapping
     public Page<TelegramChannel> getAllChannels(
         @RequestParam String language, 
-        @RequestParam String name,
+        @RequestParam(required = false) String id,
         Pageable pageable) {
-        return telegramChannelService.findAll(language, name, pageable);
+        return telegramChannelService.findAll(language, id, pageable);
     }
 
     @GetMapping("/{id}")

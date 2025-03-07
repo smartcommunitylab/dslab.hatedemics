@@ -19,7 +19,9 @@ public class TelegramChannel {
     @Column(name = "last_queried_at")
     @JsonProperty("last_queried_at")
     private Date lastQueriedAt;
-    private String about;
+    @Column(name = "preprocessed_about")
+    @JsonProperty("preprocessed_about")
+    private String preprocessedAbout;
     private Integer pts;
     private Boolean broadcast;
     @Column(name = "participants_count")
@@ -69,11 +71,11 @@ public class TelegramChannel {
     public void setLastQueriedAt(Date lastQueriedAt) {
         this.lastQueriedAt = lastQueriedAt;
     }
-    public String getAbout() {
-        return about;
+    public String getPreprocessed_about() {
+        return preprocessedAbout;
     }
-    public void setAbout(String about) {
-        this.about = about;
+    public void setPreprocessedAbout(String preprocessedAbout) {
+        this.preprocessedAbout = preprocessedAbout;
     }
     public Integer getPts() {
         return pts;

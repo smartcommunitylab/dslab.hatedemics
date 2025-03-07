@@ -17,9 +17,9 @@ public class TelegramChannelService {
     @Autowired
     private TelegramChannelRepository telegramChannelRepository;
 
-    public Page<TelegramChannel> findAll(String language, String name, Pageable pageable) {
-        if(StringUtils.isNotBlank(name)) {
-            return telegramChannelRepository.findByLanguageAndNameContainingIgnoreCase(language, name, pageable);
+    public Page<TelegramChannel> findAll(String language, String id, Pageable pageable) {
+        if(StringUtils.isNotBlank(id)) {
+            return telegramChannelRepository.findByLanguageAndIdContainingIgnoreCase(language, id, pageable);
         } else {
             return telegramChannelRepository.findByLanguage(language, pageable);
         }
