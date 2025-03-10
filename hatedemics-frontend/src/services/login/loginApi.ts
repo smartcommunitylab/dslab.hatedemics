@@ -7,18 +7,18 @@ import axiosHatedemicsInstance from '../hatedemicsApi';
  async function logout() {
     const loginStore = useLoginStore()
     loginStore.removeAll()
-    router.push({ name: 'login' })
+    router.push({ name: 'Login' })
   }
   async function login(username:string, password:string) {
     return axiosInstance.post(
-      import.meta.env.VITE_APP_HATEDEMICS_API_URL+'/token',
+      import.meta.env.VITE_APP_URL_TOKEN,
       {
         username: username,
         password: password
       },
       {
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
+          'Content-Type': 'application/json'
         }
       }
     )

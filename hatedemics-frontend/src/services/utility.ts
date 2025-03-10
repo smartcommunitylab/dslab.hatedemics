@@ -64,6 +64,10 @@ export function processingChannelInfo(data: ChannelInfo[]) {
     export function isEmptyOrSpaces(str: string | null): boolean {
       return str === null || str.match(/^ *$/) !== null;
   }
+  export const cleanString = (str:string):string =>{
+    if (!str) return ''; // Evita errori con stringhe undefined/null
+    return str.replace(/[{}'"]/g, ''); // Rimuove parentesi graffe, virgolette singole e doppie
+  }
     // Funzione per ottenere il locale corrente da vue-i18n o Vuetify
     const getCurrentLocale = (): string => {
       try {

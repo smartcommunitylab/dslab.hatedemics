@@ -139,9 +139,11 @@ const initializeGraph = () => {
   // .linkDirectionalArrowRelPos(1)  // Posiziona le frecce alla fine
   .nodeLabel(node => {
       const nodeData = node as Node;
-      return `<strong>ID:</strong> ${nodeData.id} <br />
-              <strong>IRI:</strong> ${nodeData.iri} <br />
-              <strong>HS:</strong> ${nodeData.hs?.toFixed(3)}`;
+      return `
+       <strong>${t('graphInteraction.tooltip.id') }</strong> ${nodeData?.id } <br />
+      <strong>${ t('graphInteraction.tooltip.iri') }</strong> ${nodeData?.iri } <br />
+      <strong>${ t('graphInteraction.tooltip.cw') }</strong> ${ nodeData?.cw.toFixed(3) } <br />
+      <strong>${ t('graphInteraction.tooltip.hs') }</strong> ${ nodeData?.hs?.toFixed(3) } <br />`;
     })
     // .nodeAutoColorBy(colorBy.value)
     .nodeColor((node: any) => getNodeColor(node, colorBy.value))
@@ -230,9 +232,10 @@ onMounted(async () => {
   });
 });
 
-onUnmounted(() => {
+  onUnmounted(() => {
   if (graphInstance) {
-    graphInstance = null; // Cancella l'istanza del grafo
+    graphInstance.graphData({ nodes: [], links: [] }); // Pulisce i dati
+    graphInstance = null; // Rimuove l'istanza del grafo
   }
   if (graphContainer.value) {
     graphContainer.value.innerHTML = ''; // Pulisce il contenitore
@@ -309,15 +312,16 @@ function zoomToNode(node: NodeObject) {
       <option value="in_degree">{{ t('graphInteraction.size.in') }}</option>
     </select>
     <div ref="graphContainer" class="graph-container"></div>
-    <div
+    <!-- <div
       v-if="tooltip.show"
       class="tooltip"
       :style="{ left: tooltip.x + 'px', top: tooltip.y + 'px' }"
     >
       <strong>{{ t('graphInteraction.tooltip.id') }}</strong> {{ tooltip.node?.id }} <br />
       <strong>{{ t('graphInteraction.tooltip.iri') }}</strong> {{ tooltip.node?.iri }} <br />
+      <strong>{{ t('graphInteraction.tooltip.cw') }}</strong> {{ tooltip.node?.cw }} <br />
       <strong>{{ t('graphInteraction.tooltip.hs') }}</strong> {{ parseFloat(tooltip.node?.hs)?.toFixed(3) }} <br />
-    </div>
+    </div> -->
   </div>
 </template>
 

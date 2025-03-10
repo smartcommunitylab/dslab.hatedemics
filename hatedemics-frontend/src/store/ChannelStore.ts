@@ -11,7 +11,7 @@ import { processingChannelInfo, processingSingleChannelInfo } from "@/services/u
 export const useChannelsStore = defineStore("channelsStore", () => {
   const selectedChannelInfo = ref<ChannelInfo>();
   const channelsInfo = ref<ChannelInfo[]>([]);
-  const selectedLanguage = ref<string>('IT');
+  const selectedLanguage = ref<string>('EN');
   const chatStore = useChatsStore();
   const topicStore = useTopicsStore();
   const sort = ref<any>({ key: "iri", order: "desc" });
@@ -103,4 +103,5 @@ export const useChannelsStore = defineStore("channelsStore", () => {
     dispatchGetChannels,
     dispatchGetChannel
   };
-});
+}, {
+  persist: true});

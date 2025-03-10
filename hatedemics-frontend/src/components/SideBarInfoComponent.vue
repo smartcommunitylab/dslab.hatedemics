@@ -16,7 +16,11 @@ const { selectedChannelInfo } = storeToRefs(channelsStore);
 const { generic } = storeToRefs(topicsStore);
 
 const isExtended: ComputedRef<boolean> = computed(() => !!selectedChannelInfo?.value?.iri);
-  const dataEntries = computed(() => Object.entries(generic?.value.wordclouds));
+  const dataEntries = computed(() => {
+    if (!generic?.value?.wordclouds) return [];
+    return Object.entries(generic?.value.wordclouds);
+  });
+  
 
 onMounted(async () => {
   await topicsStore.dispatchGetTopics(selectedChannelInfo?.value?.id!);
@@ -28,9 +32,9 @@ onMounted(async () => {
     <v-card v-if="selectedChannelInfo" class="mx-auto pa-4">
       <v-card-text class="bg-surface-light pt-4">
         <v-list dense>
-          <v-list-item v-if="selectedChannelInfo?.about">
+          <v-list-item v-if="selectedChannelInfo?.preprocessed_about">
             <span class="font-weight-bold">{{ t("channelInfo.about") }}</span>
-            {{ selectedChannelInfo.about }}
+            {{ selectedChannelInfo.preprocessed_about }}
           </v-list-item>
           <v-list-item v-if="selectedChannelInfo?.id">
             <span class="font-weight-bold">{{ t("channelInfo.channelId") }}</span>

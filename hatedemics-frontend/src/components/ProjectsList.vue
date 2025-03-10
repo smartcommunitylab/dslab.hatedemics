@@ -49,7 +49,6 @@ export default {
 <template>
   <div>
     <DialogGeneric
-      v-if="loginStore.is_admin"
       v-model="showDialogCreateProject"
       component-file="./dialog-create-project.vue"
       @refresh="updateProjects"
@@ -73,7 +72,6 @@ export default {
             color="primary"
             variant="elevated"
             @click="showDialogCreateProject = true"
-            v-if="loginStore.is_admin"
             >Add Project
           </v-btn>
         </v-col>

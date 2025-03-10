@@ -2,15 +2,15 @@ package it.smartcommunitylab.hatedemics.api.domain;
 
 import java.util.Date;
 
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "messages")
+@Table(name = "messages",indexes = {
+    @Index(name = "idx_channel_id", columnList = "channel_id")
+})
 public class TelegramMessage {
 
     @Id
@@ -46,7 +46,13 @@ public class TelegramMessage {
     @Column(name = "via_bot_id")
     private String viaBotId;
 
-    private String message;
+    @JsonProperty("preprocessed_about")
+    @Column(name = "preprocessed_about")
+    private String preprocessedAbout;
+
+    @JsonProperty("from_user")
+    @Column(name = "from_user")
+    private String fromUser;
 
     @JsonProperty("preprocessed_message")
     @Column(name = "preprocessed_message")
@@ -58,13 +64,6 @@ public class TelegramMessage {
     @Column(name = "replies_to_msg_text")
     private String repliesToMsgText;
 
-    @JsonProperty("text_mentions")
-    @Column(name = "text_mentions")
-    private String textMentions;
-
-    @JsonProperty("text_urls")
-    @Column(name = "text_urls")
-    private String textUrls;
 
     @JsonProperty("nr_forwards")
     @Column(name = "nr_forwards")
@@ -103,6 +102,10 @@ public class TelegramMessage {
     @JsonProperty("keywords_match")
     @Column(name = "keywords_match")
     private String keywordsMatch;
+
+    @JsonProperty("preprocessed_message_media")
+    @Column(name = "preprocessed_message_media")
+    private String preprocessedMessageMedia;
 
     @JsonProperty("media_type")
     @Column(name = "media_type")
@@ -182,13 +185,6 @@ public class TelegramMessage {
         this.viaBotId = viaBotId;
     }
 
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
 
     public String getPreprocessedMessage() {
         return preprocessedMessage;
@@ -214,21 +210,7 @@ public class TelegramMessage {
         this.repliesToMsgText = repliesToMsgText;
     }
 
-    public String getTextMentions() {
-        return textMentions;
-    }
-
-    public void setTextMentions(String textMentions) {
-        this.textMentions = textMentions;
-    }
-
-    public String getTextUrls() {
-        return textUrls;
-    }
-
-    public void setTextUrls(String textUrls) {
-        this.textUrls = textUrls;
-    }
+    
 
     public Integer getNrForwards() {
         return nrForwards;
@@ -301,6 +283,14 @@ public class TelegramMessage {
     public void setMediaType(String mediaType) {
         this.mediaType = mediaType;
     }
+    public String getPreprocessedMessageMedia() {
+        return preprocessedMessageMedia;
+    }
+
+    public void setPreprocessedMessageMedia(String preprocessedMessageMedia) {
+        this.preprocessedMessageMedia = preprocessedMessageMedia;
+    }
+
 
     public String getLanguage() {
         return language;

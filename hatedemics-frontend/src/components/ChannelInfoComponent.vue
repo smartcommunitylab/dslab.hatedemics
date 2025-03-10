@@ -21,8 +21,7 @@ const isExtended: ComputedRef<boolean> = computed(() => !!selectedChannelInfo?.v
     if (generic?.value?.wordclouds === undefined) {
       return [];
     }
-    return
-    Object.entries(generic?.value?.wordclouds)
+    return Object.entries(generic?.value?.wordclouds);
   });
 
 onMounted(async () => {
@@ -49,9 +48,9 @@ watch(selectedChannelInfo, async (newVal) => {
 
       <v-card-text class="bg-surface-light pt-4">
         <v-list dense>
-          <v-list-item v-if="selectedChannelInfo?.about">
+          <v-list-item v-if="selectedChannelInfo?.preprocessed_about">
             <span class="font-weight-bold">{{ t("channelInfo.about") }}</span> 
-            {{ selectedChannelInfo.about }}
+            {{ selectedChannelInfo.preprocessed_about }}
           </v-list-item>
           <v-list-item v-if="selectedChannelInfo?.id">
             <span class="font-weight-bold">{{ t("channelInfo.channelId") }} </span>{{ selectedChannelInfo.id }}

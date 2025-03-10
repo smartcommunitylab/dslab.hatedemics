@@ -18,7 +18,7 @@
             "date": "Date",
             "id": "ID",
             "messages": "Messages",
-            "partecipants": "Utenti",
+            "partecipants": "Users",
             "IRI": "Infodemic Risk"
         }
     },
@@ -31,22 +31,23 @@
     "graphInteraction": {
         "color": {
             "disable": "Disable color",
-            "iri": "Infodemic Risk",
-            "hs": "Hate Speech",
-            "in": "In degree",
-            "out": "Out degree"
+            "iri": "Color: Infodemic Risk",
+            "hs": "Color: Hate Speech",
+            "in": "Color: In degree",
+            "out": "Color: Out degree"
         },
         "size": {
-            "disable": "Disable label",
-            "iri": "Infodemic Risk",
-            "hs": "Hate Speech",
-            "in": "In degree",
-            "out": "Out degree"
+            "disable": "Disable size",
+            "iri": "Size: Infodemic Risk",
+            "hs": "Size: Hate Speech",
+            "in": "Size: In degree",
+            "out": "Size: Out degree"
         },
         "tooltip": {
             "id": "Channel ID:",
             "iri": "Infodemic Risk:",
-            "hs": "Hate Speech:"
+            "hs": "Hate Speech:",
+            "cw": "Check Worthy:"
         },
         "fs": {
             "exit": "Exit",
@@ -74,7 +75,7 @@
         "hateSpeech": "Hate Speech Risk:",
         "lastUpdate": "Last update:",
         "mainTopics": "Main topics:",
-        "messages": "Messages",
+        "messages": "Go to conversation",
         "emptySelection": "No selection yet. Please select a channel",
         "topics": "Topics",
         "channels": "Channels",
@@ -91,6 +92,7 @@
             "from": "From",
             "mediaType": "Type",
             "reactions": "Reactions",
+            "nrViews": "Views",
             "hateLabel": "Hate Speech",
             "checkLabel": "Check Worthy",
             "topic": "Topic",
@@ -100,6 +102,18 @@
         "dialog": {
             "start": "Start a new conversation",
             "jump": "Go to conversation"
+        }
+    },
+    "wordclouds": {
+        "hate": "Hate vs Non Hate",
+        "checkworthy": "Check Worthy vs Non Check Worthy",
+        "generic": "Generic",
+        "titles": {
+            "hate": "Hate Speech",
+            "is_checkworthy": "Check Worthy",
+            "wordcloud": "Generic",
+            "isnot_checkworthy": "Non Check Worthy",
+            "non_hate": "Non Hate"
         }
     }
 }

@@ -75,4 +75,5 @@ export const useTopicsStore = defineStore("topicsStore", () => {
     getChannelData,
     dispatchGetTopics,
   };
-});
+}, {
+  persist: true});

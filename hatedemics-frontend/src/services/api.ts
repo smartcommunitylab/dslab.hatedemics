@@ -40,6 +40,10 @@ axiosInstance.interceptors.response.use(
       loginApi.logout()
       return Promise.reject(401)
     }
+    if (error.response.status === 403) {
+      console.warn("Accesso negato! Redirect alla pagina di login...");
+      loginApi.logout()
+    }
     return Promise.reject(error)
   }
 )

@@ -47,7 +47,8 @@
         "tooltip": {
             "id": "ID Canale:",
             "iri": "Infodemic Risk:",
-            "hs": "Hate Speech:"
+            "hs": "Hate Speech:",
+            "cw": "Check Worthy:"
         },
         "fs": {
             "exit": "Finestra",
@@ -75,7 +76,7 @@
         "hateSpeech": "Hate Speech Risk:",
         "lastUpdate": "Ultimo aggiornamento:",
         "mainTopics": "Principali argomenti:",
-        "messages": "Messaggi",
+        "messages": "Vai alla chat",
         "channels": "Canali",
         "chats": "Chat",
         "emptySelection": "Nessuna selezione. Scegliere un canale per visualizzare le statistiche",
@@ -93,6 +94,7 @@
             "from": "Da",
             "mediaType": "Tipo",
             "reactions": "Reazioni",
+            "nrViews"   : "Visualizzazioni",
             "hateLabel": "Hate Speech",
             "checkLabel": "Check Worthy",
             "topic": "Argomento",
@@ -103,5 +105,18 @@
             "start": "Inizia una nuova conversazione",
             "jump": "Vai alla conversazione"
         }
+    },
+    "wordclouds": {
+        "hate": "Hate vs Non Hate",
+        "checkworthy": "Check Worthy vs Non Check Worthy",
+        "generic": "Generico",
+        "titles": {
+            "hate": "Hate Speech",
+            "is_checkworthy": "Check Worthy",
+            "wordcloud": "Generico",
+            "isnot_checkworthy": "Non Check Worthy",
+            "non_hate": "Non Hate"
+        }
+
     }
 }

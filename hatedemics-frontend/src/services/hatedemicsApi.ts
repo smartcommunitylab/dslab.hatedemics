@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useLoginStore } from '@/store/LoginStore';
+import loginApi from './login/loginApi';
 
 const axiosHatedemicsInstance = axios.create({
   baseURL: import.meta.env.VITE_APP_HATEDEMICS_API_URL,
@@ -31,6 +32,12 @@ axiosHatedemicsInstance.interceptors.response.use(
       loginStore.removeBearer();
       return Promise.reject(401);
     }
+    if (error.response.status === 403) {
+          console.warn("Accesso negato! Redirect alla pagina di login...");
+          loginStore.removeBearer();
+
+          loginApi.logout()
+        }
     return Promise.reject(error);
   }
 );

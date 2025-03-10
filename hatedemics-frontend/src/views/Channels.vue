@@ -16,18 +16,19 @@ const { channelsInfo, selectedChannelInfo, selectedLanguage } = storeToRefs(
 const msg = ref("");
 const search = ref("");
 const page = ref(1); // Vuetify inizia da 1
-const itemsPerPage = ref(10);
+const itemsPerPage = ref(200);
 const totalItems = ref(0); // Da aggiornare con la risposta API
 const loading = ref(false);
 const itemsPerPageOptions =  [
               { title: '10', value: 10 },
               { title: '50', value: 50 },
               { title: '100', value: 100 },
-      { title: '150', value: 150 },
-    ];
+              { title: '150', value: 150 },
+              { title: '200', value: 200 },
+              ];
 const languages = [
-  { language: t("language.it"), value: "IT" },
   { language: t("language.en"), value: "EN" },
+  { language: t("language.it"), value: "IT" },
   { language: t("language.es"), value: "ES" },
   { language: t("language.pl"), value: "PL" },
 ];
@@ -46,7 +47,7 @@ const headers = reactive([
 ]);
 const pagination = reactive({
   page: 0,
-  size: 10,
+  size: 200,
   sort: "IRI,desc",
 });
 const fetchChannels = async () => {
@@ -60,8 +61,6 @@ const fetchChannels = async () => {
 
   if (success && total) {
     totalItems.value = total; // Aggiorna il numero totale degli elementi
-    console.log("Total items: ", totalItems.value);
-    console.log("Pagination opetions: ", pagination);
   } else {
     console.error("Errore API ->", status);
   }

@@ -60,4 +60,5 @@ export const useMessagesStore = defineStore("messagesStore", () => {
     initMessages,
     dispatchGetMessages,
   };
-});
+}, {
+  persist: true});

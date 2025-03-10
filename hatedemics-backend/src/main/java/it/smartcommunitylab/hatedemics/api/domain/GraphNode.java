@@ -13,6 +13,7 @@ public class GraphNode {
     private String iri;
     private Integer channel_int;
     private Double hs;
+    private Double cw;
     private Integer out_degree;
     private Integer in_degree;
     private String language;
@@ -40,6 +41,12 @@ public class GraphNode {
     }
     public void setHs(Double hs) {
         this.hs = hs;
+    }
+    public Double getCw() {
+        return cw;
+    }
+    public void setCw(Double cw) {
+        this.cw = cw;
     }
     public Integer getOut_degree() {
         return out_degree;

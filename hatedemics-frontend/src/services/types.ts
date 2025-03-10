@@ -11,7 +11,7 @@ export type ChannelInfo = {
   id: string
   date: string
   last_queried_at: string
-  about: string
+  preprocessed_about: string
   pts: number
   broadcast: boolean
   participants_count: number
@@ -91,6 +91,7 @@ export type ParticipationScore = {
 export type Message = {
   date: string
   from_id: any
+  from_user: any
   fwd_from_date: any
   fwd_from_id: any
   fwd_from_msg_id: any
@@ -102,11 +103,12 @@ export type Message = {
   nr_replies: string
   nr_views: string
   preprocessed_message: string
+  preprocessed_message_media: string
   reactions: Reactions
   replies_to_msg_id: any
   replies_to_msg_text: any
-  text_mentions: any[]
-  text_urls: string[]
+  text_mentions?: any[]
+  text_urls?: string[]
   via_bot_id: any,
   hate_label?: string,
   checkworthy_label?: string,

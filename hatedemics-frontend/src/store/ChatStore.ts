@@ -57,4 +57,5 @@ export const useChatsStore = defineStore("chatsStore", () => {
     unselectChat,
     dispatchGetChats,
   };
-});
+}, {
+  persist: true});

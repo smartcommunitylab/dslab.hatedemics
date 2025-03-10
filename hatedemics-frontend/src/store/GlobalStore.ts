@@ -50,4 +50,5 @@ export default defineStore('global', () => {
   }
 
   return { loading, progress, message, setLoading, setProgress, setMessage };
-});
+}, {
+  persist: true});

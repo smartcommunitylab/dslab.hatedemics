@@ -8,7 +8,8 @@ import axiosInstance from './api';
 export type Node = {
     id: string;
     name: string;
-    extended: boolean
+    extended: boolean;
+    cw: number;
     // color: string,
     // size: number,
     hs:number,
@@ -49,6 +50,7 @@ async function initData() {
         nodes.push({ id: `${nodesData.data[node].channel_int}`,
              name: `${nodesData.data[node].channel_id}`, 
              extended: nodesData.data[node].iri != -1 ,
+                cw: nodesData.data[node].cw,
             //  color:'#4B5BBF',
             hs:nodesData.data[node].hs,
              iri: parseFloat(nodesData.data[node].iri),
