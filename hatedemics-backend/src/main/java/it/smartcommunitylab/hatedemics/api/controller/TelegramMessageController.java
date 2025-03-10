@@ -15,8 +15,14 @@ public class TelegramMessageController {
     private TelegramMessageService telegramMessageService;
 
     @GetMapping("/chat/{chatId}")
-    public Page<TelegramMessage> getAllMessages(@PathVariable String chatId, Pageable pageable) {
-        return telegramMessageService.findByChatId(chatId, pageable);
+    public Page<TelegramMessage> getAllMessages(
+        @PathVariable String chatId,
+        @RequestParam(required = false) String target,
+        @RequestParam(required = false) String checkworthy,
+        @RequestParam(required = false) String hate,
+        @RequestParam(required = false) String topic, 
+        Pageable pageable) {
+        return telegramMessageService.findByChatId(chatId, target, checkworthy, hate, topic, pageable);
     }
 
 }
