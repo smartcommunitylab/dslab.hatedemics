@@ -18,8 +18,8 @@ public class TelegramMessageController {
     public Page<TelegramMessage> getAllMessages(
         @PathVariable String chatId,
         @RequestParam(required = false) String target,
-        @RequestParam(required = false) String checkworthy,
-        @RequestParam(required = false) String hate,
+        @RequestParam(required = false) Double checkworthy,
+        @RequestParam(required = false) Double hate,
         @RequestParam(required = false) String topic, 
         Pageable pageable) {
         return telegramMessageService.findByChatId(chatId, target, checkworthy, hate, topic, pageable);

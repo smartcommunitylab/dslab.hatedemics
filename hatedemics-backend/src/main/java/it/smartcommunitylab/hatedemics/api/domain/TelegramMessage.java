@@ -300,5 +300,13 @@ public class TelegramMessage {
         this.language = language;
     }
 
+    public String getTarget() {
+        return target;
+    }
+
+    public void setTarget(String target) {
+        this.target = target;
+    }
+
     
 }
