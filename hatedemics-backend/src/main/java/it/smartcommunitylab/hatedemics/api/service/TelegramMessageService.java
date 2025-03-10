@@ -24,16 +24,19 @@ public class TelegramMessageService {
         msg.setChannelId(chatId);
         ExampleMatcher matcher = ExampleMatcher.matching()
         .withMatcher("channelId", match -> match.exact());
-        if(StringUtils.isNotBlank(target)) {
+        if (StringUtils.isNotBlank(target)) {
             msg.setTarget(target);
             matcher = matcher.withMatcher("target", match -> match.contains().ignoreCase());
-        } else if(checkworthy != null) {
+        } 
+        if (checkworthy != null) { // Rimosso "else if"
             msg.setCheckworthyLabel(checkworthy);
             matcher = matcher.withMatcher("checkworthyLabel", match -> match.exact());
-        } else if(hate != null) {
+        } 
+        if (hate != null) { // Rimosso "else if"
             msg.setHateLabel(hate);
             matcher = matcher.withMatcher("hateLabel", match -> match.exact());
-        } else if(StringUtils.isNotBlank(topic)) {
+        } 
+        if (StringUtils.isNotBlank(topic)) { // Rimosso "else if"
             msg.setTopicLabel(topic);
             matcher = matcher.withMatcher("topicLabel", match -> match.contains().ignoreCase());
         }

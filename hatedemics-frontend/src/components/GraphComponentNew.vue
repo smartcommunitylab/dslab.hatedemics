@@ -141,9 +141,11 @@ const initializeGraph = () => {
       const nodeData = node as Node;
       return `
        <strong>${t('graphInteraction.tooltip.id') }</strong> ${nodeData?.id } <br />
-      <strong>${ t('graphInteraction.tooltip.iri') }</strong> ${nodeData?.iri } <br />
-      <strong>${ t('graphInteraction.tooltip.cw') }</strong> ${ nodeData?.cw.toFixed(3) } <br />
-      <strong>${ t('graphInteraction.tooltip.hs') }</strong> ${ nodeData?.hs?.toFixed(3) } <br />`;
+      <strong>${ t('graphInteraction.tooltip.iri') }</strong> ${nodeData?.iri?.toFixed(3)} <br />
+      <strong>${ t('graphInteraction.tooltip.cw') }</strong> ${ nodeData?.cw?.toFixed(3) } <br />
+      <strong>${ t('graphInteraction.tooltip.hs') }</strong> ${ nodeData?.hs?.toFixed(3) } <br />
+      <strong>${ t('graphInteraction.tooltip.in') }</strong> ${ nodeData?.in_degree?.toFixed(3) } <br />
+      <strong>${ t('graphInteraction.tooltip.out') }</strong> ${ nodeData?.out_degree?.toFixed(3) } <br />`;
     })
     // .nodeAutoColorBy(colorBy.value)
     .nodeColor((node: any) => getNodeColor(node, colorBy.value))

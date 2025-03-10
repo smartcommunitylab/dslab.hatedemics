@@ -28,7 +28,8 @@ export const useChannelsStore = defineStore("channelsStore", () => {
       let response  =await dispatchGetChannel(channel);
       if (!response.success) return
     } else {
-      const processedChannel = Array.isArray(channel.linked_chats_ids) ? channel : processingSingleChannelInfo(channel);
+      if (channel) {
+      const processedChannel = Array.isArray(channel?.linked_chats_ids) ? channel : processingSingleChannelInfo(channel);
     selectedChannelInfo.value = processedChannel; 
     chatStore.initChats([
       { id: processedChannel.id },
@@ -40,6 +41,7 @@ export const useChannelsStore = defineStore("channelsStore", () => {
     ]); 
     chatStore.selectChat(processedChannel.id);
     topicStore.dispatchGetTopics(processedChannel.id);
+  }
     console.log("selected")
   }
   };
@@ -69,11 +71,11 @@ export const useChannelsStore = defineStore("channelsStore", () => {
       return { success: false, status: _error.response?.status, content: null };
     }
   }
-  async function dispatchGetChannels({ page = 0, size = 10, sort = "IRI,desc" }): Promise<APIResponse<null>> {
+  async function dispatchGetChannels({ page = 0, size = 10, sort = "IRI,desc" },id?:string): Promise<APIResponse<null>> {
     try {
       const { status, data } = await API.channels.getChannelsInfo(selectedLanguage.value!, {
         page, size, sort
-      });
+      },id);
       if (status === 200) {
         initChannelsInfo(data.content);
         return { success: true, total: data.totalElements, content: data.content };

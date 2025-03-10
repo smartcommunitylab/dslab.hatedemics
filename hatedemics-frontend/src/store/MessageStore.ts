@@ -6,7 +6,7 @@ import { defineStore } from "pinia";
 import { ref } from 'vue';
 
 export const useMessagesStore = defineStore("messagesStore", () => {
-  
+
   const messages = ref<Message[]>([]);
 
   function initMessages(data: Message[]) {
@@ -30,13 +30,18 @@ export const useMessagesStore = defineStore("messagesStore", () => {
   //     return { success: false, status: _error.response?.status, content: null };
   //   }
   // }
-  async function dispatchGetMessages(id:string,{ page = 0, size = 10, sort = "date,desc" }): Promise<APIResponse<null>> {
+  async function dispatchGetMessages(id: string, 
+    { page = 0, size = 10, sort = "date,desc" }, 
+    target?: string, 
+    checkworthy?: number,
+    hate?: number, 
+    topic?: string): Promise<APIResponse<null>> {
     try {
-      
-            const { status, data } = await API.chats.getChats(id!, {
-              page, size, sort
-            });
-            if (status === 200) {
+
+      const { status, data } = await API.chats.getChats(id!, {
+        page, size, sort
+      }, target, checkworthy, hate, topic);
+      if (status === 200) {
         initMessages(data.content);
         return { success: true, total: data.totalElements, content: data.content };
       }
@@ -61,4 +66,5 @@ export const useMessagesStore = defineStore("messagesStore", () => {
     dispatchGetMessages,
   };
 }, {
-  persist: true});
+  persist: true
+});

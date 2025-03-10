@@ -6,7 +6,7 @@ import { useMessagesStore } from "@/store/MessageStore";
 import { storeToRefs } from "pinia";
 import { useChatsStore } from "@/store/ChatStore";
 import { useChannelsStore } from "@/store/ChannelStore";
-import { formatDate, isEmptyOrSpaces,cleanString } from "@/services/utility";
+import { formatDate, isEmptyOrSpaces, cleanString } from "@/services/utility";
 import dialogApi from "@/services/dialog/dialogApi";
 const { t } = useI18n();
 const router = useRouter();
@@ -18,10 +18,15 @@ const itemsPerPage = ref(10);
 const sortBy = ref([{ key: "date", order: "desc" }]); // Default: ordina per data desc
 const chatsStore = useChatsStore();
 const channelStore = useChannelsStore();
-const { selectedChannelInfo,selectedLanguage } = storeToRefs(channelStore);
+const { selectedChannelInfo, selectedLanguage } = storeToRefs(channelStore);
 const { selectedChat } = storeToRefs(chatsStore);
 const totalItems = ref(0);
-
+const filters = reactive({
+  hate: null,
+  checkworthy: null,
+  target: null,
+  topic: null,
+});
 const itemsPerPageOptions = [
   { title: "10", value: 10 },
   { title: "50", value: 50 },
@@ -30,7 +35,11 @@ const itemsPerPageOptions = [
 ];
 const headers = [
   { title: t("message.header.date"), key: "date", sortable: true },
-  { title: t("message.header.message"), key: "preprocessed_message_media", sortable: true },
+  {
+    title: t("message.header.message"),
+    key: "preprocessed_message_media",
+    sortable: true,
+  },
   { title: t("message.header.from"), key: "from_user", sortable: true },
   { title: t("message.header.nrViews"), key: "nr_views", sortable: true },
   { title: t("message.header.hateLabel"), key: "hate_label", sortable: true },
@@ -122,12 +131,16 @@ const fetchMessages = async () => {
         page: pagination.page, // API parte da 0
         size: pagination.size,
         sort: pagination.sort,
-      }
+      },
+      filters.target ?? undefined,
+      filters.checkworthy ?? undefined,
+      filters.hate ?? undefined,
+      filters.topic ?? undefined
     );
     if (success && total) {
       totalItems.value = total; // Aggiorna il numero totale degli elementi
     } else {
-      alert("Oops, something went wrong!");
+      // alert("Oops, something went wrong!");
     }
   } finally {
     loading.value = false; // Disattiva il loading
@@ -141,30 +154,67 @@ const getRowClass = (item: any) => {
 };
 // Osserva le variazioni e ricarica i dati
 watch(
-  [search, page, itemsPerPage, sortBy, selectedChat, selectedChannelInfo],
+  [
+    search,
+    page,
+    itemsPerPage,
+    sortBy,
+    selectedChat,
+    selectedChannelInfo,
+    filters,
+    { deep: true },
+  ],
   fetchMessages
 );
-const getColor = (user:string) => {
+const getColor = (user: string) => {
   if (!user) return "#f5f5f5";
   const colors = ["#e0f7fa", "#ffcdd2", "#d1c4e9", "#c8e6c9"];
   return colors[user.length % colors.length];
 };
-// Carica i dati iniziali
-// onMounted(fetchMessages);
 </script>
 
 <template>
   <v-container fluid>
-    <!-- <v-text-field
-      v-model="search"
-      :label="t('Search')"
-      prepend-inner-icon="mdi-magnify"
-      variant="outlined"
-      hide-details
-      single-line
-      class="mb-4"
-    ></v-text-field> -->
+    <v-row>
+      <v-col cols="12" md="3">
+        <v-text-field
+          v-model="filters.target"
+          :label= "t('message.filter.target')"
+          clearable
+          dense
+        />
+      </v-col>
+      <v-col cols="12" md="3">
+        <v-text-field v-model="filters.topic" :label="t('message.filter.topic')" clearable dense />
+      </v-col>
+      <v-col cols="12" md="3">
+        <v-select
+          v-model="filters.hate"
+          :label="t('message.filter.hate')"
+          :items="[
+            { title: t('message.filter.all'), value: null },
+            { title: t('message.filter.yes'), value: 1.0 },
+            { title: t('message.filter.no'), value: 0.0 },
+          ]"
+          clearable
+          dense
+        />
+      </v-col>
 
+      <v-col cols="12" md="3">
+        <v-select
+          v-model="filters.checkworthy"
+          :label="t('message.filter.checkworthy')"
+          :items="[
+            { title: t('message.filter.all'), value: null },
+            { title: t('message.filter.yes'), value: 1.0 },
+            { title: t('message.filter.no'), value: 0.0 },
+          ]"
+          clearable
+          dense
+        />
+      </v-col>
+    </v-row>
     <v-data-table-server
       :headers="headers"
       :loading="loading"
@@ -187,16 +237,20 @@ const getColor = (user:string) => {
         <td class="text-left">{{ formatDate(item.date) }}</td>
       </template>
       <template v-slot:item.preprocessed_message_media="{ item }">
-  <div class="chat-message" :style="{ backgroundColor: getColor(item.from_user) }">
-    <div class="message-content">
-      <v-icon v-if="item.media_type" :icon="getIcon(item.media_type)" class="me-2"></v-icon>
-      <span>{{ item.preprocessed_message_media }}</span>
-    </div>
-    <div class="message-time">
-      {{ formatDate(item.date) }}
-    </div>
-  </div>
-</template>
+        <div class="chat-message" :style="{ backgroundColor: getColor(item.from_user) }">
+          <div class="message-content">
+            <v-icon
+              v-if="item.media_type"
+              :icon="getIcon(item.media_type)"
+              class="me-2"
+            ></v-icon>
+            <span>{{ item.preprocessed_message_media }}</span>
+          </div>
+          <div class="message-time">
+            {{ formatDate(item.date) }}
+          </div>
+        </div>
+      </template>
       <template v-slot:item.from_user="{ item }">
         <span v-if="item.from_user">{{ item.from_user }}</span>
         <span v-else>NA</span>
@@ -216,8 +270,17 @@ const getColor = (user:string) => {
         />
       </template>
       <template v-slot:item.target="{ item }">
-        <span v-if="!isEmptyOrSpaces(item?.target!)">{{ cleanString(item?.target!) }}</span>
+        <span
+          v-if="!isEmptyOrSpaces(item?.target!)"
+          >{{ cleanString(item?.target!) }}</span
+        >
         <span v-else>NA</span>
+      </template>
+      <template v-slot:no-data>
+        <div class="text-center pa-4">
+          <v-icon size="48" class="mb-2">mdi-database-off</v-icon>
+          <p>{{ t("message.noData") }}</p>
+        </div>
       </template>
     </v-data-table-server>
 

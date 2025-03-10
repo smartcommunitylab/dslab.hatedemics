@@ -4,7 +4,6 @@ import ChatTableComponent from '@/components/ChatTableComponent.vue'
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 // import GraphComponent from '@/components/GraphComponent.vue';
-const msg = ref('Hello from DiscussionView.Check themessages');
 import { onMounted } from "vue";
 import { useMessagesStore } from '../store/MessageStore';
 import { useI18n } from 'vue-i18n';
@@ -23,8 +22,33 @@ const messagesStore = useMessagesStore();
 const { messages } = storeToRefs(messagesStore);
 const { selectedChannelInfo, channelsInfo } = storeToRefs(channelsStore);
 const { selectedChat, chats } = storeToRefs(chatStore);
-
-
+const search = ref('');
+const loading = ref(false);
+  let page = 0;
+  const size = 10;
+  let allLoaded = false;
+const fetchChannels = async (reset = false) => {
+  if (reset) {
+    page = 0;
+    allLoaded = false;
+    channelsInfo.value = [];
+  }
+  if (allLoaded || loading.value) return;
+  loading.value = true;
+  try {
+    const {success,total ,content } =  await channelsStore.dispatchGetChannels({page,size},search.value);
+    if (!success) {
+      console.error("API error, status:", total);
+      return;
+    }
+    if (content)
+      channelsInfo.value = content;
+  } catch (error) {
+    console.error('Error fetching channels:', error);
+  } finally {
+    loading.value = false;
+  }
+};
 const updateChannel = (channel: ChannelInfo) => {
   channelsStore.selectChannelInfo(channel);
 };
@@ -32,6 +56,17 @@ const updateChannel = (channel: ChannelInfo) => {
 const updateChat = (chatId: string) => {
   chatStore.selectChat(chatId);
   topicsStore.dispatchGetTopics(chatId);};
+  const onSearch = (newSearch: string) => {
+  search.value = newSearch;
+  fetchChannels(true);
+};
+
+const loadMore = (event: { target: any; }) => {
+  const target = event.target;
+  if (target.scrollTop + target.clientHeight >= target.scrollHeight - 10) {
+    fetchChannels();
+  }
+};
 </script>
 
 <template>
@@ -41,7 +76,7 @@ const updateChat = (chatId: string) => {
     <!-- Selettori di Canale e Chat -->
     <v-row>
       <v-col cols="4">
-        <v-autocomplete
+        <!-- <v-autocomplete
           return-object
           :label="t('channelInfo.channels')"
           v-model="selectedChannelInfo"
@@ -51,6 +86,22 @@ const updateChat = (chatId: string) => {
           variant="outlined"
           density="comfortable"
           @update:model-value="updateChannel"
+        /> -->
+        <v-autocomplete
+          return-object
+          :label="t('channelInfo.channels')"
+          v-model="selectedChannelInfo"
+          :items="channelsInfo"
+          :loading="loading"
+          item-title="id"
+          item-value="id"
+          variant="outlined"
+          density="comfortable"
+          :filter="() => true"
+          @update:model-value="updateChannel"
+          @update:search="onSearch"
+          @scroll.passive="loadMore"
+          clearable 
         />
       </v-col>
 

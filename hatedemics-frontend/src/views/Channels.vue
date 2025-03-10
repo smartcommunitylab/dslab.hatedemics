@@ -16,7 +16,7 @@ const { channelsInfo, selectedChannelInfo, selectedLanguage } = storeToRefs(
 const msg = ref("");
 const search = ref("");
 const page = ref(1); // Vuetify inizia da 1
-const itemsPerPage = ref(200);
+const itemsPerPage = ref(10);
 const totalItems = ref(0); // Da aggiornare con la risposta API
 const loading = ref(false);
 const itemsPerPageOptions =  [
@@ -43,11 +43,13 @@ const headers = reactive([
     key: "participants_count",
     sortable: true,
   },
+  { title: t("channelTable.header.nInRecommendations"), key: "n_in_recommendation", sortable: true },
+  { title: t("channelTable.header.nOutRecommendations"), key: "n_out_recommendation", sortable: true },
   { title: t("channelTable.header.IRI"), key: "IRI", sortable: true },
 ]);
 const pagination = reactive({
   page: 0,
-  size: 200,
+  size: 10,
   sort: "IRI,desc",
 });
 const fetchChannels = async () => {
@@ -154,6 +156,8 @@ const onPaginationChange = (options: any) => {
               <td class="text-left">{{ formatDate(item.date) }}</td>
                 <td class="text-left">{{ item.message_count }}</td>
                 <td class="text-left">{{ item.participants_count }}</td>
+                <td class="text-left">{{ item.n_in_recommendation }}</td>
+                <td class="text-left">{{ item.n_out_recommended }}</td>
                 <td class="text-left">{{ item.iri }}</td>
               </tr>
             </template>

@@ -3,6 +3,7 @@
         "success": "Login effettuato con successo",
         "button": "Login"
     },
+
     "welcome": {
         "title": "Benvenuti in Hatedemics"
     },
@@ -20,7 +21,9 @@
             "messages": "Messaggi",
             "partecipants": "Utenti",
             "IRI": "Infodemic Risk",
-            "hs": "Hate Speech"
+            "hs": "Hate Speech",
+            "nInRecommendations": "Raccomandazioni in entrata",
+            "nOutRecommendations": "Raccomandazioni in uscita"
         }
     },
     "language": {
@@ -48,7 +51,9 @@
             "id": "ID Canale:",
             "iri": "Infodemic Risk:",
             "hs": "Hate Speech:",
-            "cw": "Check Worthy:"
+            "cw": "Check Worthy:",
+            "in": "In degree:",
+            "out": "Out degree:"
         },
         "fs": {
             "exit": "Finestra",
@@ -104,7 +109,18 @@
         "dialog": {
             "start": "Inizia una nuova conversazione",
             "jump": "Vai alla conversazione"
+        },
+        "noData": "Nessun dato disponibile",
+        "filter":{
+            "target":"Filtra per target",
+            "topic":"Filtra per argomento",
+            "hate":"Hate Speech",
+            "checkworthy":"Check Worthy",
+            "all":"Tutti",
+            "yes":"Si",
+            "no":"No"
         }
+
     },
     "wordclouds": {
         "hate": "Hate vs Non Hate",

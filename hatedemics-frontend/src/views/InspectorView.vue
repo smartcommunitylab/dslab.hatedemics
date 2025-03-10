@@ -24,8 +24,12 @@ const topicsStore = useTopicsStore();
 const { selectedChannelInfo, channelsInfo } = storeToRefs(channelsStore);
 const { selectedChat, chats } = storeToRefs(chatStore);
 const { topics } = storeToRefs(topicsStore);
-
+const search = ref('');
+const loading = ref(false);
 const msg = ref<string>(t("inspect.title"));
+  let page = 0;
+  const size = 10;
+  let allLoaded = false;
 
 // onMounted(async () => {
 //   const { success, status } =   await topicsStore.dispatchGetTopics(selectedChannelInfo?.value?.id!);
@@ -33,7 +37,28 @@ const msg = ref<string>(t("inspect.title"));
 //     console.error("API error, status:", status);
 //   }
 // });
-
+const fetchChannels = async (reset = false) => {
+  if (reset) {
+    page = 0;
+    allLoaded = false;
+    channelsInfo.value = [];
+  }
+  if (allLoaded || loading.value) return;
+  loading.value = true;
+  try {
+    const {success,total ,content } =  await channelsStore.dispatchGetChannels({page,size},search.value);
+    if (!success) {
+      console.error("API error, status:", total);
+      return;
+    }
+    if (content)
+      channelsInfo.value = content;
+  } catch (error) {
+    console.error('Error fetching channels:', error);
+  } finally {
+    loading.value = false;
+  }
+};
 const updateChannel = (channel: ChannelInfo) => {
   channelsStore.selectChannelInfo(channel);
   // chatStore.initChats([{id:channel.id},{id:channel.linked_chats_ids}])
@@ -48,6 +73,18 @@ const updateChat = (chatId: string) => {
 const goToChats = () => {
   router.push({ name: "Discussion" });
 };
+const onSearch = (newSearch: string) => {
+  search.value = newSearch;
+  fetchChannels(true);
+};
+
+const loadMore = (event: { target: any; }) => {
+  const target = event.target;
+  if (target.scrollTop + target.clientHeight >= target.scrollHeight - 10) {
+    fetchChannels();
+  }
+};
+
 </script>
 
 <template>
@@ -60,12 +97,17 @@ const goToChats = () => {
           :label="t('channelInfo.channels')"
           v-model="selectedChannelInfo"
           :items="channelsInfo"
+          :loading="loading"
           item-title="id"
           item-value="id"
           variant="outlined"
           density="comfortable"
+          :filter="() => true"
           @update:model-value="updateChannel"
-        />
+          @update:search="onSearch"
+          @scroll.passive="loadMore"
+          clearable
+          />
       </v-col>
 
       <v-col cols="4">

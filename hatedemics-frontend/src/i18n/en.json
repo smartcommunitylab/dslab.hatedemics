@@ -6,6 +6,7 @@
     "welcome": {
         "title": "Welcome to Hatedemics"
     },
+
     "inspect": {
         "title": "Topics"
     },
@@ -19,7 +20,9 @@
             "id": "ID",
             "messages": "Messages",
             "partecipants": "Users",
-            "IRI": "Infodemic Risk"
+            "IRI": "Infodemic Risk",
+            "nInRecommendations": "In Recommendations",
+            "nOutRecommendations": "Out Recommendations"
         }
     },
     "language": {
@@ -47,7 +50,9 @@
             "id": "Channel ID:",
             "iri": "Infodemic Risk:",
             "hs": "Hate Speech:",
-            "cw": "Check Worthy:"
+            "cw": "Check Worthy:",
+            "in": "In degree:",
+            "out": "Out degree:"
         },
         "fs": {
             "exit": "Exit",
@@ -102,6 +107,16 @@
         "dialog": {
             "start": "Start a new conversation",
             "jump": "Go to conversation"
+        },
+        "noData": "No data available",
+        "filter":{
+            "target":"Filter by target",
+            "topic":"Filter by Topic",
+            "hate":"Hate Speech",
+            "checkworthy":"Check Worthy",
+            "all":"All",
+            "yes":"Yes",
+            "no":"No"
         }
     },
     "wordclouds": {

@@ -21,11 +21,11 @@ import { toCamelCaseParams } from '../utility';
 //   return {status:200,data:messages.data.slice(0,1000)} //messages
 
 // }
-async function getChats(id:string, pageParams: Pageable) {
+async function getChats(id:string, pageParams: Pageable, target?:string, checkworthy?: number, hate?:number, topic?:string) {
   // console.log("getChats",'http://localhost:8080/api/messages/chat/bbed2d968dd6d545e36e727ecb31d43639396eb8443e0c4aa3360a17544776ba?page=0&size=10&sort=date,desc')
   // console.log("getChats",`/messages/chat/${id}`, { params: { ...pageParams } })
 
-  return  await axiosInstance.get(`/messages/chat/${id}`, { params: { ...(toCamelCaseParams(pageParams)) } })
+  return  await axiosInstance.get(`/messages/chat/${id}`, { params: { ...(toCamelCaseParams(pageParams)), target, checkworthy, hate, topic} })
 }
 
 export default {
