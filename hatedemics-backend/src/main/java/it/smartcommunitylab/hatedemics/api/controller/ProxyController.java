@@ -39,6 +39,7 @@ public class ProxyController {
     private String password;
 
     private static String token;
+    private static Long tokenUpdate = 0L;
 
     @RequestMapping("/gen/**")
     public ResponseEntity<?> generationProxy(HttpServletRequest request) throws IOException {
@@ -90,7 +91,7 @@ public class ProxyController {
     }
 
     private String createToken() {
-        if (token == null) {
+        if (token == null || tokenUpdate + 1000*60*60 < System.currentTimeMillis()) {
             login(username, password);
         }
         return "Bearer " + token;
@@ -115,5 +116,6 @@ public class ProxyController {
         @SuppressWarnings({ "unchecked" })
         Map<String,?> response = restTemplate.postForEntity(url, request, Map.class).getBody();
         token = response.get("access_token").toString();
+        tokenUpdate = System.currentTimeMillis();
     }
 }
