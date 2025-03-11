@@ -57,7 +57,7 @@ onMounted(async () => {
 
           <v-list-item v-if="selectedChannelInfo?.iri !== undefined">
             <span class="font-weight-bold">{{ t("channelInfo.iri") }}</span>
-            {{ selectedChannelInfo.iri }}
+            {{ selectedChannelInfo.iri?.toFixed(2) }}
           </v-list-item>
 
           <v-list-item v-if="generic?.hs_percentage !== undefined">

@@ -36,7 +36,6 @@ const languages = [
 const sortBy = ref([{ key: "IRI", order: "desc" }]);
 
 const headers = reactive([
-  { title: t("channelTable.header.date"), key: "date", sortable: true },
   { title: t("channelTable.header.messages"), key: "message_count", sortable: true },
   {
     title: t("channelTable.header.partecipants"),
@@ -153,12 +152,11 @@ const onPaginationChange = (options: any) => {
                 :class="{ selected: item.id === selectedChannelInfo?.id }"
                 class="hover-row"
               >
-              <td class="text-left">{{ formatDate(item.date) }}</td>
                 <td class="text-left">{{ item.message_count }}</td>
                 <td class="text-left">{{ item.participants_count }}</td>
                 <td class="text-left">{{ item.n_in_recommendation }}</td>
                 <td class="text-left">{{ item.n_out_recommended }}</td>
-                <td class="text-left">{{ item.iri }}</td>
+                <td class="text-left">{{ item.iri?.toFixed(2) }}</td>
               </tr>
             </template>
           </v-data-table-server>

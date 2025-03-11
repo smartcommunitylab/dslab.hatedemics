@@ -34,7 +34,7 @@ async function submit() {
           loginStore.updateUser(username.value, data.user_id, data.is_admin, data.project_manager)
           loading.value = false
           showSnackbar(t('login.success'))
-          router.push({ name: 'Channels' })
+          router.replace({ name: 'Channels' })
   }
 } catch (error) {
 
@@ -54,6 +54,9 @@ async function submit() {
     <v-row>
       <v-col>
         <v-sheet class="mx-auto pa-8" width="400px" elevation="3">
+          <div class="text-center">
+            <v-img src="/src/assets/credits/hatedemics.png" max-height="80" contain class="mb-4" />
+          </div>
           <div class="text-h4 py-4 text-center">Login</div>
           <v-form @submit.prevent="submit" v-model="goodLogin" color="primary">
             <v-text-field label="Username" v-model="username" :rules="regole"></v-text-field>

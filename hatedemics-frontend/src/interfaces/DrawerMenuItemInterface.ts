@@ -10,6 +10,7 @@ export default interface DrawerMenuItem {
   to?: RouteLocationRaw;
   /** is active */
   active?: boolean;
+  action?: () => void; // Azione opzionale (come il logout)
   /** Sub Items */
   items?: DrawerMenuItem[];
 }

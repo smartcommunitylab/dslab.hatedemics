@@ -14,6 +14,10 @@
         "title": "Channels",
         "infoTitle": "Channel information"
     },
+    "project": {
+        "noProject": "No projects available",
+        "noData": "No data available"
+    },
     "channelTable": {
         "header": {
             "date": "Date",
@@ -106,7 +110,9 @@
         },
         "dialog": {
             "start": "Start a new conversation",
-            "jump": "Go to conversation"
+            "jump": "Go to conversation",
+            "noProject": "No projects available",
+            "error": "Error while fetching data"
         },
         "noData": "No data available",
         "filter":{
@@ -130,5 +136,9 @@
             "isnot_checkworthy": "Non Check Worthy",
             "non_hate": "Non Hate"
         }
+    },
+    "error": {
+        "api": "Error while fetching data",
+        "noData": "No data available"
     }
 }

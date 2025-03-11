@@ -8,9 +8,11 @@ import { useChatsStore } from "@/store/ChatStore";
 import { useChannelsStore } from "@/store/ChannelStore";
 import { formatDate, isEmptyOrSpaces, cleanString } from "@/services/utility";
 import dialogApi from "@/services/dialog/dialogApi";
+import { useGlobal } from "@/store";
 const { t } = useI18n();
 const router = useRouter();
 const messagesStore = useMessagesStore();
+const globalStore = useGlobal();
 const { messages } = storeToRefs(messagesStore); // Aggiunto `totalMessages`
 const search = ref("");
 const page = ref(1);
@@ -20,6 +22,8 @@ const chatsStore = useChatsStore();
 const channelStore = useChannelsStore();
 const { selectedChannelInfo, selectedLanguage } = storeToRefs(channelStore);
 const { selectedChat } = storeToRefs(chatsStore);
+const showSnackbar = (message: string) => globalStore.setMessage(message);
+
 const totalItems = ref(0);
 const filters = reactive({
   hate: null,
@@ -88,14 +92,18 @@ const startDialogue = async (message: any) => {
     //get projectID  by lang and target
     const target = cleanString(message.target); //message.target;
     const lan = selectedLanguage.value;
-    const response = await dialogApi.getProjects();
+    try {
+      const response = await dialogApi.getProjects();
     const projects = response.data;
     // get id of project with name Target - Language
     const projectID = projects.find((p) => p.name === `${target}-${lan}`)?.id;
     if (projectID) {
       router.push({ name: "tasks", params: { projectID } });
     } else {
-      alert("Project not found");
+      showSnackbar(t("message.dialog.noProject"));
+    }
+    } catch (error) {
+      showSnackbar(t("message.dialog.error"));
     }
   }
   menu.value = false;
@@ -168,8 +176,29 @@ watch(
 );
 const getColor = (user: string) => {
   if (!user) return "#f5f5f5";
-  const colors = ["#e0f7fa", "#ffcdd2", "#d1c4e9", "#c8e6c9"];
-  return colors[user.length % colors.length];
+  const colors = [    
+    "#d1f0d1", // Verde chiaro pastello 🌿
+    "#ffdede", // Rosa tenue 🌸
+    "#d1e0fa", // Azzurro pastello ☁️
+    "#fde6d3", // Pesca pastello 🍑
+    "#f2d9e6", // Rosa cipria 🌷
+    "#d3f8f2", // Acquamarina pastello 💎
+    "#fdf5c9", // Giallo pastello 🌼
+    "#e3d7fc", // Lilla pastello 🎀
+    "#d4eaff", // Celeste leggero 🌊
+    "#e9f7d3", // Verde menta tenue 🍃
+    ];
+
+  const hashCode = (str: string) => {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      hash = (hash << 5) - hash + str.charCodeAt(i);
+      hash |= 0; // Converte in numero intero a 32-bit
+    }
+    return Math.abs(hash);
+  };
+
+  return colors[hashCode(user) % colors.length];
 };
 </script>
 
@@ -253,7 +282,7 @@ const getColor = (user: string) => {
       </template>
       <template v-slot:item.from_user="{ item }">
         <span v-if="item.from_user">{{ item.from_user }}</span>
-        <span v-else>NA</span>
+        <span v-else>User</span>
       </template>
 
       <template v-slot:item.hate_label="{ item }">

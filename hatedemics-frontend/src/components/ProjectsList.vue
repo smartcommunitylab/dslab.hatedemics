@@ -1,10 +1,11 @@
 <script>
 import { useVariablesStore } from '@/store/DialogStore'
 import {useLoginStore} from '@/store/LoginStore'
-
+import { useGlobal } from '@/store';
 import {API} from '@/services'
 import ListItem from './singleFileComponents/project-list-item.vue'
 import DialogGeneric from '@/components/dialogs/dialog-generic.vue'
+import { useI18n } from 'vue-i18n';
 
 export default {
   components: {
@@ -18,7 +19,9 @@ export default {
       showDialogCreateProject: false,
       variablesStore: useVariablesStore(),
       loginStore: useLoginStore(),
+      globalStore: useGlobal(),
       ds: API.dialogs,
+      t: useI18n().t,
       projects: undefined,
     }
   },
@@ -29,6 +32,7 @@ export default {
     }
   },
   methods: {
+
     updateUsers: function () {
       const self = this
       API.login.getUsers().then(function (data) {
@@ -40,6 +44,10 @@ export default {
       self.projects = undefined
       API.dialogs.getProjects().then(function (data) {
         self.projects = data.data
+      },(error) => {
+        self.globalStore.setMessage(self.t('error.api'))
+
+        self.projects = []
       })
     },
   }
@@ -77,6 +85,11 @@ export default {
         </v-col>
         <v-col cols="12" align="center"></v-col>
       </v-row>
+      <template  v-if="projects.length === 0">
+      <p  class="text-body-1">
+        {{ t('project.noData') }}
+      </p>
+      </template>
       <template v-for="project of projects" :key="project.id">
         <ListItem
           :title="project.name"

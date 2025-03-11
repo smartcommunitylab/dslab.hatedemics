@@ -53,12 +53,19 @@ const snackbarText: ComputedRef<string> = computed(() => globalStore.message);
 /** Toggle Dark mode */
 // const isDark: ComputedRef<string> = computed(() => (configStore.theme ? 'dark' : 'light'));
   const isDark: ComputedRef<string> = computed(() => (configStore.theme ? 'darkTheme' : 'lightTheme'));
+    const canGoBack = ref(false);
+
+const updateCanGoBack = () => {
+  canGoBack.value = route.path !== "/dashboard/channels" && router.options.history.state.back !== null;
+
+};
 
 // When snackbar text has been set, show snackbar.
 watch(
   () => globalStore.message,
   message => (snackbarVisibility.value = message !== '')
 );
+watch(route, updateCanGoBack);
 
 /** Clear store when snackbar hide */
 const onSnackbarChanged = async () => {
@@ -66,8 +73,10 @@ const onSnackbarChanged = async () => {
   await nextTick();
 };
 
+
 onMounted(() => {
-  document.title = title;
+  // document.title = title;
+  updateCanGoBack();
   console.log(import.meta.env.VITE_APP_AXIOS_URL);
   console.log(import.meta.env);
 
@@ -76,13 +85,23 @@ onMounted(() => {
 
 <template>
   <v-app :theme="isDark">
-    <v-navigation-drawer v-model="drawer" temporary v-if="!route.meta.hideNavbar" class="bg-primary text-on-primary">
+    <v-navigation-drawer
+      v-model="drawer"
+      temporary
+      v-if="!route.meta.hideNavbar"
+      class="bg-primary text-on-primary"
+      app
+      permanent
+    >
       <drawer-component />
     </v-navigation-drawer>
 
     <v-app-bar v-if="!route.meta.hideSideMenu" class="bg-primary text-on-primary">
       <v-app-bar-nav-icon @click="drawer = !drawer" />
-      <v-app-bar-title tag="h1">{{ title }}</v-app-bar-title>
+      <v-btn v-if="canGoBack" icon @click="$router.back()">
+        <v-icon>mdi-arrow-left</v-icon>
+      </v-btn>
+      <!-- <v-app-bar-title tag="h1">{{ title }}</v-app-bar-title> -->
       <v-spacer />
       <app-bar-menu-component />
       <v-progress-linear
@@ -114,11 +133,15 @@ onMounted(() => {
     </v-snackbar>
 
     <v-footer app elevation="3" color="primary">
-      <span class="mr-5">2025 &copy;</span>
+      <span class="text-white mr-4" >2025 &copy; Hatedemics</span>
+
     </v-footer>
   </v-app>
   <teleport to="head">
-    <meta name="theme-color" :content="theme.computedThemes.value[isDark].colors.primary" />
+    <meta
+      name="theme-color"
+      :content="theme.computedThemes.value[isDark].colors.primary"
+    />
     <link rel="icon" :href="logo" type="image/svg+xml" />
   </teleport>
 </template>
@@ -132,7 +155,7 @@ html {
   overflow-y: auto;
   // Modern scrollbar style
   scrollbar-width: thin;
-  scrollbar-color: map-get(settings.$grey, 'lighten-2') map-get(settings.$grey, 'base');
+  scrollbar-color: map-get(settings.$grey, "lighten-2") map-get(settings.$grey, "base");
 }
 
 ::-webkit-scrollbar {
@@ -142,12 +165,12 @@ html {
 
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.1);
-  background-color: map-get(settings.$grey, 'lighten-2');
+  background-color: map-get(settings.$grey, "lighten-2");
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 0.5rem;
-  background-color: map-get(settings.$grey, 'base');
+  background-color: map-get(settings.$grey, "base");
   box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.1);
 }
 

@@ -73,7 +73,7 @@ watch(selectedChannelInfo, async (newVal) => {
 
           <v-list-item v-if="selectedChannelInfo?.iri !== null">
             <span class="font-weight-bold">{{ t("channelInfo.iri") }}</span> 
-            {{ selectedChannelInfo.iri }}
+            {{ selectedChannelInfo.iri?.toFixed(3) }}
           </v-list-item>
 
           <v-list-item v-if="generic?.hs_percentage !== undefined">

@@ -14,6 +14,10 @@
         "title": "Canali",
         "infoTitle": "Informazioni sul Canale"
     },
+    "project": {
+        "noProject": "Nessun progetto disponibile",
+        "noData": "Nessun dato disponibile" 
+    },
     "channelTable": {
         "header": {
             "date": "Data",
@@ -108,7 +112,9 @@
         },
         "dialog": {
             "start": "Inizia una nuova conversazione",
-            "jump": "Vai alla conversazione"
+            "jump": "Vai alla conversazione",
+            "noData": "Nessun dato disponibile",
+            "error": "Errore durante il caricamento della chat"
         },
         "noData": "Nessun dato disponibile",
         "filter":{

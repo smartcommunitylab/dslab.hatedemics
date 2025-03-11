@@ -116,8 +116,9 @@ const onWordClick = (word: string) => console.log(word);
     />
     <div>
       <div v-if="wordsPositive.length"  class="wordcloud-container">
-        <h3 class="title">{{ getTitle(selectedChannelView, false) }}</h3>
-        <vue3-word-cloud
+        <v-typography class="text-h5	 title text-error">
+          {{ getTitle(selectedChannelView, false) }}
+        </v-typography>        <vue3-word-cloud
           v-if="wordsPositive.length"
           :words="wordsPositive"
           :font-family="'Love Ya Like A Sister, serif'"
@@ -126,8 +127,9 @@ const onWordClick = (word: string) => console.log(word);
         />
       </div>
       <div v-if="wordsNegative.length"  class="wordcloud-container">
-        <h3 class="title">{{ getTitle(selectedChannelView, true) }}</h3>
-
+        <v-typography  class="text-h5 title text-error">
+          {{ getTitle(selectedChannelView, true) }}
+        </v-typography>
         <vue3-word-cloud
           v-if="wordsNegative.length"
           :words="wordsNegative"
@@ -166,5 +168,12 @@ const onWordClick = (word: string) => console.log(word);
   align-items: center;
   gap: 20px;
   height: 200px;
+padding: 16px;
+}
+.title {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 </style>

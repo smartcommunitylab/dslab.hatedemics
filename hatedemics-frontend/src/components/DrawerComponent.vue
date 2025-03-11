@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import type DrawerMenuItem from '@/interfaces/DrawerMenuItemInterface';
+import { API } from '@/services';
+import { ref } from 'vue';
 
+const logout = () => {
+  API.login.logout()
+
+};
 /** Drawer menu items */
 const items: DrawerMenuItem[] = [
   {
@@ -10,7 +16,6 @@ const items: DrawerMenuItem[] = [
       {
         title: 'Channels',
         icon: 'mdi-graph',
-        active: true,
         to: { name: 'Channels' }
       },
       {
@@ -31,18 +36,25 @@ const items: DrawerMenuItem[] = [
     icon: 'mdi-chat',
     to: { name: 'projects' }
   },
-
   {
-    title: 'About',
+    title: 'Credits',
     icon: 'mdi-information',
-    to: { name: 'About' }
+    to: { name: 'Credits' }
   },
-  // {
-  //   title: 'Disabled Item',
-  //   icon: 'mdi-cancel'
-  //   // empty `to` value becomes to disabled item
-  // }
+  {
+    title: 'Logout',
+    icon: 'mdi-logout',
+    action: logout 
+  }
 ];
+
+/** Stato reattivo per tenere sempre espansi i gruppi */
+const expandedGroups = ref<Record<string, boolean>>(
+  items.reduce((acc, item) => {
+    if (item.items) acc[item.title] = true; // Imposta tutti i gruppi a `true` per essere espansi
+    return acc;
+  }, {} as Record<string, boolean>)
+);
 </script>
 
 <template>
@@ -52,15 +64,22 @@ const items: DrawerMenuItem[] = [
       <template v-else>
         <!-- Menu Item -->
         <v-list-item
-          v-if="!item.items"
+          v-if="!item.items && !item.action"
           :disabled="!item.to"
           :prepend-icon="item.icon"
           :title="item.title"
           :to="item.to"
           link
+          :action="item.action"
+        />
+        <v-list-item
+          v-else-if="item.action"
+          :prepend-icon="item.icon"
+          :title="item.title"
+          @click="item.action"
         />
         <!-- Sub menu -->
-        <v-list-group v-else-if="item.items" v-model="item.active">
+        <v-list-group v-else-if="item.items" v-model="expandedGroups[item.title]">
           <template #activator="{ props }">
             <v-list-item v-bind="props" :prepend-icon="item.icon" :title="item.title" />
           </template>

@@ -48,7 +48,7 @@ const routes: RouteRecordRaw[] = [
     component: Channels
   },
   {
-    path: '/dashboard/channels',
+    path: '/dashboard/inspector',
     name: 'Inspector',
     component: InspectorView
   },  
@@ -89,7 +89,7 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/about',
-    name: 'About',
+    name: 'Credits',
     // route level code-splitting
     // this generates a separate chunk (About.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
