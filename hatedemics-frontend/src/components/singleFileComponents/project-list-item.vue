@@ -90,7 +90,12 @@ export default {
               </v-row>
             </v-col>
             <v-col cols="12" lg="6" sm="9" md="6" xl="6" xs="6">
-              <v-card-actions>
+              <v-card-actions> 
+              <DynamicButton
+              icon="mdi-text-box-plus"
+              :text="'Annotate'"
+                  @click.prevent="openTaskList(id)"
+                />
                 <DynamicButton
                   :icon="'mdi-file-document-multiple-outline'"
                   :text="'Manage Docs'"

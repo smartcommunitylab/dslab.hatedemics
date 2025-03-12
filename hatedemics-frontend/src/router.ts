@@ -103,18 +103,18 @@ const router: Router = createRouter({
 });
 
 // // Global before guards
-// router.beforeEach(async (to, from, next) => {
-//   const isAuth = await loginApi.isAuthenticated();
+router.beforeEach(async (to, from, next) => {
+  const isAuth = await loginApi.isAuthenticated();
 
-//   if (!isAuth && to.name !== 'Login') {
-//     // Se l'utente non è autenticato e prova ad accedere a una pagina protetta, lo rimandiamo al login
-//     next({ name: 'Login' });
+  if (!isAuth && to.name !== 'Login') {
+    // Se l'utente non è autenticato e prova ad accedere a una pagina protetta, lo rimandiamo al login
+    next({ name: 'Login' });
 
-//   } else {
-//     // Se tutto è ok, continuiamo normalmente
-//     next();
-//   }
-// });
+  } else {
+    // Se tutto è ok, continuiamo normalmente
+    next();
+  }
+});
 // Global After Hooks
 // https://router.vuejs.org/guide/advanced/navigation-guards.html#global-after-hooks}
 router.afterEach(() => {

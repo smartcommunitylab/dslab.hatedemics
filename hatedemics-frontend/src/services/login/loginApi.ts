@@ -24,52 +24,13 @@ import axiosHatedemicsInstance from '../hatedemicsApi';
     )
   }
 
-  async function getUsers() {
-    //TODO
-    return axiosHatedemicsInstance.get('/users/')
-  }
 
-  //Returns '201 created' if successful
-  async function createUser(email:string, username:string, password:string) {
-        //TODO
-
-    return axiosHatedemicsInstance.post('/users/', {
-      email: email,
-      username: username,
-      password: password
-    })
-  }
-
-  async function editUser(email:string, username:string, password:string, userID:string) {
-        //TODO
-
-    return axiosHatedemicsInstance.patch(String('/users/' + userID + '/edit/'), {
-      email: email,
-      username: username,
-      password: password
-    })
-  }
-
-  //Returns '204 no content' if successful
-  async function changePassword(oldPassword:string, newPassword:string) {
-    return axiosInstance.patch(
-      '/users/me/changepassword?old_password=' + oldPassword + '&new_password=' + newPassword
-    )
-  }
   async function isAuthenticated(): Promise<boolean> {
-    try {
-      await axiosInstance.get('/users/me');
-      return true;
-    } catch (error) {
-      return false;
-    }
+    const loginStore = useLoginStore();
+    return !!loginStore.token; // Se il token esiste, l'utente è autenticato
   }
 export default {
   login,
   logout,
-  getUsers,
-  createUser,
-  editUser,
-  changePassword,
   isAuthenticated
 };
