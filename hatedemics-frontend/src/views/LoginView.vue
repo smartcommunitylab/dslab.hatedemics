@@ -23,7 +23,6 @@ const regole = ref([
   
 ])
 async function submit() {
-  // const { status, data } = await API.chats.getChats(1);
   try {
 
   const { status, data } = await API.login.login(username.value, password.value);

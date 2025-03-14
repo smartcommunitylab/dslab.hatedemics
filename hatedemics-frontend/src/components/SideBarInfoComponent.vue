@@ -75,8 +75,8 @@ onMounted(async () => {
             <span class="font-weight-bold">{{ t("channelInfo.topics") }}</span>
             <ul class="ml-4 mt-1">
                 <template v-for="([key, value], index) in dataEntries" :key="index">
-                <li v-if="value.topic_label != 'not assigned'">
-                   {{ value.topic_label }}
+                <li v-if="(value as any).topic_label != 'not assigned'">
+                   {{ (value as any).topic_label }}
                 </li>
               </template>
             </ul>

@@ -30,7 +30,7 @@ const typeItems = [
 
 const extractWords = (data: any, key: string) =>
   Object.entries(data[key] || {})
-    .sort((a, b) => b[1] - a[1]) // Ordina per weight decrescente
+    .sort((a:any, b:any) => b[1] - a[1]) // Ordina per weight decrescente
     .slice(0, 10); // Prendi solo i primi 10 elementi.map(([word, weight]) => [word, weight]);
 
 const channelData = computed(() => topicsStore.getChannelData());

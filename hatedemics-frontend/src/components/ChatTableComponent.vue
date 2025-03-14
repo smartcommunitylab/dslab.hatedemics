@@ -96,7 +96,7 @@ const startDialogue = async (message: any) => {
       const response = await dialogApi.getProjects();
     const projects = response.data;
     // get id of project with name Target - Language
-    const projectID = projects.find((p) => p.name === `${target}-${lan}`)?.id;
+    const projectID = projects.find((p:any) => p.name === `${target}-${lan}`)?.id;
     if (projectID) {
       router.push({ name: "tasks", params: { projectID } });
     } else {

@@ -10,6 +10,7 @@ export type APIResponse<T> = {
 export type ChannelInfo = {
   id: string
   date: string
+  about: string
   last_queried_at: string
   preprocessed_about: string
   pts: number

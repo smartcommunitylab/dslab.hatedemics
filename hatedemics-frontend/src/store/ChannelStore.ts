@@ -14,7 +14,7 @@ export const useChannelsStore = defineStore("channelsStore", () => {
   const selectedLanguage = ref<string>('EN');
   const chatStore = useChatsStore();
   const topicStore = useTopicsStore();
-  const sort = ref<any>({ key: "iri", order: "desc" });
+  const sort = ref<any>({ key: "IRI", order: "desc" });
 
   
   function initChannelsInfo(data: ChannelInfo[]) {

@@ -28,7 +28,9 @@ const handleClick = ( item:Topic) =>{
   topicsStore.selectTopic(item)
   
 }
-const sortBy = ref([{ key: "hs_percentage", order: "desc" }]);
+type SortItem = { key: string; order: boolean | "desc" | "asc" | undefined };
+
+const sortBy = ref<SortItem[]>([{ key: "hs_percentage", order: "desc" }]);
 
 </script>
 <template>
@@ -42,7 +44,7 @@ const sortBy = ref([{ key: "hs_percentage", order: "desc" }]);
           hide-details
           single-line
         ></v-text-field> -->
-        <v-data-table :headers="headers" :items="topics" :search="search" @update:sort-by="onSortChange"
+        <v-data-table :headers="headers" :items="topics" :search="search"
             v-model:sort-by="sortBy"
             return-object
             density="compact"

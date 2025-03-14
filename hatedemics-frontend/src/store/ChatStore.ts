@@ -24,8 +24,8 @@ export const useChatsStore = defineStore("chatsStore", () => {
 
   async function dispatchGetChats(): Promise<APIResponse<null>> {
     try {
-      //TODO
-      const { status, data } = await API.chats.getChats(0);
+      const { status, data } = await API.chats.getChats(selectedChat.value!,{ page :0, size :10, sort : "date,desc" }
+      );
       if (status === 200) {
         // initChats(data.content);
         initChats(data);

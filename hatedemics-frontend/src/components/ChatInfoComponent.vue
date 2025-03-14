@@ -11,7 +11,7 @@ const { t } = useI18n();
 const channelsStore = useChannelsStore();
 const router = useRouter();
 const { actions = true } = defineProps<{ actions?: Boolean}>()
-const isExtended: ComputedRef<boolean> = computed(() => (channelsStore?.selectedChannelInfo?.IRI ? true : false));
+const isExtended: ComputedRef<boolean> = computed(() => (channelsStore?.selectedChannelInfo?.iri ? true : false));
 const goToChats = () => {
   router.push({
     name: 'Inspector',
@@ -19,7 +19,7 @@ const goToChats = () => {
 }
 </script>
 <template>
-  <v-card class="mx-auto"  v-if="channelsStore.selectedChannel">
+  <v-card class="mx-auto"  v-if="channelsStore.selectedChannelInfo">
     <v-card-text>
       <div>{{ channelsStore.selectedChannelInfo?.id }}</div>
       <p v-if="channelsStore.selectedChannelInfo?.about">
@@ -36,8 +36,8 @@ const goToChats = () => {
       <p v-if="channelsStore.selectedChannelInfo?.language">
         {{ t("channelInfo.languages") }} {{ channelsStore.selectedChannelInfo?.language }}
       </p>
-      <p v-if="channelsStore.selectedChannelInfo?.IRI">
-        {{ t("channelInfo.iri") }} {{ channelsStore.selectedChannelInfo?.IRI }}
+      <p v-if="channelsStore.selectedChannelInfo?.iri">
+        {{ t("channelInfo.iri") }} {{ channelsStore.selectedChannelInfo?.iri }}
       </p>
       <p v-if="channelsStore.selectedChannelInfo?.sdIRI">
         {{ t("channelInfo.hateSpeech") }} {{ channelsStore.selectedChannelInfo?.sdIRI }}
@@ -46,8 +46,8 @@ const goToChats = () => {
         {{ t("channelInfo.lastUpdate") }}
         {{ new Date(channelsStore.selectedChannelInfo?.last_queried_at).toUTCString() }}
       </p>
-      <p v-if="channelsStore.selectedChannelInfo?.IRI">
-        {{ t("channelInfo.mainTopics") }} {{ channelsStore.selectedChannelInfo?.IRI }}
+      <p v-if="channelsStore.selectedChannelInfo?.iri">
+        {{ t("channelInfo.mainTopics") }} {{ channelsStore.selectedChannelInfo?.iri }}
       </p>
     </v-card-text>
 

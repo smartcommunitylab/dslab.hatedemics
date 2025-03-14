@@ -5,7 +5,7 @@ import { initData, nodes, links, type Node } from "@/services/data-gen";
 import { useChannelsStore } from '@/store/ChannelStore';
 import { storeToRefs } from 'pinia';
 import type { NodeObject } from "three-forcegraph";
-import elementResizeDetectorMaker from "https://esm.sh/element-resize-detector";
+import elementResizeDetectorMaker from "element-resize-detector";
 import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 const channelsStore = useChannelsStore();
@@ -183,14 +183,14 @@ const selectNode = (node: any) => {
   });
 
   // Imposta il colore dei nodi
-  graphInstance.nodeColor(n => {
+  graphInstance.nodeColor((n: { id: string; }) => {
     if (n.id === node.id) return "#FF4500"; // Arancione scuro per il nodo selezionato
     if (linkedNodes.has(n.id)) return "#FFA500"; // Arancione chiaro per i nodi collegati
     return ""; // Colore predefinito
   });
 
   // Imposta il colore dei link
-  graphInstance.linkColor(l => {
+  graphInstance.linkColor((l:any) => {
     if (l.source.id === node.id || l.target.id === node.id) return "orange"; // Link in arancione
     return defaultLinkColors.get(l);
   });
@@ -202,7 +202,7 @@ const selectNode = (node: any) => {
 
 const resetHighlighting = () => {
   graphInstance.nodeColor(null);
-  graphInstance.linkColor(link => defaultLinkColors.get(link) || "gray");
+  graphInstance.linkColor((link:any) => defaultLinkColors.get(link) || "gray");
 };
 
 const toggleFullScreen = () => {
@@ -229,7 +229,8 @@ onMounted(async () => {
   await initData();
   initializeGraph();
   const erd = elementResizeDetectorMaker();
-  erd.listenTo(graphContainer.value, el => {
+  if (!graphContainer.value) return;
+  erd.listenTo(graphContainer.value, (el:any) => {
     graphInstance.width(el.offsetWidth).height(el.offsetHeight);
   });
 });

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useConfig } from '@/store';
-import LocaleSwitcher  from '@/components/LocaleSwitcher.vue';
+import LocaleSwitcher  from '../components/LocaleSwitcher.vue';
 /** Config Store */
 const configStore = useConfig();
 </script>
