@@ -59,8 +59,10 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           tags: ${{ steps.meta.outputs.tags }}
           context: ./hatedemics-${{ matrix.version }}
-        env:
-          VITE_APP_URL_TOKEN: https://hatedemics.smartcommunitylab.it/token
-          VITE_APP_AXIOS_URL: https://hatedemics.smartcommunitylab.it/api/
-          VITE_APP_HATEDEMICS_API_URL: https://hatedemics.smartcommunitylab.it/api/proxy/dialog
+          build-args: |
+            - VITE_APP_URL_TOKEN=https://hatedemics.smartcommunitylab.it/token
+            - VITE_APP_AXIOS_URL=https://hatedemics.smartcommunitylab.it/api/
+            - VITE_APP_HATEDEMICS_API_URL=https://hatedemics.smartcommunitylab.it/api/proxy/dialog
+            - VITE_APP_TITLE="Hatedemics"
+
 
