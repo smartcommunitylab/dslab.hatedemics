@@ -11,7 +11,7 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 # Stage 2: Run the application
-FROM openjdk:17-jdk-slim
+FROM gcr.io/distroless/java17-debian12:nonroot
 WORKDIR /app
 
 # Copy the built jar from the build stage
@@ -21,4 +21,4 @@ COPY --from=build /app/target/hatedemics-backend-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
 
 # Run the application
-ENTRYPOINT ["java", "-Ddata.path=/data", "-Dspring.datasource.url=jdbc:sqlite:/db/data.db", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]

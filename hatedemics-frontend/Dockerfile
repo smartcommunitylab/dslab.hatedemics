@@ -1,4 +1,4 @@
-FROM node:18.20.7
+FROM node:18.20.7 AS build
 
 WORKDIR /app
 
@@ -8,6 +8,7 @@ RUN yarn install
 
 RUN yarn build
 
-CMD ["npm", "dev"]
+FROM nginxinc/nginx-unprivileged
 
+COPY --from=build /app/dist /usr/share/nginx/html
 
