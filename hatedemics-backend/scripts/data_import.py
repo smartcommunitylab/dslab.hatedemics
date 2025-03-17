@@ -7,23 +7,35 @@ import json  # Add this import
 from sqlalchemy import create_engine, text
 
 def load_channel_data(path, lang):
-    channel_data = pd.read_parquet(f'{path}/{lang}/channels.parquet')
+    channel_data = pd.read_parquet(f'{path}{lang}/channels.parquet')
     channel_data["linked_chats_ids"] = channel_data["linked_chats_ids"].apply(lambda x: str(x))
     return channel_data
 
 def load_graph_data(path, lang):
-    graph_data = pd.read_csv(f'{path}/{lang}/graph_nodes.csv')
-    edge_data = pd.read_csv(f'{path}/{lang}/graph_edges.csv')
+    graph_data = pd.read_csv(f'{path}{lang}/graph_nodes.csv')
+    edge_data = pd.read_csv(f'{path}{lang}/graph_edges.csv')
     return graph_data, edge_data
 
 def load_chats(path, lang):
     chats = []
-    for root, dirs, files in os.walk(f'{path}/{lang}/chat_topics'):
+    dir_path = f'{path}{lang}/chat_topics'
+    print(f"Checking directory: {dir_path}")  # Debugging output
+
+    if not os.path.exists(dir_path):
+        print(f"Directory {dir_path} does not exist!")
+        return pd.DataFrame()  # Return empty DataFrame
+
+    for root, dirs, files in os.walk(dir_path):
+        print(f"Current directory: {root}, Found files: {files}")  # Debugging output
         for file in files:
             if file.endswith('.json'):
                 chat_id = file.split('.')[0]
+                print(f"Found chat file: {file}, extracted id: {chat_id}")  # Debugging output
                 chats.append({"id": chat_id, "lang": lang})
-    return pd.DataFrame.from_records(chats)
+
+    df = pd.DataFrame.from_records(chats)
+    print(f"Final DataFrame:\n{df}")  # Debugging output
+    return df
                
 
 def to_json_str(x):
@@ -34,19 +46,19 @@ def to_json_str(x):
 def process_messages_data(path, lang, engine):
     # with engine.connect() as conn:
         #  conn.execute(text('DROP TABLE IF EXISTS messages'))    
-
-    for root, dirs, files in os.walk(f'{path}/{lang}/messages'):
+    for root, dirs, files in os.walk(f'{path}{lang}/messages'):
         for file in files:
             if file.endswith('.parquet'):
                 chat_id = file.split('.')[0]
                 df = pd.read_parquet(os.path.join(root, file))
                 df["channel_id"] = chat_id
-                if os.path.exists(f'{path}/{lang}/messages_labels/{chat_id}.tsv'):
-                    df_labels = pd.read_csv(f'{path}/{lang}/messages_labels/{chat_id}.tsv', sep = '\t')
+                print(f'{path}{lang}/messages_label/{chat_id}.tsv')
+                if os.path.exists(f'{path}{lang}/messages_label/{chat_id}.tsv'):
+                    df_labels = pd.read_csv(f'{path}{lang}/messages_label/{chat_id}.tsv', sep = '\t')
+                    df_labels = pd.read_csv(f'{path}{lang}/messages_label/{chat_id}.tsv', sep='\t')
+                    print(f"Labels DataFrame for {chat_id}:\n{df_labels.head()}")
                     df = df.merge(df_labels, on='id', how='left')
                 df['reactions'] = df['reactions'].apply(lambda x: to_json_str(x))
-                df['text_mentions'] = df['text_mentions'].apply(lambda x: to_json_str(x))
-                df['text_urls'] = df['text_urls'].apply(lambda x: to_json_str(x))
                 df['language'] = lang
                 df.to_sql('messages', con=engine, if_exists='append')
                 #df.to_parquet(f'{path}/{lang}/merged_messages/{chat_id}.parquet')
