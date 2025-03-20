@@ -826,21 +826,21 @@ export default {
               color="white"
               icon="mdi-comment-edit"
               @click.stop="commentVisible = !commentVisible"
-              class="ms-3"
+              class="ms-2"
             ></DynamicButton>
             <DynamicButton
               text="Save and close"
               color="white"
               icon="mdi-check"
               @click.stop="confirmAnnotation"
-              class="ms-3"
+              class="ms-2"
             ></DynamicButton>
             <DynamicButton
               text="Discard changes"
               color="white"
               icon="mdi-close"
               @click.stop="cancel"
-              class="ms-3"
+              class="ms-2"
             ></DynamicButton>
           </div>
         </v-container>

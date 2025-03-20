@@ -49,7 +49,7 @@ export default {
   },
   computed: {
     isManager: function () {
-      return this.loginStore.is_admin || this.loginStore.project_manager.includes(this.projectID)
+      return this.loginStore.is_admin || this.loginStore.project_manager?.includes(this.projectID)
     }
   },
   methods: {
