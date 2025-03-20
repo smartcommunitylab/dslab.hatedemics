@@ -93,7 +93,7 @@ export default {
               <v-card-actions> 
               <DynamicButton
               icon="mdi-text-box-plus"
-              :text="'Annotate'"
+              :text="'Start Dialogue'"
                   @click.prevent="openTaskList(id)"
                 />
                 <DynamicButton

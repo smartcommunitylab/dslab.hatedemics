@@ -192,7 +192,7 @@ export default {
                     <DynamicButton
                       v-if="task.is_active"
                       class="ms-3"
-                      text="Add annotation"
+                      text="Start dialogue"
                       color="blue-lighten-1"
                       icon="mdi-text-box-plus"
                       @click.stop="addAnnotation(task.id, 0)"
