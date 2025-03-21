@@ -54,17 +54,36 @@ public class ProxyController {
     @RequestMapping("/dialog/**")
     public ResponseEntity<?> dialogProxy(HttpServletRequest request) throws IOException {
         Map<String, String> customHeaders = Map.of("Authorization", createToken());
-        return proxy(request, "/api/proxy/dialog", dialogUrl, customHeaders);
+        try {
+            return proxy(request, "/api/proxy/dialog", dialogUrl, customHeaders);
+        } catch (Exception e) {
+            // repeat login
+            customHeaders = Map.of("Authorization", createToken());
+            return proxy(request, "/api/proxy/dialog", dialogUrl, customHeaders);
+        }
     }
 
     public ResponseEntity<?> proxy(HttpServletRequest request, String prefix, String endpoint,
             Map<String, String> customHeaders) throws IOException {
         String requestUrl = request.getRequestURI().replace(prefix, "");
-        String targetUrl = endpoint + requestUrl + "?" + request.getQueryString(); // Change this to the desired target
-                                                                                   // URL
+        String targetUrl = endpoint + requestUrl + (request.getQueryString() == null ? "" : ("?" + request.getQueryString())); // Change this to the desired target
+
+        HttpMethod method = HttpMethod.valueOf(request.getMethod());
 
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
+
+        URI uri = URI.create(targetUrl);
+        if (HttpMethod.GET.equals(method)) {
+            if (customHeaders != null) {
+                customHeaders.forEach((k, v) -> {
+                    headers.remove(k);
+                    headers.add(k, v);
+                });
+            }
+            return restTemplate.exchange(uri, method, new HttpEntity<>(headers), String.class);
+        }
+
         Enumeration<String> headerNames = request.getHeaderNames();
         while (headerNames.hasMoreElements()) {
             String headerName = headerNames.nextElement();
@@ -79,8 +98,6 @@ public class ProxyController {
         headers.remove("content-length");
         headers.remove("host");
 
-        HttpMethod method = HttpMethod.valueOf(request.getMethod());
-        URI uri = URI.create(targetUrl);
 
         if (request instanceof MultipartHttpServletRequest) {
             MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
