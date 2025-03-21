@@ -4,6 +4,7 @@ import loginApi from './login/loginApi';
 
 const axiosHatedemicsInstance = axios.create({
   baseURL: import.meta.env.VITE_APP_HATEDEMICS_API_URL,
+  timeout: 10000,
 });
 
 axiosHatedemicsInstance.interceptors.request.use(

@@ -161,16 +161,16 @@ export default {
     ></DialogGeneric>
     <v-row justify="center">
       <v-col cols="6">
-        <p class="text-h2">Project "{{ projectName }}" Tasks</p>
+        <p class="text-h2">Project "{{ projectName }}" Dialogues</p>
       </v-col>
       <v-col cols="6" class="text-right">
         <v-btn-group variant="elevated" density="comfortable">
           <v-btn icon="mdi-expand-all" @click="expandAll"></v-btn>
           <v-btn icon="mdi-collapse-all" @click="collapseAll"></v-btn>
         </v-btn-group>
-        <v-btn color="primary" variant="elevated" class="ms-3" @click.stop="dialogNewTask = true"
+        <!-- <v-btn color="primary" variant="elevated" class="ms-3" @click.stop="dialogNewTask = true"
           >Add New</v-btn
-        >
+        > -->
         <!--        <TaskDialog :users="this.users" :files="this.files" :projectID="Number(this.id)" class="ms-3"></TaskDialog>-->
       </v-col>
     </v-row>

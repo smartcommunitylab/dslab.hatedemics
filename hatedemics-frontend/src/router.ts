@@ -20,6 +20,7 @@ import annotationInterface from '@/components/AnnotationInterface.vue'
 import ProjectsView from '@/components/ProjectsList.vue'
 import tasks from '@/components/TaskList.vue'
 import loginApi from './services/login/loginApi';
+import AboutView from './views/AboutView.vue';
 
 
 // Pinia Store
@@ -90,10 +91,8 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/about',
     name: 'Credits',
-    // route level code-splitting
-    // this generates a separate chunk (About.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: async () => await import('@/views/AboutView.vue')
+
+    component: AboutView
   }
 ];
 

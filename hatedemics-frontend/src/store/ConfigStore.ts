@@ -6,7 +6,7 @@ export default defineStore(
   'config',
   () => {
     /** Dark Theme mode */
-    const theme: Ref<boolean> = ref(window.matchMedia('(prefers-color-scheme: dark)').matches);
+    const theme: Ref<boolean> = ref(window.matchMedia('(prefers-color-scheme: light)').matches);
 
     const locale: Ref<string> = ref(window.navigator.languages[0] ?? window.navigator.language);
 

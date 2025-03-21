@@ -37,21 +37,21 @@ const lightTheme = {
   },
 };
 
-const darkTheme = {
-  dark: true, // Tema scuro
-  colors: {
-    primary: '#FF5252', // Rosso acceso
-    secondary: '#B71C1C', // Rosso scuro
-    background: '#121212', // Sfondo scuro
-    surface: '#1E1E1E', // Sfondo per card
-    error: '#D50000', 
-    warning: '#FF5722',
-    success: '#4CAF50',
-    info: '#64B5F6',
-    textPrimary: '#FFFFFF',
-    textSecondary: '#BDBDBD',
-  },
-};
+// const darkTheme = {
+//   dark: true, // Tema scuro
+//   colors: {
+//     primary: '#FF5252', // Rosso acceso
+//     secondary: '#B71C1C', // Rosso scuro
+//     background: '#121212', // Sfondo scuro
+//     surface: '#1E1E1E', // Sfondo per card
+//     error: '#D50000', 
+//     warning: '#FF5722',
+//     success: '#4CAF50',
+//     info: '#64B5F6',
+//     textPrimary: '#FFFFFF',
+//     textSecondary: '#BDBDBD',
+//   },
+// };
 
 /**
  * Vuetify Config
@@ -66,7 +66,7 @@ let vuetifyConfig: VuetifyOptions = {
     defaultTheme: 'lightTheme', // Imposta il tema di default
     themes: {
       lightTheme,
-      darkTheme
+      // darkTheme
     }
   }
 };

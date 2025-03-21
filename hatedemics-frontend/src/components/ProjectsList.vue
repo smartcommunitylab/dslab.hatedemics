@@ -99,11 +99,11 @@ export default {
         <v-col cols="6">
           <p class="text-h2">Projects</p>
         </v-col>
-        <v-col cols="6" align="right">
+        <!-- <v-col cols="6" align="right">
           <v-btn color="primary" variant="elevated" @click="showDialogCreateProject = true">
             Add Project
           </v-btn>
-        </v-col>
+        </v-col> -->
       </v-row>
 
       <v-expansion-panels v-model="expandedPanels" multiple>

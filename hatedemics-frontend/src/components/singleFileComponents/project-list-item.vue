@@ -79,7 +79,7 @@ export default {
       <v-col cols="12">
         <v-card @click.prevent="openTaskList(id)">
           <v-row align="center">
-            <v-col cols="12" sm="3" md="6" xl="6" xs="6">
+            <v-col >
               <v-row class="d-flex justify-left">
                 <v-col>
                   <v-card-title>{{ title }}</v-card-title>
@@ -89,14 +89,14 @@ export default {
                 </v-col>
               </v-row>
             </v-col>
-            <v-col cols="12" lg="6" sm="9" md="6" xl="6" xs="6">
+            <v-col cols="2">
               <v-card-actions> 
               <DynamicButton
               icon="mdi-text-box-plus"
               :text="'Start Dialogue'"
                   @click.prevent="openTaskList(id)"
                 />
-                <DynamicButton
+                <!-- <DynamicButton
                   :icon="'mdi-file-document-multiple-outline'"
                   :text="'Manage Docs'"
                   @click.stop="manageDocs(id)"
@@ -105,7 +105,7 @@ export default {
                   :icon="'mdi-account-circle-outline'"
                   :text="'Manage Users'"
                   @click.stop="manageUsers()"
-                />
+                /> -->
 <!--                <DynamicButton-->
 <!--                  :icon="'mdi-format-list-checks'"-->
 <!--                  :text="'Manage Tasks'"-->
