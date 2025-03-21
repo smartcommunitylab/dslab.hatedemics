@@ -10,7 +10,6 @@ axiosHatedemicsInstance.interceptors.request.use(
   function (config) {
     const loginStore = useLoginStore();
     const token = loginStore.token;
-    if (!String(config.url).includes('www.') && !String(config.url).includes('http'))
       config.headers['Authorization'] = 'Bearer ' + token;
     return config;
   },
@@ -21,9 +20,6 @@ axiosHatedemicsInstance.interceptors.request.use(
 
 axiosHatedemicsInstance.interceptors.response.use(
   function (response) {
-    const loginStore = useLoginStore();
-    if (response.headers['bearer-refreshed'])
-      loginStore.updateBearer(response.headers['bearer-refreshed']);
     return response;
   },
   function (error) {

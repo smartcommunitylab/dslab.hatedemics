@@ -10,6 +10,8 @@ import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -19,6 +21,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
@@ -26,6 +29,8 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 @RestController
 @RequestMapping("/api/proxy")
 public class ProxyController {
+
+    private static final Logger log = LoggerFactory.getLogger(ProxyController.class);
 
     @Value("${generation.url}")
     private String generationUrl;
@@ -52,9 +57,11 @@ public class ProxyController {
         return proxy(request, "/api/proxy/dialog", dialogUrl, customHeaders);
     }
 
-    public ResponseEntity<?> proxy(HttpServletRequest request, String prefix, String endpoint, Map<String, String> customHeaders) throws IOException {
+    public ResponseEntity<?> proxy(HttpServletRequest request, String prefix, String endpoint,
+            Map<String, String> customHeaders) throws IOException {
         String requestUrl = request.getRequestURI().replace(prefix, "");
-        String targetUrl = endpoint + requestUrl + "?" + request.getQueryString(); // Change this to the desired target URL
+        String targetUrl = endpoint + requestUrl + "?" + request.getQueryString(); // Change this to the desired target
+                                                                                   // URL
 
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
@@ -64,7 +71,7 @@ public class ProxyController {
             headers.add(headerName, request.getHeader(headerName));
         }
         if (customHeaders != null) {
-            customHeaders.forEach((k,v) -> {
+            customHeaders.forEach((k, v) -> {
                 headers.remove(k);
                 headers.add(k, v);
             });
@@ -81,17 +88,31 @@ public class ProxyController {
             for (Map.Entry<String, MultipartFile> entry : multipartRequest.getFileMap().entrySet()) {
                 body.put(entry.getKey(), entry.getValue().getResource());
             }
-            org.springframework.http.HttpEntity<Map<String, Object>> entity = new org.springframework.http.HttpEntity<>(body, headers);
+            org.springframework.http.HttpEntity<Map<String, Object>> entity = new org.springframework.http.HttpEntity<>(
+                    body, headers);
             return restTemplate.exchange(uri, method, entity, String.class);
         } else {
             String body = request.getReader().lines().reduce("", (accumulator, actual) -> accumulator + actual);
-            org.springframework.http.HttpEntity<String> entity = new org.springframework.http.HttpEntity<>(body, headers);
-            return restTemplate.exchange(uri, method, entity, String.class);
+            org.springframework.http.HttpEntity<String> entity = new org.springframework.http.HttpEntity<>(body,
+                    headers);
+            try {
+                return restTemplate.exchange(uri, method, entity, String.class);
+            } catch (Exception e) {
+                log.warn("Token scaduto, rigenero...");
+                login(username, password);
+            
+                // Creiamo una nuova mappa mutabile se necessario
+                Map<String, String> mutableHeaders = new HashMap<>(customHeaders);
+                mutableHeaders.put("Authorization", createToken());
+            
+                HttpEntity<String> retryEntity = new HttpEntity<>(body, headers);
+                return restTemplate.exchange(uri, method, retryEntity, String.class);
+            }
         }
     }
 
     private String createToken() {
-        if (token == null || tokenUpdate + 1000*60*60 < System.currentTimeMillis()) {
+        if (token == null || tokenUpdate + 1000 * 60 * 60 < System.currentTimeMillis()) {
             login(username, password);
         }
         return "Bearer " + token;
@@ -107,14 +128,14 @@ public class ProxyController {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
 
-        MultiValueMap<String, String> map= new LinkedMultiValueMap<String, String>();
+        MultiValueMap<String, String> map = new LinkedMultiValueMap<String, String>();
         map.add("username", username);
         map.add("password", password);
 
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<MultiValueMap<String, String>>(map, headers);
 
         @SuppressWarnings({ "unchecked" })
-        Map<String,?> response = restTemplate.postForEntity(url, request, Map.class).getBody();
+        Map<String, ?> response = restTemplate.postForEntity(url, request, Map.class).getBody();
         token = response.get("access_token").toString();
         tokenUpdate = System.currentTimeMillis();
     }
