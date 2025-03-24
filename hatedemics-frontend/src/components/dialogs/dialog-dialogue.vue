@@ -92,7 +92,7 @@ export default {
       //   }
       // ]
       // vueThis.loadedOptions = true
-      axios.post(this.taskInfo['meta']['inside_type_endpoint'], d).then((response) => {
+      axios.post(import.meta.env.VITE_APP_HATEDEMICS_API_GEN_URL+'/dynamic_generation', d).then((response) => {
         vueThis.options = []
         for (let o of response.data) {
           for (let g of o.ground) {
