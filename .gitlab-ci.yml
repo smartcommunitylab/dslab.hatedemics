@@ -55,7 +55,7 @@ frontend-container-build:
   script:
     - docker login -u $DHUB_USER -p $DHUB_PASS
     - cd hatedemics-frontend
-    - docker build --build-arg VITE_APP_URL_TOKEN='https://hatedemics.smartcommunitylab.it/token' --build-arg VITE_APP_AXIOS_URL='https://hatedemics.smartcommunitylab.it/api/' --build-arg VITE_APP_HATEDEMICS_API_URL='https://hatedemics.smartcommunitylab.it/api/proxy/dialog' --build-arg VITE_APP_TITLE="Hatedemics" -f Dockerfile -t $CONTAINER_IMAGE_FRONTEND -t $CONTAINER_IMAGE_FRONTEND_LATEST .
+    - docker build --build-arg VITE_APP_URL_TOKEN='https://hatedemics.smartcommunitylab.it/token' --build-arg VITE_APP_HATEDEMICS_API_GEN_URL='https://hatedemics.smartcommunitylab.it/api/proxy/gen' --build-arg VITE_APP_AXIOS_URL='https://hatedemics.smartcommunitylab.it/api/' --build-arg VITE_APP_HATEDEMICS_API_URL='https://hatedemics.smartcommunitylab.it/api/proxy/dialog' --build-arg VITE_APP_TITLE="Hatedemics" -f Dockerfile -t $CONTAINER_IMAGE_FRONTEND -t $CONTAINER_IMAGE_FRONTEND_LATEST .
     - docker push $CONTAINER_IMAGE_FRONTEND
     - docker push $CONTAINER_IMAGE_FRONTEND_LATEST
   only:
