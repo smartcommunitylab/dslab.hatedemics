@@ -821,32 +821,32 @@ export default {
                 rows="2"
               ></v-textarea>
             </v-expand-transition>
-            <v-row dense class="mt-2">
-    <v-col cols="12" sm="auto">
+            <v-row class="mt-2 d-flex flex-wrap justify-center" dense>
+    <v-col cols="auto" class="d-flex justify-center">
       <DynamicButton
         text="Show comment"
         color="white"
         icon="mdi-comment-edit"
         @click.stop="commentVisible = !commentVisible"
-        class="w-100"
+        class="button-fixed-width"
       ></DynamicButton>
     </v-col>
-    <v-col cols="12" sm="auto">
+    <v-col cols="auto" class="d-flex justify-center">
       <DynamicButton
         text="Save and close"
         color="white"
         icon="mdi-check"
         @click.stop="confirmAnnotation"
-        class="w-100"
+        class="button-fixed-width"
       ></DynamicButton>
     </v-col>
-    <v-col cols="12" sm="auto">
+    <v-col cols="auto" class="d-flex justify-center">
       <DynamicButton
         text="Discard changes"
         color="white"
         icon="mdi-close"
         @click.stop="cancel"
-        class="w-100"
+        class="button-fixed-width"
       ></DynamicButton>
     </v-col>
   </v-row>
