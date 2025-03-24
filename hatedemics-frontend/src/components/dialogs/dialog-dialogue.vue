@@ -1,6 +1,7 @@
 <script>
 import { API } from "@/services";
-import axios from 'axios';
+import axiosHateGeneratorInstance from "../../services/hateGeneratorApi"
+
 export default {
   name: 'dialog-dialogue',
   props: [
@@ -92,7 +93,7 @@ export default {
       //   }
       // ]
       // vueThis.loadedOptions = true
-      axios.post(import.meta.env.VITE_APP_HATEDEMICS_API_GEN_URL+'/dynamic_generation', d).then((response) => {
+      axiosHateGeneratorInstance.post(import.meta.env.VITE_APP_HATEDEMICS_API_GEN_URL+'/dynamic_generation', d).then((response) => {
         vueThis.options = []
         for (let o of response.data) {
           for (let g of o.ground) {
