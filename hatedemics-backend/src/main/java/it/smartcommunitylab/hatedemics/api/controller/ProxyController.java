@@ -53,6 +53,7 @@ public class ProxyController {
 
     @RequestMapping("/dialog/**")
     public ResponseEntity<?> dialogProxy(HttpServletRequest request) throws IOException {
+        log.debug("Proxying request to dialog service");
         Map<String, String> customHeaders = Map.of("Authorization", createToken());
         try {
             return proxy(request, "/api/proxy/dialog", dialogUrl, customHeaders);
@@ -66,13 +67,13 @@ public class ProxyController {
     public ResponseEntity<?> proxy(HttpServletRequest request, String prefix, String endpoint,
             Map<String, String> customHeaders) throws IOException {
         String requestUrl = request.getRequestURI().replace(prefix, "");
+        log.debug("requestUrl",requestUrl);
         String targetUrl = endpoint + requestUrl + (request.getQueryString() == null ? "" : ("?" + request.getQueryString())); // Change this to the desired target
-
+        log.debug("targetUrl",targetUrl);
         HttpMethod method = HttpMethod.valueOf(request.getMethod());
 
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
-
         URI uri = URI.create(targetUrl);
         if (HttpMethod.GET.equals(method)) {
             if (customHeaders != null) {
@@ -83,7 +84,7 @@ public class ProxyController {
             }
             return restTemplate.exchange(uri, method, new HttpEntity<>(headers), String.class);
         }
-
+        log.debug("headers",headers);
         Enumeration<String> headerNames = request.getHeaderNames();
         while (headerNames.hasMoreElements()) {
             String headerName = headerNames.nextElement();
@@ -107,6 +108,7 @@ public class ProxyController {
             }
             org.springframework.http.HttpEntity<Map<String, Object>> entity = new org.springframework.http.HttpEntity<>(
                     body, headers);
+                    log.debug("entity",entity);
             return restTemplate.exchange(uri, method, entity, String.class);
         } else {
             String body = request.getReader().lines().reduce("", (accumulator, actual) -> accumulator + actual);
