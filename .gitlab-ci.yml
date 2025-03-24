@@ -1,0 +1,91 @@
+image: docker:latest
+
+services:
+  - docker:dind
+
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  SECURE_LOG_LEVEL: info
+  DS_JAVA_VERSION: 17
+  DOCKER_DRIVER: overlay
+  CONTAINER_IMAGE_BACKEND: smartcommunitylab/hatedemics-backend:$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA
+  CONTAINER_IMAGE_BACKEND_LATEST: smartcommunitylab/hatedemics-backend:$CI_COMMIT_REF_NAME-latest
+  CONTAINER_IMAGE_FRONTEND: smartcommunitylab/hatedemics-frontend:$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA
+  CONTAINER_IMAGE_FRONTEND_LATEST: smartcommunitylab/hatedemics-frontend:$CI_COMMIT_REF_NAME-latest
+  CONTAINER_CACHE_IMAGE: smartcommunitylab/playngo-engine:cache
+  SAST_JAVA_VERSION: 17
+  CS_IMAGE: ${CONTAINER_IMAGE_BACKEND_LATEST}
+
+include:
+  - template: Security/Container-Scanning.gitlab-ci.yml
+  - template: Security/Dependency-Scanning.gitlab-ci.yml
+  - template: Security/SAST.gitlab-ci.yml
+
+gemnasium-maven-dependency_scanning:
+  rules:
+    - if: '$CI_COMMIT_REF_NAME == "main"'
+
+semgrep-sast:
+  rules:
+    - if: '$CI_COMMIT_REF_NAME == "main"'
+
+backend-container-build:
+  stage: build
+  variables:
+    BUILDKIT_PROGRESS: plain
+    DOCKER_BUILDKIT: 1 
+  script:
+    - docker login -u $DHUB_USER -p $DHUB_PASS
+    - cd hatedemics-backend
+    - docker build -f Dockerfile -t $CONTAINER_IMAGE_BACKEND -t $CONTAINER_IMAGE_BACKEND_LATEST .
+    - docker push $CONTAINER_IMAGE_BACKEND
+    - docker push $CONTAINER_IMAGE_BACKEND_LATEST
+  only:
+    - prod
+
+frontend-container-build:
+  stage: build
+  variables:
+    BUILDKIT_PROGRESS: plain
+    DOCKER_BUILDKIT: 1 
+  script:
+    - docker login -u $DHUB_USER -p $DHUB_PASS
+    - cd hatedemics-frontend
+    - docker build --build-arg VITE_APP_URL_TOKEN='https://hatedemics.smartcommunitylab.it/token' --build-arg VITE_APP_AXIOS_URL='https://hatedemics.smartcommunitylab.it/api/' --build-arg VITE_APP_HATEDEMICS_API_URL='https://hatedemics.smartcommunitylab.it/api/proxy/dialog' --build-arg VITE_APP_TITLE="Hatedemics" -f Dockerfile -t $CONTAINER_IMAGE_FRONTEND -t $CONTAINER_IMAGE_FRONTEND_LATEST .
+    - docker push $CONTAINER_IMAGE_FRONTEND
+    - docker push $CONTAINER_IMAGE_FRONTEND_LATEST
+  only:
+    - prod
+
+container_scanning:
+  stage: test
+  dependencies:
+    - backend-container-build
+  variables:
+    DOCKER_IMAGE: ${CONTAINER_IMAGE_BACKEND_LATEST}
+    DOCKERFILE_PATH: "hatedemics-backend/Dockerfile"
+    GIT_STRATEGY: fetch
+    DOCKER_USER: ""
+    DOCKER_PASSWORD: ""
+  rules:
+    - if: '$CI_COMMIT_REF_NAME == "main"'
+
+deploy-prod:
+  stage: deploy
+  image: 
+    name: bitnami/kubectl:latest
+    entrypoint: ['']
+  environment:
+    name: dslab
+  script:
+    - echo "deploy backend"
+    - kubectl -n hatedemics-prod set image deployments/java-backend hatedemics-java-backend=$CONTAINER_IMAGE_BACKEND
+    - kubectl -n hatedemics-prod rollout status deployment java-backend
+    - kubectl -n hatedemics-prod set image deployments/frontend hatedemics-frontend=$CONTAINER_IMAGE_FRONTEND
+    - kubectl -n hatedemics-prod rollout status deployment frontend
+  only:
+    - prod
