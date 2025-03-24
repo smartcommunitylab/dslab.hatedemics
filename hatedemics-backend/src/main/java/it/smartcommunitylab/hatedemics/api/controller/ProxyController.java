@@ -131,6 +131,7 @@ public class ProxyController {
     }
 
     private String createToken() {
+        log.debug("Creating token");
         if (token == null || tokenUpdate + 1000 * 60 * 60 < System.currentTimeMillis()) {
             login(username, password);
         }
@@ -138,6 +139,7 @@ public class ProxyController {
     }
 
     private void login(String username, String password) {
+        log.debug("Logging in");
         RestTemplate restTemplate = new RestTemplate();
         String url = dialogUrl + "/token";
         Map<String, String> requestBody = new HashMap<>();
