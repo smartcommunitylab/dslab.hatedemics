@@ -821,27 +821,35 @@ export default {
                 rows="2"
               ></v-textarea>
             </v-expand-transition>
-            <DynamicButton
-              text="Show comment"
-              color="white"
-              icon="mdi-comment-edit"
-              @click.stop="commentVisible = !commentVisible"
-              class="ms-2"
-            ></DynamicButton>
-            <DynamicButton
-              text="Save and close"
-              color="white"
-              icon="mdi-check"
-              @click.stop="confirmAnnotation"
-              class="ms-2"
-            ></DynamicButton>
-            <DynamicButton
-              text="Discard changes"
-              color="white"
-              icon="mdi-close"
-              @click.stop="cancel"
-              class="ms-2"
-            ></DynamicButton>
+            <v-row dense class="mt-2">
+    <v-col cols="12" sm="auto">
+      <DynamicButton
+        text="Show comment"
+        color="white"
+        icon="mdi-comment-edit"
+        @click.stop="commentVisible = !commentVisible"
+        class="w-100"
+      ></DynamicButton>
+    </v-col>
+    <v-col cols="12" sm="auto">
+      <DynamicButton
+        text="Save and close"
+        color="white"
+        icon="mdi-check"
+        @click.stop="confirmAnnotation"
+        class="w-100"
+      ></DynamicButton>
+    </v-col>
+    <v-col cols="12" sm="auto">
+      <DynamicButton
+        text="Discard changes"
+        color="white"
+        icon="mdi-close"
+        @click.stop="cancel"
+        class="w-100"
+      ></DynamicButton>
+    </v-col>
+  </v-row>
           </div>
         </v-container>
       </v-col> </v-row

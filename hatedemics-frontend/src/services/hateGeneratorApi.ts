@@ -4,7 +4,7 @@ import loginApi from './login/loginApi';
 
 const axiosHateGeneratorInstance = axios.create({
   baseURL: import.meta.env.VITE_APP_HATEDEMICS_API_GEN_URL,
-  timeout: 10000,
+  timeout: 30000,
 });
 
 axiosHateGeneratorInstance.interceptors.request.use(
