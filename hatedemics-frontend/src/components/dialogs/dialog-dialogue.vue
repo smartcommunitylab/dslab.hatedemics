@@ -101,6 +101,7 @@ export default {
           }
           vueThis.options.push(o)
         }
+        console.log('ciao');
         vueThis.loadedOptions = true
         vueThis.$nextTick(function () {
           vueThis.scrollToBottom()
