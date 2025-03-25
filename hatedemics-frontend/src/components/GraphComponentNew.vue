@@ -16,6 +16,8 @@ const isFullScreen = ref(false);
 let graphInstance: any = null;
 const colorBy = ref("disabled");
 const sizeBy = ref("disabled");
+const loading = ref(true); // Loader attivo all'inizio
+
 let selectedNode: string | null = null;
 const tooltip = ref<{ show: boolean; x: number; y: number; node: any | null }>({
   show: false,
@@ -226,8 +228,14 @@ document.addEventListener("fullscreenchange", () => {
 
 
 onMounted(async () => {
+  loading.value = true; // Mostra il loader
+  try{
   await initData();
+  await nextTick(); // Attendi il prossimo aggiornamento del DOM
   initializeGraph();
+  } finally {
+   loading.value = false; // Nasconde il loader dopo il caricamento
+  }
   const erd = elementResizeDetectorMaker();
   if (!graphContainer.value) return;
   erd.listenTo(graphContainer.value, (el:any) => {
@@ -296,6 +304,16 @@ function zoomToNode(node: NodeObject) {
 </script>
 
 <template>
+      <v-overlay
+      :model-value="loading"
+      class="align-center justify-center"
+    >
+      <v-progress-circular
+        color="primary"
+        size="64"
+        indeterminate
+      ></v-progress-circular>
+    </v-overlay>
   <div class="graph-wrapper">
     <button class="fullscreen-btn" @click="toggleFullScreen">
       {{  t('graphInteraction.fs.go') }}
@@ -329,6 +347,18 @@ function zoomToNode(node: NodeObject) {
 </template>
 
 <style scoped>
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8); /* Bianco semi-trasparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* Assicura che sia sopra il grafo */
+}
 .graph-wrapper {
   position: relative;
   width: 100%;
