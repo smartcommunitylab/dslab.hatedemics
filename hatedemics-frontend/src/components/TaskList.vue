@@ -160,10 +160,11 @@ export default {
       :data="{ users: users, files: files, projectID: Number(projectID) }"
     ></DialogGeneric>
     <v-row justify="center">
-      <v-col cols="6">
-        <p class="text-h2">Project "{{ projectName }}" Dialogues</p>
+      <v-col cols="10">
+        <p class="text-h2"></p>
+        <h1 class="text-h5 font-weight-bold text-primary ma-4">Project "{{ projectName }}" Dialogues</h1>
       </v-col>
-      <v-col cols="6" class="text-right">
+      <v-col cols="2" class="text-right">
         <v-btn-group variant="elevated" density="comfortable">
           <v-btn icon="mdi-expand-all" @click="expandAll"></v-btn>
           <v-btn icon="mdi-collapse-all" @click="collapseAll"></v-btn>

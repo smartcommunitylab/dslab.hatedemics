@@ -115,25 +115,27 @@ const onPaginationChange = (options: any) => {
 
     <v-row>
       <!-- Sezione principale -->
-      <v-col cols="9">
-        <v-card class="pa-4  " elevation="0">
+      <v-col cols="8">
+        <v-card class="pa-4" elevation="0">
           <!-- <v-card-title class="text-h5 font-weight-bold text-primary">
             {{ msg }}
           </v-card-title>
           <v-divider class="mb-4"></v-divider> -->
-
-          <v-select
-            label="Language"
-            v-model="selectedLanguage"
-            :items="languages"
-            item-title="language"
-            item-value="value"
-            variant="outlined"
-            density="compact"
-            color="primary"
-            class="mb-4"
-          />
-
+          <v-row>
+            <v-col cols="4">
+              <v-select
+                label="Language"
+                v-model="selectedLanguage"
+                :items="languages"
+                item-title="language"
+                item-value="value"
+                variant="outlined"
+                density="compact"
+                color="primary"
+                class="mb-4"
+              />
+            </v-col>
+          </v-row>
           <GraphComponent :key="selectedLanguage" class="mb-4" />
 
           <!-- <v-text-field
@@ -175,13 +177,14 @@ const onPaginationChange = (options: any) => {
                 <td class="text-left">{{ item.n_out_recommended }}</td>
                 <td class="text-left">{{ item.iri?.toFixed(2) }}</td>
                 <td class="text-left">
-  <v-icon v-if="typeof item.iri === 'number' && item.iri >= 0" class="status-icon success">
-    mdi-check
-  </v-icon>
-  <v-icon v-else class="status-icon error">
-    mdi-close
-  </v-icon>
-</td>
+                  <v-icon
+                    v-if="typeof item.iri === 'number' && item.iri >= 0"
+                    class="status-icon success"
+                  >
+                    mdi-check
+                  </v-icon>
+                  <v-icon v-else class="status-icon error"> mdi-close </v-icon>
+                </td>
                 <td class="text-left"></td>
               </tr>
             </template>
@@ -190,7 +193,7 @@ const onPaginationChange = (options: any) => {
       </v-col>
 
       <!-- Sezione info canale -->
-      <v-col cols="3">
+      <v-col cols="4">
         <!-- <v-card class="pa-4 bg-surface" elevation="2">
           <v-card-title class="text-h5 font-weight-bold text-secondary">
             {{ t("channel.infoTitle") }}

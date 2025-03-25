@@ -95,16 +95,9 @@ export default {
     </v-container>
 
     <v-container fluid v-else>
-      <v-row justify="center">
-        <v-col cols="6">
-          <p class="text-h2">Projects</p>
-        </v-col>
-        <!-- <v-col cols="6" align="right">
-          <v-btn color="primary" variant="elevated" @click="showDialogCreateProject = true">
-            Add Project
-          </v-btn>
-        </v-col> -->
-      </v-row>
+
+          <h1 class="text-h5 font-weight-bold text-primary ma-4">Projects</h1>
+
 
       <v-expansion-panels v-model="expandedPanels" multiple>
         <template v-for="(projects, lang) in groupedProjects" :key="lang">

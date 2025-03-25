@@ -127,10 +127,10 @@ const loadMore = (event: { target: any; }) => {
     <v-row>
 
 
-      <v-col cols="9">
+      <v-col cols="8">
         <ChatTableComponent />
       </v-col>
-      <v-col cols="3">
+      <v-col cols="4">
         <SideBarInfoComponent :actions="false" />
       </v-col>
     </v-row>

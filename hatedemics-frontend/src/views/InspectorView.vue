@@ -133,7 +133,7 @@ const loadMore = (event: { target: any; }) => {
 
 
       <!-- Colonna Centrale: Tabella -->
-      <v-col cols="6">
+      <v-col cols="5">
         <TopicsTableComponent />
       </v-col>
 
@@ -146,7 +146,7 @@ const loadMore = (event: { target: any; }) => {
         </v-row>
       </v-col>
             <!-- Colonna dx: Sidebar con più spazio -->
-            <v-col cols="3">
+            <v-col cols="4">
         <SideBarInfoComponent :actions="false" />
       </v-col>
     </v-row>
