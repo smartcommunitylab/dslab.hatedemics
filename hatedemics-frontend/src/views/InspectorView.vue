@@ -89,7 +89,7 @@ const loadMore = (event: { target: any; }) => {
 
 <template>
   <v-container fluid>
-    <h1 class="text-h4 font-weight-bold mb-4">{{ msg }}</h1>
+    <h1 class="text-h5 font-weight-bold text-primary ma-4">{{ msg }}</h1>
     <v-row>
       <v-col cols="4">
         <v-autocomplete

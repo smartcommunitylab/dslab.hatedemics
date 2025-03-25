@@ -11,21 +11,18 @@ const topicsStore = useTopicsStore();
 const { topics, selectedTopic } = storeToRefs(topicsStore);
 
 const selectionType = ref<"channel" | "topic">("channel");
-const selectedChannelView = ref<"hate" | "checkworthy" | "generic">("hate");
+const selectedChannelView = ref<"hate" | "checkworthy" >("hate");
 const keyMapNegative = {
     hate: "hate",
     checkworthy: "is_checkworthy",
-    generic: "wordcloud",
   };
   const keyMapPositive = {
     hate: "non_hate",
     checkworthy: "isnot_checkworthy",
-    generic: "generic_wordcloud",
   };
 const typeItems = [
   { label: t("wordclouds.hate"), value: "hate" },
   { label: t("wordclouds.checkworthy"), value: "checkworthy" },
-  { label: t("wordclouds.generic"), value: "generic" },
 ];
 
 const extractWords = (data: any, key: string) =>
@@ -42,22 +39,22 @@ const wordsNegative = computed(() => {
   topicsStore.selectTopic(null);
 
 
-  if (selectedChannelView.value === "generic") {
-    return extractWords(
-      {
-        ...(({ wordclouds, ...rest }) => rest)(channelData.value),
-        wordcloud: Object.values(channelData.value.wordclouds || {}).reduce(
-          (acc: any, topic: any) => {
-            if (!topic["topic_label"]) return acc;
-            acc[topic["topic_label"]] = topic["topic-count"];
-            return acc;
-          },
-          {}
-        ),
-      },
-      "wordcloud"
-    );
-  }
+  // if (selectedChannelView.value === "generic") {
+  //   return extractWords(
+  //     {
+  //       ...(({ wordclouds, ...rest }) => rest)(channelData.value),
+  //       wordcloud: Object.values(channelData.value.wordclouds || {}).reduce(
+  //         (acc: any, topic: any) => {
+  //           if (!topic["topic_label"]) return acc;
+  //           acc[topic["topic_label"]] = topic["topic-count"];
+  //           return acc;
+  //         },
+  //         {}
+  //       ),
+  //     },
+  //     "wordcloud"
+  //   );
+  // }
   return extractWords(channelData.value, keyMapNegative[selectedChannelView.value]);
 });
 watch(selectionType, (newVal) => {
@@ -93,7 +90,7 @@ const getWordColor = ([, weight]: [string, number]) => {
     100 * normalizedWeight
   )}, 0)`;
 };
-const getTitle = (type: "hate" | "checkworthy" | "generic", isNegative: boolean): string => {
+const getTitle = (type: "hate" | "checkworthy" , isNegative: boolean): string => {
   const keyMap = isNegative ? keyMapNegative : keyMapPositive;
   return keyMap[type] ? t(`wordclouds.titles.${keyMap[type]}`) : "WordCloud";
 };
@@ -114,32 +111,32 @@ const onWordClick = (word: string) => console.log(word);
       item-value="value"
       label="Seleziona tipo WordCloud"
     />
-    <div>
-      <div v-if="wordsPositive.length"  class="wordcloud-container">
-        <v-typography class="text-h5	 title text-error">
-          {{ getTitle(selectedChannelView, false) }}
-        </v-typography>        <vue3-word-cloud
-          v-if="wordsPositive.length"
-          :words="wordsPositive"
-          :font-family="'Love Ya Like A Sister, serif'"
-          :color="getWordColor"
-          @click="onWordClick"
-        />
-      </div>
-      <div v-if="wordsNegative.length"  class="wordcloud-container">
-        <v-typography  class="text-h5 title text-error">
-          {{ getTitle(selectedChannelView, true) }}
-        </v-typography>
-        <vue3-word-cloud
-          v-if="wordsNegative.length"
-          :words="wordsNegative"
-          :font-family="'Love Ya Like A Sister, serif'"
-          :color="getWordColor"
-          @click="onWordClick"
-        />
-      </div>
+    <div v-if="wordsPositive.length" class="wordcloud-container bordered">
+  <v-typography class="text-h5 title text-error">
+    {{ getTitle(selectedChannelView, false) }}
+  </v-typography>
+  <vue3-word-cloud
+    v-if="wordsPositive.length"
+    :words="wordsPositive"
+    :font-family="'Love Ya Like A Sister, serif'"
+    :color="getWordColor"
+    @click="onWordClick"
+  />
+</div>
+
+<div v-if="wordsNegative.length" class="wordcloud-container bordered">
+  <v-typography class="text-h5 title text-error">
+    {{ getTitle(selectedChannelView, true) }}
+  </v-typography>
+  <vue3-word-cloud
+    v-if="wordsNegative.length"
+    :words="wordsNegative"
+    :font-family="'Love Ya Like A Sister, serif'"
+    :color="getWordColor"
+    @click="onWordClick"
+  />
+</div>
     </div>
-  </div>
 
   <div v-else>
     <v-select
@@ -168,12 +165,40 @@ const onWordClick = (word: string) => console.log(word);
   align-items: center;
   gap: 20px;
   height: 200px;
-padding: 16px;
+padding: 20px;
+background-color: #ffffff;
+
 }
+/* .title {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+} */
+/* .wordcloud-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background-color: #ffffff;
+} */
+
+.bordered {
+  border: 2px solid #ddd; /* Bordo sottile grigio */
+  border-radius: 8px; /* Angoli leggermente arrotondati */
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1); /* Leggera ombra */
+}
+
 .title {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px; /* Distanza tra titolo e wordcloud */
+  border-bottom: 2px solid #ff5252; /* Sottolineatura */
+  padding-bottom: 5px;
+  text-align: center;
+  width: 100%;
 }
 </style>

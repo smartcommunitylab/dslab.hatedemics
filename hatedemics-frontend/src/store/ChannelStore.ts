@@ -16,34 +16,34 @@ export const useChannelsStore = defineStore("channelsStore", () => {
   const topicStore = useTopicsStore();
   const sort = ref<any>({ key: "IRI", order: "desc" });
 
-  
+
   function initChannelsInfo(data: ChannelInfo[]) {
     channelsInfo.value = processingChannelInfo(data);
   }
   function selectOrder(key: string, order: string) {
     sort.value = { key: key, order: order };
   }
-  async function selectChannelInfo(channel: ChannelInfo|string) {
+  async function selectChannelInfo(channel: ChannelInfo | string) {
     if (typeof channel === "string") {
-      let response  =await dispatchGetChannel(channel);
+      let response = await dispatchGetChannel(channel);
       if (!response.success) return
     } else {
       if (channel) {
-      const processedChannel = Array.isArray(channel?.linked_chats_ids) ? channel : processingSingleChannelInfo(channel);
-    selectedChannelInfo.value = processedChannel; 
-    chatStore.initChats([
-      { id: processedChannel.id },
-      ...(
-        processedChannel.linked_chats_ids.length > 0
-          ? processedChannel.linked_chats_ids.map((id: any) => ({ id }))
-          : []
-      )
-    ]); 
-    chatStore.selectChat(processedChannel.id);
-    topicStore.dispatchGetTopics(processedChannel.id);
-  }
-    console.log("selected")
-  }
+        const processedChannel = Array.isArray(channel?.linked_chats_ids) ? channel : processingSingleChannelInfo(channel);
+        selectedChannelInfo.value = processedChannel;
+        chatStore.initChats([
+          { id: processedChannel.id },
+          ...(
+            processedChannel.linked_chats_ids.length > 0
+              ? processedChannel.linked_chats_ids.map((id: any) => ({ id }))
+              : []
+          )
+        ]);
+        chatStore.selectChat(processedChannel.id);
+        topicStore.dispatchGetTopics(processedChannel.id);
+      }
+      console.log("selected")
+    }
   };
 
   function selectLanguage(language: string) {
@@ -71,11 +71,11 @@ export const useChannelsStore = defineStore("channelsStore", () => {
       return { success: false, status: _error.response?.status, content: null };
     }
   }
-  async function dispatchGetChannels({ page = 0, size = 10, sort = "IRI,desc" },id?:string): Promise<APIResponse<null>> {
+  async function dispatchGetChannels({ page = 0, size = 10, sort = "IRI,desc" }, id?: string): Promise<APIResponse<null>> {
     try {
       const { status, data } = await API.channels.getChannelsInfo(selectedLanguage.value!, {
         page, size, sort
-      },id);
+      }, id);
       if (status === 200) {
         initChannelsInfo(data.content);
         return { success: true, total: data.totalElements, content: data.content };
@@ -106,4 +106,5 @@ export const useChannelsStore = defineStore("channelsStore", () => {
     dispatchGetChannel
   };
 }, {
-  persist: true});
+  persist: true
+});

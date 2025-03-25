@@ -10,21 +10,21 @@ const logout = () => {
 /** Drawer menu items */
 const items: DrawerMenuItem[] = [
   {
-    title: 'Channel Dashboard',
+    title: 'Data',
     icon: 'mdi-information',
     items: [
       {
-        title: 'Channels',
+        title: 'Network',
         icon: 'mdi-graph',
         to: { name: 'Channels' }
       },
       {
-        title: 'Inspector',
+        title: 'Channel',
         icon: 'mdi-text-box',
         to: { name: 'Inspector' }
       },
       {
-        title: 'Discussion',
+        title: 'Conversation',
         icon: 'mdi-forum',
         to: { name: 'Discussion' }
       }

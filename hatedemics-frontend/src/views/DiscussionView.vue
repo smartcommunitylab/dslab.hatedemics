@@ -17,6 +17,7 @@ import { useTopicsStore } from '@/store/TopicStore';
 const topicsStore = useTopicsStore();
 const { t } = useI18n();
 const channelsStore = useChannelsStore();
+const msg = ref<string>(t("conversation.title"));
 const chatStore = useChatsStore();
 const messagesStore = useMessagesStore();
 const { messages } = storeToRefs(messagesStore);
@@ -72,6 +73,7 @@ const loadMore = (event: { target: any; }) => {
 <template>
   <v-container fluid>
     <!-- <h1 class="text-h4 font-weight-bold mb-4">{{ msg }}</h1> -->
+    <h1 class="text-h5 font-weight-bold text-primary ma-4">{{ msg }}</h1>
 
     <!-- Selettori di Canale e Chat -->
     <v-row>

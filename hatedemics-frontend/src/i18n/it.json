@@ -8,16 +8,19 @@
         "title": "Benvenuti in Hatedemics"
     },
     "inspect": {
-        "title": "Topics"
+        "title": "Panoramica del Canale"
     },
     "channel": {
-        "title": "Canali",
+        "title": "Esplorazione della Rete",
         "infoTitle": "Informazioni sul Canale"
     },
     "project": {
         "noProject": "Nessun progetto disponibile",
         "noData": "Nessun dato disponibile" 
     },
+    "conversation": {
+        "title": "Conversazione"
+    },  
     "channelTable": {
         "header": {
             "date": "Data",
@@ -27,7 +30,8 @@
             "IRI": "Infodemic Risk",
             "hs": "Hate Speech",
             "nInRecommendations": "Raccomandazioni in entrata",
-            "nOutRecommendations": "Raccomandazioni in uscita"
+            "nOutRecommendations": "Raccomandazioni in uscita",
+            "expandable": "Espandibile"
         }
     },
     "language": {
@@ -41,23 +45,23 @@
             "disable": "Disabilita colore",
             "iri": "Infodemic Risk",
             "hs": "Hate Speech",
-            "in": "In degree",
-            "out": "Out degree"
+            "in": "In recommendations",
+            "out": "Out recommendations"
         },
         "size": {
             "disable": "Disabilita dimensione",
             "iri": "Infodemic Risk",
             "hs": "Hate Speech",
-            "in": "In degree",
-            "out": "Out degree"
+            "in": "In recommendations",
+            "out": "Out recommendations"
         },
         "tooltip": {
             "id": "ID Canale:",
             "iri": "Infodemic Risk:",
             "hs": "Hate Speech:",
             "cw": "Check Worthy:",
-            "in": "In degree:",
-            "out": "Out degree:"
+            "in": "In recommendations:",
+            "out": "Out recommendations:"
         },
         "fs": {
             "exit": "Finestra",
@@ -90,7 +94,7 @@
         "chats": "Chat",
         "emptySelection": "Nessuna selezione. Scegliere un canale per visualizzare le statistiche",
         "noData": "Nessun dato disponibile",
-        "topics": "Argomenti",
+        "topics": "Esplora il canale",
         "hs_percentage": "Hate Speech:",
         "cw_percentage": "Check Worthy:"
     },

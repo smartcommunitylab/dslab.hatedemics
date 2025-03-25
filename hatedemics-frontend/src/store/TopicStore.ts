@@ -12,7 +12,8 @@ export const useTopicsStore = defineStore("topicsStore", () => {
   const selectedChannelTopic = ref<Topic | null>(null);
 
   function initTopics(data: any) {
-    generic.value = {
+    if (data)
+      generic.value = {
       chat_description: data["chat_description"],
       chat_name: data["chat_name"],
       hs_percentage: data["hs_percentage"],
@@ -23,7 +24,13 @@ export const useTopicsStore = defineStore("topicsStore", () => {
       non_hate: data["npw"]["hs"]["non-hate"],
       wordclouds: data["topics"],
     };
-
+    else {
+      generic.value = {
+        chat_description: "",
+        chat_name: "",
+      };
+    }
+    if (data?.topics)
     topics.value = Object.keys(data.topics).map((key) => ({
       name: data.topics[key]["topic_label"],
       count_percentage: data.topics[key]["topic-count_percentage"],
@@ -33,6 +40,9 @@ export const useTopicsStore = defineStore("topicsStore", () => {
       hate_npw: data.npw.topics[key]["topic-hate_npw"],
       nonhate_npw: data.npw.topics[key]["topic-nonhate_npw"],
     }));
+    else {
+      topics.value = [];
+    }
   }
 
   function selectTopic(topic: Topic|null) {

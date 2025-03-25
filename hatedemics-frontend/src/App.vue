@@ -93,6 +93,7 @@ onMounted(() => {
       app
       permanent
     >
+    
       <drawer-component />
     </v-navigation-drawer>
 
@@ -101,7 +102,8 @@ onMounted(() => {
       <v-btn v-if="canGoBack" icon @click="$router.back()">
         <v-icon>mdi-arrow-left</v-icon>
       </v-btn>
-      <!-- <v-app-bar-title tag="h1">{{ title }}</v-app-bar-title> -->
+      
+      <v-app-bar-title tag="h1" class="font-weight-bold">{{ title }}</v-app-bar-title>
       <v-spacer />
       <app-bar-menu-component />
       <v-progress-linear

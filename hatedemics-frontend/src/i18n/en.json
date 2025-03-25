@@ -8,11 +8,14 @@
     },
 
     "inspect": {
-        "title": "Topics"
+        "title": "Channel overview"
     },
     "channel": {
-        "title": "Channels",
+        "title": "Network exploration",
         "infoTitle": "Channel information"
+    },
+    "conversation": {
+        "title": "Conversation"
     },
     "project": {
         "noProject": "No projects available",
@@ -22,11 +25,12 @@
         "header": {
             "date": "Date",
             "id": "ID",
-            "messages": "Messages",
-            "partecipants": "Users",
+            "messages": "Number of messages",
+            "partecipants": "Number of users",
             "IRI": "Infodemic Risk",
             "nInRecommendations": "In Recommendations",
-            "nOutRecommendations": "Out Recommendations"
+            "nOutRecommendations": "Out Recommendations",
+            "expandable": "Expandable"
         }
     },
     "language": {
@@ -40,23 +44,23 @@
             "disable": "Disable color",
             "iri": "Color: Infodemic Risk",
             "hs": "Color: Hate Speech",
-            "in": "Color: In degree",
-            "out": "Color: Out degree"
+            "in": "Color: In Reccomendations",
+            "out": "Color: Out Reccomendations"
         },
         "size": {
             "disable": "Disable size",
             "iri": "Size: Infodemic Risk",
             "hs": "Size: Hate Speech",
-            "in": "Size: In degree",
-            "out": "Size: Out degree"
+            "in": "Size: In reccomendations",
+            "out": "Size: Out reccomendations"
         },
         "tooltip": {
             "id": "Channel ID:",
             "iri": "Infodemic Risk:",
             "hs": "Hate Speech:",
             "cw": "Check Worthy:",
-            "in": "In degree:",
-            "out": "Out degree:"
+            "in": "Size: In reccomendations",
+            "out": "Color: Out Reccomendations"
         },
         "fs": {
             "exit": "Exit",
@@ -86,7 +90,7 @@
         "mainTopics": "Main topics:",
         "messages": "Go to conversation",
         "emptySelection": "No selection yet. Please select a channel",
-        "topics": "Topics",
+        "topics": "Explore Channel",
         "channels": "Channels",
         "chats": "Chats",
         "hs_percentage": "Hate Speech:",
