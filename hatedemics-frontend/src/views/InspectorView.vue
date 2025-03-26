@@ -24,12 +24,12 @@ const topicsStore = useTopicsStore();
 const { selectedChannelInfo, channelsInfo } = storeToRefs(channelsStore);
 const { selectedChat, chats } = storeToRefs(chatStore);
 const { topics } = storeToRefs(topicsStore);
-const search = ref('');
+const search = ref("");
 const loading = ref(false);
 const msg = ref<string>(t("inspect.title"));
-  let page = 0;
-  const size = 10;
-  let allLoaded = false;
+let page = 0;
+const size = 10;
+let allLoaded = false;
 
 // onMounted(async () => {
 //   const { success, status } =   await topicsStore.dispatchGetTopics(selectedChannelInfo?.value?.id!);
@@ -46,15 +46,17 @@ const fetchChannels = async (reset = false) => {
   if (allLoaded || loading.value) return;
   loading.value = true;
   try {
-    const {success,total ,content } =  await channelsStore.dispatchGetChannels({page,size},search.value);
+    const { success, total, content } = await channelsStore.dispatchGetChannels(
+      { page, size },
+      search.value
+    );
     if (!success) {
       console.error("API error, status:", total);
       return;
     }
-    if (content)
-      channelsInfo.value = content;
+    if (content) channelsInfo.value = content;
   } catch (error) {
-    console.error('Error fetching channels:', error);
+    console.error("Error fetching channels:", error);
   } finally {
     loading.value = false;
   }
@@ -78,13 +80,12 @@ const onSearch = (newSearch: string) => {
   fetchChannels(true);
 };
 
-const loadMore = (event: { target: any; }) => {
+const loadMore = (event: { target: any }) => {
   const target = event.target;
   if (target.scrollTop + target.clientHeight >= target.scrollHeight - 10) {
     fetchChannels();
   }
 };
-
 </script>
 
 <template>
@@ -107,7 +108,7 @@ const loadMore = (event: { target: any; }) => {
           @update:search="onSearch"
           @scroll.passive="loadMore"
           clearable
-          />
+        />
       </v-col>
 
       <v-col cols="4">
@@ -124,14 +125,19 @@ const loadMore = (event: { target: any; }) => {
       </v-col>
 
       <v-col cols="4" class="d-flex justify-center">
-            <v-btn color="primary" variant="elevated" @click="goToChats">
-              {{ t("channelInfo.messages") }}
-            </v-btn>
-          </v-col>
+        <v-btn
+          color="primary"
+          variant="elevated"
+          block
+          class="pa-8 font-weight-bold text-h5"
+          @click="goToChats"
+          prepend-icon="mdi-forum"
+        >
+          {{ t("channelInfo.messages") }}
+        </v-btn>
+      </v-col>
     </v-row>
     <v-row>
-
-
       <!-- Colonna Centrale: Tabella -->
       <v-col cols="5">
         <TopicsTableComponent />
@@ -145,12 +151,10 @@ const loadMore = (event: { target: any; }) => {
           </v-col>
         </v-row>
       </v-col>
-            <!-- Colonna dx: Sidebar con più spazio -->
-            <v-col cols="4">
+      <!-- Colonna dx: Sidebar con più spazio -->
+      <v-col cols="4">
         <SideBarInfoComponent :actions="false" />
       </v-col>
     </v-row>
   </v-container>
 </template>
-
-

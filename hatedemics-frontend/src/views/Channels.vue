@@ -49,7 +49,7 @@ const headers = reactive([
   },
   {
     title: t("channelTable.header.nOutRecommendations"),
-    key: "n_out_recommendation",
+    key: "n_out_recommended",
     sortable: true,
   },
   { title: t("channelTable.header.IRI"), key: "IRI", sortable: true },

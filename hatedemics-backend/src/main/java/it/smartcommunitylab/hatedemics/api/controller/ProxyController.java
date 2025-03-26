@@ -59,6 +59,7 @@ public class ProxyController {
             return proxy(request, "/api/proxy/dialog", dialogUrl, customHeaders);
         } catch (Exception e) {
             // repeat login
+            token = null;
             customHeaders = Map.of("Authorization", createToken());
             return proxy(request, "/api/proxy/dialog", dialogUrl, customHeaders);
         }

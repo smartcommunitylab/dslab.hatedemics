@@ -41,14 +41,14 @@
     },
     "graphInteraction": {
         "color": {
-            "disable": "Disable color",
+            "disable": "Select node color",
             "iri": "Color: Infodemic Risk",
             "hs": "Color: Hate Speech",
             "in": "Color: In Reccomendations",
             "out": "Color: Out Reccomendations"
         },
         "size": {
-            "disable": "Disable size",
+            "disable": "Select node size",
             "iri": "Size: Infodemic Risk",
             "hs": "Size: Hate Speech",
             "in": "Size: In reccomendations",
@@ -59,8 +59,8 @@
             "iri": "Infodemic Risk:",
             "hs": "Hate Speech:",
             "cw": "Check Worthy:",
-            "in": "Size: In reccomendations",
-            "out": "Color: Out Reccomendations"
+            "in": "In reccomendations:",
+            "out": "Out Reccomendations:"
         },
         "fs": {
             "exit": "Exit",
@@ -90,7 +90,8 @@
         "mainTopics": "Main topics:",
         "messages": "Go to conversation",
         "emptySelection": "No selection yet. Please select a channel",
-        "topics": "Explore Channel",
+        "exploreChannel": "Explore Channel",
+        "topics": "Main Topics",
         "channels": "Channels",
         "chats": "Chats",
         "hs_percentage": "Hate Speech:",

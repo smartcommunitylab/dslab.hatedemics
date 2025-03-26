@@ -94,7 +94,8 @@
         "chats": "Chat",
         "emptySelection": "Nessuna selezione. Scegliere un canale per visualizzare le statistiche",
         "noData": "Nessun dato disponibile",
-        "topics": "Esplora il canale",
+        "topics": "Argomenti principali",
+        "exploreChannel": "Esplora il canale",
         "hs_percentage": "Hate Speech:",
         "cw_percentage": "Check Worthy:"
     },

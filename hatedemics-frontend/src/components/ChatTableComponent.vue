@@ -92,16 +92,17 @@ const startDialogue = async (message: any) => {
     //get projectID  by lang and target
     const target = cleanString(message.target); //message.target;
     const lan = selectedLanguage.value;
+
     try {
       const response = await dialogApi.getProjects();
-    const projects = response.data;
-    // get id of project with name Target - Language
-    const projectID = projects.find((p:any) => p.name === `${target}-${lan}`)?.id;
-    if (projectID) {
-      router.push({ name: "tasks", params: { projectID } });
-    } else {
-      showSnackbar(t("message.dialog.noProject"));
-    }
+      const projects = response.data;
+      // get id of project with name Target - Language
+      const projectID = projects.find((p: any) => p.name === `${target}-${lan}`)?.id;
+      if (projectID) {
+        router.push({ name: "tasks", params: { projectID } });
+      } else {
+        showSnackbar(t("message.dialog.noProject"));
+      }
     } catch (error) {
       showSnackbar(t("message.dialog.error"));
     }
@@ -176,7 +177,7 @@ watch(
 );
 const getColor = (user: string) => {
   if (!user) return "#f5f5f5";
-  const colors = [    
+  const colors = [
     "#d1f0d1", // Verde chiaro pastello 🌿
     "#ffdede", // Rosa tenue 🌸
     "#d1e0fa", // Azzurro pastello ☁️
@@ -187,7 +188,7 @@ const getColor = (user: string) => {
     "#e3d7fc", // Lilla pastello 🎀
     "#d4eaff", // Celeste leggero 🌊
     "#e9f7d3", // Verde menta tenue 🍃
-    ];
+  ];
 
   const hashCode = (str: string) => {
     let hash = 0;
@@ -208,13 +209,18 @@ const getColor = (user: string) => {
       <v-col cols="12" md="3">
         <v-text-field
           v-model="filters.target"
-          :label= "t('message.filter.target')"
+          :label="t('message.filter.target')"
           clearable
           dense
         />
       </v-col>
       <v-col cols="12" md="3">
-        <v-text-field v-model="filters.topic" :label="t('message.filter.topic')" clearable dense />
+        <v-text-field
+          v-model="filters.topic"
+          :label="t('message.filter.topic')"
+          clearable
+          dense
+        />
       </v-col>
       <v-col cols="12" md="3">
         <v-select
@@ -323,7 +329,7 @@ const getColor = (user: string) => {
       <v-list>
         <v-list-item
           @click="startDialogue(selectedMessage)"
-          :disabled="isEmptyOrSpaces(selectedMessage?.target!)"
+          :disabled="isEmptyOrSpaces(selectedMessage?.target!) || selectedMessage?.target?.includes('OTHER')"
           :class="{
             'has-target': selectedMessage?.target,
             'no-target': !selectedMessage?.target,

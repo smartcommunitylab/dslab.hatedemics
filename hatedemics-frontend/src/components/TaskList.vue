@@ -165,10 +165,10 @@ export default {
         <h1 class="text-h5 font-weight-bold text-primary ma-4">Project "{{ projectName }}" Dialogues</h1>
       </v-col>
       <v-col cols="2" class="text-right">
-        <v-btn-group variant="elevated" density="comfortable">
+        <!-- <v-btn-group variant="elevated" density="comfortable">
           <v-btn icon="mdi-expand-all" @click="expandAll"></v-btn>
           <v-btn icon="mdi-collapse-all" @click="collapseAll"></v-btn>
-        </v-btn-group>
+        </v-btn-group> -->
         <!-- <v-btn color="primary" variant="elevated" class="ms-3" @click.stop="dialogNewTask = true"
           >Add New</v-btn
         > -->
@@ -178,7 +178,7 @@ export default {
 
     <v-list lines="two">
       <v-expansion-panels multiple v-model="taskPanels">
-        <v-expansion-panel v-for="task of tasks" :key="task.id" :value="'task-' + task.id">
+        <v-expansion-panel v-for="task of tasks" :key="task.id" :value="'task-' + task.id" >
           <v-expansion-panel-title class="item-title">
             <v-row no-gutters>
               <v-col class="d-flex justify-start" cols="12">
