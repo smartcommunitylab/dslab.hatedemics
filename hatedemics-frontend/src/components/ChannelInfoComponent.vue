@@ -49,13 +49,13 @@ watch(selectedChannelInfo, async (newVal) => {
         <v-row dense>
           <v-col cols="12" sm="6" v-if="selectedChannelInfo?.preprocessed_about">
             <v-icon class="mr-2" color="primary">mdi-information</v-icon>
-            <span class="font-weight-bold">{{ t("channelInfo.about") }}:</span>
+            <span class="font-weight-bold">{{ t("channelInfo.about") }}</span>
             <span class="text-wrap">{{ selectedChannelInfo.preprocessed_about }}</span>
           </v-col>
 
           <v-col cols="12" sm="6" v-if="selectedChannelInfo?.id">
             <v-icon class="mr-2" color="primary">mdi-identifier</v-icon>
-            <span class="font-weight-bold">{{ t("channelInfo.channelId") }}:</span>
+            <span class="font-weight-bold">{{ t("channelInfo.channelId") }}</span>
             {{ selectedChannelInfo.id }}
           </v-col>
 

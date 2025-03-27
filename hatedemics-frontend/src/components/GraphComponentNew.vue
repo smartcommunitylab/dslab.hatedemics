@@ -73,8 +73,10 @@ const scaleNodeSize = (value: number, min: number, max: number, sizeMin: number,
    */
 const getNodeSize = (node: any, sizeBy: string) => {
   switch (sizeBy) {
+    case "iri":
+      return scaleNodeSize(node.iri, 0, 1, 5, 50); // hs tra 0 e 1 → grandezza tra 5 e 50
     case "hs":
-      return scaleNodeSize(node.hs, 0, 1, 5, 15); // hs tra 0 e 1 → grandezza tra 5 e 15
+      return scaleNodeSize(node.hs, 0, 1, 5, 50); // hs tra 0 e 1 → grandezza tra 5 e 50
     case "out_degree":
       return scaleNodeSize(node.out_degree, 0, 10, 5, 20); // out_degree tra 0 e 10 → 5-20
     case "in_degree":
@@ -175,6 +177,7 @@ const initializeGraph = () => {
 
 const selectNode = (node: any) => {
   selectedNode = node.id;
+
   resetHighlighting();
 
   // Trova i nodi collegati
@@ -203,6 +206,7 @@ const selectNode = (node: any) => {
 };
 
 const resetHighlighting = () => {
+  colorBy.value = "disabled";
   graphInstance.nodeColor(null);
   graphInstance.linkColor((link:any) => defaultLinkColors.get(link) || "gray");
 };

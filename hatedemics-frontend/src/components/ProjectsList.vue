@@ -59,14 +59,15 @@ export default {
         English: [],
         Polish: [],
         Italian: [],
-        Español: [],
+        Spanish: [],
+        Maltese: [],
         Other: []
       };
       if (!this.projects) return groups;
 
       this.projects.forEach(project => {
-        const match = project.name.match(/(EN|PL|IT|ES)$/);
-        const langMap = { EN: 'English', PL: 'Polish', IT: 'Italian', ES: 'Español' };
+        const match = project.name.match(/(EN|PL|IT|ES|MT)$/);
+        const langMap = { EN: 'English', PL: 'Polish', IT: 'Italian', ES: 'Spanish', MT: 'Maltese' };
         const lang = match ? langMap[match[1]] : 'Other';
         groups[lang].push(project);
       });
@@ -121,7 +122,7 @@ export default {
       </v-expansion-panels>
 
       <v-row v-if="groupedProjects.English.length === 0 && groupedProjects.Polish.length === 0 &&
-                    groupedProjects.Italian.length === 0 && groupedProjects.Español.length === 0 &&
+                    groupedProjects.Italian.length === 0 && groupedProjects.Español.length === 0 && groupedProjects.Maltese.length === 0 &&
                     groupedProjects.Other.length === 0">
         <v-col cols="12" class="text-center">
           <p class="text-body-1">{{ t('project.noData') }}</p>
