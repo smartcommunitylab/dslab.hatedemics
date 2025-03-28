@@ -1,6 +1,7 @@
 {
     "login": {
         "success": "Login successful",
+        "error": "Error during login",
         "button": "Login"
     },
     "welcome": {

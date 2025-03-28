@@ -37,7 +37,11 @@ async function submit() {
       showSnackbar(t("login.success"));
       router.replace({ name: "Channels" });
     }
-  } catch (error) {}
+  } catch (error) {
+    showSnackbar(t("login.error"));
+    loading.value = false;
+
+  }
 }
 onMounted(() => {
   if (localStorage.getItem("token")) {
