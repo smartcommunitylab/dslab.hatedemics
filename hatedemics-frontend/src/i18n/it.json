@@ -24,6 +24,7 @@
     },  
     "channelTable": {
         "header": {
+            "title": "Rete Telegram – Statistiche dei Nodi",
             "date": "Data",
             "id": "ID",
             "messages": "Messaggi",
@@ -70,7 +71,7 @@
         }
     },
     "topicsTable": {
-        "title": "Titolo",
+        "title": "Argomenti principali del canale",
         "header":{
             "title":"Titolo",
             "count":"% di messaggi",
@@ -83,7 +84,7 @@
         "channelId": "ID Canale:",
         "title": "Titolo",
         "description": "Descrizione:",
-        "nMessages": "Numero di messaggi:",
+        "nMessages": "Totale messaggi:",
         "nUsers": "Numero di utenti:",
         "languages": "Lingue:",
         "iri": "Infodemic Risk:",
@@ -101,7 +102,7 @@
         "cw_percentage": "Check Worthy:"
     },
     "message": {
-        "title": "Messaggi",
+        "title": "Approfondimenti Chat ",
         "header": {
             "id": "ID",
             "date": "Data",
@@ -117,7 +118,7 @@
             "keywordsMatch": "Parole chiave"
         },
         "dialog": {
-            "start": "Inizia una nuova conversazione",
+            "start": "Inizia una nuova conversazione con Destinatario={target}",
             "jump": "Vai alla conversazione",
             "noData": "Nessun dato disponibile",
             "error": "Errore durante il caricamento della chat"
@@ -130,8 +131,16 @@
             "checkworthy":"Check Worthy",
             "all":"Tutti",
             "yes":"Si",
-            "no":"No"
-        }
+            "no":"No",
+            "DISABLED":"Disabili",
+            "JEWS":"Ebrei",
+            "MUSLIMS":"Musulmani",
+            "LGBT+":"LGBT+",
+            "MIGRANTS":"Migranti",
+            "OTHER":"Altro",
+            "POC":"Persone di colore",
+            "ROMANI":"Rom",
+            "WOMEN":"Donne"      }
 
     },
     "wordclouds": {

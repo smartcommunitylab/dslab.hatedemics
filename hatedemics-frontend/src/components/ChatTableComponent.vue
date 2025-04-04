@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, reactive, ref, watch } from "vue";
+import { computed, onMounted, reactive, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRouter } from "vue-router";
 import { useMessagesStore } from "@/store/MessageStore";
@@ -37,7 +37,7 @@ const itemsPerPageOptions = [
   { title: "100", value: 100 },
   { title: "150", value: 150 },
 ];
-const headers = [
+const headers = computed(() => [
   { title: t("message.header.date"), key: "date", sortable: true },
   {
     title: t("message.header.message"),
@@ -50,7 +50,7 @@ const headers = [
   { title: t("message.header.checkLabel"), key: "checkworthy_label", sortable: true },
   { title: t("message.header.topic"), key: "topic_label", sortable: true },
   { title: t("message.header.target"), key: "target", sortable: true },
-];
+]);
 
 // Mappa icone media type
 const getIcon = (type: string) => {
@@ -90,7 +90,7 @@ const startDialogue = async (message: any) => {
   if (selectedMessage.value) {
     //TODO
     //get projectID  by lang and target
-    const target = cleanString(message.target); //message.target;
+    const target = cleanString(message); //message.target;
     const lan = selectedLanguage.value;
 
     try {
@@ -161,6 +161,19 @@ const getRowClass = (item: any) => {
     class: !isEmptyOrSpaces(item?.item?.target) ? "has-target" : "",
   };
 };
+const startDialogueWithTarget = function (target: any) {
+    // Logica per avviare una conversazione con il target
+    console.log(`Start conversation with ${target}`);
+  }
+
+// Define parsedTargets as a computed property
+const parsedTargets = computed(() => {
+  if (selectedMessage.value?.target) {
+    return selectedMessage.value.target.replace(/[{}'"]/g, '') // Rimuove parentesi e virgolette
+    .split(",").map((t: string) => t.trim());
+  }
+  return [];
+});
 // Osserva le variazioni e ricarica i dati
 watch(
   [
@@ -201,15 +214,30 @@ const getColor = (user: string) => {
 
   return colors[hashCode(user) % colors.length];
 };
+
 </script>
 
 <template>
   <v-container fluid>
     <v-row>
       <v-col cols="12" md="3">
-        <v-text-field
+        <v-select
           v-model="filters.target"
           :label="t('message.filter.target')"
+          :items="[
+            { title: t('message.filter.all'), value: null },
+            { title: t('message.filter.DISABLED'), value: 'DISABLED' },
+            { title: t('message.filter.JEWS'), value: 'JEWS' },
+            { title: t('message.filter.LGBT+'), value: 'LGBT+' },
+            { title: t('message.filter.MIGRANTS'), value: 'MIGRANTS' },
+            { title: t('message.filter.MUSLIMS'), value: 'MUSLIMS' },
+            { title: t('message.filter.OTHER'), value: 'OTHER' },
+            { title: t('message.filter.POC'), value: 'POC' },
+            { title: t('message.filter.ROMANI'), value: 'ROMANI' },
+            { title: t('message.filter.WOMEN'), value: 'WOMEN' },
+          ]"
+          item-value="value"
+          item-text="text"
           clearable
           dense
         />
@@ -292,17 +320,27 @@ const getColor = (user: string) => {
       </template>
 
       <template v-slot:item.hate_label="{ item }">
-        <v-icon
-          :icon="item.hate_label ? 'mdi-check-circle' : 'mdi-close-circle'"
-          :color="item.hate_label ? 'green' : 'red'"
-        />
+        <div class="text-center">
+          <v-icon
+            :icon="item.hate_label ? 'mdi-emoticon-angry' : 'mdi-emoticon-happy-outline'"
+            :color="item.hate_label ? 'red' : 'green'"
+          />
+          <div class="mt-1" :style="{ color: item.hate_label ? 'red' : 'green' }">
+            {{ item.hate_label ? "Hate" : "Not Hate" }}
+          </div>
+        </div>
       </template>
 
       <template v-slot:item.checkworthy_label="{ item }">
-        <v-icon
-          :icon="item.checkworthy_label ? 'mdi-check-circle' : 'mdi-close-circle'"
-          :color="item.checkworthy_label ? 'green' : 'red'"
-        />
+        <div class="text-center">
+          <v-icon
+            :icon="item.checkworthy_label ? 'mdi-magnify-close' : 'mdi-check-circle'"
+            :color="item.checkworthy_label ? 'red' : 'green'"
+          />
+          <div class="mt-1" :style="{ color: item.checkworthy_label ? 'red' : 'green' }">
+            {{ item.checkworthy_label ? "Check Worthy" : "Not Check Worthy" }}
+          </div>
+        </div>
       </template>
       <template v-slot:item.target="{ item }">
         <span
@@ -318,30 +356,38 @@ const getColor = (user: string) => {
         </div>
       </template>
     </v-data-table-server>
-
-    <!-- Menu contestuale -->
-    <v-menu
-      v-model="menu"
-      :style="{ top: `${menuY}px`, left: `${menuX}px` }"
-      absolute
-      offset-y
+<!-- Menu contestuale -->
+<v-menu
+  v-model="menu"
+  :style="{ top: `${menuY}px`, left: `${menuX}px` }"
+  absolute
+  offset-y
+>
+  <v-list>
+    <!-- Itera su ogni target e crea una voce dinamica per ciascuno -->
+    <v-list-item
+      v-for="target in parsedTargets"
+      :key="target"
+      @click="startDialogue(target)"
+      :disabled="isEmptyOrSpaces(target) ||target === 'OTHER'"
+      :class="{
+        'has-target': selectedMessage?.target,
+        'no-target': !selectedMessage?.target,
+      }"
     >
-      <v-list>
-        <v-list-item
-          @click="startDialogue(selectedMessage)"
-          :disabled="isEmptyOrSpaces(selectedMessage?.target!) || selectedMessage?.target?.includes('OTHER')"
-          :class="{
-            'has-target': selectedMessage?.target,
-            'no-target': !selectedMessage?.target,
-          }"
-        >
-          <v-list-item-title> {{ t("message.dialog.start") }} </v-list-item-title>
-        </v-list-item>
-        <!-- <v-list-item @click="jumpToConversation">
-          <v-list-item-title> {{ t("message.dialog.jump") }} </v-list-item-title>
-        </v-list-item> -->
-      </v-list>
-    </v-menu>
+      <v-list-item-title>
+        {{ t("message.dialog.start",{ target }) }}
+      </v-list-item-title>
+      <!-- <v-list-item-title v-if="target!== 'OTHER'">
+        {{ t("message.dialog.start",{ target }) }}
+      </v-list-item-title>
+      <v-list-item-title v-else>
+        {{ t("message.dialog.startOther") }}
+      </v-list-item-title> -->
+    </v-list-item>
+  </v-list>
+</v-menu>
+   
   </v-container>
 </template>
 

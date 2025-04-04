@@ -24,6 +24,7 @@
     },
     "channelTable": {
         "header": {
+            "title": "Telegram Network - Node Statistics",
             "date": "Date",
             "id": "ID",
             "messages": "Number of messages",
@@ -69,7 +70,7 @@
         }
     },
     "topicsTable": {
-        "title": "Title",
+        "title": "Main topics of the channel",
         "header":{
             "title":"Title",
             "count":"% of messages",
@@ -82,7 +83,7 @@
         "channelId": "Channel ID:",
         "title": "Title",
         "description": "Description:",
-        "nMessages": "Number of messages:",
+        "nMessages": "Total messages:",
         "nUsers": "Number of users:",
         "languages": "Languages:",
         "iri": "Infodemic Risk:",
@@ -99,7 +100,7 @@
         "cw_percentage": "Check Worthy:"
     },
     "message": {
-        "title": "Message",
+        "title": "Chat Insights",
         "header": {
             "id": "ID",
             "date": "Date",
@@ -115,7 +116,7 @@
             "keywordsMatch": "Keywords Match"
         },
         "dialog": {
-            "start": "Start a new conversation",
+            "start": "Start a new conversation with Target={target}",
             "jump": "Go to conversation",
             "noProject": "No projects available",
             "error": "Error while fetching data"
@@ -128,7 +129,16 @@
             "checkworthy":"Check Worthy",
             "all":"All",
             "yes":"Yes",
-            "no":"No"
+            "no":"No",
+            "DISABLED":"Disabled",
+            "JEWS":"Jews",
+            "MUSLIMS":"Muslims",
+            "LGBT+":"LGBT+",
+            "MIGRANTS":"Migrants",
+            "OTHER":"Other",
+            "POC":"People of Color",
+            "ROMANI":"Rom",
+            "WOMEN":"Women"
         }
     },
     "wordclouds": {

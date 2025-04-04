@@ -17,7 +17,7 @@ const { topics, selectedTopic } = storeToRefs(topicsStore)
 // const topics = ref<any[]>([]);
 const router = useRouter();
 const search = ref("");
-const headers = reactive<any[]>([
+const headers = computed(() => [
   { title: t('topicsTable.header.title'), key: "name" },
   { title: t('topicsTable.header.count'), key: "count_percentage" },
   {title:t('topicsTable.header.cw'),key:"cw_percentage"},
@@ -51,6 +51,13 @@ const sortBy = ref<SortItem[]>([{ key: "hs_percentage", order: "desc" }]);
             hover
             hide-default-footer
             >
+            <template #top>
+  <div class="px-4 py-2">
+    <h3 class="text-h6 mb-1 text-center">
+      <v-icon>mdi-comment-text</v-icon> {{ t("topicsTable.title") }}
+</h3>
+  </div>
+</template>
           <template v-slot:item="props">
             <tr
               @click="handleClick(props.item)"

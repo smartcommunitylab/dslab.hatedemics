@@ -122,12 +122,17 @@ const loadMore = (event: { target: any; }) => {
     </v-row>
 
     <v-divider class="my-4" />
-
+   
     <!-- Layout con Sidebar e Tabella -->
     <v-row>
 
 
       <v-col cols="8">
+        <div class="px-4 py-2">
+          <h3 class="text-h6 mb-1 text-center">
+          <v-icon left>mdi-chat</v-icon>   {{ t("message.title") }}
+          </h3>
+        </div>
         <ChatTableComponent />
       </v-col>
       <v-col cols="4">

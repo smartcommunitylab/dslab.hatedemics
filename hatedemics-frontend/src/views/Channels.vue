@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { ref, reactive, watch, onMounted } from "vue";
 import { useI18n } from "vue-i18n";
 import { useChannelsStore } from "@/store/ChannelStore";
@@ -35,7 +36,7 @@ const languages = [
 
 const sortBy = ref([{ key: "IRI", order: "desc" }]);
 
-const headers = reactive([
+const headers = computed(() => [
   { title: t("channelTable.header.messages"), key: "message_count", sortable: true },
   {
     title: t("channelTable.header.partecipants"),
@@ -165,6 +166,11 @@ const onPaginationChange = (options: any) => {
             @update:sort-by="onSortChange"
             @update:options="onPaginationChange"
           >
+          <template #top>
+  <div class="px-4 py-2">
+    <h3 class="text-h6 mb-1 text-center">🌐 {{t("channelTable.header.title")}}</h3>
+  </div>
+</template>
             <template v-slot:item="{ item }">
               <tr
                 @click="handleClick(item)"
