@@ -4,23 +4,55 @@
         "error": "Error during login",
         "button": "Login"
     },
+    "menu": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "channels": "Channels",
+    "inspector": "Inspector",
+    "discussion": "Discussion",
+    "projects": "Projects",
+    "counterspeech": "Counterspeech",
+    "annotation": "Annotation",
+    "credits": "Credits"
+  },
+    "home":{
+        "title": "Fighting hate and disinformation online",
+        "description": "HATEDEMICS is a platform that leverages artificial intelligence to analyze online content, enhance critical thinking, and train responses to hate speech.",
+        "network":"Explore the Network",
+        "networkDescription":"An interactive map to observe the connections between channels, content, and dynamics related to hate and disinformation online. Discover what happens on the web, follow the flows, and identify the key nodes of toxic communication.",
+        "networkButton":"Go to the network",
+        "counterspeech":"Counterspeech Writing",
+        "counterspeechDescription":"Train your ability to respond to hate and disinformation content with targeted writing exercises. Learn how to use reliable sources to create solid arguments and develop your critical thinking to change the tone of online debate.",
+        "counterspeechButton":"Start writing"
+    },
     "welcome": {
         "title": "Welcome to Hatedemics"
     },
 
     "inspect": {
-        "title": "Channel overview"
+        "title": "Channel overview",
+        "subtitle":"Analyze the Channels and the Main Topics in the Network of Hate and Disinformation"
     },
     "channel": {
         "title": "Network exploration",
+        "subtitle":"Explore the Network and Analyze the Connections of Hate and Disinformation Online",
         "infoTitle": "Channel information"
     },
     "conversation": {
-        "title": "Conversation"
+        "title": "Conversation",
+        "subtitle":"Explore the Conversations and Analyze the Messages in the Network of Hate and Disinformation"
     },
     "project": {
         "noProject": "No projects available",
         "noData": "No data available"
+    },
+    "projects": {
+        "title": "Projects",
+        "subtitle":"Choose the language in which you want to train your skills to respond to hate and disinformation content."
+    },
+    "tasks": {
+        "title": "Tasks",
+        "subtitle":"Select the topic you want to focus on to create effective responses and arguments against disinformation."      
     },
     "channelTable": {
         "header": {

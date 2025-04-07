@@ -91,6 +91,9 @@ const loadMore = (event: { target: any }) => {
 <template>
   <v-container fluid>
     <h1 class="text-h5 font-weight-bold text-primary ma-4">{{ msg }}</h1>
+    <h2 class="text-h6 font-weight-medium ma-4">
+      {{ t("channel.subtitle") }}
+    </h2>
     <v-row>
       <v-col cols="4">
         <v-autocomplete

@@ -74,7 +74,9 @@ const loadMore = (event: { target: any; }) => {
   <v-container fluid>
     <!-- <h1 class="text-h4 font-weight-bold mb-4">{{ msg }}</h1> -->
     <h1 class="text-h5 font-weight-bold text-primary ma-4">{{ msg }}</h1>
-
+<h2 class="text-h6 font-weight-medium ma-4">
+      {{ t("conversation.subtitle") }}
+  </h2>
     <!-- Selettori di Canale e Chat -->
     <v-row>
       <v-col cols="4">
@@ -127,7 +129,7 @@ const loadMore = (event: { target: any; }) => {
     <v-row>
 
 
-      <v-col cols="8">
+      <v-col cols="8" style="background-color: white">
         <div class="px-4 py-2">
           <h3 class="text-h6 mb-1 text-center">
           <v-icon left>mdi-chat</v-icon>   {{ t("message.title") }}

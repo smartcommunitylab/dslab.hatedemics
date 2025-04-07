@@ -5,6 +5,7 @@ import { API } from "@/services";
 import TaskAnnotations from '@/components/singleFileComponents/task-annotations.vue'
 import DynamicButton from '@/components/singleFileComponents/dynamic-button.vue'
 import DialogGeneric from '@/components/dialogs/dialog-generic.vue'
+import { useI18n } from 'vue-i18n';
 
 function addChildren(obj, annotations, index) {
   if (Object.prototype.hasOwnProperty.call(annotations, index)) {
@@ -24,6 +25,7 @@ export default {
   },
   emits: ['openNewProject'],
   data() {
+    
     return {
       newTaskStore: useNewTaskStore(),
       loginStore: useLoginStore(),
@@ -34,11 +36,13 @@ export default {
       files: undefined,
       taskPanels: [],
       annotations: [],
-      dialogNewTask: false
+      dialogNewTask: false,
+      t: useI18n().t
     }
   },
   mounted: function () {
     this.loadData()
+
     // const self = this
     // API.dialogs.getProjectByID(this.id).then(function (data) {
     //   self.projectName = data.data.name
@@ -163,6 +167,9 @@ export default {
       <v-col cols="10">
         <p class="text-h2"></p>
         <h1 class="text-h5 font-weight-bold text-primary ma-4">Project "{{ projectName }}" Dialogues</h1>
+        <h2 class="text-h6 font-weight-medium ma-4">
+          {{ t('tasks.subtitle') }}
+        </h2>
       </v-col>
       <v-col cols="2" class="text-right">
         <!-- <v-btn-group variant="elevated" density="comfortable">

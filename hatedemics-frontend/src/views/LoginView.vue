@@ -35,7 +35,7 @@ async function submit() {
       );
       loading.value = false;
       showSnackbar(t("login.success"));
-      router.replace({ name: "Channels" });
+      router.replace({ name: "Home" });
     }
   } catch (error) {
     showSnackbar(t("login.error"));

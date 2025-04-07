@@ -40,6 +40,11 @@ const routes: RouteRecordRaw[] = [
      }
   },
   {
+    path: '/home',
+    name: 'Home',
+    component: HomeView
+  },
+  {
     path: '/dashboard',
     name: 'Dashboard',
     component: DashboardView

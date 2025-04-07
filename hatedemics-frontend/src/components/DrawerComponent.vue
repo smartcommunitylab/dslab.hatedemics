@@ -10,6 +10,11 @@ const logout = () => {
 /** Drawer menu items */
 const items: DrawerMenuItem[] = [
   {
+    title: 'Home',
+    icon: 'mdi-home',
+    to: { name: 'Home' }
+  },
+  {
     title: 'Data',
     icon: 'mdi-information',
     items: [

@@ -98,7 +98,9 @@ export default {
     <v-container fluid v-else>
 
           <h1 class="text-h5 font-weight-bold text-primary ma-4">Projects</h1>
-
+<h2 class="text-h6 font-weight-medium ma-4">
+          {{ t('projects.subtitle') }}
+        </h2>
 
       <v-expansion-panels v-model="expandedPanels" multiple>
         <template v-for="(projects, lang) in groupedProjects" :key="lang">

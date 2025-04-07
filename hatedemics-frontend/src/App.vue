@@ -56,7 +56,7 @@ const snackbarText: ComputedRef<string> = computed(() => globalStore.message);
     const canGoBack = ref(false);
 
 const updateCanGoBack = () => {
-  canGoBack.value = route.path !== "/dashboard/channels" && router.options.history.state.back !== null;
+  canGoBack.value = route.path !== "/home" && router.options.history.state.back !== null;
 
 };
 
@@ -133,11 +133,11 @@ onMounted(() => {
         <v-btn icon="mdi-close" @click="onSnackbarChanged" />
       </template>
     </v-snackbar>
-
     <v-footer app elevation="3" color="primary">
-      <span class="text-white mr-4" >2025 &copy; Hatedemics</span>
-
-    </v-footer>
+  <span class="text-white mr-4">2025 &copy; 
+    <a href="https://hatedemics.eu" class="text-white" target="_blank" rel="noopener noreferrer">Hatedemics</a>
+  </span>
+</v-footer>
   </v-app>
   <teleport to="head">
     <meta

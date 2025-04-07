@@ -4,23 +4,55 @@
         "error": "Errore durante il login",
         "button": "Login"
     },
+    "menu": {
+        "home": "Home",
+        "dashboard": "Dashboard",
+        "channels": "Canali",
+        "inspector": "Panoramica del Canale",
+        "discussion": "Conversazione",
+        "projects": "Progetti",
+        "counterspeech": "Counterspeech Writing",
+        "annotation": "Annotation",
+        "credits": "Crediti"
+    },
+    "home":{
+        "title":"Combattere odio e disinformazione online",
+        "description":"HATEDEMICS è una piattaforma che sfrutta l’intelligenza artificiale per analizzare contenuti in rete, potenziare il pensiero critico e allenare la capacità di risposta ai discorsi d’odio.",
+        "network":"Esplora la Rete",
+        "networkDescription":"Una mappa interattiva per osservare le connessioni tra canali, contenuti e dinamiche legate a odio e disinformazione online. Scopri cosa accade in rete, segui i flussi e individua i nodi chiave della comunicazione tossica.",
+        "networkButton":"Vai alla rete",
+        "counterspeech":"Counterspeech Writing",
+        "counterspeechDescription":"Allena la tua capacità di risposta a contenuti d’odio e disinformazione con esercizi di scrittura mirati. Impara come usare fonti attendibili per creare argomentazioni solide e sviluppa il tuo spirito critico per cambiare il tono del dibattito online.",
+        "counterspeechButton":"Inizia a scrivere"
 
+    },
     "welcome": {
         "title": "Benvenuti in Hatedemics"
     },
     "inspect": {
-        "title": "Panoramica del Canale"
+        "title": "Panoramica del Canale",
+        "subtitle":"Analizza i Canali e i Topics Fondamentali nella Rete dell'Odio e della Disinformazione"
     },
     "channel": {
         "title": "Esplorazione della Rete",
+        "subtitle":"Esplora la Rete e Analizza le Connessioni dell’Odio e della Disinformazione Online",
         "infoTitle": "Informazioni sul Canale"
     },
     "project": {
         "noProject": "Nessun progetto disponibile",
         "noData": "Nessun dato disponibile" 
     },
+    "projects": {
+        "title": "Progetti",
+        "subtitle":"Scegli la lingua in cui vuoi allenare le tue abilità di risposta a contenuti d'odio e disinformazione."
+    },
+    "tasks": {
+        "title": "Tasks",
+        "subtitle":"Seleziona l'argomento su cui concentrarti per creare risposte efficaci e argomentazioni contro la disinformazione."
+    },
     "conversation": {
-        "title": "Conversazione"
+        "title": "Conversazione",
+        "subtitle":"Esplora le Conversazioni e Analizza i Messaggi nella Rete della Disinformazione e dell'Odio"
     },  
     "channelTable": {
         "header": {
