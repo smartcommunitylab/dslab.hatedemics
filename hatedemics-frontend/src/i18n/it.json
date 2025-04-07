@@ -155,6 +155,8 @@
             "noData": "Nessun dato disponibile",
             "error": "Errore durante il caricamento della chat"
         },
+        "noTarget": "Nessun destinatario identificato",
+        "target":"Clicca per selezionare un destinatario",
         "noData": "Nessun dato disponibile",
         "filter":{
             "target":"Filtra per target",

@@ -17,7 +17,7 @@ const { channelsInfo, selectedChannelInfo, selectedLanguage } = storeToRefs(
 const msg = t("channel.title");
 const search = ref("");
 const page = ref(1); // Vuetify inizia da 1
-const itemsPerPage = ref(10);
+const itemsPerPage = ref(100);
 const totalItems = ref(0); // Da aggiornare con la risposta API
 const loading = ref(false);
 const itemsPerPageOptions = [
@@ -58,7 +58,7 @@ const headers = computed(() => [
 ]);
 const pagination = reactive({
   page: 0,
-  size: 10,
+  size: 100,
   sort: "IRI,desc",
 });
 const resetChannels = () => {
@@ -88,6 +88,7 @@ const fetchChannels = async () => {
 // Aggiorna i dati quando cambia la lingua, la pagina o la dimensione della pagina
 watch([selectedLanguage], resetChannels, { deep: true });
 watch([pagination], fetchChannels, { deep: true });
+
 onMounted(fetchChannels);
 
 const handleClick = (item: ChannelInfo) => {

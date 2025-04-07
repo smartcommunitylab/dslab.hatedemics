@@ -50,6 +50,8 @@ const headers = computed(() => [
   { title: t("message.header.checkLabel"), key: "checkworthy_label", sortable: true },
   { title: t("message.header.topic"), key: "topic_label", sortable: true },
   { title: t("message.header.target"), key: "target", sortable: true },
+  { title: "", key: "actions", sortable: false },
+
 ]);
 
 // Mappa icone media type
@@ -349,6 +351,32 @@ const getColor = (user: string) => {
         >
         <span v-else>NA</span>
       </template>
+      <template v-slot:item.actions="{ item }">
+<v-tooltip v-if="!isEmptyOrSpaces(item?.target!)" :text="t('message.target')">
+  <template #activator="{ props }">
+
+      <v-icon
+      v-bind="props"
+
+        color="primary"
+        class="cursor-pointer"    >
+        mdi-arrow-right-bold-circle
+      </v-icon>
+      </template>
+      </v-tooltip>
+      <v-tooltip v-else :text="t('message.noTarget')">
+        <template #activator="{ props }">
+
+      <v-icon 
+      v-bind="props"
+
+        color="grey"
+        class="cursor-pointer"      >
+        mdi-arrow-right-bold-circle
+      </v-icon>
+      </template>
+   </v-tooltip>
+</template>
       <template v-slot:no-data>
         <div class="text-center pa-4">
           <v-icon size="48" class="mb-2">mdi-database-off</v-icon>

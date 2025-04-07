@@ -154,6 +154,8 @@
             "error": "Error while fetching data"
         },
         "noData": "No data available",
+        "noTarget": "No target identified",
+        "target":"Click here to start a new conversation",
         "filter":{
             "target":"Filter by target",
             "topic":"Filter by Topic",
