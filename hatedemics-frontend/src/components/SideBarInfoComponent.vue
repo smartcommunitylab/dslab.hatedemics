@@ -72,13 +72,13 @@ onMounted(async () => {
           </v-col>
 
           <v-col cols="12" sm="6" v-if="generic?.hs_percentage !== undefined">
-            <v-icon class="mr-2" color="error">mdi-alert</v-icon>
+            <v-icon class="mr-2" color="error">mdi-emoticon-angry</v-icon>
             <span class="font-weight-bold">{{ t("channelInfo.hs_percentage") }}</span>
             {{ generic.hs_percentage }}%
           </v-col>
 
           <v-col cols="12" sm="6" v-if="generic?.cw_percentage !== undefined">
-            <v-icon class="mr-2" color="success">mdi-check-circle</v-icon>
+            <v-icon class="mr-2" color="error">mdi-magnify-close</v-icon>
             <span class="font-weight-bold">{{ t("channelInfo.cw_percentage") }}</span>
             {{ generic.cw_percentage }}%
           </v-col>
