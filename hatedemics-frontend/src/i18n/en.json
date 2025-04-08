@@ -173,6 +173,11 @@
             "POC":"People of Color",
             "ROMANI":"Rom",
             "WOMEN":"Women"
+        },
+        "footer":{
+            "pagination": {
+                "range": "{pageStart}-{pageStop} of {totalItems} retrieved messages"
+            }
         }
     },
     "wordclouds": {

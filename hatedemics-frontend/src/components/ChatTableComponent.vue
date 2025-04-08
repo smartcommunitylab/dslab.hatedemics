@@ -216,7 +216,16 @@ const getColor = (user: string) => {
 
   return colors[hashCode(user) % colors.length];
 };
-
+const getFooterText= () => {
+    const pageStart = (pagination.page * pagination.size) + 1;
+    const pageStop = Math.min((pagination.page + 1) * pagination.size, totalItems.value);
+    return t('message.footer.pagination.range', {
+    pageStart,
+    pageStop,
+    totalItems: totalItems.value
+  })
+    // return `${pageStart}-${pageStop} of ${totalItems.value} retrieved messages`;
+  }
 </script>
 
 <template>
@@ -290,6 +299,9 @@ const getColor = (user: string) => {
       :items-per-page="pagination.size"
       :page="pagination.page + 1"
       :items-per-page-options="itemsPerPageOptions"
+      :footer-props="{itemsPerPageText: 'Rows count'}"
+    :page-text="getFooterText()"
+    
       return-object
       density="compact"
       hover
@@ -377,6 +389,7 @@ const getColor = (user: string) => {
       </template>
    </v-tooltip>
 </template>
+
       <template v-slot:no-data>
         <div class="text-center pa-4">
           <v-icon size="48" class="mb-2">mdi-database-off</v-icon>

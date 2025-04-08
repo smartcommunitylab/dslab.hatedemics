@@ -174,7 +174,12 @@
             "OTHER":"Altro",
             "POC":"Persone di colore",
             "ROMANI":"Rom",
-            "WOMEN":"Donne"      }
+            "WOMEN":"Donne"      },
+    "footer":{
+        "pagination": {
+            "range": "{pageStart} - {pageStop} di {totalItems} messaggi recuperati"
+        }
+    }
 
     },
     "wordclouds": {
