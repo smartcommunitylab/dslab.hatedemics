@@ -42,31 +42,33 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/home',
     name: 'Home',
-    component: HomeView
+    component: () => import('@/views/HomeView.vue')
   },
   {
     path: '/dashboard',
     name: 'Dashboard',
-    component: DashboardView
+    component: () => import('@/views/DashboardView.vue'),
   },{
     path: '/dashboard/channels',
     name: 'Channels',
-    component: Channels
+    component: () => import('@/views/Channels.vue'),
+
   },
   {
     path: '/dashboard/inspector',
     name: 'Inspector',
-    component: InspectorView
+    component: () => import('@/views/InspectorView.vue'),
+
   },  
   {
     path: '/dashboard/discussion',
     name: 'Discussion',
-    component: DiscussionView
+    component: () => import('@/views/DiscussionView.vue'),
   },
   {
     path: '/projects',
     name: 'projects',
-    component: ProjectsView
+    component: () => import('@/components/ProjectsList.vue'),
   },
   {
     path: '/projects/writing',
