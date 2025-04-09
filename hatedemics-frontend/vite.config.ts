@@ -8,6 +8,7 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import { checker } from 'vite-plugin-checker';
 import vueDevTools from 'vite-plugin-vue-devtools';
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
+import viteCompression from 'vite-plugin-compression';
 
 import pkg from './package.json';
 
@@ -46,7 +47,9 @@ export default defineConfig(({ command, mode }): UserConfig => {
         // vueTsc: true,
         // eslint: { lintCommand: 'eslint' },
         // stylelint: { lintCommand: 'stylelint' },
-      })
+      }),
+      viteCompression({ algorithm: 'gzip' }),
+      viteCompression({ algorithm: 'brotliCompress' })
     ],
     // https://vitejs.dev/config/server-options.html
     server: {
@@ -73,6 +76,7 @@ export default defineConfig(({ command, mode }): UserConfig => {
       // Minify option
       // https://vitejs.dev/config/build-options.html#build-minify
       minify: 'terser',
+      
     terserOptions: {
       compress: {
         drop_console: true, // rimuove tutti i console.log
