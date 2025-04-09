@@ -72,7 +72,16 @@ export default defineConfig(({ command, mode }): UserConfig => {
       target: 'esnext',
       // Minify option
       // https://vitejs.dev/config/build-options.html#build-minify
-      minify: 'esbuild',
+      minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true, // rimuove tutti i console.log
+        drop_debugger: true,
+      },
+      format: {
+        comments: false, // rimuove tutti i commenti
+      },
+    },
       // Rollup Options
       // https://vitejs.dev/config/build-options.html#build-rollupoptions
       rollupOptions: {
