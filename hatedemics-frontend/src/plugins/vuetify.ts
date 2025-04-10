@@ -16,7 +16,15 @@ import { loadFonts } from '@/plugins/webfontloader';
 import 'vuetify/styles';
 import '@mdi/font/css/materialdesignicons.css';
 
-await loadFonts();
+async function initApp() {
+  await loadFonts();
+  const lightTheme = {
+    dark: false,
+    // ...
+  };
+  // il resto del codice...
+}
+initApp();
 
 /**
  * Definizione dei temi personalizzati
