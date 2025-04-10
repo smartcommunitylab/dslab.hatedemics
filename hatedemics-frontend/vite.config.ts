@@ -61,7 +61,8 @@ export default defineConfig(({ command, mode }): UserConfig => {
       // https://vitejs.dev/config/shared-options.html#resolve-alias
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
-        '~': fileURLToPath(new URL('./node_modules', import.meta.url))
+        '~': fileURLToPath(new URL('./node_modules', import.meta.url)),
+        'vue': 'vue/dist/vue.esm-bundler',
       },
       extensions: ['.js', '.json', '.jsx', '.mjs', '.ts', '.tsx', '.vue']
     },
