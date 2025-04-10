@@ -6,7 +6,6 @@ import { defineConfig, type UserConfig,loadEnv } from 'vite';
 
 import { visualizer } from 'rollup-plugin-visualizer';
 import { checker } from 'vite-plugin-checker';
-import vueDevTools from 'vite-plugin-vue-devtools';
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
 import viteCompression from 'vite-plugin-compression';
 
@@ -33,7 +32,6 @@ export default defineConfig(({ command, mode }): UserConfig => {
           transformAssetUrls
         }
       }),
-      vueDevTools(),
       // Vuetify Loader
       // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin
       vuetify({
