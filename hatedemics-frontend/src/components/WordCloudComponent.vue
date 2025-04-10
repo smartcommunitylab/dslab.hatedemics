@@ -118,7 +118,6 @@ const onWordClick = (word: string) => console.log(word);
   <vue3-word-cloud
     v-if="wordsPositive.length"
     :words="wordsPositive"
-    :font-family="'Love Ya Like A Sister, serif'"
     :color="getWordColor"
     @click="onWordClick"
   />
@@ -131,7 +130,6 @@ const onWordClick = (word: string) => console.log(word);
   <vue3-word-cloud
     v-if="wordsNegative.length"
     :words="wordsNegative"
-    :font-family="'Love Ya Like A Sister, serif'"
     :color="getWordColor"
     @click="onWordClick"
   />
@@ -149,7 +147,6 @@ const onWordClick = (word: string) => console.log(word);
     <div class="wordcloud-container">
       <vue3-word-cloud
         v-if="wordsNegative.length"
-        :font-family="'Love Ya Like A Sister, serif'"
         :words="wordsNegative"
         :color="getWordColor"
         @click="onWordClick"

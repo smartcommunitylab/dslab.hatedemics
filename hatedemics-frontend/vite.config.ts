@@ -72,7 +72,7 @@ export default defineConfig(({ command, mode }): UserConfig => {
     build: {
       // Build Target
       // https://vitejs.dev/config/build-options.html#build-target
-      target: 'esnext',
+      target: 'es2015',
       // Minify option
       // https://vitejs.dev/config/build-options.html#build-minify
       minify: 'terser',
