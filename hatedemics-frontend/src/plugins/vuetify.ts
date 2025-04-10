@@ -80,13 +80,12 @@ let vuetifyConfig: VuetifyOptions = {
 };
 
 // Abilita tutti i componenti in DEV mode
-if (import.meta.env.DEV) {
   vuetifyConfig = {
     components: { components, labsComponents },
     directives,
     ...vuetifyConfig
   };
-}
+
 
 export default createVuetify(vuetifyConfig);
 

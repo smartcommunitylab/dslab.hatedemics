@@ -140,10 +140,7 @@ onMounted(() => {
 </v-footer>
   </v-app>
   <teleport to="head">
-    <meta
-      name="theme-color"
-      :content="theme.computedThemes.value[isDark].colors.primary"
-    />
+
     <link rel="icon" :href="logo" type="image/svg+xml" />
   </teleport>
 </template>
