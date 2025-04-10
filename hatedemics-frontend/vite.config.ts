@@ -116,7 +116,7 @@ export default defineConfig(({ command, mode }): UserConfig => {
     },
     esbuild: {
       // Drop console when production build.
-      drop: false
+      drop: command === 'serve' || mode === 'development' ? [] : ['console']
     },
     css: {
       preprocessorOptions: {
