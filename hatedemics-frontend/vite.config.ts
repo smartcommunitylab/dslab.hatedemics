@@ -78,7 +78,7 @@ export default defineConfig(({ command, mode }): UserConfig => {
       
     terserOptions: {
       compress: {
-        drop_console: true, // rimuove tutti i console.log
+        drop_console: false, // rimuove tutti i console.log
         drop_debugger: true,
       },
       format: {

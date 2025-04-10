@@ -3,12 +3,24 @@ import {
   createRouter,
   createWebHistory,
   type Router,
+  type NavigationGuardNext,
+  type RouteLocationNormalized,
   type RouteRecordRaw
 } from 'vue-router';
 
 // Components
+import HomeView from '@/views/HomeView.vue';
+import DashboardView from '@/views/DashboardView.vue';
+import InspectorView from '@/views/InspectorView.vue';
+import DiscussionView from '@/views/DiscussionView.vue';
+import CounterspeechWriting from '@/views/CounterspeechWriting.vue';
+import Channels from '@/views/Channels.vue';
 import Login from '@/views/LoginView.vue';
+import annotationInterface from '@/components/AnnotationInterface.vue'
+import ProjectsView from '@/components/ProjectsList.vue'
+import tasks from '@/components/TaskList.vue'
 import loginApi from './services/login/loginApi';
+import AboutView from './views/AboutView.vue';
 
 
 // Pinia Store
@@ -61,37 +73,33 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/projects/writing',
     name: 'Counterspeech',
-    component: () => import('@/views/CounterspeechWriting.vue'),
+    component: CounterspeechWriting
   },
   {
     path: '/projects/writing/:projectID/tasks/:taskID/annotate',
     name: 'annotation',
-    component: () => import('@/components/AnnotationInterface.vue'),
-
+    component: annotationInterface
   },
   {
     path: '/projects/writing/:projectID/tasks/:taskID/annotate/parent/:annotationParent',
     name: 'annotation_parent',
-    component: () => import('@/components/AnnotationInterface.vue'),
-
+    component: annotationInterface
   },
   {
     path: '/projects/writing/:projectID/tasks/:taskID/annotate/:annotationID',
     name: 'annotation_edit',
-    component: () => import('@/components/AnnotationInterface.vue'),
-
+    component: annotationInterface
   },
   {
     path: '/projects/writing/:projectID/tasks/',
     name: 'tasks',
-    component: () => import('@/components/AnnotationInterface.vue'),
-
+    component: tasks
   },
   {
     path: '/about',
     name: 'Credits',
-    component: () => import('@/views/AboutView.vue'),
 
+    component: AboutView
   }
 ];
 
