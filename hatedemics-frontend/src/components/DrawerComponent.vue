@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import type DrawerMenuItem from '@/interfaces/DrawerMenuItemInterface';
+import QuickGuideDialog from '@/components/QuickGuideDialogComponent.vue';
 import { API } from '@/services';
 import { ref } from 'vue';
+const showDialog = ref(false);
 
 const logout = () => {
   API.login.logout()
@@ -15,7 +17,7 @@ const items: DrawerMenuItem[] = [
     to: { name: 'Home' }
   },
   {
-    title: 'Data',
+    title: 'Explore',
     icon: 'mdi-information',
     items: [
       {
@@ -41,6 +43,11 @@ const items: DrawerMenuItem[] = [
     icon: 'mdi-chat',
     to: { name: 'projects' }
   },
+  {
+  title: 'Quick Guide',
+  icon: 'mdi-help-circle-outline',
+  action: () => (showDialog.value = true)
+},
   {
     title: 'Credits',
     icon: 'mdi-information',
@@ -104,4 +111,6 @@ const expandedGroups = ref<Record<string, boolean>>(
       </template>
     </template>
   </v-list>
+  <QuickGuideDialog v-model="showDialog" />
+
 </template>

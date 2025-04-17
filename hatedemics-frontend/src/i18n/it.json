@@ -23,8 +23,33 @@
         "networkButton":"Vai alla rete",
         "counterspeech":"Counterspeech Writing",
         "counterspeechDescription":"Allena la tua capacità di risposta a contenuti d’odio e disinformazione con esercizi di scrittura mirati. Impara come usare fonti attendibili per creare argomentazioni solide e sviluppa il tuo spirito critico per cambiare il tono del dibattito online.",
-        "counterspeechButton":"Inizia a scrivere"
-
+        "counterspeechButton":"Inizia a scrivere",
+        "guideDescription": "Cosa sapere prima di usare la piattaforma.",
+        "guideButton": "Apri Guida",
+        "guideTitle": "Guida Rapida",
+        "guideItems": {
+          "network": {
+            "title": "Rete",
+            "description": "La rete mostra le connessioni tra i canali Telegram raccolti. Un canale è un nodo ed è connesso a un altro se lo “raccomanda”. Le raccomandazioni sono generate automaticamente da Telegram in base alla sovrapposizione degli utenti."
+          },
+          "inRec": {
+            "title": "Raccomandazioni in ingresso",
+            "description": "Quanto un canale è raccomandato da altri canali."
+          },
+          "outRec": {
+            "title": "Raccomandazioni in uscita",
+            "description": "Quanto un canale raccomanda altri canali."
+          },
+          "risk": {
+            "title": "Rischio Infodemia",
+            "description": "Quanto un canale è affidabile. Questa misura va da 0 a N."
+          },
+          "check": {
+            "title": "Verificabilità",
+            "description": "Indica se un messaggio può essere sottoposto a fact-checking. Significa che contiene fatti (non opinioni) ed è sufficientemente rilevante."
+          }
+        }
+      
     },
     "welcome": {
         "title": "Benvenuti in Hatedemics"

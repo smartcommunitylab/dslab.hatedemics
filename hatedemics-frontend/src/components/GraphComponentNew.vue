@@ -78,7 +78,7 @@ const getNodeSize = (node: any, sizeBy: string) => {
     case "hs":
       return scaleNodeSize(node.hs, 0, 1, 5, 50); // hs tra 0 e 1 → grandezza tra 5 e 50
     case "out_degree":
-      return scaleNodeSize(node.out_degree, 0, 10, 5, 20); // out_degree tra 0 e 10 → 5-20
+      return scaleNodeSize(node.out_degree, 0, 50, 5, 100); // out_degree tra 0 e 10 → 5-20
     case "in_degree":
       return scaleNodeSize(node.in_degree, 0, 10, 5, 20);
     default:

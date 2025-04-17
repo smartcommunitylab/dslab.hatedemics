@@ -23,7 +23,33 @@
         "networkButton":"Go to the network",
         "counterspeech":"Counterspeech Writing",
         "counterspeechDescription":"Train your ability to respond to hate and disinformation content with targeted writing exercises. Learn how to use reliable sources to create solid arguments and develop your critical thinking to change the tone of online debate.",
-        "counterspeechButton":"Start writing"
+        "counterspeechButton":"Start writing",
+        "guideDescription": "What to know before using the platform.",
+        "guideButton": "Open Guide",
+        "guideTitle": "Quick Guide",
+        "guideItems": {
+          "network": {
+            "title": "Network",
+            "description": "The network shows the connections between the collected telegram channels. A channel is a node and it is connected to another channel if it “recommends” it. Recommendations are generated automatically by Telegram based on the channels' users overlap."
+          },
+          "inRec": {
+            "title": "In Recommendations",
+            "description": "How much a channel is recommended by other channels."
+          },
+          "outRec": {
+            "title": "Out Recommendations",
+            "description": "How much a channel recommends other channels."
+          },
+          "risk": {
+            "title": "Infodemic Risk",
+            "description": "How much the channel is reliable. This measure goes from 0 to N."
+          },
+          "check": {
+            "title": "Check Worthiness",
+            "description": "It indicates whether a message can be fact-checked. This means that the message contains facts rather than opinions and is relevant enough to be fact-checked."
+          }
+        }
+      
     },
     "welcome": {
         "title": "Welcome to Hatedemics"
