@@ -99,7 +99,7 @@ const onWordClick = (word: string) => console.log(word);
 
 <template>
   <v-radio-group v-model="selectionType" inline>
-    <v-radio label="Canale" value="channel" />
+    <v-radio :label="t('wordclouds.channel')" value="channel" />
     <v-radio label="Topic" value="topic" />
   </v-radio-group>
 
@@ -109,7 +109,7 @@ const onWordClick = (word: string) => console.log(word);
       :items="typeItems"
       item-title="label"
       item-value="value"
-      label="Seleziona tipo WordCloud"
+      :label= "t('wordclouds.select')"
     />
     <div v-if="wordsPositive.length" class="wordcloud-container bordered">
   <v-typography class="text-h5 title text-error">

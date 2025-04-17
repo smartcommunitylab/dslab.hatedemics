@@ -186,6 +186,8 @@
         "hate": "Hate vs Non Hate",
         "checkworthy": "Check Worthy vs Non Check Worthy",
         "generic": "Generico",
+        "select":"Seleziona tipo WordCloud",
+        "channel":"Canale",
         "titles": {
             "hate": "Hate Speech",
             "is_checkworthy": "Check Worthy",

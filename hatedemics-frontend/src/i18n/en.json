@@ -78,23 +78,23 @@
             "disable": "Select node color",
             "iri": "Color: Infodemic Risk",
             "hs": "Color: Hate Speech",
-            "in": "Color: In Reccomendations",
-            "out": "Color: Out Reccomendations"
+            "in": "Color: In Recommendations",
+            "out": "Color: Out Recommendations"
         },
         "size": {
             "disable": "Select node size",
             "iri": "Size: Infodemic Risk",
             "hs": "Size: Hate Speech",
-            "in": "Size: In reccomendations",
-            "out": "Size: Out reccomendations"
+            "in": "Size: In Recommendations",
+            "out": "Size: Out Recommendations"
         },
         "tooltip": {
             "id": "Channel ID:",
             "iri": "Infodemic Risk:",
             "hs": "Hate Speech:",
             "cw": "Check Worthy:",
-            "in": "In reccomendations:",
-            "out": "Out Reccomendations:"
+            "in": "In Recommendations:",
+            "out": "Out Recommendations:"
         },
         "fs": {
             "exit": "Exit",
@@ -184,6 +184,8 @@
         "hate": "Hate vs Non Hate",
         "checkworthy": "Check Worthy vs Non Check Worthy",
         "generic": "Generic",
+        "select":"Select WordCloud type",
+        "channel":"Channel",
         "titles": {
             "hate": "Hate Speech",
             "is_checkworthy": "Check Worthy",

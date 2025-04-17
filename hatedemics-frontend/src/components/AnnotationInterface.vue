@@ -809,10 +809,10 @@ export default {
               ></DialogDialogue>
             </v-col>
           </v-row>
-          <div class="bg-primary" id="buttons-container">
+          <!-- <div class="bg-primary" id="buttons-container">
             <v-expand-transition>
               <v-textarea
-                v-show="commentVisible"
+                v-show="true"
                 label="Comment"
                 bg-color="white"
                 v-model="comment"
@@ -822,35 +822,35 @@ export default {
               ></v-textarea>
             </v-expand-transition>
             <v-row class="mt-2 d-flex flex-wrap justify-center" dense>
-    <v-col cols="auto" class="d-flex justify-center">
-      <DynamicButton
-        text="Show comment"
-        color="white"
-        icon="mdi-comment-edit"
-        @click.stop="commentVisible = !commentVisible"
-        class="button-fixed-width"
-      ></DynamicButton>
-    </v-col>
-    <v-col cols="auto" class="d-flex justify-center">
-      <DynamicButton
-        text="Save and close"
-        color="white"
-        icon="mdi-check"
-        @click.stop="confirmAnnotation"
-        class="button-fixed-width"
-      ></DynamicButton>
-    </v-col>
-    <v-col cols="auto" class="d-flex justify-center">
-      <DynamicButton
-        text="Discard changes"
-        color="white"
-        icon="mdi-close"
-        @click.stop="cancel"
-        class="button-fixed-width"
-      ></DynamicButton>
-    </v-col>
-  </v-row>
-          </div>
+              <v-col cols="auto" class="d-flex justify-center">
+                <DynamicButton
+                  text="Show comment"
+                  color="white"
+                  icon="mdi-comment-edit"
+                  @click.stop="commentVisible = !commentVisible"
+                  class="button-fixed-width"
+                ></DynamicButton>
+              </v-col>
+              <v-col cols="auto" class="d-flex justify-center">
+                <DynamicButton
+                  text="Save and close"
+                  color="white"
+                  icon="mdi-check"
+                  @click.stop="confirmAnnotation"
+                  class="button-fixed-width"
+                ></DynamicButton>
+              </v-col>
+              <v-col cols="auto" class="d-flex justify-center">
+                <DynamicButton
+                  text="Discard changes"
+                  color="white"
+                  icon="mdi-close"
+                  @click.stop="cancel"
+                  class="button-fixed-width"
+                ></DynamicButton>
+              </v-col>
+            </v-row>
+          </div> -->
         </v-container>
       </v-col> </v-row
   ></v-container>
