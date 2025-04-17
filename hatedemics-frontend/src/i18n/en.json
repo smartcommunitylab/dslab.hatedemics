@@ -42,7 +42,7 @@
           },
           "risk": {
             "title": "Infodemic Risk",
-            "description": "How much the channel is reliable. This measure goes from 0 to N."
+            "description": "How much the channel is reliable. This measure goes from 0 to 1."
           },
           "check": {
             "title": "Check Worthiness",

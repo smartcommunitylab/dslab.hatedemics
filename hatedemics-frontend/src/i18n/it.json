@@ -42,7 +42,7 @@
           },
           "risk": {
             "title": "Rischio Infodemia",
-            "description": "Quanto un canale è affidabile. Questa misura va da 0 a N."
+            "description": "Quanto un canale è affidabile. Questa misura va da 0 a 1."
           },
           "check": {
             "title": "Verificabilità",
