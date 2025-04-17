@@ -5,13 +5,15 @@
       <v-col cols="12" md="8" class="text-center">
         <v-row justify="center" align="center">
           <v-col cols="6" md="4" class="text-center">
-            <v-img src="/src/assets/credits/eu.jpg" max-height="80" contain class="mb-2" />
+            <v-img src="@/assets/credits/eu.jpg" max-height="80" contain class="mb-2" />
           </v-col>
           <v-col cols="6" md="4" class="text-center">
-            <v-img src="/src/assets/credits/hatedemics.png" max-height="100" contain class="mb-2" />
+            <v-img src="@/assets/credits/hatedemics.png" max-height="100" contain class="mb-2" />
           </v-col>
         </v-row>
         <h1 class="text-h4 font-weight-bold">HateDemics</h1>
+        <p class="text-subtitle-1">HATEDEMICS is funded by the European Union (CERV-2023-CHAR-LITI-101143249))
+        </p>
       </v-col>
     </v-row>
 
@@ -63,21 +65,35 @@
 
 <script setup>
 import { ref } from 'vue';
+import logoAlda from '@/assets/credits/alda.png';
+import logoCeo from '@/assets/credits/ceo.jpg';
+import logoCesie from '@/assets/credits/cesie.png';
+import logoDemagog from '@/assets/credits/demagog.png';
+import logoFacta from '@/assets/credits/facta.jpeg';
+import logoFbk from '@/assets/credits/fbk.jpg';
+import logoFundea from '@/assets/credits/fundea.png';
+import logoMaldita from '@/assets/credits/maldita.png';
+import logoMg from '@/assets/credits/mg.png';
+import logoNask from '@/assets/credits/nask.png';
+import logoPp from '@/assets/credits/pp.jpeg';
+import logoSaher from '@/assets/credits/saher.jpg';
+import logoSos from '@/assets/credits/sos.png';
+import logoVsa from '@/assets/credits/vsa.jpg';
 
 const partners = ref([
-  { name: 'ALDA', logo: '/src/assets/credits/alda.png', link: 'https://www.alda-europe.eu/',email: 'alda@alda-europe.eu '  },
-  { name: 'CEO', logo: '/src/assets/credits/ceo.jpg', link: 'https://ceo.org.pl/english/', email: 'ceo@ceo.org.pl'},
-  { name: 'CESIE', logo: '/src/assets/credits/cesie.png', link: 'https://cesie.org/' , email: 'press.office@cesie.org'},
-  { name: 'Demagog', logo: '/src/assets/credits/demagog.png', link: 'https://demagog.org.pl/', email: 'kontakt@demagog.org.pl'},
-  { name: 'Facta', logo: '/src/assets/credits/facta.jpeg', link: 'https://www.facta.news/' },
-  { name: 'Fbk', logo: '/src/assets/credits/fbk.jpg', link: 'https://www.fbk.eu/en/' },
-  { name: 'Fundea', logo: '/src/assets/credits/fundea.png', link: 'https://www.fundea.org', email: 'ppd@fundea.org'},
-  { name: 'Maldita', logo: '/src/assets/credits/maldita.png', link: 'https://maldita.es', email: 'proyectos@maldita.es'},
-  { name: 'Mg', logo: '/src/assets/credits/mg.png', link: ' https://www.centrodeestudiosandaluces.es/', email: 'dpd.cpidssa@juntadeandalucia.es'},
-  { name: 'nask', logo: '/src/assets/credits/nask.png', link: 'https://www.nask.pl/', email: 'inspektorochronydanych@nask.pl'},
-  { name: 'pp', logo: '/src/assets/credits/pp.jpeg', link: 'https://pagellapolitica.it/',email:'matters.privacy@pagellapolitica.it' },
-  { name: 'saher', logo: '/src/assets/credits/saher.jpg', link: 'http://www.saher-eu.com', email: 'contact@saher-eu.com'},
-  { name: 'sos', logo: '/src/assets/credits/sos.png', link: 'https://www.facebook.com/sosmaltapage', email: 'graziella.schiavone@sosmalta.org'},
-  { name: 'vsa', logo: '/src/assets/credits/vsa.jpg', link: 'http://www.vsa.gov.mt' , email: 'vsa_projects@gov.mt'},
+  { name: 'ALDA', logo: logoAlda, link: 'https://www.alda-europe.eu/', email: 'alda@alda-europe.eu' },
+  { name: 'CEO', logo: logoCeo, link: 'https://ceo.org.pl/english/', email: 'ceo@ceo.org.pl' },
+  { name: 'CESIE', logo: logoCesie, link: 'https://cesie.org/', email: 'press.office@cesie.org' },
+  { name: 'Demagog', logo: logoDemagog, link: 'https://demagog.org.pl/', email: 'kontakt@demagog.org.pl' },
+  { name: 'Facta', logo: logoFacta, link: 'https://www.facta.news/' },
+  { name: 'Fbk', logo: logoFbk, link: 'https://www.fbk.eu/en/' },
+  { name: 'Fundea', logo: logoFundea, link: 'https://www.fundea.org', email: 'ppd@fundea.org' },
+  { name: 'Maldita', logo: logoMaldita, link: 'https://maldita.es', email: 'proyectos@maldita.es' },
+  { name: 'Mg', logo: logoMg, link: 'https://www.centrodeestudiosandaluces.es/', email: 'dpd.cpidssa@juntadeandalucia.es' },
+  { name: 'nask', logo: logoNask, link: 'https://www.nask.pl/', email: 'inspektorochronydanych@nask.pl' },
+  { name: 'pp', logo: logoPp, link: 'https://pagellapolitica.it/', email: 'matters.privacy@pagellapolitica.it' },
+  { name: 'saher', logo: logoSaher, link: 'http://www.saher-eu.com', email: 'contact@saher-eu.com' },
+  { name: 'sos', logo: logoSos, link: 'https://www.facebook.com/sosmaltapage', email: 'graziella.schiavone@sosmalta.org' },
+  { name: 'vsa', logo: logoVsa, link: 'http://www.vsa.gov.mt', email: 'vsa_projects@gov.mt' },
 ]);
 </script>
