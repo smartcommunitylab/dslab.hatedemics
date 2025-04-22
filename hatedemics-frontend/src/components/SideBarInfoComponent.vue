@@ -90,16 +90,13 @@ onMounted(async () => {
           <v-list-subheader class="text-h6 font-weight-bold">
             {{ t("channelInfo.topics") }}
           </v-list-subheader>
-          <v-chip-group column>
             <v-chip
               v-for="([key, value], index) in dataEntries"
               :key="index"
               class="ma-1"
-              color="primary"
             >
               {{ (value as any).topic_label }}
             </v-chip>
-          </v-chip-group>
         </v-list>
       </v-card-text>
 
