@@ -233,36 +233,6 @@ const getFooterText= () => {
     <v-row>
       <v-col cols="12" md="3">
         <v-select
-          v-model="filters.target"
-          :label="t('message.filter.target')"
-          :items="[
-            { title: t('message.filter.all'), value: null },
-            { title: t('message.filter.DISABLED'), value: 'DISABLED' },
-            { title: t('message.filter.JEWS'), value: 'JEWS' },
-            { title: t('message.filter.LGBT+'), value: 'LGBT+' },
-            { title: t('message.filter.MIGRANTS'), value: 'MIGRANTS' },
-            { title: t('message.filter.MUSLIMS'), value: 'MUSLIMS' },
-            { title: t('message.filter.OTHER'), value: 'OTHER' },
-            { title: t('message.filter.POC'), value: 'POC' },
-            { title: t('message.filter.ROMANI'), value: 'ROMANI' },
-            { title: t('message.filter.WOMEN'), value: 'WOMEN' },
-          ]"
-          item-value="value"
-          item-text="text"
-          clearable
-          dense
-        />
-      </v-col>
-      <v-col cols="12" md="3">
-        <v-text-field
-          v-model="filters.topic"
-          :label="t('message.filter.topic')"
-          clearable
-          dense
-        />
-      </v-col>
-      <v-col cols="12" md="3">
-        <v-select
           v-model="filters.hate"
           :label="t('message.filter.hate')"
           :items="[
@@ -288,6 +258,38 @@ const getFooterText= () => {
           dense
         />
       </v-col>
+      <v-col cols="12" md="3">
+        <v-text-field
+          v-model="filters.topic"
+          :label="t('message.filter.topic')"
+          clearable
+          dense
+        />
+      </v-col>
+      <v-col cols="12" md="3">
+        <v-select
+          v-model="filters.target"
+          :label="t('message.filter.target')"
+          :items="[
+            { title: t('message.filter.all'), value: null },
+            { title: t('message.filter.DISABLED'), value: 'DISABLED' },
+            { title: t('message.filter.JEWS'), value: 'JEWS' },
+            { title: t('message.filter.LGBT+'), value: 'LGBT+' },
+            { title: t('message.filter.MIGRANTS'), value: 'MIGRANTS' },
+            { title: t('message.filter.MUSLIMS'), value: 'MUSLIMS' },
+            { title: t('message.filter.OTHER'), value: 'OTHER' },
+            { title: t('message.filter.POC'), value: 'POC' },
+            { title: t('message.filter.ROMANI'), value: 'ROMANI' },
+            { title: t('message.filter.WOMEN'), value: 'WOMEN' },
+          ]"
+          item-value="value"
+          item-text="text"
+          clearable
+          dense
+        />
+      </v-col>
+      
+      
     </v-row>
     <v-data-table-server
       :headers="headers"

@@ -189,7 +189,7 @@ export default {
       if (
         !(await this.$refs.confirm.open(
           "Confirm",
-          "If you live this page, you'll loose your job. Are you sure?",
+          "If you leave this page, you might lose your progress. Are you sure?",
           {
             okText: "Yes",
             cancelText: "No",

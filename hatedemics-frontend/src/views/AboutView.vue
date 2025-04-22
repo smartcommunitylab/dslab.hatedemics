@@ -93,7 +93,7 @@ const partners = ref([
   { name: 'nask', logo: logoNask, link: 'https://www.nask.pl/', email: 'nask@nask.pl' },
   { name: 'pp', logo: logoPp, link: 'https://pagellapolitica.it/', email: 'matters.privacy@pagellapolitica.it' },
   { name: 'saher', logo: logoSaher, link: 'http://www.saher-eu.com', email: 'contact@saher-eu.com' },
-  { name: 'sos', logo: logoSos, link: 'https://www.facebook.com/sosmaltapage', email: 'graziella.schiavone@sosmalta.org' },
+  { name: 'sos', logo: logoSos, link: 'https://www.facebook.com/sosmaltapage', email: 'info@sosmalta.org' },
   { name: 'vsa', logo: logoVsa, link: 'http://www.vsa.gov.mt', email: 'vsa_projects@gov.mt' },
 ]);
 </script>
