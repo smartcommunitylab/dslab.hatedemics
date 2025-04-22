@@ -102,17 +102,14 @@ watch(selectedChannelInfo, async (newVal) => {
           <v-list-subheader class="text-h6 font-weight-bold">
             {{ t("channelInfo.topics") }}
           </v-list-subheader>
-          <v-chip-group column>
             <v-chip
               v-for="([key, value], index) in dataEntries"
               :key="index"
-              
+              :ripple="false"
               class="ma-1"
-              color="primary"
             >
               {{ value.topic_label }}
             </v-chip>
-          </v-chip-group>
         </v-list>
       </v-card-text>
 
