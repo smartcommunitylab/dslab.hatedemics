@@ -143,7 +143,7 @@ const onWordClick = (word: string) => console.log(word);
 
   <div v-else>
     <v-select
-      label="Seleziona un topic"
+      :label="t('wordclouds.selectTopic')"
       v-model="selectedTopic"
       :items="topics"
       item-title="name"

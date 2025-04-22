@@ -212,6 +212,7 @@
         "checkworthy": "Check Worthy vs Non Check Worthy",
         "generic": "Generic",
         "select":"Select WordCloud type",
+        "selectTopic":"Select a Topic",
         "channel":"Channel",
         "titles": {
             "hate": "Hate Speech",
