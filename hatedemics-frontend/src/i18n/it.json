@@ -172,7 +172,8 @@
             "checkLabel": "Check Worthy",
             "topic": "Argomento",
             "target": "Destinatario",
-            "keywordsMatch": "Parole chiave"
+            "keywordsMatch": "Parole chiave",
+            "counterspeech": "Inizia dialogo"
         },
         "dialog": {
             "start": "Inizia una nuova conversazione con Destinatario={target}",

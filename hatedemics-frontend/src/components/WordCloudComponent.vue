@@ -69,6 +69,11 @@ watch(selectionType, (newVal) => {
     ); // Usa il primo elemento come valore iniziale
   }
 });
+watch(selectedTopic, (newVal) => {
+  if (newVal && selectionType.value === "channel") {
+    selectionType.value = "topic";
+  }
+});
 const wordsPositive = computed(() => {
 
   return selectionType.value === "channel" && keyMapPositive[selectedChannelView.value]

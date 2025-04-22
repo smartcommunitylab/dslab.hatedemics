@@ -50,7 +50,7 @@ const headers = computed(() => [
   { title: t("message.header.checkLabel"), key: "checkworthy_label", sortable: true },
   { title: t("message.header.topic"), key: "topic_label", sortable: true },
   { title: t("message.header.target"), key: "target", sortable: true },
-  { title: "", key: "actions", sortable: false },
+  { title: t("message.header.counterspeech"), key: "actions", sortable: false },
 
 ]);
 

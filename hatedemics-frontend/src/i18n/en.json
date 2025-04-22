@@ -171,7 +171,8 @@
             "checkLabel": "Check Worthy",
             "topic": "Topic",
             "target": "Target",
-            "keywordsMatch": "Keywords Match"
+            "keywordsMatch": "Keywords Match",
+            "counterspeech": "Start Conversation"
         },
         "dialog": {
             "start": "Start a new conversation with Target={target}",
