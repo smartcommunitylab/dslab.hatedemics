@@ -16,13 +16,15 @@ public class TelegramChannelController {
     @Autowired
     private TelegramChannelService telegramChannelService;
 
-    @GetMapping
-    public Page<TelegramChannel> getAllChannels(
-        @RequestParam String language, 
-        @RequestParam(required = false) String id,
-        Pageable pageable) {
-        return telegramChannelService.findAll(language, id, pageable);
-    }
+@GetMapping
+public Page<TelegramChannel> getAllChannels(
+    @RequestParam String language,
+    @RequestParam(required = false) String id,
+    @RequestParam(name = "channelLabels", required = false)String label,
+    Pageable pageable) {
+
+    return telegramChannelService.findAll(language, id, label, pageable);
+}
 
     @GetMapping("/{id}")
     public Optional<TelegramChannel> getChannelById(@PathVariable String id) {

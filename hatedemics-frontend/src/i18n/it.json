@@ -90,7 +90,8 @@
             "hs": "Hate Speech",
             "nInRecommendations": "Raccomandazioni in entrata",
             "nOutRecommendations": "Raccomandazioni in uscita",
-            "expandable": "Espandibile"
+            "expandable": "Espandibile",
+            "label": "Etichetta"
         }
     },
     "language": {

@@ -17,13 +17,16 @@ public class TelegramChannelService {
     @Autowired
     private TelegramChannelRepository telegramChannelRepository;
 
-    public Page<TelegramChannel> findAll(String language, String id, Pageable pageable) {
-        if(StringUtils.isNotBlank(id)) {
+    public Page<TelegramChannel> findAll(String language, String id, String label, Pageable pageable) {
+        if (StringUtils.isNotBlank(id)) {
             return telegramChannelRepository.findByLanguageAndIdContainingIgnoreCase(language, id, pageable);
+        } else if (StringUtils.isNotBlank(label)) {
+            return telegramChannelRepository.findByLanguageAndChannelLabelsContainingIgnoreCase(language, label, pageable);
         } else {
             return telegramChannelRepository.findByLanguage(language, pageable);
         }
     }
+    
 
     public Optional<TelegramChannel> findById(String id) {
         return telegramChannelRepository.findById(id);

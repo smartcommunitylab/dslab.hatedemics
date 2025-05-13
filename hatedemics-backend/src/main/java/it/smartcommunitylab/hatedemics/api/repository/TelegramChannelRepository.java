@@ -11,4 +11,7 @@ public interface TelegramChannelRepository extends JpaRepository<TelegramChannel
 
     Page<TelegramChannel> findByLanguageAndIdContainingIgnoreCase(String language, String id, Pageable pageable);
 
+    Page<TelegramChannel> findByLanguageAndChannelLabelsContainingIgnoreCase(String language, String channelLabels, Pageable pageable); 
+
+
 }

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import ChatTableComponent from '@/components/ChatTableComponent.vue'
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
@@ -23,6 +23,13 @@ const messagesStore = useMessagesStore();
 const { messages } = storeToRefs(messagesStore);
 const { selectedChannelInfo, channelsInfo } = storeToRefs(channelsStore);
 const { selectedChat, chats } = storeToRefs(chatStore);
+// Mappa le chat con label "Chat 1", "Chat 2", ecc.
+const chatOptions = computed(() =>
+  chats.value.map((chat, index) => ({
+    title: `Chat ${index + 1}`,
+    value: chat.id,
+  }))
+);
 const search = ref('');
 const loading = ref(false);
   let page = 0;
@@ -37,7 +44,8 @@ const fetchChannels = async (reset = false) => {
   if (allLoaded || loading.value) return;
   loading.value = true;
   try {
-    const {success,total ,content } =  await channelsStore.dispatchGetChannels({page,size},search.value);
+    const {success,total ,content } =  await channelsStore.dispatchGetChannels({page,size}, { label: search.value }
+    );
     if (!success) {
       console.error("API error, status:", total);
       return;
@@ -97,7 +105,7 @@ const loadMore = (event: { target: any; }) => {
           v-model="selectedChannelInfo"
           :items="channelsInfo"
           :loading="loading"
-          item-title="id"
+          item-title="channel_labels"
           item-value="id"
           variant="outlined"
           density="comfortable"
@@ -111,15 +119,15 @@ const loadMore = (event: { target: any; }) => {
 
       <v-col cols="4">
         <v-select
-          :label="t('channelInfo.chats')"
-          v-model="selectedChat"
-          :items="chats"
-          item-title="id"
-          item-value="id"
-          variant="outlined"
-          density="comfortable"
-          @update:model-value="updateChat"
-        />
+  :label="t('channelInfo.chats')"
+  v-model="selectedChat"
+  :items="chatOptions"
+  item-title="title"
+  item-value="value"
+  variant="outlined"
+  density="comfortable"
+  @update:model-value="updateChat"
+/>
       </v-col>
     </v-row>
 

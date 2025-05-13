@@ -13,6 +13,7 @@ export type ChannelInfo = {
   about: string
   last_queried_at: string
   preprocessed_about: string
+  channel_labels: string
   pts: number
   broadcast: boolean
   participants_count: number
@@ -20,6 +21,7 @@ export type ChannelInfo = {
   distance_from_seed: number
   language: string
   n_in_recommendation: number
+  expandable: boolean
   n_out_recommended: number
   participation_score: number
   message_count: number

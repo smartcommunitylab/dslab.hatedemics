@@ -71,11 +71,16 @@ export const useChannelsStore = defineStore("channelsStore", () => {
       return { success: false, status: _error.response?.status, content: null };
     }
   }
-  async function dispatchGetChannels({ page = 0, size = 10, sort = "IRI,desc" }, id?: string): Promise<APIResponse<null>> {
+  async function dispatchGetChannels(
+    { page = 0, size = 10, sort = "IRI,desc" },
+    filters?: { id?: string; label?: string }
+  ): Promise<APIResponse<null>> {
     try {
-      const { status, data } = await API.channels.getChannelsInfo(selectedLanguage.value!, {
-        page, size, sort
-      }, id);
+      const { status, data } = await API.channels.getChannelsInfo(
+        selectedLanguage.value!,
+        { page, size, sort },
+        filters
+      );
       if (status === 200) {
         initChannelsInfo(data.content);
         return { success: true, total: data.totalElements, content: data.content };
@@ -87,6 +92,7 @@ export const useChannelsStore = defineStore("channelsStore", () => {
       return { success: false, status: _error.response?.status, content: null };
     }
   }
+  
 
   return {
     // channels,

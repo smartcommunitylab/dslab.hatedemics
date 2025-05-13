@@ -22,6 +22,9 @@ public class TelegramChannel {
     @Column(name = "preprocessed_about")
     @JsonProperty("preprocessed_about")
     private String preprocessedAbout;
+    @Column(name = "channel_labels")
+    @JsonProperty("channel_labels")
+    private String channelLabels;
     private Integer pts;
     private Boolean broadcast;
     @Column(name = "participants_count")
@@ -37,6 +40,9 @@ public class TelegramChannel {
     @JsonProperty("n_in_recommendation")
     @Column(name = "n_in_recommendation")
     private Integer nInRecommendation;
+    @JsonProperty("expandable")
+    @Column(name = "expandable")
+    private Boolean expandable;
     @JsonProperty("n_out_recommended")
     @Column(name = "n_out_recommended")
     private Integer nOutRecommended;

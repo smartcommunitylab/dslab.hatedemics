@@ -37,6 +37,8 @@ const languages = [
 const sortBy = ref([{ key: "IRI", order: "desc" }]);
 
 const headers = computed(() => [
+  
+  { title: t("channelTable.header.label"), key: "channel_labels", sortable: true },
   { title: t("channelTable.header.messages"), key: "message_count", sortable: true },
   {
     title: t("channelTable.header.partecipants"),
@@ -44,12 +46,12 @@ const headers = computed(() => [
     sortable: true,
   },
   {
-    title: t("channelTable.header.nInRecommendations"),
+    title: t("in Rec"),
     key: "n_in_recommendation",
     sortable: true,
   },
   {
-    title: t("channelTable.header.nOutRecommendations"),
+    title: t("out Rec"),
     key: "n_out_recommended",
     sortable: true,
   },
@@ -152,6 +154,7 @@ const onPaginationChange = (options: any) => {
             color="primary"
             class="mb-4"
           ></v-text-field> -->
+          <div class="scroll-wrapper">
 
           <v-data-table-server
             :loading="loading"
@@ -180,8 +183,10 @@ const onPaginationChange = (options: any) => {
                 :class="{ selected: item.id === selectedChannelInfo?.id }"
                 class="hover-row"
               >
-                <td class="text-left">{{ item.message_count }}</td>
-                <td class="text-left">{{ item.participants_count }}</td>
+              
+              <td class="text-left">{{ item.channel_labels.substring(0, 45)  }}</td>
+              <td class="text-left">{{ item.message_count }}</td>
+              <td class="text-left">{{ item.participants_count }}</td>
                 <td class="text-left">{{ item.n_in_recommendation }}</td>
                 <td class="text-left">{{ item.n_out_recommended }}</td>
                 <td class="text-left">{{ item.iri?.toFixed(2) }}</td>
@@ -198,6 +203,7 @@ const onPaginationChange = (options: any) => {
               </tr>
             </template>
           </v-data-table-server>
+          </div>
         </v-card>
       </v-col>
 
@@ -241,5 +247,20 @@ const onPaginationChange = (options: any) => {
 
 .error {
   background-color: red;
+}
+.scrollable-container {
+  overflow-x: auto;
+  position: relative;
+}
+
+.scrollable-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 30px;
+  pointer-events: none;
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1));
 }
 </style>

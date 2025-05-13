@@ -11,6 +11,7 @@ import { useChatsStore } from "@/store/ChatStore";
 import WordCloudComponent from "@/components/WordCloudComponent.vue";
 import TopicsTableComponent from "@/components/TopicsTableComponent.vue";
 import SideBarInfoComponent from "@/components/SideBarInfoComponent.vue";
+import { computed } from "vue";
 
 import type { ChannelInfo, Chat } from "@/services/types";
 
@@ -31,6 +32,13 @@ let page = 0;
 const size = 10;
 let allLoaded = false;
 
+// Mappa le chat con label "Chat 1", "Chat 2", ecc.
+const chatOptions = computed(() =>
+  chats.value.map((chat, index) => ({
+    title: `Chat ${index + 1}`,
+    value: chat.id,
+  }))
+);
 // onMounted(async () => {
 //   const { success, status } =   await topicsStore.dispatchGetTopics(selectedChannelInfo?.value?.id!);
 //   if (!success) {
@@ -48,8 +56,8 @@ const fetchChannels = async (reset = false) => {
   try {
     const { success, total, content } = await channelsStore.dispatchGetChannels(
       { page, size },
-      search.value
-    );
+      { label: search.value }
+      );
     if (!success) {
       console.error("API error, status:", total);
       return;
@@ -102,7 +110,7 @@ const loadMore = (event: { target: any }) => {
           v-model="selectedChannelInfo"
           :items="channelsInfo"
           :loading="loading"
-          item-title="id"
+          item-title="channel_labels"
           item-value="id"
           variant="outlined"
           density="comfortable"
@@ -115,7 +123,7 @@ const loadMore = (event: { target: any }) => {
       </v-col>
 
       <v-col cols="4">
-        <v-select
+        <!-- <v-select
           :label="t('channelInfo.chats')"
           v-model="selectedChat"
           :items="chats"
@@ -124,7 +132,17 @@ const loadMore = (event: { target: any }) => {
           variant="outlined"
           density="comfortable"
           @update:model-value="updateChat"
-        />
+        /> -->
+        <v-select
+  :label="t('channelInfo.chats')"
+  v-model="selectedChat"
+  :items="chatOptions"
+  item-title="title"
+  item-value="value"
+  variant="outlined"
+  density="comfortable"
+  @update:model-value="updateChat"
+/>
       </v-col>
 
       <v-col cols="4" class="d-flex justify-center">

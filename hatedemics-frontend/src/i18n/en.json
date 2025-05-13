@@ -90,7 +90,8 @@
             "IRI": "Infodemic Risk",
             "nInRecommendations": "In Recommendations",
             "nOutRecommendations": "Out Recommendations",
-            "expandable": "Expandable"
+            "expandable": "Expandable",
+            "label": "Label"
         }
     },
     "language": {
