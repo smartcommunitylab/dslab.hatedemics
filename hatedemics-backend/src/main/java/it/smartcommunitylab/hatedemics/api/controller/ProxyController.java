@@ -42,13 +42,17 @@ public class ProxyController {
     private String username;
     @Value("${dialogservice.password}")
     private String password;
+    @Value("${generation.token}")
+    private String generationToken;
 
     private static String token;
     private static Long tokenUpdate = 0L;
 
     @RequestMapping("/gen/**")
     public ResponseEntity<?> generationProxy(HttpServletRequest request) throws IOException {
-        return proxy(request, "/api/proxy/gen", generationUrl, null);
+        String authHeader = "Basic " + generationToken;
+        Map<String, String> customHeaders = Map.of("Authorization", authHeader);
+        return proxy(request, "/api/proxy/gen", generationUrl, customHeaders);
     }
 
     @RequestMapping("/dialog/**")
@@ -64,7 +68,21 @@ public class ProxyController {
             return proxy(request, "/api/proxy/dialog", dialogUrl, customHeaders);
         }
     }
-
+    private String buildCurlCommand(HttpMethod method, String url, HttpHeaders headers, String body) {
+        StringBuilder curl = new StringBuilder();
+        curl.append("curl -X ").append(method.name()).append(" \\\n");
+    
+        headers.forEach((key, values) -> values.forEach(value ->
+            curl.append("  -H '").append(key).append(": ").append(value).append("' \\\n")
+        ));
+    
+        if (body != null && !body.isEmpty()) {
+            curl.append("  -d '").append(body.replace("'", "'\\''")).append("' \\\n");
+        }
+    
+        curl.append("  '").append(url).append("'");
+        return curl.toString();
+    }
     public ResponseEntity<?> proxy(HttpServletRequest request, String prefix, String endpoint,
             Map<String, String> customHeaders) throws IOException {
         String requestUrl = request.getRequestURI().replace(prefix, "");
@@ -116,6 +134,7 @@ public class ProxyController {
             org.springframework.http.HttpEntity<String> entity = new org.springframework.http.HttpEntity<>(body,
                     headers);
             try {
+
                 return restTemplate.exchange(uri, method, entity, String.class);
             } catch (Exception e) {
                 log.warn("Token scaduto, rigenero...");
