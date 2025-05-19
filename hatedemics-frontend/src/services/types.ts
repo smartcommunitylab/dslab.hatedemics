@@ -107,6 +107,7 @@ export type Message = {
   nr_views: string
   preprocessed_message: string
   preprocessed_message_media: string
+  preprocessed_message_number_media: string
   reactions: Reactions
   replies_to_msg_id: any
   replies_to_msg_text: any
