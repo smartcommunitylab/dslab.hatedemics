@@ -29,7 +29,7 @@ const filters = reactive({
   hate: null,
   checkworthy: null,
   target: null,
-  topic: null,
+  // topic: null,
 });
 const itemsPerPageOptions = [
   { title: "10", value: 10 },
@@ -48,7 +48,7 @@ const headers = computed(() => [
   { title: t("message.header.nrViews"), key: "nr_views", sortable: true },
   { title: t("message.header.hateLabel"), key: "hate_label", sortable: true },
   { title: t("message.header.checkLabel"), key: "checkworthy_label", sortable: true },
-  { title: t("message.header.topic"), key: "topic_label", sortable: true },
+  // { title: t("message.header.topic"), key: "topic_label", sortable: true },
   { title: t("message.header.target"), key: "target", sortable: true },
   { title: t("message.header.counterspeech"), key: "actions", sortable: false },
 
@@ -146,7 +146,7 @@ const fetchMessages = async () => {
       filters.target ?? undefined,
       filters.checkworthy ?? undefined,
       filters.hate ?? undefined,
-      filters.topic ?? undefined
+      // filters.topic ?? undefined
     );
     if (success && total) {
       totalItems.value = total; // Aggiorna il numero totale degli elementi
@@ -231,7 +231,7 @@ const getFooterText= () => {
 <template>
   <v-container fluid>
     <v-row>
-      <v-col cols="12" md="3">
+      <v-col cols="12" md="4">
         <v-select
           v-model="filters.hate"
           :label="t('message.filter.hate')"
@@ -245,7 +245,7 @@ const getFooterText= () => {
         />
       </v-col>
 
-      <v-col cols="12" md="3">
+      <v-col cols="12" md="4">
         <v-select
           v-model="filters.checkworthy"
           :label="t('message.filter.checkworthy')"
@@ -258,15 +258,15 @@ const getFooterText= () => {
           dense
         />
       </v-col>
-      <v-col cols="12" md="3">
+      <!-- <v-col cols="12" md="3">
         <v-text-field
           v-model="filters.topic"
           :label="t('message.filter.topic')"
           clearable
           dense
         />
-      </v-col>
-      <v-col cols="12" md="3">
+      </v-col> -->
+      <v-col cols="12" md="4">
         <v-select
           v-model="filters.target"
           :label="t('message.filter.target')"
