@@ -41,7 +41,7 @@ const headers = computed(() => [
   { title: t("message.header.date"), key: "date", sortable: true },
   {
     title: t("message.header.message"),
-    key: "preprocessed_message_media",
+    key: "preprocessed_message_number_media",
     sortable: true,
   },
   { title: t("message.header.from"), key: "from_user", sortable: true },
@@ -315,7 +315,7 @@ const getFooterText= () => {
       <template v-slot:item.date="{ item }">
         <td class="text-left">{{ formatDate(item.date) }}</td>
       </template>
-      <template v-slot:item.preprocessed_message_media="{ item }">
+      <template v-slot:item.preprocessed_message_number_media="{ item }">
         <div class="chat-message" :style="{ backgroundColor: getColor(item.from_user) }">
           <div class="message-content">
             <v-icon
@@ -323,7 +323,7 @@ const getFooterText= () => {
               :icon="getIcon(item.media_type)"
               class="me-2"
             ></v-icon>
-            <span>{{ item.preprocessed_message_media }}</span>
+            <span>{{ item.preprocessed_message_number_media }}</span>
           </div>
           <div class="message-time">
             {{ formatDate(item.date) }}

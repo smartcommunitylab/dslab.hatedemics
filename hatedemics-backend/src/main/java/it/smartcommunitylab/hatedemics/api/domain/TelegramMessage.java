@@ -103,9 +103,9 @@ public class TelegramMessage {
     @Column(name = "keywords_match")
     private String keywordsMatch;
 
-    @JsonProperty("preprocessed_message_media")
-    @Column(name = "preprocessed_message_media")
-    private String preprocessedMessageMedia;
+    @JsonProperty("preprocessed_message_number_media")
+    @Column(name = "preprocessed_message_number_media")
+    private String preprocessedMessageNumberMedia;
 
     @JsonProperty("media_type")
     @Column(name = "media_type")
@@ -283,12 +283,12 @@ public class TelegramMessage {
     public void setMediaType(String mediaType) {
         this.mediaType = mediaType;
     }
-    public String getPreprocessedMessageMedia() {
-        return preprocessedMessageMedia;
+    public String getPreprocessedMessageNumberMedia() {
+        return preprocessedMessageNumberMedia;
     }
 
-    public void setPreprocessedMessageMedia(String preprocessedMessageMedia) {
-        this.preprocessedMessageMedia = preprocessedMessageMedia;
+    public void setPreprocessedMessageNumberMedia(String preprocessedMessageNumberMedia) {
+        this.preprocessedMessageNumberMedia = preprocessedMessageNumberMedia;
     }
 
 
