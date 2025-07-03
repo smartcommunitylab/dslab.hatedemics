@@ -16,10 +16,10 @@
   "dependencies": {
     "@cosmograph/cosmograph": "^1.4.2",
     "@mdi/font": "^7.4.47",
-    "3d-force-graph": "^1.76.1",
     "axios": "^1.7.9",
     "core-js": "^3.39.0",
     "element-resize-detector": "^1.2.4",
+    "force-graph": "^1.49.6",
     "graphology": "^0.24.1",
     "graphology-layout-forceatlas2": "^0.10.1",
     "graphology-types": "^0.24.8",

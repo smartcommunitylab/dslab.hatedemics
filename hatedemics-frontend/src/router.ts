@@ -3,21 +3,13 @@ import {
   createRouter,
   createWebHistory,
   type Router,
-  type NavigationGuardNext,
-  type RouteLocationNormalized,
   type RouteRecordRaw
 } from 'vue-router';
 
 // Components
-import HomeView from '@/views/HomeView.vue';
-import DashboardView from '@/views/DashboardView.vue';
-import InspectorView from '@/views/InspectorView.vue';
-import DiscussionView from '@/views/DiscussionView.vue';
 import CounterspeechWriting from '@/views/CounterspeechWriting.vue';
-import Channels from '@/views/Channels.vue';
 import Login from '@/views/LoginView.vue';
 import annotationInterface from '@/components/AnnotationInterface.vue'
-import ProjectsView from '@/components/ProjectsList.vue'
 import tasks from '@/components/TaskList.vue'
 import loginApi from './services/login/loginApi';
 import AboutView from './views/AboutView.vue';
@@ -45,10 +37,16 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/views/HomeView.vue')
   },
   {
+    path: '/educational',
+    name: 'Educational',
+    component: () => import('@/views/EducationalView.vue'),
+  },
+  {
     path: '/dashboard',
     name: 'Dashboard',
     component: () => import('@/views/DashboardView.vue'),
-  },{
+  },
+  {
     path: '/dashboard/channels',
     name: 'Channels',
     component: () => import('@/views/Channels.vue'),
@@ -100,7 +98,8 @@ const routes: RouteRecordRaw[] = [
     name: 'Credits',
 
     component: AboutView
-  }
+  },
+  
 ];
 
 const router: Router = createRouter({

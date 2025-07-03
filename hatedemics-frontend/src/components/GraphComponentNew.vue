@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, watch, nextTick } from "vue";
-import ForceGraph3D from "3d-force-graph";
+import ForceGraph from "force-graph";
 import { initData, nodes, links, type Node } from "@/services/data-gen";
 import { useChannelsStore } from '@/store/ChannelStore';
 import { storeToRefs } from 'pinia';
@@ -137,7 +137,7 @@ if (n.name === newValue.id) {
 const initializeGraph = () => {
   if (!graphContainer.value || graphInstance) return;
   graphContainer.value.innerHTML = '';
-  graphInstance =  new ForceGraph3D(graphContainer.value)
+  graphInstance =  new ForceGraph(graphContainer.value)
   .graphData({ nodes, links })
   // .linkDirectionalArrowLength(3.5) // Aggiunge frecce
   // .linkDirectionalArrowRelPos(1)  // Posiziona le frecce alla fine

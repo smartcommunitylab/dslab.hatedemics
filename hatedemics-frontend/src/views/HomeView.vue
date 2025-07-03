@@ -33,9 +33,27 @@ const showDialog = ref(false);
 
     <!-- Card funzionalità -->
     <v-row justify="center" align="stretch" class="mt-4" dense>
-      
-      <!-- Card 1: Esplora la rete -->
-      <v-col cols="12" md="5">
+           <!-- Card 1: Edu -->
+           <v-col cols="12" md="4">
+        <v-card elevation="6" class="h-100 pa-5 d-flex flex-column justify-space-between" color="#f4f6fa">
+          <div>
+            <div class="d-flex align-center mb-2">
+              <v-icon color="primary" class="mr-2">mdi-web</v-icon>
+              <h2 class="text-h6 font-weight-bold mb-1">{{t("home.educational")}}</h2>
+            </div>
+            <p class="text-body-1 mb-4">
+              {{t("home.educationalDescription")}}
+            </p>
+          </div>
+          <div class="text-right mt-6">
+            <v-btn color="primary" to="/educational" variant="flat">
+              {{t("home.educationalButton")}}
+            </v-btn>
+          </div>
+        </v-card>
+      </v-col>
+      <!-- Card 2: Esplora la rete -->
+      <v-col cols="12" md="4">
         <v-card elevation="6" class="h-100 pa-5 d-flex flex-column justify-space-between" color="#f4f6fa">
           <div>
             <div class="d-flex align-center mb-2">
@@ -54,8 +72,8 @@ const showDialog = ref(false);
         </v-card>
       </v-col>
 
-      <!-- Card 2: Counterspeech -->
-      <v-col cols="12" md="5">
+      <!-- Card 3: Counterspeech -->
+      <v-col cols="12" md="4">
         <v-card elevation="6" class="h-100 pa-5 d-flex flex-column justify-space-between" color="#f4f6fa">
           <div>
             <div class="d-flex align-center mb-2">
