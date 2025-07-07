@@ -15,15 +15,15 @@
         "annotation": "Annotation",
         "credits": "Crediti"
     },
-    "home":{
-        "title":"Combattere odio e disinformazione online",
-        "description":"HATEDEMICS è una piattaforma che sfrutta l’intelligenza artificiale per analizzare contenuti in rete, potenziare il pensiero critico e allenare la capacità di risposta ai discorsi d’odio.",
-        "network":"Esplora la Rete",
-        "networkDescription":"Una mappa interattiva per osservare le connessioni tra canali, contenuti e dinamiche legate a odio e disinformazione online. Scopri cosa accade in rete, segui i flussi e individua i nodi chiave della comunicazione tossica.",
-        "networkButton":"Vai alla rete",
-        "counterspeech":"Counterspeech Writing",
-        "counterspeechDescription":"Allena la tua capacità di risposta a contenuti d’odio e disinformazione con esercizi di scrittura mirati. Impara come usare fonti attendibili per creare argomentazioni solide e sviluppa il tuo spirito critico per cambiare il tono del dibattito online.",
-        "counterspeechButton":"Inizia a scrivere",
+    "home": {
+        "title": "Combattere odio e disinformazione online",
+        "description": "HATEDEMICS è una piattaforma che sfrutta l’intelligenza artificiale per analizzare contenuti in rete, potenziare il pensiero critico e allenare la capacità di risposta ai discorsi d’odio.",
+        "network": "Esplora la Rete",
+        "networkDescription": "Una mappa interattiva per osservare le connessioni tra canali, contenuti e dinamiche legate a odio e disinformazione online. Scopri cosa accade in rete, segui i flussi e individua i nodi chiave della comunicazione tossica.",
+        "networkButton": "Vai alla rete",
+        "counterspeech": "Counterspeech Writing",
+        "counterspeechDescription": "Allena la tua capacità di risposta a contenuti d’odio e disinformazione con esercizi di scrittura mirati. Impara come usare fonti attendibili per creare argomentazioni solide e sviluppa il tuo spirito critico per cambiare il tono del dibattito online.",
+        "counterspeechButton": "Inizia a scrivere",
         "educational": "Educativo",
         "educationalDescription": "Esplora risorse e materiali educativi per comprendere e contrastare l'odio online.",
         "educationalButton": "Vai alla sezione Educativa",
@@ -31,88 +31,88 @@
         "guideButton": "Apri Guida",
         "guideTitle": "Guida Rapida",
         "guideItems": {
-          "network": {
-            "title": "Rete",
-            "description": "La rete mostra le connessioni tra i canali Telegram raccolti. Un canale è un nodo ed è connesso a un altro se lo “raccomanda”. Le raccomandazioni sono generate automaticamente da Telegram in base alla sovrapposizione degli utenti."
-          },
-          "inRec": {
-            "title": "Raccomandazioni in ingresso",
-            "description": "Quanto un canale è raccomandato da altri canali."
-          },
-          "outRec": {
-            "title": "Raccomandazioni in uscita",
-            "description": "Quanto un canale raccomanda altri canali."
-          },
-          "risk": {
-            "title": "Rischio Infodemia",
-            "description": "Quanto un canale è affidabile. Questa misura va da 0 a 1."
-          },
-          "check": {
-            "title": "Verificabilità",
-            "description": "Indica se un messaggio può essere sottoposto a fact-checking. Significa che contiene fatti (non opinioni) ed è sufficientemente rilevante."
-          }
+            "network": {
+                "title": "Rete",
+                "description": "La rete mostra le connessioni tra i canali Telegram raccolti. Un canale è un nodo ed è connesso a un altro se lo “raccomanda”. Le raccomandazioni sono generate automaticamente da Telegram in base alla sovrapposizione degli utenti."
+            },
+            "inRec": {
+                "title": "Raccomandazioni in ingresso",
+                "description": "Quanto un canale è raccomandato da altri canali."
+            },
+            "outRec": {
+                "title": "Raccomandazioni in uscita",
+                "description": "Quanto un canale raccomanda altri canali."
+            },
+            "risk": {
+                "title": "Rischio Infodemia",
+                "description": "Quanto un canale è affidabile. Questa misura va da 0 a 1."
+            },
+            "check": {
+                "title": "Verificabilità",
+                "description": "Indica se un messaggio può essere sottoposto a fact-checking. Significa che contiene fatti (non opinioni) ed è sufficientemente rilevante."
+            }
         }
-      
     },
     "welcome": {
         "title": "Benvenuti in Hatedemics"
     },
-    
-        "educational": {
-            "eduCard1Title": "Dichiarazione dei Diritti Umani",
-    "eduCard1Desc": "Scopri i principi fondamentali che tutelano la dignità umana.",
-    "eduCard1Button": "Esplora i diritti",
-    "eduCard2Title": "Quiz Interattivo",
-    "eduCard2Desc": "Metti alla prova le tue conoscenze sui diritti umani.",
-    "eduCard2Button": "Inizia il quiz",
-    "eduCard3Title": "Risorse Educative",
-    "eduCard3Desc": "Approfondisci con materiale didattico su diritti e cittadinanza.",
-    "eduCard3Button": "Vai alle risorse",
-          "tasks": {
+    "educational": {
+        "eduCard1Title": "Dichiarazione dei Diritti Umani",
+        "eduCard1Desc": "Scopri i principi fondamentali che tutelano la dignità umana.",
+        "eduCard1Button": "Esplora i diritti",
+        "eduCard2Title": "Quiz Interattivo",
+        "eduCard2Desc": "Metti alla prova le tue conoscenze sui diritti umani.",
+        "eduCard2Button": "Inizia il quiz",
+        "eduCard3Title": "Risorse Educative",
+        "eduCard3Desc": "Approfondisci con materiale didattico su diritti e cittadinanza.",
+        "eduCard3Button": "Vai alle risorse",
+        "tasks": {
             "humanRights": {
-              "title": "Diritti Umani",
-              "description": "Scopri i diritti fondamentali esplorando la Dichiarazione Universale.",
-              "articles": [
-                {
-                  "title": "Art. 1",
-                  "text": "Tutti gli esseri umani nascono liberi ed eguali in dignità e diritti."
-                },
-                {
-                  "title": "Art. 2",
-                  "text": "Tutti hanno diritto a essere trattati allo stesso modo, indipendentemente da razza, colore, sesso, lingua, religione, opinioni politiche, origine, proprietà, nascita o altra condizione."
-                }
-              ],
-              "startButton": "Inizia l'esercizio"
+                "title": "Diritti Umani",
+                "description": "I diritti umani fondamentali delineati dalle Nazioni Unite nella <a href='https://www.un.org/en/about-us/universal-declaration-of-human-rights' target='_blank' rel='noopener'>Dichiarazione Universale dei Diritti Umani</a> proteggono e tutelano la dignità, l’uguaglianza e la libertà di tutte le persone. Alcuni di essi sono elencati di seguito in una versione semplificata.<br><br><iframe width='100%' height='315' src='https://www.youtube.com/embed/nDgIVseTkuE?si=Jomr_pVjQAdBgfGg' title='Video Diritti Umani' frameborder='0' allowfullscreen></iframe>",
+                "objectivesTitle": "Obiettivi",
+                "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Sviluppare conoscenze sui diritti umani;</li><li>Aumentare la consapevolezza del legame tra diritti umani, discorsi d’odio e disinformazione;</li><li>Imparare possibili argomentazioni per reagire ai discorsi d’odio e alla disinformazione.</li></ul>",
+                "startButton": "Inizia",
+                "task": "Forma 11 gruppi. Ogni gruppo prende una carta. Ogni gruppo discute il significato del diritto umano scritto sulla propria carta. Dopo 5 minuti, il primo gruppo spiega cosa significa per loro quel diritto e come si collega al discorso d’odio. L'insegnante può aggiungere ulteriori spiegazioni, se necessario.\nSuccessivamente, il gruppo successivo con la carta seguente spiega il significato del proprio diritto e il suo collegamento con il discorso d’odio. Ripetere questo processo fino a quando tutti i gruppi avranno condiviso."
+,
+                "articles": [
+                    {
+                        "title": "Art. 1",
+                        "text": "Tutti gli esseri umani nascono liberi ed eguali in dignità e diritti."
+                    },
+                    {
+                        "title": "Art. 2",
+                        "text": "Tutti hanno diritto a essere trattati allo stesso modo, indipendentemente da razza, colore, sesso, lingua, religione, opinioni politiche, origine, proprietà, nascita o altra condizione."
+                    }
+                ]
             }
-          }
-        },
-        
-      
+        }
+    },
     "inspect": {
         "title": "Panoramica del Canale",
-        "subtitle":"Analizza i Canali e i Topics Fondamentali nella Rete dell'Odio e della Disinformazione"
+        "subtitle": "Analizza i Canali e i Topics Fondamentali nella Rete dell'Odio e della Disinformazione"
     },
     "channel": {
         "title": "Esplorazione della Rete",
-        "subtitle":"Esplora la Rete e Analizza le Connessioni dell’Odio e della Disinformazione Online",
+        "subtitle": "Esplora la Rete e Analizza le Connessioni dell’Odio e della Disinformazione Online",
         "infoTitle": "Informazioni sul Canale"
     },
     "project": {
         "noProject": "Nessun progetto disponibile",
-        "noData": "Nessun dato disponibile" 
+        "noData": "Nessun dato disponibile"
     },
     "projects": {
         "title": "Progetti",
-        "subtitle":"Scegli la lingua in cui vuoi allenare le tue abilità di risposta a contenuti d'odio e disinformazione."
+        "subtitle": "Scegli la lingua in cui vuoi allenare le tue abilità di risposta a contenuti d'odio e disinformazione."
     },
     "tasks": {
         "title": "Tasks",
-        "subtitle":"Seleziona l'argomento su cui concentrarti per creare risposte efficaci e argomentazioni contro la disinformazione."
+        "subtitle": "Seleziona l'argomento su cui concentrarti per creare risposte efficaci e argomentazioni contro la disinformazione."
     },
     "conversation": {
         "title": "Conversazione",
-        "subtitle":"Esplora le Conversazioni e Analizza i Messaggi nella Rete della Disinformazione e dell'Odio"
-    },  
+        "subtitle": "Esplora le Conversazioni e Analizza i Messaggi nella Rete della Disinformazione e dell'Odio"
+    },
     "channelTable": {
         "header": {
             "title": "Rete Telegram – Statistiche dei Nodi",
@@ -164,11 +164,11 @@
     },
     "topicsTable": {
         "title": "Argomenti principali del canale",
-        "header":{
-            "title":"Titolo",
-            "count":"% di messaggi",
-            "hs":"% di Hate Speech",
-            "cw":"% di Check Worthy"
+        "header": {
+            "title": "Titolo",
+            "count": "% di messaggi",
+            "hs": "% di Hate Speech",
+            "cw": "% di Check Worthy"
         }
     },
     "channelInfo": {
@@ -202,7 +202,7 @@
             "from": "Da",
             "mediaType": "Tipo",
             "reactions": "Reazioni",
-            "nrViews"   : "Visualizzazioni",
+            "nrViews": "Visualizzazioni",
             "hateLabel": "Hate Speech",
             "checkLabel": "Check Worthy",
             "topic": "Argomento",
@@ -217,39 +217,39 @@
             "error": "Errore durante il caricamento della chat"
         },
         "noTarget": "Nessun destinatario identificato",
-        "target":"Clicca per selezionare un destinatario",
+        "target": "Clicca per selezionare un destinatario",
         "noData": "Nessun dato disponibile",
-        "filter":{
-            "target":"Filtra per target",
-            "topic":"Filtra per argomento",
-            "hate":"Hate Speech",
-            "checkworthy":"Check Worthy",
-            "all":"Tutti",
-            "yes":"Si",
-            "no":"No",
-            "DISABLED":"Disabili",
-            "JEWS":"Ebrei",
-            "MUSLIMS":"Musulmani",
-            "LGBT+":"LGBT+",
-            "MIGRANTS":"Migranti",
-            "OTHER":"Altro",
-            "POC":"Persone di colore",
-            "ROMANI":"Rom",
-            "WOMEN":"Donne"      },
-    "footer":{
-        "pagination": {
-            "range": "{pageStart} - {pageStop} di {totalItems} messaggi recuperati"
+        "filter": {
+            "target": "Filtra per target",
+            "topic": "Filtra per argomento",
+            "hate": "Hate Speech",
+            "checkworthy": "Check Worthy",
+            "all": "Tutti",
+            "yes": "Si",
+            "no": "No",
+            "DISABLED": "Disabili",
+            "JEWS": "Ebrei",
+            "MUSLIMS": "Musulmani",
+            "LGBT+": "LGBT+",
+            "MIGRANTS": "Migranti",
+            "OTHER": "Altro",
+            "POC": "Persone di colore",
+            "ROMANI": "Rom",
+            "WOMEN": "Donne"
+        },
+        "footer": {
+            "pagination": {
+                "range": "{pageStart} - {pageStop} di {totalItems} messaggi recuperati"
+            }
         }
-    }
-
     },
     "wordclouds": {
         "hate": "Hate vs Non Hate",
         "checkworthy": "Check Worthy vs Non Check Worthy",
         "generic": "Generico",
-        "select":"Seleziona tipo WordCloud",
-        "selectTopic":"Seleziona un argomento",
-        "channel":"Canale",
+        "select": "Seleziona tipo WordCloud",
+        "selectTopic": "Seleziona un argomento",
+        "channel": "Canale",
         "titles": {
             "hate": "Hate Speech",
             "is_checkworthy": "Check Worthy",
@@ -257,6 +257,5 @@
             "isnot_checkworthy": "Non Check Worthy",
             "non_hate": "Non Hate"
         }
-
     }
 }

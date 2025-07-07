@@ -71,7 +71,11 @@
          "tasks": {
           "humanRights": {
             "title": "Human Rights",
-            "description": "Learn about the fundamental rights by exploring the Universal Declaration.",
+            "description": "The fundamental human rights outlined by the United Nations in the <a href='https://www.un.org/en/about-us/universal-declaration-of-human-rights' target='_blank' rel='noopener'>Universal Declaration of Human Rights</a> protect and uphold the dignity, equality, and freedom of all people. Some of them are listed below in a simplified version.<br><br><iframe width='100%' height='315' src='https://www.youtube.com/embed/nDgIVseTkuE?si=Jomr_pVjQAdBgfGg' title='Human Rights video' frameborder='0' allowfullscreen></iframe>",
+            "objectivesTitle": "Objectives",
+            "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Developing knowledge about human rights;</li><li>Rising awareness about connection between human rights and hate speech and disinformation;</li><li>Learning possible argument for reaction on hate speech and disinformation.</li></ul>",
+            "startButton": "Start",
+            "task": "Form 11 groups. Each group picks up one card. Each group discusses the meaning of the human right written on their card. After 5 minutes, the first group explains what the right means to them and how it connects to hate speech. The teacher may add to their explanation if needed.\nThen, the next group with the following card explains the meaning of their right and its connection to hate speech. Repeat this process until all groups have shared.",
             "articles": [
               {
                 "title": "Art. 1",
@@ -81,9 +85,7 @@
                 "title": "Art. 2",
                 "text": "Everyone has the right to be treated in the same way, irrespective of race, colour, sex, language, religion, political opinion, property, birth, or other status."
               }
-            ],
-            "startButton": "Start Exercise"
-          }
+            ]          }
         }
       },
     "inspect": {
