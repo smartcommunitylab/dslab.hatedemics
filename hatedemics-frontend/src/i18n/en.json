@@ -54,10 +54,38 @@
         }
       
     },
+
     "welcome": {
         "title": "Welcome to Hatedemics"
     },
-
+    "educational": {
+       "eduCard1Title": "Human Rights Declaration",
+    "eduCard1Desc": "Discover the core principles protecting human dignity.",
+    "eduCard1Button": "Explore Rights",
+    "eduCard2Title": "Interactive Quiz",
+    "eduCard2Desc": "Test your knowledge on human rights.",
+    "eduCard2Button": "Start Quiz",
+    "eduCard3Title": "Educational Resources",
+    "eduCard3Desc": "Learn more with educational materials on rights and citizenship.",
+    "eduCard3Button": "Go to Resources",
+         "tasks": {
+          "humanRights": {
+            "title": "Human Rights",
+            "description": "Learn about the fundamental rights by exploring the Universal Declaration.",
+            "articles": [
+              {
+                "title": "Art. 1",
+                "text": "All human beings are born free and equal in dignity and rights."
+              },
+              {
+                "title": "Art. 2",
+                "text": "Everyone has the right to be treated in the same way, irrespective of race, colour, sex, language, religion, political opinion, property, birth, or other status."
+              }
+            ],
+            "startButton": "Start Exercise"
+          }
+        }
+      },
     "inspect": {
         "title": "Channel overview",
         "subtitle":"Analyze the Channels and the Main Topics in the Network of Hate and Disinformation"

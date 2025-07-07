@@ -39,7 +39,17 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/educational',
     name: 'Educational',
-    component: () => import('@/views/EducationalView.vue'),
+    component: () => import('@/views/Educational/EducationalView.vue'),
+  },
+  {
+    path: '/educational/human-rights',
+    name: 'humanRightsIntro',
+    component: () => import('@/views/Educational/HumanRightsIntro.vue')
+  },
+  {
+    path: '/educational/human-rights/task',
+    name: 'humanRightsTask',
+    component: () => import('@/views/Educational/HumanRightsTask.vue')
   },
   {
     path: '/dashboard',

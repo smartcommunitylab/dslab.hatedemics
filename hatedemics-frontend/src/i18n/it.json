@@ -57,6 +57,37 @@
     "welcome": {
         "title": "Benvenuti in Hatedemics"
     },
+    
+        "educational": {
+            "eduCard1Title": "Dichiarazione dei Diritti Umani",
+    "eduCard1Desc": "Scopri i principi fondamentali che tutelano la dignità umana.",
+    "eduCard1Button": "Esplora i diritti",
+    "eduCard2Title": "Quiz Interattivo",
+    "eduCard2Desc": "Metti alla prova le tue conoscenze sui diritti umani.",
+    "eduCard2Button": "Inizia il quiz",
+    "eduCard3Title": "Risorse Educative",
+    "eduCard3Desc": "Approfondisci con materiale didattico su diritti e cittadinanza.",
+    "eduCard3Button": "Vai alle risorse",
+          "tasks": {
+            "humanRights": {
+              "title": "Diritti Umani",
+              "description": "Scopri i diritti fondamentali esplorando la Dichiarazione Universale.",
+              "articles": [
+                {
+                  "title": "Art. 1",
+                  "text": "Tutti gli esseri umani nascono liberi ed eguali in dignità e diritti."
+                },
+                {
+                  "title": "Art. 2",
+                  "text": "Tutti hanno diritto a essere trattati allo stesso modo, indipendentemente da razza, colore, sesso, lingua, religione, opinioni politiche, origine, proprietà, nascita o altra condizione."
+                }
+              ],
+              "startButton": "Inizia l'esercizio"
+            }
+          }
+        },
+        
+      
     "inspect": {
         "title": "Panoramica del Canale",
         "subtitle":"Analizza i Canali e i Topics Fondamentali nella Rete dell'Odio e della Disinformazione"
