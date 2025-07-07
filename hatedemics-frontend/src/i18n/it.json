@@ -73,18 +73,21 @@
                 "objectivesTitle": "Obiettivi",
                 "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Sviluppare conoscenze sui diritti umani;</li><li>Aumentare la consapevolezza del legame tra diritti umani, discorsi d’odio e disinformazione;</li><li>Imparare possibili argomentazioni per reagire ai discorsi d’odio e alla disinformazione.</li></ul>",
                 "startButton": "Inizia",
-                "task": "Forma 11 gruppi. Ogni gruppo prende una carta. Ogni gruppo discute il significato del diritto umano scritto sulla propria carta. Dopo 5 minuti, il primo gruppo spiega cosa significa per loro quel diritto e come si collega al discorso d’odio. L'insegnante può aggiungere ulteriori spiegazioni, se necessario.\nSuccessivamente, il gruppo successivo con la carta seguente spiega il significato del proprio diritto e il suo collegamento con il discorso d’odio. Ripetere questo processo fino a quando tutti i gruppi avranno condiviso."
-,
+                "task": "Forma 11 gruppi. Ogni gruppo prende una carta. Ogni gruppo discute il significato del diritto umano scritto sulla propria carta. Dopo 5 minuti, il primo gruppo spiega cosa significa per loro quel diritto e come si collega al discorso d’odio. L'insegnante può aggiungere ulteriori spiegazioni, se necessario.\nSuccessivamente, il gruppo successivo con la carta seguente spiega il significato del proprio diritto e il suo collegamento con il discorso d’odio. Ripetere questo processo fino a quando tutti i gruppi avranno condiviso.",
                 "articles": [
-                    {
-                        "title": "Art. 1",
-                        "text": "Tutti gli esseri umani nascono liberi ed eguali in dignità e diritti."
-                    },
-                    {
-                        "title": "Art. 2",
-                        "text": "Tutti hanno diritto a essere trattati allo stesso modo, indipendentemente da razza, colore, sesso, lingua, religione, opinioni politiche, origine, proprietà, nascita o altra condizione."
-                    }
-                ]
+                    { "title": "Art. 1", "text": "Tutti gli esseri umani nascono liberi ed eguali in dignità e diritti." },
+                    { "title": "Art. 2", "text": "Tutti hanno diritto a essere trattati allo stesso modo, indipendentemente da razza, colore, sesso, lingua, religione, opinione politica, origine, proprietà o altra condizione." },
+                    { "title": "Art. 3", "text": "Tutti hanno diritto alla vita, alla libertà e alla sicurezza." },
+                    { "title": "Art. 5", "text": "Nessuno può essere sottoposto a tortura o a trattamenti crudeli, inumani o degradanti." },
+                    { "title": "Art. 7", "text": "La legge è uguale per tutti." },
+                    { "title": "Art. 13", "text": "Tutti hanno il diritto di vivere e muoversi liberamente all'interno dei confini dello Stato." },
+                    { "title": "Art. 14", "text": "Tutti hanno il diritto di andare in un altro Paese e chiedere protezione se perseguitati o in pericolo di esserlo." },
+                    { "title": "Art. 16", "text": "Tutti hanno diritto di sposarsi e di avere una famiglia." },
+                    { "title": "Art. 18", "text": "Tutti hanno il diritto di credere in ciò che vogliono (inclusa, ma non solo, la religione)." },
+                    { "title": "Art. 19", "text": "Tutti hanno il diritto di esprimere liberamente le proprie opinioni e di ricevere e diffondere informazioni." },
+                    { "title": "Art. 29", "text": "Tutti devono rispettare i diritti degli altri." },
+                    { "title": "Art. 30", "text": "Nessuno ha il diritto di togliere questi diritti agli altri." }
+                  ]
             }
         }
     },

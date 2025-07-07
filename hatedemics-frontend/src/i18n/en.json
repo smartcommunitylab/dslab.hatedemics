@@ -76,16 +76,20 @@
             "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Developing knowledge about human rights;</li><li>Rising awareness about connection between human rights and hate speech and disinformation;</li><li>Learning possible argument for reaction on hate speech and disinformation.</li></ul>",
             "startButton": "Start",
             "task": "Form 11 groups. Each group picks up one card. Each group discusses the meaning of the human right written on their card. After 5 minutes, the first group explains what the right means to them and how it connects to hate speech. The teacher may add to their explanation if needed.\nThen, the next group with the following card explains the meaning of their right and its connection to hate speech. Repeat this process until all groups have shared.",
-            "articles": [
-              {
-                "title": "Art. 1",
-                "text": "All human beings are born free and equal in dignity and rights."
-              },
-              {
-                "title": "Art. 2",
-                "text": "Everyone has the right to be treated in the same way, irrespective of race, colour, sex, language, religion, political opinion, property, birth, or other status."
-              }
-            ]          }
+"articles": [
+        { "title": "Art. 1", "text": "All human beings are born free and equal in dignity and rights." },
+        { "title": "Art. 2", "text": "Everyone has the right to be treated in the same way, irrespective of race, colour, sex, language, religion, political opinion, property, birth, or other status." },
+        { "title": "Art. 3", "text": "Everyone has the right to life and to live in freedom and safety." },
+        { "title": "Art. 5", "text": "Everyone has the right to be free from torture and from inhuman and degrading treatment." },
+        { "title": "Art. 7", "text": "The law is the same for everyone." },
+        { "title": "Art. 13", "text": "Everyone has the right to live and travel freely within state borders." },
+        { "title": "Art. 14", "text": "Everyone has the right to go to another country and ask for protection if they are being persecuted or are in danger of being persecuted." },
+        { "title": "Art. 16", "text": "Everyone has the right to marry and have a family." },
+        { "title": "Art. 18", "text": "Everyone has the right to believe whatever they wish (including, but not confined to, religion)." },
+        { "title": "Art. 19", "text": "Everyone has the right to say what they think and to give and receive information freely." },
+        { "title": "Art. 29", "text": "Everyone must respect the rights of others." },
+        { "title": "Art. 30", "text": "No-one has the right to take away any of these rights." }
+      ]        }
         }
       },
     "inspect": {
