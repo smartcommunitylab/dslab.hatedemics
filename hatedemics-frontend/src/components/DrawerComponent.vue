@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import type DrawerMenuItem from '@/interfaces/DrawerMenuItemInterface';
-import QuickGuideDialog from '@/components/QuickGuideDialogComponent.vue';
+import ExploreGuideDialog from '@/components/ExploreGuideDialog.vue';
+import CounterspeechGuideDialog from '@/components/CounterspeechGuideDialog.vue';
 import { API } from '@/services';
-import { ref } from 'vue';
-const showDialog = ref(false);
+import { ref, reactive } from 'vue';
+
+const showExploreGuide = ref(false);
+const showCounterspeechGuide = ref(false);
+
 
 const logout = () => {
   API.login.logout()
@@ -15,6 +19,11 @@ const items: DrawerMenuItem[] = [
     title: 'Home',
     icon: 'mdi-home',
     to: { name: 'Home' }
+  },
+  {
+    title: 'Educational',
+    icon: 'mdi-school-outline',
+    to: '/educational'
   },
   {
     title: 'Explore',
@@ -34,20 +43,32 @@ const items: DrawerMenuItem[] = [
         title: 'Conversation',
         icon: 'mdi-forum',
         to: { name: 'Discussion' }
+      },
+      {
+        title: 'Quick Guide',
+        icon: 'mdi-help-circle-outline',
+        action: () => (showExploreGuide.value = true)
       }
     ],
     to: { name: 'Dashboard' }
   },
   {
-    title: 'Counterspeech Writing',
-    icon: 'mdi-chat',
-    to: { name: 'projects' }
+    title: 'Counterspeech',
+    icon: 'mdi-message-text-outline',
+    to: '/projects',
+    items: [
+      {
+        title: 'Projects',
+        icon: 'mdi-folder',
+        to: '/projects'
+      },
+      {
+        title: 'Quick Guide',
+        icon: 'mdi-help-circle-outline',
+        action: () => (showCounterspeechGuide.value = true)
+      }
+    ]
   },
-  {
-  title: 'Quick Guide',
-  icon: 'mdi-help-circle-outline',
-  action: () => (showDialog.value = true)
-},
   {
     title: 'Credits',
     icon: 'mdi-information',
@@ -99,18 +120,26 @@ const expandedGroups = ref<Record<string, boolean>>(
           <template v-for="subItem in item.items" :key="subItem.title">
             <v-divider v-if="subItem.title === '-'" />
             <v-list-item
-              v-else
+              v-else-if="!subItem.action"
               :disabled="!subItem.to"
               :prepend-icon="subItem.icon"
               :title="subItem.title"
               :to="subItem.to"
               link
             />
+            <v-list-item
+              v-else
+              :prepend-icon="subItem.icon"
+              :title="subItem.title"
+              @click="subItem.action"
+              style="cursor:pointer"
+            />
           </template>
         </v-list-group>
       </template>
     </template>
   </v-list>
-  <QuickGuideDialog v-model="showDialog" />
+  <ExploreGuideDialog v-model="showExploreGuide" />
+  <CounterspeechGuideDialog v-model="showCounterspeechGuide" />
 
 </template>

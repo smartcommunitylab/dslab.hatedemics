@@ -336,7 +336,26 @@ function zoomToNode(node: NodeObject) {
       <option value="out_degree">{{ t('graphInteraction.size.out') }}</option>
       <option value="in_degree">{{ t('graphInteraction.size.in') }}</option>
     </select>
-    <div ref="graphContainer" class="graph-container"></div>
+   
+    <div ref="graphContainer" class="graph-container">
+      <SidebarMenu>
+      <template #options>
+        <!-- Qui metti i tuoi controlli, ad esempio: -->
+        <label for="nodeColor">Node color</label>
+        <select id="nodeColor" v-model="toggleFullScreen">
+          <option value="louvain_com">Louvain community</option>
+          <option value="none">None</option>
+        </select>
+      </template>
+
+      <template #measures>
+        <p>Qui puoi mettere le misure di rete</p>
+      </template>
+
+      <template #info>
+        <input type="search" placeholder="Cerca nodo..." />
+      </template>
+    </SidebarMenu></div>
     <!-- <div
       v-if="tooltip.show"
       class="tooltip"
