@@ -5,25 +5,25 @@
         "button": "Login"
     },
     "menu": {
-    "home": "Home",
-    "dashboard": "Dashboard",
-    "channels": "Channels",
-    "inspector": "Inspector",
-    "discussion": "Discussion",
-    "projects": "Projects",
-    "counterspeech": "Counterspeech",
-    "annotation": "Annotation",
-    "credits": "Credits"
-  },
-    "home":{
+        "home": "Home",
+        "dashboard": "Dashboard",
+        "channels": "Channels",
+        "inspector": "Inspector",
+        "discussion": "Discussion",
+        "projects": "Projects",
+        "counterspeech": "Counterspeech",
+        "annotation": "Annotation",
+        "credits": "Credits"
+    },
+    "home": {
         "title": "Fighting hate and disinformation online",
         "description": "HATEDEMICS is a platform that leverages artificial intelligence to analyze online content, enhance critical thinking, and train responses to hate speech.",
-        "network":"Explore the Network",
-        "networkDescription":"An interactive map to observe the connections between channels, content, and dynamics related to hate and disinformation online. Discover what happens on the web, follow the flows, and identify the key nodes of toxic communication.",
-        "networkButton":"Go to the network",
-        "counterspeech":"Counterspeech Writing",
-        "counterspeechDescription":"Train your ability to respond to hate and disinformation content with targeted writing exercises. Learn how to use reliable sources to create solid arguments and develop your critical thinking to change the tone of online debate.",
-        "counterspeechButton":"Start writing",
+        "network": "Explore the Network",
+        "networkDescription": "An interactive map to observe the connections between channels, content, and dynamics related to hate and disinformation online. Discover what happens on the web, follow the flows, and identify the key nodes of toxic communication.",
+        "networkButton": "Go to the network",
+        "counterspeech": "Counterspeech Writing",
+        "counterspeechDescription": "Train your ability to respond to hate and disinformation content with targeted writing exercises. Learn how to use reliable sources to create solid arguments and develop your critical thinking to change the tone of online debate.",
+        "counterspeechButton": "Start writing",
         "educational": "Educational",
         "educationalDescription": "Explore resources and educational materials to understand and counter online hate.",
         "educationalButton": "Go to Educational Section",
@@ -31,79 +31,161 @@
         "guideButton": "Open Guide",
         "guideTitle": "Quick Guide",
         "guideItems": {
-          "network": {
-            "title": "Network",
-            "description": "The network shows the connections between the collected telegram channels. A channel is a node and it is connected to another channel if it “recommends” it. Recommendations are generated automatically by Telegram based on the channels' users overlap."
-          },
-          "inRec": {
-            "title": "In Recommendations",
-            "description": "How much a channel is recommended by other channels."
-          },
-          "outRec": {
-            "title": "Out Recommendations",
-            "description": "How much a channel recommends other channels."
-          },
-          "risk": {
-            "title": "Infodemic Risk",
-            "description": "How much the channel is reliable. This measure goes from 0 to 1."
-          },
-          "check": {
-            "title": "Check Worthiness",
-            "description": "It indicates whether a message can be fact-checked. This means that the message contains facts rather than opinions and is relevant enough to be fact-checked."
-          }
+            "network": {
+                "title": "Network",
+                "description": "The network shows the connections between the collected telegram channels. A channel is a node and it is connected to another channel if it “recommends” it. Recommendations are generated automatically by Telegram based on the channels' users overlap."
+            },
+            "inRec": {
+                "title": "In Recommendations",
+                "description": "How much a channel is recommended by other channels."
+            },
+            "outRec": {
+                "title": "Out Recommendations",
+                "description": "How much a channel recommends other channels."
+            },
+            "risk": {
+                "title": "Infodemic Risk",
+                "description": "How much the channel is reliable. This measure goes from 0 to 1."
+            },
+            "check": {
+                "title": "Check Worthiness",
+                "description": "It indicates whether a message can be fact-checked. This means that the message contains facts rather than opinions and is relevant enough to be fact-checked."
+            }
         }
-      
     },
-
     "welcome": {
         "title": "Welcome to Hatedemics"
     },
     "educational": {
-       "eduCard1Title": "Human Rights Declaration",
-    "eduCard1Desc": "Discover the core principles protecting human dignity.",
-    "eduCard1Button": "Explore Rights",
-    "eduCard2Title": "Interactive Quiz",
-    "eduCard2Desc": "Test your knowledge on human rights.",
-    "eduCard2Button": "Start Quiz",
-    "eduCard3Title": "Educational Resources",
-    "eduCard3Desc": "Learn more with educational materials on rights and citizenship.",
-    "eduCard3Button": "Go to Resources",
-         "tasks": {
-          "humanRights": {
-            "title": "Human Rights",
-            "description": "The fundamental human rights outlined by the United Nations in the <a href='https://www.un.org/en/about-us/universal-declaration-of-human-rights' target='_blank' rel='noopener'>Universal Declaration of Human Rights</a> protect and uphold the dignity, equality, and freedom of all people. Some of them are listed below in a simplified version.<br><br><iframe width='100%' height='315' src='https://www.youtube.com/embed/nDgIVseTkuE?si=Jomr_pVjQAdBgfGg' title='Human Rights video' frameborder='0' allowfullscreen></iframe>",
-            "objectivesTitle": "Objectives",
-            "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Developing knowledge about human rights;</li><li>Rising awareness about connection between human rights and hate speech and disinformation;</li><li>Learning possible argument for reaction on hate speech and disinformation.</li></ul>",
-            "startButton": "Start",
-            "task": "Form 11 groups. Each group picks up one card. Each group discusses the meaning of the human right written on their card. After 5 minutes, the first group explains what the right means to them and how it connects to hate speech. The teacher may add to their explanation if needed.\nThen, the next group with the following card explains the meaning of their right and its connection to hate speech. Repeat this process until all groups have shared.",
-"articles": [
-        { "title": "Art. 1", "text": "All human beings are born free and equal in dignity and rights." },
-        { "title": "Art. 2", "text": "Everyone has the right to be treated in the same way, irrespective of race, colour, sex, language, religion, political opinion, property, birth, or other status." },
-        { "title": "Art. 3", "text": "Everyone has the right to life and to live in freedom and safety." },
-        { "title": "Art. 5", "text": "Everyone has the right to be free from torture and from inhuman and degrading treatment." },
-        { "title": "Art. 7", "text": "The law is the same for everyone." },
-        { "title": "Art. 13", "text": "Everyone has the right to live and travel freely within state borders." },
-        { "title": "Art. 14", "text": "Everyone has the right to go to another country and ask for protection if they are being persecuted or are in danger of being persecuted." },
-        { "title": "Art. 16", "text": "Everyone has the right to marry and have a family." },
-        { "title": "Art. 18", "text": "Everyone has the right to believe whatever they wish (including, but not confined to, religion)." },
-        { "title": "Art. 19", "text": "Everyone has the right to say what they think and to give and receive information freely." },
-        { "title": "Art. 29", "text": "Everyone must respect the rights of others." },
-        { "title": "Art. 30", "text": "No-one has the right to take away any of these rights." }
-      ]        }
+        "eduCard1Title": "Human Rights Declaration",
+        "eduCard1Desc": "Discover the core principles protecting human dignity.",
+        "eduCard1Button": "Explore Rights",
+        "eduCardBiasTitle": "Biases and Fallacies",
+        "eduCardBiasDesc": "Explore the logical fallacies and cognitive biases behind hate speech and disinformation.",
+        "eduCardBiasButton": "Start Activity",
+        "eduCard3Title": "Educational Resources",
+        "eduCard3Desc": "Learn more with educational materials on rights and citizenship.",
+        "eduCard3Button": "Go to Resources",
+        "tasks": {
+            "humanRights": {
+                "title": "Human Rights",
+                "description": "The fundamental human rights outlined by the United Nations in the <a href='https://www.un.org/en/about-us/universal-declaration-of-human-rights' target='_blank' rel='noopener'>Universal Declaration of Human Rights</a> protect and uphold the dignity, equality, and freedom of all people. Some of them are listed below in a simplified version.<br><br><iframe width='100%' height='315' src='https://www.youtube.com/embed/nDgIVseTkuE?si=Jomr_pVjQAdBgfGg' title='Human Rights video' frameborder='0' allowfullscreen></iframe>",
+                "objectivesTitle": "Objectives",
+                "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Developing knowledge about human rights;</li><li>Rising awareness about connection between human rights and hate speech and disinformation;</li><li>Learning possible argument for reaction on hate speech and disinformation.</li></ul>",
+                "startButton": "Start",
+                "task": "Form 11 groups. Each group picks up one card. Each group discusses the meaning of the human right written on their card. After 5 minutes, the first group explains what the right means to them and how it connects to hate speech. The teacher may add to their explanation if needed.\nThen, the next group with the following card explains the meaning of their right and its connection to hate speech. Repeat this process until all groups have shared.",
+                "articles": [
+                    {
+                        "title": "Art. 1",
+                        "text": "All human beings are born free and equal in dignity and rights."
+                    },
+                    {
+                        "title": "Art. 2",
+                        "text": "Everyone has the right to be treated in the same way, irrespective of race, colour, sex, language, religion, political opinion, property, birth, or other status."
+                    },
+                    {
+                        "title": "Art. 3",
+                        "text": "Everyone has the right to life and to live in freedom and safety."
+                    },
+                    {
+                        "title": "Art. 5",
+                        "text": "Everyone has the right to be free from torture and from inhuman and degrading treatment."
+                    },
+                    {
+                        "title": "Art. 7",
+                        "text": "The law is the same for everyone."
+                    },
+                    {
+                        "title": "Art. 13",
+                        "text": "Everyone has the right to live and travel freely within state borders."
+                    },
+                    {
+                        "title": "Art. 14",
+                        "text": "Everyone has the right to go to another country and ask for protection if they are being persecuted or are in danger of being persecuted."
+                    },
+                    {
+                        "title": "Art. 16",
+                        "text": "Everyone has the right to marry and have a family."
+                    },
+                    {
+                        "title": "Art. 18",
+                        "text": "Everyone has the right to believe whatever they wish (including, but not confined to, religion)."
+                    },
+                    {
+                        "title": "Art. 19",
+                        "text": "Everyone has the right to say what they think and to give and receive information freely."
+                    },
+                    {
+                        "title": "Art. 29",
+                        "text": "Everyone must respect the rights of others."
+                    },
+                    {
+                        "title": "Art. 30",
+                        "text": "No-one has the right to take away any of these rights."
+                    }
+                ]
+            },
+            "bias": {
+                "title": "Biases and fallacies",
+                "description": "<strong>Logical fallacies associated with hate speech and disinformation</strong><br><br>The content of hate speech and disinformation may sometimes look very convincing. This is because people who perpetuate hate speech often rely on logical fallacies – constructs hate groups use to justify their causes and their belief that people who come across this content would consider it as reasonable and truthful. Logical fallacies can use false premises, true premises but false conclusions, or true premises and conclusions but a false argument. Some fallacies are produced with the intention of deceiving or making misinformation viral.<br><br>There are many fallacies that show up in hate speech. Here are some of them:<br><br><strong>Argumentum ad populum</strong> – a non-substantive way of arguing in which the speaker appeals to the tastes, preferences and prejudices of the crowd. Based on national egoism, instincts, stereotypes or prejudices, the speaker tries to win over the crowd to their thesis (e.g. The majority of people in our country thinks like this, so this is the way we should act);<br><br><strong>Ipse dixit</strong> – the way of argumenting without providing a valid proof (e.g. the political party said it so it must be true);<br><br><strong>A slippery slope fallacy</strong> – occurs when someone claims that a position or decision will lead to a series of unintended negative consequences (e.g. we cannot let the migrants stay in our country as they will bring their families here and have children, which will lead us to losing our jobs and the collapse of the social security system, and as a result we will be poor and lose control over our country);<br><br><strong>Either-or fallacy</strong> – where someone claims there are only two ways of approaching the issue, while there are many other options (e.g. you can either vote for this party or live your life in constant danger);<br><br><strong>Post hoc, ergo propter hoc</strong> – logical error in wrongly concluding that there is a causal connection between two events merely because one occurred before the other (e.g. Ever since we got a new maths teacher, I’ve been getting bad grades. She must be the reason I’m doing poorly);<br><br><strong>Argumentum Ad Hominem</strong> – when someone attacks the person making an argument rather than the argument itself (e.g. Don't listen to Peter's opinion on the group project — he's lazy and never does anything right);<br><br><strong>Cherry picking</strong> – when someone selectively presents evidence that supports their argument while ignoring or dismissing evidence that contradicts it (e.g. \"Hate speech isn't harmful. Look at this one study that says it's just offensive, not dangerous\" - while ignoring dozens of other studies showing the psychological and social harm of hate speech);<br><br><strong>Appeal to tradition</strong> – when an argument assumes something is good or true simply because it is being traditionally done or believed, without considering whether it is still valid in the present context (e.g. In our school we have always had more men than women in the school council, and it always worked well).<br><br><strong>Argument from anecdote</strong> – someone uses a single, often personal, experience or story to support a general conclusion or claim (e.g. I don't think hate speech leads to real harm. I’ve heard people make offensive jokes all the time, and no one I know has ever been seriously affected);<br><br><strong>Ad ignorantiam fallacy</strong> – someone argues that a claim is true or false simply because it has not been proven the opposite (e.g. No one has ever proven that students cheat on online exams, so it must not happen).<br><br><strong>Cognitive Biases</strong><br><br>Our brain uses shortcuts to help us make quick decisions in everyday life. These shortcuts help us focus only on the most important information, so we don’t get overwhelmed by everything we see and hear. This makes the brain work more efficiently. However, the downside is that these shortcuts can sometimes lead us to make mistakes or misunderstand things because of our thinking (cognitive) biases.<br><br>We are all affected by cognitive biases in our decision-making process, and those who spread disinformation understand these biases very well. Here are some examples of cognitive biases:<br><br><strong>Membership bias</strong> – tendency to favour own group over other groups;<br><strong>Availability bias</strong> – tendency to rely on information that comes quickly to mind;<br><strong>Causality bias</strong> – occurs when people believe that there is a relationship between events that are actually independent of each other;<br><strong>Blind spot bias</strong> – the tendency to see oneself as less biased than other people;<br><strong>Confirmation bias</strong> – tendency to search for, interpret, favour and recall information in a way that confirms prior beliefs;<br><strong>Authority bias</strong> – tendency to be more influenced by the opinions of authority people.",
+                "objectivesTitle": "Objectives",
+                "objectives": "<ul><li><strong>Develop awareness</strong> about social mechanisms, cognitive biases and logical fallacies</li><li><strong>Develop critical thinking competence</strong></li></ul><p>Social mechanisms, cognitive biases and logical fallacies are factors which help hate speech and disinformation spread. By getting to know some of them, we can be more immune to them and be more critical to other forms of manipulation.</p>",
+                "startButton": "Start activity",
+                "task":"- Match the situation with the relevant logical fallacy / bias\n- Is the situation an example of hate speech / disinformation / misinformation? If yes, why?",
+"pairs": [
+          {
+            "id": "a",
+            "left": "Argumentum ad populum",
+            "right": "During a heated online discussion about immigration, a user posts: \"Everyone knows that these people are dangerous and bring crime. Just look at how many people in our town agree with me. We need to get them out to protect our community.\""
+          },
+          {
+            "id": "b",
+            "left": "Appeal to tradition",
+            "right": "During a community meeting about updating local school policies to be more inclusive of LGBTQ+ students, a long-time resident stands up and says: \"For generations, we have taught that marriage is only between a man and a woman. This is how it has always been and how it should stay. Promoting these new ideas in our schools is an attack on our traditions and values.\""
+          },
+          {
+            "id": "c",
+            "left": "Post hoc, ergo propter hoc",
+            "right": "During a public debate on refugee resettlement, a speaker points to a recent rise in unemployment that occurred shortly after a group of refugees arrived in the town. They declare, \"Ever since they arrived, our unemployment rates have shot up. It's obvious they are taking all the jobs from hardworking local people.\""
+          },
+          {
+            "id": "d",
+            "left": "Membership bias",
+            "right": "During an online discussion about a recent crime reported in the news, a person writes, \"As someone who has lived in this neighbourhood my whole life, I can tell you it's the new immigrants causing all the trouble. We 'originals' know what's really going on, and things were peaceful before they came.\""
+          },
+          {
+            "id": "e",
+            "left": "Blind spot bias",
+            "right": "During a heated debate about religious groups, a participant states, \"Unlike those people, whose beliefs are full of prejudice and intolerance, I've examined my views objectively. My conclusion that their religion is inherently backward and dangerous isn't a bias; it's just an uncomfortable fact.\""
+          },
+          {
+            "id": "f",
+            "left": "Slippery slope",
+            "right": "During a debate about allowing a new community center for a minority group, a speaker argues: \"If we allow them to build this center, next they'll demand their own laws. Soon, they'll be taking over our neighbourhoods and imposing their culture on our children. We must stop this now, or we will lose our entire way of life.\""
+          }
+        ],
+        "feedback": {
+          "correct": "✅ Correct match!",
+          "wrong": "❌ Incorrect match!"
+        },
+        "summaryTitle": "Your Matching Summary",
+        "reflectionText": "Was it easy or difficult to match the situations and logical fallacies/bias?\n\nDid you know some of them? Which? Which were totally new for you?\n\nCan you provide concrete examples from your reality that represent some of those fallacies and biases?\n\nDo you know any other examples of logical fallacies / bias?\n\nHow can the knowledge of those biases / logical fallacies help us in acting against hate speech and disinformation?"
+      
+            }
         }
-      },
+    },
     "inspect": {
         "title": "Channel overview",
-        "subtitle":"Analyze the Channels and the Main Topics in the Network of Hate and Disinformation"
+        "subtitle": "Analyze the Channels and the Main Topics in the Network of Hate and Disinformation"
     },
     "channel": {
         "title": "Network exploration",
-        "subtitle":"Explore the Network and Analyze the Connections of Hate and Disinformation Online",
+        "subtitle": "Explore the Network and Analyze the Connections of Hate and Disinformation Online",
         "infoTitle": "Channel information"
     },
     "conversation": {
         "title": "Conversation",
-        "subtitle":"Explore the Conversations and Analyze the Messages in the Network of Hate and Disinformation"
+        "subtitle": "Explore the Conversations and Analyze the Messages in the Network of Hate and Disinformation"
     },
     "project": {
         "noProject": "No projects available",
@@ -111,11 +193,11 @@
     },
     "projects": {
         "title": "Projects",
-        "subtitle":"Choose the language in which you want to train your skills to respond to hate and disinformation content."
+        "subtitle": "Choose the language in which you want to train your skills to respond to hate and disinformation content."
     },
     "tasks": {
         "title": "Tasks",
-        "subtitle":"Select the topic you want to focus on to create effective responses and arguments against disinformation."      
+        "subtitle": "Select the topic you want to focus on to create effective responses and arguments against disinformation."
     },
     "channelTable": {
         "header": {
@@ -167,11 +249,11 @@
     },
     "topicsTable": {
         "title": "Main topics of the channel",
-        "header":{
-            "title":"Title",
-            "count":"% of messages",
-            "hs":"% of Hate Speech",
-            "cw":"% of Check Worthy"
+        "header": {
+            "title": "Title",
+            "count": "% of messages",
+            "hs": "% of Hate Speech",
+            "cw": "% of Check Worthy"
         }
     },
     "channelInfo": {
@@ -220,26 +302,26 @@
         },
         "noData": "No data available",
         "noTarget": "No target identified",
-        "target":"Click here to start a new conversation",
-        "filter":{
-            "target":"Filter by target",
-            "topic":"Filter by Topic",
-            "hate":"Hate Speech",
-            "checkworthy":"Check Worthy",
-            "all":"All",
-            "yes":"Yes",
-            "no":"No",
-            "DISABLED":"Disabled",
-            "JEWS":"Jews",
-            "MUSLIMS":"Muslims",
-            "LGBT+":"LGBT+",
-            "MIGRANTS":"Migrants",
-            "OTHER":"Other",
-            "POC":"People of Color",
-            "ROMANI":"Rom",
-            "WOMEN":"Women"
+        "target": "Click here to start a new conversation",
+        "filter": {
+            "target": "Filter by target",
+            "topic": "Filter by Topic",
+            "hate": "Hate Speech",
+            "checkworthy": "Check Worthy",
+            "all": "All",
+            "yes": "Yes",
+            "no": "No",
+            "DISABLED": "Disabled",
+            "JEWS": "Jews",
+            "MUSLIMS": "Muslims",
+            "LGBT+": "LGBT+",
+            "MIGRANTS": "Migrants",
+            "OTHER": "Other",
+            "POC": "People of Color",
+            "ROMANI": "Rom",
+            "WOMEN": "Women"
         },
-        "footer":{
+        "footer": {
             "pagination": {
                 "range": "{pageStart}-{pageStop} of {totalItems} retrieved messages"
             }
@@ -249,9 +331,9 @@
         "hate": "Hate vs Non Hate",
         "checkworthy": "Check Worthy vs Non Check Worthy",
         "generic": "Generic",
-        "select":"Select WordCloud type",
-        "selectTopic":"Select a Topic",
-        "channel":"Channel",
+        "select": "Select WordCloud type",
+        "selectTopic": "Select a Topic",
+        "channel": "Channel",
         "titles": {
             "hate": "Hate Speech",
             "is_checkworthy": "Check Worthy",

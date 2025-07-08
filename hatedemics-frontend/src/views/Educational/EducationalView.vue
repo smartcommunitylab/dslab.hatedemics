@@ -44,16 +44,16 @@ const { t } = useI18n();
             <div class="d-flex align-center mb-2">
               <v-icon color="success" class="mr-2">mdi-lightbulb-on-outline</v-icon>
               <h2 class="text-h6 font-weight-bold mb-1">
-                {{ t("educational.eduCard2Title") }}
+                {{ t("educational.eduCardBiasTitle") }}
               </h2>
             </div>
             <p class="text-body-1 mb-4">
-              {{ t("educational.eduCard2Desc") }}
+              {{ t("educational.eduCardBiasDesc") }}
             </p>
           </div>
           <div class="text-right mt-6">
-            <v-btn color="success" size="small" to="/educational/quiz" variant="flat">
-              {{ t("educational.eduCard2Button") }}
+            <v-btn color="success" size="small" to="/educational/bias" variant="flat">
+              {{ t("educational.eduCardBiasButton") }}
             </v-btn>
           </div>
         </v-card>
