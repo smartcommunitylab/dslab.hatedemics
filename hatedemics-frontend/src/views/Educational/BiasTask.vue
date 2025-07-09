@@ -9,7 +9,7 @@
           :class="getItemClass(leftColumn[i - 1].id, 'left')"
           @click="selectItem(leftColumn[i - 1], 'left')"
         >
-          <v-card-text>{{ leftColumn[i - 1].label }}</v-card-text>
+          <v-card-text class="font-weight-black text-h5 text-center">{{ leftColumn[i - 1].label }}</v-card-text>
         </v-card>
       </v-col>
       <v-col cols="5">
