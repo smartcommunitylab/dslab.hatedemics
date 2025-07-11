@@ -186,19 +186,22 @@
         "pl": "Polacco"
     },
     "graphInteraction": {
+        "resetView":" Reimposta vista",
         "color": {
             "disable": "Disabilita colore",
             "iri": "Infodemic Risk",
             "hs": "Hate Speech",
             "in": "In recommendations",
-            "out": "Out recommendations"
+            "out": "Out recommendations",
+            "label":"Colore"
         },
         "size": {
             "disable": "Disabilita dimensione",
             "iri": "Infodemic Risk",
             "hs": "Hate Speech",
             "in": "In recommendations",
-            "out": "Out recommendations"
+            "out": "Out recommendations",
+            "label":"Dimensione"
         },
         "tooltip": {
             "id": "ID Canale:",

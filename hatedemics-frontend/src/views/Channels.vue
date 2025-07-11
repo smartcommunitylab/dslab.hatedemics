@@ -111,6 +111,14 @@ const onPaginationChange = (options: any) => {
   pagination.size = options.itemsPerPage;
   fetchChannels();
 };
+const isTableVisible = ref(false);
+const scrollToTable = () => {
+  const table = document.querySelector(".scroll-wrapper");
+  if (table) {
+    table.scrollIntoView({ behavior: "smooth" });
+    isTableVisible.value = true;
+  }
+};
 </script>
 
 <template>
@@ -121,7 +129,7 @@ const onPaginationChange = (options: any) => {
 </h2>
     <v-row>
       <!-- Sezione principale -->
-      <v-col cols="8">
+      <v-col cols="12">
         <v-card class="pa-4" elevation="0">
           <!-- <v-card-title class="text-h5 font-weight-bold text-primary">
             {{ msg }}
@@ -214,10 +222,19 @@ const onPaginationChange = (options: any) => {
             {{ t("channel.infoTitle") }}
           </v-card-title>
           <v-divider class="mb-4"></v-divider> -->
-        <ChannelInfoComponent />
+        <!-- <ChannelInfoComponent /> -->
         <!-- </v-card> -->
       </v-col>
     </v-row>
+    <v-btn
+  v-if="!isTableVisible"
+  @click="scrollToTable"
+  class="show-table-btn"
+  color="primary"
+  icon
+>
+  <v-icon>mdi-arrow-down-bold</v-icon>
+</v-btn>
   </v-container>
 </template>
 
@@ -262,5 +279,12 @@ const onPaginationChange = (options: any) => {
   width: 30px;
   pointer-events: none;
   background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1));
+}
+.show-table-btn {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
 }
 </style>

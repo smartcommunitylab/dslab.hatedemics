@@ -13,13 +13,21 @@
         </v-card>
       </v-col>
       <v-col cols="5">
-        <v-card
-          :class="getItemClass(rightColumn[i - 1].id, 'right')"
-          @click="selectItem(rightColumn[i - 1], 'right')"
+    <v-card
+      :class="getItemClass(rightColumn[i - 1].id, 'right')"
+      @click="selectItem(rightColumn[i - 1], 'right')"
+    >
+      <v-card-text class="mt-4">
+        {{ rightColumn[i - 1].label }}
+        <span 
+          v-if="getPairedLabel(rightColumn[i - 1].id)" 
+          class="paired-label"
         >
-          <v-card-text>{{ rightColumn[i - 1].label }}</v-card-text>
-        </v-card>
-      </v-col>
+          {{ getPairedLabel(rightColumn[i - 1].id) }}
+        </span>
+      </v-card-text>
+    </v-card>
+  </v-col>
     </v-row>
     <v-row justify="center" class="mt-4">
       <v-col cols="12" class="text-center">
@@ -103,7 +111,13 @@ function checkPairs() {
   feedbackMessage.value = `Hai completato il task! ✅ Corrette: ${correct} | ❌ Errate: ${incorrect}`;
   showDialog.value = true;
 }
-
+const getPairedLabel = (id) => {
+  const pair = matchedPairs.value.find(p => p.right.id === id);
+  if (pair) {
+    return pair.left.label;
+  }
+  return null;
+};
 function selectItem(item, side) {
   if (side === "left") {
     selectedLeft.value = item;
@@ -187,5 +201,15 @@ const incorrectCount = ref(0);
   opacity: 0.85;
   pointer-events: none;
   filter: grayscale(0.3);
+}
+.paired-label {
+  position: absolute;
+  top: 8px;
+  left: 8px; 
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 4px;
+  font-weight: bold;
 }
 </style>

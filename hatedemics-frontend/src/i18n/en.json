@@ -220,19 +220,22 @@
         "pl": "Polish"
     },
     "graphInteraction": {
+        "resetView": "Reset view",
         "color": {
-            "disable": "Select node color",
-            "iri": "Color: Infodemic Risk",
-            "hs": "Color: Hate Speech",
-            "in": "Color: In Recommendations",
-            "out": "Color: Out Recommendations"
+            "disable": "Disable color",
+            "iri": "Infodemic Risk",
+            "hs": "Hate Speech",
+            "in": "In Recommendations",
+            "out": "Out Recommendations",
+            "label": "Color"
         },
         "size": {
-            "disable": "Select node size",
-            "iri": "Size: Infodemic Risk",
-            "hs": "Size: Hate Speech",
-            "in": "Size: In Recommendations",
-            "out": "Size: Out Recommendations"
+            "disable": "Disable size",
+            "iri": "Infodemic Risk",
+            "hs": "Hate Speech",
+            "in": "In Recommendations",
+            "out": "Out Recommendations",
+            "label": "Size"
         },
         "tooltip": {
             "id": "Channel ID:",
