@@ -1,7 +1,24 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 
+import { ref, onMounted } from 'vue';
 const { t } = useI18n();
+
+const showWarning = ref(false);
+const dontShowAgain = ref(false);
+
+onMounted(() => {
+  if (!localStorage.getItem('edu-warning-accepted')) {
+    showWarning.value = true;
+  }
+});
+
+function acceptWarning() {
+  if (dontShowAgain.value) {
+    localStorage.setItem('edu-warning-accepted', 'true');
+  }
+  showWarning.value = false;
+}
 </script>
 
 <template>
@@ -78,7 +95,7 @@ const { t } = useI18n();
             </p>
           </div>
           <div class="text-right mt-6">
-            <v-btn color="info" size="small" to="/educational/resources" variant="flat">
+            <v-btn color="info" size="small" to="/educational/debunking" variant="flat">
               {{ t("educational.eduCard3Button") }}
             </v-btn>
           </div>
@@ -86,4 +103,28 @@ const { t } = useI18n();
       </v-col>
     </v-row>
   </v-container>
+  <v-dialog v-model="showWarning" persistent max-width="600">
+  <v-card>
+    <v-card-title class="text-h6 font-weight-bold">
+      ⚠️ {{ t('educational.warningTitle') }}
+    </v-card-title>
+    <v-card-text>
+      <p class="mb-2">
+        {{ t('educational.warningText') }}
+      </p>
+      <v-checkbox
+        v-model="dontShowAgain"
+        :label="t('educational.warningCheckbox')"
+        hide-details
+        density="compact"
+        class="mt-2"
+      />
+    </v-card-text>
+    <v-card-actions class="justify-end">
+      <v-btn color="primary" @click="acceptWarning">
+        {{ t('educational.warningButton') }}
+      </v-btn>
+    </v-card-actions>
+  </v-card>
+</v-dialog>
 </template>

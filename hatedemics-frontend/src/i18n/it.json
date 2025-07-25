@@ -60,12 +60,17 @@
         "eduCard1Title": "Dichiarazione dei Diritti Umani",
         "eduCard1Desc": "Scopri i principi fondamentali che tutelano la dignità umana.",
         "eduCard1Button": "Esplora i diritti",
-"eduCardBiasTitle": "Bias e Fallacie",
-"eduCardBiasDesc": "Esplora i bias cognitivi e le fallacie logiche alla base dell'odio e della disinformazione.",
-"eduCardBiasButton": "Inizia l'attività",
-        "eduCard3Title": "Risorse Educative",
-        "eduCard3Desc": "Approfondisci con materiale didattico su diritti e cittadinanza.",
-        "eduCard3Button": "Vai alle risorse",
+        "eduCardBiasTitle": "Bias e Fallacie",
+        "eduCardBiasDesc": "Esplora i bias cognitivi e le fallacie logiche alla base dell'odio e della disinformazione.",
+        "eduCardBiasButton": "Inizia l'attività",
+        "eduCard3Title": "Debunking",
+        "eduCard3Desc": "Impara a riconoscere e smascherare la disinformazione.",
+        "eduCard3Button": "Inizia l’attività",
+        "warningTitle": "Avviso",
+        "warningText": "Queste attività contengono esempi espliciti che potrebbero urtare la sensibilità di alcuni lettori. Se un’attività o una sua parte ti mette a disagio o ti fa sentire in difficoltà, ti invitiamo a parlarne con noi o a lasciare la stanza liberamente.",
+        "warningButton": "Ho capito",
+        "warningCheckbox": "Non mostrare più questo messaggio",
+
         "tasks": {
             "humanRights": {
                 "title": "Diritti Umani",
@@ -75,70 +80,139 @@
                 "startButton": "Inizia",
                 "task": "Forma 11 gruppi. Ogni gruppo prende una carta. Ogni gruppo discute il significato del diritto umano scritto sulla propria carta. Dopo 5 minuti, il primo gruppo spiega cosa significa per loro quel diritto e come si collega al discorso d’odio. L'insegnante può aggiungere ulteriori spiegazioni, se necessario.\nSuccessivamente, il gruppo successivo con la carta seguente spiega il significato del proprio diritto e il suo collegamento con il discorso d’odio. Ripetere questo processo fino a quando tutti i gruppi avranno condiviso.",
                 "articles": [
-                    { "title": "Art. 1", "text": "Tutti gli esseri umani nascono liberi ed eguali in dignità e diritti." },
-                    { "title": "Art. 2", "text": "Tutti hanno diritto a essere trattati allo stesso modo, indipendentemente da razza, colore, sesso, lingua, religione, opinione politica, origine, proprietà o altra condizione." },
-                    { "title": "Art. 3", "text": "Tutti hanno diritto alla vita, alla libertà e alla sicurezza." },
-                    { "title": "Art. 5", "text": "Nessuno può essere sottoposto a tortura o a trattamenti crudeli, inumani o degradanti." },
-                    { "title": "Art. 7", "text": "La legge è uguale per tutti." },
-                    { "title": "Art. 13", "text": "Tutti hanno il diritto di vivere e muoversi liberamente all'interno dei confini dello Stato." },
-                    { "title": "Art. 14", "text": "Tutti hanno il diritto di andare in un altro Paese e chiedere protezione se perseguitati o in pericolo di esserlo." },
-                    { "title": "Art. 16", "text": "Tutti hanno diritto di sposarsi e di avere una famiglia." },
-                    { "title": "Art. 18", "text": "Tutti hanno il diritto di credere in ciò che vogliono (inclusa, ma non solo, la religione)." },
-                    { "title": "Art. 19", "text": "Tutti hanno il diritto di esprimere liberamente le proprie opinioni e di ricevere e diffondere informazioni." },
-                    { "title": "Art. 29", "text": "Tutti devono rispettare i diritti degli altri." },
-                    { "title": "Art. 30", "text": "Nessuno ha il diritto di togliere questi diritti agli altri." }
-                  ]
+                    {
+                        "title": "Art. 1",
+                        "text": "Tutti gli esseri umani nascono liberi ed eguali in dignità e diritti."
+                    },
+                    {
+                        "title": "Art. 2",
+                        "text": "Tutti hanno diritto a essere trattati allo stesso modo, indipendentemente da razza, colore, sesso, lingua, religione, opinione politica, origine, proprietà o altra condizione."
+                    },
+                    {
+                        "title": "Art. 3",
+                        "text": "Tutti hanno diritto alla vita, alla libertà e alla sicurezza."
+                    },
+                    {
+                        "title": "Art. 5",
+                        "text": "Nessuno può essere sottoposto a tortura o a trattamenti crudeli, inumani o degradanti."
+                    },
+                    {
+                        "title": "Art. 7",
+                        "text": "La legge è uguale per tutti."
+                    },
+                    {
+                        "title": "Art. 13",
+                        "text": "Tutti hanno il diritto di vivere e muoversi liberamente all'interno dei confini dello Stato."
+                    },
+                    {
+                        "title": "Art. 14",
+                        "text": "Tutti hanno il diritto di andare in un altro Paese e chiedere protezione se perseguitati o in pericolo di esserlo."
+                    },
+                    {
+                        "title": "Art. 16",
+                        "text": "Tutti hanno diritto di sposarsi e di avere una famiglia."
+                    },
+                    {
+                        "title": "Art. 18",
+                        "text": "Tutti hanno il diritto di credere in ciò che vogliono (inclusa, ma non solo, la religione)."
+                    },
+                    {
+                        "title": "Art. 19",
+                        "text": "Tutti hanno il diritto di esprimere liberamente le proprie opinioni e di ricevere e diffondere informazioni."
+                    },
+                    {
+                        "title": "Art. 29",
+                        "text": "Tutti devono rispettare i diritti degli altri."
+                    },
+                    {
+                        "title": "Art. 30",
+                        "text": "Nessuno ha il diritto di togliere questi diritti agli altri."
+                    }
+                ]
+            },
+            "debunking": {
+                "title": "Debunking",
+                "description": "<strong>Cos'è il debunking:</strong> Quando si pensa a un fact-checker, spesso si immagina solo un giornalista che verifica un'affermazione per stabilire se sia vera o falsa: questo è il processo di debunking. Tuttavia, oggi combattere efficacemente la disinformazione richiede molto di più: rilevare rapidamente i possibili inganni prima che diventino virali; spiegare che non tutto è bianco o nero, aiutando le persone a prepararsi contro le falsità attraverso l'educazione ai media o la regolamentazione; creare strumenti per rendere più difficile ingannare il pubblico; oppure unire le forze contro la manipolazione: questo è ciò che chiamiamo pre-bunking.<br><br><strong>Cos'è una narrativa di disinformazione:</strong> è ciò che i creatori di disinformazione vogliono farti credere. Quando un’idea viene ripetuta molte volte, le persone finiscono per crederci. Inoltre, una singola fake news può contenere più narrative.",
+                "objectivesTitle": "Obiettivi",
+                "objectives": "<ul><li>Smontare e comprendere cosa sono le narrative di disinformazione. È anche un esercizio di pre-bunking: scopri cosa sono e quali sono le più diffuse nel tuo paese.</li><li>Imparerai, in modo guidato, alcune tecniche di debunking e perché è importante attivare il pensiero critico per riconoscere come la viralità di alcune bufale possa creare e rafforzare narrative di disinformazione.</li></ul>",
+                "startButton": "Inizia l’attività",
+                "correct": "Esatto! Ottimo lavoro.",
+      "incorrect": "Risposta errata. Riprova.",
+      "next": "Domanda successiva",
+      "finish": "Termina",
+      "questions":  [
+          {
+            "title": "Domanda 1",
+            "question": "Quale di queste è una tecnica di debunking?",
+            "options": ["Url corto", "Verifica delle fonti", "Pubblicità", "Clickbait"],
+            "correct": 1,
+            "image": "/img/debunking/it/domanda1.jpg",
+            "feedback": {
+                "correct": "Correct! You have successfully done a reverse image search and found this picture.",
+                "incorrect": "Unfortunately neither an advanced search in Twitter nor an AI tool would have been helpful in this case."
+              }
+          },
+          {
+            "title": "Domanda 2",
+            "question": "Cosa significa 'narrativa di disinformazione'?",
+            "options": ["Una storia vera", "Una notizia locale", "Un messaggio falso ripetuto", "Una pubblicità"],
+            "correct": 2,
+            "feedback": {
+                "correct": "Correct! You have successfully done a reverse image search and found this picture.",
+                "incorrect": "Unfortunately neither an advanced search in Twitter nor an AI tool would have been helpful in this case."
+              }
+          }
+        ]
+
             },
             "bias": {
                 "title": "Riconoscere i Bias",
-                "description":"<strong>Fallacie logiche associate ai discorsi d’odio e alla disinformazione</strong><br><br>I contenuti dei discorsi d’odio e della disinformazione possono a volte sembrare molto convincenti. Questo accade perché chi diffonde questi contenuti fa spesso uso di fallacie logiche: strutture di pensiero distorte che i gruppi d’odio utilizzano per giustificare le proprie cause, facendo credere che quanto affermano sia ragionevole e veritiero. Le fallacie logiche possono basarsi su premesse false, premesse vere ma conclusioni errate, oppure su argomentazioni scorrette nonostante premesse e conclusioni siano vere. Alcune fallacie sono prodotte appositamente per ingannare o rendere virale la disinformazione.<br><br>Esistono molte fallacie che emergono nei discorsi d’odio. Eccone alcune:<br><br><strong>Argumentum ad populum</strong> – forma di argomentazione non sostanziale in cui chi parla fa leva sui gusti, le preferenze e i pregiudizi della massa. Basandosi su egoismo nazionale, istinti, stereotipi o pregiudizi, cerca di convincere il pubblico della propria tesi (es. \"La maggioranza delle persone nel nostro paese la pensa così, quindi è così che dobbiamo agire\");<br><br><strong>Ipse dixit</strong> – argomentare senza fornire prove valide (es. \"Lo ha detto il partito, quindi dev’essere vero\");<br><br><strong>Slippery slope (pendio scivoloso)</strong> – si verifica quando si sostiene che una posizione porterà inevitabilmente a conseguenze negative a catena (es. \"Non possiamo permettere ai migranti di restare nel nostro paese, perché porteranno qui le famiglie, avranno figli, ci ruberanno il lavoro e il sistema di welfare collasserà. Finiremo in povertà e perderemo il controllo del nostro paese\");<br><br><strong>Fallacia del falso dilemma (either-or)</strong> – consiste nel sostenere che esistano solo due possibilità, escludendo tutte le alternative (es. \"O voti questo partito o vivrai costantemente in pericolo\");<br><br><strong>Post hoc, ergo propter hoc</strong> – errore logico nel trarre conclusioni di causalità solo perché un evento precede l’altro (es. \"Da quando abbiamo la nuova insegnante di matematica, prendo voti bassi. Dev’essere colpa sua\");<br><br><strong>Argumentum ad hominem</strong> – attaccare la persona che fa un’argomentazione invece dell’argomentazione stessa (es. \"Non ascoltare l’opinione di Pietro sul progetto, è pigro e non fa mai niente\");<br><br><strong>Cherry picking (selezione mirata)</strong> – presentare solo le prove a favore della propria tesi, ignorando quelle contrarie (es. \"L’hate speech non fa male. Guarda questo studio che dice che è solo offensivo, non pericoloso\" – ignorando però decine di altri studi che dimostrano i danni psicologici e sociali);<br><br><strong>Appello alla tradizione</strong> – sostenere che qualcosa sia giusto o vero solo perché si è sempre fatto così (es. \"Nella nostra scuola il consiglio è sempre stato composto da più uomini che donne, e ha sempre funzionato bene\");<br><br><strong>Argomento per aneddoto</strong> – usare un’esperienza personale o singolo caso per generalizzare (es. \"Non penso che l’hate speech faccia davvero male. Ho sentito battute offensive spesso, e nessuno che conosco ne ha mai sofferto seriamente\");<br><br><strong>Fallacia ad ignorantiam</strong> – sostenere che qualcosa sia vero o falso solo perché non se n’è dimostrato il contrario (es. \"Nessuno ha mai provato che gli studenti copino agli esami online, quindi non succede\").<br><br><strong>Bias cognitivi</strong><br><br>Il nostro cervello utilizza scorciatoie mentali per aiutarci a prendere decisioni rapide nella vita quotidiana. Questi meccanismi ci permettono di concentrarci solo sulle informazioni più rilevanti, evitando di essere sopraffatti da tutto ciò che vediamo e sentiamo. In questo modo, il cervello lavora in modo più efficiente. Tuttavia, queste scorciatoie possono anche portarci a errori di valutazione o a fraintendimenti, a causa dei cosiddetti bias cognitivi.<br><br>Tutti noi siamo influenzati dai bias cognitivi nel prendere decisioni, e chi diffonde disinformazione li conosce molto bene. Eccone alcuni:<br><br><strong>Bias di appartenenza</strong> – tendenza a favorire il proprio gruppo rispetto agli altri;<br><strong>Bias di disponibilità</strong> – tendenza ad affidarsi alle informazioni che ci vengono più facilmente in mente;<br><strong>Bias di causalità</strong> – si verifica quando si crede che eventi indipendenti siano collegati tra loro;<br><strong>Bias del punto cieco</strong> – tendenza a pensare di essere meno soggetti a bias rispetto agli altri;<br><strong>Bias di conferma</strong> – tendenza a cercare, interpretare e ricordare solo le informazioni che confermano le nostre convinzioni;<br><strong>Bias dell’autorità</strong> – tendenza a lasciarsi influenzare maggiormente dalle opinioni di persone autorevoli.",
+                "description": "<strong>Fallacie logiche associate ai discorsi d’odio e alla disinformazione</strong><br><br>I contenuti dei discorsi d’odio e della disinformazione possono a volte sembrare molto convincenti. Questo accade perché chi diffonde questi contenuti fa spesso uso di fallacie logiche: strutture di pensiero distorte che i gruppi d’odio utilizzano per giustificare le proprie cause, facendo credere che quanto affermano sia ragionevole e veritiero. Le fallacie logiche possono basarsi su premesse false, premesse vere ma conclusioni errate, oppure su argomentazioni scorrette nonostante premesse e conclusioni siano vere. Alcune fallacie sono prodotte appositamente per ingannare o rendere virale la disinformazione.<br><br>Esistono molte fallacie che emergono nei discorsi d’odio. Eccone alcune:<br><br><strong>Argumentum ad populum</strong> – forma di argomentazione non sostanziale in cui chi parla fa leva sui gusti, le preferenze e i pregiudizi della massa. Basandosi su egoismo nazionale, istinti, stereotipi o pregiudizi, cerca di convincere il pubblico della propria tesi (es. \"La maggioranza delle persone nel nostro paese la pensa così, quindi è così che dobbiamo agire\");<br><br><strong>Ipse dixit</strong> – argomentare senza fornire prove valide (es. \"Lo ha detto il partito, quindi dev’essere vero\");<br><br><strong>Slippery slope (pendio scivoloso)</strong> – si verifica quando si sostiene che una posizione porterà inevitabilmente a conseguenze negative a catena (es. \"Non possiamo permettere ai migranti di restare nel nostro paese, perché porteranno qui le famiglie, avranno figli, ci ruberanno il lavoro e il sistema di welfare collasserà. Finiremo in povertà e perderemo il controllo del nostro paese\");<br><br><strong>Fallacia del falso dilemma (either-or)</strong> – consiste nel sostenere che esistano solo due possibilità, escludendo tutte le alternative (es. \"O voti questo partito o vivrai costantemente in pericolo\");<br><br><strong>Post hoc, ergo propter hoc</strong> – errore logico nel trarre conclusioni di causalità solo perché un evento precede l’altro (es. \"Da quando abbiamo la nuova insegnante di matematica, prendo voti bassi. Dev’essere colpa sua\");<br><br><strong>Argumentum ad hominem</strong> – attaccare la persona che fa un’argomentazione invece dell’argomentazione stessa (es. \"Non ascoltare l’opinione di Pietro sul progetto, è pigro e non fa mai niente\");<br><br><strong>Cherry picking (selezione mirata)</strong> – presentare solo le prove a favore della propria tesi, ignorando quelle contrarie (es. \"L’hate speech non fa male. Guarda questo studio che dice che è solo offensivo, non pericoloso\" – ignorando però decine di altri studi che dimostrano i danni psicologici e sociali);<br><br><strong>Appello alla tradizione</strong> – sostenere che qualcosa sia giusto o vero solo perché si è sempre fatto così (es. \"Nella nostra scuola il consiglio è sempre stato composto da più uomini che donne, e ha sempre funzionato bene\");<br><br><strong>Argomento per aneddoto</strong> – usare un’esperienza personale o singolo caso per generalizzare (es. \"Non penso che l’hate speech faccia davvero male. Ho sentito battute offensive spesso, e nessuno che conosco ne ha mai sofferto seriamente\");<br><br><strong>Fallacia ad ignorantiam</strong> – sostenere che qualcosa sia vero o falso solo perché non se n’è dimostrato il contrario (es. \"Nessuno ha mai provato che gli studenti copino agli esami online, quindi non succede\").<br><br><strong>Bias cognitivi</strong><br><br>Il nostro cervello utilizza scorciatoie mentali per aiutarci a prendere decisioni rapide nella vita quotidiana. Questi meccanismi ci permettono di concentrarci solo sulle informazioni più rilevanti, evitando di essere sopraffatti da tutto ciò che vediamo e sentiamo. In questo modo, il cervello lavora in modo più efficiente. Tuttavia, queste scorciatoie possono anche portarci a errori di valutazione o a fraintendimenti, a causa dei cosiddetti bias cognitivi.<br><br>Tutti noi siamo influenzati dai bias cognitivi nel prendere decisioni, e chi diffonde disinformazione li conosce molto bene. Eccone alcuni:<br><br><strong>Bias di appartenenza</strong> – tendenza a favorire il proprio gruppo rispetto agli altri;<br><strong>Bias di disponibilità</strong> – tendenza ad affidarsi alle informazioni che ci vengono più facilmente in mente;<br><strong>Bias di causalità</strong> – si verifica quando si crede che eventi indipendenti siano collegati tra loro;<br><strong>Bias del punto cieco</strong> – tendenza a pensare di essere meno soggetti a bias rispetto agli altri;<br><strong>Bias di conferma</strong> – tendenza a cercare, interpretare e ricordare solo le informazioni che confermano le nostre convinzioni;<br><strong>Bias dell’autorità</strong> – tendenza a lasciarsi influenzare maggiormente dalle opinioni di persone autorevoli.",
                 "objectivesTitle": "Obiettivi",
-                "objectives": "<ul><li><strong>Sviluppare consapevolezza</strong> sui meccanismi sociali, i bias cognitivi e le fallacie logiche</li><li><strong>Sviluppare competenze di pensiero critico</strong></li></ul><p>I meccanismi sociali, i bias cognitivi e le fallacie logiche sono fattori che favoriscono la diffusione dell’odio e della disinformazione. Conoscerli ci rende più resistenti a questi fenomeni e più critici nei confronti di altre forme di manipolazione.</p>"
-,
+                "objectives": "<ul><li><strong>Sviluppare consapevolezza</strong> sui meccanismi sociali, i bias cognitivi e le fallacie logiche</li><li><strong>Sviluppare competenze di pensiero critico</strong></li></ul><p>I meccanismi sociali, i bias cognitivi e le fallacie logiche sono fattori che favoriscono la diffusione dell’odio e della disinformazione. Conoscerli ci rende più resistenti a questi fenomeni e più critici nei confronti di altre forme di manipolazione.</p>",
                 "startButton": "Inizia l'attività",
                 "task": "- Associa la situazione alla fallacia logica o al bias corrispondente\n- La situazione è un esempio di hate speech, disinformazione o misinformation? Se sì, perché?",
                 "pairs": [
                     {
-                      "id": "a",
-                      "left": "Argomento ad populum",
-                      "right": "Durante una discussione online sull'immigrazione, un utente scrive: \"Tutti sanno che queste persone sono pericolose e portano criminalità. Guardate quanta gente nel nostro paese è d'accordo con me. Dobbiamo mandarli via per proteggere la nostra comunità.\""
+                        "id": "a",
+                        "left": "Argomento ad populum",
+                        "right": "Durante una discussione online sull'immigrazione, un utente scrive: \"Tutti sanno che queste persone sono pericolose e portano criminalità. Guardate quanta gente nel nostro paese è d'accordo con me. Dobbiamo mandarli via per proteggere la nostra comunità.\""
                     },
                     {
-                      "id": "b",
-                      "left": "Appello alla tradizione",
-                      "right": "Durante una riunione della comunità per aggiornare le politiche scolastiche a favore degli studenti LGBTQ+, un residente afferma: \"Per generazioni abbiamo insegnato che il matrimonio è solo tra uomo e donna. È sempre stato così e deve restare così. Promuovere queste nuove idee nelle scuole è un attacco alle nostre tradizioni.\""
+                        "id": "b",
+                        "left": "Appello alla tradizione",
+                        "right": "Durante una riunione della comunità per aggiornare le politiche scolastiche a favore degli studenti LGBTQ+, un residente afferma: \"Per generazioni abbiamo insegnato che il matrimonio è solo tra uomo e donna. È sempre stato così e deve restare così. Promuovere queste nuove idee nelle scuole è un attacco alle nostre tradizioni.\""
                     },
                     {
-                      "id": "c",
-                      "left": "Post hoc, ergo propter hoc",
-                      "right": "Durante un dibattito pubblico sul reinsediamento dei rifugiati, un oratore sottolinea l'aumento della disoccupazione dopo il loro arrivo: \"Da quando sono arrivati, la disoccupazione è salita. È ovvio che stanno prendendo i posti di lavoro della nostra gente.\""
+                        "id": "c",
+                        "left": "Post hoc, ergo propter hoc",
+                        "right": "Durante un dibattito pubblico sul reinsediamento dei rifugiati, un oratore sottolinea l'aumento della disoccupazione dopo il loro arrivo: \"Da quando sono arrivati, la disoccupazione è salita. È ovvio che stanno prendendo i posti di lavoro della nostra gente.\""
                     },
                     {
-                      "id": "d",
-                      "left": "Pregiudizio di appartenenza",
-                      "right": "Durante una discussione online su un crimine, una persona scrive: \"Sono cresciuto in questo quartiere e posso dirvi che sono gli immigrati a causare problemi. Noi 'originari' sappiamo com'era prima. Era tutto tranquillo.\""
+                        "id": "d",
+                        "left": "Pregiudizio di appartenenza",
+                        "right": "Durante una discussione online su un crimine, una persona scrive: \"Sono cresciuto in questo quartiere e posso dirvi che sono gli immigrati a causare problemi. Noi 'originari' sappiamo com'era prima. Era tutto tranquillo.\""
                     },
                     {
-                      "id": "e",
-                      "left": "Bias del punto cieco",
-                      "right": "Durante un dibattito su gruppi religiosi, una persona afferma: \"A differenza di loro, i miei giudizi sono oggettivi. Il fatto che la loro religione sia arretrata e pericolosa non è un pregiudizio, è un dato di fatto.\""
+                        "id": "e",
+                        "left": "Bias del punto cieco",
+                        "right": "Durante un dibattito su gruppi religiosi, una persona afferma: \"A differenza di loro, i miei giudizi sono oggettivi. Il fatto che la loro religione sia arretrata e pericolosa non è un pregiudizio, è un dato di fatto.\""
                     },
                     {
-                      "id": "f",
-                      "left": "Piano inclinato",
-                      "right": "Durante un dibattito sulla costruzione di un centro comunitario per una minoranza, un oratore afferma: \"Se permettiamo questo centro, poi vorranno le loro leggi. Poi ci conquisteranno e imporranno la loro cultura. Dobbiamo fermarli ora.\""
+                        "id": "f",
+                        "left": "Piano inclinato",
+                        "right": "Durante un dibattito sulla costruzione di un centro comunitario per una minoranza, un oratore afferma: \"Se permettiamo questo centro, poi vorranno le loro leggi. Poi ci conquisteranno e imporranno la loro cultura. Dobbiamo fermarli ora.\""
                     }
-                  ],
-                  "feedback": {
+                ],
+                "feedback": {
                     "correct": "✅ Coppia corretta!",
                     "wrong": "❌ Coppia errata!"
-                  },
-                  "summaryTitle": "Il tuo riepilogo",
-                  "reflectionText": "È stato facile o difficile abbinare le situazioni ai bias / fallacie logiche?\n\nNe conoscevi già alcune? Quali? Quali erano completamente nuove?\n\nSai fornire esempi concreti della tua realtà che rappresentano alcuni di questi bias o fallacie?\n\nConosci altri esempi di bias o fallacie logiche?\n\nIn che modo la conoscenza di questi bias / fallacie può aiutarci ad agire contro l'hate speech e la disinformazione?"
-                          }
-              }
-
-        },
+                },
+                "summaryTitle": "Il tuo riepilogo",
+                "reflectionText": "È stato facile o difficile abbinare le situazioni ai bias / fallacie logiche?\n\nNe conoscevi già alcune? Quali? Quali erano completamente nuove?\n\nSai fornire esempi concreti della tua realtà che rappresentano alcuni di questi bias o fallacie?\n\nConosci altri esempi di bias o fallacie logiche?\n\nIn che modo la conoscenza di questi bias / fallacie può aiutarci ad agire contro l'hate speech e la disinformazione?"
+            }
+        }
+    },
     "inspect": {
         "title": "Panoramica del Canale",
         "subtitle": "Analizza i Canali e i Topics Fondamentali nella Rete dell'Odio e della Disinformazione"
@@ -186,14 +260,14 @@
         "pl": "Polacco"
     },
     "graphInteraction": {
-        "resetView":" Reimposta vista",
+        "resetView": " Reimposta vista",
         "color": {
             "disable": "Disabilita colore",
             "iri": "Infodemic Risk",
             "hs": "Hate Speech",
             "in": "In recommendations",
             "out": "Out recommendations",
-            "label":"Colore"
+            "label": "Colore"
         },
         "size": {
             "disable": "Disabilita dimensione",
@@ -201,7 +275,7 @@
             "hs": "Hate Speech",
             "in": "In recommendations",
             "out": "Out recommendations",
-            "label":"Dimensione"
+            "label": "Dimensione"
         },
         "tooltip": {
             "id": "ID Canale:",

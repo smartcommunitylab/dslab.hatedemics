@@ -63,9 +63,13 @@
         "eduCardBiasTitle": "Biases and Fallacies",
         "eduCardBiasDesc": "Explore the logical fallacies and cognitive biases behind hate speech and disinformation.",
         "eduCardBiasButton": "Start Activity",
-        "eduCard3Title": "Educational Resources",
-        "eduCard3Desc": "Learn more with educational materials on rights and citizenship.",
-        "eduCard3Button": "Go to Resources",
+        "eduCard3Title": "Debunking",
+        "eduCard3Desc": "Learn how to debunk  disinformation effectively.",
+        "eduCard3Button": "Start Activity",
+        "warningTitle": "Warning",
+        "warningText": "These activities contain unobfuscated examples some readers may find offensive. If any activity or part of activity makes you feel uncomfortable or you feel triggered please refer to us or feel free to leave the room.",
+        "warningButton": "I understand",
+        "warningCheckbox": "Don't show this message again",
         "tasks": {
             "humanRights": {
                 "title": "Human Rights",
@@ -125,228 +129,310 @@
                     }
                 ]
             },
-            "bias": {
-                "title": "Biases and fallacies",
-                "description": "<strong>Logical fallacies associated with hate speech and disinformation</strong><br><br>The content of hate speech and disinformation may sometimes look very convincing. This is because people who perpetuate hate speech often rely on logical fallacies – constructs hate groups use to justify their causes and their belief that people who come across this content would consider it as reasonable and truthful. Logical fallacies can use false premises, true premises but false conclusions, or true premises and conclusions but a false argument. Some fallacies are produced with the intention of deceiving or making misinformation viral.<br><br>There are many fallacies that show up in hate speech. Here are some of them:<br><br><strong>Argumentum ad populum</strong> – a non-substantive way of arguing in which the speaker appeals to the tastes, preferences and prejudices of the crowd. Based on national egoism, instincts, stereotypes or prejudices, the speaker tries to win over the crowd to their thesis (e.g. The majority of people in our country thinks like this, so this is the way we should act);<br><br><strong>Ipse dixit</strong> – the way of argumenting without providing a valid proof (e.g. the political party said it so it must be true);<br><br><strong>A slippery slope fallacy</strong> – occurs when someone claims that a position or decision will lead to a series of unintended negative consequences (e.g. we cannot let the migrants stay in our country as they will bring their families here and have children, which will lead us to losing our jobs and the collapse of the social security system, and as a result we will be poor and lose control over our country);<br><br><strong>Either-or fallacy</strong> – where someone claims there are only two ways of approaching the issue, while there are many other options (e.g. you can either vote for this party or live your life in constant danger);<br><br><strong>Post hoc, ergo propter hoc</strong> – logical error in wrongly concluding that there is a causal connection between two events merely because one occurred before the other (e.g. Ever since we got a new maths teacher, I’ve been getting bad grades. She must be the reason I’m doing poorly);<br><br><strong>Argumentum Ad Hominem</strong> – when someone attacks the person making an argument rather than the argument itself (e.g. Don't listen to Peter's opinion on the group project — he's lazy and never does anything right);<br><br><strong>Cherry picking</strong> – when someone selectively presents evidence that supports their argument while ignoring or dismissing evidence that contradicts it (e.g. \"Hate speech isn't harmful. Look at this one study that says it's just offensive, not dangerous\" - while ignoring dozens of other studies showing the psychological and social harm of hate speech);<br><br><strong>Appeal to tradition</strong> – when an argument assumes something is good or true simply because it is being traditionally done or believed, without considering whether it is still valid in the present context (e.g. In our school we have always had more men than women in the school council, and it always worked well).<br><br><strong>Argument from anecdote</strong> – someone uses a single, often personal, experience or story to support a general conclusion or claim (e.g. I don't think hate speech leads to real harm. I’ve heard people make offensive jokes all the time, and no one I know has ever been seriously affected);<br><br><strong>Ad ignorantiam fallacy</strong> – someone argues that a claim is true or false simply because it has not been proven the opposite (e.g. No one has ever proven that students cheat on online exams, so it must not happen).<br><br><strong>Cognitive Biases</strong><br><br>Our brain uses shortcuts to help us make quick decisions in everyday life. These shortcuts help us focus only on the most important information, so we don’t get overwhelmed by everything we see and hear. This makes the brain work more efficiently. However, the downside is that these shortcuts can sometimes lead us to make mistakes or misunderstand things because of our thinking (cognitive) biases.<br><br>We are all affected by cognitive biases in our decision-making process, and those who spread disinformation understand these biases very well. Here are some examples of cognitive biases:<br><br><strong>Membership bias</strong> – tendency to favour own group over other groups;<br><strong>Availability bias</strong> – tendency to rely on information that comes quickly to mind;<br><strong>Causality bias</strong> – occurs when people believe that there is a relationship between events that are actually independent of each other;<br><strong>Blind spot bias</strong> – the tendency to see oneself as less biased than other people;<br><strong>Confirmation bias</strong> – tendency to search for, interpret, favour and recall information in a way that confirms prior beliefs;<br><strong>Authority bias</strong> – tendency to be more influenced by the opinions of authority people.",
+            "debunking": {
+                "title": "Debunking",
+                "description": "<strong>What is debunking:</strong> When some people think of a fact-checker, they only see a journalist who looks into a claim, checks it and confirms whether it is true or not, the debunking process. Nevertheless, fighting disinformation effectively nowadays takes much more than that: quickly detecting possible hoaxes before they go viral and affect more people; explaining that not everything is black or white, helping people to be well-prepared against falsehoods through Media Literacy or regulation; creating tools to make it harder for others to deceive us, or fighting together against manipulation: this is what we call pre-bunking.<br><br><strong>What is a disinformation narrative:</strong> What disinformation creators want you to believe. When an idea is repeated many times, people tend to believe it. Also, one hoax can contain several narratives.",
                 "objectivesTitle": "Objectives",
-                "objectives": "<ul><li><strong>Develop awareness</strong> about social mechanisms, cognitive biases and logical fallacies</li><li><strong>Develop critical thinking competence</strong></li></ul><p>Social mechanisms, cognitive biases and logical fallacies are factors which help hate speech and disinformation spread. By getting to know some of them, we can be more immune to them and be more critical to other forms of manipulation.</p>",
+                "objectives": "<ul><li>Debunk and learn about what disinformation narratives are. It's also a pre-bunking exercise: discover what disinformation narratives are and the most spread ones in your country.</li><li>Learn some debunk techniques in a guided way, and understand why critical thinking and identifying viral hoaxes is essential to fight disinformation narratives.</li></ul>",
                 "startButton": "Start activity",
-                "task":"- Match the situation with the relevant logical fallacy / bias\n- Is the situation an example of hate speech / disinformation / misinformation? If yes, why?",
-"pairs": [
-          {
-            "id": "a",
-            "left": "Argumentum ad populum",
-            "right": "During a heated online discussion about immigration, a user posts: \"Everyone knows that these people are dangerous and bring crime. Just look at how many people in our town agree with me. We need to get them out to protect our community.\""
-          },
-          {
-            "id": "b",
-            "left": "Appeal to tradition",
-            "right": "During a community meeting about updating local school policies to be more inclusive of LGBTQ+ students, a long-time resident stands up and says: \"For generations, we have taught that marriage is only between a man and a woman. This is how it has always been and how it should stay. Promoting these new ideas in our schools is an attack on our traditions and values.\""
-          },
-          {
-            "id": "c",
-            "left": "Post hoc, ergo propter hoc",
-            "right": "During a public debate on refugee resettlement, a speaker points to a recent rise in unemployment that occurred shortly after a group of refugees arrived in the town. They declare, \"Ever since they arrived, our unemployment rates have shot up. It's obvious they are taking all the jobs from hardworking local people.\""
-          },
-          {
-            "id": "d",
-            "left": "Membership bias",
-            "right": "During an online discussion about a recent crime reported in the news, a person writes, \"As someone who has lived in this neighbourhood my whole life, I can tell you it's the new immigrants causing all the trouble. We 'originals' know what's really going on, and things were peaceful before they came.\""
-          },
-          {
-            "id": "e",
-            "left": "Blind spot bias",
-            "right": "During a heated debate about religious groups, a participant states, \"Unlike those people, whose beliefs are full of prejudice and intolerance, I've examined my views objectively. My conclusion that their religion is inherently backward and dangerous isn't a bias; it's just an uncomfortable fact.\""
-          },
-          {
-            "id": "f",
-            "left": "Slippery slope",
-            "right": "During a debate about allowing a new community center for a minority group, a speaker argues: \"If we allow them to build this center, next they'll demand their own laws. Soon, they'll be taking over our neighbourhoods and imposing their culture on our children. We must stop this now, or we will lose our entire way of life.\""
-          }
-        ],
-        "feedback": {
-          "correct": "✅ Correct match!",
-          "wrong": "❌ Incorrect match!"
-        },
-        "summaryTitle": "Your Matching Summary",
-        "reflectionText": "Was it easy or difficult to match the situations and logical fallacies/bias?\n\nDid you know some of them? Which? Which were totally new for you?\n\nCan you provide concrete examples from your reality that represent some of those fallacies and biases?\n\nDo you know any other examples of logical fallacies / bias?\n\nHow can the knowledge of those biases / logical fallacies help us in acting against hate speech and disinformation?"
-      
+                "correct": "Correct! Well done.",
+                "incorrect": "Incorrect answer. Try again.",
+                "next": "Next question",
+                "finish": "Finish",
+                "questions": [
+                    {
+                        "title": "Question 1",
+                        "scenario_description": "You have received this picture that shows a photo of a feminist manifestation where a participant shows a sign that says: “I want my daughter to have the right to abort that I didn't have.” You are not sure if it's true.",
+                        "question": "How would you verify?",
+                        "image": "/img/debunking/en/question1.jpg",
+                        "options": [
+                            {
+                                "text": "Reverse image search"
+                            },
+                            {
+                                "text": "Advanced search in Twitter (now X)"
+                            },
+                            {
+                                "text": "IA tool "
+                            }
+                        ],
+                        "correct": 0,
+                        "feedback": {
+                            "correct": "Correct! You have successfully done a reverse image search and found this picture.",
+                            "correctImage": "/img/debunking/en/answer1.jpg",
+                            "incorrect": "Unfortunately neither an advanced search in Twitter nor an IA tool would have been helpful in this case. ",
+                            "incorrectImage": "/img/debunking/en/answer1.jpg"
+
+                        }
+                    },
+                    {
+                        "title": "Question 2",
+                        "question": "By performing a reverse image search you would have found this image. What can you conclude from observing it?",
+                        "image": "/img/debunking/en/question2.jpg",
+
+                        "options": [
+                            {
+                                "text": "It´s an AI picture"
+                            },
+                            {
+                                "text": "It´s a true picture out of context"
+                            },
+                            {
+                                "text": "It seems to be the original image "
+                            }
+                        ],
+                        "correct": 2,
+                        "feedback": {
+                            "correct": "Correct: this is the original image. In particular, this image was originally published in 2023. We can therefore conclude that the first image you saw was a manipulated image that changes the phrase it originally contained, “I am the mother of the girl you will never touch,” which was published on a website about the 8M marches in Monterrey (Mexico) in March 2023 and has been circulating in a manipulated manner.",
+                            "incorrect": "Inorrect: this is the original image. In particular, this image was originally published in 2023. We can therefore conclude that the first image you saw was a manipulated image that changes the phrase it originally contained, “I am the mother of the girl you will never touch,” which was published on a website about the 8M marches in Monterrey (Mexico) in March 2023 and has been circulating in a manipulated manner."
+
+                        }
+                    },
+                    {
+                        "title": "Question 3",
+                        "question": "What kind of disinformation narrative can this hoax strengthen? ",
+                        "options": [
+                            {
+                                "text": "Feminists hate men"
+                            },
+                            {
+                                "text": "Feminists say absurd things"
+                            },
+                            {
+                                "text": "Feminists should not participate in manifestations."
+                            }
+                        ],
+                        "correct": 1,
+                        "feedback": {
+                            "correct": "Correct!<br><br>Check out how professional fact-checkers debunked this disinformation: <a href='https://maldita.es/feminismo/bulo/20250310/cartel-derechoalaborto-manipulado/' target='_blank'>Maldita.es analysis</a>",
+                            "incorrect": "Incorrect.<br><br>Check out how professional fact-checkers debunked this disinformation: <a href='https://maldita.es/feminismo/bulo/20250310/cartel-derechoalaborto-manipulado/' target='_blank'>Maldita.es analysis</a>"
+                        
+
+                        }
+                    }
+                ]
             }
-        }
-    },
-    "inspect": {
-        "title": "Channel overview",
-        "subtitle": "Analyze the Channels and the Main Topics in the Network of Hate and Disinformation"
-    },
-    "channel": {
-        "title": "Network exploration",
-        "subtitle": "Explore the Network and Analyze the Connections of Hate and Disinformation Online",
-        "infoTitle": "Channel information"
-    },
-    "conversation": {
-        "title": "Conversation",
-        "subtitle": "Explore the Conversations and Analyze the Messages in the Network of Hate and Disinformation"
-    },
-    "project": {
-        "noProject": "No projects available",
-        "noData": "No data available"
-    },
-    "projects": {
-        "title": "Projects",
-        "subtitle": "Choose the language in which you want to train your skills to respond to hate and disinformation content."
-    },
-    "tasks": {
-        "title": "Tasks",
-        "subtitle": "Select the topic you want to focus on to create effective responses and arguments against disinformation."
-    },
-    "channelTable": {
-        "header": {
-            "title": "Telegram Network - Node Statistics",
-            "date": "Date",
-            "id": "ID",
-            "messages": "Number of messages",
-            "partecipants": "Number of users",
-            "IRI": "Infodemic Risk",
-            "nInRecommendations": "In Recommendations",
-            "nOutRecommendations": "Out Recommendations",
-            "expandable": "Expandable",
-            "label": "Label"
-        }
-    },
-    "language": {
-        "en": "English",
-        "it": "Italian",
-        "es": "Spanish",
-        "pl": "Polish"
-    },
-    "graphInteraction": {
-        "resetView": "Reset view",
-        "color": {
-            "disable": "Disable color",
-            "iri": "Infodemic Risk",
-            "hs": "Hate Speech",
-            "in": "In Recommendations",
-            "out": "Out Recommendations",
-            "label": "Color"
         },
-        "size": {
-            "disable": "Disable size",
-            "iri": "Infodemic Risk",
-            "hs": "Hate Speech",
-            "in": "In Recommendations",
-            "out": "Out Recommendations",
-            "label": "Size"
-        },
-        "tooltip": {
-            "id": "Channel ID:",
-            "iri": "Infodemic Risk:",
-            "hs": "Hate Speech:",
-            "cw": "Check Worthy:",
-            "in": "In Recommendations:",
-            "out": "Out Recommendations:"
-        },
-        "fs": {
-            "exit": "Exit",
-            "go": "Fullscreen"
+        "bias": {
+            "title": "Biases and fallacies",
+            "description": "<strong>Logical fallacies associated with hate speech and disinformation</strong><br><br>The content of hate speech and disinformation may sometimes look very convincing. This is because people who perpetuate hate speech often rely on logical fallacies – constructs hate groups use to justify their causes and their belief that people who come across this content would consider it as reasonable and truthful. Logical fallacies can use false premises, true premises but false conclusions, or true premises and conclusions but a false argument. Some fallacies are produced with the intention of deceiving or making misinformation viral.<br><br>There are many fallacies that show up in hate speech. Here are some of them:<br><br><strong>Argumentum ad populum</strong> – a non-substantive way of arguing in which the speaker appeals to the tastes, preferences and prejudices of the crowd. Based on national egoism, instincts, stereotypes or prejudices, the speaker tries to win over the crowd to their thesis (e.g. The majority of people in our country thinks like this, so this is the way we should act);<br><br><strong>Ipse dixit</strong> – the way of argumenting without providing a valid proof (e.g. the political party said it so it must be true);<br><br><strong>A slippery slope fallacy</strong> – occurs when someone claims that a position or decision will lead to a series of unintended negative consequences (e.g. we cannot let the migrants stay in our country as they will bring their families here and have children, which will lead us to losing our jobs and the collapse of the social security system, and as a result we will be poor and lose control over our country);<br><br><strong>Either-or fallacy</strong> – where someone claims there are only two ways of approaching the issue, while there are many other options (e.g. you can either vote for this party or live your life in constant danger);<br><br><strong>Post hoc, ergo propter hoc</strong> – logical error in wrongly concluding that there is a causal connection between two events merely because one occurred before the other (e.g. Ever since we got a new maths teacher, I’ve been getting bad grades. She must be the reason I’m doing poorly);<br><br><strong>Argumentum Ad Hominem</strong> – when someone attacks the person making an argument rather than the argument itself (e.g. Don't listen to Peter's opinion on the group project — he's lazy and never does anything right);<br><br><strong>Cherry picking</strong> – when someone selectively presents evidence that supports their argument while ignoring or dismissing evidence that contradicts it (e.g. \"Hate speech isn't harmful. Look at this one study that says it's just offensive, not dangerous\" - while ignoring dozens of other studies showing the psychological and social harm of hate speech);<br><br><strong>Appeal to tradition</strong> – when an argument assumes something is good or true simply because it is being traditionally done or believed, without considering whether it is still valid in the present context (e.g. In our school we have always had more men than women in the school council, and it always worked well).<br><br><strong>Argument from anecdote</strong> – someone uses a single, often personal, experience or story to support a general conclusion or claim (e.g. I don't think hate speech leads to real harm. I’ve heard people make offensive jokes all the time, and no one I know has ever been seriously affected);<br><br><strong>Ad ignorantiam fallacy</strong> – someone argues that a claim is true or false simply because it has not been proven the opposite (e.g. No one has ever proven that students cheat on online exams, so it must not happen).<br><br><strong>Cognitive Biases</strong><br><br>Our brain uses shortcuts to help us make quick decisions in everyday life. These shortcuts help us focus only on the most important information, so we don’t get overwhelmed by everything we see and hear. This makes the brain work more efficiently. However, the downside is that these shortcuts can sometimes lead us to make mistakes or misunderstand things because of our thinking (cognitive) biases.<br><br>We are all affected by cognitive biases in our decision-making process, and those who spread disinformation understand these biases very well. Here are some examples of cognitive biases:<br><br><strong>Membership bias</strong> – tendency to favour own group over other groups;<br><strong>Availability bias</strong> – tendency to rely on information that comes quickly to mind;<br><strong>Causality bias</strong> – occurs when people believe that there is a relationship between events that are actually independent of each other;<br><strong>Blind spot bias</strong> – the tendency to see oneself as less biased than other people;<br><strong>Confirmation bias</strong> – tendency to search for, interpret, favour and recall information in a way that confirms prior beliefs;<br><strong>Authority bias</strong> – tendency to be more influenced by the opinions of authority people.",
+            "objectivesTitle": "Objectives",
+            "objectives": "<ul><li><strong>Develop awareness</strong> about social mechanisms, cognitive biases and logical fallacies</li><li><strong>Develop critical thinking competence</strong></li></ul><p>Social mechanisms, cognitive biases and logical fallacies are factors which help hate speech and disinformation spread. By getting to know some of them, we can be more immune to them and be more critical to other forms of manipulation.</p>",
+            "startButton": "Start activity",
+            "task": "- Match the situation with the relevant logical fallacy / bias\n- Is the situation an example of hate speech / disinformation / misinformation? If yes, why?",
+            "pairs": [
+                {
+                    "id": "a",
+                    "left": "Argumentum ad populum",
+                    "right": "During a heated online discussion about immigration, a user posts: \"Everyone knows that these people are dangerous and bring crime. Just look at how many people in our town agree with me. We need to get them out to protect our community.\""
+                },
+                {
+                    "id": "b",
+                    "left": "Appeal to tradition",
+                    "right": "During a community meeting about updating local school policies to be more inclusive of LGBTQ+ students, a long-time resident stands up and says: \"For generations, we have taught that marriage is only between a man and a woman. This is how it has always been and how it should stay. Promoting these new ideas in our schools is an attack on our traditions and values.\""
+                },
+                {
+                    "id": "c",
+                    "left": "Post hoc, ergo propter hoc",
+                    "right": "During a public debate on refugee resettlement, a speaker points to a recent rise in unemployment that occurred shortly after a group of refugees arrived in the town. They declare, \"Ever since they arrived, our unemployment rates have shot up. It's obvious they are taking all the jobs from hardworking local people.\""
+                },
+                {
+                    "id": "d",
+                    "left": "Membership bias",
+                    "right": "During an online discussion about a recent crime reported in the news, a person writes, \"As someone who has lived in this neighbourhood my whole life, I can tell you it's the new immigrants causing all the trouble. We 'originals' know what's really going on, and things were peaceful before they came.\""
+                },
+                {
+                    "id": "e",
+                    "left": "Blind spot bias",
+                    "right": "During a heated debate about religious groups, a participant states, \"Unlike those people, whose beliefs are full of prejudice and intolerance, I've examined my views objectively. My conclusion that their religion is inherently backward and dangerous isn't a bias; it's just an uncomfortable fact.\""
+                },
+                {
+                    "id": "f",
+                    "left": "Slippery slope",
+                    "right": "During a debate about allowing a new community center for a minority group, a speaker argues: \"If we allow them to build this center, next they'll demand their own laws. Soon, they'll be taking over our neighbourhoods and imposing their culture on our children. We must stop this now, or we will lose our entire way of life.\""
+                }
+            ],
+            "feedback": {
+                "correct": "✅ Correct match!",
+                "wrong": "❌ Incorrect match!"
+            },
+            "summaryTitle": "Your Matching Summary",
+            "reflectionText": "Was it easy or difficult to match the situations and logical fallacies/bias?\n\nDid you know some of them? Which? Which were totally new for you?\n\nCan you provide concrete examples from your reality that represent some of those fallacies and biases?\n\nDo you know any other examples of logical fallacies / bias?\n\nHow can the knowledge of those biases / logical fallacies help us in acting against hate speech and disinformation?"
         }
-    },
-    "topicsTable": {
-        "title": "Main topics of the channel",
-        "header": {
-            "title": "Title",
-            "count": "% of messages",
-            "hs": "% of Hate Speech",
-            "cw": "% of Check Worthy"
-        }
-    },
-    "channelInfo": {
-        "about": "About:",
-        "channelId": "Channel ID:",
-        "title": "Title",
-        "description": "Description:",
-        "nMessages": "Total messages:",
-        "nUsers": "Number of users:",
-        "languages": "Languages:",
-        "iri": "Infodemic Risk:",
-        "hateSpeech": "Hate Speech Risk:",
-        "lastUpdate": "Last update:",
-        "mainTopics": "Main topics:",
-        "messages": "Go to conversation",
-        "emptySelection": "No selection yet. Please select a channel",
-        "exploreChannel": "Explore Channel",
-        "topics": "Main Topics",
-        "channels": "Channels",
-        "chats": "Chats",
-        "hs_percentage": "Hate Speech:",
-        "cw_percentage": "Check Worthy:"
-    },
-    "message": {
-        "title": "Chat Insights",
-        "header": {
-            "id": "ID",
-            "date": "Date",
-            "message": "Message",
-            "from": "From",
-            "mediaType": "Type",
-            "reactions": "Reactions",
-            "nrViews": "Views",
-            "hateLabel": "Hate Speech",
-            "checkLabel": "Check Worthy",
-            "topic": "Topic",
-            "target": "Target",
-            "keywordsMatch": "Keywords Match",
-            "counterspeech": "Start Conversation"
-        },
-        "dialog": {
-            "start": "Start a new conversation with Target={target}",
-            "jump": "Go to conversation",
-            "noProject": "No projects available",
-            "error": "Error while fetching data"
-        },
-        "noData": "No data available",
-        "noTarget": "No target identified",
-        "target": "Click here to start a new conversation",
-        "filter": {
-            "target": "Filter by target",
-            "topic": "Filter by Topic",
-            "hate": "Hate Speech",
-            "checkworthy": "Check Worthy",
-            "all": "All",
-            "yes": "Yes",
-            "no": "No",
-            "DISABLED": "Disabled",
-            "JEWS": "Jews",
-            "MUSLIMS": "Muslims",
-            "LGBT+": "LGBT+",
-            "MIGRANTS": "Migrants",
-            "OTHER": "Other",
-            "POC": "People of Color",
-            "ROMANI": "Rom",
-            "WOMEN": "Women"
-        },
-        "footer": {
-            "pagination": {
-                "range": "{pageStart}-{pageStop} of {totalItems} retrieved messages"
-            }
-        }
-    },
-    "wordclouds": {
-        "hate": "Hate vs Non Hate",
-        "checkworthy": "Check Worthy vs Non Check Worthy",
-        "generic": "Generic",
-        "select": "Select WordCloud type",
-        "selectTopic": "Select a Topic",
-        "channel": "Channel",
-        "titles": {
-            "hate": "Hate Speech",
-            "is_checkworthy": "Check Worthy",
-            "wordcloud": "Generic",
-            "isnot_checkworthy": "Non Check Worthy",
-            "non_hate": "Non Hate"
-        }
-    },
-    "error": {
-        "api": "Error while fetching data",
-        "noData": "No data available"
+},
+"inspect": {
+    "title": "Channel overview",
+    "subtitle": "Analyze the Channels and the Main Topics in the Network of Hate and Disinformation"
+},
+"channel": {
+    "title": "Network exploration",
+    "subtitle": "Explore the Network and Analyze the Connections of Hate and Disinformation Online",
+    "infoTitle": "Channel information"
+},
+"conversation": {
+    "title": "Conversation",
+    "subtitle": "Explore the Conversations and Analyze the Messages in the Network of Hate and Disinformation"
+},
+"project": {
+    "noProject": "No projects available",
+    "noData": "No data available"
+},
+"projects": {
+    "title": "Projects",
+    "subtitle": "Choose the language in which you want to train your skills to respond to hate and disinformation content."
+},
+"tasks": {
+    "title": "Tasks",
+    "subtitle": "Select the topic you want to focus on to create effective responses and arguments against disinformation."
+},
+"channelTable": {
+    "header": {
+        "title": "Telegram Network - Node Statistics",
+        "date": "Date",
+        "id": "ID",
+        "messages": "Number of messages",
+        "partecipants": "Number of users",
+        "IRI": "Infodemic Risk",
+        "nInRecommendations": "In Recommendations",
+        "nOutRecommendations": "Out Recommendations",
+        "expandable": "Expandable",
+        "label": "Label"
     }
+},
+"language": {
+    "en": "English",
+    "it": "Italian",
+    "es": "Spanish",
+    "pl": "Polish"
+},
+"graphInteraction": {
+    "resetView": "Reset view",
+    "color": {
+        "disable": "Disable color",
+        "iri": "Infodemic Risk",
+        "hs": "Hate Speech",
+        "in": "In Recommendations",
+        "out": "Out Recommendations",
+        "label": "Color"
+    },
+    "size": {
+        "disable": "Disable size",
+        "iri": "Infodemic Risk",
+        "hs": "Hate Speech",
+        "in": "In Recommendations",
+        "out": "Out Recommendations",
+        "label": "Size"
+    },
+    "tooltip": {
+        "id": "Channel ID:",
+        "iri": "Infodemic Risk:",
+        "hs": "Hate Speech:",
+        "cw": "Check Worthy:",
+        "in": "In Recommendations:",
+        "out": "Out Recommendations:"
+    },
+    "fs": {
+        "exit": "Exit",
+        "go": "Fullscreen"
+    }
+},
+"topicsTable": {
+    "title": "Main topics of the channel",
+    "header": {
+        "title": "Title",
+        "count": "% of messages",
+        "hs": "% of Hate Speech",
+        "cw": "% of Check Worthy"
+    }
+},
+"channelInfo": {
+    "about": "About:",
+    "channelId": "Channel ID:",
+    "title": "Title",
+    "description": "Description:",
+    "nMessages": "Total messages:",
+    "nUsers": "Number of users:",
+    "languages": "Languages:",
+    "iri": "Infodemic Risk:",
+    "hateSpeech": "Hate Speech Risk:",
+    "lastUpdate": "Last update:",
+    "mainTopics": "Main topics:",
+    "messages": "Go to conversation",
+    "emptySelection": "No selection yet. Please select a channel",
+    "exploreChannel": "Explore Channel",
+    "topics": "Main Topics",
+    "channels": "Channels",
+    "chats": "Chats",
+    "hs_percentage": "Hate Speech:",
+    "cw_percentage": "Check Worthy:"
+},
+"message": {
+    "title": "Chat Insights",
+    "header": {
+        "id": "ID",
+        "date": "Date",
+        "message": "Message",
+        "from": "From",
+        "mediaType": "Type",
+        "reactions": "Reactions",
+        "nrViews": "Views",
+        "hateLabel": "Hate Speech",
+        "checkLabel": "Check Worthy",
+        "topic": "Topic",
+        "target": "Target",
+        "keywordsMatch": "Keywords Match",
+        "counterspeech": "Start Conversation"
+    },
+    "dialog": {
+        "start": "Start a new conversation with Target={target}",
+        "jump": "Go to conversation",
+        "noProject": "No projects available",
+        "error": "Error while fetching data"
+    },
+    "noData": "No data available",
+    "noTarget": "No target identified",
+    "target": "Click here to start a new conversation",
+    "filter": {
+        "target": "Filter by target",
+        "topic": "Filter by Topic",
+        "hate": "Hate Speech",
+        "checkworthy": "Check Worthy",
+        "all": "All",
+        "yes": "Yes",
+        "no": "No",
+        "DISABLED": "Disabled",
+        "JEWS": "Jews",
+        "MUSLIMS": "Muslims",
+        "LGBT+": "LGBT+",
+        "MIGRANTS": "Migrants",
+        "OTHER": "Other",
+        "POC": "People of Color",
+        "ROMANI": "Rom",
+        "WOMEN": "Women"
+    },
+    "footer": {
+        "pagination": {
+            "range": "{pageStart}-{pageStop} of {totalItems} retrieved messages"
+        }
+    }
+},
+"wordclouds": {
+    "hate": "Hate vs Non Hate",
+    "checkworthy": "Check Worthy vs Non Check Worthy",
+    "generic": "Generic",
+    "select": "Select WordCloud type",
+    "selectTopic": "Select a Topic",
+    "channel": "Channel",
+    "titles": {
+        "hate": "Hate Speech",
+        "is_checkworthy": "Check Worthy",
+        "wordcloud": "Generic",
+        "isnot_checkworthy": "Non Check Worthy",
+        "non_hate": "Non Hate"
+    }
+},
+"error": {
+    "api": "Error while fetching data",
+    "noData": "No data available"
+}
 }
