@@ -72,6 +72,16 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/views/Educational/DebunkingTask.vue')
   },
   {
+    path: '/educational/lateral-reading',
+    name: 'lateralReadingIntro',
+    component: () => import('@/views/Educational/LateralReadingIntro.vue')
+  },
+  {
+    path: '/educational/lateral-reading/task',
+    name: 'lateralReadingTask',
+    component: () => import('@/views/Educational/LateralReadingTask.vue')
+  },
+  {
     path: '/dashboard',
     name: 'Dashboard',
     component: () => import('@/views/DashboardView.vue'),

@@ -101,6 +101,31 @@ function acceptWarning() {
           </div>
         </v-card>
       </v-col>
+      <!-- Educational Card 4 - Lateral Reading -->
+<v-col cols="12" md="4">
+  <v-card
+    elevation="6"
+    class="h-100 pa-5 d-flex flex-column justify-space-between"
+    color="#f4f6fa"
+  >
+    <div>
+      <div class="d-flex align-center mb-2">
+        <v-icon color="warning" class="mr-2">mdi-compass-outline</v-icon>
+        <h2 class="text-h6 font-weight-bold mb-1">
+          {{ t("educational.eduCard4Title") }}
+        </h2>
+      </div>
+      <p class="text-body-1 mb-4">
+        {{ t("educational.eduCard4Desc") }}
+      </p>
+    </div>
+    <div class="text-right mt-6">
+      <v-btn color="warning" size="small" to="/educational/lateral-reading" variant="flat">
+        {{ t("educational.eduCard4Button") }}
+      </v-btn>
+    </div>
+  </v-card>
+</v-col>
     </v-row>
   </v-container>
   <v-dialog v-model="showWarning" persistent max-width="600">

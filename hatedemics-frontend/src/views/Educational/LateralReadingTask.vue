@@ -1,0 +1,181 @@
+<template>
+  <v-container v-if="currentSection">
+    <!-- Intro -->
+    <div v-if="currentIndex === 0">
+      <h1 class="text-h5 font-weight-bold">{{ t("educational.tasks.lateralreading.title") }}</h1>
+      <div class="mb-6" v-html="currentSection.intro" />
+    </div>
+
+<!-- Screenshot gallery -->
+<v-row dense>
+  <v-col
+    v-for="(img, idx) in currentSection.images"
+    :key="idx"
+    cols="12"
+    sm="6"
+    md="4"
+    lg="3"
+    class="text-center"
+  >
+    <v-img
+      :src="img"
+      height="180"
+      class="rounded"
+      style="cursor: zoom-in"
+      @click="selectedImage = img; imageDialog = true"
+    />
+    <div class="mt-2 text-subtitle-2">Screenshot {{ idx + 1 }}</div>
+  </v-col>
+</v-row>
+
+
+    <!-- Domanda -->
+    <div v-if="currentQuestion">
+  <h2 class="text-subtitle-1 font-weight-medium mb-4">{{ currentQuestion.question }}</h2>
+
+  <v-row dense>
+    <v-col
+      v-for="(option, idx) in currentQuestion.options"
+      :key="idx"
+      cols="12"
+      sm="6"
+      md="4"
+      lg="3"
+    >
+      <v-checkbox
+        :label="option.text"
+        v-model="selected"
+        :value="idx"
+        class="my-1"
+      />
+    </v-col>
+  </v-row>
+</div>
+
+    <!-- Submit/Feedback -->
+    <v-btn v-if="!showFeedback" color="primary" class="mt-4" @click="submitAnswer">
+      Submit
+    </v-btn>
+
+    <v-alert v-if="showFeedback" :type="isCorrect ? 'success' : 'error'" class="mt-4">
+      {{ feedbackText }}
+    </v-alert>
+
+    <!-- Navigazione -->
+    <v-btn
+      v-if="showFeedback && currentIndex < currentSection.questions.length - 1"
+      class="mt-4"
+      color="primary"
+      @click="nextQuestion"
+    >
+      Next
+    </v-btn>
+
+    <!-- Conclusione + Prossima sezione o fine -->
+    <div v-if="showFeedback && currentIndex === currentSection.questions.length - 1">
+      <div class="mt-6 mb-4" v-html="currentSection.conclusion" />
+
+      <v-btn
+        v-if="currentSectionIndex < taskSections.length - 1"
+        color="primary"
+        @click="nextSection"
+      >
+        Next Section
+      </v-btn>
+
+      <v-btn
+        v-else
+        color="success"
+        @click="router.replace('/educational')"
+      >
+        Finish
+      </v-btn>
+    </div>
+
+    <!-- Dialog immagini -->
+    <v-dialog v-model="imageDialog" max-width="800">
+      <v-card>
+        <v-img :src="selectedImage" contain max-height="600" />
+        <v-card-actions class="justify-end">
+          <v-btn @click="imageDialog = false">Close</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+  </v-container>
+</template>
+
+<script setup lang="ts">
+import { ref,  computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+import { useRouter, useRoute } from 'vue-router'
+
+const router = useRouter()
+const { t, tm } = useI18n();
+const taskData = computed(() => tm("educational.tasks.lateralreading") || {});
+const images = computed(() => taskData.value.images || []);
+const questions = computed(() => taskData.value.questions || []);
+
+const taskSections = computed(() => tm("educational.tasks.lateralreading.sections") || []);
+const currentSectionIndex = ref(0);
+const currentSection = computed(() => taskSections.value[currentSectionIndex.value]);
+
+const currentIndex = ref(0);
+const currentQuestion = computed(() => currentSection.value?.questions?.[currentIndex.value]);
+const selected = ref<number[]>([]);
+const showFeedback = ref(false);
+const selectedImage = ref("");
+const imageDialog = ref(false);
+
+const isCorrect = computed(() => {
+  const correctIndexes = currentQuestion.value?.options
+    ?.map((opt: { correct: any; }, idx: any) => (opt.correct ? idx : null))
+    .filter((idx: null) => idx !== null) || [];
+
+  return (
+    selected.value.length === correctIndexes.length &&
+    selected.value.every((val) => correctIndexes.includes(val))
+  );
+});
+
+const feedbackText = computed(() => {
+  if (!currentQuestion.value) return "";
+  return isCorrect.value
+    ? currentQuestion.value.feedback.correct
+    : currentQuestion.value.feedback.incorrect;
+});
+
+function submitAnswer() {
+  showFeedback.value = true;
+}
+
+function nextQuestion() {
+  currentIndex.value++;
+  selected.value = [];
+  showFeedback.value = false;
+}
+
+function nextSection() {
+  currentSectionIndex.value++;
+  currentIndex.value = 0;
+  selected.value = [];
+  showFeedback.value = false;
+}
+
+
+</script>
+<style scoped>
+.option-card {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.correct-answer {
+  background-color: #e0f7e9;
+  border-left: 5px solid #2e7d32;
+}
+
+.wrong-answer {
+  background-color: #ffebee;
+  border-left: 5px solid #c62828;
+}
+</style>

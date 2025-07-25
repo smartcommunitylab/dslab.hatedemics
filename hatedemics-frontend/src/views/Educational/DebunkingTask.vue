@@ -1,5 +1,11 @@
 <template>
   <v-container>
+    <h1 v-if="currentIndex === 0" class="text-h5 font-weight-bold mb-2">
+    {{ t("educational.tasks.debunking.title") }}
+  </h1>
+  <p v-if="currentIndex === 0" class="mb-4">
+    <span v-html="t('educational.tasks.debunking.task')" />
+  </p>
     <v-row justify="center">
       <v-col cols="12" md="8">
         <h1 class="text-h5 font-weight-bold mb-4">
@@ -82,8 +88,7 @@
           v-if="showFeedback && isLastQuestion"
           class="mt-4"
           color="success"
-          @click="finishQuiz"
-        >
+          to="/educational"        >
           {{ t("educational.tasks.debunking.finish") }}
         </v-btn>
       </v-col>
@@ -150,10 +155,9 @@ const feedbackMessage = computed(() => {
     ? currentQuestion.value.feedback.correct
     : currentQuestion.value.feedback.incorrect;
 });
-function finishQuiz() {
-  // Emetti evento o reindirizza l’utente
-  console.log("Quiz completato");
-}
+// function finishQuiz() {
+
+// }
 
 function getOptionClass(index: number) {
   if (!showFeedback.value) return "option-card";
