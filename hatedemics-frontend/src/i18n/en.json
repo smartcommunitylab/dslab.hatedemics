@@ -284,39 +284,39 @@
                                 "question": "Where can you find the author?",
                                 "options": [
                                     {
-                                        "text": "1",
+                                        "text": "Screenshot 1",
                                         "correct": true
                                     },
                                     {
-                                        "text": "2",
+                                        "text": "Screenshot 2",
                                         "correct": true
                                     },
                                     {
-                                        "text": "3",
+                                        "text": "Screenshot 3",
                                         "correct": true
                                     },
                                     {
-                                        "text": "4",
+                                        "text": "Screenshot 4",
                                         "correct": false
                                     },
                                     {
-                                        "text": "5",
+                                        "text": "Screenshot 5",
                                         "correct": false
                                     },
                                     {
-                                        "text": "6",
+                                        "text": "Screenshot 6",
                                         "correct": false
                                     },
                                     {
-                                        "text": "7",
+                                        "text": "Screenshot 7",
                                         "correct": true
                                     },
                                     {
-                                        "text": "8",
+                                        "text": "Screenshot 8",
                                         "correct": false
                                     },
                                     {
-                                        "text": "9",
+                                        "text": "Screenshot 9",
                                         "correct": false
                                     },
                                     {
@@ -334,39 +334,39 @@
                                 "question": "Where can you find the website content and methodology?",
                                 "options": [
                                     {
-                                        "text": "1",
+                                        "text": "Screenshot 1",
                                         "correct": false
                                     },
                                     {
-                                        "text": "2",
+                                        "text": "Screenshot 2",
                                         "correct": false
                                     },
                                     {
-                                        "text": "3",
+                                        "text": "Screenshot 3",
                                         "correct": false
                                     },
                                     {
-                                        "text": "4",
+                                        "text": "Screenshot 4",
                                         "correct": true
                                     },
                                     {
-                                        "text": "5",
+                                        "text": "Screenshot 5",
                                         "correct": true
                                     },
                                     {
-                                        "text": "6",
+                                        "text": "Screenshot 6",
                                         "correct": false
                                     },
                                     {
-                                        "text": "7",
+                                        "text": "Screenshot 7",
                                         "correct": false
                                     },
                                     {
-                                        "text": "8",
+                                        "text": "Screenshot 8",
                                         "correct": false
                                     },
                                     {
-                                        "text": "9",
+                                        "text": "Screenshot 9",
                                         "correct": false
                                     },
                                     {
@@ -383,39 +383,39 @@
                                 "question": "Can you find any information about the website security?",
                                 "options": [
                                     {
-                                        "text": "1",
+                                        "text": "Screenshot 1",
                                         "correct": false
                                     },
                                     {
-                                        "text": "2",
+                                        "text": "Screenshot 2",
                                         "correct": false
                                     },
                                     {
-                                        "text": "3",
+                                        "text": "Screenshot 3",
                                         "correct": false
                                     },
                                     {
-                                        "text": "4",
+                                        "text": "Screenshot 4",
                                         "correct": false
                                     },
                                     {
-                                        "text": "5",
+                                        "text": "Screenshot 5",
                                         "correct": false
                                     },
                                     {
-                                        "text": "6",
+                                        "text": "Screenshot 6",
                                         "correct": true
                                     },
                                     {
-                                        "text": "7",
+                                        "text": "Screenshot 7",
                                         "correct": false
                                     },
                                     {
-                                        "text": "8",
+                                        "text": "Screenshot 8",
                                         "correct": false
                                     },
                                     {
-                                        "text": "9",
+                                        "text": "Screenshot 9",
                                         "correct": false
                                     },
                                     {
@@ -432,39 +432,39 @@
                                 "question": "Is the content published by other reliable sources?",
                                 "options": [
                                     {
-                                        "text": "1",
+                                        "text": "Screenshot 1",
                                         "correct": false
                                     },
                                     {
-                                        "text": "2",
+                                        "text": "Screenshot 2",
                                         "correct": false
                                     },
                                     {
-                                        "text": "3",
+                                        "text": "Screenshot 3",
                                         "correct": false
                                     },
                                     {
-                                        "text": "4",
+                                        "text": "Screenshot 4",
                                         "correct": false
                                     },
                                     {
-                                        "text": "5",
+                                        "text": "Screenshot 5",
                                         "correct": false
                                     },
                                     {
-                                        "text": "6",
+                                        "text": "Screenshot 6",
                                         "correct": false
                                     },
                                     {
-                                        "text": "7",
+                                        "text": "Screenshot 7",
                                         "correct": false
                                     },
                                     {
-                                        "text": "8",
+                                        "text": "Screenshot 8",
                                         "correct": true
                                     },
                                     {
-                                        "text": "9",
+                                        "text": "Screenshot 9",
                                         "correct": true
                                     },
                                     {
@@ -494,23 +494,23 @@
                                 "question": "Where can you find the author?",
                                 "options": [
                                     {
-                                        "text": "1",
+                                        "text": "Screenshot 1",
                                         "correct": false
                                     },
                                     {
-                                        "text": "2",
+                                        "text": "Screenshot 2",
                                         "correct": false
                                     },
                                     {
-                                        "text": "3",
+                                        "text": "Screenshot 3",
                                         "correct": false
                                     },
                                     {
-                                        "text": "4",
+                                        "text": "Screenshot 4",
                                         "correct": false
                                     },
                                     {
-                                        "text": "5",
+                                        "text": "Screenshot 5",
                                         "correct": false
                                     },
                                     {
@@ -528,23 +528,23 @@
                                 "question": "Where can you find the website content and methodology?",
                                 "options": [
                                     {
-                                        "text": "1",
+                                        "text": "Screenshot 1",
                                         "correct": false
                                     },
                                     {
-                                        "text": "2",
+                                        "text": "Screenshot 2",
                                         "correct": false
                                     },
                                     {
-                                        "text": "3",
+                                        "text": "Screenshot 3",
                                         "correct": false
                                     },
                                     {
-                                        "text": "4",
+                                        "text": "Screenshot 4",
                                         "correct": false
                                     },
                                     {
-                                        "text": "5",
+                                        "text": "Screenshot 5",
                                         "correct": false
                                     },
                                     {
@@ -561,23 +561,23 @@
                                 "question": "Can you find any information about the website security?",
                                 "options": [
                                     {
-                                        "text": "1",
+                                        "text": "Screenshot 1",
                                         "correct": false
                                     },
                                     {
-                                        "text": "2",
+                                        "text": "Screenshot 2",
                                         "correct": false
                                     },
                                     {
-                                        "text": "3",
+                                        "text": "Screenshot 3",
                                         "correct": false
                                     },
                                     {
-                                        "text": "4",
+                                        "text": "Screenshot 4",
                                         "correct": false
                                     },
                                     {
-                                        "text": "5",
+                                        "text": "Screenshot 5",
                                         "correct": false
                                     },
                                     {
@@ -594,23 +594,23 @@
                                 "question": "Is the content published by other reliable sources?",
                                 "options": [
                                     {
-                                        "text": "1",
+                                        "text": "Screenshot 1",
                                         "correct": false
                                     },
                                     {
-                                        "text": "2",
+                                        "text": "Screenshot 2",
                                         "correct": false
                                     },
                                     {
-                                        "text": "3",
+                                        "text": "Screenshot 3",
                                         "correct": false
                                     },
                                     {
-                                        "text": "4",
+                                        "text": "Screenshot 4",
                                         "correct": false
                                     },
                                     {
-                                        "text": "5",
+                                        "text": "Screenshot 5",
                                         "correct": false
                                     },
                                     {

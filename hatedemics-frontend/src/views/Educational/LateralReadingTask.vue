@@ -17,11 +17,11 @@
     lg="3"
     class="text-center"
   >
-    <v-img
-      :src="img"
-      height="180"
-      class="rounded"
-      style="cursor: zoom-in"
+  <v-img
+  :src="img"
+  height="180"
+  class="rounded elevation-3 border-screenshot"
+  style="cursor: zoom-in; background-color: white;"
       @click="selectedImage = img; imageDialog = true"
     />
     <div class="mt-2 text-subtitle-2">Screenshot {{ idx + 1 }}</div>
@@ -31,8 +31,9 @@
 
     <!-- Domanda -->
     <div v-if="currentQuestion">
-  <h2 class="text-subtitle-1 font-weight-medium mb-4">{{ currentQuestion.question }}</h2>
-
+      <h2 class="text-h6 font-weight-bold text-center mb-6">
+  {{ currentQuestion.question }}
+</h2>
   <v-row dense>
     <v-col
       v-for="(option, idx) in currentQuestion.options"
