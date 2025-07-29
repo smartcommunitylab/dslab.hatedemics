@@ -48,7 +48,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch, defineProps, defineEmits } from "vue";
+import { ref, watch, defineProps, defineEmits, computed } from "vue";
+import { useI18n } from "vue-i18n";
+const { tm, locale } = useI18n();
+
+const steps = computed(() => tm('onboarding.steps') as { title: string; html: string }[]);
 
 const props = defineProps<{
   modelValue: boolean;
@@ -57,18 +61,7 @@ const emit = defineEmits(["update:modelValue", "neverShow"]);
 
 const step = ref(1);
 const neverShow = ref(false);
-const steps = [
-  {
-    title: "Benvenuto",
-    html:
-      "<b>Questa piattaforma</b> ti aiuta a...<ul><li>Primo punto</li><li>Secondo punto</li></ul>",
-  },
-  { title: "Funzionalità", html: "Puoi esplorare la rete..." },
-  { title: "Educational", html: "Trova risorse formative..." },
-  { title: "Counterspeech", html: "Allena le tue risposte..." },
-  { title: "Privacy", html: "I tuoi dati sono protetti..." },
-  { title: "Supporto", html: "Contattaci per aiuto..." },
-];
+
 
 watch(
   () => props.modelValue,

@@ -56,6 +56,26 @@
     "welcome": {
         "title": "Benvenuti in Hatedemics"
     },
+    "onboarding": {
+        "steps": [
+            {
+                "title": "Cos'è Hatedemics",
+                "html": "<p><strong>Hatedemics</strong> è un progetto europeo che si propone di sensibilizzare sul tema dell’odio online, della disinformazione e del modo in cui questi fenomeni si intrecciano. Il progetto mira a fornire strumenti a ONG, organizzazioni della società civile, fact-checker, autorità pubbliche e giovani per prevenire e contrastare efficacemente polarizzazione, intolleranza e teorie del complotto.</p><p><strong>Hatedemics</strong> utilizza tecnologie basate sull’intelligenza artificiale in due modi principali:</p><ul><li><strong>Analisi dei dati</strong>: analizza grandi quantità di dati provenienti da una popolare piattaforma di messaggistica (Telegram), offrendo approfondimenti sui trend legati all’odio online e alla disinformazione.</li><li><strong>Contro-narrazione</strong>: genera risposte dialogiche a contenuti d’odio o disinformazione, chiamate “contro-narrazioni”. Questo aiuta le persone a comprendere quando e come rispondere all’odio basato su informazioni false, utilizzando dati verificati.</li></ul><p>Visita il <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">sito web di Hatedemics</a> per saperne di più.</p>"
+              },
+              {
+                "title": "Alcune definizioni",
+                "html": "<p><strong>Discorso d’odio</strong>: Ci rifacciamo alla definizione dell’Ufficio delle Nazioni Unite per la Prevenzione del Genocidio e la Responsabilità di Proteggere (2019), secondo cui il discorso d’odio è <em>“qualsiasi tipo di comunicazione, orale, scritta o comportamentale, che attacca o utilizza un linguaggio denigratorio o discriminatorio nei confronti di una persona o di un gruppo in base a chi sono”</em>. In particolare, nel progetto consideriamo i seguenti gruppi come frequentemente colpiti dall’odio: comunità LGBTQ+, migranti, musulmani, ebrei, rom, persone nere e persone con disabilità.</p><p><strong>Check-worthiness</strong>: Indica quanto una dichiarazione, affermazione o post meriti una verifica dei fatti per la sua possibile falsità, rilevanza pubblica o impatto dannoso. Si tratta di un giudizio soggettivo, basato su alcuni criteri chiave: se il contenuto include un’affermazione (statistiche, legami di causa-effetto, ecc.), se può essere potenzialmente falsa e se è rilevante per il pubblico o impatta individui o gruppi. <strong>Nota</strong>: Le affermazioni facilmente verificabili da un utente medio (es. “La popolazione della Cina è la metà di quella italiana”) non sono considerate degne di verifica, perché non richiedono l’intervento di un esperto.</p><p><strong>Disinformazione</strong>: Si parla di disinformazione quando informazioni false o fuorvianti vengono create e diffuse deliberatamente con l’intento di ingannare. Si distingue dalla misinformazione, che è semplicemente informazione errata condivisa per errore. L’elemento chiave della disinformazione è quindi l’intenzione di ingannare. Per identificare la disinformazione, utilizziamo strumenti avanzati chiamati <em>“indici di rischio infodemico”</em>. Questi ci aiutano a individuare conversazioni online in cui circola molto contenuto ingannevole, analizzando i link condivisi e l’interazione del pubblico con tali contenuti, valutandone così l’affidabilità.</p><p>Vuoi approfondire? Consulta: Gallotti, R., Valle, F., Castaldo, N., Sacco, P., & De Domenico, M. (2020). <em>Assessing the risks of 'infodemics' in response to COVID-19 epidemics</em>. <strong>Nature Human Behaviour</strong>, 4(12), 1285–1293.</p>"
+              },
+              {
+                "title": "Cosa include la piattaforma",
+                "html": "<p><strong>Dati:</strong> La piattaforma include dati statici: circa 10 milioni di messaggi Telegram raccolti da quasi 1.000 chat pubbliche, in 4 lingue (italiano, inglese, spagnolo e polacco). Telegram è stato scelto perché consente un accesso libero alla raccolta di dati su larga scala, diversamente da altre piattaforme di messaggistica.</p><p><strong>Analisi:</strong> Gli approfondimenti visualizzati vengono generati automaticamente da tecnologie basate su intelligenza artificiale. Di conseguenza, potrebbero occasionalmente contenere imprecisioni! In caso di dubbi, rivolgiti agli educatori di riferimento.</p><p><strong>Chatbot:</strong> La piattaforma include anche un modello di dialogo che simula l’interazione con un hater che diffonde disinformazione. Le risposte sono generate automaticamente da un modello linguistico specializzato, ma possono essere modificate. Il chatbot supporta 5 lingue: italiano, inglese, spagnolo, polacco e maltese.</p>"
+              },
+              {
+                "title": "Avviso di contenuto sensibile",
+                "html": "<p><strong>Attenzione:</strong> Questa piattaforma contiene esempi espliciti che alcuni utenti potrebbero trovare offensivi.</p>"
+              }
+        ]
+    },
     "educational": {
         "eduCard1Title": "Dichiarazione dei Diritti Umani",
         "eduCard1Desc": "Scopri i principi fondamentali che tutelano la dignità umana.",
@@ -67,13 +87,12 @@
         "eduCard3Desc": "Impara a riconoscere e smascherare la disinformazione.",
         "eduCard3Button": "Inizia l’attività",
         "eduCard4Title": "Lettura laterale",
-"eduCard4Desc": "Impara a leggere e comprendere i contenuti online.",
-"eduCard4Button": "Inizia l'attività",
+        "eduCard4Desc": "Impara a leggere e comprendere i contenuti online.",
+        "eduCard4Button": "Inizia l'attività",
         "warningTitle": "Avviso",
         "warningText": "Queste attività contengono esempi espliciti che potrebbero urtare la sensibilità di alcuni lettori. Se un’attività o una sua parte ti mette a disagio o ti fa sentire in difficoltà, ti invitiamo a parlarne con noi o a lasciare la stanza liberamente.",
         "warningButton": "Ho capito",
         "warningCheckbox": "Non mostrare più questo messaggio",
-
         "tasks": {
             "humanRights": {
                 "title": "Diritti Umani",
@@ -133,7 +152,7 @@
                     }
                 ]
             },
-           "debunking": {
+            "debunking": {
                 "title": "Debunking",
                 "description": "<strong>What is debunking:</strong> When some people think of a fact-checker, they only see a journalist who looks into a claim, checks it and confirms whether it is true or not, the debunking process. Nevertheless, fighting disinformation effectively nowadays takes much more than that: quickly detecting possible hoaxes before they go viral and affect more people; explaining that not everything is black or white, helping people to be well-prepared against falsehoods through Media Literacy or regulation; creating tools to make it harder for others to deceive us, or fighting together against manipulation: this is what we call pre-bunking.<br><br><strong>What is a disinformation narrative:</strong> What disinformation creators want you to believe. When an idea is repeated many times, people tend to believe it. Also, one hoax can contain several narratives.",
                 "objectivesTitle": "Objectives",
@@ -166,14 +185,12 @@
                             "correctImage": "/img/debunking/en/answer1.jpg",
                             "incorrect": "Unfortunately neither an advanced search in Twitter nor an IA tool would have been helpful in this case. ",
                             "incorrectImage": "/img/debunking/en/answer1.jpg"
-
                         }
                     },
                     {
                         "title": "Question 2",
                         "question": "By performing a reverse image search you would have found this image. What can you conclude from observing it?",
                         "image": "/img/debunking/en/question2.jpg",
-
                         "options": [
                             {
                                 "text": "It´s an AI picture"
@@ -189,7 +206,6 @@
                         "feedback": {
                             "correct": "Correct: this is the original image. In particular, this image was originally published in 2023. We can therefore conclude that the first image you saw was a manipulated image that changes the phrase it originally contained, “I am the mother of the girl you will never touch,” which was published on a website about the 8M marches in Monterrey (Mexico) in March 2023 and has been circulating in a manipulated manner.",
                             "incorrect": "Inorrect: this is the original image. In particular, this image was originally published in 2023. We can therefore conclude that the first image you saw was a manipulated image that changes the phrase it originally contained, “I am the mother of the girl you will never touch,” which was published on a website about the 8M marches in Monterrey (Mexico) in March 2023 and has been circulating in a manipulated manner."
-
                         }
                     },
                     {
@@ -210,13 +226,10 @@
                         "feedback": {
                             "correct": "Correct!<br><br>Check out how professional fact-checkers debunked this disinformation: <a href='https://maldita.es/feminismo/bulo/20250310/cartel-derechoalaborto-manipulado/' target='_blank'>Maldita.es analysis</a>",
                             "incorrect": "Incorrect.<br><br>Check out how professional fact-checkers debunked this disinformation: <a href='https://maldita.es/feminismo/bulo/20250310/cartel-derechoalaborto-manipulado/' target='_blank'>Maldita.es analysis</a>"
-                        
-
                         }
                     }
                 ]
             },
-            
             "bias": {
                 "title": "Riconoscere i Bias",
                 "description": "<strong>Fallacie logiche associate ai discorsi d’odio e alla disinformazione</strong><br><br>I contenuti dei discorsi d’odio e della disinformazione possono a volte sembrare molto convincenti. Questo accade perché chi diffonde questi contenuti fa spesso uso di fallacie logiche: strutture di pensiero distorte che i gruppi d’odio utilizzano per giustificare le proprie cause, facendo credere che quanto affermano sia ragionevole e veritiero. Le fallacie logiche possono basarsi su premesse false, premesse vere ma conclusioni errate, oppure su argomentazioni scorrette nonostante premesse e conclusioni siano vere. Alcune fallacie sono prodotte appositamente per ingannare o rendere virale la disinformazione.<br><br>Esistono molte fallacie che emergono nei discorsi d’odio. Eccone alcune:<br><br><strong>Argumentum ad populum</strong> – forma di argomentazione non sostanziale in cui chi parla fa leva sui gusti, le preferenze e i pregiudizi della massa. Basandosi su egoismo nazionale, istinti, stereotipi o pregiudizi, cerca di convincere il pubblico della propria tesi (es. \"La maggioranza delle persone nel nostro paese la pensa così, quindi è così che dobbiamo agire\");<br><br><strong>Ipse dixit</strong> – argomentare senza fornire prove valide (es. \"Lo ha detto il partito, quindi dev’essere vero\");<br><br><strong>Slippery slope (pendio scivoloso)</strong> – si verifica quando si sostiene che una posizione porterà inevitabilmente a conseguenze negative a catena (es. \"Non possiamo permettere ai migranti di restare nel nostro paese, perché porteranno qui le famiglie, avranno figli, ci ruberanno il lavoro e il sistema di welfare collasserà. Finiremo in povertà e perderemo il controllo del nostro paese\");<br><br><strong>Fallacia del falso dilemma (either-or)</strong> – consiste nel sostenere che esistano solo due possibilità, escludendo tutte le alternative (es. \"O voti questo partito o vivrai costantemente in pericolo\");<br><br><strong>Post hoc, ergo propter hoc</strong> – errore logico nel trarre conclusioni di causalità solo perché un evento precede l’altro (es. \"Da quando abbiamo la nuova insegnante di matematica, prendo voti bassi. Dev’essere colpa sua\");<br><br><strong>Argumentum ad hominem</strong> – attaccare la persona che fa un’argomentazione invece dell’argomentazione stessa (es. \"Non ascoltare l’opinione di Pietro sul progetto, è pigro e non fa mai niente\");<br><br><strong>Cherry picking (selezione mirata)</strong> – presentare solo le prove a favore della propria tesi, ignorando quelle contrarie (es. \"L’hate speech non fa male. Guarda questo studio che dice che è solo offensivo, non pericoloso\" – ignorando però decine di altri studi che dimostrano i danni psicologici e sociali);<br><br><strong>Appello alla tradizione</strong> – sostenere che qualcosa sia giusto o vero solo perché si è sempre fatto così (es. \"Nella nostra scuola il consiglio è sempre stato composto da più uomini che donne, e ha sempre funzionato bene\");<br><br><strong>Argomento per aneddoto</strong> – usare un’esperienza personale o singolo caso per generalizzare (es. \"Non penso che l’hate speech faccia davvero male. Ho sentito battute offensive spesso, e nessuno che conosco ne ha mai sofferto seriamente\");<br><br><strong>Fallacia ad ignorantiam</strong> – sostenere che qualcosa sia vero o falso solo perché non se n’è dimostrato il contrario (es. \"Nessuno ha mai provato che gli studenti copino agli esami online, quindi non succede\").<br><br><strong>Bias cognitivi</strong><br><br>Il nostro cervello utilizza scorciatoie mentali per aiutarci a prendere decisioni rapide nella vita quotidiana. Questi meccanismi ci permettono di concentrarci solo sulle informazioni più rilevanti, evitando di essere sopraffatti da tutto ciò che vediamo e sentiamo. In questo modo, il cervello lavora in modo più efficiente. Tuttavia, queste scorciatoie possono anche portarci a errori di valutazione o a fraintendimenti, a causa dei cosiddetti bias cognitivi.<br><br>Tutti noi siamo influenzati dai bias cognitivi nel prendere decisioni, e chi diffonde disinformazione li conosce molto bene. Eccone alcuni:<br><br><strong>Bias di appartenenza</strong> – tendenza a favorire il proprio gruppo rispetto agli altri;<br><strong>Bias di disponibilità</strong> – tendenza ad affidarsi alle informazioni che ci vengono più facilmente in mente;<br><strong>Bias di causalità</strong> – si verifica quando si crede che eventi indipendenti siano collegati tra loro;<br><strong>Bias del punto cieco</strong> – tendenza a pensare di essere meno soggetti a bias rispetto agli altri;<br><strong>Bias di conferma</strong> – tendenza a cercare, interpretare e ricordare solo le informazioni che confermano le nostre convinzioni;<br><strong>Bias dell’autorità</strong> – tendenza a lasciarsi influenzare maggiormente dalle opinioni di persone autorevoli.",
