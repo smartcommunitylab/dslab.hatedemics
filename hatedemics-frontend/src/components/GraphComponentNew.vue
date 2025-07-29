@@ -221,7 +221,7 @@ const initializeGraph = () => {
     ctx.restore();
   }
 })
-.linkWidth(3)
+.linkWidth(getLinkWidth)
 .linkColor((link: any) => {
   defaultLinkColors.set(link, "gray");
   return "gray";
@@ -245,7 +245,12 @@ const initializeGraph = () => {
   setTimeout(() => graphInstance.zoomToFit(1000), 500); // piccola attesa per assicurarsi che il layout sia stabile
 
 };
-
+function getLinkWidth(link: any): number {
+  if (!selectedNode) return 0.1;
+  const isRelated =
+    link.source.id === selectedNode.id || link.target.id === selectedNode.id;
+  return isRelated ? 3 : 0.1;
+}
   const selectNode = (node: any) => {
   selectedNode = node;
 
@@ -276,6 +281,7 @@ const resetHighlighting = () => {
   colorBy.value = "iri";
   sizeBy.value = "out_degree";
   graphInstance.nodeColor((n: any) => getNodeColor(n, colorBy.value));
+  graphInstance.linkWidth(() => 0.5);
   graphInstance.linkColor((link: any) => defaultLinkColors.get(link) || 'gray');
 
 };
