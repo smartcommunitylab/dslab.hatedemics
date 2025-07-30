@@ -104,7 +104,7 @@ function handleNeverShow() {
   size="small"
   class="rounded-circle"
   style="min-width: 36px; height: 36px; padding: 0"
-  @click="showCounterspeechGuide = true"
+  @click="showExploreGuide = true"
 >
   <v-icon size="20">mdi-help</v-icon>
 </v-btn>
