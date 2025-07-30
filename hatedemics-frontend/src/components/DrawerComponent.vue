@@ -3,49 +3,50 @@ import type DrawerMenuItem from '@/interfaces/DrawerMenuItemInterface';
 import ExploreGuideDialog from '@/components/ExploreGuideDialog.vue';
 import CounterspeechGuideDialog from '@/components/CounterspeechGuideDialog.vue';
 import { API } from '@/services';
-import { ref, reactive } from 'vue';
+import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const showExploreGuide = ref(false);
 const showCounterspeechGuide = ref(false);
 
-
 const logout = () => {
   API.login.logout()
-
 };
-/** Drawer menu items */
+
 const items: DrawerMenuItem[] = [
   {
-    title: 'Home',
+    title: t('menu.home'),
     icon: 'mdi-home',
     to: { name: 'Home' }
   },
   {
-    title: 'Educational',
+    title: t('menu.educational'),
     icon: 'mdi-school-outline',
     to: '/educational'
   },
   {
-    title: 'Explore',
+    title: t('menu.explore'),
     icon: 'mdi-information',
     items: [
       {
-        title: 'Network',
+        title: t('menu.network'),
         icon: 'mdi-graph',
         to: { name: 'Channels' }
       },
       {
-        title: 'Channel',
+        title: t('menu.channel'),
         icon: 'mdi-text-box',
         to: { name: 'Inspector' }
       },
       {
-        title: 'Conversation',
+        title: t('menu.conversation'),
         icon: 'mdi-forum',
         to: { name: 'Discussion' }
       },
       {
-        title: 'Quick Guide',
+        title: t('menu.quickGuide'),
         icon: 'mdi-help-circle-outline',
         action: () => (showExploreGuide.value = true)
       }
@@ -53,42 +54,42 @@ const items: DrawerMenuItem[] = [
     to: { name: 'Dashboard' }
   },
   {
-    title: 'Counterspeech',
+    title: t('menu.counterspeech'),
     icon: 'mdi-message-text-outline',
     to: '/projects',
     items: [
       {
-        title: 'Projects',
+        title: t('menu.projects'),
         icon: 'mdi-folder',
         to: '/projects'
       },
       {
-        title: 'Quick Guide',
+        title: t('menu.quickGuide'),
         icon: 'mdi-help-circle-outline',
         action: () => (showCounterspeechGuide.value = true)
       }
     ]
   },
   {
-    title: 'Credits',
+    title: t('menu.credits'),
     icon: 'mdi-information',
     to: { name: 'Credits' }
   },
   {
-    title: 'Logout',
+    title: t('menu.logout'),
     icon: 'mdi-logout',
     action: logout 
   }
 ];
 
-/** Stato reattivo per tenere sempre espansi i gruppi */
 const expandedGroups = ref<Record<string, boolean>>(
   items.reduce((acc, item) => {
-    if (item.items) acc[item.title] = true; // Imposta tutti i gruppi a `true` per essere espansi
+    if (item.items) acc[item.title] = true;
     return acc;
   }, {} as Record<string, boolean>)
 );
 </script>
+
 
 <template>
   <v-list nav>

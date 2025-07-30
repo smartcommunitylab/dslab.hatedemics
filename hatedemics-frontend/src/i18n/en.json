@@ -4,17 +4,47 @@
         "error": "Error during login",
         "button": "Login"
     },
-    "menu": {
-        "home": "Home",
-        "dashboard": "Dashboard",
-        "channels": "Channels",
-        "inspector": "Inspector",
-        "discussion": "Discussion",
-        "projects": "Projects",
-        "counterspeech": "Counterspeech",
-        "annotation": "Annotation",
-        "credits": "Credits"
-    },
+    "common": {
+  "close": "Close"
+},
+"menu": {
+    "home": "Home",
+    "educational": "Educational",
+    "explore": "Explore",
+    "network": "Network",
+    "channel": "Channel",
+    "conversation": "Conversation",
+    "quickGuide": "Quick Guide",
+    "counterspeech": "Counterspeech",
+    "projects": "Projects",
+    "credits": "Credits",
+    "logout": "Logout"
+  },
+    "counterspeechGuide": {
+    "guideTitle": "Quick Guide",
+    "guideItems": {
+      "counterspeech": {
+        "title": "Counterspeech",
+        "description": "<p><strong>Counterspeech</strong> is defined as all communicative actions aimed at refuting hate speech through cogent reasons, and true and fact-bound arguments (Schieb and Preuss, 2016).</p>"
+      },
+      "dataSources": {
+        "title": "Data sources",
+        "description": "<p>Contains a fact-checking article from a certified publisher (signatory of the <a href=\"https://ifcncodeofprinciples.poynter.org/\" target=\"_blank\">IFCN Code of Principles</a>).</p>"
+      },
+      "dialogue": {
+        "title": "Dialogue",
+        "description": "<p>Create a dialogue that simulates the interaction between someone spreading hate/misinformation and an operator responding with fact-driven arguments.</p>"
+      },
+      "groundText": {
+        "title": "Ground text spans",
+        "description": "<p>You can add portions of the fact-checking article that support the operator’s reply.</p><p>Ground text is <em>automatically added</em> when a turn is generated. You can also <strong>manually highlight</strong> a part of the article and click the “link” button.</p>"
+      },
+      "newTurn": {
+        "title": "New turn",
+        "description": "<p>You can add a new turn in different ways:</p><ul><li>Add an empty turn with the “+” buttons.</li><li>Automatically generate a turn using a selected article portion.</li><li>Select a portion as ground text, then click “Generate from ground”.</li></ul><p><strong>Note:</strong> Even automatically generated turns and ground text can always be edited.</p>"
+      }
+    }
+  },
     "home": {
         "title": "Fighting hate and disinformation online",
         "description": "HATEDEMICS is a platform that leverages artificial intelligence to analyze online content, enhance critical thinking, and train responses to hate speech.",
@@ -53,6 +83,56 @@
             }
         }
     },
+   "networkGuide": {
+    "guideTitle": "Guide to the Telegram Channel Network",
+    "guideItems": {
+      "network": {
+        "title": "Network",
+        "description": "This network displays Telegram channels as points, and lines show how they're connected. A channel is linked to another when Telegram automatically recommends it, based on how many users both channels share."
+      },
+      "dataCollection": {
+        "title": "Data Collection",
+        "description": "We collect data step-by-step. We start with a group of channels known for disinformation or hate speech. From each, we gather their recommendations and continue following new links until we reach the desired number of channels. From there, we select the most relevant ones in the chosen language and collect their chat messages."
+      },
+      "explored": {
+        "title": "Explored",
+        "description": "A channel is <strong>explored</strong> if we’ve gathered its list of recommended channels."
+      },
+      "expanded": {
+        "title": "Expanded",
+        "description": "A channel is <strong>expanded</strong> if we’ve collected all of its chat messages."
+      },
+      "inOutRecommendations": {
+        "title": "In & Out Recommendations",
+        "description": "<strong>In recommendations</strong> is the total number of times a channel is recommended by others – the more it’s recommended, the more popular it is!<br><strong>Out recommendations</strong> is the number of channels this one recommends – a higher number means it points to a lot of other content."
+      },
+      "iri": {
+        "title": "Infodemic Risk Index (IRI)",
+        "description": "The IRI measures how unreliable a channel is, from 0 (completely reliable) to 1 (fully unreliable). It’s based on the trustworthiness of websites shared and how many people are exposed to them (based on views).<br>For more details: <a href='https://www.nature.com/articles/s41562-020-00994-6' target='_blank'>Gallotti et al., 2020 (Nature Human Behaviour)</a>."
+      },
+      "diri": {
+        "title": "Dynamic Infodemic Risk Index (dIRI)",
+        "description": "The dIRI looks at how actively users engage with unreliable content. It considers stronger interactions like replies or reshares. A higher value means users are actively engaging with unreliable messages."
+      },
+      "sdiri": {
+        "title": "Semi-Dynamic Infodemic Risk Index (sdIRI)",
+        "description": "The sdIRI tracks light and quick interactions with unreliable content, like reactions (emojis, likes). It helps measure passive or subtle engagement with disinformation."
+      },
+      "unrel": {
+        "title": "Unreliability Index (Unrel)",
+        "description": "This index shows how much unreliable content a channel shares compared to all its messages linking to any source. A score close to 1 means most of the content comes from untrustworthy websites."
+      },
+      "domains": {
+        "title": "Known & Unknown Domains",
+        "description": "<strong>Known domains</strong> are websites we have reliability data for. <strong>Unknown domains</strong> are those without such data. More known domains means stronger and more accurate disinformation metrics."
+      },
+      "centrality": {
+        "title": "Centrality Measures",
+        "description": "These measures show how important a channel is in the network:<br><strong>Degree centrality:</strong> Number of direct links (popularity).<br><strong>Betweenness:</strong> Acts as a bridge between other channels.<br><strong>Closeness:</strong> How quickly it can reach others.<br><strong>Eigenvector:</strong> How connected it is to other influential channels.<br>See also: <em>Pósfai & Barabási, 2016 - Network Science</em>."
+      }
+    }
+  },
+      
     "welcome": {
         "title": "Welcome to Hatedemics"
     },

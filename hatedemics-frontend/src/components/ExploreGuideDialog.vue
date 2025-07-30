@@ -4,66 +4,94 @@ import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
 const show = defineModel<boolean>('modelValue');
-    const guideItems = [
+
+const guideItems = [
   {
     key: "network",
     icon: "mdi-web",
     color: "error",
   },
   {
-    key: "inRec",
-    icon: "mdi-arrow-down-bold-box",
+    key: "dataCollection",
+    icon: "mdi-database",
     color: "error",
   },
   {
-    key: "outRec",
-    icon: "mdi-arrow-up-bold-box",
+    key: "explored",
+    icon: "mdi-compass",
     color: "error",
   },
   {
-    key: "risk",
-    icon: "mdi-chart-line",
+    key: "expanded",
+    icon: "mdi-message-text",
     color: "error",
   },
   {
-    key: "check",
-    icon: "mdi-magnify-close",
+    key: "inOutRecommendations",
+    icon: "mdi-arrow-decision",
+    color: "error",
+  },
+  {
+    key: "iri",
+    icon: "mdi-alert-decagram",
+    color: "error",
+  },
+  {
+    key: "diri",
+    icon: "mdi-alert-circle",
+    color: "error",
+  },
+  {
+    key: "sdiri",
+    icon: "mdi-emoticon",
+    color: "error",
+  },
+  {
+    key: "unrel",
+    icon: "mdi-link-off",
+    color: "error",
+  },
+  {
+    key: "domains",
+    icon: "mdi-earth",
+    color: "error",
+  },
+  {
+    key: "centrality",
+    icon: "mdi-graph",
     color: "error",
   },
 ];
 </script>
 
 <template>
-
-  <v-dialog v-model="show" max-width="700">
-  <v-card>
-    <v-card-title class="text-h6 font-weight-bold">
-      {{ t("home.guideTitle") }}
-    </v-card-title>
-    <v-card-text>
-      <v-row dense>
-        <v-col cols="12" v-for="item in guideItems" :key="item.key">
-          <div class="d-flex align-start mb-3">
-            <v-icon :color="item.color" class="mr-3 mt-1" size="30">
-              {{ item.icon }}
-            </v-icon>
-            <div>
-              <div class="font-weight-medium mb-1">
-                {{ t(`home.guideItems.${item.key}.title`) }}
+  <v-dialog v-model="show" max-width="800">
+    <v-card>
+      <v-card-title class="text-h6 font-weight-bold">
+        {{ t("networkGuide.guideTitle") }}
+      </v-card-title>
+      <v-card-text>
+        <v-row dense>
+          <v-col cols="12" v-for="item in guideItems" :key="item.key">
+            <div class="d-flex align-start mb-3">
+              <v-icon :color="item.color" class="mr-3 mt-1" size="30">
+                {{ item.icon }}
+              </v-icon>
+              <div>
+                <div class="font-weight-medium mb-1">
+                  {{ t(`networkGuide.guideItems.${item.key}.title`) }}
+                </div>
+                <div class="text-body-2 mb-0" v-html="t(`networkGuide.guideItems.${item.key}.description`)"></div>
               </div>
-              <p class="text-body-2 mb-0">
-                {{ t(`home.guideItems.${item.key}.description`) }}
-              </p>
             </div>
-          </div>
-          <v-divider class="my-3" />
-        </v-col>
-      </v-row>
-    </v-card-text>
-    <v-card-actions>
-      <v-spacer />
-      <v-btn  @click="show = false">Close</v-btn>
-    </v-card-actions>
-  </v-card>
-</v-dialog>
+            <v-divider class="my-3" />
+          </v-col>
+        </v-row>
+      </v-card-text>
+      <v-card-actions>
+        <v-spacer />
+        <v-btn @click="show = false">{{ t('common.close') }}</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-dialog>
 </template>
