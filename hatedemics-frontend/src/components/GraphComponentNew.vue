@@ -93,7 +93,9 @@ const getNodeColor = (node: any, colorBy: string) => {
 };
 const scaleNodeSize = (value: number, min: number, max: number, sizeMin: number, sizeMax: number) => {
   if (value === undefined || value === null) return sizeMin; // Evita errori
-  const normalized = (value - min) / (max - min); // Normalizza tra 0 e 1
+  // const normalized = (value - min) / (max - min); // Normalizza tra 0 e 1
+  const normalized = Math.max(0, Math.min(1, (value - min) / (max - min)));
+
   return sizeMin + normalized * (sizeMax - sizeMin);
 };
   /**
@@ -108,9 +110,9 @@ const scaleNodeSize = (value: number, min: number, max: number, sizeMin: number,
 const getNodeSize = (node: any, sizeBy: string) => {
   switch (sizeBy) {
     case "iri":
-      return scaleNodeSize(node.iri, 0, 1, 5, 50); // hs tra 0 e 1 → grandezza tra 5 e 50
+      return scaleNodeSize(node.iri, 0, 1, 20, 100); // hs tra 0 e 1 → grandezza tra 20 e 60
     case "hs":
-      return scaleNodeSize(node.hs, 0, 1, 5, 50); // hs tra 0 e 1 → grandezza tra 5 e 50
+      return scaleNodeSize(node.hs, 0, 1, 20, 100); // hs tra 0 e 1 → grandezza tra 20 e 50
     case "out_degree":
       return scaleNodeSize(node.out_degree, 0, 50, 5, 100); // out_degree tra 0 e 10 → 5-20
     case "in_degree":
@@ -199,7 +201,9 @@ const initializeGraph = () => {
   const isLinked = node.id && typeof node.id === 'string' && highlightedNodes.value.has(node.id);
 
   if (isSelected || isLinked) {
-    const size = getNodeSize(node, sizeBy.value);
+    // const size = getNodeSize(node, sizeBy.value);
+    const sizeRaw = getNodeSize(node, sizeBy.value);
+const size = Math.max(1, isNaN(sizeRaw) ? 1 : sizeRaw);
     ctx.save();
     
     // Pulsing animation
@@ -272,6 +276,9 @@ function getLinkWidth(link: any): number {
     link.source.id === node.id || link.target.id === node.id;
   return isRelated ? '#f57c00' : defaultLinkColors.get(link) || 'gray';
 });
+  // Seleziona il canale associato
+  let channel = channelsStore.channelsInfo.find(c => c.id === node.name);
+  channelsStore.selectChannelInfo(channel ? channel : node.name);
 };
 
 
