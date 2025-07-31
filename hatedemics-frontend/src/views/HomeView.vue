@@ -7,8 +7,8 @@ const globalStore = useGlobal();
 import { onMounted, ref } from "vue";
 import { useUserStore } from "@/store/UserStore";
 import HomeStepperDialog from "@/components/HomeStepperDialog.vue";
-import ExploreGuideDialog from '@/components/ExploreGuideDialog.vue';
-import CounterspeechGuideDialog from '@/components/CounterspeechGuideDialog.vue';
+import ExploreGuideDialog from "@/components/ExploreGuideDialog.vue";
+import CounterspeechGuideDialog from "@/components/CounterspeechGuideDialog.vue";
 
 const showExploreGuide = ref(false);
 const showCounterspeechGuide = ref(false);
@@ -32,7 +32,7 @@ onMounted(() => {
 // }
 function handleNeverShow() {
   userStore.setHideHomeStepperDialog(true);
-  localStorage.setItem('hideHomeStepper', '1');
+  localStorage.setItem("hideHomeStepper", "1");
 }
 </script>
 
@@ -99,19 +99,19 @@ function handleNeverShow() {
           </div>
           <div class="d-flex justify-space-between mt-6">
             <v-btn
-  variant="outlined"
-  color="error"
-  size="small"
-  class="rounded-circle"
-  style="min-width: 36px; height: 36px; padding: 0"
-  @click="showExploreGuide = true"
->
-  <v-icon size="20">mdi-help</v-icon>
-</v-btn>
-  <v-btn color="primary" to="/dashboard/channels" variant="flat">
-    {{ t("home.networkButton") }}
-  </v-btn>
-</div>
+              variant="outlined"
+              color="error"
+              size="small"
+              class="rounded-circle"
+              style="min-width: 36px; height: 36px; padding: 0"
+              @click="showExploreGuide = true"
+            >
+              <v-icon size="20">mdi-help</v-icon>
+            </v-btn>
+            <v-btn color="primary" to="/dashboard/channels" variant="flat">
+              {{ t("home.networkButton") }}
+            </v-btn>
+          </div>
         </v-card>
       </v-col>
 
@@ -133,30 +133,27 @@ function handleNeverShow() {
           </div>
           <div class="d-flex justify-space-between mt-6">
             <v-btn
-  variant="outlined"
-  color="error"
-  size="small"
-  class="rounded-circle"
-  style="min-width: 36px; height: 36px; padding: 0"
-  @click="showCounterspeechGuide = true"
->
-  <v-icon size="20">mdi-help</v-icon>
-</v-btn>
-  <v-btn color="error" to="/projects" variant="flat">
-    {{ t("home.counterspeechButton") }}
-  </v-btn>
-</div>
+              variant="outlined"
+              color="error"
+              size="small"
+              class="rounded-circle"
+              style="min-width: 36px; height: 36px; padding: 0"
+              @click="showCounterspeechGuide = true"
+            >
+              <v-icon size="20">mdi-help</v-icon>
+            </v-btn>
+            <v-btn color="error" to="/projects" variant="flat">
+              {{ t("home.counterspeechButton") }}
+            </v-btn>
+          </div>
         </v-card>
       </v-col>
       <!-- Card 3: What to know before using the platform -->
     </v-row>
   </v-container>
-  <HomeStepperDialog
-    v-model="showDialog"
-    @neverShow="handleNeverShow"
-  />
+  <HomeStepperDialog v-model="showDialog" @neverShow="handleNeverShow" />
   <ExploreGuideDialog v-model="showExploreGuide" />
-<CounterspeechGuideDialog v-model="showCounterspeechGuide" />
+  <CounterspeechGuideDialog v-model="showCounterspeechGuide" />
 </template>
 
 <style scoped>

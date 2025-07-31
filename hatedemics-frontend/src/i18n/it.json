@@ -5,47 +5,46 @@
         "button": "Login"
     },
     "common": {
-  "close": "Chiudi"
-},
-"menu": {
-    "home": "Home",
-    "educational": "Didattica",
-    "explore": "Esplora",
-    "network": "Rete",
-    "channel": "Canale",
-    "conversation": "Conversazione",
-    "quickGuide": "Guida rapida",
-    "counterspeech": "Contro-narrazione",
-    "projects": "Progetti",
-    "credits": "Crediti",
-    "logout": "Esci"
-  },
+        "close": "Chiudi"
+    },
+    "menu": {
+        "home": "Home",
+        "educational": "Didattica",
+        "explore": "Esplora",
+        "network": "Rete",
+        "channel": "Canale",
+        "conversation": "Conversazione",
+        "quickGuide": "Guida rapida",
+        "counterspeech": "Contro-narrazione",
+        "projects": "Progetti",
+        "credits": "Crediti",
+        "logout": "Esci"
+    },
     "counterspeechGuide": {
-  "guideTitle": "Guida Rapida",
-  "guideItems": {
-    "counterspeech": {
-      "title": "Contro-narrazione",
-      "description": "<p><strong>La contro-narrazione</strong> è definita come l'insieme di azioni comunicative volte a contrastare l'odio con argomentazioni convincenti, vere e basate sui fatti (Schieb e Preuss, 2016).</p>"
+        "guideTitle": "Guida Rapida",
+        "guideItems": {
+            "counterspeech": {
+                "title": "Contro-narrazione",
+                "description": "<p><strong>La contro-narrazione</strong> è definita come l'insieme di azioni comunicative volte a contrastare l'odio con argomentazioni convincenti, vere e basate sui fatti (Schieb e Preuss, 2016).</p>"
+            },
+            "dataSources": {
+                "title": "Fonti dei dati",
+                "description": "<p>Contiene un articolo di fact-checking pubblicato da una fonte certificata (firmataria del <a href=\"https://ifcncodeofprinciples.poynter.org/\" target=\"_blank\">Codice dei Principi IFCN</a>).</p>"
+            },
+            "dialogue": {
+                "title": "Dialogo",
+                "description": "<p>Qui puoi creare un dialogo che simula l'interazione tra una persona che diffonde odio o disinformazione e un operatore che risponde con argomentazioni basate sui fatti.</p>"
+            },
+            "groundText": {
+                "title": "Ground text",
+                "description": "<p>Puoi aggiungere porzioni dell’articolo di fact-checking su cui si basa la risposta dell’operatore.</p><p>Il ground text viene <em>aggiunto automaticamente</em> quando un turno è generato, ma può anche essere <strong>selezionato manualmente</strong> evidenziando una parte dell’articolo e cliccando sul pulsante “link”.</p>"
+            },
+            "newTurn": {
+                "title": "Nuovo turno",
+                "description": "<p>Puoi aggiungere un nuovo turno in diversi modi:</p><ul><li>Aggiungi un turno vuoto con i pulsanti “+”.</li><li>Genera automaticamente un turno selezionando una parte dell’articolo.</li><li>Seleziona una porzione come ground text e poi clicca su “Genera da ground”.</li></ul><p><strong>Nota:</strong> Anche i turni e i testi generati automaticamente possono sempre essere modificati.</p>"
+            }
+        }
     },
-    "dataSources": {
-      "title": "Fonti dei dati",
-      "description": "<p>Contiene un articolo di fact-checking pubblicato da una fonte certificata (firmataria del <a href=\"https://ifcncodeofprinciples.poynter.org/\" target=\"_blank\">Codice dei Principi IFCN</a>).</p>"
-    },
-    "dialogue": {
-      "title": "Dialogo",
-      "description": "<p>Qui puoi creare un dialogo che simula l'interazione tra una persona che diffonde odio o disinformazione e un operatore che risponde con argomentazioni basate sui fatti.</p>"
-    },
-    "groundText": {
-      "title": "Ground text",
-      "description": "<p>Puoi aggiungere porzioni dell’articolo di fact-checking su cui si basa la risposta dell’operatore.</p><p>Il ground text viene <em>aggiunto automaticamente</em> quando un turno è generato, ma può anche essere <strong>selezionato manualmente</strong> evidenziando una parte dell’articolo e cliccando sul pulsante “link”.</p>"
-    },
-    "newTurn": {
-      "title": "Nuovo turno",
-      "description": "<p>Puoi aggiungere un nuovo turno in diversi modi:</p><ul><li>Aggiungi un turno vuoto con i pulsanti “+”.</li><li>Genera automaticamente un turno selezionando una parte dell’articolo.</li><li>Seleziona una porzione come ground text e poi clicca su “Genera da ground”.</li></ul><p><strong>Nota:</strong> Anche i turni e i testi generati automaticamente possono sempre essere modificati.</p>"
-    }
-  }
-}
-,
     "home": {
         "title": "Combattere odio e disinformazione online",
         "description": "HATEDEMICS è una piattaforma che sfrutta l’intelligenza artificiale per analizzare contenuti in rete, potenziare il pensiero critico e allenare la capacità di risposta ai discorsi d’odio.",
@@ -85,55 +84,54 @@
         }
     },
     "networkGuide": {
-  "guideTitle": "Guida alla Rete",
-  "guideItems": {
-    "network": {
-      "title": "Rete",
-      "description": "<p>Questa rete visualizza i canali Telegram come punti, e le linee mostrano come sono collegati tra loro. Un canale è collegato a un altro quando Telegram lo raccomanda automaticamente, in base al numero di utenti che entrambi i canali condividono.</p>"
+        "guideTitle": "Guida alla Rete",
+        "guideItems": {
+            "network": {
+                "title": "Rete",
+                "description": "<p>Questa rete visualizza i canali Telegram come punti, e le linee mostrano come sono collegati tra loro. Un canale è collegato a un altro quando Telegram lo raccomanda automaticamente, in base al numero di utenti che entrambi i canali condividono.</p>"
+            },
+            "dataCollection": {
+                "title": "Raccolta dati",
+                "description": "<p>La raccolta dei dati avviene in più fasi. Partiamo da un insieme iniziale di canali noti per contenuti disinformativi o d’odio. Raccogliamo le loro informazioni e i canali che raccomandano. Poi seguiamo queste raccomandazioni, esplorando nuovi canali, fino a raggiungere il numero desiderato. Infine, tra i canali esplorati selezioniamo quelli più importanti nella lingua che ci interessa, e per questi raccogliamo tutti i loro messaggi.</p>"
+            },
+            "explored": {
+                "title": "Esplorato",
+                "description": "<p>Un canale è <strong>esplorato</strong> se abbiamo raccolto la lista dei canali che raccomanda.</p>"
+            },
+            "expanded": {
+                "title": "Espanso",
+                "description": "<p>Un canale è <strong>espanso</strong> se abbiamo raccolto tutti i suoi messaggi pubblicati in chat.</p>"
+            },
+            "inOutRecommendations": {
+                "title": "Raccomandazioni in entrata e in uscita",
+                "description": "<p><strong>Raccomandazioni in entrata</strong>: numero totale di raccomandazioni ricevute da un canale. Un numero alto indica che è molto popolare!</p><p><strong>Raccomandazioni in uscita</strong>: numero di raccomandazioni che un canale dà ad altri. Un numero alto significa che suggerisce molti contenuti!</p>"
+            },
+            "iri": {
+                "title": "Infodemic Risk Index (IRI)",
+                "description": "<p>L'<strong>Infodemic Risk Index</strong> (IRI) misura quanto è affidabile un canale, da 0 (completamente affidabile) a 1 (molto inaffidabile). È basato sull’affidabilità dei siti web condivisi nel canale e sul numero di visualizzazioni di quei link. Un valore basso indica che gli utenti sono più esposti a informazioni affidabili.</p><p>Per maggiori dettagli, vedi questo articolo: Gallotti, R., Valle, F., Castaldo, N., Sacco, P., & De Domenico, M. (2020). <em>Assessing the risks of ‘infodemics’ in response to COVID-19 epidemics</em>. Nature Human Behaviour, 4(12), 1285–1293. <a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">Link</a></p>"
+            },
+            "diri": {
+                "title": "Indice dinamico di rischio infodemico (dIRI)",
+                "description": "<p>Il <strong>dIRI</strong> è simile all’IRI, ma si concentra sulle interazioni attive con i contenuti inaffidabili. Invece di contare solo le visualizzazioni, considera azioni più impegnative come rispondere o ricondividere. Se una notizia inaffidabile riceve molte interazioni attive, il valore del dIRI sarà più alto.</p>"
+            },
+            "sdiri": {
+                "title": "Indice semi-dinamico di rischio infodemico (sdIRI)",
+                "description": "<p>Lo <strong>sdIRI</strong> si concentra sulle interazioni rapide con contenuti inaffidabili, come reazioni con emoji o 'mi piace'. Diversamente dal dIRI, che considera azioni più forti, lo sdIRI misura il coinvolgimento 'silenzioso'. Un valore alto indica molte reazioni veloci a contenuti inaffidabili.</p>"
+            },
+            "unrel": {
+                "title": "Indice di Inaffidabilità (Unrel)",
+                "description": "<p>L'<strong>indice di Inaffidabilità</strong> mostra la percentuale di messaggi che puntano a siti non affidabili, rispetto al totale dei messaggi che contengono link a fonti informative. Più il valore si avvicina a 1, maggiore è la quantità di contenuti inaffidabili condivisi.</p>"
+            },
+            "domains": {
+                "title": "Domini noti e sconosciuti",
+                "description": "<p><strong>Domini noti</strong>: numero di siti condivisi per cui abbiamo informazioni sull’affidabilità. <br><strong>Domini sconosciuti</strong>: siti per cui non abbiamo informazioni.</p><p>Più domini noti abbiamo, più precisa sarà la nostra misurazione della diffusione della disinformazione.</p>"
+            },
+            "centrality": {
+                "title": "Misure di centralità",
+                "description": "<p>Nell’analisi delle reti, queste misure servono per capire quanto è importante un punto (un canale Telegram) nella rete:</p><ul><li><strong>Degree centrality</strong>: quante connessioni dirette ha (popolarità).</li><li><strong>Betweenness centrality</strong>: quanto agisce da ponte tra altri punti (è un connettore chiave!).</li><li><strong>Closeness centrality</strong>: quanto velocemente può raggiungere tutti gli altri (è ben connesso!).</li><li><strong>Eigenvector centrality</strong>: quanto è connesso a canali molto ben connessi (ha amici famosi!).</li></ul><p>Per approfondire: Pósfai, M., & Barabási, A. L. (2016). <em>Network science</em> (Vol. 3). Cambridge University Press.</p>"
+            }
+        }
     },
-    "dataCollection": {
-      "title": "Raccolta dati",
-      "description": "<p>La raccolta dei dati avviene in più fasi. Partiamo da un insieme iniziale di canali noti per contenuti disinformativi o d’odio. Raccogliamo le loro informazioni e i canali che raccomandano. Poi seguiamo queste raccomandazioni, esplorando nuovi canali, fino a raggiungere il numero desiderato. Infine, tra i canali esplorati selezioniamo quelli più importanti nella lingua che ci interessa, e per questi raccogliamo tutti i loro messaggi.</p>"
-    },
-    "explored": {
-      "title": "Esplorato",
-      "description": "<p>Un canale è <strong>esplorato</strong> se abbiamo raccolto la lista dei canali che raccomanda.</p>"
-    },
-    "expanded": {
-      "title": "Espanso",
-      "description": "<p>Un canale è <strong>espanso</strong> se abbiamo raccolto tutti i suoi messaggi pubblicati in chat.</p>"
-    },
-    "inOutRecommendations": {
-      "title": "Raccomandazioni in entrata e in uscita",
-      "description": "<p><strong>Raccomandazioni in entrata</strong>: numero totale di raccomandazioni ricevute da un canale. Un numero alto indica che è molto popolare!</p><p><strong>Raccomandazioni in uscita</strong>: numero di raccomandazioni che un canale dà ad altri. Un numero alto significa che suggerisce molti contenuti!</p>"
-    },
-    "iri": {
-      "title": "Infodemic Risk Index (IRI)",
-      "description": "<p>L'<strong>Infodemic Risk Index</strong> (IRI) misura quanto è affidabile un canale, da 0 (completamente affidabile) a 1 (molto inaffidabile). È basato sull’affidabilità dei siti web condivisi nel canale e sul numero di visualizzazioni di quei link. Un valore basso indica che gli utenti sono più esposti a informazioni affidabili.</p><p>Per maggiori dettagli, vedi questo articolo: Gallotti, R., Valle, F., Castaldo, N., Sacco, P., & De Domenico, M. (2020). <em>Assessing the risks of ‘infodemics’ in response to COVID-19 epidemics</em>. Nature Human Behaviour, 4(12), 1285–1293. <a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">Link</a></p>"
-    },
-    "diri": {
-      "title": "Indice dinamico di rischio infodemico (dIRI)",
-      "description": "<p>Il <strong>dIRI</strong> è simile all’IRI, ma si concentra sulle interazioni attive con i contenuti inaffidabili. Invece di contare solo le visualizzazioni, considera azioni più impegnative come rispondere o ricondividere. Se una notizia inaffidabile riceve molte interazioni attive, il valore del dIRI sarà più alto.</p>"
-    },
-    "sdiri": {
-      "title": "Indice semi-dinamico di rischio infodemico (sdIRI)",
-      "description": "<p>Lo <strong>sdIRI</strong> si concentra sulle interazioni rapide con contenuti inaffidabili, come reazioni con emoji o 'mi piace'. Diversamente dal dIRI, che considera azioni più forti, lo sdIRI misura il coinvolgimento 'silenzioso'. Un valore alto indica molte reazioni veloci a contenuti inaffidabili.</p>"
-    },
-    "unrel": {
-      "title": "Indice di Inaffidabilità (Unrel)",
-      "description": "<p>L'<strong>indice di Inaffidabilità</strong> mostra la percentuale di messaggi che puntano a siti non affidabili, rispetto al totale dei messaggi che contengono link a fonti informative. Più il valore si avvicina a 1, maggiore è la quantità di contenuti inaffidabili condivisi.</p>"
-    },
-    "domains": {
-      "title": "Domini noti e sconosciuti",
-      "description": "<p><strong>Domini noti</strong>: numero di siti condivisi per cui abbiamo informazioni sull’affidabilità. <br><strong>Domini sconosciuti</strong>: siti per cui non abbiamo informazioni.</p><p>Più domini noti abbiamo, più precisa sarà la nostra misurazione della diffusione della disinformazione.</p>"
-    },
-    "centrality": {
-      "title": "Misure di centralità",
-      "description": "<p>Nell’analisi delle reti, queste misure servono per capire quanto è importante un punto (un canale Telegram) nella rete:</p><ul><li><strong>Degree centrality</strong>: quante connessioni dirette ha (popolarità).</li><li><strong>Betweenness centrality</strong>: quanto agisce da ponte tra altri punti (è un connettore chiave!).</li><li><strong>Closeness centrality</strong>: quanto velocemente può raggiungere tutti gli altri (è ben connesso!).</li><li><strong>Eigenvector centrality</strong>: quanto è connesso a canali molto ben connessi (ha amici famosi!).</li></ul><p>Per approfondire: Pósfai, M., & Barabási, A. L. (2016). <em>Network science</em> (Vol. 3). Cambridge University Press.</p>"
-    }
-  }
-}
-,
     "welcome": {
         "title": "Benvenuti in Hatedemics"
     },
@@ -142,19 +140,19 @@
             {
                 "title": "Cos'è Hatedemics",
                 "html": "<p><strong>Hatedemics</strong> è un progetto europeo che si propone di sensibilizzare sul tema dell’odio online, della disinformazione e del modo in cui questi fenomeni si intrecciano. Il progetto mira a fornire strumenti a ONG, organizzazioni della società civile, fact-checker, autorità pubbliche e giovani per prevenire e contrastare efficacemente polarizzazione, intolleranza e teorie del complotto.</p><p><strong>Hatedemics</strong> utilizza tecnologie basate sull’intelligenza artificiale in due modi principali:</p><ul><li><strong>Analisi dei dati</strong>: analizza grandi quantità di dati provenienti da una popolare piattaforma di messaggistica (Telegram), offrendo approfondimenti sui trend legati all’odio online e alla disinformazione.</li><li><strong>Contro-narrazione</strong>: genera risposte dialogiche a contenuti d’odio o disinformazione, chiamate “contro-narrazioni”. Questo aiuta le persone a comprendere quando e come rispondere all’odio basato su informazioni false, utilizzando dati verificati.</li></ul><p>Visita il <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">sito web di Hatedemics</a> per saperne di più.</p>"
-              },
-              {
+            },
+            {
                 "title": "Alcune definizioni",
                 "html": "<p><strong>Discorso d’odio</strong>: Ci rifacciamo alla definizione dell’Ufficio delle Nazioni Unite per la Prevenzione del Genocidio e la Responsabilità di Proteggere (2019), secondo cui il discorso d’odio è <em>“qualsiasi tipo di comunicazione, orale, scritta o comportamentale, che attacca o utilizza un linguaggio denigratorio o discriminatorio nei confronti di una persona o di un gruppo in base a chi sono”</em>. In particolare, nel progetto consideriamo i seguenti gruppi come frequentemente colpiti dall’odio: comunità LGBTQ+, migranti, musulmani, ebrei, rom, persone nere e persone con disabilità.</p><p><strong>Check-worthiness</strong>: Indica quanto una dichiarazione, affermazione o post meriti una verifica dei fatti per la sua possibile falsità, rilevanza pubblica o impatto dannoso. Si tratta di un giudizio soggettivo, basato su alcuni criteri chiave: se il contenuto include un’affermazione (statistiche, legami di causa-effetto, ecc.), se può essere potenzialmente falsa e se è rilevante per il pubblico o impatta individui o gruppi. <strong>Nota</strong>: Le affermazioni facilmente verificabili da un utente medio (es. “La popolazione della Cina è la metà di quella italiana”) non sono considerate degne di verifica, perché non richiedono l’intervento di un esperto.</p><p><strong>Disinformazione</strong>: Si parla di disinformazione quando informazioni false o fuorvianti vengono create e diffuse deliberatamente con l’intento di ingannare. Si distingue dalla misinformazione, che è semplicemente informazione errata condivisa per errore. L’elemento chiave della disinformazione è quindi l’intenzione di ingannare. Per identificare la disinformazione, utilizziamo strumenti avanzati chiamati <em>“indici di rischio infodemico”</em>. Questi ci aiutano a individuare conversazioni online in cui circola molto contenuto ingannevole, analizzando i link condivisi e l’interazione del pubblico con tali contenuti, valutandone così l’affidabilità.</p><p>Vuoi approfondire? Consulta: Gallotti, R., Valle, F., Castaldo, N., Sacco, P., & De Domenico, M. (2020). <em>Assessing the risks of 'infodemics' in response to COVID-19 epidemics</em>. <strong>Nature Human Behaviour</strong>, 4(12), 1285–1293.</p>"
-              },
-              {
+            },
+            {
                 "title": "Cosa include la piattaforma",
                 "html": "<p><strong>Dati:</strong> La piattaforma include dati statici: circa 10 milioni di messaggi Telegram raccolti da quasi 1.000 chat pubbliche, in 4 lingue (italiano, inglese, spagnolo e polacco). Telegram è stato scelto perché consente un accesso libero alla raccolta di dati su larga scala, diversamente da altre piattaforme di messaggistica.</p><p><strong>Analisi:</strong> Gli approfondimenti visualizzati vengono generati automaticamente da tecnologie basate su intelligenza artificiale. Di conseguenza, potrebbero occasionalmente contenere imprecisioni! In caso di dubbi, rivolgiti agli educatori di riferimento.</p><p><strong>Chatbot:</strong> La piattaforma include anche un modello di dialogo che simula l’interazione con un hater che diffonde disinformazione. Le risposte sono generate automaticamente da un modello linguistico specializzato, ma possono essere modificate. Il chatbot supporta 5 lingue: italiano, inglese, spagnolo, polacco e maltese.</p>"
-              },
-              {
+            },
+            {
                 "title": "Avviso di contenuto sensibile",
                 "html": "<p><strong>Attenzione:</strong> Questa piattaforma contiene esempi espliciti che alcuni utenti potrebbero trovare offensivi.</p>"
-              }
+            }
         ]
     },
     "educational": {
@@ -530,6 +528,27 @@
             "wordcloud": "Generico",
             "isnot_checkworthy": "Non Check Worthy",
             "non_hate": "Non Hate"
+        }
+    },
+    "dialog": {
+        "dataSources": "Fonti dati",
+        "externalGround": "Fonte esterna",
+        "documentName": "Nome documento",
+        "externalLink": "Link esterno",
+        "text": "Testo",
+        "confirm": "Conferma",
+        "dialogue": "Dialogo",
+        "groundTextSpans": "Testi di riferimento",
+        "startEmpty": "Inizia vuoto",
+        "addDynamicTurn": "Aggiungi turno dinamico",
+        "addFromGround": "Aggiungi da fonte",
+        "tooltip": {
+            "startEmpty": "Premi qui per creare un turno vuoto.",
+            "addDynamicTurn": "Genera automaticamente un suggerimento da cui iniziare.<br>Puoi comunque modificarlo in seguito.",
+            "addRoundUp": "Aggiungi un turno vuoto <em>prima</em> di quello selezionato.",
+            "addRoundDown": "Aggiungi un turno vuoto <em>dopo</em> quello selezionato.",
+            "magic": "Genera automaticamente una risposta e seleziona lo span testuale collegato.<br><em>Puoi comunque modificarla.</em>",
+            "delete": "Elimina definitivamente questo turno."
         }
     }
 }
