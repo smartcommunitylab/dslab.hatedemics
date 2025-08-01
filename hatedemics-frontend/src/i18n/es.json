@@ -366,58 +366,48 @@
                 "task": "<strong>Let’s try!</strong> You have to evaluate the credibility of the proposed news page using the lateral reading method. Check all the screenshots and verify if you can find evidence that indicates this page is a reliable source. Match them with the corresponding type of information you can find, or click on <em>Not Found</em>.",
                 "sections": [
                     {
-                        "intro": "https://medlineplus.gov",
+                        "intro": "<p>https://medlineplus.gov/spanish/</p>",
                         "images": [
-                            "/img/lateralReading/en/medline/1.png",
-                            "/img/lateralReading/en/medline/2.png",
-                            "/img/lateralReading/en/medline/3.png",
-                            "/img/lateralReading/en/medline/4.png",
-                            "/img/lateralReading/en/medline/5.png",
-                            "/img/lateralReading/en/medline/6.png",
-                            "/img/lateralReading/en/medline/7.png",
-                            "/img/lateralReading/en/medline/8.png",
-                            "/img/lateralReading/en/medline/9.png"
+                            "/img/lateralReading/es/medline/1.png",
+                            "/img/lateralReading/es/medline/2.png",
+                            "/img/lateralReading/es/medline/3.png",
+                            "/img/lateralReading/es/medline/4.png",
+                            "/img/lateralReading/es/medline/5.png",
+                            "/img/lateralReading/es/medline/6.png",
+                            "/img/lateralReading/es/medline/7.png"
 
                         ],
                         "questions": [
                             {
-                                "question": "Where can you find the author?",
+                                "question": "¿Dónde puedes encontrar al autor?",
                                 "options": [
                                     {
-                                        "text": "Screenshot 1",
+                                        "text": "Capturas 1",
                                         "correct": true
                                     },
                                     {
-                                        "text": "Screenshot 2",
+                                        "text": "Capturas 2",
                                         "correct": true
                                     },
                                     {
-                                        "text": "Screenshot 3",
+                                        "text": "Capturas 3",
                                         "correct": true
                                     },
                                     {
-                                        "text": "Screenshot 4",
+                                        "text": "Capturas 4",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 5",
+                                        "text": "Capturas 5",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 6",
+                                        "text": "Capturas 6",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 7",
+                                        "text": "Capturas 7",
                                         "correct": true
-                                    },
-                                    {
-                                        "text": "Screenshot 8",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 9",
-                                        "correct": false
                                     },
                                     {
                                         "text": "Not Found",
@@ -426,145 +416,39 @@
                                     
                                 ],
                                 "feedback": {
-                                    "correct": "Well done! We find that the page is created by the National Library of Medicine of the United States and provides information about its authors in the ‘About’ section: https://medlineplus.gov/about The website states that it belongs to the NIH (National Institutes of Health) and indeed redirects to the National Library of Medicine. In addition, the page has a .gov domain (used by official government websites), which provides another level of credibility regarding its content.",
-                                    "incorrect": "Not quite.We find that the page is created by the National Library of Medicine of the United States and provides information about its authors in the ‘About’ section: https://medlineplus.gov/about The website states that it belongs to the NIH (National Institutes of Health) and indeed redirects to the National Library of Medicine. In addition, the page has a .gov domain (used by official government websites), which provides another level of credibility regarding its content."
+                                    "correct": "¡Bien hecho! Primeramente buscamos información sobre los autores. Encontramos que la página está creada por la Biblioteca Nacional de Medicina de los Estados Unidos y trae información sobre sus autores en el apartado 'Acerca de': https://medlineplus.gov/spanish/acercade/ .Además de eso, la página tiene como dominio .gov (utilizados por páginas que corresponden a un gobierno) otra garantía que podemos encontrar sobre su contenido. Si",
+                                    "incorrect": "No exactamente. Primeramente buscamos información sobre los autores. Encontramos que la página está creada por la Biblioteca Nacional de Medicina de los Estados Unidos y trae información sobre sus autores en el apartado 'Acerca de': https://medlineplus.gov/spanish/acercade/ .Además de eso, la página tiene como dominio .gov (utilizados por páginas que corresponden a un gobierno) otra garantía que podemos encontrar sobre su contenido. Si"
                                 }
                             },
                             {
-                                "question": "Where can you find the website content and methodology?",
+                                "question": "¿Dónde puedes encontrar el contenido y la metodología del sitio web?",
                                 "options": [
                                     {
-                                        "text": "Screenshot 1",
+                                        "text": "Capturas 1",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 2",
+                                        "text": "Capturas 2",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 3",
+                                        "text": "Capturas 3",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 4",
+                                        "text": "Capturas 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 5",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 6",
                                         "correct": true
                                     },
                                     {
-                                        "text": "Screenshot 5",
-                                        "correct": true
-                                    },
-                                    {
-                                        "text": "Screenshot 6",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 7",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 8",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 9",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Not Found",
-                                        "correct": false
-                                    }
-                                ],
-                                "feedback": {
-                                    "correct": "Correct! The page publishes its methodology, which includes consulting multiple government sources such as the Food and Drug Administration (FDA) and other recognized scientific sources. The information from these sources is reviewed and updated at different times. They also indicate a list of expert reviewers.",
-                                    "incorrect": "Incorrect! The page publishes its methodology, which includes consulting multiple government sources such as the Food and Drug Administration (FDA) and other recognized scientific sources. The information from these sources is reviewed and updated at different times. They also indicate a list of expert reviewers."
-                                }
-                            },
-                            {
-                                "question": "Can you find any information about the website security?",
-                                "options": [
-                                    {
-                                        "text": "Screenshot 1",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 2",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 3",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 4",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 5",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 6",
-                                        "correct": true
-                                    },
-                                    {
-                                        "text": "Screenshot 7",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 8",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 9",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Not Found",
-                                        "correct": false
-                                    }
-                                ],
-                                "feedback": {
-                                    "correct": "Correct! The page publishes a message indicating that belongs to  an official government organization in the US and that it´s \"lock\" indicates that the conexion is safe.",
-                                    "incorrect": "Incorrect! The page publishes a message indicating that belongs to  an official government organization in the US and that it´s \"lock\" indicates that the conexion is safe. "
-                                }
-                            },
-                            {
-                                "question": "Is the content published by other reliable sources?",
-                                "options": [
-                                    {
-                                        "text": "Screenshot 1",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 2",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 3",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 4",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 5",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 6",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 7",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 8",
-                                        "correct": true
-                                    },
-                                    {
-                                        "text": "Screenshot 9",
+                                        "text": "Capturas 7",
                                         "correct": true
                                     },
                                     {
@@ -573,158 +457,239 @@
                                     }
                                 ],
                                 "feedback": {
-                                    "correct": "Correct! The National Library of Medicine states that MedlinePlus is ‘reliable, up-to-date health information to you’. Also USA.gov states that you can ‘Get reliable health information from MedlinePlus’. ",
-                                    "incorrect": "Incorrect! The National Library of Medicine states that MedlinePlus is ‘reliable, up-to-date health information to you’. Also USA.gov states that you can ‘Get reliable health information from MedlinePlus’. "
+                                    "correct": "¡Correcto! La página publica su metodología, que incluye la consulta de múltiples fuentes gubernamentales como la Administración de Alimentos y Medicamentos (FDA, por sus siglas en inglés) y otras fuentes científicas reconocidas. Las informaciones de estas fuentes son revisadas y actualizadas en diferentes momentos.",
+                                    "incorrect": "¡Incorrecto! La página publica su metodología, que incluye la consulta de múltiples fuentes gubernamentales como la Administración de Alimentos y Medicamentos (FDA, por sus siglas en inglés) y otras fuentes científicas reconocidas. Las informaciones de estas fuentes son revisadas y actualizadas en diferentes momentos."
+                                }
+                            },
+                            {
+                                "question": "¿Puedes encontrar alguna información sobre la seguridad del sitio web?",
+                                "options": [
+                                    {
+                                        "text": "Capturas 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 3",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Capturas 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 5",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 6",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 7",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "¡Correcto! Un aviso nada más entrar en la página indica que se trata de una página segura y que pertenece al gobierno de EUA.",
+                                    "incorrect": "¡Incorrecto! Un aviso nada más entrar en la página indica que se trata de una página segura y que pertenece al gobierno de EUA."
+                                }
+                            },
+                            {
+                                "question": "¿El contenido está publicado por otras fuentes?",
+                                "options": [
+                                    {
+                                        "text": "Capturas 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 4",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Capturas 5",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Capturas 6",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 7",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "¡Correcto! Abrimos otras pestañas y buscamos por MedlinePlus. La Fundación Isys la recomienda como “extensa y actualizada fuente de información en salud”. En Wikipedia encontramos que “ MedlinePlus es un servicio de información en línea provisto por la Biblioteca Nacional de Medicina de los Estados Unidos. Brinda información sobre salud de forma gratuita, en inglés y español. El material debe cumplir una serie de criterios estrictos de selección para su inclusión.”  En principio, no encontramos información que cuestione o critique el contenido de MedlinePlus.",
+                                    "incorrect": "¡Incorrecto! Abrimos otras pestañas y buscamos por MedlinePlus. La Fundación Isys la recomienda como “extensa y actualizada fuente de información en salud”. En Wikipedia encontramos que “ MedlinePlus es un servicio de información en línea provisto por la Biblioteca Nacional de Medicina de los Estados Unidos. Brinda información sobre salud de forma gratuita, en inglés y español. El material debe cumplir una serie de criterios estrictos de selección para su inclusión.”  En principio, no encontramos información que cuestione o critique el contenido de MedlinePlus."
                                 }
                             }
                         ],
-                        "conclusion": "We can conclude that MedlinePlus is a website that offers high-quality, easy-to-understand health information. Its methodology is clear and transparent, based on multiple sources. Its authors are correctly identified and traceable. Therefore, it is a suitable source for information on health-related topics."
+                        "conclusion": "MedlinePlus es un sitio web que ofrece información de salud de alta calidad y fácil de entender. Su metodología es clara y transparente, basada en múltiples fuentes. Sus autores están correctamente identificados y localizables. Por lo tanto es una fuente adecuada para informarse sobre temas relacionados al ámbito de la salud."
                     },
                     {
-                        "intro": "<p>https://thepeoplesvoice.tv</p>",
+                        "intro": "<p>https://ramblalibre.com/</p>",
                         "images": [
-                            "/img/lateralReading/en/voice/0.png",
-                            "/img/lateralReading/en/voice/1.png",
-                            "/img/lateralReading/en/voice/2.png",
-                            "/img/lateralReading/en/voice/3.png",
-                            "/img/lateralReading/en/voice/4.png",
-                            "/img/lateralReading/en/voice/5.png"],
+                            "/img/lateralReading/es/rambla/1.png",
+                            "/img/lateralReading/es/rambla/2.png",
+                            "/img/lateralReading/es/rambla/3.png",
+                            "/img/lateralReading/es/rambla/4.png",
+                            "/img/lateralReading/es/rambla/5.png"],
                         "questions": [
                             {
-                                "question": "Where can you find the author?",
+                                "question": "¿Dónde puedes encontrar al autor?",
                                 "options": [
                                     {
-                                        "text": "Screenshot 1",
+                                        "text": "Capturas 1",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Capturas 2",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 2",
+                                        "text": "Capturas 3",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 3",
+                                        "text": "Capturas 4",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 4",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 5",
+                                        "text": "Capturas 5",
                                         "correct": false
                                     },
                                     {
                                         "text": "Not Found",
-                                        "correct": true
+                                        "correct": false
                                     }
                                     
                                 ],
                                 "feedback": {
-                                    "correct": "Well done! We cannot find this information, just a vague mention about ‘our team of writers’ in the ‘about us section’. We can read that ‘The ThePeoplesVoice.tv website (the ‘Site’) is comprised of various web pages operated by ‘Fact Checked Limited.’ (screenshot 1) A search for ‘Fact Checked Limited’ does not provide information about the authors of the website. Instead, we can find debunks from fact-checking websites such as Africa check, Maldita and TheCanadianPress, which highlight false content published by Fact Checked Limited. If we check some of the ‘news articles’ published we can find that Baxter Dmitry is the author of several articles (screenshot 5). The search for Baxter Dmitry does not bring information about the alleged journalist (such as his biography, a LinkedIn profile or other contributions in different media). Instead, we can find some articles that show that Baxter Dmitry is a regular contributor of this ‘alternative reality web’ or that had previously been posing as an unrelated Latvian man using a stolen profile photo.",
-                                    "incorrect": "Not quite.We cannot find this information, just a vague mention about ‘our team of writers’ in the ‘about us section’. We can read that ‘The ThePeoplesVoice.tv website (the ‘Site’) is comprised of various web pages operated by ‘Fact Checked Limited.’ (screenshot 1) A search for ‘Fact Checked Limited’ does not provide information about the authors of the website. Instead, we can find debunks from fact-checking websites such as Africa check, Maldita and TheCanadianPress, which highlight false content published by Fact Checked Limited. If we check some of the ‘news articles’ published we can find that Baxter Dmitry is the author of several articles (screenshot 5). The search for Baxter Dmitry does not bring information about the alleged journalist (such as his biography, a LinkedIn profile or other contributions in different media). Instead, we can find some articles that show that Baxter Dmitry is a regular contributor of this ‘alternative reality web’ or that had previously been posing as an unrelated Latvian man using a stolen profile photo."
+                                    "correct": "¡Correcto! Ramba Libre es una web que tiene apariencia de medio digital, con una cabecera y secciones como “religión”, “periodismo” y “televisión”. Para empezar a investigar una página buscamos si en el menú inicial podemos encontrar un apartado  como  `nosotros` o `quienes somos`. En este caso constatamos que la página no presenta informaciones sobre los autores de sus contenidos, sus fuentes de financiación o metodología. No somos capaces de descubrir si sus autores son periodistas o expertos en los temas tratados a partir de la información presente en la página web.",
+                                    "incorrect": "¡Incorrecto! Ramba Libre es una web que tiene apariencia de medio digital, con una cabecera y secciones como “religión”, “periodismo” y “televisión”. Para empezar a investigar una página buscamos si en el menú inicial podemos encontrar un apartado  como  `nosotros` o `quienes somos`. En este caso constatamos que la página no presenta informaciones sobre los autores de sus contenidos, sus fuentes de financiación o metodología. No somos capaces de descubrir si sus autores son periodistas o expertos en los temas tratados a partir de la información presente en la página web."
                                 }
                             },
                             {
-                                "question": "Where can you find the website content and methodology?",
+                                "question": "¿Dónde puedes encontrar el contenido y la metodología del sitio web?",
                                 "options": [
                                     {
-                                        "text": "Screenshot 1",
+                                        "text": "Capturas 1",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 2",
+                                        "text": "Capturas 2",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Capturas 3",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Capturas 4",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 3",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 4",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 5",
+                                        "text": "Capturas 5",
                                         "correct": false
                                     },
                                     {
                                         "text": "Not Found",
-                                        "correct": true
+                                        "correct": false
                                     }
                                 ],
                                 "feedback": {
-                                    "correct": "Correct! The page does not publish its methodology. We can find that ‘The People’s Voice’ is a for-profit, independent news and entertainment website. “We generate revenue via advertising” ( screenshot 1) but it is not clear who finances the website.A disclaimer under the terms of use of ‘The People's Voice’ states that its content may not be accurate or reliable and may ‘include inaccuracies’ (screenshot 2). Obviously, any media site can make mistakes, but it is a little bit suspicious that a media site assumes that inaccuracies are a frequent occurrence. We cannot find information about sources, ‘alleged investigations’ or sponsors.",
-                                    "incorrect": "Incorrect! The page does not publish its methodology. We can find that ‘The People’s Voice’ is a for-profit, independent news and entertainment website. “We generate revenue via advertising” ( screenshot 1) but it is not clear who finances the website. A disclaimer under the terms of use of ‘The People's Voice’ states that its content may not be accurate or reliable and may ‘include inaccuracies’ (screenshot 2). Obviously, any media site can make mistakes, but it is a little bit suspicious that a media site assumes that inaccuracies are a frequent occurrence. We cannot find information about sources, ‘alleged investigations’ or sponsors. "
+                                    "correct": "¡Correcto! Por lo general, los contenidos publicados no presentan evidencias (enlaces a estudios, citas de fuentes expertas, etc..). Algunos tienen un lenguaje ofensivo y poco apropriado al registro periodístico.",
+                                    "incorrect": "¡Incorrecto! Por lo general, los contenidos publicados no presentan evidencias (enlaces a estudios, citas de fuentes expertas, etc..). Algunos tienen un lenguaje ofensivo y poco apropriado al registro periodístico."
                                 }
                             },
                             {
-                                "question": "Can you find any information about the website security?",
+                                "question": "Puedes encontrar información sobre la seguridad de la página?",
                                 "options": [
                                     {
-                                        "text": "Screenshot 1",
+                                        "text": "Capturas 1",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 2",
+                                        "text": "Capturas 2",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 3",
+                                        "text": "Capturas 3",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 4",
+                                        "text": "Capturas 4",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 5",
+                                        "text": "Capturas 5",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "¡Correcto! No hay información específica sobre la seguridad de la página. Sin embargo hay una cláusula en el apartado `Términos de uso` que indica que no hay cualquier tipo de garantía sobre `la información` expuesta.",
+                                    "incorrect": "¡Incorrecto! No hay información específica sobre la seguridad de la página. Sin embargo hay una cláusula en el apartado `Términos de uso` que indica que no hay cualquier tipo de garantía sobre `la información` expuesta."
+                                }
+                            },
+                            {
+                                "question": "¿El contenido está publicado por otras fuentes?",
+                                "options": [
+                                    {
+                                        "text": "Capturas 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 4",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Capturas 5",
                                         "correct": false
                                     },
                                     {
                                         "text": "Not Found",
-                                        "correct": true
+                                        "correct": false
                                     }
                                 ],
                                 "feedback": {
-                                    "correct": "Correct! ",
-                                    "incorrect": "Incorrect!"
-                                }
-                            },
-                            {
-                                "question": "Is the content published by other reliable sources?",
-                                "options": [
-                                    {
-                                        "text": "Screenshot 1",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 2",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 3",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 4",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 5",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Not Found",
-                                        "correct": true
-                                    }
-                                ],
-                                "feedback": {
-                                   "correct": "Correct! In Wikipedia we find that ‘The People's Voice (formerly known as ‘NewsPunch’ and ‘Your News Wire’) is an American fake news website based in Los Angeles (screenshot 3). Wikipedia's article shows a list of references, including fact-checkers’ articles and academic investigations that report ‘The People´s Voice’ has published several false stories, including The Pizzagate Conspiracy Theory and Anti-vaccination hoaxes (screenshot 4).",
-                                    "incorrect": "Incorrect! In Wikipedia we find that ‘The People's Voice (formerly known as ‘NewsPunch’ and ‘Your News Wire’) is an American fake news website based in Los Angeles (screenshot 3). Wikipedia's article shows a list of references, including fact-checkers’ articles and academic investigations that report ‘The People´s Voice’ has published several false stories, including The Pizzagate Conspiracy Theory and Anti-vaccination hoaxes (screenshot 4)."
+                                   "correct": "¡Correcto! Si copiamos algunos de los titulares publicados y hacemos una búsqueda en otra pestaña, comprobamos que publica bulos desmentidos por medios de verificación. Por ejemplo, nos encontramos con este contenido que ha sido desmentido por Maldita.es. Si abrimos otras pestañas y preguntamos, por ejemplo, qué es Rambla Libre o quién es el autor de Rambla Libre encontramos que se trata de un autodenominado “medio digital” producido por un periodista. Sin embargo, nuevamente, no encontramos más informaciones sobre los autores de sus contenidos, su financiación, o metodología.",
+                                    "incorrect": "¡Incorrecto! Si copiamos algunos de los titulares publicados y hacemos una búsqueda en otra pestaña, comprobamos que publica bulos desmentidos por medios de verificación. Por ejemplo, nos encontramos con este contenido que ha sido desmentido por Maldita.es. Si abrimos otras pestañas y preguntamos, por ejemplo, qué es Rambla Libre o quién es el autor de Rambla Libre encontramos que se trata de un autodenominado “medio digital” producido por un periodista. Sin embargo, nuevamente, no encontramos más informaciones sobre los autores de sus contenidos, su financiación, o metodología."
                                 }
                             }
                         ],
-                        "conclusion": "After applying the Lateral reading method, we found that ‘The People's Voice’ is not a reliable source. It has the appearance of a media website and publishes content with a ‘Fact Checked stamped’, but in fact, the website publishes misinformation that is shared as real."
+                        "conclusion": "Después de aplicar la lectura lateral para evaluar la página Rambla Libre concluimos que no podemos asegurar que se trate de una fuente de información fiable. La página se autodenomina “medio digital” (y está estructura como si fuera un medio) pero no presenta al lector informaciones fundamentales como listado de autores, metodología o financiación. Asimismo, la mayoría de sus artículos no incluyen declaraciones de expertos y algunos son identificados como bulos por medios de verificación."
                     }
                 ]
             }
