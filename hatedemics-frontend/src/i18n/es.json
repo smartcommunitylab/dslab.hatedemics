@@ -5,46 +5,46 @@
         "button": "Login"
     },
     "common": {
-  "close": "Close"
-},
-"menu": {
-    "home": "Home",
-    "educational": "Educational",
-    "explore": "Explore",
-    "network": "Network",
-    "channel": "Channel",
-    "conversation": "Conversation",
-    "quickGuide": "Quick Guide",
-    "counterspeech": "Counterspeech",
-    "projects": "Projects",
-    "credits": "Credits",
-    "logout": "Logout"
-  },
+        "close": "Close"
+    },
+    "menu": {
+        "home": "Home",
+        "educational": "Educational",
+        "explore": "Explore",
+        "network": "Network",
+        "channel": "Channel",
+        "conversation": "Conversation",
+        "quickGuide": "Quick Guide",
+        "counterspeech": "Counterspeech",
+        "projects": "Projects",
+        "credits": "Credits",
+        "logout": "Logout"
+    },
     "counterspeechGuide": {
-    "guideTitle": "Quick Guide",
-    "guideItems": {
-      "counterspeech": {
-        "title": "Counterspeech",
-        "description": "<p><strong>Counterspeech</strong> is defined as all communicative actions aimed at refuting hate speech through cogent reasons, and true and fact-bound arguments (Schieb and Preuss, 2016).</p>"
-      },
-      "dataSources": {
-        "title": "Data sources",
-        "description": "<p>Contains a fact-checking article from a certified publisher (signatory of the <a href=\"https://ifcncodeofprinciples.poynter.org/\" target=\"_blank\">IFCN Code of Principles</a>).</p>"
-      },
-      "dialogue": {
-        "title": "Dialogue",
-        "description": "<p>Create a dialogue that simulates the interaction between someone spreading hate/misinformation and an operator responding with fact-driven arguments.</p>"
-      },
-      "groundText": {
-        "title": "Ground text spans",
-        "description": "<p>You can add portions of the fact-checking article that support the operator’s reply.</p><p>Ground text is <em>automatically added</em> when a turn is generated. You can also <strong>manually highlight</strong> a part of the article and click the “link” button.</p>"
-      },
-      "newTurn": {
-        "title": "New turn",
-        "description": "<p>You can add a new turn in different ways:</p><ul><li>Add an empty turn with the “+” buttons.</li><li>Automatically generate a turn using a selected article portion.</li><li>Select a portion as ground text, then click “Generate from ground”.</li></ul><p><strong>Note:</strong> Even automatically generated turns and ground text can always be edited.</p>"
-      }
-    }
-  },
+        "guideTitle": "Quick Guide",
+        "guideItems": {
+            "counterspeech": {
+                "title": "Counterspeech",
+                "description": "<p><strong>Counterspeech</strong> is defined as all communicative actions aimed at refuting hate speech through cogent reasons, and true and fact-bound arguments (Schieb and Preuss, 2016).</p>"
+            },
+            "dataSources": {
+                "title": "Data sources",
+                "description": "<p>Contains a fact-checking article from a certified publisher (signatory of the <a href=\"https://ifcncodeofprinciples.poynter.org/\" target=\"_blank\">IFCN Code of Principles</a>).</p>"
+            },
+            "dialogue": {
+                "title": "Dialogue",
+                "description": "<p>Create a dialogue that simulates the interaction between someone spreading hate/misinformation and an operator responding with fact-driven arguments.</p>"
+            },
+            "groundText": {
+                "title": "Ground text spans",
+                "description": "<p>You can add portions of the fact-checking article that support the operator’s reply.</p><p>Ground text is <em>automatically added</em> when a turn is generated. You can also <strong>manually highlight</strong> a part of the article and click the “link” button.</p>"
+            },
+            "newTurn": {
+                "title": "New turn",
+                "description": "<p>You can add a new turn in different ways:</p><ul><li>Add an empty turn with the “+” buttons.</li><li>Automatically generate a turn using a selected article portion.</li><li>Select a portion as ground text, then click “Generate from ground”.</li></ul><p><strong>Note:</strong> Even automatically generated turns and ground text can always be edited.</p>"
+            }
+        }
+    },
     "home": {
         "title": "Fighting hate and disinformation online",
         "description": "HATEDEMICS is a platform that leverages artificial intelligence to analyze online content, enhance critical thinking, and train responses to hate speech.",
@@ -83,56 +83,55 @@
             }
         }
     },
-   "networkGuide": {
-    "guideTitle": "Guide to the Telegram Channel Network",
-    "guideItems": {
-      "network": {
-        "title": "Network",
-        "description": "This network displays Telegram channels as points, and lines show how they're connected. A channel is linked to another when Telegram automatically recommends it, based on how many users both channels share."
-      },
-      "dataCollection": {
-        "title": "Data Collection",
-        "description": "We collect data step-by-step. We start with a group of channels known for disinformation or hate speech. From each, we gather their recommendations and continue following new links until we reach the desired number of channels. From there, we select the most relevant ones in the chosen language and collect their chat messages."
-      },
-      "explored": {
-        "title": "Explored",
-        "description": "A channel is <strong>explored</strong> if we’ve gathered its list of recommended channels."
-      },
-      "expanded": {
-        "title": "Expanded",
-        "description": "A channel is <strong>expanded</strong> if we’ve collected all of its chat messages."
-      },
-      "inOutRecommendations": {
-        "title": "In & Out Recommendations",
-        "description": "<strong>In recommendations</strong> is the total number of times a channel is recommended by others – the more it’s recommended, the more popular it is!<br><strong>Out recommendations</strong> is the number of channels this one recommends – a higher number means it points to a lot of other content."
-      },
-      "iri": {
-        "title": "Infodemic Risk Index (IRI)",
-        "description": "The IRI measures how unreliable a channel is, from 0 (completely reliable) to 1 (fully unreliable). It’s based on the trustworthiness of websites shared and how many people are exposed to them (based on views).<br>For more details: <a href='https://www.nature.com/articles/s41562-020-00994-6' target='_blank'>Gallotti et al., 2020 (Nature Human Behaviour)</a>."
-      },
-      "diri": {
-        "title": "Dynamic Infodemic Risk Index (dIRI)",
-        "description": "The dIRI looks at how actively users engage with unreliable content. It considers stronger interactions like replies or reshares. A higher value means users are actively engaging with unreliable messages."
-      },
-      "sdiri": {
-        "title": "Semi-Dynamic Infodemic Risk Index (sdIRI)",
-        "description": "The sdIRI tracks light and quick interactions with unreliable content, like reactions (emojis, likes). It helps measure passive or subtle engagement with disinformation."
-      },
-      "unrel": {
-        "title": "Unreliability Index (Unrel)",
-        "description": "This index shows how much unreliable content a channel shares compared to all its messages linking to any source. A score close to 1 means most of the content comes from untrustworthy websites."
-      },
-      "domains": {
-        "title": "Known & Unknown Domains",
-        "description": "<strong>Known domains</strong> are websites we have reliability data for. <strong>Unknown domains</strong> are those without such data. More known domains means stronger and more accurate disinformation metrics."
-      },
-      "centrality": {
-        "title": "Centrality Measures",
-        "description": "These measures show how important a channel is in the network:<br><strong>Degree centrality:</strong> Number of direct links (popularity).<br><strong>Betweenness:</strong> Acts as a bridge between other channels.<br><strong>Closeness:</strong> How quickly it can reach others.<br><strong>Eigenvector:</strong> How connected it is to other influential channels.<br>See also: <em>Pósfai & Barabási, 2016 - Network Science</em>."
-      }
-    }
-  },
-      
+    "networkGuide": {
+        "guideTitle": "Guide to the Telegram Channel Network",
+        "guideItems": {
+            "network": {
+                "title": "Network",
+                "description": "This network displays Telegram channels as points, and lines show how they're connected. A channel is linked to another when Telegram automatically recommends it, based on how many users both channels share."
+            },
+            "dataCollection": {
+                "title": "Data Collection",
+                "description": "We collect data step-by-step. We start with a group of channels known for disinformation or hate speech. From each, we gather their recommendations and continue following new links until we reach the desired number of channels. From there, we select the most relevant ones in the chosen language and collect their chat messages."
+            },
+            "explored": {
+                "title": "Explored",
+                "description": "A channel is <strong>explored</strong> if we’ve gathered its list of recommended channels."
+            },
+            "expanded": {
+                "title": "Expanded",
+                "description": "A channel is <strong>expanded</strong> if we’ve collected all of its chat messages."
+            },
+            "inOutRecommendations": {
+                "title": "In & Out Recommendations",
+                "description": "<strong>In recommendations</strong> is the total number of times a channel is recommended by others – the more it’s recommended, the more popular it is!<br><strong>Out recommendations</strong> is the number of channels this one recommends – a higher number means it points to a lot of other content."
+            },
+            "iri": {
+                "title": "Infodemic Risk Index (IRI)",
+                "description": "The IRI measures how unreliable a channel is, from 0 (completely reliable) to 1 (fully unreliable). It’s based on the trustworthiness of websites shared and how many people are exposed to them (based on views).<br>For more details: <a href='https://www.nature.com/articles/s41562-020-00994-6' target='_blank'>Gallotti et al., 2020 (Nature Human Behaviour)</a>."
+            },
+            "diri": {
+                "title": "Dynamic Infodemic Risk Index (dIRI)",
+                "description": "The dIRI looks at how actively users engage with unreliable content. It considers stronger interactions like replies or reshares. A higher value means users are actively engaging with unreliable messages."
+            },
+            "sdiri": {
+                "title": "Semi-Dynamic Infodemic Risk Index (sdIRI)",
+                "description": "The sdIRI tracks light and quick interactions with unreliable content, like reactions (emojis, likes). It helps measure passive or subtle engagement with disinformation."
+            },
+            "unrel": {
+                "title": "Unreliability Index (Unrel)",
+                "description": "This index shows how much unreliable content a channel shares compared to all its messages linking to any source. A score close to 1 means most of the content comes from untrustworthy websites."
+            },
+            "domains": {
+                "title": "Known & Unknown Domains",
+                "description": "<strong>Known domains</strong> are websites we have reliability data for. <strong>Unknown domains</strong> are those without such data. More known domains means stronger and more accurate disinformation metrics."
+            },
+            "centrality": {
+                "title": "Centrality Measures",
+                "description": "These measures show how important a channel is in the network:<br><strong>Degree centrality:</strong> Number of direct links (popularity).<br><strong>Betweenness:</strong> Acts as a bridge between other channels.<br><strong>Closeness:</strong> How quickly it can reach others.<br><strong>Eigenvector:</strong> How connected it is to other influential channels.<br>See also: <em>Pósfai & Barabási, 2016 - Network Science</em>."
+            }
+        }
+    },
     "welcome": {
         "title": "Welcome to Hatedemics"
     },
@@ -141,21 +140,21 @@
             {
                 "title": "What is Hatedemics",
                 "html": "<p><strong>Hatedemics</strong> is a European project focused on raising awareness about hate speech, disinformation, and how these two issues intersect. The project aims to empower NGOs, civil society organisations, fact-checkers, public authorities, and young people to effectively prevent and combat polarisation, intolerance, and conspiracy theories.</p><p><strong>Hatedemics</strong> uses AI-based technologies in two main ways:</p><ul><li><strong>Data Analysis</strong>: It analyses large volumes of data from a popular messaging platform (Telegram), providing insights into hate speech and disinformation trends.</li><li><strong>Counterspeech</strong>: It creates dialogue-based responses to hate speech and misinformation, called “counterspeech”. This helps people learn when and how to respond to hate speech driven by misinformation, using factual information as a foundation.</li></ul><p>Visit the <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">Hatedemics website</a> to learn more about the project.</p>"
-              },
-              {
+            },
+            {
                 "title": "Some definitions",
                 "html": "<p><strong>Hate speech</strong>: We rely on the definition made by the UN Office on Genocide Prevention and the Responsibility to Protect (2019), which defines hate speech as <em>“any kind of communication in speech, writing or behaviour, that attacks or uses pejorative or discriminatory language with reference to a person or a group on the basis of who they are”</em>. In particular, in the project we consider the following specific groups affected by hate: the LGBTQ+ community, migrants, Muslims, Jewish, Roma, Black people and people with disabilities.</p><p><strong>Check-worthiness</strong>: This refers to the degree to which a statement, claim, or post merits verification or fact-checking due to its potential falsity, public relevance, or harmful impact. This is a subjective judgment, guided by key criteria: whether the content includes a factual assertion (e.g., statistics, causal claims), whether it could be potentially false, and whether it is of public interest or social impact. <strong>Note:</strong> Statements that are easily verifiable by an average user (e.g., “The population of China is half that of Italy”) are not considered check-worthy, as they do not require expert verification.</p><p><strong>Disinformation</strong>: Disinformation is when false or misleading information is deliberately created and spread to trick people. It's different from misinformation, which is just wrong information shared by mistake. The key with disinformation is that someone <em>intends to deceive</em> you. To figure out if something is disinformation, we use advanced tools called <em>\"infodemic risk indices\"</em>. These help us detect online conversations with lots of misleading content by analysing website links and user engagement, helping us judge how trustworthy the information is.</p><p>Want to know more? See: Gallotti, R., Valle, F., Castaldo, N., Sacco, P., & De Domenico, M. (2020). <em>Assessing the risks of 'infodemics' in response to COVID-19 epidemics</em>. <strong>Nature Human Behaviour</strong>, 4(12), 1285–1293.</p>"
-              },
-              {
+            },
+            {
                 "title": "What does the platform include?",
                 "html": "<p><strong>Data:</strong> The platform includes static data: approximately 10 million Telegram messages collected from nearly 1,000 public chats, covering 4 languages (English, Italian, Spanish, and Polish). Telegram was chosen because it allows large-scale data collection, unlike other popular messaging platforms.</p><p><strong>Analyses:</strong> The insights shown here are generated automatically using AI-based technologies. Because of this, they may occasionally be inaccurate! If you have any doubts about these metrics, please consult the referring educators.</p><p><strong>Chatbot:</strong> The platform includes a dialogue model that simulates interaction with a hater spreading misinformation. Responses are automatically generated by a specialised language model, but you can still modify them. It supports five languages: English, Spanish, Italian, Polish, and Maltese.</p>"
-              },
-              {
+            },
+            {
                 "title": "Trigger warning",
                 "html": "<p><strong>Warning:</strong> This platform contains unobfuscated examples that some users may find offensive.</p>"
-              }
+            }
         ]
-      },
+    },
     "educational": {
         "eduCard1Title": "Human Rights Declaration",
         "eduCard1Desc": "Discover the core principles protecting human dignity.",
@@ -233,80 +232,80 @@
                 ]
             },
             "debunking": {
-                "title": "Debunking",
-                "description": "<strong>What is debunking:</strong> When some people think of a fact-checker, they only see a journalist who looks into a claim, checks it and confirms whether it is true or not, the debunking process. Nevertheless, fighting disinformation effectively nowadays takes much more than that: quickly detecting possible hoaxes before they go viral and affect more people; explaining that not everything is black or white, helping people to be well-prepared against falsehoods through Media Literacy or regulation; creating tools to make it harder for others to deceive us, or fighting together against manipulation: this is what we call pre-bunking.<br><br><strong>What is a disinformation narrative:</strong> What disinformation creators want you to believe. When an idea is repeated many times, people tend to believe it. Also, one hoax can contain several narratives.",
-                "objectivesTitle": "Objectives",
-                "objectives": "<ul><li>Debunk and learn about what disinformation narratives are. It's also a pre-bunking exercise: discover what disinformation narratives are and the most spread ones in your country.</li><li>Learn some debunk techniques in a guided way, and understand why critical thinking and identifying viral hoaxes is essential to fight disinformation narratives.</li></ul>",
-                "task": "<strong>Simulate the actions of a fact-checker</strong> by selecting the most effective way to debunk a claimed event. Can you also identify the related disinformation narrative?",
-                "startButton": "Start activity",
-                "correct": "Correct! Well done.",
-                "incorrect": "Incorrect answer. Try again.",
-                "next": "Next question",
-                "finish": "Finish",
+                "title": "Desmitificación",
+                "description": "<strong>Qué es la desmitificación:</strong> Cuando algunas personas piensan en un verificador de hechos (fact‑checker), solo ven a un periodista que investiga una afirmación, la verifica y confirma si es verdadera o no, el proceso de desmitificación. Sin embargo, luchar contra la desinformación eficazmente hoy en día exige mucho más: detectar rápidamente posibles bulos antes de que se vuelvan virales y afecten a más personas; explicar que no todo es blanco o negro, ayudar a las personas a estar bien preparadas frente a falsedades mediante la alfabetización mediática o regulación; crear herramientas que dificulten que nos engañen o combatir juntos contra la manipulación: esto es lo que llamamos pre‑bunking.<br><br><strong>Qué es una narrativa de desinformación:</strong> Lo que los creadores de desinformación quieren que creas. Cuando una idea se repite muchas veces, la gente tiende a creerla. Además, un solo bulo puede contener varias narrativas.",
+                "objectivesTitle": "Objetivos",
+                "objectives": "<ul><li>Desmitificar y conocer qué son las narrativas de desinformación. También es un ejercicio de pre‑bunking: descubre qué son las narrativas de desinformación y las más comunes en tu país.</li><li>Aprende algunas técnicas de desmitificación (debunking) de manera guiada y comprende por qué el pensamiento crítico e identificar bulos virales es esencial para combatir las narrativas de desinformación.</li></ul>",
+                "task": "<strong>Simula las acciones de un fact‑checker</strong> seleccionando la forma más eficaz de desmentir un evento afirmado. ¿Puedes también identificar la narrativa de desinformación relacionada?",
+                "startButton": "Comenzar actividad",
+                "correct": "¡Correcto! Bien hecho.",
+                "incorrect": "Respuesta incorrecta. Inténtalo de nuevo.",
+                "next": "Siguiente pregunta",
+                "finish": "Finalizar",
                 "questions": [
                     {
-                        "title": "Question 1",
-                        "scenario_description": "You have received this picture that shows a photo of a feminist manifestation where a participant shows a sign that says: “I want my daughter to have the right to abort that I didn't have.” You are not sure if it's true.",
-                        "question": "How would you verify?",
-                        "image": "/img/debunking/en/question1.jpg",
+                        "title": "Pregunta 1",
+                        "scenario_description": "Has recibido esta imagen que muestra una foto de una manifestación feminista donde una participante lleva un cartel que dice: “Quiero que mi hija tenga el derecho a abortar que yo no tuve.” No estás seguro de si es auténtica.",
+                        "question": "¿Cómo lo verificarías?",
+                        "image": "/img/debunking/es/question1.jpg",
                         "options": [
                             {
-                                "text": "Reverse image search"
+                                "text": "Búsqueda inversa de imagen"
                             },
                             {
-                                "text": "Advanced search in Twitter (now X)"
+                                "text": "Búsqueda avanzada en Twitter (ahora X)"
                             },
                             {
-                                "text": "IA tool "
+                                "text": "Herramienta de IA"
                             }
                         ],
                         "correct": 0,
                         "feedback": {
-                            "correct": "Correct! You have successfully done a reverse image search and found this picture.",
-                            "correctImage": "/img/debunking/en/answer1.jpg",
-                            "incorrect": "Unfortunately neither an advanced search in Twitter nor an IA tool would have been helpful in this case. ",
-                            "incorrectImage": "/img/debunking/en/answer1.jpg"
+                            "correct": "¡Correcto! Has realizado con éxito una búsqueda inversa de imágenes y encontrado esta foto.",
+                            "correctImage": "/img/debunking/es/answer1.jpg",
+                            "incorrect": "Desafortunadamente ni una búsqueda avanzada en Twitter ni una herramienta de IA hubieran sido útiles en este caso.",
+                            "incorrectImage": "/img/debunking/es/answer1.jpg"
                         }
                     },
                     {
-                        "title": "Question 2",
-                        "question": "By performing a reverse image search you would have found this image. What can you conclude from observing it?",
-                        "image": "/img/debunking/en/question2.jpg",
+                        "title": "Pregunta 2",
+                        "question": "Realizando una búsqueda inversa de imagen habrías encontrado esta imagen. ¿Qué puedes concluir al observarla?",
+                        "image": "/img/debunking/es/question2.jpg",
                         "options": [
                             {
-                                "text": "It´s an AI picture"
+                                "text": "Es una imagen generada por IA"
                             },
                             {
-                                "text": "It´s a true picture out of context"
+                                "text": "Es una imagen real fuera de contexto"
                             },
                             {
-                                "text": "It seems to be the original image "
+                                "text": "Parece ser la imagen original"
                             }
                         ],
                         "correct": 2,
                         "feedback": {
-                            "correct": "Correct: this is the original image. In particular, this image was originally published in 2023. We can therefore conclude that the first image you saw was a manipulated image that changes the phrase it originally contained, “I am the mother of the girl you will never touch,” which was published on a website about the 8M marches in Monterrey (Mexico) in March 2023 and has been circulating in a manipulated manner.",
-                            "incorrect": "Inorrect: this is the original image. In particular, this image was originally published in 2023. We can therefore conclude that the first image you saw was a manipulated image that changes the phrase it originally contained, “I am the mother of the girl you will never touch,” which was published on a website about the 8M marches in Monterrey (Mexico) in March 2023 and has been circulating in a manipulated manner."
+                            "correct": "Correcto: esta es la imagen original. En particular, esta imagen fue publicada originalmente en 2023. Podemos concluir, por tanto, que la primera imagen que viste fue manipulada y cambia la frase que contenía originalmente, “I am the mother of the girl you will never touch,” publicada en un sitio sobre las manifestaciones del 8M en Monterrey (México) en marzo de 2023 y ha circulado manipulada.",
+                            "incorrect": "Incorrecto: esta es la imagen original. En particular, esta imagen fue publicada originalmente en 2023. Podemos concluir, por tanto, que la primera imagen que viste fue manipulada y cambia la frase que contenía originalmente, “I am the mother of the girl you will never touch,” publicada en un sitio sobre las manifestaciones del 8M en Monterrey (México) en marzo de 2023 y ha circulado manipulada."
                         }
                     },
                     {
-                        "title": "Question 3",
-                        "question": "What kind of disinformation narrative can this hoax strengthen? ",
+                        "title": "Pregunta 3",
+                        "question": "¿Qué tipo de narrativa de desinformación puede reforzar este bulo?",
                         "options": [
                             {
-                                "text": "Feminists hate men"
+                                "text": "Las feministas odian a los hombres"
                             },
                             {
-                                "text": "Feminists say absurd things"
+                                "text": "Las feministas dicen cosas absurdas"
                             },
                             {
-                                "text": "Feminists should not participate in manifestations."
+                                "text": "Las feministas no deberían participar en manifestaciones."
                             }
                         ],
                         "correct": 1,
                         "feedback": {
-                            "correct": "Correct!<br><br>Check out how professional fact-checkers debunked this disinformation: <a href='https://maldita.es/feminismo/bulo/20250310/cartel-derechoalaborto-manipulado/' target='_blank'>Maldita.es analysis</a>",
-                            "incorrect": "Incorrect.<br><br>Check out how professional fact-checkers debunked this disinformation: <a href='https://maldita.es/feminismo/bulo/20250310/cartel-derechoalaborto-manipulado/' target='_blank'>Maldita.es analysis</a>"
+                            "correct": "¡Correcto!<br><br>Consulta cómo los fact‑checkers profesionales refutaron esta desinformación: <a href='https://maldita.es/feminismo/bulo/20250310/cartel‑derechoalaborto‑manipulado/' target='_blank'>análisis de Maldita.es</a>",
+                            "incorrect": "Incorrecto.<br><br>Consulta cómo los fact‑checkers profesionales refutaron esta desinformación: <a href='https://maldita.es/feminismo/bulo/20250310/cartel‑derechoalaborto‑manipulado/' target='_blank'>análisis de Maldita.es</a>"
                         }
                     }
                 ]
@@ -375,7 +374,6 @@
                             "/img/lateralReading/es/medline/5.png",
                             "/img/lateralReading/es/medline/6.png",
                             "/img/lateralReading/es/medline/7.png"
-
                         ],
                         "questions": [
                             {
@@ -413,7 +411,6 @@
                                         "text": "Not Found",
                                         "correct": false
                                     }
-                                    
                                 ],
                                 "feedback": {
                                     "correct": "¡Bien hecho! Primeramente buscamos información sobre los autores. Encontramos que la página está creada por la Biblioteca Nacional de Medicina de los Estados Unidos y trae información sobre sus autores en el apartado 'Acerca de': https://medlineplus.gov/spanish/acercade/ .Además de eso, la página tiene como dominio .gov (utilizados por páginas que corresponden a un gobierno) otra garantía que podemos encontrar sobre su contenido. Si",
@@ -553,7 +550,8 @@
                             "/img/lateralReading/es/rambla/2.png",
                             "/img/lateralReading/es/rambla/3.png",
                             "/img/lateralReading/es/rambla/4.png",
-                            "/img/lateralReading/es/rambla/5.png"],
+                            "/img/lateralReading/es/rambla/5.png"
+                        ],
                         "questions": [
                             {
                                 "question": "¿Dónde puedes encontrar al autor?",
@@ -582,7 +580,6 @@
                                         "text": "Not Found",
                                         "correct": false
                                     }
-                                    
                                 ],
                                 "feedback": {
                                     "correct": "¡Correcto! Ramba Libre es una web que tiene apariencia de medio digital, con una cabecera y secciones como “religión”, “periodismo” y “televisión”. Para empezar a investigar una página buscamos si en el menú inicial podemos encontrar un apartado  como  `nosotros` o `quienes somos`. En este caso constatamos que la página no presenta informaciones sobre los autores de sus contenidos, sus fuentes de financiación o metodología. No somos capaces de descubrir si sus autores son periodistas o expertos en los temas tratados a partir de la información presente en la página web.",
@@ -684,7 +681,7 @@
                                     }
                                 ],
                                 "feedback": {
-                                   "correct": "¡Correcto! Si copiamos algunos de los titulares publicados y hacemos una búsqueda en otra pestaña, comprobamos que publica bulos desmentidos por medios de verificación. Por ejemplo, nos encontramos con este contenido que ha sido desmentido por Maldita.es. Si abrimos otras pestañas y preguntamos, por ejemplo, qué es Rambla Libre o quién es el autor de Rambla Libre encontramos que se trata de un autodenominado “medio digital” producido por un periodista. Sin embargo, nuevamente, no encontramos más informaciones sobre los autores de sus contenidos, su financiación, o metodología.",
+                                    "correct": "¡Correcto! Si copiamos algunos de los titulares publicados y hacemos una búsqueda en otra pestaña, comprobamos que publica bulos desmentidos por medios de verificación. Por ejemplo, nos encontramos con este contenido que ha sido desmentido por Maldita.es. Si abrimos otras pestañas y preguntamos, por ejemplo, qué es Rambla Libre o quién es el autor de Rambla Libre encontramos que se trata de un autodenominado “medio digital” producido por un periodista. Sin embargo, nuevamente, no encontramos más informaciones sobre los autores de sus contenidos, su financiación, o metodología.",
                                     "incorrect": "¡Incorrecto! Si copiamos algunos de los titulares publicados y hacemos una búsqueda en otra pestaña, comprobamos que publica bulos desmentidos por medios de verificación. Por ejemplo, nos encontramos con este contenido que ha sido desmentido por Maldita.es. Si abrimos otras pestañas y preguntamos, por ejemplo, qué es Rambla Libre o quién es el autor de Rambla Libre encontramos que se trata de un autodenominado “medio digital” producido por un periodista. Sin embargo, nuevamente, no encontramos más informaciones sobre los autores de sus contenidos, su financiación, o metodología."
                                 }
                             }
