@@ -570,6 +570,7 @@
                                 }
                             }
                         ],
+                        "conclusionTitle": "Conclusion",
                         "conclusion": "We can conclude that MedlinePlus is a website that offers high-quality, easy-to-understand health information. Its methodology is clear and transparent, based on multiple sources. Its authors are correctly identified and traceable. Therefore, it is a suitable source for information on health-related topics."
                     },
                     {
@@ -716,6 +717,7 @@
                                 }
                             }
                         ],
+                        "conclusionTitle": "Conclusion",
                         "conclusion": "After applying the Lateral reading method, we found that ‘The People's Voice’ is not a reliable source. It has the appearance of a media website and publishes content with a ‘Fact Checked stamped’, but in fact, the website publishes misinformation that is shared as real."
                     }
                 ]

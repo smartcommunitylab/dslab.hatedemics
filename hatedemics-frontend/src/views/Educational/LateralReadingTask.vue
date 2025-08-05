@@ -78,26 +78,35 @@
       Next
     </v-btn>
 
-    <!-- Conclusione + Prossima sezione o fine -->
-    <div v-if="showFeedback && currentIndex === currentSection.questions.length - 1">
-      <div class="mt-6 mb-4" v-html="currentSection.conclusion" />
-
-      <v-btn
-        v-if="currentSectionIndex < taskSections.length - 1"
-        color="primary"
-        @click="nextSection"
-      >
-        Next Section
-      </v-btn>
-
-      <v-btn
-        v-else
-        color="success"
-        @click="router.replace('/educational')"
-      >
-        Finish
-      </v-btn>
-    </div>
+    <!-- Trigger apertura dialog quando è l'ultima domanda -->
+<template v-if="showFeedback && currentIndex === currentSection.questions.length - 1">
+  <v-dialog v-model="conclusionDialog" persistent max-width="800">
+    <v-card>
+      <v-card-title class="text-h6 font-weight-bold">
+        {{ currentSection.conclusionTitle || t("educational.tasks.lateralreading.defaultConclusionTitle") || "Conclusion" }}
+      </v-card-title>
+      <v-card-text>
+        <div v-html="currentSection.conclusion" />
+      </v-card-text>
+      <v-card-actions class="justify-end">
+        <v-btn
+          v-if="currentSectionIndex < taskSections.length - 1"
+          color="primary"
+          @click="() => { nextSection(); conclusionDialog.value = false }"
+        >
+          Next Section
+        </v-btn>
+        <v-btn
+          v-else
+          color="success"
+          @click="() => router.replace('/educational')"
+        >
+          Finish
+        </v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-dialog>
+</template>
 
     <!-- Dialog immagini -->
     <v-dialog v-model="imageDialog" max-width="800">
@@ -132,6 +141,7 @@ const selected = ref<number[]>([]);
 const showFeedback = ref(false);
 const selectedImage = ref("");
 const imageDialog = ref(false);
+const conclusionDialog = ref(false);
 
 const isCorrect = computed(() => {
   const correctIndexes = currentQuestion.value?.options
@@ -153,6 +163,11 @@ const feedbackText = computed(() => {
 
 function submitAnswer() {
   showFeedback.value = true;
+  if (
+  currentIndex.value === currentSection.value?.questions?.length - 1
+) {
+  conclusionDialog.value = true;
+}
 }
 
 function nextQuestion() {
