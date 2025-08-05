@@ -17,13 +17,19 @@
     lg="3"
     class="text-center"
   >
+  <div class="image-wrapper" @click="selectedImage = img; imageDialog = true">
   <v-img
-  :src="img"
-  height="180"
-  class="rounded elevation-3 border-screenshot"
-  style="cursor: zoom-in; background-color: white;"
-      @click="selectedImage = img; imageDialog = true"
-    />
+    :src="img"
+    height="180"
+    width="100%"
+    contain
+    class="rounded elevation-3 border-screenshot"
+    style="background-color: white;"
+  />
+  <div class="zoom-overlay">
+    <v-icon size="36">mdi-magnify</v-icon>
+  </div>
+</div>
     <div class="mt-2 text-subtitle-2">Screenshot {{ idx + 1 }}</div>
   </v-col>
 </v-row>
@@ -179,4 +185,40 @@ function nextSection() {
   background-color: #ffebee;
   border-left: 5px solid #c62828;
 }
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  cursor: zoom-in;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.image-wrapper .v-img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.zoom-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 8px;
+  pointer-events: none;
+  color: white;
+}
+
+.image-wrapper:hover .zoom-overlay {
+  opacity: 1;
+}
+
 </style>

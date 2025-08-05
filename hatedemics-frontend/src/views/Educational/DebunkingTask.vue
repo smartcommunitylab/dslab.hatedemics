@@ -1,11 +1,11 @@
 <template>
   <v-container>
     <h1 v-if="currentIndex === 0" class="text-h5 font-weight-bold mb-2">
-    {{ t("educational.tasks.debunking.title") }}
-  </h1>
-  <p v-if="currentIndex === 0" class="mb-4">
-    <span v-html="t('educational.tasks.debunking.task')" />
-  </p>
+      {{ t("educational.tasks.debunking.title") }}
+    </h1>
+    <p v-if="currentIndex === 0" class="mb-4">
+      <span v-html="t('educational.tasks.debunking.task')" />
+    </p>
     <v-row justify="center">
       <v-col cols="12" md="8">
         <h1 class="text-h5 font-weight-bold mb-4">
@@ -20,14 +20,18 @@
         </p>
         <!-- Immagine opzionale -->
         <div v-if="currentQuestion.image" class="mb-4 text-center">
-          <v-img
-            :src="currentQuestion.image"
-            max-height="200"
-            contain
-            class="rounded"
-            @click="imageDialog = true"
-            style="cursor: zoom-in"
-          />
+          <div class="image-wrapper" @click="imageDialog = true">
+            <v-img
+              :src="currentQuestion.image"
+              height="200"
+              width="100%"
+              contain
+              class="rounded"
+            />
+            <div class="zoom-overlay">
+              <v-icon size="36">mdi-magnify</v-icon>
+            </div>
+          </div>
         </div>
 
         <!-- Risposte -->
@@ -50,10 +54,10 @@
           border="start"
           variant="tonal"
         >
-        <span v-html="feedbackMessage" />
-      </v-alert>
+          <span v-html="feedbackMessage" />
+        </v-alert>
         <!-- Immagine del feedback, se disponibile -->
-        <div v-if="feedbackImage" class="my-4 text-center">
+        <!-- <div v-if="feedbackImage" class="my-4 text-center">
           <v-img
             :src="feedbackImage"
             max-height="300"
@@ -62,8 +66,21 @@
             @click="feedbackDialog = true"
             style="cursor: zoom-in"
           />
+        </div> -->
+        <div v-if="feedbackImage" class="mb-4 text-center">
+          <div class="image-wrapper" @click="imageDialog = true">
+            <v-img
+              :src="feedbackImage"
+              height="200"
+              width="100%"
+              contain
+              class="rounded"
+            />
+            <div class="zoom-overlay">
+              <v-icon size="36">mdi-magnify</v-icon>
+            </div>
+          </div>
         </div>
-
         <!-- Dialog per feedback image -->
         <v-dialog v-model="feedbackDialog" max-width="800px">
           <v-card>
@@ -88,7 +105,8 @@
           v-if="showFeedback && isLastQuestion"
           class="mt-4"
           color="success"
-          to="/educational"        >
+          to="/educational"
+        >
           {{ t("educational.tasks.debunking.finish") }}
         </v-btn>
       </v-col>
@@ -183,4 +201,40 @@ function getOptionClass(index: number) {
   background-color: #ffebee;
   border-left: 5px solid #c62828;
 }
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px; /* 👈 stessa altezza dell'immagine */
+  cursor: zoom-in;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.image-wrapper .v-img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.zoom-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 8px;
+  pointer-events: none;
+  color: white;
+}
+
+.image-wrapper:hover .zoom-overlay {
+  opacity: 1;
+}
+
 </style>
