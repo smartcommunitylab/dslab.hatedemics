@@ -12,16 +12,6 @@ const guideItems = [
     color: "error",
   },
   {
-    key: "dataCollection",
-    icon: "mdi-database",
-    color: "error",
-  },
-  {
-    key: "explored",
-    icon: "mdi-compass",
-    color: "error",
-  },
-  {
     key: "expanded",
     icon: "mdi-message-text",
     color: "error",
@@ -61,6 +51,12 @@ const guideItems = [
     icon: "mdi-graph",
     color: "error",
   },
+  {
+  key: "communities",
+  icon: "mdi-account-group",
+  color: "error",
+}
+  
 ];
 </script>
 

@@ -90,14 +90,6 @@
         "title": "Network",
         "description": "This network displays Telegram channels as points, and lines show how they're connected. A channel is linked to another when Telegram automatically recommends it, based on how many users both channels share."
       },
-      "dataCollection": {
-        "title": "Data Collection",
-        "description": "We collect data step-by-step. We start with a group of channels known for disinformation or hate speech. From each, we gather their recommendations and continue following new links until we reach the desired number of channels. From there, we select the most relevant ones in the chosen language and collect their chat messages."
-      },
-      "explored": {
-        "title": "Explored",
-        "description": "A channel is <strong>explored</strong> if we’ve gathered its list of recommended channels."
-      },
       "expanded": {
         "title": "Expanded",
         "description": "A channel is <strong>expanded</strong> if we’ve collected all of its chat messages."
@@ -129,7 +121,11 @@
       "centrality": {
         "title": "Centrality Measures",
         "description": "These measures show how important a channel is in the network:<br><strong>Degree centrality:</strong> Number of direct links (popularity).<br><strong>Betweenness:</strong> Acts as a bridge between other channels.<br><strong>Closeness:</strong> How quickly it can reach others.<br><strong>Eigenvector:</strong> How connected it is to other influential channels.<br>See also: <em>Pósfai & Barabási, 2016 - Network Science</em>."
-      }
+      },
+      "communities": {
+        "title": "Communities",
+        "description": "These community methods help identify natural <strong>groups</strong> within networks, like in a social network:<br><br><strong>Louvain Community:</strong> Looks for groups where there are many connections inside the group. <em>(Like a friend group where everyone knows each other very well!)</em><br><strong>Infomap Community:</strong> Finds groups based on how easily information (or messages) can move within that group. <em>(Like a club where news spreads super fast among members!)</em><br><br>For more details, you can check out these articles:<br><a href='https://hal.science/hal-01231784' target='_blank'>Dugué, N., & Perez, A. (2015). Directed Louvain: maximizing modularity in directed networks</a><br><a href='https://www.pnas.org/doi/epdf/10.1073/pnas.0706851105' target='_blank'>Rosvall, M., & Bergstrom, C. T. (2008). Maps of random walks on complex networks reveal community structure</a>"
+    }
     }
   },
       
