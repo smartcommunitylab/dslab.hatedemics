@@ -38,7 +38,7 @@ const sortBy = ref([{ key: "IRI", order: "desc" }]);
 
 const headers = computed(() => [
   
-  { title: t("channelTable.header.label"), key: "channel_labels", sortable: true },
+  { title: t("channelTable.header.label"), key: "label", sortable: true },
   { title: t("channelTable.header.messages"), key: "message_count", sortable: true },
   {
     title: t("channelTable.header.partecipants"),
@@ -119,6 +119,17 @@ const scrollToTable = () => {
     isTableVisible.value = true;
   }
 };
+const safeText = (val: string | null | undefined, maxLength = 45) => {
+  return val ? val.substring(0, maxLength) : '';
+};
+
+const safeNumber = (val: number | null | undefined, decimals = 0) => {
+  return typeof val === 'number' ? val.toFixed(decimals) : '0';
+};
+
+const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
+  return typeof val === 'number' ? val.toFixed(decimals) : '-';
+};
 </script>
 
 <template>
@@ -192,12 +203,12 @@ const scrollToTable = () => {
                 class="hover-row"
               >
               
-              <td class="text-left">{{ item.channel_labels.substring(0, 45)  }}</td>
-              <td class="text-left">{{ item.message_count }}</td>
-              <td class="text-left">{{ item.participants_count }}</td>
-                <td class="text-left">{{ item.n_in_recommendation }}</td>
-                <td class="text-left">{{ item.n_out_recommended }}</td>
-                <td class="text-left">{{ item.iri?.toFixed(2) }}</td>
+              <td class="text-left">{{ safeText(item.label) }}</td>
+<td class="text-left">{{ safeNumber(item.message_count) }}</td>
+<td class="text-left">{{ safeNumber(item.participants_count) }}</td>
+<td class="text-left">{{ safeNumber(item.n_in_recommendation) }}</td>
+<td class="text-left">{{ safeNumber(item.n_out_recommended) }}</td>
+<td class="text-left">{{ safeNumberOrDash(item.iri) }}</td>
                 <td class="text-left">
                   <v-icon
                     v-if="typeof item.iri === 'number' && item.iri >= 0"

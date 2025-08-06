@@ -58,7 +58,7 @@ export const useChannelsStore = defineStore("channelsStore", () => {
 
   async function dispatchGetChannel(id: string): Promise<APIResponse<null>> {
     try {
-      const { status, data } = await API.channels.getChannel(id);
+      const { status, data } = await API.channels.getChannel(id,  selectedLanguage.value!);
       if (status === 200) {
         selectChannelInfo(data);
         return { success: true, content: null };

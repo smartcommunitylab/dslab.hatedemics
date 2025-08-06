@@ -105,7 +105,7 @@ const loadMore = (event: { target: any; }) => {
           v-model="selectedChannelInfo"
           :items="channelsInfo"
           :loading="loading"
-          item-title="channel_labels"
+          item-title="label"
           item-value="id"
           variant="outlined"
           density="comfortable"

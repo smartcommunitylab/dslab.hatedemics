@@ -15,14 +15,14 @@ async function getChannelsInfo(
               language: selectedLanguage || "IT",
               ...toCamelCaseParams(pageParams),
               ...(filters?.id ? { id: filters.id } : {}),
-              ...(filters?.label ? { channelLabels: filters.label } : {}) 
+              ...(filters?.label ? { label: filters.label } : {}) 
             }
           });} 1
 async function getChannels(selectedLanguage: string) {
     return await axiosInstance.get(`channels`, { params: { language: selectedLanguage ? selectedLanguage : 'IT' } })
 }
-async function getChannel(idChannel: string) {
-    return await axiosInstance.get(`channels/${idChannel}`)
+async function getChannel(idChannel: string, language: string) {
+    return await axiosInstance.get(`channels/${language}/${idChannel}`);
 }
 export default {
     getChannelsInfo,

@@ -1,6 +1,7 @@
 package it.smartcommunitylab.hatedemics.api.service;
 
 import it.smartcommunitylab.hatedemics.api.domain.TelegramChannel;
+import it.smartcommunitylab.hatedemics.api.domain.TelegramChannelId;
 import it.smartcommunitylab.hatedemics.api.repository.TelegramChannelRepository;
 
 import org.apache.commons.lang3.StringUtils;
@@ -21,14 +22,15 @@ public class TelegramChannelService {
         if (StringUtils.isNotBlank(id)) {
             return telegramChannelRepository.findByLanguageAndIdContainingIgnoreCase(language, id, pageable);
         } else if (StringUtils.isNotBlank(label)) {
-            return telegramChannelRepository.findByLanguageAndChannelLabelsContainingIgnoreCase(language, label, pageable);
+            return telegramChannelRepository.findByLanguageAndLabelContainingIgnoreCase(language, label, pageable);
         } else {
             return telegramChannelRepository.findByLanguage(language, pageable);
         }
     }
     
 
-    public Optional<TelegramChannel> findById(String id) {
-        return telegramChannelRepository.findById(id);
-    }
+public Optional<TelegramChannel> findById(String id, String language) {
+    TelegramChannelId key = new TelegramChannelId(id, language);
+    return telegramChannelRepository.findById(key);
+}
 }
