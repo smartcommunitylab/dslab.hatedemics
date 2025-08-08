@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed } from "vue";
 import { ref, reactive, watch, onMounted } from "vue";
 import { useI18n } from "vue-i18n";
 import { useChannelsStore } from "@/store/ChannelStore";
@@ -37,7 +37,6 @@ const languages = [
 const sortBy = ref([{ key: "IRI", order: "desc" }]);
 
 const headers = computed(() => [
-  
   { title: t("channelTable.header.label"), key: "label", sortable: true },
   { title: t("channelTable.header.messages"), key: "message_count", sortable: true },
   {
@@ -56,6 +55,8 @@ const headers = computed(() => [
     sortable: true,
   },
   { title: t("channelTable.header.IRI"), key: "IRI", sortable: true },
+  { title: t("channelTable.header.HS"), key: "hs", sortable: true },
+  { title: t("channelTable.header.CW"), key: "cw", sortable: true },
   { title: t("channelTable.header.expandable"), key: "IRI", sortable: true },
 ]);
 const pagination = reactive({
@@ -120,15 +121,15 @@ const scrollToTable = () => {
   }
 };
 const safeText = (val: string | null | undefined, maxLength = 45) => {
-  return val ? val.substring(0, maxLength) : '';
+  return val ? val.substring(0, maxLength) : "";
 };
 
 const safeNumber = (val: number | null | undefined, decimals = 0) => {
-  return typeof val === 'number' ? val.toFixed(decimals) : '0';
+  return typeof val === "number" ? val.toFixed(decimals) : "0";
 };
 
 const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
-  return typeof val === 'number' ? val.toFixed(decimals) : '-';
+  return typeof val === "number" ? val.toFixed(decimals) : "-";
 };
 </script>
 
@@ -136,8 +137,8 @@ const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
   <v-container fluid>
     <h1 class="text-h5 font-weight-bold text-primary ma-4">{{ msg }}</h1>
     <h2 class="text-h6 font-weight-medium ma-4">
-    {{t("channel.subtitle")}}
-</h2>
+      {{ t("channel.subtitle") }}
+    </h2>
     <v-row>
       <!-- Sezione principale -->
       <v-col cols="12">
@@ -174,54 +175,56 @@ const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
             class="mb-4"
           ></v-text-field> -->
           <div class="scroll-wrapper">
-
-          <v-data-table-server
-            :loading="loading"
-            :headers="headers"
-            :items="channelsInfo"
-            :search="search"
-            :items-length="totalItems"
-            :items-per-page="pagination.size"
-            :page="pagination.page + 1"
-            :items-per-page-options="itemsPerPageOptions"
-            return-object
-            density="compact"
-            hover
-            class="elevation-2"
-            @update:sort-by="onSortChange"
-            @update:options="onPaginationChange"
-          >
-          <template #top>
-  <div class="px-4 py-2">
-    <h3 class="text-h6 mb-1 text-center">🌐 {{t("channelTable.header.title")}}</h3>
-  </div>
-</template>
-            <template v-slot:item="{ item }">
-              <tr
-                @click="handleClick(item)"
-                :class="{ selected: item.id === selectedChannelInfo?.id }"
-                class="hover-row"
-              >
-              
-              <td class="text-left">{{ safeText(item.label) }}</td>
-<td class="text-left">{{ safeNumber(item.message_count) }}</td>
-<td class="text-left">{{ safeNumber(item.participants_count) }}</td>
-<td class="text-left">{{ safeNumber(item.n_in_recommendation) }}</td>
-<td class="text-left">{{ safeNumber(item.n_out_recommended) }}</td>
-<td class="text-left">{{ safeNumberOrDash(item.iri) }}</td>
-                <td class="text-left">
-                  <v-icon
-                    v-if="typeof item.iri === 'number' && item.iri >= 0"
-                    class="status-icon success"
-                  >
-                    mdi-check
-                  </v-icon>
-                  <v-icon v-else class="status-icon error"> mdi-close </v-icon>
-                </td>
-                <td class="text-left"></td>
-              </tr>
-            </template>
-          </v-data-table-server>
+            <v-data-table-server
+              :loading="loading"
+              :headers="headers"
+              :items="channelsInfo"
+              :search="search"
+              :items-length="totalItems"
+              :items-per-page="pagination.size"
+              :page="pagination.page + 1"
+              :items-per-page-options="itemsPerPageOptions"
+              return-object
+              density="compact"
+              hover
+              class="elevation-2"
+              @update:sort-by="onSortChange"
+              @update:options="onPaginationChange"
+            >
+              <template #top>
+                <div class="px-4 py-2">
+                  <h3 class="text-h6 mb-1 text-center">
+                    🌐 {{ t("channelTable.header.title") }}
+                  </h3>
+                </div>
+              </template>
+              <template v-slot:item="{ item }">
+                <tr
+                  @click="handleClick(item)"
+                  :class="{ selected: item.id === selectedChannelInfo?.id }"
+                  class="hover-row"
+                >
+                  <td class="text-left">{{ safeText(item.label) }}</td>
+                  <td class="text-left">{{ safeNumber(item.message_count) }}</td>
+                  <td class="text-left">{{ safeNumber(item.participants_count) }}</td>
+                  <td class="text-left">{{ safeNumber(item.n_in_recommendation) }}</td>
+                  <td class="text-left">{{ safeNumber(item.n_out_recommended) }}</td>
+                  <td class="text-left">{{ safeNumberOrDash(item.iri) }}</td>
+                  <td class="text-left">{{ safeNumberOrDash(item.hs) }}</td>
+                  <td class="text-left">{{ safeNumberOrDash(item.cw) }}</td>
+                  <td class="text-left">
+                    <v-icon
+                      v-if="typeof item.iri === 'number' && item.iri >= 0"
+                      class="status-icon success"
+                    >
+                      mdi-check
+                    </v-icon>
+                    <v-icon v-else class="status-icon error"> mdi-close </v-icon>
+                  </td>
+                  <td class="text-left"></td>
+                </tr>
+              </template>
+            </v-data-table-server>
           </div>
         </v-card>
       </v-col>
@@ -238,14 +241,14 @@ const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
       </v-col>
     </v-row>
     <v-btn
-  v-if="!isTableVisible"
-  @click="scrollToTable"
-  class="show-table-btn"
-  color="primary"
-  icon
->
-  <v-icon>mdi-arrow-down-bold</v-icon>
-</v-btn>
+      v-if="!isTableVisible"
+      @click="scrollToTable"
+      class="show-table-btn"
+      color="primary"
+      icon
+    >
+      <v-icon>mdi-arrow-down-bold</v-icon>
+    </v-btn>
   </v-container>
 </template>
 

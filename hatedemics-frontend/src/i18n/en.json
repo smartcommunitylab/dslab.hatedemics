@@ -149,7 +149,13 @@
                 "title": "Trigger warning",
                 "html": "<p><strong>Warning:</strong> This platform contains unobfuscated examples that some users may find offensive.</p>"
             }
-        ]
+        ],
+        "prev": "Back",
+        "next": "Next",
+        "close": "Close",
+        "neverShow": "Don't show again"
+
+    
     },
     "educational": {
         "eduCard1Title": "Human Rights Declaration",
@@ -770,6 +776,15 @@
         "pl": "Polish"
     },
     "graphInteraction": {
+        "legend": {
+            "title": "Legenda",
+            "color": "Colore",
+            "size": "Dimensione",
+            "low": "Basso",
+            "high": "Alto",
+            "small": "Piccolo",
+            "large": "Grande"
+          },
         "resetView": "Reset view",
         "color": {
             "disable": "Disable color",

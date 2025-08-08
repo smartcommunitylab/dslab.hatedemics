@@ -771,6 +771,15 @@
     },
     "graphInteraction": {
         "resetView": "Reset view",
+        "legend": {
+            "title": "Legenda",
+            "color": "Colore",
+            "size": "Dimensione",
+            "low": "Basso",
+            "high": "Alto",
+            "small": "Piccolo",
+            "large": "Grande"
+          },
         "color": {
             "disable": "Disable color",
             "iri": "Infodemic Risk",

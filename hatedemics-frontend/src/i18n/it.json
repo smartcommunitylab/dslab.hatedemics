@@ -131,7 +131,7 @@
                 "description": "<p>Nell’analisi delle reti, queste misure servono per capire quanto è importante un punto (un canale Telegram) nella rete:</p><ul><li><strong>Degree centrality</strong>: quante connessioni dirette ha (popolarità).</li><li><strong>Betweenness centrality</strong>: quanto agisce da ponte tra altri punti (è un connettore chiave!).</li><li><strong>Closeness centrality</strong>: quanto velocemente può raggiungere tutti gli altri (è ben connesso!).</li><li><strong>Eigenvector centrality</strong>: quanto è connesso a canali molto ben connessi (ha amici famosi!).</li></ul><p>Per approfondire: Pósfai, M., & Barabási, A. L. (2016). <em>Network science</em> (Vol. 3). Cambridge University Press.</p>"
             },
             "communities": {
-                 "title": "Comunità",
+                "title": "Comunità",
                 "description": "Questi metodi di rilevamento delle comunità aiutano a identificare <strong>gruppi</strong> naturali all'interno delle reti, come nei social network:<br><br><strong>Comunità di Louvain:</strong> Cerca gruppi in cui ci sono molte connessioni interne. <em>(Come un gruppo di amici in cui tutti si conoscono molto bene!)</em><br><strong>Comunità di Infomap:</strong> Trova gruppi in base a quanto facilmente le informazioni (o i messaggi) possono circolare al loro interno. <em>(Come un circolo dove le notizie si diffondono velocemente tra i membri!)</em><br><br>Per maggiori dettagli, puoi consultare questi articoli:<br><a href='https://hal.science/hal-01231784' target='_blank'>Dugué, N., & Perez, A. (2015). Directed Louvain: maximizing modularity in directed networks</a><br><a href='https://www.pnas.org/doi/epdf/10.1073/pnas.0706851105' target='_blank'>Rosvall, M., & Bergstrom, C. T. (2008). Maps of random walks on complex networks reveal community structure</a>"
             }
         }
@@ -157,7 +157,11 @@
                 "title": "Avviso di contenuto sensibile",
                 "html": "<p><strong>Attenzione:</strong> Questa piattaforma contiene esempi espliciti che alcuni utenti potrebbero trovare offensivi.</p>"
             }
-        ]
+        ],
+        "prev": "Indietro",
+        "next": "Avanti",
+        "close": "Chiudi",
+        "neverShow": "Non mostrare più questo messaggio"
     },
     "educational": {
         "eduCard1Title": "Dichiarazione dei Diritti Umani",
@@ -394,6 +398,7 @@
             "messages": "Messaggi",
             "partecipants": "Utenti",
             "IRI": "Infodemic Risk",
+            "CW": "Check Worthy",
             "hs": "Hate Speech",
             "nInRecommendations": "Raccomandazioni in entrata",
             "nOutRecommendations": "Raccomandazioni in uscita",
@@ -408,24 +413,32 @@
         "pl": "Polacco"
     },
     "graphInteraction": {
-        "resetView": " Reimposta vista",
+        "legend": {
+            "title": "Legenda",
+            "color": "Colore per",
+            "size": "Dimensione per",
+            "defaultColor": "Colore predefinito per tutti i nodi",
+            "defaultSize": "Dimensione predefinita per tutti i nodi"
+        },
         "color": {
-            "disable": "Disabilita colore",
-            "iri": "Infodemic Risk",
-            "hs": "Hate Speech",
-            "in": "In recommendations",
-            "out": "Out recommendations",
-            "label": "Colore"
+            "disable": "Nessuno (colore fisso)",
+            "iri": "Infodemic Risk Index",
+            "hs": "Hate Speech Score",
+            "out_degree": "Out-degree (nodi in uscita)",
+            "in_degree": "In-degree (nodi in entrata)"
         },
         "size": {
-            "disable": "Disabilita dimensione",
-            "iri": "Infodemic Risk",
-            "hs": "Hate Speech",
-            "in": "In recommendations",
-            "out": "Out recommendations",
-            "label": "Dimensione"
+            "disable": "Nessuno (dimensione fissa)",
+            "iri": "Infodemic Risk Index",
+            "hs": "Hate Speech Score",
+            "out_degree": "Out-degree (nodi in uscita)",
+            "in_degree": "In-degree (nodi in entrata)"
         },
+        "resetView": " Reimposta vista",
         "tooltip": {
+            "label":"Etichetta",
+            "message_count":"Numero di messaggi",
+            "partecipants_count":"Numero di utenti",
             "id": "ID Canale:",
             "iri": "Infodemic Risk:",
             "hs": "Hate Speech:",

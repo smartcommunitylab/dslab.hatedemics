@@ -735,6 +735,15 @@
         "pl": "Polish"
     },
     "graphInteraction": {
+        "legend": {
+            "title": "Legenda",
+            "color": "Colore",
+            "size": "Dimensione",
+            "low": "Basso",
+            "high": "Alto",
+            "small": "Piccolo",
+            "large": "Grande"
+          },
         "resetView": "Reset view",
         "color": {
             "disable": "Disable color",

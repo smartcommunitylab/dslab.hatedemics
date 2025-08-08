@@ -1,0 +1,105 @@
+<script setup lang="ts">
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
+import SizeCircle from "./LegendSizeCircle.vue";
+
+const props = defineProps<{
+  colorBy: string;
+  sizeBy: string;
+}>();
+
+const { t } = useI18n();
+
+const currentColorLabel = computed(() =>
+  props.colorBy === "disabled"
+    ? t("graphInteraction.color.disable")
+    : t(`graphInteraction.color.${props.colorBy}`)
+);
+
+const currentSizeLabel = computed(() =>
+  props.sizeBy === "disabled"
+    ? t("graphInteraction.size.disable")
+    : t(`graphInteraction.size.${props.sizeBy}`)
+);
+
+const colorThresholds = computed(() => {
+  switch (props.colorBy) {
+    case "iri":
+    case "hs":
+      return { min: 0, mid: 0.25, max: 0.5 };
+    case "n_out_recommended":
+    case "n_in_recommendation":
+      return { min: 0, mid: 150, max: 300 };
+    default:
+      return { min: 0, mid: 0.5, max: 1 };
+  }
+});
+
+const sizeThresholds = computed(() => {
+  switch (props.sizeBy) {
+    case "iri":
+    case "hs":
+      return { min: 0, mid: 0.5, max: 1 };
+    case "n_out_recommended":
+      return { min: 0, mid: 150, max: 300 };
+    case "n_in_recommendation":
+      return { min: 0, mid: 150, max: 300 };
+    default:
+      return { min: 0, mid: 0.5, max: 1 };
+  }
+});
+</script>
+
+<template>
+  <v-card class="pa-4 mb-4" elevation="0">
+    <h3 class="text-subtitle-1 font-weight-bold mb-2">
+      {{ t("graphInteraction.legend.title") }}
+    </h3>
+
+    <!-- Colori -->
+    <div class="mb-6">
+      <h4 class="text-body-2 font-weight-medium mb-1">
+        {{ t("graphInteraction.legend.color") }}: 
+        <span class="font-italic">{{ currentColorLabel }}</span>
+      </h4>
+
+      <template v-if="props.colorBy !== 'disabled'">
+        <div class="color-gradient-bar" style="position: relative; height: 24px; border-radius: 4px; background: linear-gradient(to right, rgb(255,0,0), rgb(255,255,0), rgb(0,255,0));">
+          <div style="position: absolute; left: 0; bottom: -20px; font-size: 0.75rem; color: #444;">
+            {{ colorThresholds.min }}
+          </div>
+          <div style="position: absolute; left: 50%; transform: translateX(-50%); bottom: -20px; font-size: 0.75rem; color: #444;">
+            {{ colorThresholds.mid }}
+          </div>
+          <div style="position: absolute; right: 0; bottom: -20px; font-size: 0.75rem; color: #444;">
+            {{ colorThresholds.max }}
+          </div>
+        </div>
+      </template>
+      <template v-else>
+        <small class="text-grey">{{ t("graphInteraction.legend.defaultColor") }}</small>
+      </template>
+    </div>
+
+    <!-- Dimensioni -->
+    <div>
+      <h4 class="text-body-2 font-weight-medium mb-1">
+        {{ t("graphInteraction.legend.size") }}: 
+        <span class="font-italic">{{ currentSizeLabel }}</span>
+      </h4>
+
+      <template v-if="props.sizeBy !== 'disabled'">
+        <div class="d-flex align-center">
+          <SizeCircle :diameter="8" :label="sizeThresholds.min.toString()" />
+          <v-spacer />
+          <SizeCircle :diameter="24" :label="sizeThresholds.mid.toString()" />
+          <v-spacer />
+          <SizeCircle :diameter="48" :label="sizeThresholds.max.toString()" />
+        </div>
+      </template>
+      <template v-else>
+        <small class="text-grey">{{ t("graphInteraction.legend.defaultSize") }}</small>
+      </template>
+    </div>
+  </v-card>
+</template>
