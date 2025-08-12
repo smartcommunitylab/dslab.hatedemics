@@ -5,7 +5,8 @@
         "button": "Login"
     },
     "common": {
-        "close": "Chiudi"
+        "close": "Chiudi",
+        "ok": "OK"
     },
     "menu": {
         "home": "Home",
@@ -183,11 +184,14 @@
         "tasks": {
             "humanRights": {
                 "title": "Diritti Umani",
-                "description": "I diritti umani fondamentali delineati dalle Nazioni Unite nella <a href='https://www.un.org/en/about-us/universal-declaration-of-human-rights' target='_blank' rel='noopener'>Dichiarazione Universale dei Diritti Umani</a> proteggono e tutelano la dignità, l’uguaglianza e la libertà di tutte le persone. Alcuni di essi sono elencati di seguito in una versione semplificata.<br><br><iframe width='100%' height='315' src='https://www.youtube.com/embed/nDgIVseTkuE?si=Jomr_pVjQAdBgfGg' title='Video Diritti Umani' frameborder='0' allowfullscreen></iframe>",
+                "description": "I diritti umani fondamentali sanciti dalle Nazioni Unite nella <a href='https://www.un.org/en/about-us/universal-declaration-of-human-rights' target='_blank' rel='noopener'>Dichiarazione Universale dei Diritti Umani</a> tutelano e sostengono la dignità, l'uguaglianza e la libertà di tutte le persone. Alcuni di essi sono elencati di seguito in una versione semplificata.<br><br><iframe width='100%' height='315' src='https://www.youtube.com/embed/nDgIVseTkuE?si=Jomr_pVjQAdBgfGg' title='Video Diritti Umani' frameborder='0' allowfullscreen></iframe>",
                 "objectivesTitle": "Obiettivi",
-                "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Sviluppare conoscenze sui diritti umani;</li><li>Aumentare la consapevolezza del legame tra diritti umani, discorsi d’odio e disinformazione;</li><li>Imparare possibili argomentazioni per reagire ai discorsi d’odio e alla disinformazione.</li></ul>",
+                "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Sviluppare conoscenze sui diritti umani;</li><li>Aumentare la consapevolezza su come il tema dei diritti umani sia oggetto di incitamento all'odio e sia bersaglio anche della disinformazione;</li><li>Apprendere tecniche di argomentazione per ragire e contrastare l'incitamento all'odio e la disinformazione.</li></ul>",
                 "startButton": "Inizia",
-                "task": "Forma 11 gruppi. Ogni gruppo prende una carta. Ogni gruppo discute il significato del diritto umano scritto sulla propria carta. Dopo 5 minuti, il primo gruppo spiega cosa significa per loro quel diritto e come si collega al discorso d’odio. L'insegnante può aggiungere ulteriori spiegazioni, se necessario.\nSuccessivamente, il gruppo successivo con la carta seguente spiega il significato del proprio diritto e il suo collegamento con il discorso d’odio. Ripetere questo processo fino a quando tutti i gruppi avranno condiviso.",
+                "task": "Formate 11 gruppi. Ogni gruppo prende una carta. Ogni gruppo discute il significato del diritto umano scritto sulla propria carta. Dopo 5 minuti, il primo gruppo spiega cosa significhi questo diritto e come possa esere oggetto di incitamento all'odio. L'insegnante può aggiungere ulteriori spiegazioni se necessario. Quindi, il gruppo successivo, con la carta successiva, spiega il significato del proprio diritto e il suo potenziale collegamento al discorso d'odio. Questo processo si ripete finché tutti i gruppi non avranno condiviso la spiegazione della propria carta.",
+                "completetask": "Ho completato l'attività",
+                "taskCompleteTitle": "Attività completata",
+                "taskCompleteText": "Conoscevi già tutti i diritti umani menzionati? Quali ti sono nuovi?È stato facile o difficile spiegare il significato di questi diritti e trovare un collegamento tra questi diritti e l'incitamento all'odio?Puoi nominare altri diritti umani che non sono stati menzionati?",
                 "articles": [
                     {
                         "title": "Art. 1",
@@ -195,39 +199,39 @@
                     },
                     {
                         "title": "Art. 2",
-                        "text": "Tutti hanno diritto a essere trattati allo stesso modo, indipendentemente da razza, colore, sesso, lingua, religione, opinione politica, origine, proprietà o altra condizione."
+                        "text": "Tutti hanno il diritto di essere trattati allo stesso modo, indipendentemente da razza, colore, sesso, lingua, religione, opinione politica, proprietà, nascita o altra condizione."
                     },
                     {
                         "title": "Art. 3",
-                        "text": "Tutti hanno diritto alla vita, alla libertà e alla sicurezza."
+                        "text": "Ogni individuo ha diritto alla vita e a vivere in libertà e sicurezza."
                     },
                     {
                         "title": "Art. 5",
-                        "text": "Nessuno può essere sottoposto a tortura o a trattamenti crudeli, inumani o degradanti."
+                        "text": "Ogni individuo ha il diritto di non subire tortura e trattamenti inumani e degradanti."
                     },
                     {
                         "title": "Art. 7",
-                        "text": "La legge è uguale per tutti."
+                        "text": "La legge è la stessa per tutti."
                     },
                     {
                         "title": "Art. 13",
-                        "text": "Tutti hanno il diritto di vivere e muoversi liberamente all'interno dei confini dello Stato."
+                        "text": "Tutti hanno il diritto di vivere e viaggiare liberamente entro i confini dello Stato."
                     },
                     {
                         "title": "Art. 14",
-                        "text": "Tutti hanno il diritto di andare in un altro Paese e chiedere protezione se perseguitati o in pericolo di esserlo."
+                        "text": "Tutti hanno il diritto di recarsi in un altro Paese e chiedere protezione se sono perseguitati o rischiano di esserlo."
                     },
                     {
                         "title": "Art. 16",
-                        "text": "Tutti hanno diritto di sposarsi e di avere una famiglia."
+                        "text": "Tutti hanno il diritto di sposarsi e di avere una famiglia."
                     },
                     {
                         "title": "Art. 18",
-                        "text": "Tutti hanno il diritto di credere in ciò che vogliono (inclusa, ma non solo, la religione)."
+                        "text": "Ognuno ha il diritto di credere in ciò che desidera (inclusa, ma non limitatamente, alla religione)."
                     },
                     {
                         "title": "Art. 19",
-                        "text": "Tutti hanno il diritto di esprimere liberamente le proprie opinioni e di ricevere e diffondere informazioni."
+                        "text": "Tutti hanno il diritto di dire ciò che pensano e di dare e ricevere informazioni liberamente."
                     },
                     {
                         "title": "Art. 29",
@@ -235,125 +239,129 @@
                     },
                     {
                         "title": "Art. 30",
-                        "text": "Nessuno ha il diritto di togliere questi diritti agli altri."
+                        "text": "Nessuno ha il diritto di privarci di questi diritti."
                     }
                 ]
             },
             "debunking": {
                 "title": "Debunking",
-                "description": "<strong>What is debunking:</strong> When some people think of a fact-checker, they only see a journalist who looks into a claim, checks it and confirms whether it is true or not, the debunking process. Nevertheless, fighting disinformation effectively nowadays takes much more than that: quickly detecting possible hoaxes before they go viral and affect more people; explaining that not everything is black or white, helping people to be well-prepared against falsehoods through Media Literacy or regulation; creating tools to make it harder for others to deceive us, or fighting together against manipulation: this is what we call pre-bunking.<br><br><strong>What is a disinformation narrative:</strong> What disinformation creators want you to believe. When an idea is repeated many times, people tend to believe it. Also, one hoax can contain several narratives.",
-                "objectivesTitle": "Objectives",
-                "objectives": "<ul><li>Debunk and learn about what disinformation narratives are. It's also a pre-bunking exercise: discover what disinformation narratives are and the most spread ones in your country.</li><li>Learn some debunk techniques in a guided way, and understand why critical thinking and identifying viral hoaxes is essential to fight disinformation narratives.</li></ul>",
-                "startButton": "Start activity",
-                "correct": "Correct! Well done.",
-                "incorrect": "Incorrect answer. Try again.",
-                "next": "Next question",
-                "finish": "Finish",
+                "description": "L'obiettivo del fact-checking è fornire ai cittadini strumenti e informazioni che consentano loro di formarsi un'opinione sulla base di dati e fatti verificati, in modo da prendere decisioni consapevoli. La disinformazione può influenzare il modo in cui la società pensa e affronta i problemi quotidiani, ed è per questo che la missione principale dei fact-checker è quella di far luce e raccogliere dati sui temi rilevanti per la società. In generale, il fact-checking consiste nell'individuare le bufale, verificarne il contenuto e diffonderne la smentita. Queste azioni compongono la cosiddetta attività di debunking (debunking dall'inglese smascherare, confutare, smentire).\nI fact-checker lavorano quotidianamente con il debunking: verificano i contenuti e spiegano perché qualcosa è falso dopo che è stato condiviso e reso virale sui social media. Questa attività è importante per la società, il dibattito pubblico, perfino per la sicurezza della società in generale, e per evitare che più persone leggano, condividano e credano alle bugie e ai contenuti manipolati che circolano in Internet. Alcune attività di debunking sono molto difficili: richiedono molto tempo e l'uso di strumenti specifici. Altre richiedono solo molta osservazione e la ricerca di informazioni specifiche e affidabili.\nProviamoci! In questa attività imparerai, in modo guidato, alcune tecniche di debunking e perché è importante attivare il pensiero critico e riconoscere come la viralità di alcune bufale possa creare e rafforzare le narrazioni che sfrutta la disinformazione.",
+                "objectivesTitle": "Obiettivi dell'attività",
+                "objectives": "Smaschera e riconosci che cosa sono le narrazioni sfruttate dalla disinformazione. È a tutti gli effetti un esercizio di pre-bunking: scopri quali sono le narrazioni di cui si avvale la disinformazione e quali sono quelle più diffuse nel tuo Paese.\nImparerai, in modo guidato, alcune tecniche di debunking (cioè come smascherare i contenuti falsi e manipolati) e l'importanza di attivare il pensiero critico e di comprendere come la viralità di alcune bufale possa creare e rafforzare le narrazioni di cui si avvale la disinformazione.",
+                "startButton": "Inizia l'attività",
+                "task": "Simula le azioni di un fact-checker selezionando il metodo più efficace per smascherare un contenuto sospetto. Riesci anche a identificare la narrazione di disinformazione correlata?",
+                "correct": "Corretto!",
+                "incorrect": "Sbagliato! Riprova.",
+                "next": "Prossima domanda",
+                "finish": "Termina l'attività",
                 "questions": [
                     {
-                        "title": "Question 1",
-                        "scenario_description": "You have received this picture that shows a photo of a feminist manifestation where a participant shows a sign that says: “I want my daughter to have the right to abort that I didn't have.” You are not sure if it's true.",
-                        "question": "How would you verify?",
-                        "image": "/img/debunking/en/question1.jpg",
+                        "title": "Domanda 1",
+                        "scenario_description": "Hai ricevuto il link di un post in cui si vedono delle barche su una spiaggia. Il post riporta questo commento \"TUNISIA... PRONTI ALL'INVASIONE!!!\"",
+                        "question": "Come puoi a verificare il contenuto?",
+                        "image": "/img/debunking/it/question1.png",
                         "options": [
                             {
-                                "text": "Reverse image search"
+                                "text": "Ricerca inversa per immagini"
                             },
                             {
-                                "text": "Advanced search in Twitter (now X)"
+                                "text": "Ricerca avanzata su Twitter (X)"
                             },
                             {
-                                "text": "IA tool "
+                                "text": "strumento per riconoscere i contenuti generati da IA"
                             }
                         ],
                         "correct": 0,
                         "feedback": {
-                            "correct": "Correct! You have successfully done a reverse image search and found this picture.",
-                            "correctImage": "/img/debunking/en/answer1.jpg",
-                            "incorrect": "Unfortunately neither an advanced search in Twitter nor an IA tool would have been helpful in this case. ",
-                            "incorrectImage": "/img/debunking/en/answer1.jpg"
+                            "correct": "Esatto! Hai fatto una ricerca inversa per immagini e hai trovato l'immagine originale",
+                            "correctImage": "/img/debunking/it/answer1.png",
+                            "incorrect": "Purtroppo né una ricerca avanzata su Twitter né uno strumento di riconsocimento di contenuti generati da Intelligenza Artificiale sarebbero stati utili in questo caso. A prima vista non abbiamo prove che l'immagine sia stata pubblicata su Twitter o generata dall'intelligenza artificiale. Una ricerca per immagini potrebbe essere più utile.",
+                            "incorrectImage": "/img/debunking/it/answer1.png"
                         }
                     },
                     {
-                        "title": "Question 2",
-                        "question": "By performing a reverse image search you would have found this image. What can you conclude from observing it?",
-                        "image": "/img/debunking/en/question2.jpg",
+                        "title": "Domanda 2",
+                        "question": "Effettuando una ricerca per immagini inversa avresti trovato questa immagine. Cosa puoi dedurre osservandola?",
                         "options": [
                             {
-                                "text": "It´s an AI picture"
+                                "text": "E' una immagine generata da Intelligenza Artificiale"
                             },
                             {
-                                "text": "It´s a true picture out of context"
+                                "text": "La prima immagine è stata manipolata"
                             },
                             {
-                                "text": "It seems to be the original image "
+                                "text": "Sembra la stessa foto pubblicata un anno prima fuori contesto"
                             }
                         ],
                         "correct": 2,
                         "feedback": {
-                            "correct": "Correct: this is the original image. In particular, this image was originally published in 2023. We can therefore conclude that the first image you saw was a manipulated image that changes the phrase it originally contained, “I am the mother of the girl you will never touch,” which was published on a website about the 8M marches in Monterrey (Mexico) in March 2023 and has been circulating in a manipulated manner.",
-                            "incorrect": "Inorrect: this is the original image. In particular, this image was originally published in 2023. We can therefore conclude that the first image you saw was a manipulated image that changes the phrase it originally contained, “I am the mother of the girl you will never touch,” which was published on a website about the 8M marches in Monterrey (Mexico) in March 2023 and has been circulating in a manipulated manner."
+                            "correct": "Esatto: questa è la foto originale pubblicata nel 2019. Ci troviamo in Mauritania e le barche presenti nella foto sono delle piroghe utilizzate per pescare. Queste piroghe non si trovavano in Tunisia e non veniva utilizzate dai migranti.",
+                            "incorrect": "Sbagliato: questa è l'immagine originale. In particolare, questa immagine è stata pubblicata originariamente nel 2019. Possiamo quindi concludere che la prima immagine che hai visto era la stessa foto fuori contesto: è stata utilizzata per creare una bufala sui presunti migranti che cercavano di raggiungere l'Italia. Se osservi attentamente le due foto, è chiaro che si tratta della stessa foto in due contesti diversi."
                         }
                     },
                     {
-                        "title": "Question 3",
-                        "question": "What kind of disinformation narrative can this hoax strengthen? ",
+                        "title": "Domanda 3",
+                        "question": "Che tipo di narrativa sfruttata dalla disinformazione rafforza questa fake news?",
                         "options": [
                             {
-                                "text": "Feminists hate men"
+                                "text": "Gli immigrati di colore commettono atti violenti in Europa"
                             },
                             {
-                                "text": "Feminists say absurd things"
+                                "text": "Gli immigrati stanno per invadere l'Italia"
                             },
                             {
-                                "text": "Feminists should not participate in manifestations."
+                                "text": "Gli immigrati portano malattie"
                             }
                         ],
                         "correct": 1,
                         "feedback": {
-                            "correct": "Correct!<br><br>Check out how professional fact-checkers debunked this disinformation: <a href='https://maldita.es/feminismo/bulo/20250310/cartel-derechoalaborto-manipulado/' target='_blank'>Maldita.es analysis</a>",
-                            "incorrect": "Incorrect.<br><br>Check out how professional fact-checkers debunked this disinformation: <a href='https://maldita.es/feminismo/bulo/20250310/cartel-derechoalaborto-manipulado/' target='_blank'>Maldita.es analysis</a>"
+                            "correct": "Corretto! Quando si parla di fact checking o di fact-checker, spesso si pensa a un giornalista che esamina un'affermazione, la verifica e conferma se è vera o falsa. Oggi combattere efficacemente la disinformazione richiede molto di più: molto spesso i contenuti disinformativi non sono più solo \"fake news\" e falsi articoli di giornale, ma sono foto, video e meme che diventano virali che veicolano un messaggio falso e fomentano l'odio online.  Individuare rapidamente possibili bufale prima che diventino virali e influenzino più persone è diventato cruciale al giorno d'oggi vista la facilità con cui i contenuti possono essere pubblicati e condivisi online. Link: <a href='https://www.facta.news/antibufale/queste-imbarcazioni-non-sono-pronte-per-portare-migranti-in-italia-dalla-tunisia' target='_blank'>https://www.facta.news/antibufale/queste-imbarcazioni-non-sono-pronte-per-portare-migranti-in-italia-dalla-tunisia</a>.",
+                            "incorrect": "Sbagliato! Quando si parla di fact checking o di fact-checker, spesso si pensa a un giornalista che esamina un'affermazione, la verifica e conferma se è vera o falsa. Oggi combattere efficacemente la disinformazione richiede molto di più: molto spesso i contenuti disinformativi non sono più solo \"fake news\" e falsi articoli di giornale, ma sono foto, video e meme che diventano virali che veicolano un messaggio falso e fomentano l'odio online.  Individuare rapidamente possibili bufale prima che diventino virali e influenzino più persone è diventato cruciale al giorno d'oggi vista la facilità con cui i contenuti possono essere pubblicati e condivisi online. Link: <a href='https://www.facta.news/antibufale/queste-imbarcazioni-non-sono-pronte-per-portare-migranti-in-italia-dalla-tunisia' target='_blank'>https://www.facta.news/antibufale/queste-imbarcazioni-non-sono-pronte-per-portare-migranti-in-italia-dalla-tunisia</a>."
                         }
                     }
                 ]
             },
             "bias": {
                 "title": "Riconoscere i Bias",
-                "description": "<strong>Fallacie logiche associate ai discorsi d’odio e alla disinformazione</strong><br><br>I contenuti dei discorsi d’odio e della disinformazione possono a volte sembrare molto convincenti. Questo accade perché chi diffonde questi contenuti fa spesso uso di fallacie logiche: strutture di pensiero distorte che i gruppi d’odio utilizzano per giustificare le proprie cause, facendo credere che quanto affermano sia ragionevole e veritiero. Le fallacie logiche possono basarsi su premesse false, premesse vere ma conclusioni errate, oppure su argomentazioni scorrette nonostante premesse e conclusioni siano vere. Alcune fallacie sono prodotte appositamente per ingannare o rendere virale la disinformazione.<br><br>Esistono molte fallacie che emergono nei discorsi d’odio. Eccone alcune:<br><br><strong>Argumentum ad populum</strong> – forma di argomentazione non sostanziale in cui chi parla fa leva sui gusti, le preferenze e i pregiudizi della massa. Basandosi su egoismo nazionale, istinti, stereotipi o pregiudizi, cerca di convincere il pubblico della propria tesi (es. \"La maggioranza delle persone nel nostro paese la pensa così, quindi è così che dobbiamo agire\");<br><br><strong>Ipse dixit</strong> – argomentare senza fornire prove valide (es. \"Lo ha detto il partito, quindi dev’essere vero\");<br><br><strong>Slippery slope (pendio scivoloso)</strong> – si verifica quando si sostiene che una posizione porterà inevitabilmente a conseguenze negative a catena (es. \"Non possiamo permettere ai migranti di restare nel nostro paese, perché porteranno qui le famiglie, avranno figli, ci ruberanno il lavoro e il sistema di welfare collasserà. Finiremo in povertà e perderemo il controllo del nostro paese\");<br><br><strong>Fallacia del falso dilemma (either-or)</strong> – consiste nel sostenere che esistano solo due possibilità, escludendo tutte le alternative (es. \"O voti questo partito o vivrai costantemente in pericolo\");<br><br><strong>Post hoc, ergo propter hoc</strong> – errore logico nel trarre conclusioni di causalità solo perché un evento precede l’altro (es. \"Da quando abbiamo la nuova insegnante di matematica, prendo voti bassi. Dev’essere colpa sua\");<br><br><strong>Argumentum ad hominem</strong> – attaccare la persona che fa un’argomentazione invece dell’argomentazione stessa (es. \"Non ascoltare l’opinione di Pietro sul progetto, è pigro e non fa mai niente\");<br><br><strong>Cherry picking (selezione mirata)</strong> – presentare solo le prove a favore della propria tesi, ignorando quelle contrarie (es. \"L’hate speech non fa male. Guarda questo studio che dice che è solo offensivo, non pericoloso\" – ignorando però decine di altri studi che dimostrano i danni psicologici e sociali);<br><br><strong>Appello alla tradizione</strong> – sostenere che qualcosa sia giusto o vero solo perché si è sempre fatto così (es. \"Nella nostra scuola il consiglio è sempre stato composto da più uomini che donne, e ha sempre funzionato bene\");<br><br><strong>Argomento per aneddoto</strong> – usare un’esperienza personale o singolo caso per generalizzare (es. \"Non penso che l’hate speech faccia davvero male. Ho sentito battute offensive spesso, e nessuno che conosco ne ha mai sofferto seriamente\");<br><br><strong>Fallacia ad ignorantiam</strong> – sostenere che qualcosa sia vero o falso solo perché non se n’è dimostrato il contrario (es. \"Nessuno ha mai provato che gli studenti copino agli esami online, quindi non succede\").<br><br><strong>Bias cognitivi</strong><br><br>Il nostro cervello utilizza scorciatoie mentali per aiutarci a prendere decisioni rapide nella vita quotidiana. Questi meccanismi ci permettono di concentrarci solo sulle informazioni più rilevanti, evitando di essere sopraffatti da tutto ciò che vediamo e sentiamo. In questo modo, il cervello lavora in modo più efficiente. Tuttavia, queste scorciatoie possono anche portarci a errori di valutazione o a fraintendimenti, a causa dei cosiddetti bias cognitivi.<br><br>Tutti noi siamo influenzati dai bias cognitivi nel prendere decisioni, e chi diffonde disinformazione li conosce molto bene. Eccone alcuni:<br><br><strong>Bias di appartenenza</strong> – tendenza a favorire il proprio gruppo rispetto agli altri;<br><strong>Bias di disponibilità</strong> – tendenza ad affidarsi alle informazioni che ci vengono più facilmente in mente;<br><strong>Bias di causalità</strong> – si verifica quando si crede che eventi indipendenti siano collegati tra loro;<br><strong>Bias del punto cieco</strong> – tendenza a pensare di essere meno soggetti a bias rispetto agli altri;<br><strong>Bias di conferma</strong> – tendenza a cercare, interpretare e ricordare solo le informazioni che confermano le nostre convinzioni;<br><strong>Bias dell’autorità</strong> – tendenza a lasciarsi influenzare maggiormente dalle opinioni di persone autorevoli.",
-                "objectivesTitle": "Obiettivi",
-                "objectives": "<ul><li><strong>Sviluppare consapevolezza</strong> sui meccanismi sociali, i bias cognitivi e le fallacie logiche</li><li><strong>Sviluppare competenze di pensiero critico</strong></li></ul><p>I meccanismi sociali, i bias cognitivi e le fallacie logiche sono fattori che favoriscono la diffusione dell’odio e della disinformazione. Conoscerli ci rende più resistenti a questi fenomeni e più critici nei confronti di altre forme di manipolazione.</p>",
-                "startButton": "Inizia l'attività",
-                "task": "- Associa la situazione alla fallacia logica o al bias corrispondente\n- La situazione è un esempio di hate speech, disinformazione o misinformation? Se sì, perché?",
+                "description": "<h2>Fallacie logiche associate a discorsi d'odio e della disinformazione</h2><p>Il contenuto dei discorsi d'odio e della disinformazione pu&ograve; talvolta apparire molto convincente. Questo perch&eacute; chi diffonde discorsi d'odio spesso si affida a fallacie logiche, costrutti che i gruppi d'odio usano per giustificare le proprie cause e sfruttare la convinzione che chi si imbatte in tali contenuti li considererebbe appunto ragionevoli e veritieri. Le fallacie logiche possono utilizzare premesse false, premesse vere ma conclusioni false, oppure premesse e conclusioni vere attraverso un'argomentazione falsa. Alcune fallacie sono prodotte con l'intento di ingannare o rendere virale la disinformazione.</p><p>Esistono molte fallacie nei discorsi d'odio. Eccone alcune:</p><ul><li><strong>Argumentum ad populum</strong>: un modo di argomentare non basato su fatti e dati reali in cui l'oratore fa appello ai gusti, alle preferenze e ai pregiudizi della massa. Basandosi sull'egoismo nazionale, sugli istinti, sugli stereotipi o sui pregiudizi, l'oratore cerca di convincere il pubblico della propria tesi (ad esempio, la maggior parte delle persone nel nostro paese la pensa cos&igrave;, quindi &egrave; cos&igrave; che dovremmo agire);</li><li><strong>Ipse dixit</strong> – il modo di argomentare senza fornire una prova valida (ad esempio, lo ha detto un partito politico, quindi deve essere vero);</li><li><strong>Fallacia del pendio scivoloso</strong> – si verifica quando qualcuno afferma che una posizione o una decisione porter&agrave; a una serie di conseguenze negative indesiderate (ad esempio, non possiamo permettere che i migranti rimangano nel nostro paese perch&eacute; porteranno qui le loro famiglie e avranno figli, il che ci porter&agrave; a perdere il lavoro e al collasso del sistema previdenziale, e di conseguenza saremo poveri e perderemo il controllo sul nostro paese);</li><li><strong>Fallacia dell'uno o dell'altro</strong> – quando qualcuno afferma che ci sono solo due modi per affrontare la questione, mentre ci sono molte altre opzioni (ad esempio, puoi votare per questo partito o vivere la tua vita in costante pericolo);</li><li><strong>Post hoc, ergo propter hoc</strong> – errore logico nel concludere erroneamente che esista un nesso causale tra due eventi semplicemente perch&eacute; uno si &egrave; verificato prima dell'altro (ad esempio: da quando abbiamo una nuova insegnante di matematica, prendo brutti voti. Deve essere lei la ragione per cui vado male);</li><li><strong>Argumentum Ad Hominem</strong> – quando qualcuno attacca la persona che sostiene un'argomentazione piuttosto che l'argomentazione stessa (ad esempio: non ascoltare l'opinione di Pietro sul progetto di gruppo: &egrave; pigro e non fa mai niente di giusto);</li><li><strong>Cherry picking</strong> – quando qualcuno presenta selettivamente prove a supporto della propria argomentazione, ignorando o respingendo prove che la contraddicono (ad esempio, &quot;L'incitamento all'odio non &egrave; dannoso. Guarda questo studio che afferma che &egrave; solo offensivo, non pericoloso&quot; – ignorando decine di altri studi che dimostrano il danno psicologico e sociale dell'incitamento all'odio).</li><li><strong>Ricorso alla tradizione</strong> – quando un'argomentazione presuppone che qualcosa sia buona o vera semplicemente perch&eacute; viene fatta o creduta tradizionalmente, senza considerare se sia ancora valida nel contesto attuale (ad esempio, nella nostra scuola abbiamo sempre avuto pi&ugrave; uomini che donne nel consiglio scolastico, e ha sempre funzionato cos&igrave;).</li><li><strong>Argomentazione basata su aneddoti</strong> – qualcuno usa una singola esperienza o storia, spesso personale, per supportare una conclusione o un'affermazione generale (ad esempio, &quot;Non credo che l'incitamento all'odio porti a danni reali. Ho sentito persone fare battute offensive in continuazione e nessuno che conosco ne &egrave; mai stato seriamente colpito&quot;).</li><li><strong>Fallacia ad ignorantiam</strong> – qualcuno sostiene che un'affermazione sia vera o falsa semplicemente perch&eacute; non &egrave; stato dimostrato il contrario (ad esempio, nessuno ha mai dimostrato che gli studenti imbroglino durante gli esami online, quindi non sar&agrave; vero).</li></ul><h2>Bias cognitivi</h2><p>Il nostro cervello usa scorciatoie per aiutarci a prendere decisioni rapide nella vita di tutti i giorni. Queste scorciatoie ci aiutano a concentrarci solo sulle informazioni pi&ugrave; importanti, in modo da non essere sopraffatti da tutto ci&ograve; che vediamo e sentiamo. Questo rende il cervello pi&ugrave; efficiente. Tuttavia, lo svantaggio &egrave; che queste scorciatoie a volte possono portarci a commettere errori o fraintendere le cose a causa dei nostri pregiudizi cognitivi.</p><p>Siamo tutti influenzati da pregiudizi cognitivi nel nostro processo decisionale e coloro che diffondono disinformazione li conoscono molto bene. Ecco alcuni esempi di pregiudizi cognitivi:</p><ul><li><strong>Bias di appartenenza</strong>: tendenza a favorire il proprio gruppo rispetto ad altri;</li><li><strong>Bias di disponibilit&agrave;</strong>: tendenza a fare affidamento sulle informazioni che vengono subito in mente;</li><li><strong>Bias di causalit&agrave;</strong>: si verifica quando le persone credono che ci sia una relazione tra eventi che in realt&agrave; sono indipendenti l'uno dall'altro;</li><li><strong>Bias del punto cieco</strong>: tendenza a considerarsi meno prevenuti rispetto alle altre persone;</li><li><strong>Bias di conferma</strong>: tendenza a cercare, interpretare, favorire e ricordare informazioni in un modo che confermino le nostre convinzioni precedenti;</li><li><strong>Bias di autorit&agrave;</strong>: tendenza a essere maggiormente influenzati dalle opinioni delle persone autorevoli.</li></ul>",
+                "objectivesTitle": "Obiettivi dell'attività",
+                "objectives": "<ul><li>Sviluppare la consapevolezza dei meccanismi sociali, dei pregiudizi cognitivi e delle fallacie logiche</li><li>Sviluppare la capacit&agrave; di pensiero critico</li></ul><p>I meccanismi sociali, i pregiudizi cognitivi e le fallacie logiche sono fattori che favoriscono la diffusione di discorsi d'odio e della disinformazione. Conoscendone alcuni, possiamo essere meno influenzabili da essi e pi&ugrave; critici nei confronti di altre forme di manipolazione.</p>",
+                "startButton": "Attività",
+                "checkButton": "Verifica le coppie",
+                "resetButton": "Reset",
+                "correct": "Coppie corrette",
+                "incorrect": "Coppie errate",
+                "task": "- Abbina la situazione alla fallacia logica/alla distorsione pertinente.- La situazione è un esempio di incitamento all'odio/disinformazione/misinformazione (condivisione inconsapevole di contenuti disinformativi)? Se sì, perché?",
                 "pairs": [
                     {
                         "id": "a",
-                        "left": "Argomento ad populum",
-                        "right": "Durante una discussione online sull'immigrazione, un utente scrive: \"Tutti sanno che queste persone sono pericolose e portano criminalità. Guardate quanta gente nel nostro paese è d'accordo con me. Dobbiamo mandarli via per proteggere la nostra comunità.\""
+                        "left": "Argumentum ad populum – un modo di argomentare non giustificato da fatti o dati reali in cui l'oratore fa appello ai gusti, alle preferenze e ai pregiudizi della folla. Basandosi su egoismi nazionali, istinti, stereotipi o pregiudizi, l'oratore cerca di convincere il pubblico della propria tesi.",
+                        "right": "Durante un'accesa discussione online sulla popolazione nera, un utente scrive: \"Tutti sanno che queste persone sono pericolose e portano criminalità. Basta guardare quante persone nella nostra città sono d'accordo con me. Dobbiamo cacciarli via per proteggere la nostra comunità\""
                     },
                     {
                         "id": "b",
-                        "left": "Appello alla tradizione",
-                        "right": "Durante una riunione della comunità per aggiornare le politiche scolastiche a favore degli studenti LGBTQ+, un residente afferma: \"Per generazioni abbiamo insegnato che il matrimonio è solo tra uomo e donna. È sempre stato così e deve restare così. Promuovere queste nuove idee nelle scuole è un attacco alle nostre tradizioni.\""
+                        "left": "Appello alla tradizione: quando un argomento presuppone che qualcosa sia buono o vero semplicemente perché viene fatto o creduto tradizionalmente, senza considerare se sia ancora valido nel contesto attuale.",
+                        "right": "Durante un incontro aperto alla comunità locale sull'aggiornamento delle politiche scolastiche per renderle più inclusive verso gli studenti LGBTQ+, un residente di lunga data si alza e afferma: \"Per generazioni, abbiamo insegnato che il matrimonio è solo tra un uomo e una donna. È sempre stato così e dovrebbe rimanere così. Promuovere queste nuove idee nelle nostre scuole è un attacco ai nostri valori\"."
                     },
                     {
                         "id": "c",
-                        "left": "Post hoc, ergo propter hoc",
-                        "right": "Durante un dibattito pubblico sul reinsediamento dei rifugiati, un oratore sottolinea l'aumento della disoccupazione dopo il loro arrivo: \"Da quando sono arrivati, la disoccupazione è salita. È ovvio che stanno prendendo i posti di lavoro della nostra gente.\""
+                        "left": "Post hoc, ergo propter hoc – errore logico nel concludere erroneamente che esiste una connessione causale tra due eventi semplicemente perché uno si è verificato prima dell’altro",
+                        "right": "Durante un dibattito pubblico sull'accoglienza di rifugiati, un intervento sottolinea un recente aumento della disoccupazione, verificatosi poco dopo l'arrivo di un gruppo di rifugiati in città. Le parole dell'intervento: \"Da quando sono arrivati, i nostri tassi di disoccupazione sono schizzati alle stelle. È ovvio che stanno rubando tutti i posti di lavoro alla laboriosa gente del posto\"."
                     },
                     {
                         "id": "d",
-                        "left": "Pregiudizio di appartenenza",
-                        "right": "Durante una discussione online su un crimine, una persona scrive: \"Sono cresciuto in questo quartiere e posso dirvi che sono gli immigrati a causare problemi. Noi 'originari' sappiamo com'era prima. Era tutto tranquillo.\""
+                        "left": "Bias di appartenenza: tendenza a favorire il proprio gruppo rispetto ad altri gruppi",
+                        "right": "Durante una discussione online su un recente crimine riportato dai giornali, una persona scrive: \"Come persona che ha vissuto in questo quartiere per tutta la vita, posso dirvi che sono i nuovi immigrati a causare tutti i problemi. Noi, residenti da una vita, sappiamo cosa sta succedendo veramente. La situazione era pacifica prima del loro arrivo\"."
                     },
                     {
                         "id": "e",
-                        "left": "Bias del punto cieco",
-                        "right": "Durante un dibattito su gruppi religiosi, una persona afferma: \"A differenza di loro, i miei giudizi sono oggettivi. Il fatto che la loro religione sia arretrata e pericolosa non è un pregiudizio, è un dato di fatto.\""
+                        "left": "Il pregiudizio del punto cieco è la tendenza a considerarsi meno prevenuti rispetto alle altre persone",
+                        "right": "Durante un acceso dibattito sui gruppi religiosi, un partecipante afferma: \"Potrebbe essere una verità scomoda, ma va detto che, a differenza di quelle persone, le cui credenze sono piene di pregiudizi e intolleranza, la mia conclusione obiettiva è che è la loro religione a essere intrinsecamente arretrata e pericolosa\"."
                     },
                     {
                         "id": "f",
-                        "left": "Piano inclinato",
-                        "right": "Durante un dibattito sulla costruzione di un centro comunitario per una minoranza, un oratore afferma: \"Se permettiamo questo centro, poi vorranno le loro leggi. Poi ci conquisteranno e imporranno la loro cultura. Dobbiamo fermarli ora.\""
+                        "left": "Un errore del pendio scivoloso – si verifica quando qualcuno afferma che una posizione o una decisione porterà a una serie di conseguenze negative indesiderate",
+                        "right": "Durante un dibattito sull'autorizzazione di un nuovo centro cittadino per una minoranza etnica, un partecipante sostiene: \"Se permettiamo loro di costruire questo centro, poi pretenderanno le loro leggi. Presto prenderanno il controllo dei nostri quartieri e imporranno la loro cultura ai nostri figli. Dobbiamo fermarli subito, altrimenti perderemo completamente il nostro stile di vita\"."
                     }
                 ],
                 "feedback": {
@@ -361,7 +369,343 @@
                     "wrong": "❌ Coppia errata!"
                 },
                 "summaryTitle": "Il tuo riepilogo",
-                "reflectionText": "È stato facile o difficile abbinare le situazioni ai bias / fallacie logiche?\n\nNe conoscevi già alcune? Quali? Quali erano completamente nuove?\n\nSai fornire esempi concreti della tua realtà che rappresentano alcuni di questi bias o fallacie?\n\nConosci altri esempi di bias o fallacie logiche?\n\nIn che modo la conoscenza di questi bias / fallacie può aiutarci ad agire contro l'hate speech e la disinformazione?"
+                "reflectionText": "È stato facile o difficile abbinare le situazioni e le fallacie/pregiudizi logici?\nNe conoscevi alcune? Quali? \nQuali erano totalmente nuove per te? \nPuoi fornire esempi concreti tratti dalla tua realtà che rappresentino alcune di queste fallacie e preconcetti?Conosci altri esempi di fallacie/preconcetti logici?\nIn che modo la conoscenza di queste preconcetti/fallacie logiche può aiutarti (e aiutare gli altri) ad agire contro l'incitamento all'odio e alla disinformazione?"
+            },
+            "lateralreading": {
+                "title": "Lettura laterale",
+                "description": "<p>La lettura laterale è una tecnica che consente di valutare rapidamente se il contenuto di una pagina web proviene da fonti affidabili e si basa su dati, riferimenti e informazioni di qualità. In una ricerca condotta dallo <a href=\"https://cor.inquirygroup.org/research/lateral-reading-on-the-open-internet/\" target=\"_blank\" rel=\"noopener noreferrer\">Stanford History Education Group</a>, i ricercatori hanno scoperto che si tratta di una strategia efficiente per valutare la qualità di un sito web che non si conosce.</p><p>Questa strategia (<a href=\"https://cor.inquirygroup.org/curriculum/collections/teaching-lateral-reading/\" target=\"_blank\" rel=\"noopener noreferrer\">link alla strategia</a>), utilizzata dai fact-checker per valutare le informazioni online, prevede di leggere un sito web non &quot;verticalmente&quot;, come se fosse un documento stampato, per valutarne la qualità, ma di utilizzare un metodo chiamato &quot;lettura laterale&quot;. Ciò significa analizzare la pagina web aprendo diverse schede per rispondere a domande chiave sul contenuto.</p><ul><li>Chi è l'autore del contenuto? È una fonte esperta?</li><li>È possibile trovare prove? È basato su fatti e dati?</li><li>È pubblicato da altre fonti affidabili? Cosa ne dicono?</li></ul><p>Oltre alle domande chiave di cui sopra, la tecnica della lettura laterale ci invita a promuovere il pensiero critico e ad approfondire l'analisi di altri aspetti del contenuto, come:</p><ul><li>Chi finanzia o sponsorizza il sito su cui è stato pubblicato l'articolo originale?</li><li>Cosa dicono altre fonti autorevoli su quel sito?</li><li>Quando cercate l'argomento dell'articolo originale, i risultati principali provengono da organizzazioni di fact-checking?</li><li>Sono state sollevate domande su altri articoli scritti dall'autore?</li><li>Le informazioni che trovate altrove contraddicono l'articolo originale?</li><li>Le testate giornalistiche credibili riportano – o forse ancora più importante, non riportano – ciò che state leggendo?</li></ul><p>La lettura laterale ci aiuta a valutare meglio le nostre fonti di informazione, ovvero a distinguere tra verità e menzogna, e a esercitare consapevolmente il nostro diritto di scegliere come accedere alle informazioni.</p>",
+                "objectivesTitle": "Obiettivi",
+                "objectives": "<ul><li>Apprendere le caratteristiche essenziali che rendono una fonte credibile e trasparente</li><li>Sviluppare competenze per identificare le fonti di informazione affidabili</li></ul>",
+                "startButton": "Inizia l'attività",
+                "task": "Prova! Devi valutare l'attendibilità della pagina web proposta utilizzando il metodo di lettura laterale. Controlla tutti gli screenshot e verifica se riesci a trovare prove che indichino se la pagina che stai guardando sia una fonte affidabile. Abbinale al tipo di informazione corrispondente che riesci a trovare oppure clicca su &quot;Non trovato&quot;.",
+                "sections": [
+                    {
+                        "intro": "<p>https://www.quotidianosanita.it/</p>",
+                        "images": [
+                            "/img/lateralReading/it/1.png",
+                            "/img/lateralReading/it/2.png",
+                            "/img/lateralReading/it/3.png",
+                            "/img/lateralReading/it/4.png",
+                            "/img/lateralReading/it/5.png",
+                            "/img/lateralReading/it/6.png",
+                            "/img/lateralReading/it/6bis.png",
+                            "/img/lateralReading/it/7.png"
+                        ],
+                        "questions": [
+                            {
+                                "question": "E' possibile identificare l'autore?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 5",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 6",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 7",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 8",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Corretto! Una sezione del sito è dedicata alla redazione responsabile delle pubblicazioni e degli articoli. Qui si possono trovare i riferimenti a Direttore, Vicedirettore e Direttore Editoriale e l'iscrizione al Tribunale di Roma e al ROC (il ROC è un registro pubblico istituito dall'Autorità per le Garanzie nelle Comunicazioni - Agcom), due ulteriori elementi che rendono Quotidianosanità.it una piattaforma affidabile e credibile.",
+                                    "incorrect": "Sbagliato! Una sezione del sito è dedicata alla redazione responsabile delle pubblicazioni e degli articoli. Qui si possono trovare i riferimenti a Direttore, Vicedirettore e Direttore Editoriale e l'iscrizione al Tribunale di Roma e al ROC (il ROC è un registro pubblico istituito dall'Autorità per le Garanzie nelle Comunicazioni - Agcom), due ulteriori elementi che rendono Quotidianosanità.it una piattaforma affidabile e credibile."
+                                }
+                            },
+                            {
+                                "question": "E' possibile trovare i contenuti e la metodologia del sito web?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 5",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 6",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 7",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 8",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Corretto! Gli articoli pubblicati nel sito includono riferimenti a statistiche e ricerche di una pluralità di fonti. Molto spesso sono presenti tabelle e grafici di dati a corredo degli articoli. Inoltre negli articoli e nelle ricerche pubblicate vengono citate fonti attendibili come il Ministero della Salute, con link diretti a documenti e report governativi ufficiali. ",
+                                    "incorrect": "Sbagliato! Gli articoli pubblicati nel sito includono riferimenti a statistiche e ricerche di una pluralità di fonti. Molto spesso sono presenti tabelle e grafici di dati a corredo degli articoli. Inoltre negli articoli e nelle ricerche pubblicate vengono citate fonti attendibili come il Ministero della Salute, con link diretti a documenti e report governativi ufficiali. "
+                                }
+                            },
+                            {
+                                "question": "È possibile trovare informazioni sull'affidabilità del sito web?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 5",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 6",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 7",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 8",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Corretto! Le informazioni sul Direttore Responsabile conferiscono affidabilità al sito web. Inoltre molte pubblicazioni presenti nella piattaforma sono realizzate in collaborazione con esperti del settore. Una sezione del sito è curata in collaborazione con Federsanità, la Confederazione delle Federsanità Anci regionali che associa dal 1995 le Aziende Sanitarie Locali, Ospedaliere e gli Irccs insieme ai rappresentanti dei Comuni associati alle Anci regionali di riferimento.",
+                                    "incorrect": "Sbagliato! Le informazioni sul Direttore Responsabile conferiscono affidabilità al sito web. Inoltre molte pubblicazioni presenti nella piattaforma sono realizzate in collaborazione con esperti del settore. Una sezione del sito è curata in collaborazione con Federsanità, la Confederazione delle Federsanità Anci regionali che associa dal 1995 le Aziende Sanitarie Locali, Ospedaliere e gli Irccs insieme ai rappresentanti dei Comuni associati alle Anci regionali di riferimento. "
+                                }
+                            },
+                            {
+                                "question": "Il contenuto è pubblicato da altre fonti affidabili?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 5",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 6",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 7",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 8",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Corretto! Quotidianosanità.it è citato da diverse fonti, sia all'interno del settore sanitario che da altri media: ad esempio, il sito web è citato da CARD,  Società Scientifica dei Servizi Territoriali – una libera Società scientifica senza fini di lucro il cui presidente è il dott. Gennaro Volpe, stimato professionista in ambito sanitario.",
+                                    "incorrect": "Sbagliato! Quotidianosanità.it è citato da diverse fonti, sia all'interno del settore sanitario che da altri media: ad esempio, il sito web è citato da CARD,  Società Scientifica dei Servizi Territoriali – una libera Società scientifica senza fini di lucro il cui presidente è il dott. Gennaro Volpe, stimato professionista in ambito sanitario."
+                                }
+                            }
+                        ],
+                        "conclusionTitle": "Conclusione",
+                        "conclusion": "Possiamo concludere che Quotidianosanità è un sito web che offre informazioni sanitarie di alta qualità. La sua metodologia è chiara e trasparente, basata su fonti multiple. I suoi autori sono correttamente identificati e rintracciabili. Pertanto, è una fonte adeguata per informazioni su argomenti relativi alla salute."
+                    },
+                    {
+                        "intro": "<p>https://www.imolaoggi.it/</p>",
+                        "images": [
+                            "/img/lateralReading/it/8.png",
+                            "/img/lateralReading/it/9.png",
+                            "/img/lateralReading/it/10.png",
+                            "/img/lateralReading/it/11.png"
+                        ],
+                        "questions": [
+                            {
+                                "question": "E' possibile identificare l'autore?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Corretto! Nel sito non è possibile trovare una sezione dedicata alla redazione. Gli articoli pubblicati sul sito non riportano il nome dell'autore ma solo la dicitura \"ImolaOggi\". Nella pagina Home si trova solo l'indicazione \"Direttore Armando Manocchia\": Manocchia non è un giornalista in quanto non è iscritto al relativo Ordine dei Giornalisti.",
+                                    "incorrect": "Sbagliato! Nel sito non è possibile trovare una sezione dedicata alla redazione. Gli articoli pubblicati sul sito non riportano il nome dell'autore ma solo la dicitura \"ImolaOggi\". Nella pagina Home si trova solo l'indicazione \"Direttore Armando Manocchia\": Manocchia non è un giornalista in quanto non è iscritto al relativo Ordine dei Giornalisti."
+                                }
+                            },
+                            {
+                                "question": "E' possibile trovare i contenuti e la metodologia del sito web?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": true
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Corretto! Non si trovano informazioni sul metodo seguito da ImolaOggi nè alcuna altra informazione utile ad identificare una redazione, chi collabora con il sito web o chi finanzia il sito web stesso. ",
+                                    "incorrect": "Sbagliato! Non si trovano informazioni sul metodo seguito da ImolaOggi nè alcuna altra informazione utile ad identificare una redazione, chi collabora con il sito web o chi finanzia il sito web stesso. "
+                                }
+                            },
+                            {
+                                "question": "È possibile trovare informazioni sull'affidabilità del sito web?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": true
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Corretto! Nessuna informazione viene fornita sull'affidabilità o la metodologia del sito web, negli atricoli pubblicati non vengono mai citati fonti affidabili o studi scientifici. Non è presente alcuna iscrizione a un tribunale italiano.",
+                                    "incorrect": "Sbagliato! Nessuna informazione viene fornita sull'affidabilità o la metodologia del sito web, negli atricoli pubblicati non vengono mai citati fonti affidabili o studi scientifici. Non è presente alcuna iscrizione a un tribunale italiano."
+                                }
+                            },
+                            {
+                                "question": "Il contenuto è pubblicato da altre fonti affidabili?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Corretto! Manocchia e ImolaOggi vengono citati su Wikipedia alla voce \"Marcello Foa\":  \"Armando Manocchia, proprietario del sito di fake news Imola Oggi\". ImolaOggi viene citato nel report di IDMO (Italian Digital Media Observatory) come uno \"dei siti di disinformazione più seguiti nel 2021\".",
+                                    "incorrect": "Sbagliato! Manocchia e ImolaOggi vengono citati su Wikipedia alla voce \"Marcello Foa\":  \"Armando Manocchia, proprietario del sito di fake news Imola Oggi\". ImolaOggi viene citato nel report di IDMO (Italian Digital Media Observatory) come uno \"dei siti di disinformazione più seguiti nel 2021\"."
+                                }
+                            }
+                        ],
+                        "conclusionTitle": "Conclusione",
+                        "conclusion": "Possiamo concludere che il sito web \"ImolaOggi\" si presenta come un giornale online che potrebbe sembrare dal nome un quotidiano locale della città di Imola che pubblica anche notizie di livello nazionale e internazionale. Grazie alla tecnica del Lateral Reading si può chiaramente verificare che il sito ImolaOggi non è un sito web attendibile nè una testata giornalistica riconosciuta. Il sito web diffonde contenuti manipolati, distorti e di hate speech."
+                    }
+                ]
             }
         }
     },
@@ -436,9 +780,9 @@
         },
         "resetView": " Reimposta vista",
         "tooltip": {
-            "label":"Etichetta",
-            "message_count":"Numero di messaggi",
-            "partecipants_count":"Numero di utenti",
+            "label": "Etichetta",
+            "message_count": "Numero di messaggi",
+            "partecipants_count": "Numero di utenti",
             "id": "ID Canale:",
             "iri": "Infodemic Risk:",
             "hs": "Hate Speech:",

@@ -27,6 +27,18 @@
       </v-col>
     </v-row>
 
+    <!-- Pulsante fine task -->
+    <div class="mt-8 text-center">
+      <v-btn
+        color="success"
+        size="large"
+        @click="openTaskCompleteDialog"
+      >
+        {{ t('educational.tasks.humanRights.completetask') }}
+      </v-btn>
+    </div>
+
+    <!-- Dialogo articolo -->
     <v-dialog v-model="dialog" max-width="600">
       <v-card>
         <v-card-title class="text-h6 font-weight-bold">{{ selectedArticle?.title }}</v-card-title>
@@ -39,10 +51,26 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
+
+    <!-- Dialogo completamento task -->
+    <v-dialog v-model="taskDialog" max-width="500">
+      <v-card>
+        <v-card-title class="text-h6 font-weight-bold">
+          {{ t('educational.tasks.humanRights.taskCompleteTitle') }}
+        </v-card-title>
+        <v-card-text>
+          {{ t('educational.tasks.humanRights.taskCompleteText') }}
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer />
+          <v-btn color="primary" @click="taskDialog = false">
+            {{ t('close') }}
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </v-container>
 </template>
-
-
 
 <script setup lang="ts">
 import { ref } from 'vue';
@@ -52,10 +80,16 @@ const { t, tm } = useI18n();
 
 const articles = tm('educational.tasks.humanRights.articles');
 const dialog = ref(false);
+const taskDialog = ref(false);
+
 const selectedArticle = ref<{ title: string; text: string } | null>(null);
 
 function openArticle(article: { title: string; text: string }) {
   selectedArticle.value = article;
   dialog.value = true;
+}
+
+function openTaskCompleteDialog() {
+  taskDialog.value = true;
 }
 </script>

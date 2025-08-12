@@ -9,30 +9,30 @@
           :class="getItemClass(leftColumn[i - 1].id, 'left')"
           @click="selectItem(leftColumn[i - 1], 'left')"
         >
-          <v-card-text class="font-weight-black text-h5 text-center">{{ leftColumn[i - 1].label }}</v-card-text>
+          <v-card-text class="font-weight-black text-h7 text-center">{{ leftColumn[i - 1].label }}</v-card-text>
         </v-card>
       </v-col>
       <v-col cols="5">
-    <v-card
-      :class="getItemClass(rightColumn[i - 1].id, 'right')"
-      @click="selectItem(rightColumn[i - 1], 'right')"
-    >
-      <v-card-text class="mt-4">
-        {{ rightColumn[i - 1].label }}
-        <span 
-          v-if="getPairedLabel(rightColumn[i - 1].id)" 
-          class="paired-label"
+        <v-card
+          :class="getItemClass(rightColumn[i - 1].id, 'right')"
+          @click="selectItem(rightColumn[i - 1], 'right')"
         >
-          {{ getPairedLabel(rightColumn[i - 1].id) }}
-        </span>
-      </v-card-text>
-    </v-card>
-  </v-col>
+          <v-card-text class="mt-4">
+            {{ rightColumn[i - 1].label }}
+            <span 
+              v-if="getPairedLabel(rightColumn[i - 1].id)" 
+              class="paired-label"
+            >
+              {{ getPairedLabel(rightColumn[i - 1].id) }}
+            </span>
+          </v-card-text>
+        </v-card>
+      </v-col>
     </v-row>
     <v-row justify="center" class="mt-4">
       <v-col cols="12" class="text-center">
-        <v-btn color="primary" @click="checkPairs">Verifica le coppie</v-btn>
-        <v-btn color="secondary" class="ml-2" @click="resetAll">Reset</v-btn>
+        <v-btn color="primary" @click="checkPairs">{{ t('educational.tasks.bias.checkButton') }}</v-btn>
+        <v-btn color="secondary" class="ml-2" @click="resetAll">{{ t('educational.tasks.bias.resetButton') }}</v-btn>
       </v-col>
     </v-row>
 
@@ -42,8 +42,10 @@
           {{ t("educational.tasks.bias.summaryTitle") }}
         </v-card-title>
         <v-card-text>
-          <p>✅ Corrette: {{ correctCount }}<br />❌ Errate: {{ incorrectCount }}</p>
-
+          <p>
+  ✅ {{ t('educational.tasks.bias.correct') }}: {{ correctCount }}<br />
+  ❌ {{ t('educational.tasks.bias.incorrect') }}: {{ incorrectCount }}
+</p>
           <v-divider class="my-4"></v-divider>
 
           <p class="text-body-1" style="white-space: pre-line">
@@ -51,15 +53,15 @@
           </p>
         </v-card-text>
         <v-card-actions class="justify-end">
-          <v-btn color="primary" @click="showDialog = false">OK</v-btn>
+          <v-btn color="primary" @click="showDialog = false">{{ t('common.ok') }}</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
   </v-container>
 </template>
 
-<script setup>
-import { ref, computed } from "vue";
+<script setup >
+import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 
 const { t, tm } = useI18n();
@@ -78,13 +80,6 @@ const rightColumn = ref(
   shuffleArray(rawPairs).map((p) => ({ id: p.id, label: p.right }))
 );
 
-const correctMatches = rawPairs.reduce((acc, p) => {
-  acc[p.id] = p.id;
-  return acc;
-}, {});
-const selected = ref({ id: null, column: null });
-const matches = ref({});
-const matchedState = ref({}); // {a: 'correct'/'wrong'}
 const showDialog = ref(false);
 const feedbackMessage = ref("");
 
@@ -205,11 +200,17 @@ const incorrectCount = ref(0);
 .paired-label {
   position: absolute;
   top: 8px;
-  left: 8px; 
+  left: 8px;
+  max-width: 90%;
   font-size: 0.8rem;
   padding: 2px 6px;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   font-weight: bold;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 10;
 }
 </style>

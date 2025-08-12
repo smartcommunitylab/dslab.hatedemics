@@ -5,7 +5,8 @@
         "button": "Login"
     },
     "common": {
-        "close": "Close"
+        "close": "Close",
+        "ok": "OK"
     },
     "menu": {
         "home": "Home",
@@ -182,6 +183,10 @@
                 "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Developing knowledge about human rights;</li><li>Rising awareness about connection between human rights and hate speech and disinformation;</li><li>Learning possible argument for reaction on hate speech and disinformation.</li></ul>",
                 "startButton": "Start",
                 "task": "Form 11 groups. Each group picks up one card. Each group discusses the meaning of the human right written on their card. After 5 minutes, the first group explains what the right means to them and how it connects to hate speech. The teacher may add to their explanation if needed.\nThen, the next group with the following card explains the meaning of their right and its connection to hate speech. Repeat this process until all groups have shared.",
+"completetask": "I have completed the activity",
+"taskCompleteTitle": "Activity completed",
+"taskCompleteText": "Did you already know all the human rights mentioned? Which ones are new to you? Was it easy or difficult to explain the meaning of these rights and find a link between them and hate speech? Can you name other human rights that were not mentioned?",
+              
                 "articles": [
                     {
                         "title": "Art. 1",
@@ -235,11 +240,11 @@
             },
             "debunking": {
                 "title": "Debunking",
-                "description": "<strong>What is debunking:</strong> When some people think of a fact-checker, they only see a journalist who looks into a claim, checks it and confirms whether it is true or not, the debunking process. Nevertheless, fighting disinformation effectively nowadays takes much more than that: quickly detecting possible hoaxes before they go viral and affect more people; explaining that not everything is black or white, helping people to be well-prepared against falsehoods through Media Literacy or regulation; creating tools to make it harder for others to deceive us, or fighting together against manipulation: this is what we call pre-bunking.<br><br><strong>What is a disinformation narrative:</strong> What disinformation creators want you to believe. When an idea is repeated many times, people tend to believe it. Also, one hoax can contain several narratives.",
-                "objectivesTitle": "Objectives",
-                "objectives": "<ul><li>Debunk and learn about what disinformation narratives are. It's also a pre-bunking exercise: discover what disinformation narratives are and the most spread ones in your country.</li><li>Learn some debunk techniques in a guided way, and understand why critical thinking and identifying viral hoaxes is essential to fight disinformation narratives.</li></ul>",
-                "task": "<strong>Simulate the actions of a fact-checker</strong> by selecting the most effective way to debunk a claimed event. Can you also identify the related disinformation narrative?",
+                "description": "The objective of fact-checking is to provide citizens with tools and information that allow them to form opinions with all the data and verified facts at hand and, consequently, make informed decisions. Misinformation can influence how society thinks and how it deals with everyday problems, and that's why fact-checkers' central mission is to shed light and data on these issues. Broadly speaking, fact-checking involves detecting hoaxes, verifying their content, and spreading the denial.\nFact-checkers work daily on debunking: they verify content and explain why something is false after it’s been shared and viralized in social media. It’s important for the public record and to avoid that more people read, share and believe lies. Some debunkings are very difficult: take lots of time and require the use of specific tools. Others just require a lot of observation and searching for specific reliable information. \nLet´s try! In this exercise you will learn, in a guided way, some debunk techniques and why it's important to activate critical thinking and identify how the viralizing of some hoaxes can create and strengthen disinformation narratives.",
+                "objectivesTitle": "Objectives of the activity",
+                "objectives": "Debunk and learn about what disinformation narratives are. It's also a pre-bunking exercise: discover what are disinformation narratives and the most spread ones in their country. \nYou will learn, in a guided way, some debunk techniques and all why it's important to activate critical thinking and identify how the viralizing of some hoaxes can create and strengthen disinformation narratives. ",
                 "startButton": "Start activity",
+                "task": "Simulate the actions of a fact-checker by selecting the most effective way to debunk a suspicious content. Can you also identify the related disinformation narrative?",
                 "correct": "Correct! Well done.",
                 "incorrect": "Incorrect answer. Try again.",
                 "next": "Next question",
@@ -318,35 +323,39 @@
                 "objectives": "<ul><li><strong>Develop awareness</strong> about social mechanisms, cognitive biases and logical fallacies</li><li><strong>Develop critical thinking competence</strong></li></ul><p>Social mechanisms, cognitive biases and logical fallacies are factors which help hate speech and disinformation spread. By getting to know some of them, we can be more immune to them and be more critical to other forms of manipulation.</p>",
                 "startButton": "Start activity",
                 "task": "- Match the situation with the relevant logical fallacy / bias\n- Is the situation an example of hate speech / disinformation / misinformation? If yes, why?",
+                "checkButton": "Check pairs",
+                "resetButton": "Reset",
+                "correct": "Correct pairs",
+                "incorrect": "Incorrect pairs",
                 "pairs": [
                     {
                         "id": "a",
-                        "left": "Argumentum ad populum",
+                        "left": "Argumentum ad populum – a non-substantive way of arguing in which the speaker appeals to the tastes, preferences and prejudices of the crowd. Based on national egoism, instincts, stereotypes or prejudices, the speaker tries to win over the crowd to their thesis",
                         "right": "During a heated online discussion about immigration, a user posts: \"Everyone knows that these people are dangerous and bring crime. Just look at how many people in our town agree with me. We need to get them out to protect our community.\""
                     },
                     {
                         "id": "b",
-                        "left": "Appeal to tradition",
+                        "left": "Appeal to tradition – when an argument assumes something is good or true simply because it is being traditionally done or believed, without considering whether it is still valid in the present context",
                         "right": "During a community meeting about updating local school policies to be more inclusive of LGBTQ+ students, a long-time resident stands up and says: \"For generations, we have taught that marriage is only between a man and a woman. This is how it has always been and how it should stay. Promoting these new ideas in our schools is an attack on our traditions and values.\""
                     },
                     {
                         "id": "c",
-                        "left": "Post hoc, ergo propter hoc",
+                        "left": "Post hoc, ergo propter hoc – logical error in wrongly concluding that there is a causal connection between two events merely because one occurred before the other",
                         "right": "During a public debate on refugee resettlement, a speaker points to a recent rise in unemployment that occurred shortly after a group of refugees arrived in the town. They declare, \"Ever since they arrived, our unemployment rates have shot up. It's obvious they are taking all the jobs from hardworking local people.\""
                     },
                     {
                         "id": "d",
-                        "left": "Membership bias",
+                        "left": "Membership bias – tendency to favour own group over other groups",
                         "right": "During an online discussion about a recent crime reported in the news, a person writes, \"As someone who has lived in this neighbourhood my whole life, I can tell you it's the new immigrants causing all the trouble. We 'originals' know what's really going on, and things were peaceful before they came.\""
                     },
                     {
                         "id": "e",
-                        "left": "Blind spot bias",
+                        "left": "Blind spot bias is the tendency to see oneself as less biased than other people",
                         "right": "During a heated debate about religious groups, a participant states, \"Unlike those people, whose beliefs are full of prejudice and intolerance, I've examined my views objectively. My conclusion that their religion is inherently backward and dangerous isn't a bias; it's just an uncomfortable fact.\""
                     },
                     {
                         "id": "f",
-                        "left": "Slippery slope",
+                        "left": "A slippery slope fallacy – occurs when someone claims that a position or decision will lead to a series of unintended negative consequences",
                         "right": "During a debate about allowing a new community center for a minority group, a speaker argues: \"If we allow them to build this center, next they'll demand their own laws. Soon, they'll be taking over our neighbourhoods and imposing their culture on our children. We must stop this now, or we will lose our entire way of life.\""
                     }
                 ],

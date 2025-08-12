@@ -5,7 +5,8 @@
         "button": "Login"
     },
     "common": {
-        "close": "Close"
+        "close": "Close",
+        "ok": "OK"
     },
     "menu": {
         "home": "Home",
@@ -170,64 +171,67 @@
         "warningCheckbox": "Don't show this message again",
         "tasks": {
             "humanRights": {
-  "title": "Derechos Humanos",
-  "description": "Los derechos humanos fundamentales establecidos por las Naciones Unidas en la <a href='https://www.un.org/en/about-us/universal-declaration-of-human-rights' target='_blank' rel='noopener'>Declaración Universal de los Derechos Humanos</a> protegen y defienden la dignidad, la igualdad y la libertad de todas las personas. Algunos de ellos se enumeran a continuación en una versión simplificada.<br><br><iframe width='100%' height='315' src='https://www.youtube.com/embed/nDgIVseTkuE?si=Jomr_pVjQAdBgfGg' title='Vídeo sobre Derechos Humanos' frameborder='0' allowfullscreen></iframe>",
-  "objectivesTitle": "Objetivos de la actividad",
-  "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Desarrollar conocimientos sobre derechos humanos;</li><li>Concienciar sobre la conexión entre los derechos humanos, el discurso de odio y la desinformación;</li><li>Aprender posibles argumentos para reaccionar ante el discurso de odio y la desinformación.</li></ul>",
-  "startButton": "Comenzar",
-  "task": "Formamos 11 grupos. Cada grupo coge una tarjeta y debate sobre el significado del derecho humano escrito en ella. Después de 5 minutos, el primer grupo explica qué significa este derecho para ellos y cómo se relaciona con el discurso de odio. El profesor puede ampliar su explicación si es necesario. Luego, el siguiente grupo, con la siguiente tarjeta, explica el significado de su derecho y su relación con el discurso de odio. Repetimos este proceso hasta que todos los grupos hayan hablado.",
-  "articles": [
-    {
-      "title": "Art. 1",
-      "text": "Todos los seres humanos nacen libres e iguales en dignidad y derechos."
-    },
-    {
-      "title": "Art. 2",
-      "text": "Toda persona tiene derecho a ser tratada de la misma manera, independientemente de su raza, color, sexo, idioma, religión, opinión política, propiedad, nacimiento o cualquier otra condición."
-    },
-    {
-      "title": "Art. 3",
-      "text": "Toda persona tiene derecho a la vida y a vivir con libertad y seguridad."
-    },
-    {
-      "title": "Art. 5",
-      "text": "Toda persona tiene derecho a no ser sometida a tortura ni a tratos inhumanos o degradantes."
-    },
-    {
-      "title": "Art. 7",
-      "text": "La ley es la misma para todos."
-    },
-    {
-      "title": "Art. 13",
-      "text": "Toda persona tiene derecho a vivir y viajar libremente dentro de las fronteras del Estado."
-    },
-    {
-      "title": "Art. 14",
-      "text": "Toda persona tiene derecho a ir a otro país y pedir protección si está siendo perseguida o está en peligro de ser perseguida."
-    },
-    {
-      "title": "Art. 16",
-      "text": "Toda persona tiene derecho a casarse y tener una familia."
-    },
-    {
-      "title": "Art. 18",
-      "text": "Toda persona tiene derecho a creer lo que quiera (incluida, aunque no exclusivamente, la religión)."
-    },
-    {
-      "title": "Art. 19",
-      "text": "Toda persona tiene derecho a expresar lo que piensa y a dar y recibir información libremente."
-    },
-    {
-      "title": "Art. 29",
-      "text": "Todas las personas tienen que respetar los derechos de los demás."
-    },
-    {
-      "title": "Art. 30",
-      "text": "Nadie tiene derecho a quitar ninguno de estos derechos."
-    }
-  ],
-  "summary": "¿Ya conocías todos los derechos humanos mencionados? ¿Cuáles eran nuevos para ti? ¿Te resultó fácil o difícil explicar el significado de estos derechos y relacionarlos con el discurso de odio? ¿Puedes nombrar otros derechos humanos que no se citaron?"
-},
+                "title": "Derechos Humanos",
+                "description": "Los derechos humanos fundamentales establecidos por las Naciones Unidas en la <a href='https://www.un.org/en/about-us/universal-declaration-of-human-rights' target='_blank' rel='noopener'>Declaración Universal de los Derechos Humanos</a> protegen y defienden la dignidad, la igualdad y la libertad de todas las personas. Algunos de ellos se enumeran a continuación en una versión simplificada.<br><br><iframe width='100%' height='315' src='https://www.youtube.com/embed/nDgIVseTkuE?si=Jomr_pVjQAdBgfGg' title='Vídeo sobre Derechos Humanos' frameborder='0' allowfullscreen></iframe>",
+                "objectivesTitle": "Objetivos de la actividad",
+                "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Desarrollar conocimientos sobre derechos humanos;</li><li>Concienciar sobre la conexión entre los derechos humanos, el discurso de odio y la desinformación;</li><li>Aprender posibles argumentos para reaccionar ante el discurso de odio y la desinformación.</li></ul>",
+                "startButton": "Comenzar",
+                "task": "Formamos 11 grupos. Cada grupo coge una tarjeta y debate sobre el significado del derecho humano escrito en ella. Después de 5 minutos, el primer grupo explica qué significa este derecho para ellos y cómo se relaciona con el discurso de odio. El profesor puede ampliar su explicación si es necesario. Luego, el siguiente grupo, con la siguiente tarjeta, explica el significado de su derecho y su relación con el discurso de odio. Repetimos este proceso hasta que todos los grupos hayan hablado.",
+                "completetask": "He completado la actividad",
+                "taskCompleteTitle": "Actividad completada",
+                "taskCompleteText": "¿Ya conocías todos los derechos humanos mencionados? ¿Cuáles son nuevos para ti? ¿Fue fácil o difícil explicar el significado de estos derechos y encontrar una relación entre ellos y el discurso de odio? ¿Puedes nombrar otros derechos humanos que no se mencionaron?",
+                "articles": [
+                    {
+                        "title": "Art. 1",
+                        "text": "Todos los seres humanos nacen libres e iguales en dignidad y derechos."
+                    },
+                    {
+                        "title": "Art. 2",
+                        "text": "Toda persona tiene derecho a ser tratada de la misma manera, independientemente de su raza, color, sexo, idioma, religión, opinión política, propiedad, nacimiento o cualquier otra condición."
+                    },
+                    {
+                        "title": "Art. 3",
+                        "text": "Toda persona tiene derecho a la vida y a vivir con libertad y seguridad."
+                    },
+                    {
+                        "title": "Art. 5",
+                        "text": "Toda persona tiene derecho a no ser sometida a tortura ni a tratos inhumanos o degradantes."
+                    },
+                    {
+                        "title": "Art. 7",
+                        "text": "La ley es la misma para todos."
+                    },
+                    {
+                        "title": "Art. 13",
+                        "text": "Toda persona tiene derecho a vivir y viajar libremente dentro de las fronteras del Estado."
+                    },
+                    {
+                        "title": "Art. 14",
+                        "text": "Toda persona tiene derecho a ir a otro país y pedir protección si está siendo perseguida o está en peligro de ser perseguida."
+                    },
+                    {
+                        "title": "Art. 16",
+                        "text": "Toda persona tiene derecho a casarse y tener una familia."
+                    },
+                    {
+                        "title": "Art. 18",
+                        "text": "Toda persona tiene derecho a creer lo que quiera (incluida, aunque no exclusivamente, la religión)."
+                    },
+                    {
+                        "title": "Art. 19",
+                        "text": "Toda persona tiene derecho a expresar lo que piensa y a dar y recibir información libremente."
+                    },
+                    {
+                        "title": "Art. 29",
+                        "text": "Todas las personas tienen que respetar los derechos de los demás."
+                    },
+                    {
+                        "title": "Art. 30",
+                        "text": "Nadie tiene derecho a quitar ninguno de estos derechos."
+                    }
+                ],
+                "summary": "¿Ya conocías todos los derechos humanos mencionados? ¿Cuáles eran nuevos para ti? ¿Te resultó fácil o difícil explicar el significado de estos derechos y relacionarlos con el discurso de odio? ¿Puedes nombrar otros derechos humanos que no se citaron?"
+            },
             "debunking": {
                 "title": "Desmitificación",
                 "description": "<strong>Qué es la desmitificación:</strong> Cuando algunas personas piensan en un verificador de hechos (fact‑checker), solo ven a un periodista que investiga una afirmación, la verifica y confirma si es verdadera o no, el proceso de desmitificación. Sin embargo, luchar contra la desinformación eficazmente hoy en día exige mucho más: detectar rápidamente posibles bulos antes de que se vuelvan virales y afecten a más personas; explicar que no todo es blanco o negro, ayudar a las personas a estar bien preparadas frente a falsedades mediante la alfabetización mediática o regulación; crear herramientas que dificulten que nos engañen o combatir juntos contra la manipulación: esto es lo que llamamos pre‑bunking.<br><br><strong>Qué es una narrativa de desinformación:</strong> Lo que los creadores de desinformación quieren que creas. Cuando una idea se repite muchas veces, la gente tiende a creerla. Además, un solo bulo puede contener varias narrativas.",
@@ -308,50 +312,54 @@
                 ]
             },
             "bias": {
-                "title": "Biases and fallacies",
-                "description": "<strong>Logical fallacies associated with hate speech and disinformation</strong><br><br>The content of hate speech and disinformation may sometimes look very convincing. This is because people who perpetuate hate speech often rely on logical fallacies – constructs hate groups use to justify their causes and their belief that people who come across this content would consider it as reasonable and truthful. Logical fallacies can use false premises, true premises but false conclusions, or true premises and conclusions but a false argument. Some fallacies are produced with the intention of deceiving or making misinformation viral.<br><br>There are many fallacies that show up in hate speech. Here are some of them:<br><br><strong>Argumentum ad populum</strong> – a non-substantive way of arguing in which the speaker appeals to the tastes, preferences and prejudices of the crowd. Based on national egoism, instincts, stereotypes or prejudices, the speaker tries to win over the crowd to their thesis (e.g. The majority of people in our country thinks like this, so this is the way we should act);<br><br><strong>Ipse dixit</strong> – the way of argumenting without providing a valid proof (e.g. the political party said it so it must be true);<br><br><strong>A slippery slope fallacy</strong> – occurs when someone claims that a position or decision will lead to a series of unintended negative consequences (e.g. we cannot let the migrants stay in our country as they will bring their families here and have children, which will lead us to losing our jobs and the collapse of the social security system, and as a result we will be poor and lose control over our country);<br><br><strong>Either-or fallacy</strong> – where someone claims there are only two ways of approaching the issue, while there are many other options (e.g. you can either vote for this party or live your life in constant danger);<br><br><strong>Post hoc, ergo propter hoc</strong> – logical error in wrongly concluding that there is a causal connection between two events merely because one occurred before the other (e.g. Ever since we got a new maths teacher, I’ve been getting bad grades. She must be the reason I’m doing poorly);<br><br><strong>Argumentum Ad Hominem</strong> – when someone attacks the person making an argument rather than the argument itself (e.g. Don't listen to Peter's opinion on the group project — he's lazy and never does anything right);<br><br><strong>Cherry picking</strong> – when someone selectively presents evidence that supports their argument while ignoring or dismissing evidence that contradicts it (e.g. \"Hate speech isn't harmful. Look at this one study that says it's just offensive, not dangerous\" - while ignoring dozens of other studies showing the psychological and social harm of hate speech);<br><br><strong>Appeal to tradition</strong> – when an argument assumes something is good or true simply because it is being traditionally done or believed, without considering whether it is still valid in the present context (e.g. In our school we have always had more men than women in the school council, and it always worked well).<br><br><strong>Argument from anecdote</strong> – someone uses a single, often personal, experience or story to support a general conclusion or claim (e.g. I don't think hate speech leads to real harm. I’ve heard people make offensive jokes all the time, and no one I know has ever been seriously affected);<br><br><strong>Ad ignorantiam fallacy</strong> – someone argues that a claim is true or false simply because it has not been proven the opposite (e.g. No one has ever proven that students cheat on online exams, so it must not happen).<br><br><strong>Cognitive Biases</strong><br><br>Our brain uses shortcuts to help us make quick decisions in everyday life. These shortcuts help us focus only on the most important information, so we don’t get overwhelmed by everything we see and hear. This makes the brain work more efficiently. However, the downside is that these shortcuts can sometimes lead us to make mistakes or misunderstand things because of our thinking (cognitive) biases.<br><br>We are all affected by cognitive biases in our decision-making process, and those who spread disinformation understand these biases very well. Here are some examples of cognitive biases:<br><br><strong>Membership bias</strong> – tendency to favour own group over other groups;<br><strong>Availability bias</strong> – tendency to rely on information that comes quickly to mind;<br><strong>Causality bias</strong> – occurs when people believe that there is a relationship between events that are actually independent of each other;<br><strong>Blind spot bias</strong> – the tendency to see oneself as less biased than other people;<br><strong>Confirmation bias</strong> – tendency to search for, interpret, favour and recall information in a way that confirms prior beliefs;<br><strong>Authority bias</strong> – tendency to be more influenced by the opinions of authority people.",
-                "objectivesTitle": "Objectives",
-                "objectives": "<ul><li><strong>Develop awareness</strong> about social mechanisms, cognitive biases and logical fallacies</li><li><strong>Develop critical thinking competence</strong></li></ul><p>Social mechanisms, cognitive biases and logical fallacies are factors which help hate speech and disinformation spread. By getting to know some of them, we can be more immune to them and be more critical to other forms of manipulation.</p>",
-                "startButton": "Start activity",
-                "task": "- Match the situation with the relevant logical fallacy / bias\n- Is the situation an example of hate speech / disinformation / misinformation? If yes, why?",
+                "title": "Sesgos y falacias",
+                "description": "<strong>Falacias lógicas asociadas con el discurso de odio y la desinformación</strong><br><br>El contenido del discurso de odio y la desinformación puede parecer muy convincente en ocasiones. Esto se debe a que quienes perpetúan el discurso de odio a menudo recurren a falacias lógicas – construcciones que los grupos de odio usan para justificar sus causas y su creencia de que las personas que se encuentran con este contenido lo considerarán razonable y verdadero. Las falacias lógicas pueden usar premisas falsas, premisas verdaderas pero conclusiones falsas, o premisas y conclusiones verdaderas pero un argumento falso. Algunas falacias se producen con la intención de engañar o hacer viral la desinformación.<br><br>Hay muchas falacias que aparecen en el discurso de odio. Aquí algunas de ellas:<br><br><strong>Argumentum ad populum</strong> – una forma no sustantiva de argumentar en la que el hablante apela a los gustos, preferencias y prejuicios de la multitud. Basado en el egoísmo nacional, instintos, estereotipos o prejuicios, el hablante intenta ganar a la multitud para su tesis (por ejemplo: La mayoría de las personas en nuestro país piensan así, por lo tanto, así debemos actuar);<br><br><strong>Ipse dixit</strong> – forma de argumentar sin proporcionar una prueba válida (por ejemplo: el partido político lo dijo, así que debe ser verdad);<br><br><strong>Falacia de la pendiente resbaladiza</strong> – ocurre cuando alguien afirma que una posición o decisión llevará a una serie de consecuencias negativas no deseadas (por ejemplo: no podemos dejar que los migrantes se queden en nuestro país porque traerán a sus familias y tendrán hijos, lo que nos llevará a perder nuestros trabajos y al colapso del sistema de seguridad social, y como resultado seremos pobres y perderemos el control de nuestro país);<br><br><strong>Falacia del falso dilema (o falacia del “o… o…”)</strong> – cuando alguien afirma que solo existen dos maneras de abordar un tema, aunque hay muchas otras opciones (por ejemplo: o votas por este partido o vivirás tu vida en constante peligro);<br><br><strong>Post hoc, ergo propter hoc</strong> – error lógico al concluir erróneamente que existe una conexión causal entre dos eventos solo porque uno ocurrió antes que el otro (por ejemplo: desde que tenemos un nuevo profesor de matemáticas, he estado sacando malas notas. Ella debe ser la razón por la que me va mal);<br><br><strong>Argumentum Ad Hominem</strong> – cuando alguien ataca a la persona que hace un argumento en lugar del argumento en sí (por ejemplo: no escuches la opinión de Pedro sobre el proyecto grupal, él es perezoso y nunca hace nada bien);<br><br><strong>Selección sesgada (Cherry picking)</strong> – cuando alguien presenta selectivamente evidencia que apoya su argumento mientras ignora o descarta evidencia que lo contradice (por ejemplo: “El discurso de odio no es dañino. Mira este estudio que dice que solo es ofensivo, no peligroso” — mientras ignora decenas de otros estudios que muestran el daño psicológico y social del discurso de odio);<br><br><strong>Apego a la tradición</strong> – cuando un argumento asume que algo es bueno o verdadero simplemente porque se ha hecho o creído tradicionalmente, sin considerar si sigue siendo válido en el contexto actual (por ejemplo: en nuestra escuela siempre ha habido más hombres que mujeres en el consejo escolar, y siempre ha funcionado bien).<br><br><strong>Argumento anecdótico</strong> – alguien usa una experiencia o historia única, a menudo personal, para apoyar una conclusión o afirmación general (por ejemplo: no creo que el discurso de odio cause daño real. He escuchado a personas hacer bromas ofensivas todo el tiempo, y nadie que conozca ha sido seriamente afectado);<br><br><strong>Falacia ad ignorantiam</strong> – alguien argumenta que una afirmación es verdadera o falsa simplemente porque no se ha probado lo contrario (por ejemplo: nadie ha probado que los estudiantes hagan trampa en los exámenes en línea, así que no debe pasar).<br><br><strong>Sesgos Cognitivos</strong><br><br>Nuestro cerebro usa atajos para ayudarnos a tomar decisiones rápidas en la vida diaria. Estos atajos nos ayudan a enfocarnos solo en la información más importante, para no abrumarnos con todo lo que vemos y escuchamos. Esto hace que el cerebro trabaje de manera más eficiente. Sin embargo, la desventaja es que estos atajos a veces nos llevan a cometer errores o malinterpretar cosas debido a nuestros sesgos de pensamiento (cognitivos).<br><br>Todos estamos afectados por sesgos cognitivos en nuestro proceso de toma de decisiones, y quienes difunden desinformación entienden muy bien estos sesgos. Aquí algunos ejemplos de sesgos cognitivos:<br><br><strong>Sesgo de pertenencia</strong> – tendencia a favorecer al propio grupo sobre otros grupos;<br><strong>Sesgo de disponibilidad</strong> – tendencia a basarse en información que viene rápidamente a la mente;<br><strong>Sesgo de causalidad</strong> – ocurre cuando las personas creen que hay una relación entre eventos que en realidad son independientes;<br><strong>Sesgo del punto ciego</strong> – tendencia a verse a uno mismo como menos sesgado que otras personas;<br><strong>Sesgo de confirmación</strong> – tendencia a buscar, interpretar, favorecer y recordar información que confirma creencias previas;<br><strong>Sesgo de autoridad</strong> – tendencia a ser más influenciado por las opiniones de personas con autoridad.",
+                "objectivesTitle": "Objetivos de la actividad",
+                "objectives": "<ul><li><strong>Desarrollar conciencia</strong> sobre los mecanismos sociales, sesgos cognitivos y falacias lógicas</li><li><strong>Desarrollar competencia en pensamiento crítico</strong></li></ul><p>Los mecanismos sociales, sesgos cognitivos y falacias lógicas son factores que ayudan a que el discurso de odio y la desinformación se propaguen. Conocer algunos de ellos nos hace más inmunes y más críticos ante otras formas de manipulación.</p>",
+                "startButton": "Tarea",
+                "task": "- Relaciona la situación con la falacia lógica o sesgo correspondiente\n- ¿Es la situación un ejemplo de discurso de odio / desinformación / información errónea? Si es así, ¿por qué?",
+                "checkButton": "Verificar parejas",
+                "resetButton": "Reiniciar",
+                "correct": "Parejas correctas",
+                "incorrect": "Parejas incorrectas",
                 "pairs": [
                     {
                         "id": "a",
-                        "left": "Argumentum ad populum",
-                        "right": "During a heated online discussion about immigration, a user posts: \"Everyone knows that these people are dangerous and bring crime. Just look at how many people in our town agree with me. We need to get them out to protect our community.\""
+                        "left": "Argumentum ad populum: forma de argumentar no sustantiva en la que se apela a gustos, prejuicios o creencias del público. Se basa en el egoísmo nacional, estereotipos o prejuicios, y busca que la mayoría apoye una tesis por ser popular",
+                        "right": "Durante una acalorada discusión en línea sobre las personas negras, un usuario publicó: «Todo el mundo sabe que estas personas son peligrosas y propician la delincuencia. Mirad cuánta gente en nuestra ciudad está de acuerdo conmigo. Necesitamos expulsarlos para proteger a nuestra comunidad»."
                     },
                     {
                         "id": "b",
-                        "left": "Appeal to tradition",
-                        "right": "During a community meeting about updating local school policies to be more inclusive of LGBTQ+ students, a long-time resident stands up and says: \"For generations, we have taught that marriage is only between a man and a woman. This is how it has always been and how it should stay. Promoting these new ideas in our schools is an attack on our traditions and values.\""
+                        "left": "Apelación a la tradición: justificar algo como verdad o bueno solo porque siempre se ha hecho o pensado así, sin cuestionar si sigue siendo válido",
+                        "right": "Durante una reunión comunitaria para actualizar las políticas escolares locales  para que sean más inclusivas con el alumnado LGBTQ+, un vecino de toda la vida se pone de pie y dice: «Durante generaciones, hemos enseñado que el matrimonio es solo entre un hombre y una mujer. Así ha sido siempre y así debe seguir siendo. Promover estas nuevas ideas en nuestras escuelas atenta contra nuestros valores»."
                     },
                     {
                         "id": "c",
-                        "left": "Post hoc, ergo propter hoc",
-                        "right": "During a public debate on refugee resettlement, a speaker points to a recent rise in unemployment that occurred shortly after a group of refugees arrived in the town. They declare, \"Ever since they arrived, our unemployment rates have shot up. It's obvious they are taking all the jobs from hardworking local people.\""
+                        "left": "Post hoc, ergo propter hoc – error lógico que asume una relación de causa entre dos hechos solo porque uno ocurre antes que el otro",
+                        "right": "Durante un debate público sobre el reasentamiento de personas refugiadas, un ponente señala un reciente aumento del desempleo ocurrido poco después de la llegada de un grupo de refugiados a la ciudad. Declara: «Desde su llegada, nuestras tasas de desempleo se han disparado. Es evidente que les están quitando todos los empleos a los trabajadores locales»."
                     },
                     {
                         "id": "d",
-                        "left": "Membership bias",
-                        "right": "During an online discussion about a recent crime reported in the news, a person writes, \"As someone who has lived in this neighbourhood my whole life, I can tell you it's the new immigrants causing all the trouble. We 'originals' know what's really going on, and things were peaceful before they came.\""
+                        "left": "Sesgo de grupo: tendencia a favorecer a nuestro propio grupo frente a otros.",
+                        "right": "Durante una discusión en línea sobre un crimen reciente reportado en las noticias, una persona escribe: «Como alguien que ha vivido en este barrio toda mi vida, puedo decirles que son los nuevos inmigrantes los que causan todos los problemas. Nosotros, los 'originarios', sabemos lo que realmente está pasando, y la situación era tranquila antes de que llegaran»."
                     },
                     {
                         "id": "e",
-                        "left": "Blind spot bias",
-                        "right": "During a heated debate about religious groups, a participant states, \"Unlike those people, whose beliefs are full of prejudice and intolerance, I've examined my views objectively. My conclusion that their religion is inherently backward and dangerous isn't a bias; it's just an uncomfortable fact.\""
+                        "left": "Sesgo del punto ciego: pensar que uno mismo es menos susceptible a los sesgos que los demás.",
+                        "right": "Durante un acalorado debate sobre grupos religiosos, un participante afirma: “Puede que sea un hecho incómodo, pero a diferencia de esas personas, cuyas creencias están llenas de prejuicios e intolerancia, mi conclusión es que su religión es inherentemente retrógrada y peligrosa”."
                     },
                     {
                         "id": "f",
-                        "left": "Slippery slope",
-                        "right": "During a debate about allowing a new community center for a minority group, a speaker argues: \"If we allow them to build this center, next they'll demand their own laws. Soon, they'll be taking over our neighbourhoods and imposing their culture on our children. We must stop this now, or we will lose our entire way of life.\""
+                        "left": "Pendiente resbaladiza (slippery slope): ocurre cuando alguien afirma que un posicionamiento o decisión llevará inevitablemente a una serie de consecuencias negativas exageradas",
+                        "right": "Durante un debate sobre la autorización de un nuevo centro comunitario para un grupo minoritario, un participante argumentó: «Si les permitimos construir este centro, exigirán sus propias leyes. Pronto, se apoderarán de nuestros barrios e impondrán su cultura a nuestros hijos. Debemos detener esto ya o perderemos por completo nuestro estilo de vida»."
                     }
                 ],
                 "feedback": {
-                    "correct": "✅ Correct match!",
-                    "wrong": "❌ Incorrect match!"
+                    "correct": "✅ ¡Pareja correcta!",
+                    "wrong": "❌ ¡Pareja incorrecta!"
                 },
-                "summaryTitle": "Your Matching Summary",
-                "reflectionText": "Was it easy or difficult to match the situations and logical fallacies/bias?\n\nDid you know some of them? Which? Which were totally new for you?\n\nCan you provide concrete examples from your reality that represent some of those fallacies and biases?\n\nDo you know any other examples of logical fallacies / bias?\n\nHow can the knowledge of those biases / logical fallacies help us in acting against hate speech and disinformation?"
+                "summaryTitle": "Resumen de tus emparejamientos",
+                "reflectionText": "¿Fue fácil o difícil relacionar las situaciones con las falacias lógicas/sesgos?\n\n¿Conocías algunas de ellas? ¿Cuáles? ¿Cuáles fueron totalmente nuevas para ti?\n\n¿Puedes proporcionar ejemplos concretos de tu realidad que representen algunas de esas falacias y sesgos?\n\n¿Conoces otros ejemplos de falacias lógicas o sesgos?\n\n¿Cómo puede el conocimiento de esos sesgos/falacias lógicas ayudarnos a actuar contra el discurso de odio y la desinformación?"
             },
             "lateralreading": {
                 "title": "Lateral reading",
@@ -743,7 +751,7 @@
             "high": "Alto",
             "small": "Piccolo",
             "large": "Grande"
-          },
+        },
         "resetView": "Reset view",
         "color": {
             "disable": "Disable color",
