@@ -83,7 +83,7 @@
   <v-dialog v-model="conclusionDialog" persistent max-width="800">
     <v-card>
       <v-card-title class="text-h6 font-weight-bold">
-        {{ currentSection.conclusionTitle || t("educational.tasks.lateralreading.defaultConclusionTitle") || "Conclusion" }}
+        {{ currentSection.conclusionTitle || t("educational.tasks.lateralreading.conclusionTitle") || "Conclusion" }}
       </v-card-title>
       <v-card-text>
         <div v-html="currentSection.conclusion" />
@@ -123,13 +123,10 @@
 <script setup lang="ts">
 import { ref,  computed } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { useRouter, useRoute } from 'vue-router'
+import { useRouter } from 'vue-router'
 
 const router = useRouter()
 const { t, tm } = useI18n();
-const taskData = computed(() => tm("educational.tasks.lateralreading") || {});
-const images = computed(() => taskData.value.images || []);
-const questions = computed(() => taskData.value.questions || []);
 
 const taskSections = computed(() => tm("educational.tasks.lateralreading.sections") || []);
 const currentSectionIndex = ref(0);

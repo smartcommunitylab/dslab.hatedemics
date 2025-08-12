@@ -155,8 +155,6 @@
         "next": "Next",
         "close": "Close",
         "neverShow": "Don't show again"
-
-    
     },
     "educational": {
         "eduCard1Title": "Human Rights Declaration",
@@ -183,10 +181,9 @@
                 "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Developing knowledge about human rights;</li><li>Rising awareness about connection between human rights and hate speech and disinformation;</li><li>Learning possible argument for reaction on hate speech and disinformation.</li></ul>",
                 "startButton": "Start",
                 "task": "Form 11 groups. Each group picks up one card. Each group discusses the meaning of the human right written on their card. After 5 minutes, the first group explains what the right means to them and how it connects to hate speech. The teacher may add to their explanation if needed.\nThen, the next group with the following card explains the meaning of their right and its connection to hate speech. Repeat this process until all groups have shared.",
-"completetask": "I have completed the activity",
-"taskCompleteTitle": "Activity completed",
-"taskCompleteText": "Did you already know all the human rights mentioned? Which ones are new to you? Was it easy or difficult to explain the meaning of these rights and find a link between them and hate speech? Can you name other human rights that were not mentioned?",
-              
+                "completetask": "I have completed the activity",
+                "taskCompleteTitle": "Activity completed",
+                "taskCompleteText": "Did you already know all the human rights mentioned? Which ones are new to you? Was it easy or difficult to explain the meaning of these rights and find a link between them and hate speech? Can you name other human rights that were not mentioned?",
                 "articles": [
                     {
                         "title": "Art. 1",
@@ -772,6 +769,8 @@
             "messages": "Number of messages",
             "partecipants": "Number of users",
             "IRI": "Infodemic Risk",
+            "CW": "Check Worthy",
+            "hs": "Hate Speech",
             "nInRecommendations": "In Recommendations",
             "nOutRecommendations": "Out Recommendations",
             "expandable": "Expandable",
@@ -786,14 +785,17 @@
     },
     "graphInteraction": {
         "legend": {
-            "title": "Legenda",
-            "color": "Colore",
-            "size": "Dimensione",
-            "low": "Basso",
-            "high": "Alto",
-            "small": "Piccolo",
-            "large": "Grande"
-          },
+            "title": "Legend",
+            "color": "Color",
+            "size": "Dimension",
+            "low": "Low",
+            "medium": "Medium",
+            "high": "High",
+            "small": "Small",
+            "large": "Large",
+            "defaultColor": "Default Color for all nodes",
+            "defaultSize": "Default Size for all nodes"
+        },
         "resetView": "Reset view",
         "color": {
             "disable": "Disable color",
@@ -801,6 +803,8 @@
             "hs": "Hate Speech",
             "in": "In Recommendations",
             "out": "Out Recommendations",
+            "out_degree": "Out-degree ",
+            "in_degree": "In-degree ",
             "label": "Color"
         },
         "size": {
@@ -809,9 +813,16 @@
             "hs": "Hate Speech",
             "in": "In Recommendations",
             "out": "Out Recommendations",
-            "label": "Size"
+            "label": "Size",
+             "out_degree": "Out-degree ",
+            "in_degree": "In-degree ",
+            "n_out_recommended": "Out Recommendations",
+            "n_in_recommended": "In Recommendations"
         },
         "tooltip": {
+            "label": "Label",
+            "message_count": "Number of messages",
+            "partecipants_count": "Number of users",
             "id": "Channel ID:",
             "iri": "Infodemic Risk:",
             "hs": "Hate Speech:",
@@ -847,6 +858,7 @@
         "mainTopics": "Main topics:",
         "messages": "Go to conversation",
         "emptySelection": "No selection yet. Please select a channel",
+        "noData": "No data available",
         "exploreChannel": "Explore Channel",
         "topics": "Main Topics",
         "channels": "Channels",
@@ -875,6 +887,8 @@
             "start": "Start a new conversation with Target={target}",
             "jump": "Go to conversation",
             "noProject": "No projects available",
+            "noData": "No data available",
+
             "error": "Error while fetching data"
         },
         "noData": "No data available",
