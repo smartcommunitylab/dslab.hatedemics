@@ -4,81 +4,736 @@
         "error": "Errore durante il login",
         "button": "Login"
     },
+    "common": {
+        "close": "Chiudi",
+        "ok": "OK"
+    },
     "menu": {
         "home": "Home",
-        "dashboard": "Dashboard",
-        "channels": "Canali",
-        "inspector": "Panoramica del Canale",
-        "discussion": "Conversazione",
+        "educational": "Didattica",
+        "explore": "Esplora",
+        "network": "Rete",
+        "channel": "Canale",
+        "conversation": "Conversazione",
+        "quickGuide": "Guida rapida",
+        "counterspeech": "Contro-narrazione",
         "projects": "Progetti",
-        "counterspeech": "Counterspeech Writing",
-        "annotation": "Annotation",
-        "credits": "Crediti"
+        "credits": "Crediti",
+        "logout": "Esci"
     },
-    "home":{
-        "title":"Combattere odio e disinformazione online",
-        "description":"HATEDEMICS è una piattaforma che sfrutta l’intelligenza artificiale per analizzare contenuti in rete, potenziare il pensiero critico e allenare la capacità di risposta ai discorsi d’odio.",
-        "network":"Esplora la Rete",
-        "networkDescription":"Una mappa interattiva per osservare le connessioni tra canali, contenuti e dinamiche legate a odio e disinformazione online. Scopri cosa accade in rete, segui i flussi e individua i nodi chiave della comunicazione tossica.",
-        "networkButton":"Vai alla rete",
-        "counterspeech":"Counterspeech Writing",
-        "counterspeechDescription":"Allena la tua capacità di risposta a contenuti d’odio e disinformazione con esercizi di scrittura mirati. Impara come usare fonti attendibili per creare argomentazioni solide e sviluppa il tuo spirito critico per cambiare il tono del dibattito online.",
-        "counterspeechButton":"Inizia a scrivere",
+    "counterspeechGuide": {
+        "guideTitle": "Guida Rapida",
+        "guideItems": {
+            "counterspeech": {
+                "title": "Contro-narrazione",
+                "description": "<p><strong>La contro-narrazione</strong> è definita come l'insieme di azioni comunicative volte a contrastare l'odio con argomentazioni convincenti, vere e basate sui fatti (Schieb e Preuss, 2016).</p>"
+            },
+            "dataSources": {
+                "title": "Fonti dei dati",
+                "description": "<p>Contiene un articolo di fact-checking pubblicato da una fonte certificata (firmataria del <a href=\"https://ifcncodeofprinciples.poynter.org/\" target=\"_blank\">Codice dei Principi IFCN</a>).</p>"
+            },
+            "dialogue": {
+                "title": "Dialogo",
+                "description": "<p>Qui puoi creare un dialogo che simula l'interazione tra una persona che diffonde odio o disinformazione e un operatore che risponde con argomentazioni basate sui fatti.</p>"
+            },
+            "groundText": {
+                "title": "Ground text",
+                "description": "<p>Puoi aggiungere porzioni dell’articolo di fact-checking su cui si basa la risposta dell’operatore.</p><p>Il ground text viene <em>aggiunto automaticamente</em> quando un turno è generato, ma può anche essere <strong>selezionato manualmente</strong> evidenziando una parte dell’articolo e cliccando sul pulsante “link”.</p>"
+            },
+            "newTurn": {
+                "title": "Nuovo turno",
+                "description": "<p>Puoi aggiungere un nuovo turno in diversi modi:</p><ul><li>Aggiungi un turno vuoto con i pulsanti “+”.</li><li>Genera automaticamente un turno selezionando una parte dell’articolo.</li><li>Seleziona una porzione come ground text e poi clicca su “Genera da ground”.</li></ul><p><strong>Nota:</strong> Anche i turni e i testi generati automaticamente possono sempre essere modificati.</p>"
+            }
+        }
+    },
+    "home": {
+        "title": "Combattere odio e disinformazione online",
+        "description": "HATEDEMICS è una piattaforma che sfrutta l’intelligenza artificiale per analizzare contenuti in rete, potenziare il pensiero critico e allenare la capacità di risposta ai discorsi d’odio.",
+        "network": "Esplora la Rete",
+        "networkDescription": "Una mappa interattiva per osservare le connessioni tra canali, contenuti e dinamiche legate a odio e disinformazione online. Scopri cosa accade in rete, segui i flussi e individua i nodi chiave della comunicazione tossica.",
+        "networkButton": "Vai alla rete",
+        "counterspeech": "Counterspeech Writing",
+        "counterspeechDescription": "Allena la tua capacità di risposta a contenuti d’odio e disinformazione con esercizi di scrittura mirati. Impara come usare fonti attendibili per creare argomentazioni solide e sviluppa il tuo spirito critico per cambiare il tono del dibattito online.",
+        "counterspeechButton": "Inizia a scrivere",
+        "educational": "Educativo",
+        "educationalDescription": "Esplora risorse e materiali educativi per comprendere e contrastare l'odio online.",
+        "educationalButton": "Vai alla sezione Educativa",
         "guideDescription": "Cosa sapere prima di usare la piattaforma.",
         "guideButton": "Apri Guida",
         "guideTitle": "Guida Rapida",
         "guideItems": {
-          "network": {
-            "title": "Rete",
-            "description": "La rete mostra le connessioni tra i canali Telegram raccolti. Un canale è un nodo ed è connesso a un altro se lo “raccomanda”. Le raccomandazioni sono generate automaticamente da Telegram in base alla sovrapposizione degli utenti."
-          },
-          "inRec": {
-            "title": "Raccomandazioni in ingresso",
-            "description": "Quanto un canale è raccomandato da altri canali."
-          },
-          "outRec": {
-            "title": "Raccomandazioni in uscita",
-            "description": "Quanto un canale raccomanda altri canali."
-          },
-          "risk": {
-            "title": "Rischio Infodemia",
-            "description": "Quanto un canale è affidabile. Questa misura va da 0 a 1."
-          },
-          "check": {
-            "title": "Verificabilità",
-            "description": "Indica se un messaggio può essere sottoposto a fact-checking. Significa che contiene fatti (non opinioni) ed è sufficientemente rilevante."
-          }
+            "network": {
+                "title": "Rete",
+                "description": "La rete mostra le connessioni tra i canali Telegram raccolti. Un canale è un nodo ed è connesso a un altro se lo “raccomanda”. Le raccomandazioni sono generate automaticamente da Telegram in base alla sovrapposizione degli utenti."
+            },
+            "inRec": {
+                "title": "Raccomandazioni in ingresso",
+                "description": "Quanto un canale è raccomandato da altri canali."
+            },
+            "outRec": {
+                "title": "Raccomandazioni in uscita",
+                "description": "Quanto un canale raccomanda altri canali."
+            },
+            "risk": {
+                "title": "Rischio Infodemia",
+                "description": "Quanto un canale è affidabile. Questa misura va da 0 a 1."
+            },
+            "check": {
+                "title": "Verificabilità",
+                "description": "Indica se un messaggio può essere sottoposto a fact-checking. Significa che contiene fatti (non opinioni) ed è sufficientemente rilevante."
+            }
         }
-      
+    },
+    "networkGuide": {
+        "guideTitle": "Guida alla Rete",
+        "guideItems": {
+            "network": {
+                "title": "Rete",
+                "description": "<p>Questa rete visualizza i canali Telegram come punti, e le linee mostrano come sono collegati tra loro. Un canale è collegato a un altro quando Telegram lo raccomanda automaticamente, in base al numero di utenti che entrambi i canali condividono.</p>"
+            },
+            "dataCollection": {
+                "title": "Raccolta dati",
+                "description": "<p>La raccolta dei dati avviene in più fasi. Partiamo da un insieme iniziale di canali noti per contenuti disinformativi o d’odio. Raccogliamo le loro informazioni e i canali che raccomandano. Poi seguiamo queste raccomandazioni, esplorando nuovi canali, fino a raggiungere il numero desiderato. Infine, tra i canali esplorati selezioniamo quelli più importanti nella lingua che ci interessa, e per questi raccogliamo tutti i loro messaggi.</p>"
+            },
+            "explored": {
+                "title": "Esplorato",
+                "description": "<p>Un canale è <strong>esplorato</strong> se abbiamo raccolto la lista dei canali che raccomanda.</p>"
+            },
+            "expanded": {
+                "title": "Espanso",
+                "description": "<p>Un canale è <strong>espanso</strong> se abbiamo raccolto tutti i suoi messaggi pubblicati in chat.</p>"
+            },
+            "inOutRecommendations": {
+                "title": "Raccomandazioni in entrata e in uscita",
+                "description": "<p><strong>Raccomandazioni in entrata</strong>: numero totale di raccomandazioni ricevute da un canale. Un numero alto indica che è molto popolare!</p><p><strong>Raccomandazioni in uscita</strong>: numero di raccomandazioni che un canale dà ad altri. Un numero alto significa che suggerisce molti contenuti!</p>"
+            },
+            "iri": {
+                "title": "Infodemic Risk Index (IRI)",
+                "description": "<p>L'<strong>Infodemic Risk Index</strong> (IRI) misura quanto è affidabile un canale, da 0 (completamente affidabile) a 1 (molto inaffidabile). È basato sull’affidabilità dei siti web condivisi nel canale e sul numero di visualizzazioni di quei link. Un valore basso indica che gli utenti sono più esposti a informazioni affidabili.</p><p>Per maggiori dettagli, vedi questo articolo: Gallotti, R., Valle, F., Castaldo, N., Sacco, P., & De Domenico, M. (2020). <em>Assessing the risks of ‘infodemics’ in response to COVID-19 epidemics</em>. Nature Human Behaviour, 4(12), 1285–1293. <a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">Link</a></p>"
+            },
+            "diri": {
+                "title": "Indice dinamico di rischio infodemico (dIRI)",
+                "description": "<p>Il <strong>dIRI</strong> è simile all’IRI, ma si concentra sulle interazioni attive con i contenuti inaffidabili. Invece di contare solo le visualizzazioni, considera azioni più impegnative come rispondere o ricondividere. Se una notizia inaffidabile riceve molte interazioni attive, il valore del dIRI sarà più alto.</p>"
+            },
+            "sdiri": {
+                "title": "Indice semi-dinamico di rischio infodemico (sdIRI)",
+                "description": "<p>Lo <strong>sdIRI</strong> si concentra sulle interazioni rapide con contenuti inaffidabili, come reazioni con emoji o 'mi piace'. Diversamente dal dIRI, che considera azioni più forti, lo sdIRI misura il coinvolgimento 'silenzioso'. Un valore alto indica molte reazioni veloci a contenuti inaffidabili.</p>"
+            },
+            "unrel": {
+                "title": "Indice di Inaffidabilità (Unrel)",
+                "description": "<p>L'<strong>indice di Inaffidabilità</strong> mostra la percentuale di messaggi che puntano a siti non affidabili, rispetto al totale dei messaggi che contengono link a fonti informative. Più il valore si avvicina a 1, maggiore è la quantità di contenuti inaffidabili condivisi.</p>"
+            },
+            "domains": {
+                "title": "Domini noti e sconosciuti",
+                "description": "<p><strong>Domini noti</strong>: numero di siti condivisi per cui abbiamo informazioni sull’affidabilità. <br><strong>Domini sconosciuti</strong>: siti per cui non abbiamo informazioni.</p><p>Più domini noti abbiamo, più precisa sarà la nostra misurazione della diffusione della disinformazione.</p>"
+            },
+            "centrality": {
+                "title": "Misure di centralità",
+                "description": "<p>Nell’analisi delle reti, queste misure servono per capire quanto è importante un punto (un canale Telegram) nella rete:</p><ul><li><strong>Degree centrality</strong>: quante connessioni dirette ha (popolarità).</li><li><strong>Betweenness centrality</strong>: quanto agisce da ponte tra altri punti (è un connettore chiave!).</li><li><strong>Closeness centrality</strong>: quanto velocemente può raggiungere tutti gli altri (è ben connesso!).</li><li><strong>Eigenvector centrality</strong>: quanto è connesso a canali molto ben connessi (ha amici famosi!).</li></ul><p>Per approfondire: Pósfai, M., & Barabási, A. L. (2016). <em>Network science</em> (Vol. 3). Cambridge University Press.</p>"
+            },
+            "communities": {
+                "title": "Comunità",
+                "description": "Questi metodi di rilevamento delle comunità aiutano a identificare <strong>gruppi</strong> naturali all'interno delle reti, come nei social network:<br><br><strong>Comunità di Louvain:</strong> Cerca gruppi in cui ci sono molte connessioni interne. <em>(Come un gruppo di amici in cui tutti si conoscono molto bene!)</em><br><strong>Comunità di Infomap:</strong> Trova gruppi in base a quanto facilmente le informazioni (o i messaggi) possono circolare al loro interno. <em>(Come un circolo dove le notizie si diffondono velocemente tra i membri!)</em><br><br>Per maggiori dettagli, puoi consultare questi articoli:<br><a href='https://hal.science/hal-01231784' target='_blank'>Dugué, N., & Perez, A. (2015). Directed Louvain: maximizing modularity in directed networks</a><br><a href='https://www.pnas.org/doi/epdf/10.1073/pnas.0706851105' target='_blank'>Rosvall, M., & Bergstrom, C. T. (2008). Maps of random walks on complex networks reveal community structure</a>"
+            }
+        }
     },
     "welcome": {
         "title": "Benvenuti in Hatedemics"
     },
+    "onboarding": {
+        "steps": [
+            {
+                "title": "Cos'è Hatedemics",
+                "html": "<p><strong>Hatedemics</strong> è un progetto europeo che si propone di sensibilizzare sul tema dell’odio online, della disinformazione e del modo in cui questi fenomeni si intrecciano. Il progetto mira a fornire strumenti a ONG, organizzazioni della società civile, fact-checker, autorità pubbliche e giovani per prevenire e contrastare efficacemente polarizzazione, intolleranza e teorie del complotto.</p><p><strong>Hatedemics</strong> utilizza tecnologie basate sull’intelligenza artificiale in due modi principali:</p><ul><li><strong>Analisi dei dati</strong>: analizza grandi quantità di dati provenienti da una popolare piattaforma di messaggistica (Telegram), offrendo approfondimenti sui trend legati all’odio online e alla disinformazione.</li><li><strong>Contro-narrazione</strong>: genera risposte dialogiche a contenuti d’odio o disinformazione, chiamate “contro-narrazioni”. Questo aiuta le persone a comprendere quando e come rispondere all’odio basato su informazioni false, utilizzando dati verificati.</li></ul><p>Visita il <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">sito web di Hatedemics</a> per saperne di più.</p>"
+            },
+            {
+                "title": "Alcune definizioni",
+                "html": "<p><strong>Discorso d’odio</strong>: Ci rifacciamo alla definizione dell’Ufficio delle Nazioni Unite per la Prevenzione del Genocidio e la Responsabilità di Proteggere (2019), secondo cui il discorso d’odio è <em>“qualsiasi tipo di comunicazione, orale, scritta o comportamentale, che attacca o utilizza un linguaggio denigratorio o discriminatorio nei confronti di una persona o di un gruppo in base a chi sono”</em>. In particolare, nel progetto consideriamo i seguenti gruppi come frequentemente colpiti dall’odio: comunità LGBTQ+, migranti, musulmani, ebrei, rom, persone nere e persone con disabilità.</p><p><strong>Check-worthiness</strong>: Indica quanto una dichiarazione, affermazione o post meriti una verifica dei fatti per la sua possibile falsità, rilevanza pubblica o impatto dannoso. Si tratta di un giudizio soggettivo, basato su alcuni criteri chiave: se il contenuto include un’affermazione (statistiche, legami di causa-effetto, ecc.), se può essere potenzialmente falsa e se è rilevante per il pubblico o impatta individui o gruppi. <strong>Nota</strong>: Le affermazioni facilmente verificabili da un utente medio (es. “La popolazione della Cina è la metà di quella italiana”) non sono considerate degne di verifica, perché non richiedono l’intervento di un esperto.</p><p><strong>Disinformazione</strong>: Si parla di disinformazione quando informazioni false o fuorvianti vengono create e diffuse deliberatamente con l’intento di ingannare. Si distingue dalla misinformazione, che è semplicemente informazione errata condivisa per errore. L’elemento chiave della disinformazione è quindi l’intenzione di ingannare. Per identificare la disinformazione, utilizziamo strumenti avanzati chiamati <em>“indici di rischio infodemico”</em>. Questi ci aiutano a individuare conversazioni online in cui circola molto contenuto ingannevole, analizzando i link condivisi e l’interazione del pubblico con tali contenuti, valutandone così l’affidabilità.</p><p>Vuoi approfondire? Consulta: Gallotti, R., Valle, F., Castaldo, N., Sacco, P., & De Domenico, M. (2020). <em>Assessing the risks of 'infodemics' in response to COVID-19 epidemics</em>. <strong>Nature Human Behaviour</strong>, 4(12), 1285–1293.</p>"
+            },
+            {
+                "title": "Cosa include la piattaforma",
+                "html": "<p><strong>Dati:</strong> La piattaforma include dati statici: circa 10 milioni di messaggi Telegram raccolti da quasi 1.000 chat pubbliche, in 4 lingue (italiano, inglese, spagnolo e polacco). Telegram è stato scelto perché consente un accesso libero alla raccolta di dati su larga scala, diversamente da altre piattaforme di messaggistica.</p><p><strong>Analisi:</strong> Gli approfondimenti visualizzati vengono generati automaticamente da tecnologie basate su intelligenza artificiale. Di conseguenza, potrebbero occasionalmente contenere imprecisioni! In caso di dubbi, rivolgiti agli educatori di riferimento.</p><p><strong>Chatbot:</strong> La piattaforma include anche un modello di dialogo che simula l’interazione con un hater che diffonde disinformazione. Le risposte sono generate automaticamente da un modello linguistico specializzato, ma possono essere modificate. Il chatbot supporta 5 lingue: italiano, inglese, spagnolo, polacco e maltese.</p>"
+            },
+            {
+                "title": "Avviso di contenuto sensibile",
+                "html": "<p><strong>Attenzione:</strong> Questa piattaforma contiene esempi espliciti che alcuni utenti potrebbero trovare offensivi.</p>"
+            }
+        ],
+        "prev": "Indietro",
+        "next": "Avanti",
+        "close": "Chiudi",
+        "neverShow": "Non mostrare più questo messaggio"
+    },
+    "educational": {
+        "eduCard1Title": "Dichiarazione dei Diritti Umani",
+        "eduCard1Desc": "Scopri i principi fondamentali che tutelano la dignità umana.",
+        "eduCard1Button": "Esplora i diritti",
+        "eduCardBiasTitle": "Bias e Fallacie",
+        "eduCardBiasDesc": "Esplora i bias cognitivi e le fallacie logiche alla base dell'odio e della disinformazione.",
+        "eduCardBiasButton": "Inizia l'attività",
+        "eduCard3Title": "Debunking",
+        "eduCard3Desc": "Impara a riconoscere e smascherare la disinformazione.",
+        "eduCard3Button": "Inizia l’attività",
+        "eduCard4Title": "Lettura laterale",
+        "eduCard4Desc": "Impara a leggere e comprendere i contenuti online.",
+        "eduCard4Button": "Inizia l'attività",
+        "warningTitle": "Avviso",
+        "warningText": "Queste attività contengono esempi espliciti che potrebbero urtare la sensibilità di alcuni lettori. Se un’attività o una sua parte ti mette a disagio o ti fa sentire in difficoltà, ti invitiamo a parlarne con noi o a lasciare la stanza liberamente.",
+        "warningButton": "Ho capito",
+        "warningCheckbox": "Non mostrare più questo messaggio",
+        "tasks": {
+            "humanRights": {
+                "title": "Diritti Umani",
+                "description": "I diritti umani fondamentali sanciti dalle Nazioni Unite nella <a href='https://www.un.org/en/about-us/universal-declaration-of-human-rights' target='_blank' rel='noopener'>Dichiarazione Universale dei Diritti Umani</a> tutelano e sostengono la dignità, l'uguaglianza e la libertà di tutte le persone. Alcuni di essi sono elencati di seguito in una versione semplificata.<br><br><iframe width='100%' height='315' src='https://www.youtube.com/embed/nDgIVseTkuE?si=Jomr_pVjQAdBgfGg' title='Video Diritti Umani' frameborder='0' allowfullscreen></iframe>",
+                "objectivesTitle": "Obiettivi",
+                "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Sviluppare conoscenze sui diritti umani;</li><li>Aumentare la consapevolezza su come il tema dei diritti umani sia oggetto di incitamento all'odio e sia bersaglio anche della disinformazione;</li><li>Apprendere tecniche di argomentazione per ragire e contrastare l'incitamento all'odio e la disinformazione.</li></ul>",
+                "startButton": "Inizia",
+                "task": "Formate 11 gruppi. Ogni gruppo prende una carta. Ogni gruppo discute il significato del diritto umano scritto sulla propria carta. Dopo 5 minuti, il primo gruppo spiega cosa significhi questo diritto e come possa esere oggetto di incitamento all'odio. L'insegnante può aggiungere ulteriori spiegazioni se necessario. Quindi, il gruppo successivo, con la carta successiva, spiega il significato del proprio diritto e il suo potenziale collegamento al discorso d'odio. Questo processo si ripete finché tutti i gruppi non avranno condiviso la spiegazione della propria carta.",
+                "completetask": "Ho completato l'attività",
+                "taskCompleteTitle": "Attività completata",
+                "taskCompleteText": "Conoscevi già tutti i diritti umani menzionati? Quali ti sono nuovi?È stato facile o difficile spiegare il significato di questi diritti e trovare un collegamento tra questi diritti e l'incitamento all'odio?Puoi nominare altri diritti umani che non sono stati menzionati?",
+                "articles": [
+                    {
+                        "title": "Art. 1",
+                        "text": "Tutti gli esseri umani nascono liberi ed eguali in dignità e diritti."
+                    },
+                    {
+                        "title": "Art. 2",
+                        "text": "Tutti hanno il diritto di essere trattati allo stesso modo, indipendentemente da razza, colore, sesso, lingua, religione, opinione politica, proprietà, nascita o altra condizione."
+                    },
+                    {
+                        "title": "Art. 3",
+                        "text": "Ogni individuo ha diritto alla vita e a vivere in libertà e sicurezza."
+                    },
+                    {
+                        "title": "Art. 5",
+                        "text": "Ogni individuo ha il diritto di non subire tortura e trattamenti inumani e degradanti."
+                    },
+                    {
+                        "title": "Art. 7",
+                        "text": "La legge è la stessa per tutti."
+                    },
+                    {
+                        "title": "Art. 13",
+                        "text": "Tutti hanno il diritto di vivere e viaggiare liberamente entro i confini dello Stato."
+                    },
+                    {
+                        "title": "Art. 14",
+                        "text": "Tutti hanno il diritto di recarsi in un altro Paese e chiedere protezione se sono perseguitati o rischiano di esserlo."
+                    },
+                    {
+                        "title": "Art. 16",
+                        "text": "Tutti hanno il diritto di sposarsi e di avere una famiglia."
+                    },
+                    {
+                        "title": "Art. 18",
+                        "text": "Ognuno ha il diritto di credere in ciò che desidera (inclusa, ma non limitatamente, alla religione)."
+                    },
+                    {
+                        "title": "Art. 19",
+                        "text": "Tutti hanno il diritto di dire ciò che pensano e di dare e ricevere informazioni liberamente."
+                    },
+                    {
+                        "title": "Art. 29",
+                        "text": "Tutti devono rispettare i diritti degli altri."
+                    },
+                    {
+                        "title": "Art. 30",
+                        "text": "Nessuno ha il diritto di privarci di questi diritti."
+                    }
+                ]
+            },
+            "debunking": {
+                "title": "Debunking",
+                "description": "L'obiettivo del fact-checking è fornire ai cittadini strumenti e informazioni che consentano loro di formarsi un'opinione sulla base di dati e fatti verificati, in modo da prendere decisioni consapevoli. La disinformazione può influenzare il modo in cui la società pensa e affronta i problemi quotidiani, ed è per questo che la missione principale dei fact-checker è quella di far luce e raccogliere dati sui temi rilevanti per la società. In generale, il fact-checking consiste nell'individuare le bufale, verificarne il contenuto e diffonderne la smentita. Queste azioni compongono la cosiddetta attività di debunking (debunking dall'inglese smascherare, confutare, smentire).\nI fact-checker lavorano quotidianamente con il debunking: verificano i contenuti e spiegano perché qualcosa è falso dopo che è stato condiviso e reso virale sui social media. Questa attività è importante per la società, il dibattito pubblico, perfino per la sicurezza della società in generale, e per evitare che più persone leggano, condividano e credano alle bugie e ai contenuti manipolati che circolano in Internet. Alcune attività di debunking sono molto difficili: richiedono molto tempo e l'uso di strumenti specifici. Altre richiedono solo molta osservazione e la ricerca di informazioni specifiche e affidabili.\nProviamoci! In questa attività imparerai, in modo guidato, alcune tecniche di debunking e perché è importante attivare il pensiero critico e riconoscere come la viralità di alcune bufale possa creare e rafforzare le narrazioni che sfrutta la disinformazione.",
+                "objectivesTitle": "Obiettivi dell'attività",
+                "objectives": "Smaschera e riconosci che cosa sono le narrazioni sfruttate dalla disinformazione. È a tutti gli effetti un esercizio di pre-bunking: scopri quali sono le narrazioni di cui si avvale la disinformazione e quali sono quelle più diffuse nel tuo Paese.\nImparerai, in modo guidato, alcune tecniche di debunking (cioè come smascherare i contenuti falsi e manipolati) e l'importanza di attivare il pensiero critico e di comprendere come la viralità di alcune bufale possa creare e rafforzare le narrazioni di cui si avvale la disinformazione.",
+                "startButton": "Inizia l'attività",
+                "task": "Simula le azioni di un fact-checker selezionando il metodo più efficace per smascherare un contenuto sospetto. Riesci anche a identificare la narrazione di disinformazione correlata?",
+                "correct": "Corretto!",
+                "incorrect": "Sbagliato! Riprova.",
+                "next": "Prossima domanda",
+                "finish": "Termina l'attività",
+                "questions": [
+                    {
+                        "title": "Domanda 1",
+                        "scenario_description": "Hai ricevuto il link di un post in cui si vedono delle barche su una spiaggia. Il post riporta questo commento \"TUNISIA... PRONTI ALL'INVASIONE!!!\"",
+                        "question": "Come puoi a verificare il contenuto?",
+                        "image": "/img/debunking/it/question1.png",
+                        "options": [
+                            {
+                                "text": "Ricerca inversa per immagini"
+                            },
+                            {
+                                "text": "Ricerca avanzata su Twitter (X)"
+                            },
+                            {
+                                "text": "strumento per riconoscere i contenuti generati da IA"
+                            }
+                        ],
+                        "correct": 0,
+                        "feedback": {
+                            "correct": "Esatto! Hai fatto una ricerca inversa per immagini e hai trovato l'immagine originale",
+                            "correctImage": "/img/debunking/it/answer1.png",
+                            "incorrect": "Purtroppo né una ricerca avanzata su Twitter né uno strumento di riconsocimento di contenuti generati da Intelligenza Artificiale sarebbero stati utili in questo caso. A prima vista non abbiamo prove che l'immagine sia stata pubblicata su Twitter o generata dall'intelligenza artificiale. Una ricerca per immagini potrebbe essere più utile.",
+                            "incorrectImage": "/img/debunking/it/answer1.png"
+                        }
+                    },
+                    {
+                        "title": "Domanda 2",
+                        "question": "Effettuando una ricerca per immagini inversa avresti trovato questa immagine. Cosa puoi dedurre osservandola?",
+                        "options": [
+                            {
+                                "text": "E' una immagine generata da Intelligenza Artificiale"
+                            },
+                            {
+                                "text": "La prima immagine è stata manipolata"
+                            },
+                            {
+                                "text": "Sembra la stessa foto pubblicata un anno prima fuori contesto"
+                            }
+                        ],
+                        "correct": 2,
+                        "feedback": {
+                            "correct": "Esatto: questa è la foto originale pubblicata nel 2019. Ci troviamo in Mauritania e le barche presenti nella foto sono delle piroghe utilizzate per pescare. Queste piroghe non si trovavano in Tunisia e non veniva utilizzate dai migranti.",
+                            "incorrect": "Sbagliato: questa è l'immagine originale. In particolare, questa immagine è stata pubblicata originariamente nel 2019. Possiamo quindi concludere che la prima immagine che hai visto era la stessa foto fuori contesto: è stata utilizzata per creare una bufala sui presunti migranti che cercavano di raggiungere l'Italia. Se osservi attentamente le due foto, è chiaro che si tratta della stessa foto in due contesti diversi."
+                        }
+                    },
+                    {
+                        "title": "Domanda 3",
+                        "question": "Che tipo di narrativa sfruttata dalla disinformazione rafforza questa fake news?",
+                        "options": [
+                            {
+                                "text": "Gli immigrati di colore commettono atti violenti in Europa"
+                            },
+                            {
+                                "text": "Gli immigrati stanno per invadere l'Italia"
+                            },
+                            {
+                                "text": "Gli immigrati portano malattie"
+                            }
+                        ],
+                        "correct": 1,
+                        "feedback": {
+                            "correct": "Corretto! Quando si parla di fact checking o di fact-checker, spesso si pensa a un giornalista che esamina un'affermazione, la verifica e conferma se è vera o falsa. Oggi combattere efficacemente la disinformazione richiede molto di più: molto spesso i contenuti disinformativi non sono più solo \"fake news\" e falsi articoli di giornale, ma sono foto, video e meme che diventano virali che veicolano un messaggio falso e fomentano l'odio online.  Individuare rapidamente possibili bufale prima che diventino virali e influenzino più persone è diventato cruciale al giorno d'oggi vista la facilità con cui i contenuti possono essere pubblicati e condivisi online. Link: <a href='https://www.facta.news/antibufale/queste-imbarcazioni-non-sono-pronte-per-portare-migranti-in-italia-dalla-tunisia' target='_blank'>https://www.facta.news/antibufale/queste-imbarcazioni-non-sono-pronte-per-portare-migranti-in-italia-dalla-tunisia</a>.",
+                            "incorrect": "Sbagliato! Quando si parla di fact checking o di fact-checker, spesso si pensa a un giornalista che esamina un'affermazione, la verifica e conferma se è vera o falsa. Oggi combattere efficacemente la disinformazione richiede molto di più: molto spesso i contenuti disinformativi non sono più solo \"fake news\" e falsi articoli di giornale, ma sono foto, video e meme che diventano virali che veicolano un messaggio falso e fomentano l'odio online.  Individuare rapidamente possibili bufale prima che diventino virali e influenzino più persone è diventato cruciale al giorno d'oggi vista la facilità con cui i contenuti possono essere pubblicati e condivisi online. Link: <a href='https://www.facta.news/antibufale/queste-imbarcazioni-non-sono-pronte-per-portare-migranti-in-italia-dalla-tunisia' target='_blank'>https://www.facta.news/antibufale/queste-imbarcazioni-non-sono-pronte-per-portare-migranti-in-italia-dalla-tunisia</a>."
+                        }
+                    }
+                ]
+            },
+            "bias": {
+                "title": "Riconoscere i Bias",
+                "description": "<h2>Fallacie logiche associate a discorsi d'odio e della disinformazione</h2><p>Il contenuto dei discorsi d'odio e della disinformazione pu&ograve; talvolta apparire molto convincente. Questo perch&eacute; chi diffonde discorsi d'odio spesso si affida a fallacie logiche, costrutti che i gruppi d'odio usano per giustificare le proprie cause e sfruttare la convinzione che chi si imbatte in tali contenuti li considererebbe appunto ragionevoli e veritieri. Le fallacie logiche possono utilizzare premesse false, premesse vere ma conclusioni false, oppure premesse e conclusioni vere attraverso un'argomentazione falsa. Alcune fallacie sono prodotte con l'intento di ingannare o rendere virale la disinformazione.</p><p>Esistono molte fallacie nei discorsi d'odio. Eccone alcune:</p><ul><li><strong>Argumentum ad populum</strong>: un modo di argomentare non basato su fatti e dati reali in cui l'oratore fa appello ai gusti, alle preferenze e ai pregiudizi della massa. Basandosi sull'egoismo nazionale, sugli istinti, sugli stereotipi o sui pregiudizi, l'oratore cerca di convincere il pubblico della propria tesi (ad esempio, la maggior parte delle persone nel nostro paese la pensa cos&igrave;, quindi &egrave; cos&igrave; che dovremmo agire);</li><li><strong>Ipse dixit</strong> – il modo di argomentare senza fornire una prova valida (ad esempio, lo ha detto un partito politico, quindi deve essere vero);</li><li><strong>Fallacia del pendio scivoloso</strong> – si verifica quando qualcuno afferma che una posizione o una decisione porter&agrave; a una serie di conseguenze negative indesiderate (ad esempio, non possiamo permettere che i migranti rimangano nel nostro paese perch&eacute; porteranno qui le loro famiglie e avranno figli, il che ci porter&agrave; a perdere il lavoro e al collasso del sistema previdenziale, e di conseguenza saremo poveri e perderemo il controllo sul nostro paese);</li><li><strong>Fallacia dell'uno o dell'altro</strong> – quando qualcuno afferma che ci sono solo due modi per affrontare la questione, mentre ci sono molte altre opzioni (ad esempio, puoi votare per questo partito o vivere la tua vita in costante pericolo);</li><li><strong>Post hoc, ergo propter hoc</strong> – errore logico nel concludere erroneamente che esista un nesso causale tra due eventi semplicemente perch&eacute; uno si &egrave; verificato prima dell'altro (ad esempio: da quando abbiamo una nuova insegnante di matematica, prendo brutti voti. Deve essere lei la ragione per cui vado male);</li><li><strong>Argumentum Ad Hominem</strong> – quando qualcuno attacca la persona che sostiene un'argomentazione piuttosto che l'argomentazione stessa (ad esempio: non ascoltare l'opinione di Pietro sul progetto di gruppo: &egrave; pigro e non fa mai niente di giusto);</li><li><strong>Cherry picking</strong> – quando qualcuno presenta selettivamente prove a supporto della propria argomentazione, ignorando o respingendo prove che la contraddicono (ad esempio, &quot;L'incitamento all'odio non &egrave; dannoso. Guarda questo studio che afferma che &egrave; solo offensivo, non pericoloso&quot; – ignorando decine di altri studi che dimostrano il danno psicologico e sociale dell'incitamento all'odio).</li><li><strong>Ricorso alla tradizione</strong> – quando un'argomentazione presuppone che qualcosa sia buona o vera semplicemente perch&eacute; viene fatta o creduta tradizionalmente, senza considerare se sia ancora valida nel contesto attuale (ad esempio, nella nostra scuola abbiamo sempre avuto pi&ugrave; uomini che donne nel consiglio scolastico, e ha sempre funzionato cos&igrave;).</li><li><strong>Argomentazione basata su aneddoti</strong> – qualcuno usa una singola esperienza o storia, spesso personale, per supportare una conclusione o un'affermazione generale (ad esempio, &quot;Non credo che l'incitamento all'odio porti a danni reali. Ho sentito persone fare battute offensive in continuazione e nessuno che conosco ne &egrave; mai stato seriamente colpito&quot;).</li><li><strong>Fallacia ad ignorantiam</strong> – qualcuno sostiene che un'affermazione sia vera o falsa semplicemente perch&eacute; non &egrave; stato dimostrato il contrario (ad esempio, nessuno ha mai dimostrato che gli studenti imbroglino durante gli esami online, quindi non sar&agrave; vero).</li></ul><h2>Bias cognitivi</h2><p>Il nostro cervello usa scorciatoie per aiutarci a prendere decisioni rapide nella vita di tutti i giorni. Queste scorciatoie ci aiutano a concentrarci solo sulle informazioni pi&ugrave; importanti, in modo da non essere sopraffatti da tutto ci&ograve; che vediamo e sentiamo. Questo rende il cervello pi&ugrave; efficiente. Tuttavia, lo svantaggio &egrave; che queste scorciatoie a volte possono portarci a commettere errori o fraintendere le cose a causa dei nostri pregiudizi cognitivi.</p><p>Siamo tutti influenzati da pregiudizi cognitivi nel nostro processo decisionale e coloro che diffondono disinformazione li conoscono molto bene. Ecco alcuni esempi di pregiudizi cognitivi:</p><ul><li><strong>Bias di appartenenza</strong>: tendenza a favorire il proprio gruppo rispetto ad altri;</li><li><strong>Bias di disponibilit&agrave;</strong>: tendenza a fare affidamento sulle informazioni che vengono subito in mente;</li><li><strong>Bias di causalit&agrave;</strong>: si verifica quando le persone credono che ci sia una relazione tra eventi che in realt&agrave; sono indipendenti l'uno dall'altro;</li><li><strong>Bias del punto cieco</strong>: tendenza a considerarsi meno prevenuti rispetto alle altre persone;</li><li><strong>Bias di conferma</strong>: tendenza a cercare, interpretare, favorire e ricordare informazioni in un modo che confermino le nostre convinzioni precedenti;</li><li><strong>Bias di autorit&agrave;</strong>: tendenza a essere maggiormente influenzati dalle opinioni delle persone autorevoli.</li></ul>",
+                "objectivesTitle": "Obiettivi dell'attività",
+                "objectives": "<ul><li>Sviluppare la consapevolezza dei meccanismi sociali, dei pregiudizi cognitivi e delle fallacie logiche</li><li>Sviluppare la capacit&agrave; di pensiero critico</li></ul><p>I meccanismi sociali, i pregiudizi cognitivi e le fallacie logiche sono fattori che favoriscono la diffusione di discorsi d'odio e della disinformazione. Conoscendone alcuni, possiamo essere meno influenzabili da essi e pi&ugrave; critici nei confronti di altre forme di manipolazione.</p>",
+                "startButton": "Attività",
+                "checkButton": "Verifica le coppie",
+                "resetButton": "Reset",
+                "correct": "Coppie corrette",
+                "incorrect": "Coppie errate",
+                "task": "- Abbina la situazione alla fallacia logica/alla distorsione pertinente.- La situazione è un esempio di incitamento all'odio/disinformazione/misinformazione (condivisione inconsapevole di contenuti disinformativi)? Se sì, perché?",
+                "pairs": [
+                    {
+                        "id": "a",
+                        "left": "Argumentum ad populum – un modo di argomentare non giustificato da fatti o dati reali in cui l'oratore fa appello ai gusti, alle preferenze e ai pregiudizi della folla. Basandosi su egoismi nazionali, istinti, stereotipi o pregiudizi, l'oratore cerca di convincere il pubblico della propria tesi.",
+                        "right": "Durante un'accesa discussione online sulla popolazione nera, un utente scrive: \"Tutti sanno che queste persone sono pericolose e portano criminalità. Basta guardare quante persone nella nostra città sono d'accordo con me. Dobbiamo cacciarli via per proteggere la nostra comunità\""
+                    },
+                    {
+                        "id": "b",
+                        "left": "Appello alla tradizione: quando un argomento presuppone che qualcosa sia buono o vero semplicemente perché viene fatto o creduto tradizionalmente, senza considerare se sia ancora valido nel contesto attuale.",
+                        "right": "Durante un incontro aperto alla comunità locale sull'aggiornamento delle politiche scolastiche per renderle più inclusive verso gli studenti LGBTQ+, un residente di lunga data si alza e afferma: \"Per generazioni, abbiamo insegnato che il matrimonio è solo tra un uomo e una donna. È sempre stato così e dovrebbe rimanere così. Promuovere queste nuove idee nelle nostre scuole è un attacco ai nostri valori\"."
+                    },
+                    {
+                        "id": "c",
+                        "left": "Post hoc, ergo propter hoc – errore logico nel concludere erroneamente che esiste una connessione causale tra due eventi semplicemente perché uno si è verificato prima dell’altro",
+                        "right": "Durante un dibattito pubblico sull'accoglienza di rifugiati, un intervento sottolinea un recente aumento della disoccupazione, verificatosi poco dopo l'arrivo di un gruppo di rifugiati in città. Le parole dell'intervento: \"Da quando sono arrivati, i nostri tassi di disoccupazione sono schizzati alle stelle. È ovvio che stanno rubando tutti i posti di lavoro alla laboriosa gente del posto\"."
+                    },
+                    {
+                        "id": "d",
+                        "left": "Bias di appartenenza: tendenza a favorire il proprio gruppo rispetto ad altri gruppi",
+                        "right": "Durante una discussione online su un recente crimine riportato dai giornali, una persona scrive: \"Come persona che ha vissuto in questo quartiere per tutta la vita, posso dirvi che sono i nuovi immigrati a causare tutti i problemi. Noi, residenti da una vita, sappiamo cosa sta succedendo veramente. La situazione era pacifica prima del loro arrivo\"."
+                    },
+                    {
+                        "id": "e",
+                        "left": "Il pregiudizio del punto cieco è la tendenza a considerarsi meno prevenuti rispetto alle altre persone",
+                        "right": "Durante un acceso dibattito sui gruppi religiosi, un partecipante afferma: \"Potrebbe essere una verità scomoda, ma va detto che, a differenza di quelle persone, le cui credenze sono piene di pregiudizi e intolleranza, la mia conclusione obiettiva è che è la loro religione a essere intrinsecamente arretrata e pericolosa\"."
+                    },
+                    {
+                        "id": "f",
+                        "left": "Un errore del pendio scivoloso – si verifica quando qualcuno afferma che una posizione o una decisione porterà a una serie di conseguenze negative indesiderate",
+                        "right": "Durante un dibattito sull'autorizzazione di un nuovo centro cittadino per una minoranza etnica, un partecipante sostiene: \"Se permettiamo loro di costruire questo centro, poi pretenderanno le loro leggi. Presto prenderanno il controllo dei nostri quartieri e imporranno la loro cultura ai nostri figli. Dobbiamo fermarli subito, altrimenti perderemo completamente il nostro stile di vita\"."
+                    }
+                ],
+                "feedback": {
+                    "correct": "✅ Coppia corretta!",
+                    "wrong": "❌ Coppia errata!"
+                },
+                "summaryTitle": "Il tuo riepilogo",
+                "reflectionText": "È stato facile o difficile abbinare le situazioni e le fallacie/pregiudizi logici?\nNe conoscevi alcune? Quali? \nQuali erano totalmente nuove per te? \nPuoi fornire esempi concreti tratti dalla tua realtà che rappresentino alcune di queste fallacie e preconcetti?Conosci altri esempi di fallacie/preconcetti logici?\nIn che modo la conoscenza di queste preconcetti/fallacie logiche può aiutarti (e aiutare gli altri) ad agire contro l'incitamento all'odio e alla disinformazione?"
+            },
+            "lateralreading": {
+                "title": "Lettura laterale",
+                "description": "<p>La lettura laterale è una tecnica che consente di valutare rapidamente se il contenuto di una pagina web proviene da fonti affidabili e si basa su dati, riferimenti e informazioni di qualità. In una ricerca condotta dallo <a href=\"https://cor.inquirygroup.org/research/lateral-reading-on-the-open-internet/\" target=\"_blank\" rel=\"noopener noreferrer\">Stanford History Education Group</a>, i ricercatori hanno scoperto che si tratta di una strategia efficiente per valutare la qualità di un sito web che non si conosce.</p><p>Questa strategia (<a href=\"https://cor.inquirygroup.org/curriculum/collections/teaching-lateral-reading/\" target=\"_blank\" rel=\"noopener noreferrer\">link alla strategia</a>), utilizzata dai fact-checker per valutare le informazioni online, prevede di leggere un sito web non &quot;verticalmente&quot;, come se fosse un documento stampato, per valutarne la qualità, ma di utilizzare un metodo chiamato &quot;lettura laterale&quot;. Ciò significa analizzare la pagina web aprendo diverse schede per rispondere a domande chiave sul contenuto.</p><ul><li>Chi è l'autore del contenuto? È una fonte esperta?</li><li>È possibile trovare prove? È basato su fatti e dati?</li><li>È pubblicato da altre fonti affidabili? Cosa ne dicono?</li></ul><p>Oltre alle domande chiave di cui sopra, la tecnica della lettura laterale ci invita a promuovere il pensiero critico e ad approfondire l'analisi di altri aspetti del contenuto, come:</p><ul><li>Chi finanzia o sponsorizza il sito su cui è stato pubblicato l'articolo originale?</li><li>Cosa dicono altre fonti autorevoli su quel sito?</li><li>Quando cercate l'argomento dell'articolo originale, i risultati principali provengono da organizzazioni di fact-checking?</li><li>Sono state sollevate domande su altri articoli scritti dall'autore?</li><li>Le informazioni che trovate altrove contraddicono l'articolo originale?</li><li>Le testate giornalistiche credibili riportano – o forse ancora più importante, non riportano – ciò che state leggendo?</li></ul><p>La lettura laterale ci aiuta a valutare meglio le nostre fonti di informazione, ovvero a distinguere tra verità e menzogna, e a esercitare consapevolmente il nostro diritto di scegliere come accedere alle informazioni.</p>",
+                "objectivesTitle": "Obiettivi",
+                "objectives": "<ul><li>Apprendere le caratteristiche essenziali che rendono una fonte credibile e trasparente</li><li>Sviluppare competenze per identificare le fonti di informazione affidabili</li></ul>",
+                "startButton": "Inizia l'attività",
+                "task": "Prova! Devi valutare l'attendibilità della pagina web proposta utilizzando il metodo di lettura laterale. Controlla tutti gli screenshot e verifica se riesci a trovare prove che indichino se la pagina che stai guardando sia una fonte affidabile. Abbinale al tipo di informazione corrispondente che riesci a trovare oppure clicca su &quot;Non trovato&quot;.",
+                "sections": [
+                    {
+                        "intro": "<p>https://www.quotidianosanita.it/</p>",
+                        "images": [
+                            "/img/lateralReading/it/1.png",
+                            "/img/lateralReading/it/2.png",
+                            "/img/lateralReading/it/3.png",
+                            "/img/lateralReading/it/4.png",
+                            "/img/lateralReading/it/5.png",
+                            "/img/lateralReading/it/6.png",
+                            "/img/lateralReading/it/6bis.png",
+                            "/img/lateralReading/it/7.png"
+                        ],
+                        "questions": [
+                            {
+                                "question": "E' possibile identificare l'autore?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 5",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 6",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 7",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 8",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Corretto! Una sezione del sito è dedicata alla redazione responsabile delle pubblicazioni e degli articoli. Qui si possono trovare i riferimenti a Direttore, Vicedirettore e Direttore Editoriale e l'iscrizione al Tribunale di Roma e al ROC (il ROC è un registro pubblico istituito dall'Autorità per le Garanzie nelle Comunicazioni - Agcom), due ulteriori elementi che rendono Quotidianosanità.it una piattaforma affidabile e credibile.",
+                                    "incorrect": "Sbagliato! Una sezione del sito è dedicata alla redazione responsabile delle pubblicazioni e degli articoli. Qui si possono trovare i riferimenti a Direttore, Vicedirettore e Direttore Editoriale e l'iscrizione al Tribunale di Roma e al ROC (il ROC è un registro pubblico istituito dall'Autorità per le Garanzie nelle Comunicazioni - Agcom), due ulteriori elementi che rendono Quotidianosanità.it una piattaforma affidabile e credibile."
+                                }
+                            },
+                            {
+                                "question": "E' possibile trovare i contenuti e la metodologia del sito web?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 5",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 6",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 7",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 8",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Corretto! Gli articoli pubblicati nel sito includono riferimenti a statistiche e ricerche di una pluralità di fonti. Molto spesso sono presenti tabelle e grafici di dati a corredo degli articoli. Inoltre negli articoli e nelle ricerche pubblicate vengono citate fonti attendibili come il Ministero della Salute, con link diretti a documenti e report governativi ufficiali. ",
+                                    "incorrect": "Sbagliato! Gli articoli pubblicati nel sito includono riferimenti a statistiche e ricerche di una pluralità di fonti. Molto spesso sono presenti tabelle e grafici di dati a corredo degli articoli. Inoltre negli articoli e nelle ricerche pubblicate vengono citate fonti attendibili come il Ministero della Salute, con link diretti a documenti e report governativi ufficiali. "
+                                }
+                            },
+                            {
+                                "question": "È possibile trovare informazioni sull'affidabilità del sito web?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 5",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 6",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 7",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 8",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Corretto! Le informazioni sul Direttore Responsabile conferiscono affidabilità al sito web. Inoltre molte pubblicazioni presenti nella piattaforma sono realizzate in collaborazione con esperti del settore. Una sezione del sito è curata in collaborazione con Federsanità, la Confederazione delle Federsanità Anci regionali che associa dal 1995 le Aziende Sanitarie Locali, Ospedaliere e gli Irccs insieme ai rappresentanti dei Comuni associati alle Anci regionali di riferimento.",
+                                    "incorrect": "Sbagliato! Le informazioni sul Direttore Responsabile conferiscono affidabilità al sito web. Inoltre molte pubblicazioni presenti nella piattaforma sono realizzate in collaborazione con esperti del settore. Una sezione del sito è curata in collaborazione con Federsanità, la Confederazione delle Federsanità Anci regionali che associa dal 1995 le Aziende Sanitarie Locali, Ospedaliere e gli Irccs insieme ai rappresentanti dei Comuni associati alle Anci regionali di riferimento. "
+                                }
+                            },
+                            {
+                                "question": "Il contenuto è pubblicato da altre fonti affidabili?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 5",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 6",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 7",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 8",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Corretto! Quotidianosanità.it è citato da diverse fonti, sia all'interno del settore sanitario che da altri media: ad esempio, il sito web è citato da CARD,  Società Scientifica dei Servizi Territoriali – una libera Società scientifica senza fini di lucro il cui presidente è il dott. Gennaro Volpe, stimato professionista in ambito sanitario.",
+                                    "incorrect": "Sbagliato! Quotidianosanità.it è citato da diverse fonti, sia all'interno del settore sanitario che da altri media: ad esempio, il sito web è citato da CARD,  Società Scientifica dei Servizi Territoriali – una libera Società scientifica senza fini di lucro il cui presidente è il dott. Gennaro Volpe, stimato professionista in ambito sanitario."
+                                }
+                            }
+                        ],
+                        "conclusionTitle": "Conclusione",
+                        "conclusion": "Possiamo concludere che Quotidianosanità è un sito web che offre informazioni sanitarie di alta qualità. La sua metodologia è chiara e trasparente, basata su fonti multiple. I suoi autori sono correttamente identificati e rintracciabili. Pertanto, è una fonte adeguata per informazioni su argomenti relativi alla salute."
+                    },
+                    {
+                        "intro": "<p>https://www.imolaoggi.it/</p>",
+                        "images": [
+                            "/img/lateralReading/it/8.png",
+                            "/img/lateralReading/it/9.png",
+                            "/img/lateralReading/it/10.png",
+                            "/img/lateralReading/it/11.png"
+                        ],
+                        "questions": [
+                            {
+                                "question": "E' possibile identificare l'autore?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Corretto! Nel sito non è possibile trovare una sezione dedicata alla redazione. Gli articoli pubblicati sul sito non riportano il nome dell'autore ma solo la dicitura \"ImolaOggi\". Nella pagina Home si trova solo l'indicazione \"Direttore Armando Manocchia\": Manocchia non è un giornalista in quanto non è iscritto al relativo Ordine dei Giornalisti.",
+                                    "incorrect": "Sbagliato! Nel sito non è possibile trovare una sezione dedicata alla redazione. Gli articoli pubblicati sul sito non riportano il nome dell'autore ma solo la dicitura \"ImolaOggi\". Nella pagina Home si trova solo l'indicazione \"Direttore Armando Manocchia\": Manocchia non è un giornalista in quanto non è iscritto al relativo Ordine dei Giornalisti."
+                                }
+                            },
+                            {
+                                "question": "E' possibile trovare i contenuti e la metodologia del sito web?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": true
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Corretto! Non si trovano informazioni sul metodo seguito da ImolaOggi nè alcuna altra informazione utile ad identificare una redazione, chi collabora con il sito web o chi finanzia il sito web stesso. ",
+                                    "incorrect": "Sbagliato! Non si trovano informazioni sul metodo seguito da ImolaOggi nè alcuna altra informazione utile ad identificare una redazione, chi collabora con il sito web o chi finanzia il sito web stesso. "
+                                }
+                            },
+                            {
+                                "question": "È possibile trovare informazioni sull'affidabilità del sito web?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": true
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Corretto! Nessuna informazione viene fornita sull'affidabilità o la metodologia del sito web, negli atricoli pubblicati non vengono mai citati fonti affidabili o studi scientifici. Non è presente alcuna iscrizione a un tribunale italiano.",
+                                    "incorrect": "Sbagliato! Nessuna informazione viene fornita sull'affidabilità o la metodologia del sito web, negli atricoli pubblicati non vengono mai citati fonti affidabili o studi scientifici. Non è presente alcuna iscrizione a un tribunale italiano."
+                                }
+                            },
+                            {
+                                "question": "Il contenuto è pubblicato da altre fonti affidabili?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Corretto! Manocchia e ImolaOggi vengono citati su Wikipedia alla voce \"Marcello Foa\":  \"Armando Manocchia, proprietario del sito di fake news Imola Oggi\". ImolaOggi viene citato nel report di IDMO (Italian Digital Media Observatory) come uno \"dei siti di disinformazione più seguiti nel 2021\".",
+                                    "incorrect": "Sbagliato! Manocchia e ImolaOggi vengono citati su Wikipedia alla voce \"Marcello Foa\":  \"Armando Manocchia, proprietario del sito di fake news Imola Oggi\". ImolaOggi viene citato nel report di IDMO (Italian Digital Media Observatory) come uno \"dei siti di disinformazione più seguiti nel 2021\"."
+                                }
+                            }
+                        ],
+                        "conclusionTitle": "Conclusione",
+                        "conclusion": "Possiamo concludere che il sito web \"ImolaOggi\" si presenta come un giornale online che potrebbe sembrare dal nome un quotidiano locale della città di Imola che pubblica anche notizie di livello nazionale e internazionale. Grazie alla tecnica del Lateral Reading si può chiaramente verificare che il sito ImolaOggi non è un sito web attendibile nè una testata giornalistica riconosciuta. Il sito web diffonde contenuti manipolati, distorti e di hate speech."
+                    }
+                ]
+            }
+        }
+    },
     "inspect": {
         "title": "Panoramica del Canale",
-        "subtitle":"Analizza i Canali e i Topics Fondamentali nella Rete dell'Odio e della Disinformazione"
+        "subtitle": "Analizza i Canali e i Topics Fondamentali nella Rete dell'Odio e della Disinformazione"
     },
     "channel": {
         "title": "Esplorazione della Rete",
-        "subtitle":"Esplora la Rete e Analizza le Connessioni dell’Odio e della Disinformazione Online",
+        "subtitle": "Esplora la Rete e Analizza le Connessioni dell’Odio e della Disinformazione Online",
         "infoTitle": "Informazioni sul Canale"
     },
     "project": {
         "noProject": "Nessun progetto disponibile",
-        "noData": "Nessun dato disponibile" 
+        "noData": "Nessun dato disponibile"
     },
     "projects": {
         "title": "Progetti",
-        "subtitle":"Scegli la lingua in cui vuoi allenare le tue abilità di risposta a contenuti d'odio e disinformazione."
+        "subtitle": "Scegli la lingua in cui vuoi allenare le tue abilità di risposta a contenuti d'odio e disinformazione."
     },
     "tasks": {
         "title": "Tasks",
-        "subtitle":"Seleziona l'argomento su cui concentrarti per creare risposte efficaci e argomentazioni contro la disinformazione."
+        "subtitle": "Seleziona l'argomento su cui concentrarti per creare risposte efficaci e argomentazioni contro la disinformazione."
     },
     "conversation": {
         "title": "Conversazione",
-        "subtitle":"Esplora le Conversazioni e Analizza i Messaggi nella Rete della Disinformazione e dell'Odio"
-    },  
+        "subtitle": "Esplora le Conversazioni e Analizza i Messaggi nella Rete della Disinformazione e dell'Odio"
+    },
     "channelTable": {
         "header": {
             "title": "Rete Telegram – Statistiche dei Nodi",
@@ -87,6 +742,7 @@
             "messages": "Messaggi",
             "partecipants": "Utenti",
             "IRI": "Infodemic Risk",
+            "CW": "Check Worthy",
             "hs": "Hate Speech",
             "nInRecommendations": "Raccomandazioni in entrata",
             "nOutRecommendations": "Raccomandazioni in uscita",
@@ -101,21 +757,41 @@
         "pl": "Polacco"
     },
     "graphInteraction": {
+        "legend": {
+            "title": "Legenda",
+            "color": "Colore per",
+            "size": "Dimensione per",
+            "defaultColor": "Colore predefinito per tutti i nodi",
+            "defaultSize": "Dimensione predefinita per tutti i nodi",
+            "low": "Basso",
+            "medium": "Medio",
+            "high": "Alto"
+
+        },
         "color": {
-            "disable": "Disabilita colore",
-            "iri": "Infodemic Risk",
-            "hs": "Hate Speech",
-            "in": "In recommendations",
-            "out": "Out recommendations"
+            "disable": "Nessuno (colore fisso)",
+            "iri": "Infodemic Risk Index",
+            "hs": "Hate Speech Score",
+            "out_degree": "Nodi in uscita",
+            "in_degree": "Nodi in entrata"
         },
         "size": {
-            "disable": "Disabilita dimensione",
-            "iri": "Infodemic Risk",
-            "hs": "Hate Speech",
-            "in": "In recommendations",
-            "out": "Out recommendations"
+            "disable": "Nessuno (dimensione fissa)",
+            "iri": "Infodemic Risk Index",
+            "hs": "Hate Speech Score",
+            "in": "In Recommendations",
+            "out": "Out Recommendations",
+            "label": "Etichetta",
+            "out_degree": "Nodi in uscita",
+            "in_degree": "Nodi in entrata",
+            "n_out_recommended": "Nodi in uscita",
+            "n_in_recommended": "Nodi  in entrata"
         },
+        "resetView": " Reimposta vista",
         "tooltip": {
+            "label": "Etichetta",
+            "message_count": "Numero di messaggi",
+            "partecipants_count": "Numero di utenti",
             "id": "ID Canale:",
             "iri": "Infodemic Risk:",
             "hs": "Hate Speech:",
@@ -130,11 +806,11 @@
     },
     "topicsTable": {
         "title": "Argomenti principali del canale",
-        "header":{
-            "title":"Titolo",
-            "count":"% di messaggi",
-            "hs":"% di Hate Speech",
-            "cw":"% di Check Worthy"
+        "header": {
+            "title": "Titolo",
+            "count": "% di messaggi",
+            "hs": "% di Hate Speech",
+            "cw": "% di Check Worthy"
         }
     },
     "channelInfo": {
@@ -168,7 +844,7 @@
             "from": "Da",
             "mediaType": "Tipo",
             "reactions": "Reazioni",
-            "nrViews"   : "Visualizzazioni",
+            "nrViews": "Visualizzazioni",
             "hateLabel": "Hate Speech",
             "checkLabel": "Check Worthy",
             "topic": "Argomento",
@@ -183,39 +859,39 @@
             "error": "Errore durante il caricamento della chat"
         },
         "noTarget": "Nessun destinatario identificato",
-        "target":"Clicca per selezionare un destinatario",
+        "target": "Clicca per selezionare un destinatario",
         "noData": "Nessun dato disponibile",
-        "filter":{
-            "target":"Filtra per target",
-            "topic":"Filtra per argomento",
-            "hate":"Hate Speech",
-            "checkworthy":"Check Worthy",
-            "all":"Tutti",
-            "yes":"Si",
-            "no":"No",
-            "DISABLED":"Disabili",
-            "JEWS":"Ebrei",
-            "MUSLIMS":"Musulmani",
-            "LGBT+":"LGBT+",
-            "MIGRANTS":"Migranti",
-            "OTHER":"Altro",
-            "POC":"Persone di colore",
-            "ROMANI":"Rom",
-            "WOMEN":"Donne"      },
-    "footer":{
-        "pagination": {
-            "range": "{pageStart} - {pageStop} di {totalItems} messaggi recuperati"
+        "filter": {
+            "target": "Filtra per target",
+            "topic": "Filtra per argomento",
+            "hate": "Hate Speech",
+            "checkworthy": "Check Worthy",
+            "all": "Tutti",
+            "yes": "Si",
+            "no": "No",
+            "DISABLED": "Disabili",
+            "JEWS": "Ebrei",
+            "MUSLIMS": "Musulmani",
+            "LGBT+": "LGBT+",
+            "MIGRANTS": "Migranti",
+            "OTHER": "Altro",
+            "POC": "Persone di colore",
+            "ROMANI": "Rom",
+            "WOMEN": "Donne"
+        },
+        "footer": {
+            "pagination": {
+                "range": "{pageStart} - {pageStop} di {totalItems} messaggi recuperati"
+            }
         }
-    }
-
     },
     "wordclouds": {
         "hate": "Hate vs Non Hate",
         "checkworthy": "Check Worthy vs Non Check Worthy",
         "generic": "Generico",
-        "select":"Seleziona tipo WordCloud",
-        "selectTopic":"Seleziona un argomento",
-        "channel":"Canale",
+        "select": "Seleziona tipo WordCloud",
+        "selectTopic": "Seleziona un argomento",
+        "channel": "Canale",
         "titles": {
             "hate": "Hate Speech",
             "is_checkworthy": "Check Worthy",
@@ -223,6 +899,26 @@
             "isnot_checkworthy": "Non Check Worthy",
             "non_hate": "Non Hate"
         }
-
+    },
+    "dialog": {
+        "dataSources": "Fonti dati",
+        "externalGround": "Fonte esterna",
+        "documentName": "Nome documento",
+        "externalLink": "Link esterno",
+        "text": "Testo",
+        "confirm": "Conferma",
+        "dialogue": "Dialogo",
+        "groundTextSpans": "Testi di riferimento",
+        "startEmpty": "Inizia vuoto",
+        "addDynamicTurn": "Aggiungi turno dinamico",
+        "addFromGround": "Aggiungi da fonte",
+        "tooltip": {
+            "startEmpty": "Premi qui per creare un turno vuoto.",
+            "addDynamicTurn": "Genera automaticamente un suggerimento da cui iniziare.<br>Puoi comunque modificarlo in seguito.",
+            "addRoundUp": "Aggiungi un turno vuoto <em>prima</em> di quello selezionato.",
+            "addRoundDown": "Aggiungi un turno vuoto <em>dopo</em> quello selezionato.",
+            "magic": "Genera automaticamente una risposta e seleziona lo span testuale collegato.<br><em>Puoi comunque modificarla.</em>",
+            "delete": "Elimina definitivamente questo turno."
+        }
     }
 }

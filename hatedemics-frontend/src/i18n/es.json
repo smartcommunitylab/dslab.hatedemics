@@ -1,0 +1,927 @@
+{
+    "login": {
+      "success": "Iniciar sesión exitoso",
+      "error": "Error durante el inicio de sesión",
+      "button": "Acceso"
+    },
+    "common": {
+      "close": "Cerca",
+      "ok": "DE ACUERDO"
+    },
+    "menu": {
+      "home": "Hogar",
+      "educational": "Educativo",
+      "explore": "Explorar",
+      "network": "Red",
+      "channel": "Canal",
+      "conversation": "Conversación",
+      "quickGuide": "Guía rápida",
+      "counterspeech": "Contrarrestar",
+      "projects": "Proyectos",
+      "credits": "Créditos",
+      "logout": "Cierre de sesión"
+    },
+    "counterspeechGuide": {
+      "guideTitle": "Guía rápida",
+      "guideItems": {
+        "counterspeech": {
+          "title": "Contrarrestar",
+          "description": "<p><strong>Contrarrestar</strong> se define como todas las acciones comunicativas destinadas a refutar el discurso de odio a través de razones convincentes, y argumentos verdaderos y vinculados a los hechos (Schieb y Preuss, 2016).</p>"
+        },
+        "dataSources": {
+          "title": "Fuentes de datos",
+          "description": "<p>Contiene un artículo de verificación de hechos de un editor certificado (firmante del <a href=\"https://ifcncodeofprinciples.poynter.org/\" target=\"_blank\">Código de Principios de IFCN</a>).</p>"
+        },
+        "dialogue": {
+          "title": "Diálogo",
+          "description": "<p>Cree un diálogo que simule la interacción entre alguien que difunde odio/información errónea y un operador que responde con argumentos impulsados por los hechos.</p>"
+        },
+        "groundText": {
+          "title": "Vestidos de texto en el suelo",
+          "description": "<p>Puede agregar partes del artículo de verificación de hechos que admiten la respuesta del operador.</p><p>El texto en el suelo es <em>agregado automáticamente</em> Cuando se genera un giro.  <strong>resaltar manualmente</strong> Una parte del artículo y haga clic en el botón \"Enlace\".</p>"
+        },
+        "newTurn": {
+          "title": "Nuevo turno",
+          "description": "<p>Puede agregar un nuevo giro de diferentes maneras:</p><ul><li>Agregue un giro vacío con los botones \"+\".</li><li>Genere automáticamente un giro utilizando una porción de artículo seleccionada.</li><li>Seleccione una porción como texto de tierra, luego haga clic en \"Generar desde el suelo\".</li></ul><p><strong>Nota:</strong> Incluso los giros generados automáticamente y el texto del suelo siempre se pueden editar.</p>"
+        }
+      }
+    },
+    "home": {
+      "title": "Luchar contra el odio y la desinformación en línea",
+      "description": "Hatedemics es una plataforma que aprovecha la inteligencia artificial para analizar el contenido en línea, mejorar el pensamiento crítico y entrenar las respuestas al discurso de odio.",
+      "network": "Explorar la red",
+      "networkDescription": "Un mapa interactivo para observar las conexiones entre canales, contenido y dinámica relacionada con el odio y la desinformación en línea. ",
+      "networkButton": "Ir a la red",
+      "counterspeech": "Redacción de contaminación",
+      "counterspeechDescription": "Entrena tu capacidad para responder al contenido de odio y desinformación con ejercicios de escritura específicos. ",
+      "counterspeechButton": "Empezar a escribir",
+      "educational": "Educativo",
+      "educationalDescription": "Explore recursos y materiales educativos para comprender y contrarrestar el odio en línea.",
+      "educationalButton": "Ir a la sección educativa",
+      "guideDescription": "Qué saber antes de usar la plataforma.",
+      "guideButton": "Guía",
+      "guideTitle": "Guía rápida",
+      "guideItems": {
+        "network": {
+          "title": "Red",
+          "description": "La red muestra las conexiones entre los canales de telegrama recopilados. "
+        },
+        "inRec": {
+          "title": "En recomendaciones",
+          "description": "Cuánto recomienda un canal por otros canales."
+        },
+        "outRec": {
+          "title": "Recomendaciones",
+          "description": "Cuánto recomienda un canal otros canales."
+        },
+        "risk": {
+          "title": "Riesgo infodémico",
+          "description": "Cuánto es confiable el canal. "
+        },
+        "check": {
+          "title": "Verifique la valía",
+          "description": "Indica si se puede verificar un mensaje. "
+        }
+      }
+    },
+    "networkGuide": {
+      "guideTitle": "Guía de la red de canales Telegram",
+      "guideItems": {
+        "network": {
+          "title": "Red",
+          "description": "Esta red muestra los canales de telegrama como puntos, y las líneas muestran cómo están conectados. "
+        },
+        "expanded": {
+          "title": "Expandido",
+          "description": "Un canal es <strong>expandido</strong> Si hemos recopilado todos sus mensajes de chat."
+        },
+        "inOutRecommendations": {
+          "title": "Recomendaciones de entrada y salida",
+          "description": "<strong>En recomendaciones</strong> Es el número total de veces que otros recomiendan un canal: ¡cuanto más se recomienda, más popular es!<br><strong>Recomendaciones</strong> es el número de canales que este recomienda: un número más alto significa que apunta a mucho otro contenido."
+        },
+        "iri": {
+          "title": "Índice de riesgo infodémico (IRI)",
+          "description": "El IRI mide cuán poco confiable es un canal, desde 0 (completamente confiable) hasta 1 (totalmente poco confiable). <br>Para más detalles: <a href='https://www.nature.com/articles/s41562-020-00994-6' target='_blank'>Gallotti et al., 2020 (comportamiento humano de la naturaleza)</a>."
+        },
+        "diri": {
+          "title": "Índice de riesgo infodémico dinámico (DIRI)",
+          "description": "El Diri analiza cómo los usuarios activamente se involucran con contenido poco confiable. "
+        },
+        "sdiri": {
+          "title": "Índice de riesgo infodémico semi-dinámico (SDIRI)",
+          "description": "El SDIRI rastrea interacciones ligeras y rápidas con contenido poco confiable, como reacciones (emojis, me gusta). "
+        },
+        "unrel": {
+          "title": "Índice de falta de fiabilidad (no)",
+          "description": "Este índice muestra cuánto contenido poco confiable comparte un canal en comparación con todos sus mensajes que vinculan a cualquier fuente. "
+        },
+        "domains": {
+          "title": "Dominios conocidos y desconocidos",
+          "description": "<strong>Dominios conocidos</strong> son sitios web para los que tenemos datos de confiabilidad. <strong>Dominios desconocidos</strong> son aquellos sin tales datos. "
+        },
+        "centrality": {
+          "title": "Medidas de centralidad",
+          "description": "Estas medidas muestran cuán importante es un canal en la red:<br><strong>Centralidad de grado:</strong> Número de enlaces directos (popularidad).<br><strong>Mercidez:</strong> Actúa como un puente entre otros canales.<br><strong>Cercanía:</strong> Qué tan rápido puede llegar a otros.<br><strong>Vector propio:</strong> Qué conectado está a otros canales influyentes.<br>Ver también: <em>Pósfai y Barabási, 2016 - Network Science</em>."
+        },
+        "communities": {
+          "title": "Comunidades",
+          "description": "Estos métodos comunitarios ayudan a identificar natural <strong>grupos</strong> dentro de las redes, como en una red social:<br><br><strong>Comunidad de Lovain:</strong> Busca grupos donde hay muchas conexiones dentro del grupo. <em>(¡Como un grupo de amigos donde todos se conocen muy bien!)</em><br><strong>Comunidad de Infomap:</strong> Encuentra grupos basados en la facilidad de la información (o mensajes) puede moverse dentro de ese grupo. <em>(¡Como un club donde las noticias se extienden muy rápido entre los miembros!)</em><br><br>Para más detalles, puede consultar estos artículos:<br><a href='https://hal.science/hal-01231784' target='_blank'>Dugué, N. y Pérez, A. (2015). </a><br><a href='https://www.pnas.org/doi/epdf/10.1073/pnas.0706851105' target='_blank'>Rosvall, M. y Bergstrom, C. T. (2008). </a>"
+        }
+      }
+    },
+    "welcome": {
+      "title": "Bienvenido a Hatedemics"
+    },
+    "onboarding": {
+      "steps": [
+        {
+          "title": "Lo que es Hatedemics",
+          "html": "<p><strong>Odatemics</strong> es un proyecto europeo centrado en crear conciencia sobre el discurso de odio, la desinformación y cómo se cruzan estos dos problemas. </p><p><strong>Odatemics</strong> utiliza tecnologías basadas en IA de dos maneras principales:</p><ul><li><strong>Análisis de datos</strong>: Analiza grandes volúmenes de datos de una plataforma de mensajería popular (Telegram), proporcionando información sobre el discurso de odio y las tendencias de desinformación.</li><li><strong>Contrarrestar</strong>: Crea respuestas basadas en el diálogo al discurso de odio y información errónea, llamada \"contrapezo\". </li></ul><p>Visite el <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">Sitio web de Hatedemics</a> Para obtener más información sobre el proyecto.</p>"
+        },
+        {
+          "title": "Algunas definiciones",
+          "html": "<p><strong>Discurso de odio</strong>: Confiamos en la definición hecha por la Oficina de la ONU sobre prevención del genocidio y la responsabilidad de proteger (2019), que define el discurso de odio como <em>\"Cualquier tipo de comunicación en el habla, la escritura o el comportamiento, que ataca o usa un lenguaje peyorativo o discriminatorio con referencia a una persona o un grupo sobre la base de quiénes son\"</em>. </p><p><strong>Sabor</strong>: Esto se refiere al grado en que una declaración, reclamo o verificación de méritos posteriores a la verificación o verificación de hechos debido a su posible falsedad, relevancia pública o impacto dañino.  <strong>Nota:</strong> Las declaraciones que son fácilmente verificables por un usuario promedio (por ejemplo, \"la población de China es la mitad de la Italia\") no se consideran dignos de verificación, ya que no requieren una verificación de expertos.</p><p><strong>Desinformación</strong>: La desinformación es cuando la información falsa o engañosa se crea deliberadamente y se extiende a las personas enganchadas.  <em>tiene la intención de engañar</em> tú.  <em>\"índices de riesgo infodémico\"</em>. </p><p>¿Quieres saber más?  <em>Evaluar los riesgos de 'infodemias' en respuesta a las epidemias de Covid-19</em>. <strong>Naturaleza Comportamiento humano</strong>, 4 (12), 1285–1293.</p>"
+        },
+        {
+          "title": "¿Qué incluye la plataforma?",
+          "html": "<p><strong>Datos:</strong> La plataforma incluye datos estáticos: aproximadamente 10 millones de mensajes de telegrama recopilados de casi 1,000 chats públicos, que cubren 4 idiomas (inglés, italiano, español y polaco). </p><p><strong>Análisis:</strong> Las ideas que se muestran aquí se generan automáticamente utilizando tecnologías basadas en IA. </p><p><strong>Chatbot:</strong> La plataforma incluye un modelo de diálogo que simula la interacción con una desinformación de propagación de hater. </p>"
+        },
+        {
+          "title": "Advertencia de disparo",
+          "html": "<p><strong>Advertencia:</strong> Esta plataforma contiene ejemplos no observados que algunos usuarios pueden encontrar ofensivos.</p>"
+        }
+      ],
+      "prev": "Atrás",
+      "next": "Próximo",
+      "close": "Cerca",
+      "neverShow": "No te muestres de nuevo"
+    },
+    "educational": {
+      "eduCard1Title": "Declaración de derechos humanos",
+      "eduCard1Desc": "Descubra los principios centrales que protegen la dignidad humana.",
+      "eduCard1Button": "Explorar derechos",
+      "eduCardBiasTitle": "Sesgos y falacias",
+      "eduCardBiasDesc": "Explore las falacias lógicas y los sesgos cognitivos detrás del discurso de odio y la desinformación.",
+      "eduCardBiasButton": "Actividad de inicio",
+      "eduCard3Title": "Desacreditación",
+      "eduCard3Desc": "Aprenda a desinformación de desinformación de manera efectiva.",
+      "eduCard3Button": "Actividad de inicio",
+      "eduCard4Title": "Lectura lateral",
+      "eduCard4Desc": "Aprenda a leer y comprender el contenido en línea.",
+      "eduCard4Button": "Actividad de inicio",
+      "warningTitle": "Advertencia",
+      "warningText": "Estas actividades contienen ejemplos no observados que algunos lectores pueden encontrar ofensivo. ",
+      "warningButton": "Entiendo",
+      "warningCheckbox": "No vuelvas a mostrar este mensaje",
+        "tasks": {
+            "humanRights": {
+                "title": "Derechos Humanos",
+                "description": "Los derechos humanos fundamentales establecidos por las Naciones Unidas en la <a href='https://www.un.org/en/about-us/universal-declaration-of-human-rights' target='_blank' rel='noopener'>Declaración Universal de los Derechos Humanos</a> protegen y defienden la dignidad, la igualdad y la libertad de todas las personas. Algunos de ellos se enumeran a continuación en una versión simplificada.<br><br><iframe width='100%' height='315' src='https://www.youtube.com/embed/nDgIVseTkuE?si=Jomr_pVjQAdBgfGg' title='Vídeo sobre Derechos Humanos' frameborder='0' allowfullscreen></iframe>",
+                "objectivesTitle": "Objetivos de la actividad",
+                "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Desarrollar conocimientos sobre derechos humanos;</li><li>Concienciar sobre la conexión entre los derechos humanos, el discurso de odio y la desinformación;</li><li>Aprender posibles argumentos para reaccionar ante el discurso de odio y la desinformación.</li></ul>",
+                "startButton": "Comenzar",
+                "task": "Formamos 11 grupos. Cada grupo coge una tarjeta y debate sobre el significado del derecho humano escrito en ella. Después de 5 minutos, el primer grupo explica qué significa este derecho para ellos y cómo se relaciona con el discurso de odio. El profesor puede ampliar su explicación si es necesario. Luego, el siguiente grupo, con la siguiente tarjeta, explica el significado de su derecho y su relación con el discurso de odio. Repetimos este proceso hasta que todos los grupos hayan hablado.",
+                "completetask": "He completado la actividad",
+                "taskCompleteTitle": "Actividad completada",
+                "taskCompleteText": "¿Ya conocías todos los derechos humanos mencionados? ¿Cuáles son nuevos para ti? ¿Fue fácil o difícil explicar el significado de estos derechos y encontrar una relación entre ellos y el discurso de odio? ¿Puedes nombrar otros derechos humanos que no se mencionaron?",
+                "articles": [
+                    {
+                        "title": "Art. 1",
+                        "text": "Todos los seres humanos nacen libres e iguales en dignidad y derechos."
+                    },
+                    {
+                        "title": "Art. 2",
+                        "text": "Toda persona tiene derecho a ser tratada de la misma manera, independientemente de su raza, color, sexo, idioma, religión, opinión política, propiedad, nacimiento o cualquier otra condición."
+                    },
+                    {
+                        "title": "Art. 3",
+                        "text": "Toda persona tiene derecho a la vida y a vivir con libertad y seguridad."
+                    },
+                    {
+                        "title": "Art. 5",
+                        "text": "Toda persona tiene derecho a no ser sometida a tortura ni a tratos inhumanos o degradantes."
+                    },
+                    {
+                        "title": "Art. 7",
+                        "text": "La ley es la misma para todos."
+                    },
+                    {
+                        "title": "Art. 13",
+                        "text": "Toda persona tiene derecho a vivir y viajar libremente dentro de las fronteras del Estado."
+                    },
+                    {
+                        "title": "Art. 14",
+                        "text": "Toda persona tiene derecho a ir a otro país y pedir protección si está siendo perseguida o está en peligro de ser perseguida."
+                    },
+                    {
+                        "title": "Art. 16",
+                        "text": "Toda persona tiene derecho a casarse y tener una familia."
+                    },
+                    {
+                        "title": "Art. 18",
+                        "text": "Toda persona tiene derecho a creer lo que quiera (incluida, aunque no exclusivamente, la religión)."
+                    },
+                    {
+                        "title": "Art. 19",
+                        "text": "Toda persona tiene derecho a expresar lo que piensa y a dar y recibir información libremente."
+                    },
+                    {
+                        "title": "Art. 29",
+                        "text": "Todas las personas tienen que respetar los derechos de los demás."
+                    },
+                    {
+                        "title": "Art. 30",
+                        "text": "Nadie tiene derecho a quitar ninguno de estos derechos."
+                    }
+                ],
+                "summary": "¿Ya conocías todos los derechos humanos mencionados? ¿Cuáles eran nuevos para ti? ¿Te resultó fácil o difícil explicar el significado de estos derechos y relacionarlos con el discurso de odio? ¿Puedes nombrar otros derechos humanos que no se citaron?"
+            },
+            "debunking": {
+                "title": "Desmitificación",
+                "description": "<strong>Qué es la desmitificación:</strong> Cuando algunas personas piensan en un verificador de hechos (fact‑checker), solo ven a un periodista que investiga una afirmación, la verifica y confirma si es verdadera o no, el proceso de desmitificación. Sin embargo, luchar contra la desinformación eficazmente hoy en día exige mucho más: detectar rápidamente posibles bulos antes de que se vuelvan virales y afecten a más personas; explicar que no todo es blanco o negro, ayudar a las personas a estar bien preparadas frente a falsedades mediante la alfabetización mediática o regulación; crear herramientas que dificulten que nos engañen o combatir juntos contra la manipulación: esto es lo que llamamos pre‑bunking.<br><br><strong>Qué es una narrativa de desinformación:</strong> Lo que los creadores de desinformación quieren que creas. Cuando una idea se repite muchas veces, la gente tiende a creerla. Además, un solo bulo puede contener varias narrativas.",
+                "objectivesTitle": "Objetivos",
+                "objectives": "<ul><li>Desmitificar y conocer qué son las narrativas de desinformación. También es un ejercicio de pre‑bunking: descubre qué son las narrativas de desinformación y las más comunes en tu país.</li><li>Aprende algunas técnicas de desmitificación (debunking) de manera guiada y comprende por qué el pensamiento crítico e identificar bulos virales es esencial para combatir las narrativas de desinformación.</li></ul>",
+                "task": "<strong>Simula las acciones de un fact‑checker</strong> seleccionando la forma más eficaz de desmentir un evento afirmado. ¿Puedes también identificar la narrativa de desinformación relacionada?",
+                "startButton": "Comenzar actividad",
+                "correct": "¡Correcto! Bien hecho.",
+                "incorrect": "Respuesta incorrecta. Inténtalo de nuevo.",
+                "next": "Siguiente pregunta",
+                "finish": "Finalizar",
+                "questions": [
+                    {
+                        "title": "Pregunta 1",
+                        "scenario_description": "Has recibido esta imagen que muestra una foto de una manifestación feminista donde una participante lleva un cartel que dice: “Quiero que mi hija tenga el derecho a abortar que yo no tuve.” No estás seguro de si es auténtica.",
+                        "question": "¿Cómo lo verificarías?",
+                        "image": "/img/debunking/es/question1.jpg",
+                        "options": [
+                            {
+                                "text": "Búsqueda inversa de imagen"
+                            },
+                            {
+                                "text": "Búsqueda avanzada en Twitter (ahora X)"
+                            },
+                            {
+                                "text": "Herramienta de IA"
+                            }
+                        ],
+                        "correct": 0,
+                        "feedback": {
+                            "correct": "¡Correcto! Has realizado con éxito una búsqueda inversa de imágenes y encontrado esta foto.",
+                            "correctImage": "/img/debunking/es/answer1.jpg",
+                            "incorrect": "Desafortunadamente ni una búsqueda avanzada en Twitter ni una herramienta de IA hubieran sido útiles en este caso.",
+                            "incorrectImage": "/img/debunking/es/answer1.jpg"
+                        }
+                    },
+                    {
+                        "title": "Pregunta 2",
+                        "question": "Realizando una búsqueda inversa de imagen habrías encontrado esta imagen. ¿Qué puedes concluir al observarla?",
+                        "image": "/img/debunking/es/question2.jpg",
+                        "options": [
+                            {
+                                "text": "Es una imagen generada por IA"
+                            },
+                            {
+                                "text": "Es una imagen real fuera de contexto"
+                            },
+                            {
+                                "text": "Parece ser la imagen original"
+                            }
+                        ],
+                        "correct": 2,
+                        "feedback": {
+                            "correct": "Correcto: esta es la imagen original. En particular, esta imagen fue publicada originalmente en 2023. Podemos concluir, por tanto, que la primera imagen que viste fue manipulada y cambia la frase que contenía originalmente, “I am the mother of the girl you will never touch,” publicada en un sitio sobre las manifestaciones del 8M en Monterrey (México) en marzo de 2023 y ha circulado manipulada.",
+                            "incorrect": "Incorrecto: esta es la imagen original. En particular, esta imagen fue publicada originalmente en 2023. Podemos concluir, por tanto, que la primera imagen que viste fue manipulada y cambia la frase que contenía originalmente, “I am the mother of the girl you will never touch,” publicada en un sitio sobre las manifestaciones del 8M en Monterrey (México) en marzo de 2023 y ha circulado manipulada."
+                        }
+                    },
+                    {
+                        "title": "Pregunta 3",
+                        "question": "¿Qué tipo de narrativa de desinformación puede reforzar este bulo?",
+                        "options": [
+                            {
+                                "text": "Las feministas odian a los hombres"
+                            },
+                            {
+                                "text": "Las feministas dicen cosas absurdas"
+                            },
+                            {
+                                "text": "Las feministas no deberían participar en manifestaciones."
+                            }
+                        ],
+                        "correct": 1,
+                        "feedback": {
+                            "correct": "¡Correcto!<br><br>Consulta cómo los fact‑checkers profesionales refutaron esta desinformación: <a href='https://maldita.es/feminismo/bulo/20250310/cartel‑derechoalaborto‑manipulado/' target='_blank'>análisis de Maldita.es</a>",
+                            "incorrect": "Incorrecto.<br><br>Consulta cómo los fact‑checkers profesionales refutaron esta desinformación: <a href='https://maldita.es/feminismo/bulo/20250310/cartel‑derechoalaborto‑manipulado/' target='_blank'>análisis de Maldita.es</a>"
+                        }
+                    }
+                ]
+            },
+            "bias": {
+                "title": "Sesgos y falacias",
+                "description": "<strong>Falacias lógicas asociadas con el discurso de odio y la desinformación</strong><br><br>El contenido del discurso de odio y la desinformación puede parecer muy convincente en ocasiones. Esto se debe a que quienes perpetúan el discurso de odio a menudo recurren a falacias lógicas – construcciones que los grupos de odio usan para justificar sus causas y su creencia de que las personas que se encuentran con este contenido lo considerarán razonable y verdadero. Las falacias lógicas pueden usar premisas falsas, premisas verdaderas pero conclusiones falsas, o premisas y conclusiones verdaderas pero un argumento falso. Algunas falacias se producen con la intención de engañar o hacer viral la desinformación.<br><br>Hay muchas falacias que aparecen en el discurso de odio. Aquí algunas de ellas:<br><br><strong>Argumentum ad populum</strong> – una forma no sustantiva de argumentar en la que el hablante apela a los gustos, preferencias y prejuicios de la multitud. Basado en el egoísmo nacional, instintos, estereotipos o prejuicios, el hablante intenta ganar a la multitud para su tesis (por ejemplo: La mayoría de las personas en nuestro país piensan así, por lo tanto, así debemos actuar);<br><br><strong>Ipse dixit</strong> – forma de argumentar sin proporcionar una prueba válida (por ejemplo: el partido político lo dijo, así que debe ser verdad);<br><br><strong>Falacia de la pendiente resbaladiza</strong> – ocurre cuando alguien afirma que una posición o decisión llevará a una serie de consecuencias negativas no deseadas (por ejemplo: no podemos dejar que los migrantes se queden en nuestro país porque traerán a sus familias y tendrán hijos, lo que nos llevará a perder nuestros trabajos y al colapso del sistema de seguridad social, y como resultado seremos pobres y perderemos el control de nuestro país);<br><br><strong>Falacia del falso dilema (o falacia del “o… o…”)</strong> – cuando alguien afirma que solo existen dos maneras de abordar un tema, aunque hay muchas otras opciones (por ejemplo: o votas por este partido o vivirás tu vida en constante peligro);<br><br><strong>Post hoc, ergo propter hoc</strong> – error lógico al concluir erróneamente que existe una conexión causal entre dos eventos solo porque uno ocurrió antes que el otro (por ejemplo: desde que tenemos un nuevo profesor de matemáticas, he estado sacando malas notas. Ella debe ser la razón por la que me va mal);<br><br><strong>Argumentum Ad Hominem</strong> – cuando alguien ataca a la persona que hace un argumento en lugar del argumento en sí (por ejemplo: no escuches la opinión de Pedro sobre el proyecto grupal, él es perezoso y nunca hace nada bien);<br><br><strong>Selección sesgada (Cherry picking)</strong> – cuando alguien presenta selectivamente evidencia que apoya su argumento mientras ignora o descarta evidencia que lo contradice (por ejemplo: “El discurso de odio no es dañino. Mira este estudio que dice que solo es ofensivo, no peligroso” — mientras ignora decenas de otros estudios que muestran el daño psicológico y social del discurso de odio);<br><br><strong>Apego a la tradición</strong> – cuando un argumento asume que algo es bueno o verdadero simplemente porque se ha hecho o creído tradicionalmente, sin considerar si sigue siendo válido en el contexto actual (por ejemplo: en nuestra escuela siempre ha habido más hombres que mujeres en el consejo escolar, y siempre ha funcionado bien).<br><br><strong>Argumento anecdótico</strong> – alguien usa una experiencia o historia única, a menudo personal, para apoyar una conclusión o afirmación general (por ejemplo: no creo que el discurso de odio cause daño real. He escuchado a personas hacer bromas ofensivas todo el tiempo, y nadie que conozca ha sido seriamente afectado);<br><br><strong>Falacia ad ignorantiam</strong> – alguien argumenta que una afirmación es verdadera o falsa simplemente porque no se ha probado lo contrario (por ejemplo: nadie ha probado que los estudiantes hagan trampa en los exámenes en línea, así que no debe pasar).<br><br><strong>Sesgos Cognitivos</strong><br><br>Nuestro cerebro usa atajos para ayudarnos a tomar decisiones rápidas en la vida diaria. Estos atajos nos ayudan a enfocarnos solo en la información más importante, para no abrumarnos con todo lo que vemos y escuchamos. Esto hace que el cerebro trabaje de manera más eficiente. Sin embargo, la desventaja es que estos atajos a veces nos llevan a cometer errores o malinterpretar cosas debido a nuestros sesgos de pensamiento (cognitivos).<br><br>Todos estamos afectados por sesgos cognitivos en nuestro proceso de toma de decisiones, y quienes difunden desinformación entienden muy bien estos sesgos. Aquí algunos ejemplos de sesgos cognitivos:<br><br><strong>Sesgo de pertenencia</strong> – tendencia a favorecer al propio grupo sobre otros grupos;<br><strong>Sesgo de disponibilidad</strong> – tendencia a basarse en información que viene rápidamente a la mente;<br><strong>Sesgo de causalidad</strong> – ocurre cuando las personas creen que hay una relación entre eventos que en realidad son independientes;<br><strong>Sesgo del punto ciego</strong> – tendencia a verse a uno mismo como menos sesgado que otras personas;<br><strong>Sesgo de confirmación</strong> – tendencia a buscar, interpretar, favorecer y recordar información que confirma creencias previas;<br><strong>Sesgo de autoridad</strong> – tendencia a ser más influenciado por las opiniones de personas con autoridad.",
+                "objectivesTitle": "Objetivos de la actividad",
+                "objectives": "<ul><li><strong>Desarrollar conciencia</strong> sobre los mecanismos sociales, sesgos cognitivos y falacias lógicas</li><li><strong>Desarrollar competencia en pensamiento crítico</strong></li></ul><p>Los mecanismos sociales, sesgos cognitivos y falacias lógicas son factores que ayudan a que el discurso de odio y la desinformación se propaguen. Conocer algunos de ellos nos hace más inmunes y más críticos ante otras formas de manipulación.</p>",
+                "startButton": "Tarea",
+                "task": "- Relaciona la situación con la falacia lógica o sesgo correspondiente\n- ¿Es la situación un ejemplo de discurso de odio / desinformación / información errónea? Si es así, ¿por qué?",
+                "checkButton": "Verificar parejas",
+                "resetButton": "Reiniciar",
+                "correct": "Parejas correctas",
+                "incorrect": "Parejas incorrectas",
+                "pairs": [
+                    {
+                        "id": "a",
+                        "left": "Argumentum ad populum: forma de argumentar no sustantiva en la que se apela a gustos, prejuicios o creencias del público. Se basa en el egoísmo nacional, estereotipos o prejuicios, y busca que la mayoría apoye una tesis por ser popular",
+                        "right": "Durante una acalorada discusión en línea sobre las personas negras, un usuario publicó: «Todo el mundo sabe que estas personas son peligrosas y propician la delincuencia. Mirad cuánta gente en nuestra ciudad está de acuerdo conmigo. Necesitamos expulsarlos para proteger a nuestra comunidad»."
+                    },
+                    {
+                        "id": "b",
+                        "left": "Apelación a la tradición: justificar algo como verdad o bueno solo porque siempre se ha hecho o pensado así, sin cuestionar si sigue siendo válido",
+                        "right": "Durante una reunión comunitaria para actualizar las políticas escolares locales  para que sean más inclusivas con el alumnado LGBTQ+, un vecino de toda la vida se pone de pie y dice: «Durante generaciones, hemos enseñado que el matrimonio es solo entre un hombre y una mujer. Así ha sido siempre y así debe seguir siendo. Promover estas nuevas ideas en nuestras escuelas atenta contra nuestros valores»."
+                    },
+                    {
+                        "id": "c",
+                        "left": "Post hoc, ergo propter hoc – error lógico que asume una relación de causa entre dos hechos solo porque uno ocurre antes que el otro",
+                        "right": "Durante un debate público sobre el reasentamiento de personas refugiadas, un ponente señala un reciente aumento del desempleo ocurrido poco después de la llegada de un grupo de refugiados a la ciudad. Declara: «Desde su llegada, nuestras tasas de desempleo se han disparado. Es evidente que les están quitando todos los empleos a los trabajadores locales»."
+                    },
+                    {
+                        "id": "d",
+                        "left": "Sesgo de grupo: tendencia a favorecer a nuestro propio grupo frente a otros.",
+                        "right": "Durante una discusión en línea sobre un crimen reciente reportado en las noticias, una persona escribe: «Como alguien que ha vivido en este barrio toda mi vida, puedo decirles que son los nuevos inmigrantes los que causan todos los problemas. Nosotros, los 'originarios', sabemos lo que realmente está pasando, y la situación era tranquila antes de que llegaran»."
+                    },
+                    {
+                        "id": "e",
+                        "left": "Sesgo del punto ciego: pensar que uno mismo es menos susceptible a los sesgos que los demás.",
+                        "right": "Durante un acalorado debate sobre grupos religiosos, un participante afirma: “Puede que sea un hecho incómodo, pero a diferencia de esas personas, cuyas creencias están llenas de prejuicios e intolerancia, mi conclusión es que su religión es inherentemente retrógrada y peligrosa”."
+                    },
+                    {
+                        "id": "f",
+                        "left": "Pendiente resbaladiza (slippery slope): ocurre cuando alguien afirma que un posicionamiento o decisión llevará inevitablemente a una serie de consecuencias negativas exageradas",
+                        "right": "Durante un debate sobre la autorización de un nuevo centro comunitario para un grupo minoritario, un participante argumentó: «Si les permitimos construir este centro, exigirán sus propias leyes. Pronto, se apoderarán de nuestros barrios e impondrán su cultura a nuestros hijos. Debemos detener esto ya o perderemos por completo nuestro estilo de vida»."
+                    }
+                ],
+                "feedback": {
+                    "correct": "✅ ¡Pareja correcta!",
+                    "wrong": "❌ ¡Pareja incorrecta!"
+                },
+                "summaryTitle": "Resumen de tus emparejamientos",
+                "reflectionText": "¿Fue fácil o difícil relacionar las situaciones con las falacias lógicas/sesgos?\n\n¿Conocías algunas de ellas? ¿Cuáles? ¿Cuáles fueron totalmente nuevas para ti?\n\n¿Puedes proporcionar ejemplos concretos de tu realidad que representen algunas de esas falacias y sesgos?\n\n¿Conoces otros ejemplos de falacias lógicas o sesgos?\n\n¿Cómo puede el conocimiento de esos sesgos/falacias lógicas ayudarnos a actuar contra el discurso de odio y la desinformación?"
+            },
+            "lateralreading": {
+                "title": "Lectura lateral",
+                "description": "<strong>Lectura lateral</strong> is a technique that allows us to quickly assess whether a web page's content comes from reliable sources and is based on quality data, references, and information.<br><br>In a research conducted by the <a href=\"https://cor.inquirygroup.org/research/lateral-reading-on-the-open-internet/\" target=\"_blank\" rel=\"noopener\">Stanford History Education Group</a>, educators discovered that it is an efficient way to assess the quality of an unfamiliar website.<br><br>This powerful strategy (<a href=\"https://cor.inquirygroup.org/curriculum/collections/teaching-lateral-reading/\" target=\"_blank\" rel=\"noopener\">used by fact-checkers</a>) to evaluate information online involves not reading a website ‘vertically’, as if it were a printed document, but instead using a method called ‘lateral reading’.<br><br>This means analysing the webpage by opening several tabs to answer key questions about the content:<br><ul><li>Who is the author of the content? Is it an expert source?</li><li>Can we find evidence? Is it based on facts and data?</li><li>Is it published by other reliable sources? What do they say about it?</li></ul><br>In addition to the above key questions, the lateral reading technique invites us to promote critical thinking and go deeper by analysing other aspects of the content, such as:<br><ul><li>Who funds or sponsors the site where the original piece was published?</li><li>What do other authoritative sources say about that site?</li><li>When you search for the topic of the original piece, are the top results from fact-checking organisations?</li><li>Have any questions been raised about other articles the author has written?</li><li>Does the information you find elsewhere contradict the original piece?</li><li>Are credible news outlets reporting on — or perhaps more importantly, not reporting on — what you are reading?</li></ul><br><strong>Lateral reading</strong> helps us better evaluate our sources of information — that is, to distinguish between truth and lies — and to consciously exercise our right to choose how we access information.",
+                "objectivesTitle": "Objectives",
+                "objectives": "<ul><li>Learning about transparency and source credibility factors</li><li>Developing competence in identifying trustworthy sources of information</li></ul>",
+                "startButton": "Start activity",
+                "task": "<strong>Let’s try!</strong> You have to evaluate the credibility of the proposed news page using the lateral reading method. Check all the screenshots and verify if you can find evidence that indicates this page is a reliable source. Match them with the corresponding type of information you can find, or click on <em>Not Found</em>.",
+                "sections": [
+                    {
+                        "intro": "<p>https://medlineplus.gov/spanish/</p>",
+                        "images": [
+                            "/img/lateralReading/es/medline/1.png",
+                            "/img/lateralReading/es/medline/2.png",
+                            "/img/lateralReading/es/medline/3.png",
+                            "/img/lateralReading/es/medline/4.png",
+                            "/img/lateralReading/es/medline/5.png",
+                            "/img/lateralReading/es/medline/6.png",
+                            "/img/lateralReading/es/medline/7.png"
+                        ],
+                        "questions": [
+                            {
+                                "question": "¿Dónde puedes encontrar al autor?",
+                                "options": [
+                                    {
+                                        "text": "Capturas 1",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Capturas 2",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Capturas 3",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Capturas 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 5",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 6",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 7",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "¡Bien hecho! Primeramente buscamos información sobre los autores. Encontramos que la página está creada por la Biblioteca Nacional de Medicina de los Estados Unidos y trae información sobre sus autores en el apartado 'Acerca de': https://medlineplus.gov/spanish/acercade/ .Además de eso, la página tiene como dominio .gov (utilizados por páginas que corresponden a un gobierno) otra garantía que podemos encontrar sobre su contenido. Si",
+                                    "incorrect": "No exactamente. Primeramente buscamos información sobre los autores. Encontramos que la página está creada por la Biblioteca Nacional de Medicina de los Estados Unidos y trae información sobre sus autores en el apartado 'Acerca de': https://medlineplus.gov/spanish/acercade/ .Además de eso, la página tiene como dominio .gov (utilizados por páginas que corresponden a un gobierno) otra garantía que podemos encontrar sobre su contenido. Si"
+                                }
+                            },
+                            {
+                                "question": "¿Dónde puedes encontrar el contenido y la metodología del sitio web?",
+                                "options": [
+                                    {
+                                        "text": "Capturas 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 5",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 6",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Capturas 7",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "¡Correcto! La página publica su metodología, que incluye la consulta de múltiples fuentes gubernamentales como la Administración de Alimentos y Medicamentos (FDA, por sus siglas en inglés) y otras fuentes científicas reconocidas. Las informaciones de estas fuentes son revisadas y actualizadas en diferentes momentos.",
+                                    "incorrect": "¡Incorrecto! La página publica su metodología, que incluye la consulta de múltiples fuentes gubernamentales como la Administración de Alimentos y Medicamentos (FDA, por sus siglas en inglés) y otras fuentes científicas reconocidas. Las informaciones de estas fuentes son revisadas y actualizadas en diferentes momentos."
+                                }
+                            },
+                            {
+                                "question": "¿Puedes encontrar alguna información sobre la seguridad del sitio web?",
+                                "options": [
+                                    {
+                                        "text": "Capturas 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 3",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Capturas 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 5",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 6",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 7",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "¡Correcto! Un aviso nada más entrar en la página indica que se trata de una página segura y que pertenece al gobierno de EUA.",
+                                    "incorrect": "¡Incorrecto! Un aviso nada más entrar en la página indica que se trata de una página segura y que pertenece al gobierno de EUA."
+                                }
+                            },
+                            {
+                                "question": "¿El contenido está publicado por otras fuentes?",
+                                "options": [
+                                    {
+                                        "text": "Capturas 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 4",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Capturas 5",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Capturas 6",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 7",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "¡Correcto! Abrimos otras pestañas y buscamos por MedlinePlus. La Fundación Isys la recomienda como “extensa y actualizada fuente de información en salud”. En Wikipedia encontramos que “ MedlinePlus es un servicio de información en línea provisto por la Biblioteca Nacional de Medicina de los Estados Unidos. Brinda información sobre salud de forma gratuita, en inglés y español. El material debe cumplir una serie de criterios estrictos de selección para su inclusión.”  En principio, no encontramos información que cuestione o critique el contenido de MedlinePlus.",
+                                    "incorrect": "¡Incorrecto! Abrimos otras pestañas y buscamos por MedlinePlus. La Fundación Isys la recomienda como “extensa y actualizada fuente de información en salud”. En Wikipedia encontramos que “ MedlinePlus es un servicio de información en línea provisto por la Biblioteca Nacional de Medicina de los Estados Unidos. Brinda información sobre salud de forma gratuita, en inglés y español. El material debe cumplir una serie de criterios estrictos de selección para su inclusión.”  En principio, no encontramos información que cuestione o critique el contenido de MedlinePlus."
+                                }
+                            }
+                        ],
+                        "conclusionTitle": "Conclusión",
+                        "conclusion": "MedlinePlus es un sitio web que ofrece información de salud de alta calidad y fácil de entender. Su metodología es clara y transparente, basada en múltiples fuentes. Sus autores están correctamente identificados y localizables. Por lo tanto es una fuente adecuada para informarse sobre temas relacionados al ámbito de la salud."
+                    },
+                    {
+                        "intro": "<p>https://ramblalibre.com/</p>",
+                        "images": [
+                            "/img/lateralReading/es/rambla/1.png",
+                            "/img/lateralReading/es/rambla/2.png",
+                            "/img/lateralReading/es/rambla/3.png",
+                            "/img/lateralReading/es/rambla/4.png",
+                            "/img/lateralReading/es/rambla/5.png"
+                        ],
+                        "questions": [
+                            {
+                                "question": "¿Dónde puedes encontrar al autor?",
+                                "options": [
+                                    {
+                                        "text": "Capturas 1",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Capturas 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 5",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "¡Correcto! Ramba Libre es una web que tiene apariencia de medio digital, con una cabecera y secciones como “religión”, “periodismo” y “televisión”. Para empezar a investigar una página buscamos si en el menú inicial podemos encontrar un apartado  como  `nosotros` o `quienes somos`. En este caso constatamos que la página no presenta informaciones sobre los autores de sus contenidos, sus fuentes de financiación o metodología. No somos capaces de descubrir si sus autores son periodistas o expertos en los temas tratados a partir de la información presente en la página web.",
+                                    "incorrect": "¡Incorrecto! Ramba Libre es una web que tiene apariencia de medio digital, con una cabecera y secciones como “religión”, “periodismo” y “televisión”. Para empezar a investigar una página buscamos si en el menú inicial podemos encontrar un apartado  como  `nosotros` o `quienes somos`. En este caso constatamos que la página no presenta informaciones sobre los autores de sus contenidos, sus fuentes de financiación o metodología. No somos capaces de descubrir si sus autores son periodistas o expertos en los temas tratados a partir de la información presente en la página web."
+                                }
+                            },
+                            {
+                                "question": "¿Dónde puedes encontrar el contenido y la metodología del sitio web?",
+                                "options": [
+                                    {
+                                        "text": "Capturas 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 2",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Capturas 3",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Capturas 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 5",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "¡Correcto! Por lo general, los contenidos publicados no presentan evidencias (enlaces a estudios, citas de fuentes expertas, etc..). Algunos tienen un lenguaje ofensivo y poco apropriado al registro periodístico.",
+                                    "incorrect": "¡Incorrecto! Por lo general, los contenidos publicados no presentan evidencias (enlaces a estudios, citas de fuentes expertas, etc..). Algunos tienen un lenguaje ofensivo y poco apropriado al registro periodístico."
+                                }
+                            },
+                            {
+                                "question": "Puedes encontrar información sobre la seguridad de la página?",
+                                "options": [
+                                    {
+                                        "text": "Capturas 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 5",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "¡Correcto! No hay información específica sobre la seguridad de la página. Sin embargo hay una cláusula en el apartado `Términos de uso` que indica que no hay cualquier tipo de garantía sobre `la información` expuesta.",
+                                    "incorrect": "¡Incorrecto! No hay información específica sobre la seguridad de la página. Sin embargo hay una cláusula en el apartado `Términos de uso` que indica que no hay cualquier tipo de garantía sobre `la información` expuesta."
+                                }
+                            },
+                            {
+                                "question": "¿El contenido está publicado por otras fuentes?",
+                                "options": [
+                                    {
+                                        "text": "Capturas 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Capturas 4",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Capturas 5",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "¡Correcto! Si copiamos algunos de los titulares publicados y hacemos una búsqueda en otra pestaña, comprobamos que publica bulos desmentidos por medios de verificación. Por ejemplo, nos encontramos con este contenido que ha sido desmentido por Maldita.es. Si abrimos otras pestañas y preguntamos, por ejemplo, qué es Rambla Libre o quién es el autor de Rambla Libre encontramos que se trata de un autodenominado “medio digital” producido por un periodista. Sin embargo, nuevamente, no encontramos más informaciones sobre los autores de sus contenidos, su financiación, o metodología.",
+                                    "incorrect": "¡Incorrecto! Si copiamos algunos de los titulares publicados y hacemos una búsqueda en otra pestaña, comprobamos que publica bulos desmentidos por medios de verificación. Por ejemplo, nos encontramos con este contenido que ha sido desmentido por Maldita.es. Si abrimos otras pestañas y preguntamos, por ejemplo, qué es Rambla Libre o quién es el autor de Rambla Libre encontramos que se trata de un autodenominado “medio digital” producido por un periodista. Sin embargo, nuevamente, no encontramos más informaciones sobre los autores de sus contenidos, su financiación, o metodología."
+                                }
+                            }
+                        ],
+                        "conclusionTitle": "Conclusión",
+                        "conclusion": "Después de aplicar la lectura lateral para evaluar la página Rambla Libre concluimos que no podemos asegurar que se trate de una fuente de información fiable. La página se autodenomina “medio digital” (y está estructura como si fuera un medio) pero no presenta al lector informaciones fundamentales como listado de autores, metodología o financiación. Asimismo, la mayoría de sus artículos no incluyen declaraciones de expertos y algunos son identificados como bulos por medios de verificación."
+                    }
+                ]
+            }
+        }
+    },
+    "inspect": {
+      "title": "Descripción general del canal",
+      "subtitle": "Analizar los canales y los principales temas en la red de odio y desinformación"
+    },
+    "channel": {
+      "title": "Exploración de red",
+      "subtitle": "Explore la red y analice las conexiones de odio y desinformación en línea",
+      "infoTitle": "Información de canal"
+    },
+    "conversation": {
+      "title": "Conversación",
+      "subtitle": "Explore las conversaciones y analice los mensajes en la red de odio y desinformación"
+    },
+    "project": {
+      "noProject": "No hay proyectos disponibles",
+      "noData": "No hay datos disponibles"
+    },
+    "projects": {
+      "title": "Proyectos",
+      "subtitle": "Elija el idioma en el que desea capacitar a sus habilidades para responder al contenido de odio y desinformación."
+    },
+    "tasks": {
+      "title": "Tareas",
+      "subtitle": "Seleccione el tema en el que desea centrarse para crear respuestas y argumentos efectivos contra la desinformación."
+    },
+    "channelTable": {
+      "header": {
+        "title": "Red de telegrama: estadísticas de nodo",
+        "date": "Fecha",
+        "id": "IDENTIFICACIÓN",
+        "messages": "Número de mensajes",
+        "partecipants": "Número de usuarios",
+        "IRI": "Riesgo infodémico",
+        "CW": "Cheque digno",
+        "hs": "Discurso de odio",
+        "nInRecommendations": "En recomendaciones",
+        "nOutRecommendations": "Recomendaciones",
+        "expandable": "Expandible",
+        "label": "Etiqueta"
+      }
+    },
+    "language": {
+      "en": "Inglés",
+      "it": "italiano",
+      "es": "Español",
+      "pl": "Polaco"
+    },
+    "graphInteraction": {
+      "legend": {
+        "title": "Leyenda",
+        "color": "Color",
+        "size": "Dimensión",
+        "low": "Bajo",
+        "medium": "Medio",
+        "high": "Alto",
+        "small": "Pequeño",
+        "large": "Grande",
+        "defaultColor": "Color predeterminado para todos los nodos",
+        "defaultSize": "Tamaño predeterminado para todos los nodos"
+      },
+      "resetView": "Vista de reinicio",
+      "color": {
+        "disable": "Desactivar el color",
+        "iri": "Riesgo infodémico",
+        "hs": "Discurso de odio",
+        "in": "En recomendaciones",
+        "out": "Recomendaciones",
+        "out_degree": "Atenuar ",
+        "in_degree": "En grados ",
+        "label": "Color"
+      },
+      "size": {
+        "disable": "Deshabilitar el tamaño",
+        "iri": "Riesgo infodémico",
+        "hs": "Discurso de odio",
+        "in": "En recomendaciones",
+        "out": "Recomendaciones",
+        "label": "Tamaño",
+        "out_degree": "Atenuar ",
+        "in_degree": "En grados ",
+        "n_out_recommended": "Recomendaciones",
+        "n_in_recommended": "En recomendaciones"
+      },
+      "tooltip": {
+        "label": "Etiqueta",
+        "message_count": "Número de mensajes",
+        "partecipants_count": "Número de usuarios",
+        "id": "ID de canal:",
+        "iri": "Riesgo infodémico:",
+        "hs": "Discurso de odio:",
+        "cw": "Check Worthy:",
+        "in": "En recomendaciones:",
+        "out": "Recomendaciones de salida:"
+      },
+      "fs": {
+        "exit": "Salida",
+        "go": "Pantalla completa"
+      }
+    },
+    "topicsTable": {
+      "title": "Temas principales del canal",
+      "header": {
+        "title": "Título",
+        "count": "% de mensajes",
+        "hs": "% del discurso de odio",
+        "cw": "% de cheque digno"
+      }
+    },
+    "channelInfo": {
+      "about": "Acerca de:",
+      "channelId": "ID de canal:",
+      "title": "Título",
+      "description": "Descripción:",
+      "nMessages": "Mensajes totales:",
+      "nUsers": "Número de usuarios:",
+      "languages": "Idiomas:",
+      "iri": "Riesgo infodémico:",
+      "hateSpeech": "Riesgo de discurso de odio:",
+      "lastUpdate": "Última actualización:",
+      "mainTopics": "Temas principales:",
+      "messages": "Ir a la conversación",
+      "emptySelection": "No hay selección todavía. ",
+      "noData": "No hay datos disponibles",
+      "exploreChannel": "Explorar canal",
+      "topics": "Temas principales",
+      "channels": "Canales",
+      "chats": "Charlatanes",
+      "hs_percentage": "Discurso de odio:",
+      "cw_percentage": "Check Worthy:"
+    },
+    "message": {
+      "title": "Insights de chat",
+      "header": {
+        "id": "IDENTIFICACIÓN",
+        "date": "Fecha",
+        "message": "Mensaje",
+        "from": "De",
+        "mediaType": "Tipo",
+        "reactions": "Reacciones",
+        "nrViews": "Vistas",
+        "hateLabel": "Discurso de odio",
+        "checkLabel": "Cheque digno",
+        "topic": "Tema",
+        "target": "Objetivo",
+        "keywordsMatch": "Las palabras clave coinciden",
+        "counterspeech": "Iniciar conversación"
+      },
+      "dialog": {
+        "start": "Inicie una nueva conversación con Target = {Target}",
+        "jump": "Ir a la conversación",
+        "noProject": "No hay proyectos disponibles",
+        "noData": "No hay datos disponibles",
+        "error": "Error mientras busca datos"
+      },
+      "noData": "No hay datos disponibles",
+      "noTarget": "No se identificó el objetivo",
+      "target": "Haga clic aquí para comenzar una nueva conversación",
+      "filter": {
+        "target": "Filtrar por objetivo",
+        "topic": "Filtrar por tema",
+        "hate": "Discurso de odio",
+        "checkworthy": "Cheque digno",
+        "all": "Todo",
+        "yes": "Sí",
+        "no": "No",
+        "DISABLED": "Desactivado",
+        "JEWS": "Judíos",
+        "MUSLIMS": "Musulmanes",
+        "LGBT+": "LGBT+",
+        "MIGRANTS": "Migrantes",
+        "OTHER": "Otro",
+        "POC": "Gente de color",
+        "ROMANI": "Memoria de sólo lectura",
+        "WOMEN": "Mujer"
+      },
+      "footer": {
+        "pagination": {
+          "range": "{PAGESTART}-{PAGESTOP} de {TotalItems} Mensajes recuperados"
+        }
+      }
+    },
+    "wordclouds": {
+      "hate": "Odio vs no odio",
+      "checkworthy": "Check Worthy vs Non Check Worthy",
+      "generic": "Genérico",
+      "select": "Seleccione Tipo de Cloud de Word",
+      "selectTopic": "Seleccione un tema",
+      "channel": "Canal",
+      "titles": {
+        "hate": "Discurso de odio",
+        "is_checkworthy": "Cheque digno",
+        "wordcloud": "Genérico",
+        "isnot_checkworthy": "Sin cheque digno",
+        "non_hate": "No odio"
+      }
+    },
+    "error": {
+      "api": "Error mientras busca datos",
+      "noData": "No hay datos disponibles"
+    },
+    "dialog": {
+      "dataSources": "Fuentes de datos",
+      "externalGround": "Terreno externo",
+      "documentName": "Nombre del documento",
+      "externalLink": "Enlace externo",
+      "text": "Texto",
+      "confirm": "Confirmar",
+      "dialogue": "Diálogo",
+      "groundTextSpans": "Vestidos de texto en el suelo",
+      "startEmpty": "Empiece a vacío",
+      "addDynamicTurn": "Agregar giro dinámico",
+      "addFromGround": "Agregar de tierra",
+      "tooltip": {
+        "startEmpty": "Presione aquí para crear un giro vacío.",
+        "addDynamicTurn": "Genere automáticamente una sugerencia para comenzar.<br>Todavía puede modificarlo después.",
+        "addRoundUp": "Agregar un giro vacío <em>antes</em> el seleccionado.",
+        "addRoundDown": "Agregar un giro vacío <em>después</em> el seleccionado.",
+        "magic": "Genera automáticamente una respuesta y selecciona el período de texto relacionado.<br><em>Todavía puedes editarlo.</em>",
+        "delete": "Elimine este giro permanentemente."
+      }
+    }
+  }

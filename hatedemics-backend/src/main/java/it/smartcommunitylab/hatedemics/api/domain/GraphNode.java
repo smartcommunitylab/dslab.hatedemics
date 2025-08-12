@@ -10,14 +10,31 @@ public class GraphNode {
 
     @Id
     private String channel_id;
+    private String label;
+
+    private String message_count;
+
+    private String participants_count;
+
     private String iri;
     private Integer channel_int;
     private Double hs;
     private Double cw;
-    private Integer out_degree;
-    private Integer in_degree;
+    private Integer n_out_recommended;
+    private Integer n_in_recommendation;
     private String language;
-    
+    public Integer getN_in_recommendation() {
+        return n_in_recommendation;
+    }
+    public void setN_in_recommendation(Integer n_in_recommendation) {
+        this.n_in_recommendation = n_in_recommendation;
+    }
+    public Integer getN_out_recommended() {
+        return n_out_recommended;
+    }
+    public void setN_out_recommended(Integer n_out_recommended) {
+        this.n_out_recommended = n_out_recommended;
+    }
     public String getIri() {
         return iri;
     }
@@ -48,18 +65,7 @@ public class GraphNode {
     public void setCw(Double cw) {
         this.cw = cw;
     }
-    public Integer getOut_degree() {
-        return out_degree;
-    }
-    public void setOut_degree(Integer out_degree) {
-        this.out_degree = out_degree;
-    }
-    public Integer getIn_degree() {
-        return in_degree;
-    }
-    public void setIn_degree(Integer in_degree) {
-        this.in_degree = in_degree;
-    }
+    
     public String getLanguage() {
         return language;
     }
@@ -67,5 +73,22 @@ public class GraphNode {
         this.language = language;
     }
 
-
+    public String getLabel() {
+        return label;
+    }
+    public void setLabel(String label) {
+        this.label = label;
+    }
+    public String getMessage_count() {
+        return message_count;
+    }
+    public void setMessage_count(String message_count) {
+        this.message_count = message_count;
+    }
+    public String getParticipants_count() {
+        return participants_count;
+    }
+    public void setParticipants_count(String participants_count) {
+        this.participants_count = participants_count;
+    }
 }

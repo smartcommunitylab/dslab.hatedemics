@@ -1,73 +1,95 @@
 <script setup lang="ts">
 import type DrawerMenuItem from '@/interfaces/DrawerMenuItemInterface';
-import QuickGuideDialog from '@/components/QuickGuideDialogComponent.vue';
+import ExploreGuideDialog from '@/components/ExploreGuideDialog.vue';
+import CounterspeechGuideDialog from '@/components/CounterspeechGuideDialog.vue';
 import { API } from '@/services';
 import { ref } from 'vue';
-const showDialog = ref(false);
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+
+const showExploreGuide = ref(false);
+const showCounterspeechGuide = ref(false);
 
 const logout = () => {
   API.login.logout()
-
 };
-/** Drawer menu items */
+
 const items: DrawerMenuItem[] = [
   {
-    title: 'Home',
+    title: t('menu.home'),
     icon: 'mdi-home',
     to: { name: 'Home' }
   },
   {
-    title: 'Explore',
+    title: t('menu.educational'),
+    icon: 'mdi-school-outline',
+    to: '/educational'
+  },
+  {
+    title: t('menu.explore'),
     icon: 'mdi-information',
     items: [
       {
-        title: 'Network',
+        title: t('menu.network'),
         icon: 'mdi-graph',
         to: { name: 'Channels' }
       },
       {
-        title: 'Channel',
+        title: t('menu.channel'),
         icon: 'mdi-text-box',
         to: { name: 'Inspector' }
       },
       {
-        title: 'Conversation',
+        title: t('menu.conversation'),
         icon: 'mdi-forum',
         to: { name: 'Discussion' }
+      },
+      {
+        title: t('menu.quickGuide'),
+        icon: 'mdi-help-circle-outline',
+        action: () => (showExploreGuide.value = true)
       }
     ],
     to: { name: 'Dashboard' }
   },
   {
-    title: 'Counterspeech Writing',
-    icon: 'mdi-chat',
-    to: { name: 'projects' }
+    title: t('menu.counterspeech'),
+    icon: 'mdi-message-text-outline',
+    to: '/projects',
+    items: [
+      {
+        title: t('menu.projects'),
+        icon: 'mdi-folder',
+        to: '/projects'
+      },
+      {
+        title: t('menu.quickGuide'),
+        icon: 'mdi-help-circle-outline',
+        action: () => (showCounterspeechGuide.value = true)
+      }
+    ]
   },
   {
-  title: 'Quick Guide',
-  icon: 'mdi-help-circle-outline',
-  action: () => (showDialog.value = true)
-},
-  {
-    title: 'Credits',
+    title: t('menu.credits'),
     icon: 'mdi-information',
     to: { name: 'Credits' }
   },
   {
-    title: 'Logout',
+    title: t('menu.logout'),
     icon: 'mdi-logout',
     action: logout 
   }
 ];
 
-/** Stato reattivo per tenere sempre espansi i gruppi */
 const expandedGroups = ref<Record<string, boolean>>(
   items.reduce((acc, item) => {
-    if (item.items) acc[item.title] = true; // Imposta tutti i gruppi a `true` per essere espansi
+    if (item.items) acc[item.title] = true;
     return acc;
   }, {} as Record<string, boolean>)
 );
 </script>
+
 
 <template>
   <v-list nav>
@@ -99,18 +121,26 @@ const expandedGroups = ref<Record<string, boolean>>(
           <template v-for="subItem in item.items" :key="subItem.title">
             <v-divider v-if="subItem.title === '-'" />
             <v-list-item
-              v-else
+              v-else-if="!subItem.action"
               :disabled="!subItem.to"
               :prepend-icon="subItem.icon"
               :title="subItem.title"
               :to="subItem.to"
               link
             />
+            <v-list-item
+              v-else
+              :prepend-icon="subItem.icon"
+              :title="subItem.title"
+              @click="subItem.action"
+              style="cursor:pointer"
+            />
           </template>
         </v-list-group>
       </template>
     </template>
   </v-list>
-  <QuickGuideDialog v-model="showDialog" />
+  <ExploreGuideDialog v-model="showExploreGuide" />
+  <CounterspeechGuideDialog v-model="showCounterspeechGuide" />
 
 </template>
