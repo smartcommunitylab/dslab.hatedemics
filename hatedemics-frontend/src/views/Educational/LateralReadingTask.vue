@@ -92,7 +92,7 @@
         <v-btn
           v-if="currentSectionIndex < taskSections.length - 1"
           color="primary"
-          @click="() => { nextSection(); conclusionDialog.value = false }"
+          @click="() => { nextSection(); conclusionDialog = false }"
         >
           Next Section
         </v-btn>
