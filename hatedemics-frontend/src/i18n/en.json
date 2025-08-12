@@ -4,69 +4,750 @@
         "error": "Error during login",
         "button": "Login"
     },
+    "common": {
+        "close": "Close",
+        "ok": "OK"
+    },
     "menu": {
-    "home": "Home",
-    "dashboard": "Dashboard",
-    "channels": "Channels",
-    "inspector": "Inspector",
-    "discussion": "Discussion",
-    "projects": "Projects",
-    "counterspeech": "Counterspeech",
-    "annotation": "Annotation",
-    "credits": "Credits"
-  },
-    "home":{
+        "home": "Home",
+        "educational": "Educational",
+        "explore": "Explore",
+        "network": "Network",
+        "channel": "Channel",
+        "conversation": "Conversation",
+        "quickGuide": "Quick Guide",
+        "counterspeech": "Counterspeech",
+        "projects": "Projects",
+        "credits": "Credits",
+        "logout": "Logout"
+    },
+    "counterspeechGuide": {
+        "guideTitle": "Quick Guide",
+        "guideItems": {
+            "counterspeech": {
+                "title": "Counterspeech",
+                "description": "<p><strong>Counterspeech</strong> is defined as all communicative actions aimed at refuting hate speech through cogent reasons, and true and fact-bound arguments (Schieb and Preuss, 2016).</p>"
+            },
+            "dataSources": {
+                "title": "Data sources",
+                "description": "<p>Contains a fact-checking article from a certified publisher (signatory of the <a href=\"https://ifcncodeofprinciples.poynter.org/\" target=\"_blank\">IFCN Code of Principles</a>).</p>"
+            },
+            "dialogue": {
+                "title": "Dialogue",
+                "description": "<p>Create a dialogue that simulates the interaction between someone spreading hate/misinformation and an operator responding with fact-driven arguments.</p>"
+            },
+            "groundText": {
+                "title": "Ground text spans",
+                "description": "<p>You can add portions of the fact-checking article that support the operator’s reply.</p><p>Ground text is <em>automatically added</em> when a turn is generated. You can also <strong>manually highlight</strong> a part of the article and click the “link” button.</p>"
+            },
+            "newTurn": {
+                "title": "New turn",
+                "description": "<p>You can add a new turn in different ways:</p><ul><li>Add an empty turn with the “+” buttons.</li><li>Automatically generate a turn using a selected article portion.</li><li>Select a portion as ground text, then click “Generate from ground”.</li></ul><p><strong>Note:</strong> Even automatically generated turns and ground text can always be edited.</p>"
+            }
+        }
+    },
+    "home": {
         "title": "Fighting hate and disinformation online",
         "description": "HATEDEMICS is a platform that leverages artificial intelligence to analyze online content, enhance critical thinking, and train responses to hate speech.",
-        "network":"Explore the Network",
-        "networkDescription":"An interactive map to observe the connections between channels, content, and dynamics related to hate and disinformation online. Discover what happens on the web, follow the flows, and identify the key nodes of toxic communication.",
-        "networkButton":"Go to the network",
-        "counterspeech":"Counterspeech Writing",
-        "counterspeechDescription":"Train your ability to respond to hate and disinformation content with targeted writing exercises. Learn how to use reliable sources to create solid arguments and develop your critical thinking to change the tone of online debate.",
-        "counterspeechButton":"Start writing",
+        "network": "Explore the Network",
+        "networkDescription": "An interactive map to observe the connections between channels, content, and dynamics related to hate and disinformation online. Discover what happens on the web, follow the flows, and identify the key nodes of toxic communication.",
+        "networkButton": "Go to the network",
+        "counterspeech": "Counterspeech Writing",
+        "counterspeechDescription": "Train your ability to respond to hate and disinformation content with targeted writing exercises. Learn how to use reliable sources to create solid arguments and develop your critical thinking to change the tone of online debate.",
+        "counterspeechButton": "Start writing",
+        "educational": "Educational",
+        "educationalDescription": "Explore resources and educational materials to understand and counter online hate.",
+        "educationalButton": "Go to Educational Section",
         "guideDescription": "What to know before using the platform.",
         "guideButton": "Open Guide",
         "guideTitle": "Quick Guide",
         "guideItems": {
-          "network": {
-            "title": "Network",
-            "description": "The network shows the connections between the collected telegram channels. A channel is a node and it is connected to another channel if it “recommends” it. Recommendations are generated automatically by Telegram based on the channels' users overlap."
-          },
-          "inRec": {
-            "title": "In Recommendations",
-            "description": "How much a channel is recommended by other channels."
-          },
-          "outRec": {
-            "title": "Out Recommendations",
-            "description": "How much a channel recommends other channels."
-          },
-          "risk": {
-            "title": "Infodemic Risk",
-            "description": "How much the channel is reliable. This measure goes from 0 to 1."
-          },
-          "check": {
-            "title": "Check Worthiness",
-            "description": "It indicates whether a message can be fact-checked. This means that the message contains facts rather than opinions and is relevant enough to be fact-checked."
-          }
+            "network": {
+                "title": "Network",
+                "description": "The network shows the connections between the collected telegram channels. A channel is a node and it is connected to another channel if it “recommends” it. Recommendations are generated automatically by Telegram based on the channels' users overlap."
+            },
+            "inRec": {
+                "title": "In Recommendations",
+                "description": "How much a channel is recommended by other channels."
+            },
+            "outRec": {
+                "title": "Out Recommendations",
+                "description": "How much a channel recommends other channels."
+            },
+            "risk": {
+                "title": "Infodemic Risk",
+                "description": "How much the channel is reliable. This measure goes from 0 to 1."
+            },
+            "check": {
+                "title": "Check Worthiness",
+                "description": "It indicates whether a message can be fact-checked. This means that the message contains facts rather than opinions and is relevant enough to be fact-checked."
+            }
         }
-      
+    },
+    "networkGuide": {
+        "guideTitle": "Guide to the Telegram Channel Network",
+        "guideItems": {
+            "network": {
+                "title": "Network",
+                "description": "This network displays Telegram channels as points, and lines show how they're connected. A channel is linked to another when Telegram automatically recommends it, based on how many users both channels share."
+            },
+            "expanded": {
+                "title": "Expanded",
+                "description": "A channel is <strong>expanded</strong> if we’ve collected all of its chat messages."
+            },
+            "inOutRecommendations": {
+                "title": "In & Out Recommendations",
+                "description": "<strong>In recommendations</strong> is the total number of times a channel is recommended by others – the more it’s recommended, the more popular it is!<br><strong>Out recommendations</strong> is the number of channels this one recommends – a higher number means it points to a lot of other content."
+            },
+            "iri": {
+                "title": "Infodemic Risk Index (IRI)",
+                "description": "The IRI measures how unreliable a channel is, from 0 (completely reliable) to 1 (fully unreliable). It’s based on the trustworthiness of websites shared and how many people are exposed to them (based on views).<br>For more details: <a href='https://www.nature.com/articles/s41562-020-00994-6' target='_blank'>Gallotti et al., 2020 (Nature Human Behaviour)</a>."
+            },
+            "diri": {
+                "title": "Dynamic Infodemic Risk Index (dIRI)",
+                "description": "The dIRI looks at how actively users engage with unreliable content. It considers stronger interactions like replies or reshares. A higher value means users are actively engaging with unreliable messages."
+            },
+            "sdiri": {
+                "title": "Semi-Dynamic Infodemic Risk Index (sdIRI)",
+                "description": "The sdIRI tracks light and quick interactions with unreliable content, like reactions (emojis, likes). It helps measure passive or subtle engagement with disinformation."
+            },
+            "unrel": {
+                "title": "Unreliability Index (Unrel)",
+                "description": "This index shows how much unreliable content a channel shares compared to all its messages linking to any source. A score close to 1 means most of the content comes from untrustworthy websites."
+            },
+            "domains": {
+                "title": "Known & Unknown Domains",
+                "description": "<strong>Known domains</strong> are websites we have reliability data for. <strong>Unknown domains</strong> are those without such data. More known domains means stronger and more accurate disinformation metrics."
+            },
+            "centrality": {
+                "title": "Centrality Measures",
+                "description": "These measures show how important a channel is in the network:<br><strong>Degree centrality:</strong> Number of direct links (popularity).<br><strong>Betweenness:</strong> Acts as a bridge between other channels.<br><strong>Closeness:</strong> How quickly it can reach others.<br><strong>Eigenvector:</strong> How connected it is to other influential channels.<br>See also: <em>Pósfai & Barabási, 2016 - Network Science</em>."
+            },
+            "communities": {
+                "title": "Communities",
+                "description": "These community methods help identify natural <strong>groups</strong> within networks, like in a social network:<br><br><strong>Louvain Community:</strong> Looks for groups where there are many connections inside the group. <em>(Like a friend group where everyone knows each other very well!)</em><br><strong>Infomap Community:</strong> Finds groups based on how easily information (or messages) can move within that group. <em>(Like a club where news spreads super fast among members!)</em><br><br>For more details, you can check out these articles:<br><a href='https://hal.science/hal-01231784' target='_blank'>Dugué, N., & Perez, A. (2015). Directed Louvain: maximizing modularity in directed networks</a><br><a href='https://www.pnas.org/doi/epdf/10.1073/pnas.0706851105' target='_blank'>Rosvall, M., & Bergstrom, C. T. (2008). Maps of random walks on complex networks reveal community structure</a>"
+            }
+        }
     },
     "welcome": {
         "title": "Welcome to Hatedemics"
     },
-
+    "onboarding": {
+        "steps": [
+            {
+                "title": "What is Hatedemics",
+                "html": "<p><strong>Hatedemics</strong> is a European project focused on raising awareness about hate speech, disinformation, and how these two issues intersect. The project aims to empower NGOs, civil society organisations, fact-checkers, public authorities, and young people to effectively prevent and combat polarisation, intolerance, and conspiracy theories.</p><p><strong>Hatedemics</strong> uses AI-based technologies in two main ways:</p><ul><li><strong>Data Analysis</strong>: It analyses large volumes of data from a popular messaging platform (Telegram), providing insights into hate speech and disinformation trends.</li><li><strong>Counterspeech</strong>: It creates dialogue-based responses to hate speech and misinformation, called “counterspeech”. This helps people learn when and how to respond to hate speech driven by misinformation, using factual information as a foundation.</li></ul><p>Visit the <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">Hatedemics website</a> to learn more about the project.</p>"
+            },
+            {
+                "title": "Some definitions",
+                "html": "<p><strong>Hate speech</strong>: We rely on the definition made by the UN Office on Genocide Prevention and the Responsibility to Protect (2019), which defines hate speech as <em>“any kind of communication in speech, writing or behaviour, that attacks or uses pejorative or discriminatory language with reference to a person or a group on the basis of who they are”</em>. In particular, in the project we consider the following specific groups affected by hate: the LGBTQ+ community, migrants, Muslims, Jewish, Roma, Black people and people with disabilities.</p><p><strong>Check-worthiness</strong>: This refers to the degree to which a statement, claim, or post merits verification or fact-checking due to its potential falsity, public relevance, or harmful impact. This is a subjective judgment, guided by key criteria: whether the content includes a factual assertion (e.g., statistics, causal claims), whether it could be potentially false, and whether it is of public interest or social impact. <strong>Note:</strong> Statements that are easily verifiable by an average user (e.g., “The population of China is half that of Italy”) are not considered check-worthy, as they do not require expert verification.</p><p><strong>Disinformation</strong>: Disinformation is when false or misleading information is deliberately created and spread to trick people. It's different from misinformation, which is just wrong information shared by mistake. The key with disinformation is that someone <em>intends to deceive</em> you. To figure out if something is disinformation, we use advanced tools called <em>\"infodemic risk indices\"</em>. These help us detect online conversations with lots of misleading content by analysing website links and user engagement, helping us judge how trustworthy the information is.</p><p>Want to know more? See: Gallotti, R., Valle, F., Castaldo, N., Sacco, P., & De Domenico, M. (2020). <em>Assessing the risks of 'infodemics' in response to COVID-19 epidemics</em>. <strong>Nature Human Behaviour</strong>, 4(12), 1285–1293.</p>"
+            },
+            {
+                "title": "What does the platform include?",
+                "html": "<p><strong>Data:</strong> The platform includes static data: approximately 10 million Telegram messages collected from nearly 1,000 public chats, covering 4 languages (English, Italian, Spanish, and Polish). Telegram was chosen because it allows large-scale data collection, unlike other popular messaging platforms.</p><p><strong>Analyses:</strong> The insights shown here are generated automatically using AI-based technologies. Because of this, they may occasionally be inaccurate! If you have any doubts about these metrics, please consult the referring educators.</p><p><strong>Chatbot:</strong> The platform includes a dialogue model that simulates interaction with a hater spreading misinformation. Responses are automatically generated by a specialised language model, but you can still modify them. It supports five languages: English, Spanish, Italian, Polish, and Maltese.</p>"
+            },
+            {
+                "title": "Trigger warning",
+                "html": "<p><strong>Warning:</strong> This platform contains unobfuscated examples that some users may find offensive.</p>"
+            }
+        ],
+        "prev": "Back",
+        "next": "Next",
+        "close": "Close",
+        "neverShow": "Don't show again"
+    },
+    "educational": {
+        "eduCard1Title": "Human Rights Declaration",
+        "eduCard1Desc": "Discover the core principles protecting human dignity.",
+        "eduCard1Button": "Explore Rights",
+        "eduCardBiasTitle": "Biases and Fallacies",
+        "eduCardBiasDesc": "Explore the logical fallacies and cognitive biases behind hate speech and disinformation.",
+        "eduCardBiasButton": "Start Activity",
+        "eduCard3Title": "Debunking",
+        "eduCard3Desc": "Learn how to debunk  disinformation effectively.",
+        "eduCard3Button": "Start Activity",
+        "eduCard4Title": "Lateral Reading",
+        "eduCard4Desc": "Learn how to read and understand online content.",
+        "eduCard4Button": "Start Activity",
+        "warningTitle": "Warning",
+        "warningText": "These activities contain unobfuscated examples some readers may find offensive. If any activity or part of activity makes you feel uncomfortable or you feel triggered please refer to us or feel free to leave the room.",
+        "warningButton": "I understand",
+        "warningCheckbox": "Don't show this message again",
+        "tasks": {
+            "humanRights": {
+                "title": "Human Rights",
+                "description": "The fundamental human rights outlined by the United Nations in the <a href='https://www.un.org/en/about-us/universal-declaration-of-human-rights' target='_blank' rel='noopener'>Universal Declaration of Human Rights</a> protect and uphold the dignity, equality, and freedom of all people. Some of them are listed below in a simplified version.<br><br><iframe width='100%' height='315' src='https://www.youtube.com/embed/nDgIVseTkuE?si=Jomr_pVjQAdBgfGg' title='Human Rights video' frameborder='0' allowfullscreen></iframe>",
+                "objectivesTitle": "Objectives",
+                "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Developing knowledge about human rights;</li><li>Rising awareness about connection between human rights and hate speech and disinformation;</li><li>Learning possible argument for reaction on hate speech and disinformation.</li></ul>",
+                "startButton": "Start",
+                "task": "Form 11 groups. Each group picks up one card. Each group discusses the meaning of the human right written on their card. After 5 minutes, the first group explains what the right means to them and how it connects to hate speech. The teacher may add to their explanation if needed.\nThen, the next group with the following card explains the meaning of their right and its connection to hate speech. Repeat this process until all groups have shared.",
+                "completetask": "I have completed the activity",
+                "taskCompleteTitle": "Activity completed",
+                "taskCompleteText": "Did you already know all the human rights mentioned? Which ones are new to you? Was it easy or difficult to explain the meaning of these rights and find a link between them and hate speech? Can you name other human rights that were not mentioned?",
+                "articles": [
+                    {
+                        "title": "Art. 1",
+                        "text": "All human beings are born free and equal in dignity and rights."
+                    },
+                    {
+                        "title": "Art. 2",
+                        "text": "Everyone has the right to be treated in the same way, irrespective of race, colour, sex, language, religion, political opinion, property, birth, or other status."
+                    },
+                    {
+                        "title": "Art. 3",
+                        "text": "Everyone has the right to life and to live in freedom and safety."
+                    },
+                    {
+                        "title": "Art. 5",
+                        "text": "Everyone has the right to be free from torture and from inhuman and degrading treatment."
+                    },
+                    {
+                        "title": "Art. 7",
+                        "text": "The law is the same for everyone."
+                    },
+                    {
+                        "title": "Art. 13",
+                        "text": "Everyone has the right to live and travel freely within state borders."
+                    },
+                    {
+                        "title": "Art. 14",
+                        "text": "Everyone has the right to go to another country and ask for protection if they are being persecuted or are in danger of being persecuted."
+                    },
+                    {
+                        "title": "Art. 16",
+                        "text": "Everyone has the right to marry and have a family."
+                    },
+                    {
+                        "title": "Art. 18",
+                        "text": "Everyone has the right to believe whatever they wish (including, but not confined to, religion)."
+                    },
+                    {
+                        "title": "Art. 19",
+                        "text": "Everyone has the right to say what they think and to give and receive information freely."
+                    },
+                    {
+                        "title": "Art. 29",
+                        "text": "Everyone must respect the rights of others."
+                    },
+                    {
+                        "title": "Art. 30",
+                        "text": "No-one has the right to take away any of these rights."
+                    }
+                ]
+            },
+            "debunking": {
+                "title": "Debunking",
+                "description": "The objective of fact-checking is to provide citizens with tools and information that allow them to form opinions with all the data and verified facts at hand and, consequently, make informed decisions. Misinformation can influence how society thinks and how it deals with everyday problems, and that's why fact-checkers' central mission is to shed light and data on these issues. Broadly speaking, fact-checking involves detecting hoaxes, verifying their content, and spreading the denial.\nFact-checkers work daily on debunking: they verify content and explain why something is false after it’s been shared and viralized in social media. It’s important for the public record and to avoid that more people read, share and believe lies. Some debunkings are very difficult: take lots of time and require the use of specific tools. Others just require a lot of observation and searching for specific reliable information. \nLet´s try! In this exercise you will learn, in a guided way, some debunk techniques and why it's important to activate critical thinking and identify how the viralizing of some hoaxes can create and strengthen disinformation narratives.",
+                "objectivesTitle": "Objectives of the activity",
+                "objectives": "Debunk and learn about what disinformation narratives are. It's also a pre-bunking exercise: discover what are disinformation narratives and the most spread ones in their country. \nYou will learn, in a guided way, some debunk techniques and all why it's important to activate critical thinking and identify how the viralizing of some hoaxes can create and strengthen disinformation narratives. ",
+                "startButton": "Start activity",
+                "task": "Simulate the actions of a fact-checker by selecting the most effective way to debunk a suspicious content. Can you also identify the related disinformation narrative?",
+                "correct": "Correct! Well done.",
+                "incorrect": "Incorrect answer. Try again.",
+                "next": "Next question",
+                "finish": "Finish",
+                "questions": [
+                    {
+                        "title": "Question 1",
+                        "scenario_description": "You have received this picture that shows a photo of a boat with illegal immigrants trying to get to Australia. It´s says the boat was blocked and the immigrants were all returned back.",
+                        "question": "How would you verify?",
+                        "image": "/img/debunking/en/question1.jpg",
+                        "options": [
+                            {
+                                "text": "Reverse image search"
+                            },
+                            {
+                                "text": "Advanced search in Twitter (now X)"
+                            },
+                            {
+                                "text": "IA tool "
+                            }
+                        ],
+                        "correct": 0,
+                        "feedback": {
+                            "correct": "Correct! You have successfully done a reverse image search and found this picture.",
+                            "correctImage": "/img/debunking/en/answer1.jpg",
+                            "incorrect": "Unfortunately neither an advanced search in Twitter nor an AI tool would have been helpful in this case. At first sight we don´t have evidences that the picture was published on Twitter or generated by Artificial Intelligence. A Reverse Image search could be more useful for us.",
+                            "incorrectImage": "/img/debunking/en/answer1.jpg"
+                        }
+                    },
+                    {
+                        "title": "Question 2",
+                        "question": "By performing a reverse image search you would have found this image. What can you conclude from observing it?",
+                        "options": [
+                            {
+                                "text": "It´s an AI picture"
+                            },
+                            {
+                                "text": "The first picture was manipulated "
+                            },
+                            {
+                                "text": "It seems to be the original image published years ago"
+                            }
+                        ],
+                        "correct": 2,
+                        "feedback": {
+                            "correct": "Correct: this is the original image that was published in 2012. It is a hoax that this image shows the Australian Navy blocking a cargo ship `full of illegal immigrants.` The image shows a conflict between China and Japan on August 15, 2012.",
+                            "incorrect": "Inorrect: this is the original image. In particular, this image was originally published in 2012. We can therefore conclude that the first image you saw was the same picture taken out of context: it was used to create a hoax about alleged migrants trying to reach Australia. If you look closely at the two photos, it is clear that it is the same photo in two different contexts."
+                        }
+                    },
+                    {
+                        "title": "Question 3",
+                        "question": "What kind of disinformation narrative can this hoax strengthen? ",
+                        "options": [
+                            {
+                                "text": "Black immigrants commit violent acts in Europe"
+                            },
+                            {
+                                "text": "The UK Government facilitates immigration and offers benefits to immigrants"
+                            },
+                            {
+                                "text": "Immigrants bring diseases"
+                            }
+                        ],
+                        "correct": 1,
+                        "feedback": {
+                            "correct": "Correct!<br><br>Misinformation narratives can manipulate us and distort our perception of reality to support an ideology. These are spread through the growing circulation of hoaxes and disinformation content that support them. Not sharing suspicious content and recognizing these narratives helps curb lies and hate speech.<br><br>Check out how professional fact-checkers debunked this disinformation:<br><a href='https://www.reuters.com/article/world/fact-check-photo-doesnt-show-australian-warships-blocking-a-boat-of-illegal-im-idUSKBN24727I' target='_blank'>Reuters analysis</a><br><a href='https://maldita.es/malditobulo/20201201/no-esta-foto-no-es-de-la-armada-australiana-bloqueando-a-un-carguero-lleno-de-inmigrantes-ilegales-es-un-conflicto-entre-china-y-japon-en-agosto-de-2012-y-era-un-barco-de-activistas-chinos/' target='_blank'>Maldita.es analysis</a><br><br>When some people think of a fact-checker, they only see a journalist who looks into a claim, checks it and confirms whether it is true or not — the debunking process. Nevertheless, fighting disinformation effectively nowadays takes much more than that: quickly detecting possible hoaxes before they go viral and affect more people; explaining that not everything is black or white, helping people to be well-prepared against falsehoods through Media Literacy or regulation; creating tools to make it harder for others to deceive us, or fighting together against manipulation: this is what we call pre-bunking.",
+                            "incorrect": "Incorrect.<br><br>Misinformation narratives can manipulate us and distort our perception of reality to support an ideology. These are spread through the growing circulation of hoaxes and disinformation content that support them. Not sharing suspicious content and recognizing these narratives helps curb lies and hate speech.<br><br>Check out how professional fact-checkers debunked this disinformation:<br><a href='https://www.reuters.com/article/world/fact-check-photo-doesnt-show-australian-warships-blocking-a-boat-of-illegal-im-idUSKBN24727I' target='_blank'>Reuters analysis</a><br><a href='https://maldita.es/malditobulo/20201201/no-esta-foto-no-es-de-la-armada-australiana-bloqueando-a-un-carguero-lleno-de-inmigrantes-ilegales-es-un-conflicto-entre-china-y-japon-en-agosto-de-2012-y-era-un-barco-de-activistas-chinos/' target='_blank'>Maldita.es analysis</a><br><br>When some people think of a fact-checker, they only see a journalist who looks into a claim, checks it and confirms whether it is true or not — the debunking process. Nevertheless, fighting disinformation effectively nowadays takes much more than that: quickly detecting possible hoaxes before they go viral and affect more people; explaining that not everything is black or white, helping people to be well-prepared against falsehoods through Media Literacy or regulation; creating tools to make it harder for others to deceive us, or fighting together against manipulation: this is what we call pre-bunking."
+                        }
+                    }
+                ]
+            },
+            "bias": {
+                "title": "Biases and fallacies",
+                "description": "<strong>Logical fallacies associated with hate speech and disinformation</strong><br><br>The content of hate speech and disinformation may sometimes look very convincing. This is because people who perpetuate hate speech often rely on logical fallacies – constructs hate groups use to justify their causes and their belief that people who come across this content would consider it as reasonable and truthful. Logical fallacies can use false premises, true premises but false conclusions, or true premises and conclusions but a false argument. Some fallacies are produced with the intention of deceiving or making misinformation viral.<br><br>There are many fallacies that show up in hate speech. Here are some of them:<br><br><strong>Argumentum ad populum</strong> – a non-substantive way of arguing in which the speaker appeals to the tastes, preferences and prejudices of the crowd. Based on national egoism, instincts, stereotypes or prejudices, the speaker tries to win over the crowd to their thesis (e.g. The majority of people in our country thinks like this, so this is the way we should act);<br><br><strong>Ipse dixit</strong> – the way of argumenting without providing a valid proof (e.g. the political party said it so it must be true);<br><br><strong>A slippery slope fallacy</strong> – occurs when someone claims that a position or decision will lead to a series of unintended negative consequences (e.g. we cannot let the migrants stay in our country as they will bring their families here and have children, which will lead us to losing our jobs and the collapse of the social security system, and as a result we will be poor and lose control over our country);<br><br><strong>Either-or fallacy</strong> – where someone claims there are only two ways of approaching the issue, while there are many other options (e.g. you can either vote for this party or live your life in constant danger);<br><br><strong>Post hoc, ergo propter hoc</strong> – logical error in wrongly concluding that there is a causal connection between two events merely because one occurred before the other (e.g. Ever since we got a new maths teacher, I’ve been getting bad grades. She must be the reason I’m doing poorly);<br><br><strong>Argumentum Ad Hominem</strong> – when someone attacks the person making an argument rather than the argument itself (e.g. Don't listen to Peter's opinion on the group project — he's lazy and never does anything right);<br><br><strong>Cherry picking</strong> – when someone selectively presents evidence that supports their argument while ignoring or dismissing evidence that contradicts it (e.g. \"Hate speech isn't harmful. Look at this one study that says it's just offensive, not dangerous\" - while ignoring dozens of other studies showing the psychological and social harm of hate speech);<br><br><strong>Appeal to tradition</strong> – when an argument assumes something is good or true simply because it is being traditionally done or believed, without considering whether it is still valid in the present context (e.g. In our school we have always had more men than women in the school council, and it always worked well).<br><br><strong>Argument from anecdote</strong> – someone uses a single, often personal, experience or story to support a general conclusion or claim (e.g. I don't think hate speech leads to real harm. I’ve heard people make offensive jokes all the time, and no one I know has ever been seriously affected);<br><br><strong>Ad ignorantiam fallacy</strong> – someone argues that a claim is true or false simply because it has not been proven the opposite (e.g. No one has ever proven that students cheat on online exams, so it must not happen).<br><br><strong>Cognitive Biases</strong><br><br>Our brain uses shortcuts to help us make quick decisions in everyday life. These shortcuts help us focus only on the most important information, so we don’t get overwhelmed by everything we see and hear. This makes the brain work more efficiently. However, the downside is that these shortcuts can sometimes lead us to make mistakes or misunderstand things because of our thinking (cognitive) biases.<br><br>We are all affected by cognitive biases in our decision-making process, and those who spread disinformation understand these biases very well. Here are some examples of cognitive biases:<br><br><strong>Membership bias</strong> – tendency to favour own group over other groups;<br><strong>Availability bias</strong> – tendency to rely on information that comes quickly to mind;<br><strong>Causality bias</strong> – occurs when people believe that there is a relationship between events that are actually independent of each other;<br><strong>Blind spot bias</strong> – the tendency to see oneself as less biased than other people;<br><strong>Confirmation bias</strong> – tendency to search for, interpret, favour and recall information in a way that confirms prior beliefs;<br><strong>Authority bias</strong> – tendency to be more influenced by the opinions of authority people.",
+                "objectivesTitle": "Objectives",
+                "objectives": "<ul><li><strong>Develop awareness</strong> about social mechanisms, cognitive biases and logical fallacies</li><li><strong>Develop critical thinking competence</strong></li></ul><p>Social mechanisms, cognitive biases and logical fallacies are factors which help hate speech and disinformation spread. By getting to know some of them, we can be more immune to them and be more critical to other forms of manipulation.</p>",
+                "startButton": "Start activity",
+                "task": "- Match the situation with the relevant logical fallacy / bias\n- Is the situation an example of hate speech / disinformation / misinformation? If yes, why?",
+                "checkButton": "Check pairs",
+                "resetButton": "Reset",
+                "correct": "Correct pairs",
+                "incorrect": "Incorrect pairs",
+                "pairs": [
+                    {
+                        "id": "a",
+                        "left": "Argumentum ad populum – a non-substantive way of arguing in which the speaker appeals to the tastes, preferences and prejudices of the crowd. Based on national egoism, instincts, stereotypes or prejudices, the speaker tries to win over the crowd to their thesis",
+                        "right": "During a heated online discussion about immigration, a user posts: \"Everyone knows that these people are dangerous and bring crime. Just look at how many people in our town agree with me. We need to get them out to protect our community.\""
+                    },
+                    {
+                        "id": "b",
+                        "left": "Appeal to tradition – when an argument assumes something is good or true simply because it is being traditionally done or believed, without considering whether it is still valid in the present context",
+                        "right": "During a community meeting about updating local school policies to be more inclusive of LGBTQ+ students, a long-time resident stands up and says: \"For generations, we have taught that marriage is only between a man and a woman. This is how it has always been and how it should stay. Promoting these new ideas in our schools is an attack on our traditions and values.\""
+                    },
+                    {
+                        "id": "c",
+                        "left": "Post hoc, ergo propter hoc – logical error in wrongly concluding that there is a causal connection between two events merely because one occurred before the other",
+                        "right": "During a public debate on refugee resettlement, a speaker points to a recent rise in unemployment that occurred shortly after a group of refugees arrived in the town. They declare, \"Ever since they arrived, our unemployment rates have shot up. It's obvious they are taking all the jobs from hardworking local people.\""
+                    },
+                    {
+                        "id": "d",
+                        "left": "Membership bias – tendency to favour own group over other groups",
+                        "right": "During an online discussion about a recent crime reported in the news, a person writes, \"As someone who has lived in this neighbourhood my whole life, I can tell you it's the new immigrants causing all the trouble. We 'originals' know what's really going on, and things were peaceful before they came.\""
+                    },
+                    {
+                        "id": "e",
+                        "left": "Blind spot bias is the tendency to see oneself as less biased than other people",
+                        "right": "During a heated debate about religious groups, a participant states, \"Unlike those people, whose beliefs are full of prejudice and intolerance, I've examined my views objectively. My conclusion that their religion is inherently backward and dangerous isn't a bias; it's just an uncomfortable fact.\""
+                    },
+                    {
+                        "id": "f",
+                        "left": "A slippery slope fallacy – occurs when someone claims that a position or decision will lead to a series of unintended negative consequences",
+                        "right": "During a debate about allowing a new community center for a minority group, a speaker argues: \"If we allow them to build this center, next they'll demand their own laws. Soon, they'll be taking over our neighbourhoods and imposing their culture on our children. We must stop this now, or we will lose our entire way of life.\""
+                    }
+                ],
+                "feedback": {
+                    "correct": "✅ Correct match!",
+                    "wrong": "❌ Incorrect match!"
+                },
+                "summaryTitle": "Your Matching Summary",
+                "reflectionText": "Was it easy or difficult to match the situations and logical fallacies/bias?\n\nDid you know some of them? Which? Which were totally new for you?\n\nCan you provide concrete examples from your reality that represent some of those fallacies and biases?\n\nDo you know any other examples of logical fallacies / bias?\n\nHow can the knowledge of those biases / logical fallacies help us in acting against hate speech and disinformation?"
+            },
+            "lateralreading": {
+                "title": "Lateral reading",
+                "description": "<strong>Lateral reading</strong> is a technique that allows us to quickly assess whether a web page's content comes from reliable sources and is based on quality data, references, and information.<br><br>In a research conducted by the <a href=\"https://cor.inquirygroup.org/research/lateral-reading-on-the-open-internet/\" target=\"_blank\" rel=\"noopener\">Stanford History Education Group</a>, educators discovered that it is an efficient way to assess the quality of an unfamiliar website.<br><br>This powerful strategy (<a href=\"https://cor.inquirygroup.org/curriculum/collections/teaching-lateral-reading/\" target=\"_blank\" rel=\"noopener\">used by fact-checkers</a>) to evaluate information online involves not reading a website ‘vertically’, as if it were a printed document, but instead using a method called ‘lateral reading’.<br><br>This means analysing the webpage by opening several tabs to answer key questions about the content:<br><ul><li>Who is the author of the content? Is it an expert source?</li><li>Can we find evidence? Is it based on facts and data?</li><li>Is it published by other reliable sources? What do they say about it?</li></ul><br>In addition to the above key questions, the lateral reading technique invites us to promote critical thinking and go deeper by analysing other aspects of the content, such as:<br><ul><li>Who funds or sponsors the site where the original piece was published?</li><li>What do other authoritative sources say about that site?</li><li>When you search for the topic of the original piece, are the top results from fact-checking organisations?</li><li>Have any questions been raised about other articles the author has written?</li><li>Does the information you find elsewhere contradict the original piece?</li><li>Are credible news outlets reporting on — or perhaps more importantly, not reporting on — what you are reading?</li></ul><br><strong>Lateral reading</strong> helps us better evaluate our sources of information — that is, to distinguish between truth and lies — and to consciously exercise our right to choose how we access information.",
+                "objectivesTitle": "Objectives",
+                "objectives": "<ul><li>Learning about transparency and source credibility factors</li><li>Developing competence in identifying trustworthy sources of information</li></ul>",
+                "startButton": "Start activity",
+                "task": "<strong>Let’s try!</strong> You have to evaluate the credibility of the proposed news page using the lateral reading method. Check all the screenshots and verify if you can find evidence that indicates this page is a reliable source. Match them with the corresponding type of information you can find, or click on <em>Not Found</em>.",
+                "sections": [
+                    {
+                        "intro": "https://medlineplus.gov",
+                        "images": [
+                            "/img/lateralReading/en/medline/1.png",
+                            "/img/lateralReading/en/medline/2.png",
+                            "/img/lateralReading/en/medline/3.png",
+                            "/img/lateralReading/en/medline/4.png",
+                            "/img/lateralReading/en/medline/5.png",
+                            "/img/lateralReading/en/medline/6.png",
+                            "/img/lateralReading/en/medline/7.png",
+                            "/img/lateralReading/en/medline/8.png",
+                            "/img/lateralReading/en/medline/9.png"
+                        ],
+                        "questions": [
+                            {
+                                "question": "Where can you find the author?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 5",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 6",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 7",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 8",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 9",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Well done! We find that the page is created by the National Library of Medicine of the United States and provides information about its authors in the ‘About’ section: https://medlineplus.gov/about The website states that it belongs to the NIH (National Institutes of Health) and indeed redirects to the National Library of Medicine. In addition, the page has a .gov domain (used by official government websites), which provides another level of credibility regarding its content.",
+                                    "incorrect": "Not quite.We find that the page is created by the National Library of Medicine of the United States and provides information about its authors in the ‘About’ section: https://medlineplus.gov/about The website states that it belongs to the NIH (National Institutes of Health) and indeed redirects to the National Library of Medicine. In addition, the page has a .gov domain (used by official government websites), which provides another level of credibility regarding its content."
+                                }
+                            },
+                            {
+                                "question": "Where can you find the website content and methodology?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 5",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 6",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 7",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 8",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 9",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Correct! The page publishes its methodology, which includes consulting multiple government sources such as the Food and Drug Administration (FDA) and other recognized scientific sources. The information from these sources is reviewed and updated at different times. They also indicate a list of expert reviewers.",
+                                    "incorrect": "Incorrect! The page publishes its methodology, which includes consulting multiple government sources such as the Food and Drug Administration (FDA) and other recognized scientific sources. The information from these sources is reviewed and updated at different times. They also indicate a list of expert reviewers."
+                                }
+                            },
+                            {
+                                "question": "Can you find any information about the website security?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 5",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 6",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 7",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 8",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 9",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Correct! The page publishes a message indicating that belongs to  an official government organization in the US and that it´s \"lock\" indicates that the conexion is safe.",
+                                    "incorrect": "Incorrect! The page publishes a message indicating that belongs to  an official government organization in the US and that it´s \"lock\" indicates that the conexion is safe. "
+                                }
+                            },
+                            {
+                                "question": "Is the content published by other reliable sources?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 5",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 6",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 7",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 8",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Screenshot 9",
+                                        "correct": true
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": false
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Correct! The National Library of Medicine states that MedlinePlus is ‘reliable, up-to-date health information to you’. Also USA.gov states that you can ‘Get reliable health information from MedlinePlus’. ",
+                                    "incorrect": "Incorrect! The National Library of Medicine states that MedlinePlus is ‘reliable, up-to-date health information to you’. Also USA.gov states that you can ‘Get reliable health information from MedlinePlus’. "
+                                }
+                            }
+                        ],
+                        "conclusionTitle": "Conclusion",
+                        "conclusion": "We can conclude that MedlinePlus is a website that offers high-quality, easy-to-understand health information. Its methodology is clear and transparent, based on multiple sources. Its authors are correctly identified and traceable. Therefore, it is a suitable source for information on health-related topics."
+                    },
+                    {
+                        "intro": "<p>https://thepeoplesvoice.tv</p>",
+                        "images": [
+                            "/img/lateralReading/en/voice/0.png",
+                            "/img/lateralReading/en/voice/1.png",
+                            "/img/lateralReading/en/voice/2.png",
+                            "/img/lateralReading/en/voice/3.png",
+                            "/img/lateralReading/en/voice/4.png",
+                            "/img/lateralReading/en/voice/5.png"
+                        ],
+                        "questions": [
+                            {
+                                "question": "Where can you find the author?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 5",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": true
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Well done! We cannot find this information, just a vague mention about ‘our team of writers’ in the ‘about us section’. We can read that ‘The ThePeoplesVoice.tv website (the ‘Site’) is comprised of various web pages operated by ‘Fact Checked Limited.’ (screenshot 1) A search for ‘Fact Checked Limited’ does not provide information about the authors of the website. Instead, we can find debunks from fact-checking websites such as Africa check, Maldita and TheCanadianPress, which highlight false content published by Fact Checked Limited. If we check some of the ‘news articles’ published we can find that Baxter Dmitry is the author of several articles (screenshot 5). The search for Baxter Dmitry does not bring information about the alleged journalist (such as his biography, a LinkedIn profile or other contributions in different media). Instead, we can find some articles that show that Baxter Dmitry is a regular contributor of this ‘alternative reality web’ or that had previously been posing as an unrelated Latvian man using a stolen profile photo.",
+                                    "incorrect": "Not quite.We cannot find this information, just a vague mention about ‘our team of writers’ in the ‘about us section’. We can read that ‘The ThePeoplesVoice.tv website (the ‘Site’) is comprised of various web pages operated by ‘Fact Checked Limited.’ (screenshot 1) A search for ‘Fact Checked Limited’ does not provide information about the authors of the website. Instead, we can find debunks from fact-checking websites such as Africa check, Maldita and TheCanadianPress, which highlight false content published by Fact Checked Limited. If we check some of the ‘news articles’ published we can find that Baxter Dmitry is the author of several articles (screenshot 5). The search for Baxter Dmitry does not bring information about the alleged journalist (such as his biography, a LinkedIn profile or other contributions in different media). Instead, we can find some articles that show that Baxter Dmitry is a regular contributor of this ‘alternative reality web’ or that had previously been posing as an unrelated Latvian man using a stolen profile photo."
+                                }
+                            },
+                            {
+                                "question": "Where can you find the website content and methodology?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 5",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": true
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Correct! The page does not publish its methodology. We can find that ‘The People’s Voice’ is a for-profit, independent news and entertainment website. “We generate revenue via advertising” ( screenshot 1) but it is not clear who finances the website.A disclaimer under the terms of use of ‘The People's Voice’ states that its content may not be accurate or reliable and may ‘include inaccuracies’ (screenshot 2). Obviously, any media site can make mistakes, but it is a little bit suspicious that a media site assumes that inaccuracies are a frequent occurrence. We cannot find information about sources, ‘alleged investigations’ or sponsors.",
+                                    "incorrect": "Incorrect! The page does not publish its methodology. We can find that ‘The People’s Voice’ is a for-profit, independent news and entertainment website. “We generate revenue via advertising” ( screenshot 1) but it is not clear who finances the website. A disclaimer under the terms of use of ‘The People's Voice’ states that its content may not be accurate or reliable and may ‘include inaccuracies’ (screenshot 2). Obviously, any media site can make mistakes, but it is a little bit suspicious that a media site assumes that inaccuracies are a frequent occurrence. We cannot find information about sources, ‘alleged investigations’ or sponsors. "
+                                }
+                            },
+                            {
+                                "question": "Can you find any information about the website security?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 5",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": true
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Correct! ",
+                                    "incorrect": "Incorrect!"
+                                }
+                            },
+                            {
+                                "question": "Is the content published by other reliable sources?",
+                                "options": [
+                                    {
+                                        "text": "Screenshot 1",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 2",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 3",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 4",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 5",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Not Found",
+                                        "correct": true
+                                    }
+                                ],
+                                "feedback": {
+                                    "correct": "Correct! In Wikipedia we find that ‘The People's Voice (formerly known as ‘NewsPunch’ and ‘Your News Wire’) is an American fake news website based in Los Angeles (screenshot 3). Wikipedia's article shows a list of references, including fact-checkers’ articles and academic investigations that report ‘The People´s Voice’ has published several false stories, including The Pizzagate Conspiracy Theory and Anti-vaccination hoaxes (screenshot 4).",
+                                    "incorrect": "Incorrect! In Wikipedia we find that ‘The People's Voice (formerly known as ‘NewsPunch’ and ‘Your News Wire’) is an American fake news website based in Los Angeles (screenshot 3). Wikipedia's article shows a list of references, including fact-checkers’ articles and academic investigations that report ‘The People´s Voice’ has published several false stories, including The Pizzagate Conspiracy Theory and Anti-vaccination hoaxes (screenshot 4)."
+                                }
+                            }
+                        ],
+                        "conclusionTitle": "Conclusion",
+                        "conclusion": "After applying the Lateral reading method, we found that ‘The People's Voice’ is not a reliable source. It has the appearance of a media website and publishes content with a ‘Fact Checked stamped’, but in fact, the website publishes misinformation that is shared as real."
+                    }
+                ]
+            }
+        }
+    },
     "inspect": {
         "title": "Channel overview",
-        "subtitle":"Analyze the Channels and the Main Topics in the Network of Hate and Disinformation"
+        "subtitle": "Analyze the Channels and the Main Topics in the Network of Hate and Disinformation"
     },
     "channel": {
         "title": "Network exploration",
-        "subtitle":"Explore the Network and Analyze the Connections of Hate and Disinformation Online",
+        "subtitle": "Explore the Network and Analyze the Connections of Hate and Disinformation Online",
         "infoTitle": "Channel information"
     },
     "conversation": {
         "title": "Conversation",
-        "subtitle":"Explore the Conversations and Analyze the Messages in the Network of Hate and Disinformation"
+        "subtitle": "Explore the Conversations and Analyze the Messages in the Network of Hate and Disinformation"
     },
     "project": {
         "noProject": "No projects available",
@@ -74,11 +755,11 @@
     },
     "projects": {
         "title": "Projects",
-        "subtitle":"Choose the language in which you want to train your skills to respond to hate and disinformation content."
+        "subtitle": "Choose the language in which you want to train your skills to respond to hate and disinformation content."
     },
     "tasks": {
         "title": "Tasks",
-        "subtitle":"Select the topic you want to focus on to create effective responses and arguments against disinformation."      
+        "subtitle": "Select the topic you want to focus on to create effective responses and arguments against disinformation."
     },
     "channelTable": {
         "header": {
@@ -88,6 +769,8 @@
             "messages": "Number of messages",
             "partecipants": "Number of users",
             "IRI": "Infodemic Risk",
+            "CW": "Check Worthy",
+            "hs": "Hate Speech",
             "nInRecommendations": "In Recommendations",
             "nOutRecommendations": "Out Recommendations",
             "expandable": "Expandable",
@@ -101,21 +784,45 @@
         "pl": "Polish"
     },
     "graphInteraction": {
+        "legend": {
+            "title": "Legend",
+            "color": "Color",
+            "size": "Dimension",
+            "low": "Low",
+            "medium": "Medium",
+            "high": "High",
+            "small": "Small",
+            "large": "Large",
+            "defaultColor": "Default Color for all nodes",
+            "defaultSize": "Default Size for all nodes"
+        },
+        "resetView": "Reset view",
         "color": {
-            "disable": "Select node color",
-            "iri": "Color: Infodemic Risk",
-            "hs": "Color: Hate Speech",
-            "in": "Color: In Recommendations",
-            "out": "Color: Out Recommendations"
+            "disable": "Disable color",
+            "iri": "Infodemic Risk",
+            "hs": "Hate Speech",
+            "in": "In Recommendations",
+            "out": "Out Recommendations",
+            "out_degree": "Out-degree ",
+            "in_degree": "In-degree ",
+            "label": "Color"
         },
         "size": {
-            "disable": "Select node size",
-            "iri": "Size: Infodemic Risk",
-            "hs": "Size: Hate Speech",
-            "in": "Size: In Recommendations",
-            "out": "Size: Out Recommendations"
+            "disable": "Disable size",
+            "iri": "Infodemic Risk",
+            "hs": "Hate Speech",
+            "in": "In Recommendations",
+            "out": "Out Recommendations",
+            "label": "Size",
+             "out_degree": "Out-degree ",
+            "in_degree": "In-degree ",
+            "n_out_recommended": "Out Recommendations",
+            "n_in_recommended": "In Recommendations"
         },
         "tooltip": {
+            "label": "Label",
+            "message_count": "Number of messages",
+            "partecipants_count": "Number of users",
             "id": "Channel ID:",
             "iri": "Infodemic Risk:",
             "hs": "Hate Speech:",
@@ -130,11 +837,11 @@
     },
     "topicsTable": {
         "title": "Main topics of the channel",
-        "header":{
-            "title":"Title",
-            "count":"% of messages",
-            "hs":"% of Hate Speech",
-            "cw":"% of Check Worthy"
+        "header": {
+            "title": "Title",
+            "count": "% of messages",
+            "hs": "% of Hate Speech",
+            "cw": "% of Check Worthy"
         }
     },
     "channelInfo": {
@@ -151,6 +858,7 @@
         "mainTopics": "Main topics:",
         "messages": "Go to conversation",
         "emptySelection": "No selection yet. Please select a channel",
+        "noData": "No data available",
         "exploreChannel": "Explore Channel",
         "topics": "Main Topics",
         "channels": "Channels",
@@ -179,30 +887,32 @@
             "start": "Start a new conversation with Target={target}",
             "jump": "Go to conversation",
             "noProject": "No projects available",
+            "noData": "No data available",
+
             "error": "Error while fetching data"
         },
         "noData": "No data available",
         "noTarget": "No target identified",
-        "target":"Click here to start a new conversation",
-        "filter":{
-            "target":"Filter by target",
-            "topic":"Filter by Topic",
-            "hate":"Hate Speech",
-            "checkworthy":"Check Worthy",
-            "all":"All",
-            "yes":"Yes",
-            "no":"No",
-            "DISABLED":"Disabled",
-            "JEWS":"Jews",
-            "MUSLIMS":"Muslims",
-            "LGBT+":"LGBT+",
-            "MIGRANTS":"Migrants",
-            "OTHER":"Other",
-            "POC":"People of Color",
-            "ROMANI":"Rom",
-            "WOMEN":"Women"
+        "target": "Click here to start a new conversation",
+        "filter": {
+            "target": "Filter by target",
+            "topic": "Filter by Topic",
+            "hate": "Hate Speech",
+            "checkworthy": "Check Worthy",
+            "all": "All",
+            "yes": "Yes",
+            "no": "No",
+            "DISABLED": "Disabled",
+            "JEWS": "Jews",
+            "MUSLIMS": "Muslims",
+            "LGBT+": "LGBT+",
+            "MIGRANTS": "Migrants",
+            "OTHER": "Other",
+            "POC": "People of Color",
+            "ROMANI": "Rom",
+            "WOMEN": "Women"
         },
-        "footer":{
+        "footer": {
             "pagination": {
                 "range": "{pageStart}-{pageStop} of {totalItems} retrieved messages"
             }
@@ -212,9 +922,9 @@
         "hate": "Hate vs Non Hate",
         "checkworthy": "Check Worthy vs Non Check Worthy",
         "generic": "Generic",
-        "select":"Select WordCloud type",
-        "selectTopic":"Select a Topic",
-        "channel":"Channel",
+        "select": "Select WordCloud type",
+        "selectTopic": "Select a Topic",
+        "channel": "Channel",
         "titles": {
             "hate": "Hate Speech",
             "is_checkworthy": "Check Worthy",
@@ -226,5 +936,26 @@
     "error": {
         "api": "Error while fetching data",
         "noData": "No data available"
+    },
+    "dialog": {
+        "dataSources": "Data sources",
+        "externalGround": "External ground",
+        "documentName": "Document name",
+        "externalLink": "External link",
+        "text": "Text",
+        "confirm": "Confirm",
+        "dialogue": "Dialogue",
+        "groundTextSpans": "Ground text spans",
+        "startEmpty": "Start empty",
+        "addDynamicTurn": "Add dynamic turn",
+        "addFromGround": "Add from ground",
+        "tooltip": {
+            "startEmpty": "Press here to create an empty turn.",
+            "addDynamicTurn": "Automatically generate a suggestion to start from.<br>You can still modify it afterward.",
+            "addRoundUp": "Add an empty turn <em>before</em> the selected one.",
+            "addRoundDown": "Add an empty turn <em>after</em> the selected one.",
+            "magic": "Automatically generates a reply and selects the related text span.<br><em>You can still edit it.</em>",
+            "delete": "Delete this turn permanently."
+        }
     }
 }

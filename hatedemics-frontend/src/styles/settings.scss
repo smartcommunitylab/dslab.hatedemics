@@ -19,3 +19,25 @@ var {
   font-family: 'Roboto Mono', monospace !important;
   // font-family: 'Noto Sans Mono', monospace !important;
 }
+:root {
+  --backg: #fff;
+  --color_text: #000;
+  --color_title_text: #fff;
+  --color_title_backg: #000;
+  --backg_buttons: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="darktheme"] {
+  --backg: #000;
+  --color_text: #fff;
+  --color_title_text: #000;
+  --color_title_backg: #fff;
+  --backg_buttons: rgba(255, 255, 255, 0.25);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--backg);
+  color: var(--color_text);
+  margin: 0;
+}

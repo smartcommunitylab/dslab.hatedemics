@@ -1,14 +1,39 @@
 <script setup lang="ts">
-import { useGlobal } from '@/store';
+import { useGlobal } from "@/store";
 import { useI18n } from "vue-i18n";
 
 const { t } = useI18n();
 const globalStore = useGlobal();
-import { ref } from 'vue';
+import { onMounted, ref } from "vue";
+import { useUserStore } from "@/store/UserStore";
+import HomeStepperDialog from "@/components/HomeStepperDialog.vue";
+import ExploreGuideDialog from "@/components/ExploreGuideDialog.vue";
+import CounterspeechGuideDialog from "@/components/CounterspeechGuideDialog.vue";
 
+const showExploreGuide = ref(false);
+const showCounterspeechGuide = ref(false);
 const showDialog = ref(false);
+const neverShow = ref(false);
+const userStore = useUserStore();
 
+onMounted(() => {
+  userStore.syncHideHomeStepperDialogFromStorage();
+  if (!userStore.hideHomeStepperDialog) {
+    showDialog.value = true;
+  }
+});
 
+// function closeDialog() {
+//   showDialog.value = false;
+//   if (neverShow.value) {
+//     userStore.setHideHomeStepperDialog(true);
+//     localStorage.setItem("hideHomeStepper", "1");
+//   }
+// }
+function handleNeverShow() {
+  userStore.setHideHomeStepperDialog(true);
+  localStorage.setItem("hideHomeStepper", "1");
+}
 </script>
 
 <template>
@@ -23,63 +48,113 @@ const showDialog = ref(false);
           class="mx-auto mb-4"
         />
         <h1 class="text-h4 font-weight-bold mb-2">
-          {{t("home.title")}} 
+          {{ t("home.title") }}
         </h1>
         <p class="text-subtitle-1">
-          {{t("home.description")}}
+          {{ t("home.description") }}
         </p>
       </v-col>
     </v-row>
 
     <!-- Card funzionalità -->
     <v-row justify="center" align="stretch" class="mt-4" dense>
-      
-      <!-- Card 1: Esplora la rete -->
-      <v-col cols="12" md="5">
-        <v-card elevation="6" class="h-100 pa-5 d-flex flex-column justify-space-between" color="#f4f6fa">
+      <!-- Card 1: Edu -->
+      <v-col cols="12" md="4">
+        <v-card
+          elevation="6"
+          class="h-100 pa-5 d-flex flex-column justify-space-between"
+          color="#f4f6fa"
+        >
           <div>
             <div class="d-flex align-center mb-2">
               <v-icon color="primary" class="mr-2">mdi-web</v-icon>
-              <h2 class="text-h6 font-weight-bold mb-1">{{t("home.network")}}</h2>
+              <h2 class="text-h6 font-weight-bold mb-1">{{ t("home.educational") }}</h2>
             </div>
             <p class="text-body-1 mb-4">
-              {{t("home.networkDescription")}}
+              {{ t("home.educationalDescription") }}
             </p>
           </div>
           <div class="text-right mt-6">
+            <v-btn color="primary" to="/educational" variant="flat">
+              {{ t("home.educationalButton") }}
+            </v-btn>
+          </div>
+        </v-card>
+      </v-col>
+      <!-- Card 2: Esplora la rete -->
+      <v-col cols="12" md="4">
+        <v-card
+          elevation="6"
+          class="h-100 pa-5 d-flex flex-column justify-space-between"
+          color="#f4f6fa"
+        >
+          <div>
+            <div class="d-flex align-center mb-2">
+              <v-icon color="primary" class="mr-2">mdi-web</v-icon>
+              <h2 class="text-h6 font-weight-bold mb-1">{{ t("home.network") }}</h2>
+            </div>
+            <p class="text-body-1 mb-4">
+              {{ t("home.networkDescription") }}
+            </p>
+          </div>
+          <div class="d-flex justify-space-between mt-6">
+            <v-btn
+              variant="outlined"
+              color="error"
+              size="small"
+              class="rounded-circle"
+              style="min-width: 36px; height: 36px; padding: 0"
+              @click="showExploreGuide = true"
+            >
+              <v-icon size="20">mdi-help</v-icon>
+            </v-btn>
             <v-btn color="primary" to="/dashboard/channels" variant="flat">
-              {{t("home.networkButton")}}
+              {{ t("home.networkButton") }}
             </v-btn>
           </div>
         </v-card>
       </v-col>
 
-      <!-- Card 2: Counterspeech -->
-      <v-col cols="12" md="5">
-        <v-card elevation="6" class="h-100 pa-5 d-flex flex-column justify-space-between" color="#f4f6fa">
+      <!-- Card 3: Counterspeech -->
+      <v-col cols="12" md="4">
+        <v-card
+          elevation="6"
+          class="h-100 pa-5 d-flex flex-column justify-space-between"
+          color="#f4f6fa"
+        >
           <div>
             <div class="d-flex align-center mb-2">
               <v-icon color="error" class="mr-2">mdi-message-text-outline</v-icon>
-              <h2 class="text-h6 font-weight-bold mb-1">{{t("home.counterspeech")}}</h2>
+              <h2 class="text-h6 font-weight-bold mb-1">{{ t("home.counterspeech") }}</h2>
             </div>
             <p class="text-body-1 mb-4">
-              {{t("home.counterspeechDescription")}}
+              {{ t("home.counterspeechDescription") }}
             </p>
           </div>
-          <div class="text-right mt-6">
+          <div class="d-flex justify-space-between mt-6">
+            <v-btn
+              variant="outlined"
+              color="error"
+              size="small"
+              class="rounded-circle"
+              style="min-width: 36px; height: 36px; padding: 0"
+              @click="showCounterspeechGuide = true"
+            >
+              <v-icon size="20">mdi-help</v-icon>
+            </v-btn>
             <v-btn color="error" to="/projects" variant="flat">
-              {{t("home.counterspeechButton")}}
+              {{ t("home.counterspeechButton") }}
             </v-btn>
           </div>
         </v-card>
       </v-col>
       <!-- Card 3: What to know before using the platform -->
-     
     </v-row>
   </v-container>
-  
+  <HomeStepperDialog v-model="showDialog" @neverShow="handleNeverShow" />
+  <ExploreGuideDialog v-model="showExploreGuide" />
+  <CounterspeechGuideDialog v-model="showCounterspeechGuide" />
 </template>
-
 
 <style scoped>
 h1 {

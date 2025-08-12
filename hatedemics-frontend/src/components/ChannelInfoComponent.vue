@@ -41,7 +41,7 @@ watch(selectedChannelInfo, async (newVal) => {
 
 <template>
   <v-container>
-    <v-card v-if="selectedChannelInfo" class="mx-auto pa-4 rounded-lg" elevation="2">
+    <v-card v-if="selectedChannelInfo" class="mx-auto pa-0 rounded" elevation="0">
 
 
 
