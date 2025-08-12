@@ -142,7 +142,7 @@ const conclusionDialog = ref(false);
 
 const isCorrect = computed(() => {
   const correctIndexes = currentQuestion.value?.options
-    ?.map((opt: { correct: any; }, idx: any) => (opt.correct ? idx : null))
+    ?.map((opt: { correct: boolean }, idx: number) => (opt.correct ? idx : null))
     .filter((idx: null) => idx !== null) || [];
 
   return (
