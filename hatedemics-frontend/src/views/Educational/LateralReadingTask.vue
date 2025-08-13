@@ -92,8 +92,8 @@
         <v-btn
           v-if="currentSectionIndex < taskSections.length - 1"
           color="primary"
-          @click="() => { nextSection(); conclusionDialog = false }"
-        >
+          @click="closeConclusionDialog"
+          >
           Next Section
         </v-btn>
         <v-btn
@@ -138,8 +138,11 @@ const selected = ref<number[]>([]);
 const showFeedback = ref(false);
 const selectedImage = ref("");
 const imageDialog = ref(false);
-const conclusionDialog = ref(false);
-
+const conclusionDialog = ref<boolean>(false);
+  function closeConclusionDialog() {
+  nextSection();
+  conclusionDialog.value = false;
+}
 const isCorrect = computed(() => {
   const correctIndexes = currentQuestion.value?.options
     ?.map((opt: { correct: boolean }, idx: number) => (opt.correct ? idx : null))
