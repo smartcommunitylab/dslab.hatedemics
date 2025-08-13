@@ -742,7 +742,7 @@
     },
     "channel": {
         "title": "Network exploration",
-        "subtitle": "Explore the Network and Analyze the Connections of Hate and Disinformation Online",
+        "subtitle": "<p>Below, you can see a network of Telegram channels where each channel is a point ('node'). These channels are linked when Telegram automatically recommends one to another, usually because they share many of the same users.</p><p>You can dive into the network and the table to uncover real-world channels that might be spreading disinformation or hate speech.</p><p>Adjust the color and size of the channels, filter and reorder their features to find the ones that interest you most.</p>",
         "infoTitle": "Channel information"
     },
     "conversation": {

@@ -742,7 +742,7 @@
   },
   "channel": {
     "title": "Esplorazzjoni tan-netwerk",
-    "subtitle": "Esplora n-netwerk u tanalizza l-konnessjonijiet ta 'mibegħda u diżinformazzjoni online",
+    "subtitle": "<p>Hawn taħt tista’ tara netwerk ta’ kanali Telegram fejn kull kanal huwa punt (‘node’). Dawn il-kanali huma marbuta meta Telegram jirrakkomanda awtomatikament wieħed lil ieħor, ġeneralment għax jaqsmu ħafna mill-istess utenti.</p><p>Tista’ tesplora n-netwerk u t-tabella biex tiskopri kanali reali li jistgħu jkunu qed ixerrdu informazzjoni falza jew diskors ta’ mibegħda.</p><p>Aġġusta l-kulur u d-daqs tal-kanali, iffiltar u erġa’ ordna l-karatteristiċi tagħhom biex issib dawk li jinteressawk l-aktar.</p>",
     "infoTitle": "Informazzjoni tal-kanal"
   },
   "conversation": {

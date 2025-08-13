@@ -715,7 +715,7 @@
     },
     "channel": {
         "title": "Esplorazione della Rete",
-        "subtitle": "Esplora la Rete e Analizza le Connessioni dell’Odio e della Disinformazione Online",
+        "subtitle": "<p>Qui sotto puoi vedere una rete di canali Telegram, in cui ogni canale è un punto ('nodo'). Questi canali sono collegati quando Telegram ne raccomanda automaticamente uno a un altro, di solito perché condividono molti degli stessi utenti.</p><p>Puoi esplorare la rete e la tabella per scoprire canali reali che potrebbero diffondere disinformazione o discorsi d'odio.</p><p>Modifica il colore e la dimensione dei canali, filtra e riordina le loro caratteristiche per trovare quelli che ti interessano di più.</p>",
         "infoTitle": "Informazioni sul Canale"
     },
     "project": {
