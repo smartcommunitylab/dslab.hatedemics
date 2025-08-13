@@ -707,7 +707,7 @@
   },
   "channel": {
     "title": "Eksploracja sieci",
-    "subtitle": "Przeglądaj sieć i analizuj połączenia nienawiści i dezinformacji online",
+    "subtitle": "<p>Poniżej możesz zobaczyć sieć kanałów Telegram, w której każdy kanał jest punktem ('węzłem'). Kanały te są połączone, gdy Telegram automatycznie poleca jeden kanał innemu, zazwyczaj dlatego, że mają wielu wspólnych użytkowników.</p><p>Możesz zagłębić się w sieć i tabelę, aby odkryć prawdziwe kanały, które mogą rozpowszechniać dezinformację lub mowę nienawiści.</p><p>Dostosuj kolor i rozmiar kanałów, filtruj i zmieniaj kolejność ich cech, aby znaleźć te, które najbardziej Cię interesują.</p>",
     "infoTitle": "Informacje o kanale"
   },
   "conversation": {

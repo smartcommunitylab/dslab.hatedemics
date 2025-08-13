@@ -709,7 +709,7 @@
     },
     "channel": {
       "title": "Exploración de red",
-      "subtitle": "Explore la red y analice las conexiones de odio y desinformación en línea",
+      "subtitle": "<p>A continuación, puedes ver una red de canales de Telegram donde cada canal es un punto ('nodo'). Estos canales están conectados cuando Telegram recomienda automáticamente uno a otro, normalmente porque comparten muchos de los mismos usuarios.</p><p>Puedes explorar la red y la tabla para descubrir canales reales que podrían estar difundiendo desinformación o discursos de odio.</p><p>Ajusta el color y el tamaño de los canales, filtra y reordena sus características para encontrar los que más te interesen.</p>",
       "infoTitle": "Información de canal"
     },
     "conversation": {

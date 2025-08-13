@@ -6,8 +6,6 @@ import { useChannelsStore } from "@/store/ChannelStore";
 import { storeToRefs } from "pinia";
 import type { ChannelInfo } from "@/services/types";
 import GraphComponent from "@/components/GraphComponentNew.vue";
-import ChannelInfoComponent from "@/components/ChannelInfoComponent.vue";
-import { formatDate } from "@/services/utility";
 const { t } = useI18n();
 const channelsStore = useChannelsStore();
 const { channelsInfo, selectedChannelInfo, selectedLanguage } = storeToRefs(
@@ -16,8 +14,6 @@ const { channelsInfo, selectedChannelInfo, selectedLanguage } = storeToRefs(
 
 const msg = t("channel.title");
 const search = ref("");
-const page = ref(1); // Vuetify inizia da 1
-const itemsPerPage = ref(100);
 const totalItems = ref(0); // Da aggiornare con la risposta API
 const loading = ref(false);
 const itemsPerPageOptions = [
@@ -34,7 +30,6 @@ const languages = [
   { language: t("language.pl"), value: "PL" },
 ];
 
-const sortBy = ref([{ key: "IRI", order: "desc" }]);
 
 const headers = computed(() => [
   { title: t("channelTable.header.label"), key: "label", sortable: true },
@@ -72,7 +67,7 @@ const resetChannels = () => {
 const fetchChannels = async () => {
   loading.value = true; // Avvia il loading
   try {
-    const { success, status, total, content } = await channelsStore.dispatchGetChannels({
+    const { success, status, total } = await channelsStore.dispatchGetChannels({
       page: pagination.page, // API parte da 0
       size: pagination.size,
       sort: pagination.sort,
@@ -137,7 +132,7 @@ const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
   <v-container fluid>
     <h1 class="text-h5 font-weight-bold text-primary ma-4">{{ msg }}</h1>
     <h2 class="text-h6 font-weight-medium ma-4">
-      {{ t("channel.subtitle") }}
+      <span v-html="t('channel.subtitle')"/> 
     </h2>
     <v-row>
       <!-- Sezione principale -->
