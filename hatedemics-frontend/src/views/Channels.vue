@@ -50,7 +50,7 @@ const headers = computed(() => [
     sortable: true,
   },
   { title: t("channelTable.header.IRI"), key: "IRI", sortable: true },
-  { title: t("channelTable.header.HS"), key: "hs", sortable: true },
+  { title: t("channelTable.header.hs"), key: "hs", sortable: true },
   { title: t("channelTable.header.CW"), key: "cw", sortable: true },
   { title: t("channelTable.header.expandable"), key: "IRI", sortable: true },
 ]);
