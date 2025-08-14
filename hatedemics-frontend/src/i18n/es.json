@@ -921,7 +921,14 @@
         "addRoundUp": "Agregar un giro vacío <em>antes</em> el seleccionado.",
         "addRoundDown": "Agregar un giro vacío <em>después</em> el seleccionado.",
         "magic": "Genera automáticamente una respuesta y selecciona el período de texto relacionado.<br><em>Todavía puedes editarlo.</em>",
-        "delete": "Elimine este giro permanentemente."
-      }
+        "delete": "Elimine este giro permanentemente.",
+        "about": "Breve descripción del canal",
+        "channelId": "ID único anonimizado del canal",
+        "nMessages": "Cuántos mensajes hay en el canal",
+        "nUsers": "Cuántos usuarios hay en el canal",
+        "languages": "Idiomas utilizados en el canal",
+        "iri": "Índice de Riesgo de Infodemia del canal",
+        "hs_percentage": "Porcentaje de mensajes considerados discurso de odio",
+        "cw_percentage": "Porcentaje de mensajes considerados dignos de verificación"      }
     }
   }

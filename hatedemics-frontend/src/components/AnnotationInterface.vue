@@ -7,7 +7,7 @@ import ConfirmDialog from "@/components/dialogs/dialog-confirm.vue";
 import DynamicButton from "@/components/singleFileComponents/dynamic-button.vue";
 import { useNewTaskStore } from "@/store/DialogStore";
 import DialogDialogue from "@/components/dialogs/dialog-dialogue.vue";
-import { useI18n } from 'vue-i18n';
+import { useI18n } from "vue-i18n";
 
 export default {
   components: {
@@ -17,7 +17,8 @@ export default {
     highlightable,
     Splitpanes,
     Pane,
-  },setup() {
+  },
+  setup() {
     const { t } = useI18n();
     return { t };
   },
@@ -532,7 +533,7 @@ export default {
           <v-col>
             <p class="ma-2 text-center" id="files-p">
               <v-icon icon="mdi-database-outline me-2"></v-icon>
-              <span class="font-weight-bold">{{ t('dialog.dataSources') }}</span>
+              <span class="font-weight-bold">{{ t("dialog.dataSources") }}</span>
             </p>
           </v-col>
         </v-row>
@@ -557,19 +558,26 @@ export default {
         ></v-skeleton-loader>
         <div v-if="selectedFile <= 0 || loadingFile" class="empty-div">
           <div v-if="selectedFile === -1">
-            <h3 class="mb-3">{{ t('dialog.externalGround') }}</h3>
-            <v-text-field :label="t('dialog.documentName')" required v-model="externalGround.name" />
-            <v-text-field :label="t('dialog.externalLink')" v-model="externalGround.link" />
+            <h3 class="mb-3">{{ t("dialog.externalGround") }}</h3>
+            <v-text-field
+              :label="t('dialog.documentName')"
+              required
+              v-model="externalGround.name"
+            />
+            <v-text-field
+              :label="t('dialog.externalLink')"
+              v-model="externalGround.link"
+            />
             <v-textarea
-            :label="t('dialog.text')"
-            rows="2"
+              :label="t('dialog.text')"
+              rows="2"
               v-model="externalGround.text"
               auto-grow
             ></v-textarea>
             <div class="text-right">
               <DynamicButton
-              :text="t('dialog.confirm')"
-              :color="
+                :text="t('dialog.confirm')"
+                :color="
                   actorsWithGround.has(annotation_data[selectedRound]?.speaker)
                     ? 'white'
                     : 'red'
@@ -593,14 +601,14 @@ export default {
             <v-col cols="7" xl="8">
               <p class="ma-2 text-center">
                 <v-icon icon="mdi-forum-outline me-2"></v-icon>
-                <span class="font-weight-bold">{{ t('dialog.dialogue') }}</span>
+                <span class="font-weight-bold">{{ t("dialog.dialogue") }}</span>
               </p>
             </v-col>
             <v-divider vertical></v-divider>
             <v-col cols="5" xl="4">
               <p class="ma-2 text-center">
                 <v-icon icon="mdi-file-document-outline me-2"></v-icon>
-                <span class="font-weight-bold">{{ t('dialog.groundTextSpans') }}</span>
+                <span class="font-weight-bold">{{ t("dialog.groundTextSpans") }}</span>
               </p>
             </v-col>
           </v-row>
@@ -609,21 +617,20 @@ export default {
               class="text-center"
               :class="{ 'v-col-4': taskInfo.inside_type === 'choice' }"
             >
-            <v-tooltip >
-              <template v-slot:activator="{ props }">
-              <v-btn
-                prepend-icon="mdi-plus"
-                class="ma-1"
-                @click="addRound(-1)"
-                :text="t('dialog.startEmpty')"
-                :disabled="this.showChoiceDialog"
-                v-bind="props"
-              >
-              </v-btn>
-              </template>
-              <div class="tooltip-html" v-html="t('dialog.tooltip.startEmpty')"></div>
-
-            </v-tooltip>
+              <v-tooltip>
+                <template v-slot:activator="{ props }">
+                  <v-btn
+                    prepend-icon="mdi-plus"
+                    class="ma-1"
+                    @click="addRound(-1)"
+                    :text="t('dialog.startEmpty')"
+                    :disabled="this.showChoiceDialog"
+                    v-bind="props"
+                  >
+                  </v-btn>
+                </template>
+                <div class="tooltip-html" v-html="t('dialog.tooltip.startEmpty')"></div>
+              </v-tooltip>
             </v-col>
 
             <template v-if="taskInfo.inside_type === 'choice'">
@@ -637,23 +644,24 @@ export default {
                 </v-select>
               </v-col>
               <v-col class="text-center">
-                <v-tooltip >
+                <v-tooltip>
                   <template v-slot:activator="{ props }">
-                                  <v-btn
-                                  v-bind="props"
-                  class="ma-1"
-                  prepend-icon="mdi-auto-fix"
-                  :text="t('dialog.addDynamicTurn')"
-                  @click="callDynamic"
-                  :disabled="this.showChoiceDialog"
-                />
+                    <v-btn
+                      v-bind="props"
+                      class="ma-1"
+                      prepend-icon="mdi-auto-fix"
+                      :text="t('dialog.addDynamicTurn')"
+                      @click="callDynamic"
+                      :disabled="this.showChoiceDialog"
+                    />
                   </template>
-                  <div class="tooltip-html" v-html="t('dialog.tooltip.addDynamicTurn')"></div>
-
+                  <div
+                    class="tooltip-html"
+                    v-html="t('dialog.tooltip.addDynamicTurn')"
+                  ></div>
                 </v-tooltip>
               </v-col>
             </template>
-
           </v-row>
           <v-row
             v-for="(round, index) in annotation_data"
@@ -676,71 +684,77 @@ export default {
                     :disabled="this.showChoiceDialog"
                   >
                     <template #prepend>
-                      <v-tooltip >
+                      <v-tooltip>
                         <template v-slot:activator="{ props }">
-                      <v-btn
-                        v-bind="props"
-                        icon=""
-                        class="ma-1"
-                        @click="addRound(index - 1)"
-                        :disabled="this.showChoiceDialog"
-                      >
-                        <v-icon class="icon-up"></v-icon>
-                      </v-btn>
+                          <v-btn
+                            v-bind="props"
+                            icon=""
+                            class="ma-1"
+                            @click="addRound(index - 1)"
+                            :disabled="this.showChoiceDialog"
+                          >
+                            <v-icon class="icon-up"></v-icon>
+                          </v-btn>
                         </template>
-                        <div class="tooltip-html" v-html="t('dialog.tooltip.addRoundUp')"></div>
-
+                        <div
+                          class="tooltip-html"
+                          v-html="t('dialog.tooltip.addRoundUp')"
+                        ></div>
                       </v-tooltip>
                       <v-tooltip>
                         <template v-slot:activator="{ props }">
-                      <v-btn
-                        v-bind="props"
-                        icon=""
-                        class="ma-1"
-                        @click="addRound(index)"
-                        :disabled="this.showChoiceDialog"
-                      >
-                        <v-icon class="icon-down"></v-icon>
-                      </v-btn>
+                          <v-btn
+                            v-bind="props"
+                            icon=""
+                            class="ma-1"
+                            @click="addRound(index)"
+                            :disabled="this.showChoiceDialog"
+                          >
+                            <v-icon class="icon-down"></v-icon>
+                          </v-btn>
                         </template>
-                        <div class="tooltip-html" v-html="t('dialog.tooltip.addRoundDown')"></div>
-
+                        <div
+                          class="tooltip-html"
+                          v-html="t('dialog.tooltip.addRoundDown')"
+                        ></div>
                       </v-tooltip>
-                      <v-tooltip >
+                      <v-tooltip>
                         <template v-slot:activator="{ props }">
-                      <v-btn
-                        v-bind="props"
-                        v-if="
-                          taskInfo.inside_type === 'choice' &&
-                          index === annotation_data.length - 1
-                        "
-                        class="ma-1"
-                        icon="mdi-auto-fix"
-                        @click="callDynamic"
-                        :disabled="this.showChoiceDialog"
-                      />
-
+                          <v-btn
+                            v-bind="props"
+                            v-if="
+                              taskInfo.inside_type === 'choice' &&
+                              index === annotation_data.length - 1
+                            "
+                            class="ma-1"
+                            icon="mdi-auto-fix"
+                            @click="callDynamic"
+                            :disabled="this.showChoiceDialog"
+                          />
                         </template>
-                        <div class="tooltip-html" v-html="t('dialog.tooltip.magic')"></div>
-
+                        <div
+                          class="tooltip-html"
+                          v-html="t('dialog.tooltip.magic')"
+                        ></div>
                       </v-tooltip>
                     </template>
                     <template #append>
-                      <v-tooltip >
+                      <v-tooltip>
                         <template v-slot:activator="{ props }">
-                      <v-btn
-                        v-bind="props"
-                        color="red"
-                        class="ma-1"
-                        icon="mdi-trash-can-outline"
-                        @click="deleteRound(index)"
-                        :disabled="this.showChoiceDialog"
-                      />
+                          <v-btn
+                            v-bind="props"
+                            color="red"
+                            class="ma-1"
+                            icon="mdi-trash-can-outline"
+                            @click="deleteRound(index)"
+                            :disabled="this.showChoiceDialog"
+                          />
                         </template>
-                        <div class="tooltip-html" v-html="t('dialog.tooltip.delete')"></div>
-
+                        <div
+                          class="tooltip-html"
+                          v-html="t('dialog.tooltip.delete')"
+                        ></div>
                       </v-tooltip>
-
                     </template>
                   </v-select>
                   <v-textarea
@@ -901,8 +915,9 @@ export default {
             </v-row>
           </div> -->
         </v-container>
-      </v-col> </v-row
-  ></v-container>
+      </v-col>
+    </v-row></v-container
+  >
 </template>
 
 <style>

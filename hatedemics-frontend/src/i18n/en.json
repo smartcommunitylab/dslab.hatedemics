@@ -955,7 +955,16 @@
             "addRoundUp": "Add an empty turn <em>before</em> the selected one.",
             "addRoundDown": "Add an empty turn <em>after</em> the selected one.",
             "magic": "Automatically generates a reply and selects the related text span.<br><em>You can still edit it.</em>",
-            "delete": "Delete this turn permanently."
+            "delete": "Delete this turn permanently.",
+            "about":"Brief channel’s description",
+            "channelId":"Unique anonymised ID of the channel",
+            "nMessages":"How many messages are in the channel",
+            "nUsers":"How many users are in the channel",
+            "languages":"Languages used in the channel",
+            "iri":"Infodemic Risk Index of the channel",
+            "hs_percentage":"Percentage of messages that are considered Hate Speech",
+            "cw_percentage":"Percentage of messages that are considered Check Worthy"
+
         }
     }
 }

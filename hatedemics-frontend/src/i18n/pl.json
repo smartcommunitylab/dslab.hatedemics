@@ -919,7 +919,15 @@
       "addRoundUp": "Dodaj pusty obrót <em>zanim</em> wybrany.",
       "addRoundDown": "Dodaj pusty obrót <em>Po</em> wybrany.",
       "magic": "Automatycznie generuje odpowiedź i wybiera powiązany tekst.<br><em>Nadal możesz to edytować.</em>",
-      "delete": "Usuń tę obrót na stałe."
+      "delete": "Usuń tę obrót na stałe.",
+      "about": "Krótki opis kanału",
+      "channelId": "Unikalny zanonimizowany identyfikator kanału",
+      "nMessages": "Ile wiadomości znajduje się w kanale",
+      "nUsers": "Ilu użytkowników znajduje się w kanale",
+      "languages": "Języki używane w kanale",
+      "iri": "Wskaźnik ryzyka infodemii kanału",
+      "hs_percentage": "Procent wiadomości uznanych za mowę nienawiści",
+      "cw_percentage": "Procent wiadomości uznanych za warte sprawdzenia"
     }
   }
 }

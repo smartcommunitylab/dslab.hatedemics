@@ -954,7 +954,15 @@
       "addRoundUp": "Żid dawra vojta <em>qabel</em> dik magħżula.",
       "addRoundDown": "Żid dawra vojta <em>wara</em> dik magħżula.",
       "magic": "Awtomatikament tiġġenera tweġiba u tagħżel il-medda tat-test relatata.<br><em>Xorta tista 'teditjaha.</em>",
-      "delete": "Ħassar dan id-dawra b'mod permanenti."
+      "delete": "Ħassar dan id-dawra b'mod permanenti.",
+      "about": "Deskrizzjoni qasira tal-kanal",
+      "channelId": "ID uniku anonimu tal-kanal",
+      "nMessages": "Kemm hemm messaġġi fil-kanal",
+      "nUsers": "Kemm hemm utenti fil-kanal",
+      "languages": "Lingwi użati fil-kanal",
+      "iri": "Indiċi tar-Riskju ta’ Infodemija tal-kanal",
+      "hs_percentage": "Perċentwal ta’ messaġġi meqjusa bħala Diskors ta’ Mibegħda",
+      "cw_percentage": "Perċentwal ta’ messaġġi meqjusa bħala denji ta’ verifika"
     }
   }
 }
