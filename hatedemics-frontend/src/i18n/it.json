@@ -918,7 +918,16 @@
             "addRoundUp": "Aggiungi un turno vuoto <em>prima</em> di quello selezionato.",
             "addRoundDown": "Aggiungi un turno vuoto <em>dopo</em> quello selezionato.",
             "magic": "Genera automaticamente una risposta e seleziona lo span testuale collegato.<br><em>Puoi comunque modificarla.</em>",
-            "delete": "Elimina definitivamente questo turno."
+            "delete": "Elimina definitivamente questo turno.",
+            "about":"Descrizione del canale",
+            "channelId":"ID anonimo unico del canale",
+            "nMessages":"Quanti messaggi sono nel canale",
+            "nUsers":"Numero di utenti unici che hanno scritto messaggi nel canale",
+            "languages":"Lingua del canale",
+            "iri":"Indice di Rischio Infodemia del canale",
+            "hs_percentage":"Percentuale di messaggi considerati Hate Speech",
+            "cw_percentage":"Percentuale di messaggi considerati Check Worthy"
+
         }
     }
 }
