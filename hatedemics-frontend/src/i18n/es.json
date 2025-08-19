@@ -1,178 +1,178 @@
 {
     "login": {
-      "success": "Iniciar sesión exitoso",
-      "error": "Error durante el inicio de sesión",
-      "button": "Acceso"
+        "success": "Iniciar sesión exitoso",
+        "error": "Error durante el inicio de sesión",
+        "button": "Acceso"
     },
     "common": {
-      "close": "Cerca",
-      "ok": "DE ACUERDO"
+        "close": "Cerca",
+        "ok": "DE ACUERDO"
     },
     "menu": {
-      "home": "Hogar",
-      "educational": "Educativo",
-      "explore": "Explorar",
-      "network": "Red",
-      "channel": "Canal",
-      "conversation": "Conversación",
-      "quickGuide": "Guía rápida",
-      "counterspeech": "Contrarrestar",
-      "projects": "Proyectos",
-      "credits": "Créditos",
-      "logout": "Cierre de sesión"
+        "home": "Hogar",
+        "educational": "Educativo",
+        "explore": "Explorar",
+        "network": "Red",
+        "channel": "Canal",
+        "conversation": "Conversación",
+        "quickGuide": "Guía rápida",
+        "counterspeech": "Contrarrestar",
+        "projects": "Proyectos",
+        "credits": "Créditos",
+        "logout": "Cierre de sesión"
     },
     "counterspeechGuide": {
-      "guideTitle": "Guía rápida",
-      "guideItems": {
-        "counterspeech": {
-          "title": "Contrarrestar",
-          "description": "<p><strong>Contrarrestar</strong> se define como todas las acciones comunicativas destinadas a refutar el discurso de odio a través de razones convincentes, y argumentos verdaderos y vinculados a los hechos (Schieb y Preuss, 2016).</p>"
-        },
-        "dataSources": {
-          "title": "Fuentes de datos",
-          "description": "<p>Contiene un artículo de verificación de hechos de un editor certificado (firmante del <a href=\"https://ifcncodeofprinciples.poynter.org/\" target=\"_blank\">Código de Principios de IFCN</a>).</p>"
-        },
-        "dialogue": {
-          "title": "Diálogo",
-          "description": "<p>Cree un diálogo que simule la interacción entre alguien que difunde odio/información errónea y un operador que responde con argumentos impulsados por los hechos.</p>"
-        },
-        "groundText": {
-          "title": "Vestidos de texto en el suelo",
-          "description": "<p>Puede agregar partes del artículo de verificación de hechos que admiten la respuesta del operador.</p><p>El texto en el suelo es <em>agregado automáticamente</em> Cuando se genera un giro.  <strong>resaltar manualmente</strong> Una parte del artículo y haga clic en el botón \"Enlace\".</p>"
-        },
-        "newTurn": {
-          "title": "Nuevo turno",
-          "description": "<p>Puede agregar un nuevo giro de diferentes maneras:</p><ul><li>Agregue un giro vacío con los botones \"+\".</li><li>Genere automáticamente un giro utilizando una porción de artículo seleccionada.</li><li>Seleccione una porción como texto de tierra, luego haga clic en \"Generar desde el suelo\".</li></ul><p><strong>Nota:</strong> Incluso los giros generados automáticamente y el texto del suelo siempre se pueden editar.</p>"
+        "guideTitle": "Guía rápida",
+        "guideItems": {
+            "counterspeech": {
+                "title": "Contrarrestar",
+                "description": "<p><strong>Contrarrestar</strong> se define como todas las acciones comunicativas destinadas a refutar el discurso de odio a través de razones convincentes, y argumentos verdaderos y vinculados a los hechos (Schieb y Preuss, 2016).</p>"
+            },
+            "dataSources": {
+                "title": "Fuentes de datos",
+                "description": "<p>Contiene un artículo de verificación de hechos de un editor certificado (firmante del <a href=\"https://ifcncodeofprinciples.poynter.org/\" target=\"_blank\">Código de Principios de IFCN</a>).</p>"
+            },
+            "dialogue": {
+                "title": "Diálogo",
+                "description": "<p>Cree un diálogo que simule la interacción entre alguien que difunde odio/información errónea y un operador que responde con argumentos impulsados por los hechos.</p>"
+            },
+            "groundText": {
+                "title": "Vestidos de texto en el suelo",
+                "description": "<p>Puede agregar partes del artículo de verificación de hechos que admiten la respuesta del operador.</p><p>El texto en el suelo es <em>agregado automáticamente</em> Cuando se genera un giro.  <strong>resaltar manualmente</strong> Una parte del artículo y haga clic en el botón \"Enlace\".</p>"
+            },
+            "newTurn": {
+                "title": "Nuevo turno",
+                "description": "<p>Puede agregar un nuevo giro de diferentes maneras:</p><ul><li>Agregue un giro vacío con los botones \"+\".</li><li>Genere automáticamente un giro utilizando una porción de artículo seleccionada.</li><li>Seleccione una porción como texto de tierra, luego haga clic en \"Generar desde el suelo\".</li></ul><p><strong>Nota:</strong> Incluso los giros generados automáticamente y el texto del suelo siempre se pueden editar.</p>"
+            }
         }
-      }
     },
     "home": {
-      "title": "Luchar contra el odio y la desinformación en línea",
-      "description": "Hatedemics es una plataforma que aprovecha la inteligencia artificial para analizar el contenido en línea, mejorar el pensamiento crítico y entrenar las respuestas al discurso de odio.",
-      "network": "Explorar la red",
-      "networkDescription": "Un mapa interactivo para observar las conexiones entre canales, contenido y dinámica relacionada con el odio y la desinformación en línea. ",
-      "networkButton": "Ir a la red",
-      "counterspeech": "Redacción de contaminación",
-      "counterspeechDescription": "Entrena tu capacidad para responder al contenido de odio y desinformación con ejercicios de escritura específicos. ",
-      "counterspeechButton": "Empezar a escribir",
-      "educational": "Educativo",
-      "educationalDescription": "Explore recursos y materiales educativos para comprender y contrarrestar el odio en línea.",
-      "educationalButton": "Ir a la sección educativa",
-      "guideDescription": "Qué saber antes de usar la plataforma.",
-      "guideButton": "Guía",
-      "guideTitle": "Guía rápida",
-      "guideItems": {
-        "network": {
-          "title": "Red",
-          "description": "La red muestra las conexiones entre los canales de telegrama recopilados. "
-        },
-        "inRec": {
-          "title": "En recomendaciones",
-          "description": "Cuánto recomienda un canal por otros canales."
-        },
-        "outRec": {
-          "title": "Recomendaciones",
-          "description": "Cuánto recomienda un canal otros canales."
-        },
-        "risk": {
-          "title": "Riesgo infodémico",
-          "description": "Cuánto es confiable el canal. "
-        },
-        "check": {
-          "title": "Verifique la valía",
-          "description": "Indica si se puede verificar un mensaje. "
+        "title": "Luchar contra el odio y la desinformación en línea",
+        "description": "Hatedemics es una plataforma que aprovecha la inteligencia artificial para analizar el contenido en línea, mejorar el pensamiento crítico y entrenar las respuestas al discurso de odio.",
+        "network": "Explorar la red",
+        "networkDescription": "Un mapa interactivo para observar las conexiones entre canales, contenido y dinámica relacionada con el odio y la desinformación en línea. ",
+        "networkButton": "Ir a la red",
+        "counterspeech": "Redacción de contaminación",
+        "counterspeechDescription": "Entrena tu capacidad para responder al contenido de odio y desinformación con ejercicios de escritura específicos. ",
+        "counterspeechButton": "Empezar a escribir",
+        "educational": "Educativo",
+        "educationalDescription": "Explore recursos y materiales educativos para comprender y contrarrestar el odio en línea.",
+        "educationalButton": "Ir a la sección educativa",
+        "guideDescription": "Qué saber antes de usar la plataforma.",
+        "guideButton": "Guía",
+        "guideTitle": "Guía rápida",
+        "guideItems": {
+            "network": {
+                "title": "Red",
+                "description": "La red muestra las conexiones entre los canales de telegrama recopilados. "
+            },
+            "inRec": {
+                "title": "En recomendaciones",
+                "description": "Cuánto recomienda un canal por otros canales."
+            },
+            "outRec": {
+                "title": "Recomendaciones",
+                "description": "Cuánto recomienda un canal otros canales."
+            },
+            "risk": {
+                "title": "Riesgo infodémico",
+                "description": "Cuánto es confiable el canal. "
+            },
+            "check": {
+                "title": "Verifique la valía",
+                "description": "Indica si se puede verificar un mensaje. "
+            }
         }
-      }
     },
     "networkGuide": {
-      "guideTitle": "Guía de la red de canales Telegram",
-      "guideItems": {
-        "network": {
-          "title": "Red",
-          "description": "Esta red muestra los canales de telegrama como puntos, y las líneas muestran cómo están conectados. "
-        },
-        "expanded": {
-          "title": "Expandido",
-          "description": "Un canal es <strong>expandido</strong> Si hemos recopilado todos sus mensajes de chat."
-        },
-        "inOutRecommendations": {
-          "title": "Recomendaciones de entrada y salida",
-          "description": "<strong>En recomendaciones</strong> Es el número total de veces que otros recomiendan un canal: ¡cuanto más se recomienda, más popular es!<br><strong>Recomendaciones</strong> es el número de canales que este recomienda: un número más alto significa que apunta a mucho otro contenido."
-        },
-        "iri": {
-          "title": "Índice de riesgo infodémico (IRI)",
-          "description": "El IRI mide cuán poco confiable es un canal, desde 0 (completamente confiable) hasta 1 (totalmente poco confiable). <br>Para más detalles: <a href='https://www.nature.com/articles/s41562-020-00994-6' target='_blank'>Gallotti et al., 2020 (comportamiento humano de la naturaleza)</a>."
-        },
-        "diri": {
-          "title": "Índice de riesgo infodémico dinámico (DIRI)",
-          "description": "El Diri analiza cómo los usuarios activamente se involucran con contenido poco confiable. "
-        },
-        "sdiri": {
-          "title": "Índice de riesgo infodémico semi-dinámico (SDIRI)",
-          "description": "El SDIRI rastrea interacciones ligeras y rápidas con contenido poco confiable, como reacciones (emojis, me gusta). "
-        },
-        "unrel": {
-          "title": "Índice de falta de fiabilidad (no)",
-          "description": "Este índice muestra cuánto contenido poco confiable comparte un canal en comparación con todos sus mensajes que vinculan a cualquier fuente. "
-        },
-        "domains": {
-          "title": "Dominios conocidos y desconocidos",
-          "description": "<strong>Dominios conocidos</strong> son sitios web para los que tenemos datos de confiabilidad. <strong>Dominios desconocidos</strong> son aquellos sin tales datos. "
-        },
-        "centrality": {
-          "title": "Medidas de centralidad",
-          "description": "Estas medidas muestran cuán importante es un canal en la red:<br><strong>Centralidad de grado:</strong> Número de enlaces directos (popularidad).<br><strong>Mercidez:</strong> Actúa como un puente entre otros canales.<br><strong>Cercanía:</strong> Qué tan rápido puede llegar a otros.<br><strong>Vector propio:</strong> Qué conectado está a otros canales influyentes.<br>Ver también: <em>Pósfai y Barabási, 2016 - Network Science</em>."
-        },
-        "communities": {
-          "title": "Comunidades",
-          "description": "Estos métodos comunitarios ayudan a identificar natural <strong>grupos</strong> dentro de las redes, como en una red social:<br><br><strong>Comunidad de Lovain:</strong> Busca grupos donde hay muchas conexiones dentro del grupo. <em>(¡Como un grupo de amigos donde todos se conocen muy bien!)</em><br><strong>Comunidad de Infomap:</strong> Encuentra grupos basados en la facilidad de la información (o mensajes) puede moverse dentro de ese grupo. <em>(¡Como un club donde las noticias se extienden muy rápido entre los miembros!)</em><br><br>Para más detalles, puede consultar estos artículos:<br><a href='https://hal.science/hal-01231784' target='_blank'>Dugué, N. y Pérez, A. (2015). </a><br><a href='https://www.pnas.org/doi/epdf/10.1073/pnas.0706851105' target='_blank'>Rosvall, M. y Bergstrom, C. T. (2008). </a>"
+        "guideTitle": "Guía de la red de canales Telegram",
+        "guideItems": {
+            "network": {
+                "title": "Red",
+                "description": "Esta red muestra los canales de telegrama como puntos, y las líneas muestran cómo están conectados. "
+            },
+            "expanded": {
+                "title": "Expandido",
+                "description": "Un canal es <strong>expandido</strong> Si hemos recopilado todos sus mensajes de chat."
+            },
+            "inOutRecommendations": {
+                "title": "Recomendaciones de entrada y salida",
+                "description": "<strong>En recomendaciones</strong> Es el número total de veces que otros recomiendan un canal: ¡cuanto más se recomienda, más popular es!<br><strong>Recomendaciones</strong> es el número de canales que este recomienda: un número más alto significa que apunta a mucho otro contenido."
+            },
+            "iri": {
+                "title": "Índice de riesgo infodémico (IRI)",
+                "description": "El IRI mide cuán poco confiable es un canal, desde 0 (completamente confiable) hasta 1 (totalmente poco confiable). <br>Para más detalles: <a href='https://www.nature.com/articles/s41562-020-00994-6' target='_blank'>Gallotti et al., 2020 (comportamiento humano de la naturaleza)</a>."
+            },
+            "diri": {
+                "title": "Índice de riesgo infodémico dinámico (DIRI)",
+                "description": "El Diri analiza cómo los usuarios activamente se involucran con contenido poco confiable. "
+            },
+            "sdiri": {
+                "title": "Índice de riesgo infodémico semi-dinámico (SDIRI)",
+                "description": "El SDIRI rastrea interacciones ligeras y rápidas con contenido poco confiable, como reacciones (emojis, me gusta). "
+            },
+            "unrel": {
+                "title": "Índice de falta de fiabilidad (no)",
+                "description": "Este índice muestra cuánto contenido poco confiable comparte un canal en comparación con todos sus mensajes que vinculan a cualquier fuente. "
+            },
+            "domains": {
+                "title": "Dominios conocidos y desconocidos",
+                "description": "<strong>Dominios conocidos</strong> son sitios web para los que tenemos datos de confiabilidad. <strong>Dominios desconocidos</strong> son aquellos sin tales datos. "
+            },
+            "centrality": {
+                "title": "Medidas de centralidad",
+                "description": "Estas medidas muestran cuán importante es un canal en la red:<br><strong>Centralidad de grado:</strong> Número de enlaces directos (popularidad).<br><strong>Mercidez:</strong> Actúa como un puente entre otros canales.<br><strong>Cercanía:</strong> Qué tan rápido puede llegar a otros.<br><strong>Vector propio:</strong> Qué conectado está a otros canales influyentes.<br>Ver también: <em>Pósfai y Barabási, 2016 - Network Science</em>."
+            },
+            "communities": {
+                "title": "Comunidades",
+                "description": "Estos métodos comunitarios ayudan a identificar natural <strong>grupos</strong> dentro de las redes, como en una red social:<br><br><strong>Comunidad de Lovain:</strong> Busca grupos donde hay muchas conexiones dentro del grupo. <em>(¡Como un grupo de amigos donde todos se conocen muy bien!)</em><br><strong>Comunidad de Infomap:</strong> Encuentra grupos basados en la facilidad de la información (o mensajes) puede moverse dentro de ese grupo. <em>(¡Como un club donde las noticias se extienden muy rápido entre los miembros!)</em><br><br>Para más detalles, puede consultar estos artículos:<br><a href='https://hal.science/hal-01231784' target='_blank'>Dugué, N. y Pérez, A. (2015). </a><br><a href='https://www.pnas.org/doi/epdf/10.1073/pnas.0706851105' target='_blank'>Rosvall, M. y Bergstrom, C. T. (2008). </a>"
+            }
         }
-      }
     },
     "welcome": {
-      "title": "Bienvenido a Hatedemics"
+        "title": "Bienvenido a Hatedemics"
     },
     "onboarding": {
-      "steps": [
-        {
-          "title": "Lo que es Hatedemics",
-          "html": "<p><strong>Odatemics</strong> es un proyecto europeo centrado en crear conciencia sobre el discurso de odio, la desinformación y cómo se cruzan estos dos problemas. </p><p><strong>Odatemics</strong> utiliza tecnologías basadas en IA de dos maneras principales:</p><ul><li><strong>Análisis de datos</strong>: Analiza grandes volúmenes de datos de una plataforma de mensajería popular (Telegram), proporcionando información sobre el discurso de odio y las tendencias de desinformación.</li><li><strong>Contrarrestar</strong>: Crea respuestas basadas en el diálogo al discurso de odio y información errónea, llamada \"contrapezo\". </li></ul><p>Visite el <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">Sitio web de Hatedemics</a> Para obtener más información sobre el proyecto.</p>"
-        },
-        {
-          "title": "Algunas definiciones",
-          "html": "<p><strong>Discurso de odio</strong>: Confiamos en la definición hecha por la Oficina de la ONU sobre prevención del genocidio y la responsabilidad de proteger (2019), que define el discurso de odio como <em>\"Cualquier tipo de comunicación en el habla, la escritura o el comportamiento, que ataca o usa un lenguaje peyorativo o discriminatorio con referencia a una persona o un grupo sobre la base de quiénes son\"</em>. </p><p><strong>Sabor</strong>: Esto se refiere al grado en que una declaración, reclamo o verificación de méritos posteriores a la verificación o verificación de hechos debido a su posible falsedad, relevancia pública o impacto dañino.  <strong>Nota:</strong> Las declaraciones que son fácilmente verificables por un usuario promedio (por ejemplo, \"la población de China es la mitad de la Italia\") no se consideran dignos de verificación, ya que no requieren una verificación de expertos.</p><p><strong>Desinformación</strong>: La desinformación es cuando la información falsa o engañosa se crea deliberadamente y se extiende a las personas enganchadas.  <em>tiene la intención de engañar</em> tú.  <em>\"índices de riesgo infodémico\"</em>. </p><p>¿Quieres saber más?  <em>Evaluar los riesgos de 'infodemias' en respuesta a las epidemias de Covid-19</em>. <strong>Naturaleza Comportamiento humano</strong>, 4 (12), 1285–1293.</p>"
-        },
-        {
-          "title": "¿Qué incluye la plataforma?",
-          "html": "<p><strong>Datos:</strong> La plataforma incluye datos estáticos: aproximadamente 10 millones de mensajes de telegrama recopilados de casi 1,000 chats públicos, que cubren 4 idiomas (inglés, italiano, español y polaco). </p><p><strong>Análisis:</strong> Las ideas que se muestran aquí se generan automáticamente utilizando tecnologías basadas en IA. </p><p><strong>Chatbot:</strong> La plataforma incluye un modelo de diálogo que simula la interacción con una desinformación de propagación de hater. </p>"
-        },
-        {
-          "title": "Advertencia de disparo",
-          "html": "<p><strong>Advertencia:</strong> Esta plataforma contiene ejemplos no observados que algunos usuarios pueden encontrar ofensivos.</p>"
-        }
-      ],
-      "prev": "Atrás",
-      "next": "Próximo",
-      "close": "Cerca",
-      "neverShow": "No te muestres de nuevo"
+        "steps": [
+            {
+                "title": "Lo que es Hatedemics",
+                "html": "<p><strong>Odatemics</strong> es un proyecto europeo centrado en crear conciencia sobre el discurso de odio, la desinformación y cómo se cruzan estos dos problemas. </p><p><strong>Odatemics</strong> utiliza tecnologías basadas en IA de dos maneras principales:</p><ul><li><strong>Análisis de datos</strong>: Analiza grandes volúmenes de datos de una plataforma de mensajería popular (Telegram), proporcionando información sobre el discurso de odio y las tendencias de desinformación.</li><li><strong>Contrarrestar</strong>: Crea respuestas basadas en el diálogo al discurso de odio y información errónea, llamada \"contrapezo\". </li></ul><p>Visite el <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">Sitio web de Hatedemics</a> Para obtener más información sobre el proyecto.</p>"
+            },
+            {
+                "title": "Algunas definiciones",
+                "html": "<p><strong>Discurso de odio</strong>: Confiamos en la definición hecha por la Oficina de la ONU sobre prevención del genocidio y la responsabilidad de proteger (2019), que define el discurso de odio como <em>\"Cualquier tipo de comunicación en el habla, la escritura o el comportamiento, que ataca o usa un lenguaje peyorativo o discriminatorio con referencia a una persona o un grupo sobre la base de quiénes son\"</em>. </p><p><strong>Sabor</strong>: Esto se refiere al grado en que una declaración, reclamo o verificación de méritos posteriores a la verificación o verificación de hechos debido a su posible falsedad, relevancia pública o impacto dañino.  <strong>Nota:</strong> Las declaraciones que son fácilmente verificables por un usuario promedio (por ejemplo, \"la población de China es la mitad de la Italia\") no se consideran dignos de verificación, ya que no requieren una verificación de expertos.</p><p><strong>Desinformación</strong>: La desinformación es cuando la información falsa o engañosa se crea deliberadamente y se extiende a las personas enganchadas.  <em>tiene la intención de engañar</em> tú.  <em>\"índices de riesgo infodémico\"</em>. </p><p>¿Quieres saber más?  <em>Evaluar los riesgos de 'infodemias' en respuesta a las epidemias de Covid-19</em>. <strong>Naturaleza Comportamiento humano</strong>, 4 (12), 1285–1293.</p>"
+            },
+            {
+                "title": "¿Qué incluye la plataforma?",
+                "html": "<p><strong>Datos:</strong> La plataforma incluye datos estáticos: aproximadamente 10 millones de mensajes de telegrama recopilados de casi 1,000 chats públicos, que cubren 4 idiomas (inglés, italiano, español y polaco). </p><p><strong>Análisis:</strong> Las ideas que se muestran aquí se generan automáticamente utilizando tecnologías basadas en IA. </p><p><strong>Chatbot:</strong> La plataforma incluye un modelo de diálogo que simula la interacción con una desinformación de propagación de hater. </p>"
+            },
+            {
+                "title": "Advertencia de disparo",
+                "html": "<p><strong>Advertencia:</strong> Esta plataforma contiene ejemplos no observados que algunos usuarios pueden encontrar ofensivos.</p>"
+            }
+        ],
+        "prev": "Atrás",
+        "next": "Próximo",
+        "close": "Cerca",
+        "neverShow": "No te muestres de nuevo"
     },
     "educational": {
-      "eduCard1Title": "Declaración de derechos humanos",
-      "eduCard1Desc": "Descubra los principios centrales que protegen la dignidad humana.",
-      "eduCard1Button": "Explorar derechos",
-      "eduCardBiasTitle": "Sesgos y falacias",
-      "eduCardBiasDesc": "Explore las falacias lógicas y los sesgos cognitivos detrás del discurso de odio y la desinformación.",
-      "eduCardBiasButton": "Actividad de inicio",
-      "eduCard3Title": "Desacreditación",
-      "eduCard3Desc": "Aprenda a desinformación de desinformación de manera efectiva.",
-      "eduCard3Button": "Actividad de inicio",
-      "eduCard4Title": "Lectura lateral",
-      "eduCard4Desc": "Aprenda a leer y comprender el contenido en línea.",
-      "eduCard4Button": "Actividad de inicio",
-      "warningTitle": "Advertencia",
-      "warningText": "Estas actividades contienen ejemplos no observados que algunos lectores pueden encontrar ofensivo. ",
-      "warningButton": "Entiendo",
-      "warningCheckbox": "No vuelvas a mostrar este mensaje",
+        "eduCard1Title": "Declaración de derechos humanos",
+        "eduCard1Desc": "Descubra los principios centrales que protegen la dignidad humana.",
+        "eduCard1Button": "Explorar derechos",
+        "eduCardBiasTitle": "Sesgos y falacias",
+        "eduCardBiasDesc": "Explore las falacias lógicas y los sesgos cognitivos detrás del discurso de odio y la desinformación.",
+        "eduCardBiasButton": "Actividad de inicio",
+        "eduCard3Title": "Desacreditación",
+        "eduCard3Desc": "Aprenda a desinformación de desinformación de manera efectiva.",
+        "eduCard3Button": "Actividad de inicio",
+        "eduCard4Title": "Lectura lateral",
+        "eduCard4Desc": "Aprenda a leer y comprender el contenido en línea.",
+        "eduCard4Button": "Actividad de inicio",
+        "warningTitle": "Advertencia",
+        "warningText": "Estas actividades contienen ejemplos no observados que algunos lectores pueden encontrar ofensivo. ",
+        "warningButton": "Entiendo",
+        "warningCheckbox": "No vuelvas a mostrar este mensaje",
         "tasks": {
             "humanRights": {
                 "title": "Derechos Humanos",
@@ -367,11 +367,11 @@
             },
             "lateralreading": {
                 "title": "Lectura lateral",
-                "description": "<strong>Lectura lateral</strong> is a technique that allows us to quickly assess whether a web page's content comes from reliable sources and is based on quality data, references, and information.<br><br>In a research conducted by the <a href=\"https://cor.inquirygroup.org/research/lateral-reading-on-the-open-internet/\" target=\"_blank\" rel=\"noopener\">Stanford History Education Group</a>, educators discovered that it is an efficient way to assess the quality of an unfamiliar website.<br><br>This powerful strategy (<a href=\"https://cor.inquirygroup.org/curriculum/collections/teaching-lateral-reading/\" target=\"_blank\" rel=\"noopener\">used by fact-checkers</a>) to evaluate information online involves not reading a website ‘vertically’, as if it were a printed document, but instead using a method called ‘lateral reading’.<br><br>This means analysing the webpage by opening several tabs to answer key questions about the content:<br><ul><li>Who is the author of the content? Is it an expert source?</li><li>Can we find evidence? Is it based on facts and data?</li><li>Is it published by other reliable sources? What do they say about it?</li></ul><br>In addition to the above key questions, the lateral reading technique invites us to promote critical thinking and go deeper by analysing other aspects of the content, such as:<br><ul><li>Who funds or sponsors the site where the original piece was published?</li><li>What do other authoritative sources say about that site?</li><li>When you search for the topic of the original piece, are the top results from fact-checking organisations?</li><li>Have any questions been raised about other articles the author has written?</li><li>Does the information you find elsewhere contradict the original piece?</li><li>Are credible news outlets reporting on — or perhaps more importantly, not reporting on — what you are reading?</li></ul><br><strong>Lateral reading</strong> helps us better evaluate our sources of information — that is, to distinguish between truth and lies — and to consciously exercise our right to choose how we access information.",
-                "objectivesTitle": "Objectives",
-                "objectives": "<ul><li>Learning about transparency and source credibility factors</li><li>Developing competence in identifying trustworthy sources of information</li></ul>",
-                "startButton": "Start activity",
-                "task": "<strong>Let’s try!</strong> You have to evaluate the credibility of the proposed news page using the lateral reading method. Check all the screenshots and verify if you can find evidence that indicates this page is a reliable source. Match them with the corresponding type of information you can find, or click on <em>Not Found</em>.",
+                "description": "<strong>Lectura lateral</strong> es una técnica que nos permite evaluar rápidamente si el contenido de una página web proviene de fuentes confiables y está basado en datos, referencias e información de calidad.<br><br>En una investigación realizada por el <a href=\"https://cor.inquirygroup.org/research/lateral-reading-on-the-open-internet/\" target=\"_blank\" rel=\"noopener\">Stanford History Education Group</a>, los educadores descubrieron que es una manera eficiente de evaluar la calidad de un sitio web desconocido.<br><br>Esta poderosa estrategia (<a href=\"https://cor.inquirygroup.org/curriculum/collections/teaching-lateral-reading/\" target=\"_blank\" rel=\"noopener\">utilizada por los verificadores de datos</a>) para evaluar información en línea consiste en no leer un sitio web de forma ‘vertical’, como si fuera un documento impreso, sino emplear un método llamado ‘lectura lateral’.<br><br>Esto significa analizar la página web abriendo varias pestañas para responder preguntas clave sobre el contenido:<br><ul><li>¿Quién es el autor del contenido? ¿Es una fuente experta?</li><li>¿Podemos encontrar evidencia? ¿Está basada en hechos y datos?</li><li>¿Está publicado por otras fuentes confiables? ¿Qué dicen al respecto?</li></ul><br>Además de estas preguntas clave, la técnica de lectura lateral nos invita a fomentar el pensamiento crítico y profundizar analizando otros aspectos del contenido, como:<br><ul><li>¿Quién financia o patrocina el sitio donde se publicó el artículo original?</li><li>¿Qué dicen otras fuentes autorizadas sobre ese sitio?</li><li>Cuando buscas el tema del artículo original, ¿los primeros resultados provienen de organizaciones de verificación de datos?</li><li>¿Se han planteado dudas sobre otros artículos escritos por el autor?</li><li>¿La información que encuentras en otros lugares contradice el artículo original?</li><li>¿Medios de comunicación confiables están informando —o tal vez más importante, no están informando— sobre lo que estás leyendo?</li></ul><br><strong>La lectura lateral</strong> nos ayuda a evaluar mejor nuestras fuentes de información —es decir, a distinguir entre la verdad y la mentira— y a ejercer de manera consciente nuestro derecho a elegir cómo accedemos a la información.",
+                "objectivesTitle": "Objetivos",
+                "objectives": "<ul><li>Aprender sobre la transparencia y los factores de credibilidad de las fuentes</li><li>Desarrollar la competencia para identificar fuentes de información confiables</li></ul>",
+                "startButton": "Iniciar actividad",
+                "task": "<strong>¡Vamos a intentarlo!</strong> Debes evaluar la credibilidad de la página de noticias propuesta utilizando el método de lectura lateral. Revisa todas las capturas de pantalla y verifica si puedes encontrar evidencias que indiquen que esta página es una fuente confiable. Relaciónalas con el tipo de información correspondiente o haz clic en <em>No encontrado</em>.",
                 "sections": [
                     {
                         "intro": "<p>https://medlineplus.gov/spanish/</p>",
@@ -704,231 +704,232 @@
         }
     },
     "inspect": {
-      "title": "Descripción general del canal",
-      "subtitle": "Analizar los canales y los principales temas en la red de odio y desinformación"
+        "title": "Descripción general del canal",
+        "subtitle": "Analizar los canales y los principales temas en la red de odio y desinformación"
     },
     "channel": {
-      "title": "Exploración de red",
-      "subtitle": "<p>A continuación, puedes ver una red de canales de Telegram donde cada canal es un punto ('nodo'). Estos canales están conectados cuando Telegram recomienda automáticamente uno a otro, normalmente porque comparten muchos de los mismos usuarios.</p><p>Puedes explorar la red y la tabla para descubrir canales reales que podrían estar difundiendo desinformación o discursos de odio.</p><p>Ajusta el color y el tamaño de los canales, filtra y reordena sus características para encontrar los que más te interesen.</p>",
-      "infoTitle": "Información de canal"
+        "title": "Exploración de red",
+        "subtitle": "<p>A continuación, puedes ver una red de canales de Telegram donde cada canal es un punto ('nodo'). Estos canales están conectados cuando Telegram recomienda automáticamente uno a otro, normalmente porque comparten muchos de los mismos usuarios.</p><p>Puedes explorar la red y la tabla para descubrir canales reales que podrían estar difundiendo desinformación o discursos de odio.</p><p>Ajusta el color y el tamaño de los canales, filtra y reordena sus características para encontrar los que más te interesen.</p>",
+        "infoTitle": "Información de canal"
     },
     "conversation": {
-      "title": "Conversación",
-      "subtitle": "Explore las conversaciones y analice los mensajes en la red de odio y desinformación"
+        "title": "Conversación",
+        "subtitle": "Explore las conversaciones y analice los mensajes en la red de odio y desinformación"
     },
     "project": {
-      "noProject": "No hay proyectos disponibles",
-      "noData": "No hay datos disponibles"
+        "noProject": "No hay proyectos disponibles",
+        "noData": "No hay datos disponibles"
     },
     "projects": {
-      "title": "Proyectos",
-      "subtitle": "Elija el idioma en el que desea capacitar a sus habilidades para responder al contenido de odio y desinformación."
+        "title": "Proyectos",
+        "subtitle": "Elija el idioma en el que desea capacitar a sus habilidades para responder al contenido de odio y desinformación."
     },
     "tasks": {
-      "title": "Tareas",
-      "subtitle": "Seleccione el tema en el que desea centrarse para crear respuestas y argumentos efectivos contra la desinformación."
+        "title": "Tareas",
+        "subtitle": "Seleccione el tema en el que desea centrarse para crear respuestas y argumentos efectivos contra la desinformación."
     },
     "channelTable": {
-      "header": {
-        "title": "Red de telegrama: estadísticas de nodo",
-        "date": "Fecha",
-        "id": "IDENTIFICACIÓN",
-        "messages": "Número de mensajes",
-        "partecipants": "Número de usuarios",
-        "IRI": "Riesgo infodémico",
-        "CW": "Cheque digno",
-        "hs": "Discurso de odio",
-        "nInRecommendations": "En recomendaciones",
-        "nOutRecommendations": "Recomendaciones",
-        "expandable": "Expandible",
-        "label": "Etiqueta"
-      }
+        "header": {
+            "title": "Red de telegrama: estadísticas de nodo",
+            "date": "Fecha",
+            "id": "IDENTIFICACIÓN",
+            "messages": "Número de mensajes",
+            "partecipants": "Número de usuarios",
+            "IRI": "Riesgo infodémico",
+            "CW": "Cheque digno",
+            "hs": "Discurso de odio",
+            "nInRecommendations": "En recomendaciones",
+            "nOutRecommendations": "Recomendaciones",
+            "expandable": "Expandible",
+            "label": "Etiqueta"
+        }
     },
     "language": {
-      "en": "Inglés",
-      "it": "italiano",
-      "es": "Español",
-      "pl": "Polaco"
+        "en": "Inglés",
+        "it": "italiano",
+        "es": "Español",
+        "pl": "Polaco"
     },
     "graphInteraction": {
-      "legend": {
-        "title": "Leyenda",
-        "color": "Color",
-        "size": "Dimensión",
-        "low": "Bajo",
-        "medium": "Medio",
-        "high": "Alto",
-        "small": "Pequeño",
-        "large": "Grande",
-        "defaultColor": "Color predeterminado para todos los nodos",
-        "defaultSize": "Tamaño predeterminado para todos los nodos"
-      },
-      "resetView": "Vista de reinicio",
-      "color": {
-        "disable": "Desactivar el color",
-        "iri": "Riesgo infodémico",
-        "hs": "Discurso de odio",
-        "in": "En recomendaciones",
-        "out": "Recomendaciones",
-        "out_degree": "Atenuar ",
-        "in_degree": "En grados ",
-        "label": "Color"
-      },
-      "size": {
-        "disable": "Deshabilitar el tamaño",
-        "iri": "Riesgo infodémico",
-        "hs": "Discurso de odio",
-        "in": "En recomendaciones",
-        "out": "Recomendaciones",
-        "label": "Tamaño",
-        "out_degree": "Atenuar ",
-        "in_degree": "En grados ",
-        "n_out_recommended": "Recomendaciones",
-        "n_in_recommended": "En recomendaciones"
-      },
-      "tooltip": {
-        "label": "Etiqueta",
-        "message_count": "Número de mensajes",
-        "partecipants_count": "Número de usuarios",
-        "id": "ID de canal:",
-        "iri": "Riesgo infodémico:",
-        "hs": "Discurso de odio:",
-        "cw": "Check Worthy:",
-        "in": "En recomendaciones:",
-        "out": "Recomendaciones de salida:"
-      },
-      "fs": {
-        "exit": "Salida",
-        "go": "Pantalla completa"
-      }
+        "legend": {
+            "title": "Leyenda",
+            "color": "Color",
+            "size": "Dimensión",
+            "low": "Bajo",
+            "medium": "Medio",
+            "high": "Alto",
+            "small": "Pequeño",
+            "large": "Grande",
+            "defaultColor": "Color predeterminado para todos los nodos",
+            "defaultSize": "Tamaño predeterminado para todos los nodos"
+        },
+        "resetView": "Vista de reinicio",
+        "color": {
+            "disable": "Desactivar el color",
+            "iri": "Riesgo infodémico",
+            "hs": "Discurso de odio",
+            "in": "En recomendaciones",
+            "out": "Recomendaciones",
+            "out_degree": "Atenuar ",
+            "in_degree": "En grados ",
+            "label": "Color"
+        },
+        "size": {
+            "disable": "Deshabilitar el tamaño",
+            "iri": "Riesgo infodémico",
+            "hs": "Discurso de odio",
+            "in": "En recomendaciones",
+            "out": "Recomendaciones",
+            "label": "Tamaño",
+            "out_degree": "Atenuar ",
+            "in_degree": "En grados ",
+            "n_out_recommended": "Recomendaciones",
+            "n_in_recommended": "En recomendaciones"
+        },
+        "tooltip": {
+            "label": "Etiqueta",
+            "message_count": "Número de mensajes",
+            "partecipants_count": "Número de usuarios",
+            "id": "ID de canal:",
+            "iri": "Riesgo infodémico:",
+            "hs": "Discurso de odio:",
+            "cw": "Check Worthy:",
+            "in": "En recomendaciones:",
+            "out": "Recomendaciones de salida:"
+        },
+        "fs": {
+            "exit": "Salida",
+            "go": "Pantalla completa"
+        }
     },
     "topicsTable": {
-      "title": "Temas principales del canal",
-      "header": {
-        "title": "Título",
-        "count": "% de mensajes",
-        "hs": "% del discurso de odio",
-        "cw": "% de cheque digno"
-      }
+        "title": "Temas principales del canal",
+        "header": {
+            "title": "Título",
+            "count": "% de mensajes",
+            "hs": "% del discurso de odio",
+            "cw": "% de cheque digno"
+        }
     },
     "channelInfo": {
-      "about": "Acerca de:",
-      "channelId": "ID de canal:",
-      "title": "Título",
-      "description": "Descripción:",
-      "nMessages": "Mensajes totales:",
-      "nUsers": "Número de usuarios:",
-      "languages": "Idiomas:",
-      "iri": "Riesgo infodémico:",
-      "hateSpeech": "Riesgo de discurso de odio:",
-      "lastUpdate": "Última actualización:",
-      "mainTopics": "Temas principales:",
-      "messages": "Ir a la conversación",
-      "emptySelection": "No hay selección todavía. ",
-      "noData": "No hay datos disponibles",
-      "exploreChannel": "Explorar canal",
-      "topics": "Temas principales",
-      "channels": "Canales",
-      "chats": "Charlatanes",
-      "hs_percentage": "Discurso de odio:",
-      "cw_percentage": "Check Worthy:"
+        "about": "Acerca de:",
+        "channelId": "ID de canal:",
+        "title": "Título",
+        "description": "Descripción:",
+        "nMessages": "Mensajes totales:",
+        "nUsers": "Número de usuarios:",
+        "languages": "Idiomas:",
+        "iri": "Riesgo infodémico:",
+        "hateSpeech": "Riesgo de discurso de odio:",
+        "lastUpdate": "Última actualización:",
+        "mainTopics": "Temas principales:",
+        "messages": "Ir a la conversación",
+        "emptySelection": "No hay selección todavía. ",
+        "noData": "No hay datos disponibles",
+        "exploreChannel": "Explorar canal",
+        "topics": "Temas principales",
+        "channels": "Canales",
+        "chats": "Charlatanes",
+        "hs_percentage": "Discurso de odio:",
+        "cw_percentage": "Check Worthy:"
     },
     "message": {
-      "title": "Insights de chat",
-      "header": {
-        "id": "IDENTIFICACIÓN",
-        "date": "Fecha",
-        "message": "Mensaje",
-        "from": "De",
-        "mediaType": "Tipo",
-        "reactions": "Reacciones",
-        "nrViews": "Vistas",
-        "hateLabel": "Discurso de odio",
-        "checkLabel": "Cheque digno",
-        "topic": "Tema",
-        "target": "Objetivo",
-        "keywordsMatch": "Las palabras clave coinciden",
-        "counterspeech": "Iniciar conversación"
-      },
-      "dialog": {
-        "start": "Inicie una nueva conversación con Target = {Target}",
-        "jump": "Ir a la conversación",
-        "noProject": "No hay proyectos disponibles",
+        "title": "Insights de chat",
+        "header": {
+            "id": "IDENTIFICACIÓN",
+            "date": "Fecha",
+            "message": "Mensaje",
+            "from": "De",
+            "mediaType": "Tipo",
+            "reactions": "Reacciones",
+            "nrViews": "Vistas",
+            "hateLabel": "Discurso de odio",
+            "checkLabel": "Cheque digno",
+            "topic": "Tema",
+            "target": "Objetivo",
+            "keywordsMatch": "Las palabras clave coinciden",
+            "counterspeech": "Iniciar conversación"
+        },
+        "dialog": {
+            "start": "Inicie una nueva conversación con Target = {Target}",
+            "jump": "Ir a la conversación",
+            "noProject": "No hay proyectos disponibles",
+            "noData": "No hay datos disponibles",
+            "error": "Error mientras busca datos"
+        },
         "noData": "No hay datos disponibles",
-        "error": "Error mientras busca datos"
-      },
-      "noData": "No hay datos disponibles",
-      "noTarget": "No se identificó el objetivo",
-      "target": "Haga clic aquí para comenzar una nueva conversación",
-      "filter": {
-        "target": "Filtrar por objetivo",
-        "topic": "Filtrar por tema",
-        "hate": "Discurso de odio",
-        "checkworthy": "Cheque digno",
-        "all": "Todo",
-        "yes": "Sí",
-        "no": "No",
-        "DISABLED": "Desactivado",
-        "JEWS": "Judíos",
-        "MUSLIMS": "Musulmanes",
-        "LGBT+": "LGBT+",
-        "MIGRANTS": "Migrantes",
-        "OTHER": "Otro",
-        "POC": "Gente de color",
-        "ROMANI": "Memoria de sólo lectura",
-        "WOMEN": "Mujer"
-      },
-      "footer": {
-        "pagination": {
-          "range": "{PAGESTART}-{PAGESTOP} de {TotalItems} Mensajes recuperados"
+        "noTarget": "No se identificó el objetivo",
+        "target": "Haga clic aquí para comenzar una nueva conversación",
+        "filter": {
+            "target": "Filtrar por objetivo",
+            "topic": "Filtrar por tema",
+            "hate": "Discurso de odio",
+            "checkworthy": "Cheque digno",
+            "all": "Todo",
+            "yes": "Sí",
+            "no": "No",
+            "DISABLED": "Desactivado",
+            "JEWS": "Judíos",
+            "MUSLIMS": "Musulmanes",
+            "LGBT+": "LGBT+",
+            "MIGRANTS": "Migrantes",
+            "OTHER": "Otro",
+            "POC": "Gente de color",
+            "ROMANI": "Memoria de sólo lectura",
+            "WOMEN": "Mujer"
+        },
+        "footer": {
+            "pagination": {
+                "range": "{PAGESTART}-{PAGESTOP} de {TotalItems} Mensajes recuperados"
+            }
         }
-      }
     },
     "wordclouds": {
-      "hate": "Odio vs no odio",
-      "checkworthy": "Check Worthy vs Non Check Worthy",
-      "generic": "Genérico",
-      "select": "Seleccione Tipo de Cloud de Word",
-      "selectTopic": "Seleccione un tema",
-      "channel": "Canal",
-      "titles": {
-        "hate": "Discurso de odio",
-        "is_checkworthy": "Cheque digno",
-        "wordcloud": "Genérico",
-        "isnot_checkworthy": "Sin cheque digno",
-        "non_hate": "No odio"
-      }
+        "hate": "Odio vs no odio",
+        "checkworthy": "Check Worthy vs Non Check Worthy",
+        "generic": "Genérico",
+        "select": "Seleccione Tipo de Cloud de Word",
+        "selectTopic": "Seleccione un tema",
+        "channel": "Canal",
+        "titles": {
+            "hate": "Discurso de odio",
+            "is_checkworthy": "Cheque digno",
+            "wordcloud": "Genérico",
+            "isnot_checkworthy": "Sin cheque digno",
+            "non_hate": "No odio"
+        }
     },
     "error": {
-      "api": "Error mientras busca datos",
-      "noData": "No hay datos disponibles"
+        "api": "Error mientras busca datos",
+        "noData": "No hay datos disponibles"
     },
     "dialog": {
-      "dataSources": "Fuentes de datos",
-      "externalGround": "Terreno externo",
-      "documentName": "Nombre del documento",
-      "externalLink": "Enlace externo",
-      "text": "Texto",
-      "confirm": "Confirmar",
-      "dialogue": "Diálogo",
-      "groundTextSpans": "Vestidos de texto en el suelo",
-      "startEmpty": "Empiece a vacío",
-      "addDynamicTurn": "Agregar giro dinámico",
-      "addFromGround": "Agregar de tierra",
-      "tooltip": {
-        "startEmpty": "Presione aquí para crear un giro vacío.",
-        "addDynamicTurn": "Genere automáticamente una sugerencia para comenzar.<br>Todavía puede modificarlo después.",
-        "addRoundUp": "Agregar un giro vacío <em>antes</em> el seleccionado.",
-        "addRoundDown": "Agregar un giro vacío <em>después</em> el seleccionado.",
-        "magic": "Genera automáticamente una respuesta y selecciona el período de texto relacionado.<br><em>Todavía puedes editarlo.</em>",
-        "delete": "Elimine este giro permanentemente.",
-        "about": "Breve descripción del canal",
-        "channelId": "ID único anonimizado del canal",
-        "nMessages": "Cuántos mensajes hay en el canal",
-        "nUsers": "Cuántos usuarios hay en el canal",
-        "languages": "Idiomas utilizados en el canal",
-        "iri": "Índice de Riesgo de Infodemia del canal",
-        "hs_percentage": "Porcentaje de mensajes considerados discurso de odio",
-        "cw_percentage": "Porcentaje de mensajes considerados dignos de verificación"      }
+        "dataSources": "Fuentes de datos",
+        "externalGround": "Terreno externo",
+        "documentName": "Nombre del documento",
+        "externalLink": "Enlace externo",
+        "text": "Texto",
+        "confirm": "Confirmar",
+        "dialogue": "Diálogo",
+        "groundTextSpans": "Vestidos de texto en el suelo",
+        "startEmpty": "Empiece a vacío",
+        "addDynamicTurn": "Agregar giro dinámico",
+        "addFromGround": "Agregar de tierra",
+        "tooltip": {
+            "startEmpty": "Presione aquí para crear un giro vacío.",
+            "addDynamicTurn": "Genere automáticamente una sugerencia para comenzar.<br>Todavía puede modificarlo después.",
+            "addRoundUp": "Agregar un giro vacío <em>antes</em> el seleccionado.",
+            "addRoundDown": "Agregar un giro vacío <em>después</em> el seleccionado.",
+            "magic": "Genera automáticamente una respuesta y selecciona el período de texto relacionado.<br><em>Todavía puedes editarlo.</em>",
+            "delete": "Elimine este giro permanentemente.",
+            "about": "Breve descripción del canal",
+            "channelId": "ID único anonimizado del canal",
+            "nMessages": "Cuántos mensajes hay en el canal",
+            "nUsers": "Cuántos usuarios hay en el canal",
+            "languages": "Idiomas utilizados en el canal",
+            "iri": "Índice de Riesgo de Infodemia del canal",
+            "hs_percentage": "Porcentaje de mensajes considerados discurso de odio",
+            "cw_percentage": "Porcentaje de mensajes considerados dignos de verificación"
+        }
     }
-  }
+}

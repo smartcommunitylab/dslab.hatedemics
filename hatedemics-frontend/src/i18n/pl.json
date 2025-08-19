@@ -373,11 +373,12 @@
                     {
                         "intro": "https://szczepienia.pzh.gov.pl/",
                         "images": [
-                            "/img/lateralReading/pl/1.png",
-                            "/img/lateralReading/pl/2.png",
-                            "/img/lateralReading/pl/3.png",
-                            "/img/lateralReading/pl/4.png",
-                            "/img/lateralReading/pl/5.png"
+                            "/img/lateralReading/pl/szczepienia/1.png",
+                            "/img/lateralReading/pl/szczepienia/2.png",
+                            "/img/lateralReading/pl/szczepienia/3.png",
+                            "/img/lateralReading/pl/szczepienia/4.png",
+                            "/img/lateralReading/pl/szczepienia/5.png",
+                            "/img/lateralReading/pl/szczepienia/6.png"
                         ],
                         "questions": [
                             {
@@ -385,15 +386,15 @@
                                 "options": [
                                     {
                                         "text": "Screenshot 1",
-                                        "correct": true
+                                        "correct": false
                                     },
                                     {
                                         "text": "Screenshot 2",
-                                        "correct": true
+                                        "correct": false
                                     },
                                     {
                                         "text": "Screenshot 3",
-                                        "correct": true
+                                        "correct": false
                                     },
                                     {
                                         "text": "Screenshot 4",
@@ -402,6 +403,10 @@
                                     {
                                         "text": "Screenshot 5",
                                         "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 6",
+                                        "correct": true
                                     },
                                     
                                     {
@@ -423,7 +428,7 @@
                                     },
                                     {
                                         "text": "Screenshot 2",
-                                        "correct": false
+                                        "correct": true
                                     },
                                     {
                                         "text": "Screenshot 3",
@@ -431,11 +436,15 @@
                                     },
                                     {
                                         "text": "Screenshot 4",
-                                        "correct": true
+                                        "correct": false
                                     },
                                     {
                                         "text": "Screenshot 5",
-                                        "correct": true
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Screenshot 6",
+                                        "correct": false
                                     },
                                     {
                                         "text": "Not Found",
@@ -460,30 +469,18 @@
                                     },
                                     {
                                         "text": "Screenshot 3",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 4",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 5",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 6",
                                         "correct": true
                                     },
                                     {
-                                        "text": "Screenshot 7",
-                                        "correct": false
+                                        "text": "Screenshot 4",
+                                        "correct": true
                                     },
                                     {
-                                        "text": "Screenshot 8",
-                                        "correct": false
+                                        "text": "Screenshot 5",
+                                        "correct": true
                                     },
                                     {
-                                        "text": "Screenshot 9",
+                                        "text": "Screenshot 6",
                                         "correct": false
                                     },
                                     {
@@ -492,16 +489,15 @@
                                     }
                                 ],
                                 "feedback": {
-                                    "correct": "Poprawnie! Tak, treści publikowane na stronie szczepienia.pzh.gov.pl są cytowane i powoływane przez inne wiarygodne źródła i instytucje.\nNa informacje zawarte w tym portalu często powołują się rzetelne serwisy fact-checkingowe, takie jak Demagog, a także strony rządowe, np. Ministerstwo Zdrowia czy Narodowy Fundusz Zdrowia.\nŚwiadczy to o tym, że publikowane treści są uznawane za wiarygodne i merytoryczne, a sam portal jest traktowany jako autorytatywne źródło wiedzy w zakresie szczepień ochronnych i zdrowia publicznego.",
-                                    "incorrect": "Niepoprawnie! Tak, treści publikowane na stronie szczepienia.pzh.gov.pl są cytowane i powoływane przez inne wiarygodne źródła i instytucje.\nNa informacje zawarte w tym portalu często powołują się rzetelne serwisy fact-checkingowe, takie jak Demagog, a także strony rządowe, np. Ministerstwo Zdrowia czy Narodowy Fundusz Zdrowia.\nŚwiadczy to o tym, że publikowane treści są uznawane za wiarygodne i merytoryczne, a sam portal jest traktowany jako autorytatywne źródło wiedzy w zakresie szczepień ochronnych i zdrowia publicznego."
-                                }
+                                   "correct": "<strong>Poprawnie!</strong> Tak, na stronie <strong>szczepienia.pzh.gov.pl</strong> można znaleźć informacje dotyczące bezpieczeństwa i wiarygodności serwisu.<br><br>Dostępne są m.in.:<br><ul><li>Polityka prywatności, zawierająca informacje o przetwarzaniu danych osobowych,</li><li>Instrukcja użytkownika, ułatwiająca korzystanie z portalu,</li><li>Opis instytucji zarządzającej stroną – jest to Narodowy Instytut Zdrowia Publicznego PZH – Państwowy Instytut Badawczy,</li><li>Certyfikat SSL, zapewniający bezpieczne połączenie (strona używa protokołu HTTPS),</li><li>Deklaracja dostępności, potwierdzająca zgodność z wymogami WCAG,</li><li>Formularz kontaktowy, umożliwiający bezpośredni kontakt z administratorem lub zespołem redakcyjnym strony.</li></ul>",
+                                   "incorrect": "<strong>Niepoprawnie!</strong> Strona posiada ważny certyfikat SSL (co oznacza, że połączenie jest szyfrowane – HTTPS).<br><br>Poza tym brak jest jakichkolwiek dodatkowych informacji o bezpieczeństwie – nie ma polityki prywatności, informacji o administratorze, ani danych kontaktowych związanych z bezpieczeństwem.<br><br>Dostępny jest jedynie regulamin sklepu, który pozwala zakupić różne produkty, ale nie odnosi się on do treści informacyjnych publikowanych na stronie."}
                             },
                             {
                                 "question": "Czy treści są publikowane przez inne wiarygodne źródło?",
                                 "options": [
                                     {
                                         "text": "Screenshot 1",
-                                        "correct": false
+                                        "correct": true
                                     },
                                     {
                                         "text": "Screenshot 2",
@@ -522,18 +518,6 @@
                                     {
                                         "text": "Screenshot 6",
                                         "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 7",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 8",
-                                        "correct": true
-                                    },
-                                    {
-                                        "text": "Screenshot 9",
-                                        "correct": true
                                     },
                                     {
                                         "text": "Not Found",
@@ -553,16 +537,12 @@
                     {
                         "intro": "<p>https://globalna.info/</p>",
                         "images": [
-                            "/img/lateralReading/en/voice/0.png",
-                            "/img/lateralReading/en/voice/1.png",
-                            "/img/lateralReading/en/voice/2.png",
-                            "/img/lateralReading/en/voice/3.png",
-                            "/img/lateralReading/en/voice/4.png",
-                            "/img/lateralReading/en/voice/5.png"
+                            "/img/lateralReading/pl/global/0.png",
+                            "/img/lateralReading/pl/global/1.png"
                         ],
                         "questions": [
                             {
-                                "question": "Where can you find the author?",
+                                "question": "Gdzie możesz znaleźć informacje o autorze?",
                                 "options": [
                                     {
                                         "text": "Screenshot 1",
@@ -573,29 +553,17 @@
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 3",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 4",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 5",
-                                        "correct": false
-                                    },
-                                    {
                                         "text": "Not Found",
                                         "correct": true
                                     }
                                 ],
                                 "feedback": {
-                                    "correct": "Dobrze zrobione! We cannot find this information, just a vague mention about ‘our team of writers’ in the ‘about us section’. We can read that ‘The ThePeoplesVoice.tv website (the ‘Site’) is comprised of various web pages operated by ‘Fact Checked Limited.’ (screenshot 1) A search for ‘Fact Checked Limited’ does not provide information about the authors of the website. Instead, we can find debunks from fact-checking websites such as Africa check, Maldita and TheCanadianPress, which highlight false content published by Fact Checked Limited. If we check some of the ‘news articles’ published we can find that Baxter Dmitry is the author of several articles (screenshot 5). The search for Baxter Dmitry does not bring information about the alleged journalist (such as his biography, a LinkedIn profile or other contributions in different media). Instead, we can find some articles that show that Baxter Dmitry is a regular contributor of this ‘alternative reality web’ or that had previously been posing as an unrelated Latvian man using a stolen profile photo.",
-                                    "incorrect": "Nie do końca.We cannot find this information, just a vague mention about ‘our team of writers’ in the ‘about us section’. We can read that ‘The ThePeoplesVoice.tv website (the ‘Site’) is comprised of various web pages operated by ‘Fact Checked Limited.’ (screenshot 1) A search for ‘Fact Checked Limited’ does not provide information about the authors of the website. Instead, we can find debunks from fact-checking websites such as Africa check, Maldita and TheCanadianPress, which highlight false content published by Fact Checked Limited. If we check some of the ‘news articles’ published we can find that Baxter Dmitry is the author of several articles (screenshot 5). The search for Baxter Dmitry does not bring information about the alleged journalist (such as his biography, a LinkedIn profile or other contributions in different media). Instead, we can find some articles that show that Baxter Dmitry is a regular contributor of this ‘alternative reality web’ or that had previously been posing as an unrelated Latvian man using a stolen profile photo."
+                                    "correct": "Poprawnie! Na stronie nie ma podanych autorów ani zespołu redakcyjnego.<br><br>Wpisy są publikowane przez profil o nazwie „globalna świadomość”, który nie zawiera żadnej wizytówki, opisu ani danych identyfikujących autora.<br><br>Brakuje informacji o wykształceniu, kompetencjach czy doświadczeniu osób odpowiedzialnych za treści.",
+                                    "incorrect": "Niepoprawnie! Na stronie nie ma podanych autorów ani zespołu redakcyjnego.<br><br>Wpisy są publikowane przez profil o nazwie „globalna świadomość”, który nie zawiera żadnej wizytówki, opisu ani danych identyfikujących autora.<br><br>Brakuje informacji o wykształceniu, kompetencjach czy doświadczeniu osób odpowiedzialnych za treści."
                                 }
                             },
                             {
-                                "question": "Where can you find the website content and methodology?",
+                                "question": "Gdzie możesz znaleźć informacje o zawartości strony i metodologii?",
                                 "options": [
                                     {
                                         "text": "Screenshot 1",
@@ -606,29 +574,17 @@
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 3",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 4",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 5",
-                                        "correct": false
-                                    },
-                                    {
                                         "text": "Not Found",
                                         "correct": true
                                     }
                                 ],
                                 "feedback": {
-                                    "correct": "Poprawnie! The page does not publish its methodology. We can find that ‘The People’s Voice’ is a for-profit, independent news and entertainment website. “We generate revenue via advertising” ( screenshot 1) but it is not clear who finances the website.A disclaimer under the terms of use of ‘The People's Voice’ states that its content may not be accurate or reliable and may ‘include inaccuracies’ (screenshot 2). Obviously, any media site can make mistakes, but it is a little bit suspicious that a media site assumes that inaccuracies are a frequent occurrence. We cannot find information about sources, ‘alleged investigations’ or sponsors.",
-                                    "incorrect": "Niepoprawnie! The page does not publish its methodology. We can find that ‘The People’s Voice’ is a for-profit, independent news and entertainment website. “We generate revenue via advertising” ( screenshot 1) but it is not clear who finances the website. A disclaimer under the terms of use of ‘The People's Voice’ states that its content may not be accurate or reliable and may ‘include inaccuracies’ (screenshot 2). Obviously, any media site can make mistakes, but it is a little bit suspicious that a media site assumes that inaccuracies are a frequent occurrence. We cannot find information about sources, ‘alleged investigations’ or sponsors. "
+                                    "correct": "Poprawnie! Nie ma dostępnych informacji na temat zawartości strony ani stosowanej metodologii.<br><br>Strona nie zawiera opisu celu działania portalu, sposobu doboru treści, źródeł informacji ani metod ich weryfikacji.<br><br>Brakuje jakichkolwiek informacji, które mogłyby wskazywać na rzetelny proces redakcyjny czy naukowy.",
+                                    "incorrect": "Niepoprawnie! Nie ma dostępnych informacji na temat zawartości strony ani stosowanej metodologii.<br><br>Strona nie zawiera opisu celu działania portalu, sposobu doboru treści, źródeł informacji ani metod ich weryfikacji.<br><br>Brakuje jakichkolwiek informacji, które mogłyby wskazywać na rzetelny proces redakcyjny czy naukowy."
                                 }
                             },
                             {
-                                "question": "Can you find any information about the website security?",
+                                "question": "Czy możesz znaleźć informacje o bezpieczeństwie strony?",
                                 "options": [
                                     {
                                         "text": "Screenshot 1",
@@ -636,19 +592,7 @@
                                     },
                                     {
                                         "text": "Screenshot 2",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 3",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 4",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 5",
-                                        "correct": false
+                                        "correct": true
                                     },
                                     {
                                         "text": "Not Found",
@@ -656,12 +600,12 @@
                                     }
                                 ],
                                 "feedback": {
-                                    "correct": "Poprawnie! ",
-                                    "incorrect": "Niepoprawnie!"
+                                    "correct": "Poprawnie! Strona posiada ważny certyfikat SSL (co oznacza, że połączenie jest szyfrowane – HTTPS).<br><br>Poza tym brak jest jakichkolwiek dodatkowych informacji o bezpieczeństwie – nie ma polityki prywatności, informacji o administratorze, ani danych kontaktowych związanych z bezpieczeństwem.<br><br>Dostępny jest jedynie regulamin sklepu, który pozwala zakupić różne produkty, ale nie odnosi się on do treści informacyjnych publikowanych na stronie.",
+                                    "incorrect": "Niepoprawnie! Strona posiada ważny certyfikat SSL (co oznacza, że połączenie jest szyfrowane – HTTPS).<br><br>Poza tym brak jest jakichkolwiek dodatkowych informacji o bezpieczeństwie – nie ma polityki prywatności, informacji o administratorze, ani danych kontaktowych związanych z bezpieczeństwem.<br><br>Dostępny jest jedynie regulamin sklepu, który pozwala zakupić różne produkty, ale nie odnosi się on do treści informacyjnych publikowanych na stronie."
                                 }
                             },
                             {
-                                "question": "Is the content published by other reliable sources?",
+                                "question": "Czy treści są publikowane przez inne wiarygodne źródło?",
                                 "options": [
                                     {
                                         "text": "Screenshot 1",
@@ -672,30 +616,18 @@
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 3",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 4",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Screenshot 5",
-                                        "correct": false
-                                    },
-                                    {
                                         "text": "Not Found",
                                         "correct": true
                                     }
                                 ],
                                 "feedback": {
-                                    "correct": "Poprawnie! In Wikipedia we find that ‘The People's Voice (formerly known as ‘NewsPunch’ and ‘Your News Wire’) is an American fake news website based in Los Angeles (screenshot 3). Wikipedia's article shows a list of references, including fact-checkers’ articles and academic investigations that report ‘The People´s Voice’ has published several false stories, including The Pizzagate Conspiracy Theory and Anti-vaccination hoaxes (screenshot 4).",
-                                    "incorrect": "Niepoprawnie! In Wikipedia we find that ‘The People's Voice (formerly known as ‘NewsPunch’ and ‘Your News Wire’) is an American fake news website based in Los Angeles (screenshot 3). Wikipedia's article shows a list of references, including fact-checkers’ articles and academic investigations that report ‘The People´s Voice’ has published several false stories, including The Pizzagate Conspiracy Theory and Anti-vaccination hoaxes (screenshot 4)."
+                                    "correct": "Nie, treści publikowane na stronie globalna.info nie są potwierdzane przez inne wiarygodne źródła. Wręcz przeciwnie, organizacje fact-checkingowe jak Stowarzyszenie Demagog, AFP Sprawdzam czy fakenews.pl wskazują, że strona publikuje liczne fałszywe informacje.",
+                                    "incorrect": "Nie, treści publikowane na stronie globalna.info nie są potwierdzane przez inne wiarygodne źródła. Wręcz przeciwnie, organizacje fact-checkingowe jak Stowarzyszenie Demagog, AFP Sprawdzam czy fakenews.pl wskazują, że strona publikuje liczne fałszywe informacje."
                                 }
                             }
                         ],
                         "conclusionTitle": "Wniosek",
-                        "conclusion": "After applying the Lateral reading method, we found that ‘The People's Voice’ is not a reliable source. It has the appearance of a media website and publishes content with a ‘Fact Checked stamped’, but in fact, the website publishes misinformation that is shared as real."
+                        "conclusion": "Strona <strong>globalna.info</strong> jest niewiarygodnym źródłem informacji i nie warto jej ufać.<br><br>Na stronie nie ma podanych autorów ani zespołu redakcyjnego — wpisy są publikowane przez anonimowy profil „globalna świadomość”, który nie zawiera żadnych danych identyfikujących autorów ani informacji o ich wykształceniu czy kompetencjach.<br><br>Brakuje jakichkolwiek informacji dotyczących zawartości strony, metodologii, celu działania czy sposobu doboru i weryfikacji treści. Nie ma też żadnych dowodów na rzetelność czy naukowe podejście do prezentowanych informacji.<br><br>Choć strona posiada certyfikat SSL, nie ma innych danych dotyczących bezpieczeństwa, takich jak polityka prywatności czy informacje o administratorze. Dostępny jest jedynie regulamin sklepu z ofertą produktów, który nie jest powiązany z merytoryczną zawartością portalu.<br><br>Treści publikowane na tej stronie nie są potwierdzane przez żadne wiarygodne źródła. Wręcz przeciwnie — organizacje fact-checkingowe, takie jak Stowarzyszenie Demagog, AFP Sprawdzam oraz fakenews.pl, wielokrotnie wskazują, że <strong>globalna.info</strong> rozpowszechnia liczne fałszywe informacje.<br><br>Na stronie nie ma również żadnych dowodów opartych na faktach czy danych naukowych — brakuje podanych źródeł, a informacje nie bazują na wiarygodnych badaniach czy instytucjach naukowych.<br><br>Podsumowując, <strong>globalna.info</strong> nie spełnia podstawowych kryteriów wiarygodności i rzetelności, dlatego nie powinna być traktowana jako źródło wartościowych czy sprawdzonych informacji."
                     }
                 ]
             }
