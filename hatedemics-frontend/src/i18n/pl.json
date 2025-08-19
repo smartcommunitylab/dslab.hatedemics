@@ -1,179 +1,179 @@
 {
     "login": {
-      "success": "Zaloguj się skutecznie",
-      "error": "Błąd podczas logowania",
-      "button": "Login"
+        "success": "Zaloguj się skutecznie",
+        "error": "Błąd podczas logowania",
+        "button": "Login"
     },
     "common": {
-      "close": "Zamknąć",
-      "ok": "OK"
+        "close": "Zamknąć",
+        "ok": "OK"
     },
     "menu": {
-      "home": "Dom",
-      "educational": "Edukacyjny",
-      "explore": "Badać",
-      "network": "Sieć",
-      "channel": "Kanał",
-      "conversation": "Rozmowa",
-      "quickGuide": "Szybki przewodnik",
-      "counterspeech": "Mowa kontraktu",
-      "projects": "Projektowanie",
-      "credits": "Kredyty",
-      "logout": "Logout"
+        "home": "Dom",
+        "educational": "Edukacyjny",
+        "explore": "Badać",
+        "network": "Sieć",
+        "channel": "Kanał",
+        "conversation": "Rozmowa",
+        "quickGuide": "Szybki przewodnik",
+        "counterspeech": "Mowa kontraktu",
+        "projects": "Projektowanie",
+        "credits": "Kredyty",
+        "logout": "Logout"
     },
     "counterspeechGuide": {
-      "guideTitle": "Szybki przewodnik",
-      "guideItems": {
-        "counterspeech": {
-          "title": "Mowa kontraktu",
-          "description": "<p><strong>Mowa kontraktu</strong> jest definiowany jako wszystkie działania komunikatywne mające na celu obalenie mowy nienawiści za pomocą przekonujących powodów oraz prawdziwych i związanych z nimi argumentów (Schieb i Preuss, 2016).</p>"
-        },
-        "dataSources": {
-          "title": "Źródła danych",
-          "description": "<p>Zawiera artykuł sprawdzający fakty z certyfikowanego wydawcy (sygnatariusz <a href=\"https://ifcncodeofprinciples.poynter.org/\" target=\"_blank\">IFCN Kodeks zasad</a>).</p>"
-        },
-        "dialogue": {
-          "title": "Dialog",
-          "description": "<p>Stwórz dialog, który symuluje interakcję między kimś, kto rozpowszechnia nienawiść/dezinformację a operatorem odpowiadającym argumentami opartymi na faktach.</p>"
-        },
-        "groundText": {
-          "title": "Tekst podstawowy",
-          "description": "<p>Możesz dodać części artykułu sprawdzającego fakty, które obsługują odpowiedź operatora.</p><p>Tekst podstawowy jest <em>Automatycznie dodane</em> Po generowaniu zakrętu.  <strong>Ręcznie podkreśl</strong> Część artykułu i kliknij przycisk „Link”.</p>"
-        },
-        "newTurn": {
-          "title": "Nowy zakręt",
-          "description": "<p>Możesz dodać nowy zwrot na różne sposoby:</p><ul><li>Dodaj pusty obrót za pomocą przycisków „+”.</li><li>Automatycznie generuj zwrot za pomocą wybranej części artykułu.</li><li>Wybierz część jako tekst gruntowy, a następnie kliknij „Generuj z podłoża”.</li></ul><p><strong>Uwaga:</strong> Nawet automatycznie wygenerowane zakręty i tekst uziemienia zawsze można edytować.</p>"
+        "guideTitle": "Szybki przewodnik",
+        "guideItems": {
+            "counterspeech": {
+                "title": "Mowa kontraktu",
+                "description": "<p><strong>Mowa kontraktu</strong> jest definiowany jako wszystkie działania komunikatywne mające na celu obalenie mowy nienawiści za pomocą przekonujących powodów oraz prawdziwych i związanych z nimi argumentów (Schieb i Preuss, 2016).</p>"
+            },
+            "dataSources": {
+                "title": "Źródła danych",
+                "description": "<p>Zawiera artykuł sprawdzający fakty z certyfikowanego wydawcy (sygnatariusz <a href=\"https://ifcncodeofprinciples.poynter.org/\" target=\"_blank\">IFCN Kodeks zasad</a>).</p>"
+            },
+            "dialogue": {
+                "title": "Dialog",
+                "description": "<p>Stwórz dialog, który symuluje interakcję między kimś, kto rozpowszechnia nienawiść/dezinformację a operatorem odpowiadającym argumentami opartymi na faktach.</p>"
+            },
+            "groundText": {
+                "title": "Tekst podstawowy",
+                "description": "<p>Możesz dodać części artykułu sprawdzającego fakty, które obsługują odpowiedź operatora.</p><p>Tekst podstawowy jest <em>Automatycznie dodane</em> Po generowaniu zakrętu.  <strong>Ręcznie podkreśl</strong> Część artykułu i kliknij przycisk „Link”.</p>"
+            },
+            "newTurn": {
+                "title": "Nowy zakręt",
+                "description": "<p>Możesz dodać nowy zwrot na różne sposoby:</p><ul><li>Dodaj pusty obrót za pomocą przycisków „+”.</li><li>Automatycznie generuj zwrot za pomocą wybranej części artykułu.</li><li>Wybierz część jako tekst gruntowy, a następnie kliknij „Generuj z podłoża”.</li></ul><p><strong>Uwaga:</strong> Nawet automatycznie wygenerowane zakręty i tekst uziemienia zawsze można edytować.</p>"
+            }
         }
-      }
     },
     "home": {
-      "title": "Walka z nienawiścią i dezinformacją online",
-      "description": "Hatedemics to platforma, która wykorzystuje sztuczną inteligencję do analizy treści online, poprawy krytycznego myślenia i szkolenia odpowiedzi na mowę nienawiści.",
-      "network": "Poznaj sieć",
-      "networkDescription": "Interaktywna mapa obserwowania połączeń między kanałami, treścią i dynamiką związaną z nienawiścią i dezinformacją online. ",
-      "networkButton": "Przejdź do sieci",
-      "counterspeech": "Pisanie mowy",
-      "counterspeechDescription": "Trenuj swoją zdolność do reagowania na treść nienawiści i dezinformacji dzięki ukierunkowanym ćwiczeniom pisania. ",
-      "counterspeechButton": "Zacznij pisać",
-      "educational": "Edukacyjny",
-      "educationalDescription": "Przeglądaj zasoby i materiały edukacyjne, aby zrozumieć i przeciwdziałać nienawiści online.",
-      "educationalButton": "Przejdź do sekcji edukacyjnej",
-      "guideDescription": "Co należy wiedzieć przed użyciem platformy.",
-      "guideButton": "Otwarty przewodnik",
-      "guideTitle": "Szybki przewodnik",
-      "guideItems": {
-        "network": {
-          "title": "Sieć",
-          "description": "Sieć pokazuje połączenia między zebranymi kanałami telegramów. "
-        },
-        "inRec": {
-          "title": "W zaleceń",
-          "description": "Ile kanałów jest zalecany przez inne kanały."
-        },
-        "outRec": {
-          "title": "Zalecenia",
-          "description": "Ile kanał zaleca inne kanały."
-        },
-        "risk": {
-          "title": "Ryzyko infodemiczne",
-          "description": "Ile kanał jest niezawodny. "
-        },
-        "check": {
-          "title": "Sprawdź godność",
-          "description": "Wskazuje, czy wiadomość można sprawdzić fakty. "
+        "title": "Walka z nienawiścią i dezinformacją online",
+        "description": "Hatedemics to platforma, która wykorzystuje sztuczną inteligencję do analizy treści online, poprawy krytycznego myślenia i szkolenia odpowiedzi na mowę nienawiści.",
+        "network": "Poznaj sieć",
+        "networkDescription": "Interaktywna mapa obserwowania połączeń między kanałami, treścią i dynamiką związaną z nienawiścią i dezinformacją online. ",
+        "networkButton": "Przejdź do sieci",
+        "counterspeech": "Pisanie mowy",
+        "counterspeechDescription": "Trenuj swoją zdolność do reagowania na treść nienawiści i dezinformacji dzięki ukierunkowanym ćwiczeniom pisania. ",
+        "counterspeechButton": "Zacznij pisać",
+        "educational": "Edukacyjny",
+        "educationalDescription": "Przeglądaj zasoby i materiały edukacyjne, aby zrozumieć i przeciwdziałać nienawiści online.",
+        "educationalButton": "Przejdź do sekcji edukacyjnej",
+        "guideDescription": "Co należy wiedzieć przed użyciem platformy.",
+        "guideButton": "Otwarty przewodnik",
+        "guideTitle": "Szybki przewodnik",
+        "guideItems": {
+            "network": {
+                "title": "Sieć",
+                "description": "Sieć pokazuje połączenia między zebranymi kanałami telegramów. "
+            },
+            "inRec": {
+                "title": "W zaleceń",
+                "description": "Ile kanałów jest zalecany przez inne kanały."
+            },
+            "outRec": {
+                "title": "Zalecenia",
+                "description": "Ile kanał zaleca inne kanały."
+            },
+            "risk": {
+                "title": "Ryzyko infodemiczne",
+                "description": "Ile kanał jest niezawodny. "
+            },
+            "check": {
+                "title": "Sprawdź godność",
+                "description": "Wskazuje, czy wiadomość można sprawdzić fakty. "
+            }
         }
-      }
     },
     "networkGuide": {
-      "guideTitle": "Przewodnik po sieci kanałów telegram",
-      "guideItems": {
-        "network": {
-          "title": "Sieć",
-          "description": "Ta sieć wyświetla kanały telegramowe jako punkty, a linie pokazują, jak są połączone. "
-        },
-        "expanded": {
-          "title": "Rozszerzony",
-          "description": "Kanał to <strong>rozszerzony</strong> Jeśli zebraliśmy wszystkie jego wiadomości czatowe."
-        },
-        "inOutRecommendations": {
-          "title": "Zalecenia w i out",
-          "description": "<strong>W zaleceń</strong> Czy łączna liczba razy poleca kanał - im więcej jest zalecany, tym bardziej popularny jest!<br><strong>Zalecenia</strong> to liczba kanałów, którą zaleca - wyższa liczba oznacza, że wskazuje na wiele innych treści."
-        },
-        "iri": {
-          "title": "Infodemiczny wskaźnik ryzyka (IRI)",
-          "description": "IRI mierzy, jak niewiarygodny jest kanał, od 0 (całkowicie niezawodny) do 1 (w pełni niewiarygodne). <br>Aby uzyskać więcej informacji: <a href='https://www.nature.com/articles/s41562-020-00994-6' target='_blank'>Gallotti i in., 2020 (Nature Human Behaviour)</a>."
-        },
-        "diri": {
-          "title": "Dynamiczny wskaźnik ryzyka infodemicznego (DIRI)",
-          "description": "Diri analizuje, jak aktywnie użytkownicy angażują się w zawodne treści. "
-        },
-        "sdiri": {
-          "title": "Półdynamiczny wskaźnik ryzyka infodemicznego (SDIRI)",
-          "description": "SDIRI śledzi światło i szybkie interakcje z niewiarygodnymi treściami, takimi jak reakcje (emoji, polubienia). "
-        },
-        "unrel": {
-          "title": "Indeks niewiarygodności (UNLE)",
-          "description": "Ten indeks pokazuje, jak bardzo zawodna treść udostępnia kanał w porównaniu z wszystkimi swoimi wiadomościami łączącymi z dowolnym źródłem. "
-        },
-        "domains": {
-          "title": "Znane i nieznane domeny",
-          "description": "<strong>Znane domeny</strong> to strony internetowe, dla których mamy dane niezawodności. <strong>Nieznane domeny</strong> Czy te bez takich danych. "
-        },
-        "centrality": {
-          "title": "Miary centralne",
-          "description": "Środki te pokazują, jak ważny jest kanał w sieci:<br><strong>Centralność stopnia:</strong> Liczba bezpośrednich linków (popularność).<br><strong>Międzypaństwo:</strong> Działa jak pomost między innymi kanałami.<br><strong>Bliskość:</strong> Jak szybko może dotrzeć do innych.<br><strong>Wektor własny:</strong> Jak jest to połączone z innymi wpływowymi kanałami.<br>Zobacz także: <em>Pósfai i Barabási, 2016 - Network Science</em>."
-        },
-        "communities": {
-          "title": "Społeczności",
-          "description": "Te metody społeczności pomagają zidentyfikować naturalne <strong>grupy</strong> w sieciach, jak w sieci społecznościowej:<br><br><strong>Społeczność Louvain:</strong> Szuka grup, w których w grupie jest wiele połączeń. <em>(Jak grupa przyjaciół, w której wszyscy bardzo się znają!)</em><br><strong>Społeczność Infomap:</strong> Znajduje grupy na podstawie tego, jak łatwo informacje (lub wiadomości) mogą przemieszczać się w tej grupie. <em>(Jak klub, w którym wiadomości rozprzestrzeniają się bardzo szybko wśród członków!)</em><br><br>Aby uzyskać więcej informacji, możesz sprawdzić te artykuły:<br><a href='https://hal.science/hal-01231784' target='_blank'>Dugué, N., i Perez, A. (2015). </a><br><a href='https://www.pnas.org/doi/epdf/10.1073/pnas.0706851105' target='_blank'>Rosvall, M., i Bergstrom, C. T. (2008). </a>"
+        "guideTitle": "Przewodnik po sieci kanałów telegram",
+        "guideItems": {
+            "network": {
+                "title": "Sieć",
+                "description": "Ta sieć wyświetla kanały telegramowe jako punkty, a linie pokazują, jak są połączone. "
+            },
+            "expanded": {
+                "title": "Rozszerzony",
+                "description": "Kanał to <strong>rozszerzony</strong> Jeśli zebraliśmy wszystkie jego wiadomości czatowe."
+            },
+            "inOutRecommendations": {
+                "title": "Zalecenia w i out",
+                "description": "<strong>W zaleceń</strong> Czy łączna liczba razy poleca kanał - im więcej jest zalecany, tym bardziej popularny jest!<br><strong>Zalecenia</strong> to liczba kanałów, którą zaleca - wyższa liczba oznacza, że wskazuje na wiele innych treści."
+            },
+            "iri": {
+                "title": "Infodemiczny wskaźnik ryzyka (IRI)",
+                "description": "IRI mierzy, jak niewiarygodny jest kanał, od 0 (całkowicie niezawodny) do 1 (w pełni niewiarygodne). <br>Aby uzyskać więcej informacji: <a href='https://www.nature.com/articles/s41562-020-00994-6' target='_blank'>Gallotti i in., 2020 (Nature Human Behaviour)</a>."
+            },
+            "diri": {
+                "title": "Dynamiczny wskaźnik ryzyka infodemicznego (DIRI)",
+                "description": "Diri analizuje, jak aktywnie użytkownicy angażują się w zawodne treści. "
+            },
+            "sdiri": {
+                "title": "Półdynamiczny wskaźnik ryzyka infodemicznego (SDIRI)",
+                "description": "SDIRI śledzi światło i szybkie interakcje z niewiarygodnymi treściami, takimi jak reakcje (emoji, polubienia). "
+            },
+            "unrel": {
+                "title": "Indeks niewiarygodności (UNLE)",
+                "description": "Ten indeks pokazuje, jak bardzo zawodna treść udostępnia kanał w porównaniu z wszystkimi swoimi wiadomościami łączącymi z dowolnym źródłem. "
+            },
+            "domains": {
+                "title": "Znane i nieznane domeny",
+                "description": "<strong>Znane domeny</strong> to strony internetowe, dla których mamy dane niezawodności. <strong>Nieznane domeny</strong> Czy te bez takich danych. "
+            },
+            "centrality": {
+                "title": "Miary centralne",
+                "description": "Środki te pokazują, jak ważny jest kanał w sieci:<br><strong>Centralność stopnia:</strong> Liczba bezpośrednich linków (popularność).<br><strong>Międzypaństwo:</strong> Działa jak pomost między innymi kanałami.<br><strong>Bliskość:</strong> Jak szybko może dotrzeć do innych.<br><strong>Wektor własny:</strong> Jak jest to połączone z innymi wpływowymi kanałami.<br>Zobacz także: <em>Pósfai i Barabási, 2016 - Network Science</em>."
+            },
+            "communities": {
+                "title": "Społeczności",
+                "description": "Te metody społeczności pomagają zidentyfikować naturalne <strong>grupy</strong> w sieciach, jak w sieci społecznościowej:<br><br><strong>Społeczność Louvain:</strong> Szuka grup, w których w grupie jest wiele połączeń. <em>(Jak grupa przyjaciół, w której wszyscy bardzo się znają!)</em><br><strong>Społeczność Infomap:</strong> Znajduje grupy na podstawie tego, jak łatwo informacje (lub wiadomości) mogą przemieszczać się w tej grupie. <em>(Jak klub, w którym wiadomości rozprzestrzeniają się bardzo szybko wśród członków!)</em><br><br>Aby uzyskać więcej informacji, możesz sprawdzić te artykuły:<br><a href='https://hal.science/hal-01231784' target='_blank'>Dugué, N., i Perez, A. (2015). </a><br><a href='https://www.pnas.org/doi/epdf/10.1073/pnas.0706851105' target='_blank'>Rosvall, M., i Bergstrom, C. T. (2008). </a>"
+            }
         }
-      }
     },
     "welcome": {
-      "title": "Witamy w nienawidzących"
+        "title": "Witamy w nienawidzących"
     },
     "onboarding": {
-      "steps": [
-        {
-          "title": "Co to jest nienawidzone",
-          "html": "<p><strong>Nienawidzone</strong> to europejski projekt koncentrujący się na podnoszeniu świadomości na temat mowy nienawiści, dezinformacji i ich przecinania tych dwóch problemów. </p><p><strong>Nienawidzone</strong> Wykorzystuje technologie oparte na sztucznej inteligencji na dwa główne sposoby:</p><ul><li><strong>Analiza danych</strong>: Analizuje duże ilości danych z popularnej platformy przesyłania wiadomości (telegram), zapewniając wgląd w mowę nienawiści i trendów dezinformacyjnych.</li><li><strong>Mowa kontraktu</strong>: Tworzy reakcje oparte na dialogach na mowę nienawiści i dezinformację, zwaną „kontraktową mową”. </li></ul><p>Odwiedź <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">Witryna nienawidzona</a> Aby dowiedzieć się więcej o projekcie.</p>"
-        },
-        {
-          "title": "Niektóre definicje",
-          "html": "<p><strong>Nienawiść mowa</strong>: Polegamy na definicji urzędu ONZ na temat zapobiegania ludobójstwu i odpowiedzialności za ochronę (2019), która definiuje mowę nienawiści jako <em>„Każda komunikacja w mowie, pisaniu lub zachowaniu, która atakuje lub używa języka pejoratywnego lub dyskryminującego w odniesieniu do osoby lub grupy na podstawie tego, kim oni są”</em>. </p><p><strong>Wartość kontroli</strong>: Odnosi się to do stopnia, w jakim oświadczenie, roszczenie lub posterunek weryfikacji lub sprawdzanie faktów ze względu na jego potencjalną fałsz, znaczenie publiczne lub szkodliwy wpływ.  <strong>Notatka:</strong> Oświadczenia, które można łatwo weryfikować przez przeciętnego użytkownika (np. „Populacja Chin jest w połowie Włoch”) nie są uważane za warte kontroli, ponieważ nie wymagają weryfikacji eksperckiej.</p><p><strong>Dezinformacja</strong>: Dezinformacja ma miejsce, gdy fałszywe lub wprowadzające w błąd informacje są celowo tworzone i rozpowszechniane na oszukanie ludzi.  <em>zamierza oszukiwać</em> Ty.  <em>„Infodemiczne wskaźniki ryzyka”</em>. </p><p>Chcesz wiedzieć więcej?  <em>Ocena ryzyka „Infodemics” w odpowiedzi na epidemie Covid-19</em>. <strong>Natury ludzkie zachowanie</strong>, 4 (12), 1285–1293.</p>"
-        },
-        {
-          "title": "Co obejmuje platforma?",
-          "html": "<p><strong>Dane:</strong> Platforma zawiera dane statyczne: około 10 milionów wiadomości telegramowych zebranych z prawie 1000 czatów publicznych, obejmujących 4 języki (angielski, włoski, hiszpański i polski). </p><p><strong>Ćwiczenie:</strong> Pokazane tutaj spostrzeżenia są generowane automatycznie przy użyciu technologii opartych na AI. </p><p><strong>Chatbot:</strong> Platforma zawiera model dialogu, który symuluje interakcję z rozkładającym hejterem dezinformacją. </p>"
-        },
-        {
-          "title": "Wyzwalacz ostrzeżenie",
-          "html": "<p><strong>Ostrzeżenie:</strong> Ta platforma zawiera niezamieszczone przykłady, które niektórzy użytkownicy mogą uznać za obraźliwe.</p>"
-        }
-      ],
-      "prev": "Z powrotem",
-      "next": "Następny",
-      "close": "Zamknąć",
-      "neverShow": "Nie pokazuj ponownie"
+        "steps": [
+            {
+                "title": "Co to jest nienawidzone",
+                "html": "<p><strong>Nienawidzone</strong> to europejski projekt koncentrujący się na podnoszeniu świadomości na temat mowy nienawiści, dezinformacji i ich przecinania tych dwóch problemów. </p><p><strong>Nienawidzone</strong> Wykorzystuje technologie oparte na sztucznej inteligencji na dwa główne sposoby:</p><ul><li><strong>Analiza danych</strong>: Analizuje duże ilości danych z popularnej platformy przesyłania wiadomości (telegram), zapewniając wgląd w mowę nienawiści i trendów dezinformacyjnych.</li><li><strong>Mowa kontraktu</strong>: Tworzy reakcje oparte na dialogach na mowę nienawiści i dezinformację, zwaną „kontraktową mową”. </li></ul><p>Odwiedź <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">Witryna nienawidzona</a> Aby dowiedzieć się więcej o projekcie.</p>"
+            },
+            {
+                "title": "Niektóre definicje",
+                "html": "<p><strong>Nienawiść mowa</strong>: Polegamy na definicji urzędu ONZ na temat zapobiegania ludobójstwu i odpowiedzialności za ochronę (2019), która definiuje mowę nienawiści jako <em>„Każda komunikacja w mowie, pisaniu lub zachowaniu, która atakuje lub używa języka pejoratywnego lub dyskryminującego w odniesieniu do osoby lub grupy na podstawie tego, kim oni są”</em>. </p><p><strong>Wartość kontroli</strong>: Odnosi się to do stopnia, w jakim oświadczenie, roszczenie lub posterunek weryfikacji lub sprawdzanie faktów ze względu na jego potencjalną fałsz, znaczenie publiczne lub szkodliwy wpływ.  <strong>Notatka:</strong> Oświadczenia, które można łatwo weryfikować przez przeciętnego użytkownika (np. „Populacja Chin jest w połowie Włoch”) nie są uważane za warte kontroli, ponieważ nie wymagają weryfikacji eksperckiej.</p><p><strong>Dezinformacja</strong>: Dezinformacja ma miejsce, gdy fałszywe lub wprowadzające w błąd informacje są celowo tworzone i rozpowszechniane na oszukanie ludzi.  <em>zamierza oszukiwać</em> Ty.  <em>„Infodemiczne wskaźniki ryzyka”</em>. </p><p>Chcesz wiedzieć więcej?  <em>Ocena ryzyka „Infodemics” w odpowiedzi na epidemie Covid-19</em>. <strong>Natury ludzkie zachowanie</strong>, 4 (12), 1285–1293.</p>"
+            },
+            {
+                "title": "Co obejmuje platforma?",
+                "html": "<p><strong>Dane:</strong> Platforma zawiera dane statyczne: około 10 milionów wiadomości telegramowych zebranych z prawie 1000 czatów publicznych, obejmujących 4 języki (angielski, włoski, hiszpański i polski). </p><p><strong>Ćwiczenie:</strong> Pokazane tutaj spostrzeżenia są generowane automatycznie przy użyciu technologii opartych na AI. </p><p><strong>Chatbot:</strong> Platforma zawiera model dialogu, który symuluje interakcję z rozkładającym hejterem dezinformacją. </p>"
+            },
+            {
+                "title": "Wyzwalacz ostrzeżenie",
+                "html": "<p><strong>Ostrzeżenie:</strong> Ta platforma zawiera niezamieszczone przykłady, które niektórzy użytkownicy mogą uznać za obraźliwe.</p>"
+            }
+        ],
+        "prev": "Z powrotem",
+        "next": "Następny",
+        "close": "Zamknąć",
+        "neverShow": "Nie pokazuj ponownie"
     },
     "educational": {
-      "eduCard1Title": "Deklaracja praw człowieka",
-      "eduCard1Desc": "Odkryj podstawowe zasady chroniące ludzką godność.",
-      "eduCard1Button": "Odkrywać prawa",
-      "eduCardBiasTitle": "Uprzedzenia i błędy",
-      "eduCardBiasDesc": "Przeglądaj logiczne błędy i uprzedzenia poznawcze stojące za mową nienawiści i dezinformacją.",
-      "eduCardBiasButton": "Rozpocznij aktywność",
-      "eduCard3Title": "Obalanie",
-      "eduCard3Desc": "Dowiedz się, jak skutecznie obalić dezinformację.",
-      "eduCard3Button": "Rozpocznij aktywność",
-      "eduCard4Title": "Czytanie boczne",
-      "eduCard4Desc": "Dowiedz się, jak czytać i rozumieć treści online.",
-      "eduCard4Button": "Rozpocznij aktywność",
-      "warningTitle": "Ostrzeżenie",
-      "warningText": "Zajęcia te zawierają niezakłonne przykłady, które niektórzy czytelnicy mogą uznać za obraźliwe. ",
-      "warningButton": "Rozumiem",
-      "warningCheckbox": "Nie pokazuj ponownie tej wiadomości",
-      "tasks": {
+        "eduCard1Title": "Deklaracja praw człowieka",
+        "eduCard1Desc": "Odkryj podstawowe zasady chroniące ludzką godność.",
+        "eduCard1Button": "Odkrywać prawa",
+        "eduCardBiasTitle": "Uprzedzenia i błędy",
+        "eduCardBiasDesc": "Przeglądaj logiczne błędy i uprzedzenia poznawcze stojące za mową nienawiści i dezinformacją.",
+        "eduCardBiasButton": "Rozpocznij aktywność",
+        "eduCard3Title": "Obalanie",
+        "eduCard3Desc": "Dowiedz się, jak skutecznie obalić dezinformację.",
+        "eduCard3Button": "Rozpocznij aktywność",
+        "eduCard4Title": "Czytanie boczne",
+        "eduCard4Desc": "Dowiedz się, jak czytać i rozumieć treści online.",
+        "eduCard4Button": "Rozpocznij aktywność",
+        "warningTitle": "Ostrzeżenie",
+        "warningText": "Zajęcia te zawierają niezakłonne przykłady, które niektórzy czytelnicy mogą uznać za obraźliwe. ",
+        "warningButton": "Rozumiem",
+        "warningCheckbox": "Nie pokazuj ponownie tej wiadomości",
+        "tasks": {
             "humanRights": {
                 "title": "Prawa Człowieka",
                 "description": "Podstawowe prawa człowieka określone przez Organizację Narodów Zjednoczonych w <a href='https://www.un.org/en/about-us/universal-declaration-of-human-rights' target='_blank' rel='noopener'>Powszechnej Deklaracji Praw Człowieka</a> chronią i stoją na straży godności, równości i wolności wszystkich ludzi. Niektóre z nich zostały wymienione poniżej w wersji uproszczonej.<br><br><iframe width='100%' height='315' src='https://www.youtube.com/embed/nDgIVseTkuE?si=Jomr_pVjQAdBgfGg' title='Wideo o Prawach Człowieka' frameborder='0' allowfullscreen></iframe>",
@@ -364,8 +364,8 @@
             },
             "lateralreading": {
                 "title": "Czytanie w poziomie",
-"description": "Czytanie w poziomie (ang. <strong>lateral reading</strong>) to metoda, która pozwala nam szybko ocenić, czy treść strony internetowej pochodzi z wiarygodnych źródeł i opiera się na rzetelnych danych informacjach czy literaturze przedmiotu. W badaniu przeprowadzonym przez Stanford History Education Group (<a href=\"https://cor.inquirygroup.org/research/lateral-reading-on-the-open-internet/\" target=\"_blank\">link</a>) edukatorzy wykazali, że jest to skuteczny sposób oceny jakości nieznanej wcześniej strony internetowej.<br><br>Ta bardzo istotna strategia (<a href=\"https://cor.inquirygroup.org/curriculum/collections/teaching-lateral-reading/\" target=\"_blank\">link</a>), stosowana przez fact-checkerów do oceny informacji w Internecie, polega nie na czytaniu strony internetowej „wertykalnie” (pionowo), jakby była dokumentem drukowanym, aby ocenić jej jakość, ale na użyciu metody zwanej „czytaniem w poziomie”. Oznacza to analizowanie strony internetowej poprzez otwieranie kilku kart przeglądarki, aby odpowiedzieć na kluczowe pytania dotyczące jej treści.<ul><li>Kto jest autorem treści? Czy to ekspert w danej dziedzinie?</li><li>Czy możemy znaleźć dowody? Czy treść opiera się na faktach i danych?</li><li>Czy treść została opublikowana przez inne wiarygodne źródła? Co one o niej mówią?</li></ul>Oprócz powyższych kluczowych pytań technika czytania w poziomie zachęca nas do rozwijania myślenia krytycznego i głębszej analizy innych aspektów treści, takich jak:<ul><li>Kto finansuje lub sponsoruje stronę, na której opublikowano pierwotny materiał?</li><li>Co inne wiarygodne i cieszące się autorytetem źródła mówią na temat tej strony?</li><li>Kiedy wyszukujesz informację na temat oryginalnego artykułu, czy najwyżej pozycjonowane wyniki pochodzą od organizacji zajmujących się fact-checkingiem?</li><li>Czy pojawiły się pytania dotyczące innych artykułów napisanych przez tego autora?</li><li>Czy informacje znalezione w innych źródłach przeczą oryginalnemu materiałowi?</li><li>Czy wiarygodne media informacyjne informują o tym, co czytasz — lub co równie ważne, czy o tym nie informują?</li></ul>Czytanie w poziomie pomaga nam lepiej ocenić nasze źródła informacji – czyli odróżniać prawdę od fałszu – i świadomie korzystać z naszego prawa do decydowania, w jaki sposób zdobywamy informacje."
-,                "objectivesTitle": "Cele ćwiczenia",
+                "description": "Czytanie w poziomie (ang. <strong>lateral reading</strong>) to metoda, która pozwala nam szybko ocenić, czy treść strony internetowej pochodzi z wiarygodnych źródeł i opiera się na rzetelnych danych informacjach czy literaturze przedmiotu. W badaniu przeprowadzonym przez Stanford History Education Group (<a href=\"https://cor.inquirygroup.org/research/lateral-reading-on-the-open-internet/\" target=\"_blank\">link</a>) edukatorzy wykazali, że jest to skuteczny sposób oceny jakości nieznanej wcześniej strony internetowej.<br><br>Ta bardzo istotna strategia (<a href=\"https://cor.inquirygroup.org/curriculum/collections/teaching-lateral-reading/\" target=\"_blank\">link</a>), stosowana przez fact-checkerów do oceny informacji w Internecie, polega nie na czytaniu strony internetowej „wertykalnie” (pionowo), jakby była dokumentem drukowanym, aby ocenić jej jakość, ale na użyciu metody zwanej „czytaniem w poziomie”. Oznacza to analizowanie strony internetowej poprzez otwieranie kilku kart przeglądarki, aby odpowiedzieć na kluczowe pytania dotyczące jej treści.<ul><li>Kto jest autorem treści? Czy to ekspert w danej dziedzinie?</li><li>Czy możemy znaleźć dowody? Czy treść opiera się na faktach i danych?</li><li>Czy treść została opublikowana przez inne wiarygodne źródła? Co one o niej mówią?</li></ul>Oprócz powyższych kluczowych pytań technika czytania w poziomie zachęca nas do rozwijania myślenia krytycznego i głębszej analizy innych aspektów treści, takich jak:<ul><li>Kto finansuje lub sponsoruje stronę, na której opublikowano pierwotny materiał?</li><li>Co inne wiarygodne i cieszące się autorytetem źródła mówią na temat tej strony?</li><li>Kiedy wyszukujesz informację na temat oryginalnego artykułu, czy najwyżej pozycjonowane wyniki pochodzą od organizacji zajmujących się fact-checkingiem?</li><li>Czy pojawiły się pytania dotyczące innych artykułów napisanych przez tego autora?</li><li>Czy informacje znalezione w innych źródłach przeczą oryginalnemu materiałowi?</li><li>Czy wiarygodne media informacyjne informują o tym, co czytasz — lub co równie ważne, czy o tym nie informują?</li></ul>Czytanie w poziomie pomaga nam lepiej ocenić nasze źródła informacji – czyli odróżniać prawdę od fałszu – i świadomie korzystać z naszego prawa do decydowania, w jaki sposób zdobywamy informacje.",
+                "objectivesTitle": "Cele ćwiczenia",
                 "objectives": "<ul><li>Poznawanie zasad przejrzystości i czynników pozwalających ocenić wiarygodność źródeł</li><li>Rozwijanie umiejętności identyfikowania godnych zaufania źródeł informacji</li></ul>",
                 "startButton": "Rozpocznij",
                 "task": "Spróbujmy! Twoim zadaniem jest ocena wiarygodności zaproponowanej strony z wiadomościami. Wykorzystaj w tym celu metody <strong>czytania w poziomie</strong>. Sprawdź wszystkie zrzuty ekranu i zweryfikuj, czy możesz znaleźć dowody wskazujące na to, że ta strona jest wiarygodnym źródłem. Dopasuj je do odpowiedniego typu informacji, który możesz znaleźć, lub kliknij „Nie znaleziono”.",
@@ -408,7 +408,6 @@
                                         "text": "Screenshot 6",
                                         "correct": true
                                     },
-                                    
                                     {
                                         "text": "Not Found",
                                         "correct": false
@@ -489,8 +488,9 @@
                                     }
                                 ],
                                 "feedback": {
-                                   "correct": "<strong>Poprawnie!</strong> Tak, na stronie <strong>szczepienia.pzh.gov.pl</strong> można znaleźć informacje dotyczące bezpieczeństwa i wiarygodności serwisu.<br><br>Dostępne są m.in.:<br><ul><li>Polityka prywatności, zawierająca informacje o przetwarzaniu danych osobowych,</li><li>Instrukcja użytkownika, ułatwiająca korzystanie z portalu,</li><li>Opis instytucji zarządzającej stroną – jest to Narodowy Instytut Zdrowia Publicznego PZH – Państwowy Instytut Badawczy,</li><li>Certyfikat SSL, zapewniający bezpieczne połączenie (strona używa protokołu HTTPS),</li><li>Deklaracja dostępności, potwierdzająca zgodność z wymogami WCAG,</li><li>Formularz kontaktowy, umożliwiający bezpośredni kontakt z administratorem lub zespołem redakcyjnym strony.</li></ul>",
-                                   "incorrect": "<strong>Niepoprawnie!</strong> Strona posiada ważny certyfikat SSL (co oznacza, że połączenie jest szyfrowane – HTTPS).<br><br>Poza tym brak jest jakichkolwiek dodatkowych informacji o bezpieczeństwie – nie ma polityki prywatności, informacji o administratorze, ani danych kontaktowych związanych z bezpieczeństwem.<br><br>Dostępny jest jedynie regulamin sklepu, który pozwala zakupić różne produkty, ale nie odnosi się on do treści informacyjnych publikowanych na stronie."}
+                                    "correct": "Poprawnie! Tak, na stronie szczepienia.pzh.gov.pl można znaleźć informacje dotyczące bezpieczeństwa i wiarygodności serwisu.\n\nDostępne są m.in.:\n- Polityka prywatności, zawierająca informacje o przetwarzaniu danych osobowych,\n- Instrukcja użytkownika, ułatwiająca korzystanie z portalu,\n- Opis instytucji zarządzającej stroną – jest to Narodowy Instytut Zdrowia Publicznego PZH – Państwowy Instytut Badawczy,\n- Certyfikat SSL, zapewniający bezpieczne połączenie (strona używa protokołu HTTPS),\n- Deklaracja dostępności, potwierdzająca zgodność z wymogami WCAG,\n- Formularz kontaktowy, umożliwiający bezpośredni kontakt z administratorem lub zespołem redakcyjnym strony.",
+                                    "incorrect": "Niepoprawnie! Strona posiada ważny certyfikat SSL (co oznacza, że połączenie jest szyfrowane – HTTPS).\n\nPoza tym brak jest jakichkolwiek dodatkowych informacji o bezpieczeństwie – nie ma polityki prywatności, informacji o administratorze, ani danych kontaktowych związanych z bezpieczeństwem.\n\nDostępny jest jedynie regulamin sklepu, który pozwala zakupić różne produkty, ale nie odnosi się on do treści informacyjnych publikowanych na stronie."
+                                }
                             },
                             {
                                 "question": "Czy treści są publikowane przez inne wiarygodne źródło?",
@@ -532,7 +532,6 @@
                         ],
                         "conclusionTitle": "Wniosek",
                         "conclusion": "W ostatecznym rozrachunku strona szczepienia.pzh.gov.pl jest godna zaufania i można z niej czerpać wiarygodne informacje.\n\nPortal jest prowadzony przez Narodowy Instytut Zdrowia Publicznego PZH – Państwowy Instytut Badawczy, we współpracy z Polskim Towarzystwem Wakcynologii, posiada akredytację WHO i jest rekomendowany przez międzynarodowe oraz krajowe instytucje zdrowotne.\n\nNa stronie można znaleźć szczegółowe informacje o autorach i zespole redakcyjnym, którzy są uznanymi ekspertami z dziedziny zdrowia publicznego i wakcynologii, a ich kwalifikacje i publikacje są transparentnie udostępnione i można je zweryfikować w innych wiarygodnych źródłach.\n\nTreści są przygotowywane zgodnie z rzetelną metodologią, oparte na faktach i danych naukowych, a pod artykułami zamieszczane są źródła z autorytatywnych instytucji, takich jak WHO czy CDC.\n\nStrona dba również o bezpieczeństwo użytkowników – posiada certyfikat SSL, politykę prywatności, deklarację dostępności oraz formularz kontaktowy.\n\nCo więcej, publikowane na portalu treści są cytowane i rekomendowane przez inne wiarygodne źródła, w tym serwisy fact-checkingowe i oficjalne strony rządowe.\n\nWszystko to sprawia, że szczepienia.pzh.gov.pl jest wiarygodnym i profesjonalnym źródłem informacji na temat szczepień i zdrowia publicznego."
-
                     },
                     {
                         "intro": "<p>https://globalna.info/</p>",
@@ -558,9 +557,9 @@
                                     }
                                 ],
                                 "feedback": {
-                                    "correct": "Poprawnie! Na stronie nie ma podanych autorów ani zespołu redakcyjnego.<br><br>Wpisy są publikowane przez profil o nazwie „globalna świadomość”, który nie zawiera żadnej wizytówki, opisu ani danych identyfikujących autora.<br><br>Brakuje informacji o wykształceniu, kompetencjach czy doświadczeniu osób odpowiedzialnych za treści.",
-                                    "incorrect": "Niepoprawnie! Na stronie nie ma podanych autorów ani zespołu redakcyjnego.<br><br>Wpisy są publikowane przez profil o nazwie „globalna świadomość”, który nie zawiera żadnej wizytówki, opisu ani danych identyfikujących autora.<br><br>Brakuje informacji o wykształceniu, kompetencjach czy doświadczeniu osób odpowiedzialnych za treści."
-                                }
+                 "correct": "Poprawnie! Na stronie nie ma podanych autorów ani zespołu redakcyjnego.\n\nWpisy są publikowane przez profil o nazwie „globalna świadomość”, który nie zawiera żadnej wizytówki, opisu ani danych identyfikujących autora.\n\nBrakuje informacji o wykształceniu, kompetencjach czy doświadczeniu osób odpowiedzialnych za treści.",
+"incorrect": "Niepoprawnie! Na stronie nie ma podanych autorów ani zespołu redakcyjnego.\n\nWpisy są publikowane przez profil o nazwie „globalna świadomość”, który nie zawiera żadnej wizytówki, opisu ani danych identyfikujących autora.\n\nBrakuje informacji o wykształceniu, kompetencjach czy doświadczeniu osób odpowiedzialnych za treści."
+                }
                             },
                             {
                                 "question": "Gdzie możesz znaleźć informacje o zawartości strony i metodologii?",
@@ -579,8 +578,8 @@
                                     }
                                 ],
                                 "feedback": {
-                                    "correct": "Poprawnie! Nie ma dostępnych informacji na temat zawartości strony ani stosowanej metodologii.<br><br>Strona nie zawiera opisu celu działania portalu, sposobu doboru treści, źródeł informacji ani metod ich weryfikacji.<br><br>Brakuje jakichkolwiek informacji, które mogłyby wskazywać na rzetelny proces redakcyjny czy naukowy.",
-                                    "incorrect": "Niepoprawnie! Nie ma dostępnych informacji na temat zawartości strony ani stosowanej metodologii.<br><br>Strona nie zawiera opisu celu działania portalu, sposobu doboru treści, źródeł informacji ani metod ich weryfikacji.<br><br>Brakuje jakichkolwiek informacji, które mogłyby wskazywać na rzetelny proces redakcyjny czy naukowy."
+                                    "correct": "Poprawnie! Nie ma dostępnych informacji na temat zawartości strony ani stosowanej metodologii.\n\nStrona nie zawiera opisu celu działania portalu, sposobu doboru treści, źródeł informacji ani metod ich weryfikacji.\n\nBrakuje jakichkolwiek informacji, które mogłyby wskazywać na rzetelny proces redakcyjny czy naukowy.",
+                                    "incorrect": "Niepoprawnie! Nie ma dostępnych informacji na temat zawartości strony ani stosowanej metodologii.\n\nStrona nie zawiera opisu celu działania portalu, sposobu doboru treści, źródeł informacji ani metod ich weryfikacji.\n\nBrakuje jakichkolwiek informacji, które mogłyby wskazywać na rzetelny proces redakcyjny czy naukowy."
                                 }
                             },
                             {
@@ -600,8 +599,8 @@
                                     }
                                 ],
                                 "feedback": {
-                                    "correct": "Poprawnie! Strona posiada ważny certyfikat SSL (co oznacza, że połączenie jest szyfrowane – HTTPS).<br><br>Poza tym brak jest jakichkolwiek dodatkowych informacji o bezpieczeństwie – nie ma polityki prywatności, informacji o administratorze, ani danych kontaktowych związanych z bezpieczeństwem.<br><br>Dostępny jest jedynie regulamin sklepu, który pozwala zakupić różne produkty, ale nie odnosi się on do treści informacyjnych publikowanych na stronie.",
-                                    "incorrect": "Niepoprawnie! Strona posiada ważny certyfikat SSL (co oznacza, że połączenie jest szyfrowane – HTTPS).<br><br>Poza tym brak jest jakichkolwiek dodatkowych informacji o bezpieczeństwie – nie ma polityki prywatności, informacji o administratorze, ani danych kontaktowych związanych z bezpieczeństwem.<br><br>Dostępny jest jedynie regulamin sklepu, który pozwala zakupić różne produkty, ale nie odnosi się on do treści informacyjnych publikowanych na stronie."
+                                    "correct": "Poprawnie! Strona posiada ważny certyfikat SSL (co oznacza, że połączenie jest szyfrowane – HTTPS).\n\nPoza tym brak jest jakichkolwiek dodatkowych informacji o bezpieczeństwie – nie ma polityki prywatności, informacji o administratorze, ani danych kontaktowych związanych z bezpieczeństwem.\n\nDostępny jest jedynie regulamin sklepu, który pozwala zakupić różne produkty, ale nie odnosi się on do treści informacyjnych publikowanych na stronie.",
+                                    "incorrect": "Niepoprawnie! Strona posiada ważny certyfikat SSL (co oznacza, że połączenie jest szyfrowane – HTTPS).\n\nPoza tym brak jest jakichkolwiek dodatkowych informacji o bezpieczeństwie – nie ma polityki prywatności, informacji o administratorze, ani danych kontaktowych związanych z bezpieczeństwem.\n\nDostępny jest jedynie regulamin sklepu, który pozwala zakupić różne produkty, ale nie odnosi się on do treści informacyjnych publikowanych na stronie."
                                 }
                             },
                             {
@@ -627,239 +626,239 @@
                             }
                         ],
                         "conclusionTitle": "Wniosek",
-                        "conclusion": "Strona <strong>globalna.info</strong> jest niewiarygodnym źródłem informacji i nie warto jej ufać.<br><br>Na stronie nie ma podanych autorów ani zespołu redakcyjnego — wpisy są publikowane przez anonimowy profil „globalna świadomość”, który nie zawiera żadnych danych identyfikujących autorów ani informacji o ich wykształceniu czy kompetencjach.<br><br>Brakuje jakichkolwiek informacji dotyczących zawartości strony, metodologii, celu działania czy sposobu doboru i weryfikacji treści. Nie ma też żadnych dowodów na rzetelność czy naukowe podejście do prezentowanych informacji.<br><br>Choć strona posiada certyfikat SSL, nie ma innych danych dotyczących bezpieczeństwa, takich jak polityka prywatności czy informacje o administratorze. Dostępny jest jedynie regulamin sklepu z ofertą produktów, który nie jest powiązany z merytoryczną zawartością portalu.<br><br>Treści publikowane na tej stronie nie są potwierdzane przez żadne wiarygodne źródła. Wręcz przeciwnie — organizacje fact-checkingowe, takie jak Stowarzyszenie Demagog, AFP Sprawdzam oraz fakenews.pl, wielokrotnie wskazują, że <strong>globalna.info</strong> rozpowszechnia liczne fałszywe informacje.<br><br>Na stronie nie ma również żadnych dowodów opartych na faktach czy danych naukowych — brakuje podanych źródeł, a informacje nie bazują na wiarygodnych badaniach czy instytucjach naukowych.<br><br>Podsumowując, <strong>globalna.info</strong> nie spełnia podstawowych kryteriów wiarygodności i rzetelności, dlatego nie powinna być traktowana jako źródło wartościowych czy sprawdzonych informacji."
+"conclusion": "Strona globalna.info jest niewiarygodnym źródłem informacji i nie warto jej ufać.\n\nNa stronie nie ma podanych autorów ani zespołu redakcyjnego — wpisy są publikowane przez anonimowy profil „globalna świadomość”, który nie zawiera żadnych danych identyfikujących autorów ani informacji o ich wykształceniu czy kompetencjach.\n\nBrakuje jakichkolwiek informacji dotyczących zawartości strony, metodologii, celu działania czy sposobu doboru i weryfikacji treści. Nie ma też żadnych dowodów na rzetelność czy naukowe podejście do prezentowanych informacji.\n\nChoć strona posiada certyfikat SSL, nie ma innych danych dotyczących bezpieczeństwa, takich jak polityka prywatności czy informacje o administratorze. Dostępny jest jedynie regulamin sklepu z ofertą produktów, który nie jest powiązany z merytoryczną zawartością portalu.\n\nTreści publikowane na tej stronie nie są potwierdzane przez żadne wiarygodne źródła. Wręcz przeciwnie — organizacje fact-checkingowe, takie jak Stowarzyszenie Demagog, AFP Sprawdzam oraz fakenews.pl, wielokrotnie wskazują, że globalna.info rozpowszechnia liczne fałszywe informacje.\n\nNa stronie nie ma również żadnych dowodów opartych na faktach czy danych naukowych — brakuje podanych źródeł, a informacje nie bazują na wiarygodnych badaniach czy instytucjach naukowych.\n\nPodsumowując, globalna.info nie spełnia podstawowych kryteriów wiarygodności i rzetelności, dlatego nie powinna być traktowana jako źródło wartościowych czy sprawdzonych informacji."
                     }
                 ]
             }
         }
     },
     "inspect": {
-    "title": "Przegląd kanału",
-    "subtitle": "Przeanalizuj kanały i główne tematy w sieci nienawiści i dezinformacji"
-  },
-  "channel": {
-    "title": "Eksploracja sieci",
-    "subtitle": "<p>Poniżej możesz zobaczyć sieć kanałów Telegram, w której każdy kanał jest punktem ('węzłem'). Kanały te są połączone, gdy Telegram automatycznie poleca jeden kanał innemu, zazwyczaj dlatego, że mają wielu wspólnych użytkowników.</p><p>Możesz zagłębić się w sieć i tabelę, aby odkryć prawdziwe kanały, które mogą rozpowszechniać dezinformację lub mowę nienawiści.</p><p>Dostosuj kolor i rozmiar kanałów, filtruj i zmieniaj kolejność ich cech, aby znaleźć te, które najbardziej Cię interesują.</p>",
-    "infoTitle": "Informacje o kanale"
-  },
-  "conversation": {
-    "title": "Rozmowa",
-    "subtitle": "Przeglądaj rozmowy i analizuj wiadomości w sieci nienawiści i dezinformacji"
-  },
-  "project": {
-    "noProject": "Brak dostępnych projektów",
-    "noData": "Brak dostępnych danych"
-  },
-  "projects": {
-    "title": "Projektowanie",
-    "subtitle": "Wybierz język, w którym chcesz wyszkolić swoje umiejętności, aby reagować na treść nienawiści i dezinformacji."
-  },
-  "tasks": {
-    "title": "Zadania",
-    "subtitle": "Wybierz temat, na którym chcesz się skupić, aby stworzyć skuteczne odpowiedzi i argumenty przeciwko dezinformacji."
-  },
-  "channelTable": {
-    "header": {
-      "title": "Telegram Network - Statystyka węzłów",
-      "date": "Data",
-      "id": "ID",
-      "messages": "Liczba wiadomości",
-      "partecipants": "Liczba użytkowników",
-      "IRI": "Ryzyko infodemiczne",
-      "CW": "Sprawdź godny",
-      "hs": "Nienawiść mowa",
-      "nInRecommendations": "W zaleceń",
-      "nOutRecommendations": "Zalecenia",
-      "expandable": "Rozszerzalne",
-      "label": "Etykieta"
-    }
-  },
-  "language": {
-    "en": "angielski",
-    "it": "włoski",
-    "es": "hiszpański",
-    "pl": "Polski"
-  },
-  "graphInteraction": {
-    "legend": {
-      "title": "Legenda",
-      "color": "Kolor",
-      "size": "Wymiar",
-      "low": "Niski",
-      "medium": "Średni",
-      "high": "Wysoki",
-      "small": "Mały",
-      "large": "Duży",
-      "defaultColor": "Domyślny kolor dla wszystkich węzłów",
-      "defaultSize": "Domyślny rozmiar dla wszystkich węzłów"
+        "title": "Przegląd kanału",
+        "subtitle": "Przeanalizuj kanały i główne tematy w sieci nienawiści i dezinformacji"
     },
-    "resetView": "Zresetuj widok",
-    "color": {
-      "disable": "Wyłącz kolor",
-      "iri": "Ryzyko infodemiczne",
-      "hs": "Nienawiść mowa",
-      "in": "W zaleceń",
-      "out": "Zalecenia",
-      "out_degree": "Out-stop ",
-      "in_degree": "Na stopniu ",
-      "label": "Kolor"
+    "channel": {
+        "title": "Eksploracja sieci",
+        "subtitle": "<p>Poniżej możesz zobaczyć sieć kanałów Telegram, w której każdy kanał jest punktem ('węzłem'). Kanały te są połączone, gdy Telegram automatycznie poleca jeden kanał innemu, zazwyczaj dlatego, że mają wielu wspólnych użytkowników.</p><p>Możesz zagłębić się w sieć i tabelę, aby odkryć prawdziwe kanały, które mogą rozpowszechniać dezinformację lub mowę nienawiści.</p><p>Dostosuj kolor i rozmiar kanałów, filtruj i zmieniaj kolejność ich cech, aby znaleźć te, które najbardziej Cię interesują.</p>",
+        "infoTitle": "Informacje o kanale"
     },
-    "size": {
-      "disable": "Wyłącz rozmiar",
-      "iri": "Ryzyko infodemiczne",
-      "hs": "Nienawiść mowa",
-      "in": "W zaleceń",
-      "out": "Zalecenia",
-      "label": "Rozmiar",
-      "out_degree": "Out-stop ",
-      "in_degree": "Na stopniu ",
-      "n_out_recommended": "Zalecenia",
-      "n_in_recommended": "W zaleceń"
+    "conversation": {
+        "title": "Rozmowa",
+        "subtitle": "Przeglądaj rozmowy i analizuj wiadomości w sieci nienawiści i dezinformacji"
     },
-    "tooltip": {
-      "label": "Etykieta",
-      "message_count": "Liczba wiadomości",
-      "partecipants_count": "Liczba użytkowników",
-      "id": "Identyfikator kanału:",
-      "iri": "Ryzyko infodemiczne:",
-      "hs": "Mowa nienawiści:",
-      "cw": "Sprawdź godny:",
-      "in": "W zaleceń:",
-      "out": "Zalecenia:"
+    "project": {
+        "noProject": "Brak dostępnych projektów",
+        "noData": "Brak dostępnych danych"
     },
-    "fs": {
-      "exit": "Wyjście",
-      "go": "Pełny ekran"
-    }
-  },
-  "topicsTable": {
-    "title": "Główne tematy kanału",
-    "header": {
-      "title": "Tytuł",
-      "count": "% wiadomości",
-      "hs": "% mowy nienawiści",
-      "cw": "% czeku godnego"
-    }
-  },
-  "channelInfo": {
-    "about": "O:",
-    "channelId": "Identyfikator kanału:",
-    "title": "Tytuł",
-    "description": "Opis:",
-    "nMessages": "Całkowite wiadomości:",
-    "nUsers": "Liczba użytkowników:",
-    "languages": "Języki:",
-    "iri": "Ryzyko infodemiczne:",
-    "hateSpeech": "Ryzyko mowy nienawiści:",
-    "lastUpdate": "Ostatnia aktualizacja:",
-    "mainTopics": "Główne tematy:",
-    "messages": "Idź do rozmowy",
-    "emptySelection": "Nie ma jeszcze wyboru. ",
-    "noData": "Brak dostępnych danych",
-    "exploreChannel": "Eksploruj kanał",
-    "topics": "Główne tematy",
-    "channels": "Kanały",
-    "chats": "Rozmowy",
-    "hs_percentage": "Mowa nienawiści:",
-    "cw_percentage": "Sprawdź godny:"
-  },
-  "message": {
-    "title": "Spostrzeżenia czatu",
-    "header": {
-      "id": "ID",
-      "date": "Data",
-      "message": "Wiadomość",
-      "from": "Z",
-      "mediaType": "Typ",
-      "reactions": "Reakcje",
-      "nrViews": "Widoki",
-      "hateLabel": "Nienawiść mowa",
-      "checkLabel": "Sprawdź godny",
-      "topic": "Temat",
-      "target": "Cel",
-      "keywordsMatch": "Słowa kluczowe pasują",
-      "counterspeech": "Rozpocznij rozmowę"
+    "projects": {
+        "title": "Projektowanie",
+        "subtitle": "Wybierz język, w którym chcesz wyszkolić swoje umiejętności, aby reagować na treść nienawiści i dezinformacji."
+    },
+    "tasks": {
+        "title": "Zadania",
+        "subtitle": "Wybierz temat, na którym chcesz się skupić, aby stworzyć skuteczne odpowiedzi i argumenty przeciwko dezinformacji."
+    },
+    "channelTable": {
+        "header": {
+            "title": "Telegram Network - Statystyka węzłów",
+            "date": "Data",
+            "id": "ID",
+            "messages": "Liczba wiadomości",
+            "partecipants": "Liczba użytkowników",
+            "IRI": "Ryzyko infodemiczne",
+            "CW": "Sprawdź godny",
+            "hs": "Nienawiść mowa",
+            "nInRecommendations": "W zaleceń",
+            "nOutRecommendations": "Zalecenia",
+            "expandable": "Rozszerzalne",
+            "label": "Etykieta"
+        }
+    },
+    "language": {
+        "en": "angielski",
+        "it": "włoski",
+        "es": "hiszpański",
+        "pl": "Polski"
+    },
+    "graphInteraction": {
+        "legend": {
+            "title": "Legenda",
+            "color": "Kolor",
+            "size": "Wymiar",
+            "low": "Niski",
+            "medium": "Średni",
+            "high": "Wysoki",
+            "small": "Mały",
+            "large": "Duży",
+            "defaultColor": "Domyślny kolor dla wszystkich węzłów",
+            "defaultSize": "Domyślny rozmiar dla wszystkich węzłów"
+        },
+        "resetView": "Zresetuj widok",
+        "color": {
+            "disable": "Wyłącz kolor",
+            "iri": "Ryzyko infodemiczne",
+            "hs": "Nienawiść mowa",
+            "in": "W zaleceń",
+            "out": "Zalecenia",
+            "out_degree": "Out-stop ",
+            "in_degree": "Na stopniu ",
+            "label": "Kolor"
+        },
+        "size": {
+            "disable": "Wyłącz rozmiar",
+            "iri": "Ryzyko infodemiczne",
+            "hs": "Nienawiść mowa",
+            "in": "W zaleceń",
+            "out": "Zalecenia",
+            "label": "Rozmiar",
+            "out_degree": "Out-stop ",
+            "in_degree": "Na stopniu ",
+            "n_out_recommended": "Zalecenia",
+            "n_in_recommended": "W zaleceń"
+        },
+        "tooltip": {
+            "label": "Etykieta",
+            "message_count": "Liczba wiadomości",
+            "partecipants_count": "Liczba użytkowników",
+            "id": "Identyfikator kanału:",
+            "iri": "Ryzyko infodemiczne:",
+            "hs": "Mowa nienawiści:",
+            "cw": "Sprawdź godny:",
+            "in": "W zaleceń:",
+            "out": "Zalecenia:"
+        },
+        "fs": {
+            "exit": "Wyjście",
+            "go": "Pełny ekran"
+        }
+    },
+    "topicsTable": {
+        "title": "Główne tematy kanału",
+        "header": {
+            "title": "Tytuł",
+            "count": "% wiadomości",
+            "hs": "% mowy nienawiści",
+            "cw": "% czeku godnego"
+        }
+    },
+    "channelInfo": {
+        "about": "O:",
+        "channelId": "Identyfikator kanału:",
+        "title": "Tytuł",
+        "description": "Opis:",
+        "nMessages": "Całkowite wiadomości:",
+        "nUsers": "Liczba użytkowników:",
+        "languages": "Języki:",
+        "iri": "Ryzyko infodemiczne:",
+        "hateSpeech": "Ryzyko mowy nienawiści:",
+        "lastUpdate": "Ostatnia aktualizacja:",
+        "mainTopics": "Główne tematy:",
+        "messages": "Idź do rozmowy",
+        "emptySelection": "Nie ma jeszcze wyboru. ",
+        "noData": "Brak dostępnych danych",
+        "exploreChannel": "Eksploruj kanał",
+        "topics": "Główne tematy",
+        "channels": "Kanały",
+        "chats": "Rozmowy",
+        "hs_percentage": "Mowa nienawiści:",
+        "cw_percentage": "Sprawdź godny:"
+    },
+    "message": {
+        "title": "Spostrzeżenia czatu",
+        "header": {
+            "id": "ID",
+            "date": "Data",
+            "message": "Wiadomość",
+            "from": "Z",
+            "mediaType": "Typ",
+            "reactions": "Reakcje",
+            "nrViews": "Widoki",
+            "hateLabel": "Nienawiść mowa",
+            "checkLabel": "Sprawdź godny",
+            "topic": "Temat",
+            "target": "Cel",
+            "keywordsMatch": "Słowa kluczowe pasują",
+            "counterspeech": "Rozpocznij rozmowę"
+        },
+        "dialog": {
+            "start": "Rozpocznij nową rozmowę z Target = {Target}",
+            "jump": "Idź do rozmowy",
+            "noProject": "Brak dostępnych projektów",
+            "noData": "Brak dostępnych danych",
+            "error": "Błąd podczas pobierania danych"
+        },
+        "noData": "Brak dostępnych danych",
+        "noTarget": "Nie zidentyfikowany cel",
+        "target": "Kliknij tutaj, aby rozpocząć nową rozmowę",
+        "filter": {
+            "target": "Filtr według celu",
+            "topic": "Filtr według tematu",
+            "hate": "Nienawiść mowa",
+            "checkworthy": "Sprawdź godny",
+            "all": "Wszystko",
+            "yes": "Tak",
+            "no": "NIE",
+            "DISABLED": "Wyłączony",
+            "JEWS": "Żydzi",
+            "MUSLIMS": "Muzułmanie",
+            "LGBT+": "LGBT+",
+            "MIGRANTS": "Migranci",
+            "OTHER": "Inny",
+            "POC": "Ludzie kolorowi",
+            "ROMANI": "Rom",
+            "WOMEN": "Kobiety"
+        },
+        "footer": {
+            "pagination": {
+                "range": "{pagestart}-{pagestop} z {totalItems} odzyskane wiadomości"
+            }
+        }
+    },
+    "wordclouds": {
+        "hate": "Nienawiść vs non nienawiść",
+        "checkworthy": "Sprawdź godne vs bez kontroli",
+        "generic": "Ogólny",
+        "select": "Wybierz WordCloud Typ",
+        "selectTopic": "Wybierz temat",
+        "channel": "Kanał",
+        "titles": {
+            "hate": "Nienawiść mowa",
+            "is_checkworthy": "Sprawdź godny",
+            "wordcloud": "Ogólny",
+            "isnot_checkworthy": "Non -Check Worthy",
+            "non_hate": "Nienawiść"
+        }
+    },
+    "error": {
+        "api": "Błąd podczas pobierania danych",
+        "noData": "Brak dostępnych danych"
     },
     "dialog": {
-      "start": "Rozpocznij nową rozmowę z Target = {Target}",
-      "jump": "Idź do rozmowy",
-      "noProject": "Brak dostępnych projektów",
-      "noData": "Brak dostępnych danych",
-      "error": "Błąd podczas pobierania danych"
-    },
-    "noData": "Brak dostępnych danych",
-    "noTarget": "Nie zidentyfikowany cel",
-    "target": "Kliknij tutaj, aby rozpocząć nową rozmowę",
-    "filter": {
-      "target": "Filtr według celu",
-      "topic": "Filtr według tematu",
-      "hate": "Nienawiść mowa",
-      "checkworthy": "Sprawdź godny",
-      "all": "Wszystko",
-      "yes": "Tak",
-      "no": "NIE",
-      "DISABLED": "Wyłączony",
-      "JEWS": "Żydzi",
-      "MUSLIMS": "Muzułmanie",
-      "LGBT+": "LGBT+",
-      "MIGRANTS": "Migranci",
-      "OTHER": "Inny",
-      "POC": "Ludzie kolorowi",
-      "ROMANI": "Rom",
-      "WOMEN": "Kobiety"
-    },
-    "footer": {
-      "pagination": {
-        "range": "{pagestart}-{pagestop} z {totalItems} odzyskane wiadomości"
-      }
+        "dataSources": "Źródła danych",
+        "externalGround": "Podłoże zewnętrzne",
+        "documentName": "Nazwa dokumentu",
+        "externalLink": "Link zewnętrzny",
+        "text": "Tekst",
+        "confirm": "Potwierdzać",
+        "dialogue": "Dialog",
+        "groundTextSpans": "Tekst podstawowy",
+        "startEmpty": "Zacznij puste",
+        "addDynamicTurn": "Dodaj dynamiczny obrót",
+        "addFromGround": "Dodaj z ziemi",
+        "tooltip": {
+            "startEmpty": "Naciśnij tutaj, aby utworzyć pusty zakręt.",
+            "addDynamicTurn": "Automatycznie generuj sugestię na początek.<br>Nadal możesz to później zmodyfikować.",
+            "addRoundUp": "Dodaj pusty obrót <em>zanim</em> wybrany.",
+            "addRoundDown": "Dodaj pusty obrót <em>Po</em> wybrany.",
+            "magic": "Automatycznie generuje odpowiedź i wybiera powiązany tekst.<br><em>Nadal możesz to edytować.</em>",
+            "delete": "Usuń tę obrót na stałe.",
+            "about": "Krótki opis kanału",
+            "channelId": "Unikalny zanonimizowany identyfikator kanału",
+            "nMessages": "Ile wiadomości znajduje się w kanale",
+            "nUsers": "Ilu użytkowników znajduje się w kanale",
+            "languages": "Języki używane w kanale",
+            "iri": "Wskaźnik ryzyka infodemii kanału",
+            "hs_percentage": "Procent wiadomości uznanych za mowę nienawiści",
+            "cw_percentage": "Procent wiadomości uznanych za warte sprawdzenia"
+        }
     }
-  },
-  "wordclouds": {
-    "hate": "Nienawiść vs non nienawiść",
-    "checkworthy": "Sprawdź godne vs bez kontroli",
-    "generic": "Ogólny",
-    "select": "Wybierz WordCloud Typ",
-    "selectTopic": "Wybierz temat",
-    "channel": "Kanał",
-    "titles": {
-      "hate": "Nienawiść mowa",
-      "is_checkworthy": "Sprawdź godny",
-      "wordcloud": "Ogólny",
-      "isnot_checkworthy": "Non -Check Worthy",
-      "non_hate": "Nienawiść"
-    }
-  },
-  "error": {
-    "api": "Błąd podczas pobierania danych",
-    "noData": "Brak dostępnych danych"
-  },
-  "dialog": {
-    "dataSources": "Źródła danych",
-    "externalGround": "Podłoże zewnętrzne",
-    "documentName": "Nazwa dokumentu",
-    "externalLink": "Link zewnętrzny",
-    "text": "Tekst",
-    "confirm": "Potwierdzać",
-    "dialogue": "Dialog",
-    "groundTextSpans": "Tekst podstawowy",
-    "startEmpty": "Zacznij puste",
-    "addDynamicTurn": "Dodaj dynamiczny obrót",
-    "addFromGround": "Dodaj z ziemi",
-    "tooltip": {
-      "startEmpty": "Naciśnij tutaj, aby utworzyć pusty zakręt.",
-      "addDynamicTurn": "Automatycznie generuj sugestię na początek.<br>Nadal możesz to później zmodyfikować.",
-      "addRoundUp": "Dodaj pusty obrót <em>zanim</em> wybrany.",
-      "addRoundDown": "Dodaj pusty obrót <em>Po</em> wybrany.",
-      "magic": "Automatycznie generuje odpowiedź i wybiera powiązany tekst.<br><em>Nadal możesz to edytować.</em>",
-      "delete": "Usuń tę obrót na stałe.",
-      "about": "Krótki opis kanału",
-      "channelId": "Unikalny zanonimizowany identyfikator kanału",
-      "nMessages": "Ile wiadomości znajduje się w kanale",
-      "nUsers": "Ilu użytkowników znajduje się w kanale",
-      "languages": "Języki używane w kanale",
-      "iri": "Wskaźnik ryzyka infodemii kanału",
-      "hs_percentage": "Procent wiadomości uznanych za mowę nienawiści",
-      "cw_percentage": "Procent wiadomości uznanych za warte sprawdzenia"
-    }
-  }
 }
