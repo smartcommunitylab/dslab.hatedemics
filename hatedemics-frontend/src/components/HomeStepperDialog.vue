@@ -17,7 +17,19 @@
         <template v-slot:actions>
           <v-row class="px-4 pb-4" align="center" justify="space-between">
             <!-- Bottone Indietro -->
-            <v-col cols="6" class="text-left">
+
+            <!-- Checkbox finale -->
+            <v-col class="text-left">
+              <v-checkbox
+                v-model="neverShow"
+                :label="t('onboarding.neverShow')"
+                hide-details
+                density="compact"
+              />
+            </v-col>
+            <!-- Bottone Avanti / Chiudi -->
+            
+            <v-col  class="text-right">
               <v-btn
                 variant="text"
                 @click="step--"
@@ -25,10 +37,6 @@
               >
                 {{ t('onboarding.prev') }}
               </v-btn>
-            </v-col>
-
-            <!-- Bottone Avanti / Chiudi -->
-            <v-col cols="6" class="text-right">
               <v-btn
                 color="primary"
                 @click="step < steps.length ? step++ : closeDialog()"
@@ -37,16 +45,7 @@
               </v-btn>
             </v-col>
 
-            <!-- Checkbox finale -->
-            <v-col cols="12" v-if="step === steps.length">
-              <v-checkbox
-                v-model="neverShow"
-                :label="t('onboarding.neverShow')"
-                hide-details
-                density="compact"
-                class="mt-2"
-              />
-            </v-col>
+
           </v-row>
         </template>
       </v-stepper>

@@ -176,6 +176,7 @@ html {
 // Fixed a bug that the theme color is interrupted when scrolling
 .v-application {
   overflow-y: auto;
+  background-color: white;
 }
 
 // Fix app-bar's progress-bar

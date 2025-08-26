@@ -57,8 +57,8 @@ const optionsExpanded = ref(true);
 const getColorByValue = (value: number|undefined, min: number, max: number) => {
   if (value === undefined || value === null || value === -1) return "";
   const normalized = (value - min) / (max - min); // Normalizza tra 0 e 1
-  const r = Math.floor(255 * (1 - normalized)); // Più alto → più verde
-  const g = Math.floor(255 * normalized);
+  const r = Math.floor(255 * ( normalized)); // Più alto → più verde
+  const g = Math.floor(255 * (1- normalized));
 
   return `rgb(${r}, ${g}, 0)`;
 };
