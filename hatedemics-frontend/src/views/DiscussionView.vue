@@ -14,6 +14,8 @@ import type { ChannelInfo, Chat } from "@/services/types";
 import { useChannelsStore } from "@/store/ChannelStore";
 import { useChatsStore } from "@/store/ChatStore";
 import { useTopicsStore } from '@/store/TopicStore';
+import ExploreGuideDialog from "@/components/ExploreGuideDialog.vue";
+
 const topicsStore = useTopicsStore();
 const { t } = useI18n();
 const channelsStore = useChannelsStore();
@@ -23,6 +25,7 @@ const messagesStore = useMessagesStore();
 const { messages } = storeToRefs(messagesStore);
 const { selectedChannelInfo, channelsInfo } = storeToRefs(channelsStore);
 const { selectedChat, chats } = storeToRefs(chatStore);
+const showExploreGuide = ref(false);
 // Mappa le chat con label "Chat 1", "Chat 2", ecc.
 const chatOptions = computed(() =>
   chats.value.map((chat, index) => ({
@@ -80,11 +83,43 @@ const loadMore = (event: { target: any; }) => {
 
 <template>
   <v-container fluid>
-    <!-- <h1 class="text-h4 font-weight-bold mb-4">{{ msg }}</h1> -->
-    <h1 class="text-h5 font-weight-bold text-primary ma-4">{{ msg }}</h1>
-<h2 class="text-h6 font-weight-medium ma-4">
-      {{ t("conversation.subtitle") }}
-  </h2>
+    <v-expansion-panels variant="accordion" elevation="0" class="ma-4">
+      <v-expansion-panel>
+        <v-expansion-panel-title expand-icon="" collapse-icon="" v-slot="{ expanded }">
+          <div class="d-flex align-center w-100">
+            <!-- Titolo -->
+            <h1 class="text-h5 font-weight-bold text-primary me-2">{{ msg }}</h1>
+
+            <!-- Freccia manuale vicino al titolo -->
+            <v-icon
+              :icon="expanded ? 'mdi-menu-up' : 'mdi-menu-down'"
+              class="me-2 text-primary"
+            />
+
+            <v-spacer />
+
+            <!-- Bottone help a destra -->
+            <v-btn
+              variant="outlined"
+              color="error"
+              size="small"
+              class="rounded-circle"
+              style="min-width: 36px; height: 36px; padding: 0"
+              @click.stop="showExploreGuide = true"
+            >
+              <v-icon size="20">mdi-help</v-icon>
+            </v-btn>
+          </div>
+        </v-expansion-panel-title>
+
+        <v-expansion-panel-text>
+          <h2 class="text-h6 font-weight-light">
+            <span v-html="t('conversation.subtitle')" />
+          </h2>
+        </v-expansion-panel-text>
+      </v-expansion-panel>
+    </v-expansion-panels>
+
     <!-- Selettori di Canale e Chat -->
     <v-row>
       <v-col cols="4">
@@ -150,5 +185,7 @@ const loadMore = (event: { target: any; }) => {
       </v-col>
     </v-row>
   </v-container>
+  <ExploreGuideDialog v-model="showExploreGuide" />
+
 </template>
 

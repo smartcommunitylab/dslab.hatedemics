@@ -47,7 +47,7 @@ const items: DrawerMenuItem[] = [
       },
       {
         title: t('menu.quickGuide'),
-        icon: 'mdi-help-circle-outline',
+        icon: 'mdi-book-open-outline',
         action: () => (showExploreGuide.value = true)
       }
     ],
@@ -65,7 +65,7 @@ const items: DrawerMenuItem[] = [
       },
       {
         title: t('menu.quickGuide'),
-        icon: 'mdi-help-circle-outline',
+        icon: 'mdi-book-open-outline',
         action: () => (showCounterspeechGuide.value = true)
       }
     ]

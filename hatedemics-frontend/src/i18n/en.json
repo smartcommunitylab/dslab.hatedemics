@@ -85,7 +85,7 @@
         }
     },
     "networkGuide": {
-        "guideTitle": "Glossary to the Network",
+        "guideTitle": "Network's Glossary",
         "guideItems": {
             "network": {
                 "title": "Network",
@@ -770,7 +770,7 @@
             "nInRecommendations": "In Recommendations",
             "nOutRecommendations": "Out Recommendations",
             "expandable": "Expandable",
-            "label": "Label"
+            "label": "Channel Label"
         }
     },
     "language": {
