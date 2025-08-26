@@ -15,14 +15,14 @@
         "network": "Network",
         "channel": "Channel",
         "conversation": "Conversation",
-        "quickGuide": "Quick Guide",
+        "quickGuide": "Glossary",
         "counterspeech": "Counterspeech",
         "projects": "Projects",
         "credits": "Credits",
         "logout": "Logout"
     },
     "counterspeechGuide": {
-        "guideTitle": "Quick Guide",
+        "guideTitle": "Glossary",
         "guideItems": {
             "counterspeech": {
                 "title": "Counterspeech",
@@ -47,11 +47,11 @@
         }
     },
     "home": {
-        "title": "Fighting hate and disinformation online",
-        "description": "HATEDEMICS is a platform that leverages artificial intelligence to analyze online content, enhance critical thinking, and train responses to hate speech.",
+        "title": "Fighting Hate and Disinformation Online",
+        "description": "The Hatedemics platform leverages artificial intelligence to analyze online content, enhance critical thinking, and train responses to hate speech.",
         "network": "Explore the Network",
         "networkDescription": "An interactive map to observe the connections between channels, content, and dynamics related to hate and disinformation online. Discover what happens on the web, follow the flows, and identify the key nodes of toxic communication.",
-        "networkButton": "Go to the network",
+        "networkButton": "Go to the network",   
         "counterspeech": "Counterspeech Writing",
         "counterspeechDescription": "Train your ability to respond to hate and disinformation content with targeted writing exercises. Learn how to use reliable sources to create solid arguments and develop your critical thinking to change the tone of online debate.",
         "counterspeechButton": "Start writing",
@@ -59,8 +59,8 @@
         "educationalDescription": "Explore resources and educational materials to understand and counter online hate.",
         "educationalButton": "Go to Educational Section",
         "guideDescription": "What to know before using the platform.",
-        "guideButton": "Open Guide",
-        "guideTitle": "Quick Guide",
+        "guideButton": "Open Glossary",
+        "guideTitle": "Glossary",
         "guideItems": {
             "network": {
                 "title": "Network",
@@ -85,7 +85,7 @@
         }
     },
     "networkGuide": {
-        "guideTitle": "Guide to the Telegram Channel Network",
+        "guideTitle": "Network's Glossary",
         "guideItems": {
             "network": {
                 "title": "Network",
@@ -137,10 +137,6 @@
             {
                 "title": "What is Hatedemics",
                 "html": "<p><strong>Hatedemics</strong> is a European project focused on raising awareness about hate speech, disinformation, and how these two issues intersect. The project aims to empower NGOs, civil society organisations, fact-checkers, public authorities, and young people to effectively prevent and combat polarisation, intolerance, and conspiracy theories.</p><p><strong>Hatedemics</strong> uses AI-based technologies in two main ways:</p><ul><li><strong>Data Analysis</strong>: It analyses large volumes of data from a popular messaging platform (Telegram), providing insights into hate speech and disinformation trends.</li><li><strong>Counterspeech</strong>: It creates dialogue-based responses to hate speech and misinformation, called “counterspeech”. This helps people learn when and how to respond to hate speech driven by misinformation, using factual information as a foundation.</li></ul><p>Visit the <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">Hatedemics website</a> to learn more about the project.</p>"
-            },
-            {
-                "title": "Some definitions",
-                "html": "<p><strong>Hate speech</strong>: We rely on the definition made by the UN Office on Genocide Prevention and the Responsibility to Protect (2019), which defines hate speech as <em>“any kind of communication in speech, writing or behaviour, that attacks or uses pejorative or discriminatory language with reference to a person or a group on the basis of who they are”</em>. In particular, in the project we consider the following specific groups affected by hate: the LGBTQ+ community, migrants, Muslims, Jewish, Roma, Black people and people with disabilities.</p><p><strong>Check-worthiness</strong>: This refers to the degree to which a statement, claim, or post merits verification or fact-checking due to its potential falsity, public relevance, or harmful impact. This is a subjective judgment, guided by key criteria: whether the content includes a factual assertion (e.g., statistics, causal claims), whether it could be potentially false, and whether it is of public interest or social impact. <strong>Note:</strong> Statements that are easily verifiable by an average user (e.g., “The population of China is half that of Italy”) are not considered check-worthy, as they do not require expert verification.</p><p><strong>Disinformation</strong>: Disinformation is when false or misleading information is deliberately created and spread to trick people. It's different from misinformation, which is just wrong information shared by mistake. The key with disinformation is that someone <em>intends to deceive</em> you. To figure out if something is disinformation, we use advanced tools called <em>\"infodemic risk indices\"</em>. These help us detect online conversations with lots of misleading content by analysing website links and user engagement, helping us judge how trustworthy the information is.</p><p>Want to know more? See: Gallotti, R., Valle, F., Castaldo, N., Sacco, P., & De Domenico, M. (2020). <em>Assessing the risks of 'infodemics' in response to COVID-19 epidemics</em>. <strong>Nature Human Behaviour</strong>, 4(12), 1285–1293.</p>"
             },
             {
                 "title": "What does the platform include?",
@@ -774,7 +770,7 @@
             "nInRecommendations": "In Recommendations",
             "nOutRecommendations": "Out Recommendations",
             "expandable": "Expandable",
-            "label": "Label"
+            "label": "Channel Label"
         }
     },
     "language": {

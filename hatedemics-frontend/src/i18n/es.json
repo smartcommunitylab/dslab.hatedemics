@@ -15,14 +15,14 @@
         "network": "Red",
         "channel": "Canal",
         "conversation": "Conversación",
-        "quickGuide": "Guía rápida",
+        "quickGuide": "Glosario",
         "counterspeech": "Contrarrestar",
         "projects": "Proyectos",
         "credits": "Créditos",
         "logout": "Cierre de sesión"
     },
     "counterspeechGuide": {
-        "guideTitle": "Guía rápida",
+        "guideTitle": "Glosario",
         "guideItems": {
             "counterspeech": {
                 "title": "Contrarrestar",
@@ -47,8 +47,8 @@
         }
     },
     "home": {
-        "title": "Luchar contra el odio y la desinformación en línea",
-        "description": "Hatedemics es una plataforma que aprovecha la inteligencia artificial para analizar el contenido en línea, mejorar el pensamiento crítico y entrenar las respuestas al discurso de odio.",
+        "title": "Luchar Contra el Odio y la Desinformación en Línea",
+        "description": "La plataforma Hatedemias utiliza inteligencia artificial para analizar contenido en línea, potenciar el pensamiento crítico y preparar respuestas al discurso de odio.",
         "network": "Explorar la red",
         "networkDescription": "Un mapa interactivo para observar las conexiones entre canales, contenido y dinámica relacionada con el odio y la desinformación en línea. ",
         "networkButton": "Ir a la red",
@@ -60,7 +60,7 @@
         "educationalButton": "Ir a la sección educativa",
         "guideDescription": "Qué saber antes de usar la plataforma.",
         "guideButton": "Guía",
-        "guideTitle": "Guía rápida",
+        "guideTitle": "Glosario",
         "guideItems": {
             "network": {
                 "title": "Red",
@@ -85,7 +85,7 @@
         }
     },
     "networkGuide": {
-        "guideTitle": "Guía de la red de canales Telegram",
+        "guideTitle": "Glosario de la red de canales Telegram",
         "guideItems": {
             "network": {
                 "title": "Red",
@@ -137,10 +137,6 @@
             {
                 "title": "Lo que es Hatedemics",
                 "html": "<p><strong>Odatemics</strong> es un proyecto europeo centrado en crear conciencia sobre el discurso de odio, la desinformación y cómo se cruzan estos dos problemas. </p><p><strong>Odatemics</strong> utiliza tecnologías basadas en IA de dos maneras principales:</p><ul><li><strong>Análisis de datos</strong>: Analiza grandes volúmenes de datos de una plataforma de mensajería popular (Telegram), proporcionando información sobre el discurso de odio y las tendencias de desinformación.</li><li><strong>Contrarrestar</strong>: Crea respuestas basadas en el diálogo al discurso de odio y información errónea, llamada \"contrapezo\". </li></ul><p>Visite el <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">Sitio web de Hatedemics</a> Para obtener más información sobre el proyecto.</p>"
-            },
-            {
-                "title": "Algunas definiciones",
-                "html": "<p><strong>Discurso de odio</strong>: Confiamos en la definición hecha por la Oficina de la ONU sobre prevención del genocidio y la responsabilidad de proteger (2019), que define el discurso de odio como <em>\"Cualquier tipo de comunicación en el habla, la escritura o el comportamiento, que ataca o usa un lenguaje peyorativo o discriminatorio con referencia a una persona o un grupo sobre la base de quiénes son\"</em>. </p><p><strong>Sabor</strong>: Esto se refiere al grado en que una declaración, reclamo o verificación de méritos posteriores a la verificación o verificación de hechos debido a su posible falsedad, relevancia pública o impacto dañino.  <strong>Nota:</strong> Las declaraciones que son fácilmente verificables por un usuario promedio (por ejemplo, \"la población de China es la mitad de la Italia\") no se consideran dignos de verificación, ya que no requieren una verificación de expertos.</p><p><strong>Desinformación</strong>: La desinformación es cuando la información falsa o engañosa se crea deliberadamente y se extiende a las personas enganchadas.  <em>tiene la intención de engañar</em> tú.  <em>\"índices de riesgo infodémico\"</em>. </p><p>¿Quieres saber más?  <em>Evaluar los riesgos de 'infodemias' en respuesta a las epidemias de Covid-19</em>. <strong>Naturaleza Comportamiento humano</strong>, 4 (12), 1285–1293.</p>"
             },
             {
                 "title": "¿Qué incluye la plataforma?",
@@ -741,7 +737,7 @@
             "nInRecommendations": "En recomendaciones",
             "nOutRecommendations": "Recomendaciones",
             "expandable": "Expandible",
-            "label": "Etiqueta"
+            "label": "Etiqueta del canal"
         }
     },
     "language": {

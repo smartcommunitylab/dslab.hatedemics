@@ -15,14 +15,14 @@
         "network": "Sieć",
         "channel": "Kanał",
         "conversation": "Rozmowa",
-        "quickGuide": "Szybki przewodnik",
+        "quickGuide": "Słowniczek",
         "counterspeech": "Mowa kontraktu",
         "projects": "Projektowanie",
         "credits": "Kredyty",
         "logout": "Logout"
     },
     "counterspeechGuide": {
-        "guideTitle": "Szybki przewodnik",
+        "guideTitle": "Słowniczek",
         "guideItems": {
             "counterspeech": {
                 "title": "Mowa kontraktu",
@@ -47,8 +47,8 @@
         }
     },
     "home": {
-        "title": "Walka z nienawiścią i dezinformacją online",
-        "description": "Hatedemics to platforma, która wykorzystuje sztuczną inteligencję do analizy treści online, poprawy krytycznego myślenia i szkolenia odpowiedzi na mowę nienawiści.",
+        "title": "Walka z Nienawiścią i Dezinformacją Online",
+        "description": "Platforma Hatedemics wykorzystuje sztuczną inteligencję do analizowania treści online, rozwijania krytycznego myślenia i uczenia reakcji na mowę nienawiści.",
         "network": "Poznaj sieć",
         "networkDescription": "Interaktywna mapa obserwowania połączeń między kanałami, treścią i dynamiką związaną z nienawiścią i dezinformacją online. ",
         "networkButton": "Przejdź do sieci",
@@ -60,7 +60,7 @@
         "educationalButton": "Przejdź do sekcji edukacyjnej",
         "guideDescription": "Co należy wiedzieć przed użyciem platformy.",
         "guideButton": "Otwarty przewodnik",
-        "guideTitle": "Szybki przewodnik",
+        "guideTitle": "Słowniczek",
         "guideItems": {
             "network": {
                 "title": "Sieć",
@@ -85,7 +85,7 @@
         }
     },
     "networkGuide": {
-        "guideTitle": "Przewodnik po sieci kanałów telegram",
+        "guideTitle": "Słowniczek po sieci kanałów telegram",
         "guideItems": {
             "network": {
                 "title": "Sieć",
@@ -139,10 +139,6 @@
                 "html": "<p><strong>Nienawidzone</strong> to europejski projekt koncentrujący się na podnoszeniu świadomości na temat mowy nienawiści, dezinformacji i ich przecinania tych dwóch problemów. </p><p><strong>Nienawidzone</strong> Wykorzystuje technologie oparte na sztucznej inteligencji na dwa główne sposoby:</p><ul><li><strong>Analiza danych</strong>: Analizuje duże ilości danych z popularnej platformy przesyłania wiadomości (telegram), zapewniając wgląd w mowę nienawiści i trendów dezinformacyjnych.</li><li><strong>Mowa kontraktu</strong>: Tworzy reakcje oparte na dialogach na mowę nienawiści i dezinformację, zwaną „kontraktową mową”. </li></ul><p>Odwiedź <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">Witryna nienawidzona</a> Aby dowiedzieć się więcej o projekcie.</p>"
             },
             {
-                "title": "Niektóre definicje",
-                "html": "<p><strong>Nienawiść mowa</strong>: Polegamy na definicji urzędu ONZ na temat zapobiegania ludobójstwu i odpowiedzialności za ochronę (2019), która definiuje mowę nienawiści jako <em>„Każda komunikacja w mowie, pisaniu lub zachowaniu, która atakuje lub używa języka pejoratywnego lub dyskryminującego w odniesieniu do osoby lub grupy na podstawie tego, kim oni są”</em>. </p><p><strong>Wartość kontroli</strong>: Odnosi się to do stopnia, w jakim oświadczenie, roszczenie lub posterunek weryfikacji lub sprawdzanie faktów ze względu na jego potencjalną fałsz, znaczenie publiczne lub szkodliwy wpływ.  <strong>Notatka:</strong> Oświadczenia, które można łatwo weryfikować przez przeciętnego użytkownika (np. „Populacja Chin jest w połowie Włoch”) nie są uważane za warte kontroli, ponieważ nie wymagają weryfikacji eksperckiej.</p><p><strong>Dezinformacja</strong>: Dezinformacja ma miejsce, gdy fałszywe lub wprowadzające w błąd informacje są celowo tworzone i rozpowszechniane na oszukanie ludzi.  <em>zamierza oszukiwać</em> Ty.  <em>„Infodemiczne wskaźniki ryzyka”</em>. </p><p>Chcesz wiedzieć więcej?  <em>Ocena ryzyka „Infodemics” w odpowiedzi na epidemie Covid-19</em>. <strong>Natury ludzkie zachowanie</strong>, 4 (12), 1285–1293.</p>"
-            },
-            {
                 "title": "Co obejmuje platforma?",
                 "html": "<p><strong>Dane:</strong> Platforma zawiera dane statyczne: około 10 milionów wiadomości telegramowych zebranych z prawie 1000 czatów publicznych, obejmujących 4 języki (angielski, włoski, hiszpański i polski). </p><p><strong>Ćwiczenie:</strong> Pokazane tutaj spostrzeżenia są generowane automatycznie przy użyciu technologii opartych na AI. </p><p><strong>Chatbot:</strong> Platforma zawiera model dialogu, który symuluje interakcję z rozkładającym hejterem dezinformacją. </p>"
             },
@@ -186,51 +182,51 @@
                 "taskCompleteText": "Czy znałeś/znałaś już wszystkie wymienione prawa człowieka? Które z nich są dla Ciebie nowe? Czy było łatwo czy trudno wyjaśnić znaczenie tych praw i znaleźć powiązanie między nimi a mową nienawiści? Czy potrafisz wymienić inne prawa człowieka, które nie zostały wspomniane?",
                 "articles": [
                     {
-                        "title": "Sztuka. 1",
+                        "title": "Art.  1",
                         "text": "Wszystkie istoty ludzkie rodzą się wolne i równe w godności i prawach."
                     },
                     {
-                        "title": "Sztuka. 2",
+                        "title": "Art.  2",
                         "text": "Każda osoba jest uprawniona do równego traktowania bez względu na rasę, kolor skóry, płeć, język, religię, poglądy polityczne, posiadany majątek, urodzenie lub jakąkolwiek inną sytuację."
                     },
                     {
-                        "title": "Sztuka. 3",
+                        "title": "Art.  3",
                         "text": "Każda osoba ma prawo do życia, wolności i bezpieczeństwa osobistego."
                     },
                     {
-                        "title": "Sztuka. 5",
+                        "title": "Art.  5",
                         "text": "Nikt nie może być poddawany torturom albo okrutnemu, nieludzkiemu lub poniżającemu traktowaniu lub karaniu."
                     },
                     {
-                        "title": "Sztuka. 7",
+                        "title": "Art.  7",
                         "text": "Wszyscy są równi wobec prawa."
                     },
                     {
-                        "title": "Sztuka. 13",
+                        "title": "Art.  13",
                         "text": "Każda osoba jest uprawniona do wolności poruszania się i osiedlania w każdym Państwie."
                     },
                     {
-                        "title": "Sztuka. 14",
+                        "title": "Art.  14",
                         "text": "W razie prześladowania każda osoba jest uprawniona do ubiegania się o azyl i korzystania z niego w innych krajach."
                     },
                     {
-                        "title": "Sztuka. 16",
+                        "title": "Art.  16",
                         "text": "Wszyscy mają prawo do zawierania związku małżeńskiego i zakładania rodziny."
                     },
                     {
-                        "title": "Sztuka. 18",
+                        "title": "Art.  18",
                         "text": "Każdy ma prawo wierzyć w co chce (włączając w to religię, ale nie ograniczając się do niej)."
                     },
                     {
-                        "title": "Sztuka. 19",
+                        "title": "Art.  19",
                         "text": "Każda jednostka ma prawo do wolności poglądów i wypowiedzi."
                     },
                     {
-                        "title": "Sztuka. 29",
+                        "title": "Art.  29",
                         "text": "Wszyscy muszą szanować prawa innych."
                     },
                     {
-                        "title": "Sztuka. 30",
+                        "title": "Art.  30",
                         "text": "Nikt nie ma prawa odbierać nikomu któregokolwiek z tych praw."
                     }
                 ],
@@ -670,7 +666,7 @@
             "nInRecommendations": "W zaleceń",
             "nOutRecommendations": "Zalecenia",
             "expandable": "Rozszerzalne",
-            "label": "Etykieta"
+            "label": "Etykieta kanału"
         }
     },
     "language": {

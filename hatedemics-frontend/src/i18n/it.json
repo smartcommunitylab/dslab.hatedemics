@@ -15,14 +15,14 @@
         "network": "Rete",
         "channel": "Canale",
         "conversation": "Conversazione",
-        "quickGuide": "Guida rapida",
+        "quickGuide": "Glossario",
         "counterspeech": "Contro-narrazione",
         "projects": "Progetti",
         "credits": "Crediti",
         "logout": "Esci"
     },
     "counterspeechGuide": {
-        "guideTitle": "Guida Rapida",
+        "guideTitle": "Glossario",
         "guideItems": {
             "counterspeech": {
                 "title": "Contro-narrazione",
@@ -47,8 +47,8 @@
         }
     },
     "home": {
-        "title": "Combattere odio e disinformazione online",
-        "description": "HATEDEMICS è una piattaforma che sfrutta l’intelligenza artificiale per analizzare contenuti in rete, potenziare il pensiero critico e allenare la capacità di risposta ai discorsi d’odio.",
+        "title": "Combattere Odio e Disinformazione Online",
+        "description": "La piattaforma Hatedemics sfrutta l'intelligenza artificiale per analizzare i contenuti online, migliorare il pensiero critico e addestrare le risposte ai discorsi d'odio.",
         "network": "Esplora la Rete",
         "networkDescription": "Una mappa interattiva per osservare le connessioni tra canali, contenuti e dinamiche legate a odio e disinformazione online. Scopri cosa accade in rete, segui i flussi e individua i nodi chiave della comunicazione tossica.",
         "networkButton": "Vai alla rete",
@@ -60,7 +60,7 @@
         "educationalButton": "Vai alla sezione Educativa",
         "guideDescription": "Cosa sapere prima di usare la piattaforma.",
         "guideButton": "Apri Guida",
-        "guideTitle": "Guida Rapida",
+        "guideTitle": "Glossario",
         "guideItems": {
             "network": {
                 "title": "Rete",
@@ -85,7 +85,7 @@
         }
     },
     "networkGuide": {
-        "guideTitle": "Guida alla Rete",
+        "guideTitle": "Glossario",
         "guideItems": {
             "network": {
                 "title": "Rete",
@@ -145,10 +145,6 @@
             {
                 "title": "Cos'è Hatedemics",
                 "html": "<p><strong>Hatedemics</strong> è un progetto europeo che si propone di sensibilizzare sul tema dell’odio online, della disinformazione e del modo in cui questi fenomeni si intrecciano. Il progetto mira a fornire strumenti a ONG, organizzazioni della società civile, fact-checker, autorità pubbliche e giovani per prevenire e contrastare efficacemente polarizzazione, intolleranza e teorie del complotto.</p><p><strong>Hatedemics</strong> utilizza tecnologie basate sull’intelligenza artificiale in due modi principali:</p><ul><li><strong>Analisi dei dati</strong>: analizza grandi quantità di dati provenienti da una popolare piattaforma di messaggistica (Telegram), offrendo approfondimenti sui trend legati all’odio online e alla disinformazione.</li><li><strong>Contro-narrazione</strong>: genera risposte dialogiche a contenuti d’odio o disinformazione, chiamate “contro-narrazioni”. Questo aiuta le persone a comprendere quando e come rispondere all’odio basato su informazioni false, utilizzando dati verificati.</li></ul><p>Visita il <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">sito web di Hatedemics</a> per saperne di più.</p>"
-            },
-            {
-                "title": "Alcune definizioni",
-                "html": "<p><strong>Discorso d’odio</strong>: Ci rifacciamo alla definizione dell’Ufficio delle Nazioni Unite per la Prevenzione del Genocidio e la Responsabilità di Proteggere (2019), secondo cui il discorso d’odio è <em>“qualsiasi tipo di comunicazione, orale, scritta o comportamentale, che attacca o utilizza un linguaggio denigratorio o discriminatorio nei confronti di una persona o di un gruppo in base a chi sono”</em>. In particolare, nel progetto consideriamo i seguenti gruppi come frequentemente colpiti dall’odio: comunità LGBTQ+, migranti, musulmani, ebrei, rom, persone nere e persone con disabilità.</p><p><strong>Check-worthiness</strong>: Indica quanto una dichiarazione, affermazione o post meriti una verifica dei fatti per la sua possibile falsità, rilevanza pubblica o impatto dannoso. Si tratta di un giudizio soggettivo, basato su alcuni criteri chiave: se il contenuto include un’affermazione (statistiche, legami di causa-effetto, ecc.), se può essere potenzialmente falsa e se è rilevante per il pubblico o impatta individui o gruppi. <strong>Nota</strong>: Le affermazioni facilmente verificabili da un utente medio (es. “La popolazione della Cina è la metà di quella italiana”) non sono considerate degne di verifica, perché non richiedono l’intervento di un esperto.</p><p><strong>Disinformazione</strong>: Si parla di disinformazione quando informazioni false o fuorvianti vengono create e diffuse deliberatamente con l’intento di ingannare. Si distingue dalla misinformazione, che è semplicemente informazione errata condivisa per errore. L’elemento chiave della disinformazione è quindi l’intenzione di ingannare. Per identificare la disinformazione, utilizziamo strumenti avanzati chiamati <em>“indici di rischio infodemico”</em>. Questi ci aiutano a individuare conversazioni online in cui circola molto contenuto ingannevole, analizzando i link condivisi e l’interazione del pubblico con tali contenuti, valutandone così l’affidabilità.</p><p>Vuoi approfondire? Consulta: Gallotti, R., Valle, F., Castaldo, N., Sacco, P., & De Domenico, M. (2020). <em>Assessing the risks of 'infodemics' in response to COVID-19 epidemics</em>. <strong>Nature Human Behaviour</strong>, 4(12), 1285–1293.</p>"
             },
             {
                 "title": "Cosa include la piattaforma",
@@ -747,7 +743,7 @@
             "nInRecommendations": "Raccomandazioni in entrata",
             "nOutRecommendations": "Raccomandazioni in uscita",
             "expandable": "Espandibile",
-            "label": "Etichetta"
+            "label": "Etichetta Canale"
         }
     },
     "language": {
