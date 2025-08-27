@@ -801,6 +801,10 @@
             "out": "Out Recommendations",
             "out_degree": "Out-degree ",
             "in_degree": "In-degree ",
+            "n_in_recommendation": "In Recommendations",
+            "n_out_recommendation": "Out Recommendations",
+            "n_in_recommended": "In Recommendations",
+            "n_out_recommended": "Out Recommendations",
             "label": "Color"
         },
         "size": {
@@ -812,8 +816,10 @@
             "label": "Size",
              "out_degree": "Out-degree ",
             "in_degree": "In-degree ",
-            "n_out_recommended": "Out Recommendations",
-            "n_in_recommended": "In Recommendations"
+"n_in_recommendation": "In Recommendations",
+            "n_out_recommendation": "Out Recommendations",
+            "n_in_recommended": "In Recommendations",
+            "n_out_recommended": "Out Recommendations"
         },
         "tooltip": {
             "label": "Label",
@@ -837,12 +843,14 @@
             "title": "Title",
             "count": "% of messages",
             "hs": "% of Hate Speech",
-            "cw": "% of Check Worthy"
+            "cw": "% of Check Worthy",
+            "sentiment_percentage": "Main Sentiment"
         }
     },
     "channelInfo": {
         "about": "About:",
         "channelId": "Channel ID:",
+        "label": "Channel Label:",
         "title": "Title",
         "description": "Description:",
         "nMessages": "Total messages:",

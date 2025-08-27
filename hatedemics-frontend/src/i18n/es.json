@@ -768,7 +768,11 @@
             "out": "Recomendaciones",
             "out_degree": "Atenuar ",
             "in_degree": "En grados ",
-            "label": "Color"
+            "label": "Color",
+            "n_in_recommendation": "En recomendaciones",
+            "n_out_recommendation": "Recomendaciones",
+            "n_out_recommended": "Recomendaciones",
+            "n_in_recommended": "En recomendaciones"
         },
         "size": {
             "disable": "Deshabilitar el tamaño",
@@ -779,6 +783,8 @@
             "label": "Tamaño",
             "out_degree": "Atenuar ",
             "in_degree": "En grados ",
+"n_in_recommendation": "En recomendaciones",
+            "n_out_recommendation": "Recomendaciones",
             "n_out_recommended": "Recomendaciones",
             "n_in_recommended": "En recomendaciones"
         },
@@ -804,12 +810,14 @@
             "title": "Título",
             "count": "% de mensajes",
             "hs": "% del discurso de odio",
-            "cw": "% de cheque digno"
+            "cw": "% de cheque digno",
+            "sentiment_percentage": "Sentimiento principal"
         }
     },
     "channelInfo": {
         "about": "Acerca de:",
         "channelId": "ID de canal:",
+        "label":"Etiqueta del canal",
         "title": "Título",
         "description": "Descripción:",
         "nMessages": "Mensajes totales:",

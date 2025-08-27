@@ -29,22 +29,24 @@ onMounted(async () => {
 
 <template>
   <v-container>
-    <v-card v-if="selectedChannelInfo" class="mx-auto pa-4 rounded-lg" elevation="2">
+    <v-card v-if="selectedChannelInfo" class="mx-auto pa-4 rounded-lg" elevation="0">
 
 
 
       <v-card-text class="bg-surface-light pt-4">
         <v-row dense>
           <v-col cols="12" sm="6" v-if="selectedChannelInfo?.preprocessed_about">
-            <v-icon class="mr-2" color="primary">mdi-information</v-icon>
-            <span class="font-weight-bold">{{ t("channelInfo.about") }}:</span>
-            <span class="text-wrap">{{ selectedChannelInfo.preprocessed_about }}</span>
+            
+            <v-icon class="mr-2" color="primary">mdi-tag</v-icon>
+            <span class="font-weight-bold">{{ t("channelInfo.label") }}</span>
+            {{ selectedChannelInfo.label }}
           </v-col>
 
           <v-col cols="12" sm="6" v-if="selectedChannelInfo?.id">
-            <v-icon class="mr-2" color="primary">mdi-identifier</v-icon>
-            <span class="font-weight-bold">{{ t("channelInfo.channelId") }}:</span>
-            {{ selectedChannelInfo.id }}
+            <v-icon class="mr-2" color="primary">mdi-information</v-icon>
+            <span class="font-weight-bold">{{ t("channelInfo.about") }}</span>
+            <span class="text-wrap">{{ selectedChannelInfo.preprocessed_about }}</span>
+            
           </v-col>
 
           <v-col cols="12" sm="6" v-if="selectedChannelInfo?.message_count">
@@ -84,9 +86,9 @@ onMounted(async () => {
           </v-col>
         </v-row>
 
-        <v-divider class="my-4"></v-divider>
+        <!-- <v-divider class="my-4"></v-divider> -->
 
-        <v-list v-if="dataEntries.length">
+        <!-- <v-list v-if="dataEntries.length">
           <v-list-subheader class="text-h6 font-weight-bold">
             {{ t("channelInfo.topics") }}
           </v-list-subheader>
@@ -97,7 +99,7 @@ onMounted(async () => {
             >
               {{ (value as any).topic_label }}
             </v-chip>
-        </v-list>
+        </v-list> -->
       </v-card-text>
 
 
