@@ -1,6 +1,6 @@
 // store/topics/index.ts
 import { API } from "@/services";
-import type { APIResponse, Topic } from "@/services/types";
+import type { APIResponse, Sentiment, Topic } from "@/services/types";
 import type { AxiosError } from "axios";
 import { defineStore } from "pinia";
 import { ref } from 'vue';
@@ -10,7 +10,17 @@ export const useTopicsStore = defineStore("topicsStore", () => {
   const topics = ref<Topic[]>([]);
   const selectedTopic = ref<Topic | null>(null);
   const selectedChannelTopic = ref<Topic | null>(null);
-
+  
+  function getDominantSentiment(sentiments: Record<string, number>): Sentiment {
+    const entry = Object.entries(sentiments).sort((a, b) => b[1] - a[1])[0];
+    if (!entry) return "neutral";
+  
+    const [label] = entry;
+    if (label === "positive" || label === "negative" || label === "neutral") {
+      return label;
+    }
+    return "neutral"; // fallback
+  }
   function initTopics(data: any) {
     if (data)
       generic.value = {
@@ -32,14 +42,7 @@ export const useTopicsStore = defineStore("topicsStore", () => {
     }
     if (data?.topics)
       topics.value = Object.keys(data.topics).map((key) => {
-        const sentiment = data.topics[key]["topic-sentiment_percentage"] as Record<string, number>;
-        const topSentiment = Object.entries(sentiment)
-          .sort((a, b) => b[1] - a[1])[0]?.[0] ?? "neutral";
-      
-        // Mappa a -1 / 0 / +1
-        let sentimentValue = 0;
-        if (topSentiment === "positive") sentimentValue = 1;
-        else if (topSentiment === "negative") sentimentValue = -1;
+        
       
         return {
           name: data.topics[key]["topic_label"],
@@ -49,16 +52,8 @@ export const useTopicsStore = defineStore("topicsStore", () => {
           npw: data.npw.topics[key]["topic-npw"],
           hate_npw: data.npw.topics[key]["topic-hate_npw"],
           nonhate_npw: data.npw.topics[key]["topic-nonhate_npw"],
-          sentiment_percentage:  (() => {
-            const sentiments = data.topics[key]["topic-sentiment_percentage"] ?? {};
-            const entries = Object.entries(sentiments) as [string, number][];
-            if (entries.length === 0) return "neutral";
-          
-            // prendi la chiave col valore massimo
-            const dominant = entries.sort((a, b) => b[1] - a[1])[0][0];
-            return dominant;
-          })(),
-        };
+          sentiment_percentage: getDominantSentiment(data.npw.topics[key]["topic-sentiment_percentage"])
+        }
       });
     else {
       topics.value = [];
