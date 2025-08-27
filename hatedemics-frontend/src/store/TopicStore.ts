@@ -31,15 +31,35 @@ export const useTopicsStore = defineStore("topicsStore", () => {
       };
     }
     if (data?.topics)
-    topics.value = Object.keys(data.topics).map((key) => ({
-      name: data.topics[key]["topic_label"],
-      count_percentage: data.topics[key]["topic-count_percentage"],
-      hs_percentage: data.topics[key]["topic-hs_percentage"],
-      cw_percentage: data.topics[key]["topic-cw_percentage"],
-      npw: data.npw.topics[key]["topic-npw"],
-      hate_npw: data.npw.topics[key]["topic-hate_npw"],
-      nonhate_npw: data.npw.topics[key]["topic-nonhate_npw"],
-    }));
+      topics.value = Object.keys(data.topics).map((key) => {
+        const sentiment = data.topics[key]["topic-sentiment_percentage"] as Record<string, number>;
+        const topSentiment = Object.entries(sentiment)
+          .sort((a, b) => b[1] - a[1])[0]?.[0] ?? "neutral";
+      
+        // Mappa a -1 / 0 / +1
+        let sentimentValue = 0;
+        if (topSentiment === "positive") sentimentValue = 1;
+        else if (topSentiment === "negative") sentimentValue = -1;
+      
+        return {
+          name: data.topics[key]["topic_label"],
+          count_percentage: data.topics[key]["topic-count_percentage"],
+          hs_percentage: data.topics[key]["topic-hs_percentage"],
+          cw_percentage: data.topics[key]["topic-cw_percentage"],
+          npw: data.npw.topics[key]["topic-npw"],
+          hate_npw: data.npw.topics[key]["topic-hate_npw"],
+          nonhate_npw: data.npw.topics[key]["topic-nonhate_npw"],
+          sentiment_percentage:  (() => {
+            const sentiments = data.topics[key]["topic-sentiment_percentage"] ?? {};
+            const entries = Object.entries(sentiments) as [string, number][];
+            if (entries.length === 0) return "neutral";
+          
+            // prendi la chiave col valore massimo
+            const dominant = entries.sort((a, b) => b[1] - a[1])[0][0];
+            return dominant;
+          })(),
+        };
+      });
     else {
       topics.value = [];
     }

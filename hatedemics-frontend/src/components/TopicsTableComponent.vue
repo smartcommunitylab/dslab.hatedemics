@@ -22,6 +22,7 @@ const headers = computed(() => [
   { title: t('topicsTable.header.count'), key: "count_percentage" },
   {title:t('topicsTable.header.cw'),key:"cw_percentage"},
   {title:t('topicsTable.header.hs'),key:"hs_percentage"},
+  {title:t('topicsTable.header.sentiment_percentage'),key:"sentiment_percentage"},
 ]);
 const handleClick = ( item:Topic) =>{
   // console.log("Clicked item: ", row) 
@@ -31,7 +32,17 @@ const handleClick = ( item:Topic) =>{
 type SortItem = { key: string; order: boolean | "desc" | "asc" | undefined };
 
 const sortBy = ref<SortItem[]>([{ key: "hs_percentage", order: "desc" }]);
-
+  const sentimentToEmoji = (sentiment: "positive" | "negative" | "neutral") => {
+  switch (sentiment) {
+    case "positive":
+      return { icon: "mdi-emoticon-happy", color: "green" };
+    case "negative":
+      return { icon: "mdi-emoticon-angry", color: "red" };
+    case "neutral":
+    default:
+      return { icon: "mdi-emoticon-neutral", color: "orange" };
+  }
+};
 </script>
 <template>
     <v-container>
@@ -69,6 +80,13 @@ const sortBy = ref<SortItem[]>([{ key: "hs_percentage", order: "desc" }]);
               <td class="text-xs-right">{{ props.item.count_percentage }}</td>
               <td class="text-xs-right">{{ props.item.cw_percentage }}</td>
               <td class="text-xs-right">{{ props.item.hs_percentage }}</td>
+              <td class="text-xs-right"> 
+                <v-icon
+    :color="sentimentToEmoji(props.item.sentiment_percentage).color"
+  >
+    {{ sentimentToEmoji(props.item.sentiment_percentage).icon }}
+  </v-icon>
+              </td>
             </tr>
           </template>
         </v-data-table>

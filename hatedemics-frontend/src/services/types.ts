@@ -314,7 +314,8 @@ export type Topic = {
     cw_percentage: number,
     npw:any,
     hate_npw:any,
-    nonhate_npw:any
+    nonhate_npw:any,
+    sentiment_percentage: "neutral" | "positive" | "negative"
    }
 
 

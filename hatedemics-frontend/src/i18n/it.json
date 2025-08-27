@@ -769,7 +769,11 @@
             "iri": "Infodemic Risk Index",
             "hs": "Hate Speech Score",
             "out_degree": "Nodi in uscita",
-            "in_degree": "Nodi in entrata"
+            "in_degree": "Nodi in entrata",
+            "n_in_recommendation": "Nodi in entrata",
+            "n_out_recommendation": "Nodi in uscita",
+                        "n_out_recommended": "Nodi in uscita",
+            "n_in_recommended": "Nodi  in entrata"
         },
         "size": {
             "disable": "Nessuno (dimensione fissa)",
@@ -780,9 +784,10 @@
             "label": "Etichetta",
             "out_degree": "Nodi in uscita",
             "in_degree": "Nodi in entrata",
+           "n_in_recommendation": "Nodi in entrata",
+            "n_out_recommendation": "Nodi in uscita",
             "n_out_recommended": "Nodi in uscita",
-            "n_in_recommended": "Nodi  in entrata"
-        },
+            "n_in_recommended": "Nodi  in entrata" },
         "resetView": " Reimposta vista",
         "tooltip": {
             "label": "Etichetta",
@@ -806,12 +811,14 @@
             "title": "Titolo",
             "count": "% di messaggi",
             "hs": "% di Hate Speech",
-            "cw": "% di Check Worthy"
+            "cw": "% di Check Worthy",
+            "sentiment_percentage": "Sentimento principale"
         }
     },
     "channelInfo": {
         "about": "Informazioni:",
         "channelId": "ID Canale:",
+        "label": "Etichetta Canale:",
         "title": "Titolo",
         "description": "Descrizione:",
         "nMessages": "Totale messaggi:",

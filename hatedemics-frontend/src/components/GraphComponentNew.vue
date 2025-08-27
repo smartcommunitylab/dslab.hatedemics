@@ -16,7 +16,7 @@ const highlightedNodes = ref<Set<string>>(new Set());
 
 const loading = ref(false);
 const colorBy = ref('iri');          // colore = infodemic risk score
-const sizeBy = ref('n_out_recommended');   // dimensione = in recommendation
+const sizeBy = ref('hs');   // dimensione = hate speech
 let selectedNode: { id: string; iri?: number; followers?: number } | null = null;
 const tooltip = ref<{ show: boolean; x: number; y: number; node: any | null }>({
   show: false,
@@ -53,13 +53,13 @@ const isFullScreen = ref(false);
 let graphInstance: any = null;
 const optionsExpanded = ref(true);
 
-
-const getColorByValue = (value: number|undefined, min: number, max: number) => {
+const getColorByValue = (value: number | undefined, min: number, max: number) => {
   if (value === undefined || value === null || value === -1) return "";
-  const normalized = (value - min) / (max - min); // Normalizza tra 0 e 1
-  const r = Math.floor(255 * ( normalized)); // Più alto → più verde
-  const g = Math.floor(255 * (1- normalized));
 
+  const normalized = Math.max(0, Math.min(1, (value - min) / (max - min)));
+
+  const r = Math.floor(255 * normalized);         
+  const g = Math.floor(255 * (1 - normalized));   
   return `rgb(${r}, ${g}, 0)`;
 };
 

@@ -44,7 +44,19 @@ watch(selectedChannelInfo, async (newVal) => {
     <v-card v-if="selectedChannelInfo" class="mx-auto pa-0 rounded" elevation="0">
       <v-card-text class="bg-surface-light pt-4">
         <v-row dense>
+
           <v-tooltip>
+            <template v-slot:activator="{ props }">
+          <v-col cols="12" sm="6" v-if="selectedChannelInfo?.label"  v-bind="props">
+            <v-icon class="mr-2" color="primary">mdi-tag</v-icon>
+            <span class="font-weight-bold">{{ t("channelInfo.label") }}</span>
+            {{ selectedChannelInfo.label }}
+          </v-col>
+            </template>
+            <div class="tooltip-html" v-html="t('dialog.tooltip.label')"></div>
+
+            </v-tooltip>
+            <v-tooltip>
             <template v-slot:activator="{ props }">
               <v-col
                 cols="12"
@@ -61,17 +73,6 @@ watch(selectedChannelInfo, async (newVal) => {
             </template>
             <div class="tooltip-html" v-html="t('dialog.tooltip.about')"></div>
           </v-tooltip>
-          <v-tooltip>
-            <template v-slot:activator="{ props }">
-          <v-col cols="12" sm="6" v-if="selectedChannelInfo?.id"  v-bind="props">
-            <v-icon class="mr-2" color="primary">mdi-identifier</v-icon>
-            <span class="font-weight-bold">{{ t("channelInfo.channelId") }}</span>
-            {{ selectedChannelInfo.id }}
-          </v-col>
-            </template>
-            <div class="tooltip-html" v-html="t('dialog.tooltip.channelId')"></div>
-
-            </v-tooltip>
             <v-tooltip>
               <template v-slot:activator="{ props }">
           <v-col cols="12" sm="6" v-if="selectedChannelInfo?.message_count"  v-bind="props">
@@ -140,9 +141,9 @@ watch(selectedChannelInfo, async (newVal) => {
             </v-tooltip>
         </v-row>
 
-        <v-divider class="my-4"></v-divider>
+        <!-- <v-divider class="my-4"></v-divider> -->
 
-        <v-list v-if="dataEntries.length">
+        <!-- <v-list v-if="dataEntries.length">
           <v-list-subheader class="text-h6 font-weight-bold">
             {{ t("channelInfo.topics") }}
           </v-list-subheader>
@@ -154,7 +155,7 @@ watch(selectedChannelInfo, async (newVal) => {
           >
             {{ value.topic_label }}
           </v-chip>
-        </v-list>
+        </v-list> -->
       </v-card-text>
 
       <v-card-actions v-if="isExtended">

@@ -25,6 +25,8 @@ const currentSizeLabel = computed(() =>
 const colorThresholds = computed(() => {
   switch (props.colorBy) {
     case "iri":
+    return { min: 0, mid: 0.15, max: 0.3 };
+
     case "hs":
       return { min: 0, mid: 0.25, max: 0.5 };
     case "n_out_recommended":
@@ -64,17 +66,29 @@ const sizeThresholds = computed(() => {
       </h4>
 
       <template v-if="props.colorBy !== 'disabled'">
-        <div class="color-gradient-bar" style="position: relative; height: 24px; border-radius: 4px; background: linear-gradient(to right, rgb(255,0,0), rgb(255,255,0), rgb(0,255,0));">
-          <div style="position: absolute; left: 0; bottom: -20px; font-size: 0.75rem; color: #444;">
-            {{ colorThresholds.min }}
-          </div>
-          <div style="position: absolute; left: 50%; transform: translateX(-50%); bottom: -20px; font-size: 0.75rem; color: #444;">
-            {{ colorThresholds.mid }}
-          </div>
-          <div style="position: absolute; right: 0; bottom: -20px; font-size: 0.75rem; color: #444;">
-            {{ colorThresholds.max }}
-          </div>
-        </div>
+        <div class="color-gradient-bar"
+     style="position: relative; height: 24px; border-radius: 4px;
+            background: linear-gradient(to right, rgb(0,255,0), rgb(255,255,0), rgb(255,0,0));">
+
+  <!-- Min -->
+  <div style="position: absolute; left: 0; bottom: -35px; font-size: 0.75rem; color: #444; text-align: center; width: 50px;">
+    {{ colorThresholds.min }}<br />
+    <span class="font-italic">{{ t("graphInteraction.legend.low") }}</span>
+  </div>
+
+  <!-- Mid -->
+  <div style="position: absolute; left: 50%; transform: translateX(-50%); bottom: -35px; font-size: 0.75rem; color: #444; text-align: center; width: 50px;">
+    {{ colorThresholds.mid }}<br />
+    <span class="font-italic">{{ t("graphInteraction.legend.medium") }}</span>
+  </div>
+
+  <!-- Max -->
+  <div style="position: absolute; right: 0; bottom: -35px; font-size: 0.75rem; color: #444; text-align: center; width: 50px;">
+    {{ colorThresholds.max }}<br />
+    <span class="font-italic">{{ t("graphInteraction.legend.high") }}</span>
+  </div>
+</div>
+
       </template>
       <template v-else>
         <small class="text-grey">{{ t("graphInteraction.legend.defaultColor") }}</small>
@@ -82,7 +96,7 @@ const sizeThresholds = computed(() => {
     </div>
 
     <!-- Dimensioni -->
-    <div>
+    <div class="pt-6">
       <h4 class="text-body-2 font-weight-medium mb-1">
         {{ t("graphInteraction.legend.size") }}: 
         <span class="font-italic">{{ currentSizeLabel }}</span>
