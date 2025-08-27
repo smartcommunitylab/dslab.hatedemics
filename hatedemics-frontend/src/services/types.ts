@@ -307,6 +307,8 @@ export type Reaction = {
   _: string
   emoticon: string
 }
+export type Sentiment = "neutral" | "positive" | "negative";
+
 export type Topic = { 
   name: string,
    count_percentage: number,
@@ -315,7 +317,7 @@ export type Topic = {
     npw:any,
     hate_npw:any,
     nonhate_npw:any,
-    sentiment_percentage: "neutral" | "positive" | "negative"
+    sentiment_percentage: Sentiment
    }
 
 
