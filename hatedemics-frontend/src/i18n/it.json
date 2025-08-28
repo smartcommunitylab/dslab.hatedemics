@@ -145,17 +145,21 @@
     "onboarding": {
         "steps": [
             {
-                "title": "Cos'è Hatedemics",
-                "html": "<p><strong>Hatedemics</strong> è un progetto europeo che si propone di sensibilizzare sul tema dell’odio online, della disinformazione e del modo in cui questi fenomeni si intrecciano. Il progetto mira a fornire strumenti a ONG, organizzazioni della società civile, fact-checker, autorità pubbliche e giovani per prevenire e contrastare efficacemente polarizzazione, intolleranza e teorie del complotto.</p><p><strong>Hatedemics</strong> utilizza tecnologie basate sull’intelligenza artificiale in due modi principali:</p><ul><li><strong>Analisi dei dati</strong>: analizza grandi quantità di dati provenienti da una popolare piattaforma di messaggistica (Telegram), offrendo approfondimenti sui trend legati all’odio online e alla disinformazione.</li><li><strong>Contro-narrazione</strong>: genera risposte dialogiche a contenuti d’odio o disinformazione, chiamate “contro-narrazioni”. Questo aiuta le persone a comprendere quando e come rispondere all’odio basato su informazioni false, utilizzando dati verificati.</li></ul><p>Visita il <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">sito web di Hatedemics</a> per saperne di più.</p>"
-            },
-            {
-                "title": "Cosa include la piattaforma",
-                "html": "<p><strong>Dati:</strong> La piattaforma include dati statici: circa 10 milioni di messaggi Telegram raccolti da quasi 1.000 chat pubbliche, in 4 lingue (italiano, inglese, spagnolo e polacco). Telegram è stato scelto perché consente un accesso libero alla raccolta di dati su larga scala, diversamente da altre piattaforme di messaggistica.</p><p><strong>Analisi:</strong> Gli approfondimenti visualizzati vengono generati automaticamente da tecnologie basate su intelligenza artificiale. Di conseguenza, potrebbero occasionalmente contenere imprecisioni! In caso di dubbi, rivolgiti agli educatori di riferimento.</p><p><strong>Chatbot:</strong> La piattaforma include anche un modello di dialogo che simula l’interazione con un hater che diffonde disinformazione. Le risposte sono generate automaticamente da un modello linguistico specializzato, ma possono essere modificate. Il chatbot supporta 5 lingue: italiano, inglese, spagnolo, polacco e maltese.</p>"
-            },
-            {
-                "title": "Avviso di contenuto sensibile",
-                "html": "<p><strong>Attenzione:</strong> Questa piattaforma contiene esempi espliciti che alcuni utenti potrebbero trovare offensivi.</p>"
-            }
+                "title": "Che cos’è Hatedemics",
+                "html": "<p><strong>Hatedemics</strong> è un progetto europeo che mira a sensibilizzare sul tema dell’odio online, della disinformazione e di come questi due fenomeni si intrecciano. L’obiettivo è dare strumenti a ONG, organizzazioni della società civile, fact-checker, autorità pubbliche e giovani per prevenire e contrastare efficacemente polarizzazione, intolleranza e teorie del complotto.</p><p>Visita il <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">sito web di Hatedemics</a> per saperne di più.</p>"
+              },
+              {
+                "title": "Cosa include la piattaforma?",
+                "html": "<p style='margin-bottom:12px'>🎓 <strong>Attività educative:</strong> Metti alla prova le tue conoscenze su odio e disinformazione con esercizi interattivi dedicati!</p><p style='margin-bottom:12px'>🌐 <strong>Esplora i messaggi su Telegram:</strong> Scopri come migliaia di canali Telegram sono connessi con una mappa interattiva (<em>Network</em>), cosa dicono davvero (<em>Channel</em>) e come appaiono i contenuti d’odio e fuorvianti (<em>Conversation</em>).</p><p style='margin-bottom:12px'>💬 <strong>Scrittura di counterspeech:</strong> Quando e come rispondere all’odio basato sulla disinformazione? Qui trovi un modello di dialogo che simula l’interazione con un hater, generando risposte di <em>counterspeech</em> basate sui fatti.</p><p>🌍 <strong>Lingue:</strong> La piattaforma supporta 5 lingue: Inglese, Spagnolo, Italiano, Maltese e Polacco.</p>"
+              },
+              {
+                "title": "Come usa l’IA Hatedemics?",
+                "html": "<ul style='padding-left:0; list-style:none'><li style='margin-bottom:12px'>📊 <strong>Analisi dei dati:</strong> Analizza grandi volumi di dati da Telegram per rivelare tendenze di odio e disinformazione. Gli insight sono generati dall’IA e potrebbero non essere sempre accurati: in caso di dubbio consulta gli educatori di riferimento.</li><li>🤖 <strong>Generazione di dialoghi di counterspeech:</strong> La piattaforma presenta un modello di dialogo che simula interazioni con haters, generando risposte di <em>counterspeech</em> modificabili dagli utenti per imparare quando e come rispondere con i fatti.</li></ul>"
+              },
+              {
+                "title": "Avvertenza sui contenuti",
+                "html": "<p>⚠️ <strong>Attenzione:</strong> la piattaforma contiene esempi non oscurati che alcuni lettori potrebbero trovare offensivi.</p>"
+              }
         ],
         "prev": "Indietro",
         "next": "Avanti",
@@ -847,6 +851,11 @@
     },
     "message": {
         "title": "Approfondimenti Chat ",
+        "reliability": {
+            "reliable": "Affidabile",
+            "unreliable": "Non affidabile",
+            "unknown": "Sconosciuto"
+        },
         "header": {
             "id": "ID",
             "date": "Data",
@@ -855,18 +864,23 @@
             "mediaType": "Tipo",
             "reactions": "Reazioni",
             "nrViews": "Visualizzazioni",
+            "nrReactions": "Reazioni",
             "hateLabel": "Hate Speech",
             "checkLabel": "Check Worthy",
             "topic": "Argomento",
             "target": "Destinatario",
             "keywordsMatch": "Parole chiave",
-            "counterspeech": "Inizia dialogo"
+            "counterspeech": "Inizia dialogo",
+            "averageReliability": "Affidabilità media"
         },
         "dialog": {
             "start": "Inizia una nuova conversazione con Destinatario={target}",
             "jump": "Vai alla conversazione",
             "noData": "Nessun dato disponibile",
-            "error": "Errore durante il caricamento della chat"
+            "error": "Errore durante il caricamento della chat",
+            "startConversation": "Avvia conversazione",
+            "startConversationTitle": "Inizia una nuova conversazione",
+            "startConversationDescription": "Seleziona un argomento per iniziare una nuova conversazione"
         },
         "noTarget": "Nessun destinatario identificato",
         "target": "Clicca per selezionare un destinatario",
@@ -882,7 +896,7 @@
             "DISABLED": "Disabili",
             "JEWS": "Ebrei",
             "MUSLIMS": "Musulmani",
-            "LGBT+": "LGBT+",
+            "LGBTQIA+": "LGBTQIA+",
             "MIGRANTS": "Migranti",
             "OTHER": "Altro",
             "POC": "Persone di colore",

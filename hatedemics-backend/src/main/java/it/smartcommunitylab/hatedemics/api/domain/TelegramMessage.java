@@ -58,6 +58,10 @@ public class TelegramMessage {
     @Column(name = "preprocessed_message")
     private String preprocessedMessage;
 
+    @JsonProperty("average_reliability")
+    @Column(name = "average_reliability")
+    private Double averageReliability;
+
     private String reactions;
 
     @JsonProperty("replies_to_msg_text")

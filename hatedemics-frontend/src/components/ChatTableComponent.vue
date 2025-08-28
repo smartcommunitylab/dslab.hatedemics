@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, reactive, ref, watch } from "vue";
+import { computed, reactive, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRouter } from "vue-router";
 import { useMessagesStore } from "@/store/MessageStore";
@@ -45,13 +45,17 @@ const headers = computed(() => [
     sortable: true,
   },
   { title: t("message.header.from"), key: "from_user", sortable: true },
-  { title: t("message.header.nrViews"), key: "nr_views", sortable: true },
+  { title: t("message.header.nrReactions"), key: "nr_reactions", sortable: true },
   { title: t("message.header.hateLabel"), key: "hate_label", sortable: true },
   { title: t("message.header.checkLabel"), key: "checkworthy_label", sortable: true },
+  {
+    title: t("message.header.averageReliability"),
+    key: "average_reliability",
+    sortable: true,
+  },
   // { title: t("message.header.topic"), key: "topic_label", sortable: true },
   { title: t("message.header.target"), key: "target", sortable: true },
-  { title: t("message.header.counterspeech"), key: "actions", sortable: false },
-
+  // { title: t("message.header.counterspeech"), key: "actions", sortable: false },
 ]);
 
 // Mappa icone media type
@@ -145,7 +149,7 @@ const fetchMessages = async () => {
       },
       filters.target ?? undefined,
       filters.checkworthy ?? undefined,
-      filters.hate ?? undefined,
+      filters.hate ?? undefined
       // filters.topic ?? undefined
     );
     if (success && total) {
@@ -164,15 +168,17 @@ const getRowClass = (item: any) => {
   };
 };
 const startDialogueWithTarget = function (target: any) {
-    // Logica per avviare una conversazione con il target
-    console.log(`Start conversation with ${target}`);
-  }
+  // Logica per avviare una conversazione con il target
+  console.log(`Start conversation with ${target}`);
+};
 
 // Define parsedTargets as a computed property
 const parsedTargets = computed(() => {
   if (selectedMessage.value?.target) {
-    return selectedMessage.value.target.replace(/[{}'"]/g, '') // Rimuove parentesi e virgolette
-    .split(",").map((t: string) => t.trim());
+    return selectedMessage.value.target
+      .replace(/[{}'"]/g, "") // Rimuove parentesi e virgolette
+      .split(",")
+      .map((t: string) => t.trim());
   }
   return [];
 });
@@ -216,16 +222,51 @@ const getColor = (user: string) => {
 
   return colors[hashCode(user) % colors.length];
 };
-const getFooterText= () => {
-    const pageStart = (pagination.page * pagination.size) + 1;
-    const pageStop = Math.min((pagination.page + 1) * pagination.size, totalItems.value);
-    return t('message.footer.pagination.range', {
+const getFooterText = () => {
+  const pageStart = pagination.page * pagination.size + 1;
+  const pageStop = Math.min((pagination.page + 1) * pagination.size, totalItems.value);
+  return t("message.footer.pagination.range", {
     pageStart,
     pageStop,
-    totalItems: totalItems.value
-  })
-    // return `${pageStart}-${pageStop} of ${totalItems.value} retrieved messages`;
+    totalItems: totalItems.value,
+  });
+  // return `${pageStart}-${pageStop} of ${totalItems.value} retrieved messages`;
+};
+const getReliabilityText = (value: number) => {
+  switch (value) {
+    case -1: return t("message.reliability.unknown");
+    case 0: return t("message.reliability.reliable");
+    case 1: return t("message.reliability.unreliable");
+    default: return t("message.reliability.unknown");
   }
+};
+
+
+const getReliabilityColor = (value: number) => {
+  switch (value) {
+    case -1:
+      return "gray";
+    case 0:
+      return "green";
+    case 1:
+      return "red";
+    default:
+      return "gray";
+  }
+};
+
+const getReliabilityIcon = (value: number) => {
+  switch (value) {
+    case -1:
+      return "mdi-help-circle-outline";
+    case 0:
+      return "mdi-check-circle";
+    case 1:
+      return "mdi-alert-circle";
+    default:
+      return "mdi-help-circle-outline";
+  }
+};
 </script>
 
 <template>
@@ -288,8 +329,6 @@ const getFooterText= () => {
           dense
         />
       </v-col>
-      
-      
     </v-row>
     <v-data-table-server
       :headers="headers"
@@ -301,9 +340,8 @@ const getFooterText= () => {
       :items-per-page="pagination.size"
       :page="pagination.page + 1"
       :items-per-page-options="itemsPerPageOptions"
-      :footer-props="{itemsPerPageText: 'Rows count'}"
-    :page-text="getFooterText()"
-    
+      :footer-props="{ itemsPerPageText: 'Rows count' }"
+      :page-text="getFooterText()"
       return-object
       density="compact"
       hover
@@ -358,6 +396,20 @@ const getFooterText= () => {
           </div>
         </div>
       </template>
+      <template v-slot:item.average_reliability="{ item }">
+        <div class="text-center">
+          <v-icon
+            :icon="getReliabilityIcon(item.average_reliability)"
+            :color="getReliabilityColor(item.average_reliability)"
+          />
+          <div
+            class="mt-1"
+            :style="{ color: getReliabilityColor(item.average_reliability) }"
+          >
+            {{ getReliabilityText(item.average_reliability) }}
+          </div>
+        </div>
+      </template>
       <template v-slot:item.target="{ item }">
         <span
           v-if="!isEmptyOrSpaces(item?.target!)"
@@ -365,32 +417,22 @@ const getFooterText= () => {
         >
         <span v-else>NA</span>
       </template>
-      <template v-slot:item.actions="{ item }">
-<v-tooltip v-if="!isEmptyOrSpaces(item?.target!)" :text="t('message.target')">
-  <template #activator="{ props }">
-
-      <v-icon
-      v-bind="props"
-
-        color="primary"
-        class="cursor-pointer"    >
-        mdi-arrow-right-bold-circle
-      </v-icon>
-      </template>
-      </v-tooltip>
-      <v-tooltip v-else :text="t('message.noTarget')">
-        <template #activator="{ props }">
-
-      <v-icon 
-      v-bind="props"
-
-        color="grey"
-        class="cursor-pointer"      >
-        mdi-arrow-right-bold-circle
-      </v-icon>
-      </template>
-   </v-tooltip>
-</template>
+      <!-- <template v-slot:item.actions="{ item }">
+        <v-tooltip v-if="!isEmptyOrSpaces(item?.target!)" :text="t('message.target')">
+          <template #activator="{ props }">
+            <v-icon v-bind="props" color="primary" class="cursor-pointer">
+              mdi-arrow-right-bold-circle
+            </v-icon>
+          </template>
+        </v-tooltip>
+        <v-tooltip v-else :text="t('message.noTarget')">
+          <template #activator="{ props }">
+            <v-icon v-bind="props" color="grey" class="cursor-pointer">
+              mdi-arrow-right-bold-circle
+            </v-icon>
+          </template>
+        </v-tooltip>
+      </template> -->
 
       <template v-slot:no-data>
         <div class="text-center pa-4">
@@ -399,38 +441,37 @@ const getFooterText= () => {
         </div>
       </template>
     </v-data-table-server>
-<!-- Menu contestuale -->
-<v-menu
-  v-model="menu"
-  :style="{ top: `${menuY}px`, left: `${menuX}px` }"
-  absolute
-  offset-y
->
-  <v-list>
-    <!-- Itera su ogni target e crea una voce dinamica per ciascuno -->
-    <v-list-item
-      v-for="target in parsedTargets"
-      :key="target"
-      @click="startDialogue(target)"
-      :disabled="isEmptyOrSpaces(target) ||target === 'OTHER'"
-      :class="{
-        'has-target': selectedMessage?.target,
-        'no-target': !selectedMessage?.target,
-      }"
+    <!-- Menu contestuale -->
+    <v-menu
+      v-model="menu"
+      :style="{ top: `${menuY}px`, left: `${menuX}px` }"
+      absolute
+      offset-y
     >
-      <v-list-item-title>
-        {{ t("message.dialog.start",{ target }) }}
-      </v-list-item-title>
-      <!-- <v-list-item-title v-if="target!== 'OTHER'">
+      <v-list>
+        <!-- Itera su ogni target e crea una voce dinamica per ciascuno -->
+        <v-list-item
+          v-for="target in parsedTargets"
+          :key="target"
+          @click="startDialogue(target)"
+          :disabled="isEmptyOrSpaces(target) || target === 'OTHER'"
+          :class="{
+            'has-target': selectedMessage?.target,
+            'no-target': !selectedMessage?.target,
+          }"
+        >
+          <v-list-item-title>
+            {{ t("message.dialog.start", { target }) }}
+          </v-list-item-title>
+          <!-- <v-list-item-title v-if="target!== 'OTHER'">
         {{ t("message.dialog.start",{ target }) }}
       </v-list-item-title>
       <v-list-item-title v-else>
         {{ t("message.dialog.startOther") }}
       </v-list-item-title> -->
-    </v-list-item>
-  </v-list>
-</v-menu>
-   
+        </v-list-item>
+      </v-list>
+    </v-menu>
   </v-container>
 </template>
 

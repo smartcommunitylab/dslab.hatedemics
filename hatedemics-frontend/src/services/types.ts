@@ -220,6 +220,7 @@ export type Message = {
   via_bot_id: any,
   hate_label?: string,
   checkworthy_label?: string,
+  average_reliability: number,
   topic?: string,
   target?: string,
   keywords_match?: string,

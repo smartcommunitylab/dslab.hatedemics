@@ -136,20 +136,20 @@
     "onboarding": {
         "steps": [
           {
-            "title": "X'inhu Hatedemics",
-            "html": "<p><strong>Hatedemics</strong> huwa proġett Ewropew iffokat fuq it-tqajjim ta 'kuxjenza dwar id-diskors ta' mibegħda, id-diżinformazzjoni, u kif dawn iż-żewġ kwistjonijiet jaqsmu. </p><p><strong>Hatedemics</strong> Juża teknoloġiji bbażati fuq l-AI f'żewġ modi ewlenin:</p><ul><li><strong>Analiżi tad-Dejta</strong>: Janalizza volumi kbar ta 'dejta minn pjattaforma ta' messaġġi popolari (telegramma), li tipprovdi għarfien dwar id-diskors ta 'mibegħda u x-xejriet tad-diżinformazzjoni.</li><li><strong>Counterspeech</strong>: Toħloq tweġibiet ibbażati fuq id-djalogu għad-diskors ta 'mibegħda u informazzjoni ħażina, imsejħa \"Counterspeech\". </li></ul><p>Żur il <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">Websajt Hatedemics</a> Biex titgħallem aktar dwar il-proġett.</p>"
+            "title": "X’inhu Hatedemics?",
+            "html": "<p><strong>Hatedemics</strong> huwa proġett Ewropew iffukat fuq li tqajjem kuxjenza dwar diskors ta’ mibegħda, diżinformazzjoni, u kif dawn iż-żewġ problemi jinteraġixxu. Il-proġett għandu l-għan li jsaħħaħ lill-NGOs, organizzazzjonijiet tas-soċjetà ċivili, fact-checkers, awtoritajiet pubbliċi u ż-żgħażagħ biex jipprevjenu u jiġġieldu b’mod effettiv kontra polarizzazzjoni, intolleranza u teoriji tal-konspirazzjoni.</p><p>Żur il-<a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">websajt ta’ Hatedemics</a> biex issir taf aktar.</p>"
           },
           {
-            "title": "Xi definizzjonijiet",
-            "html": "<p><strong>Diskors ta ’mibegħda</strong>: Aħna niddependu fuq id-definizzjoni magħmula mill-uffiċċju tan-NU dwar il-prevenzjoni tal-ġenoċidju u r-responsabbiltà li tipproteġi (2019), li tiddefinixxi d-diskors ta 'mibegħda bħala <em>\"Kull tip ta 'komunikazzjoni fid-diskors, kitba jew imġieba, li tattakka jew tuża lingwa pejorattiva jew diskriminatorja b'referenza għal persuna jew grupp fuq il-bażi ta' min huma\"</em>- </p><p><strong>Iċċekkja l-valur</strong>: Dan jirreferi għall-grad sa fejn dikjarazzjoni, talba, jew post jistħoqqilhom verifika jew verifika tal-fatti minħabba l-falsità potenzjali tagħha, ir-rilevanza pubblika, jew l-impatt ta 'ħsara.  <strong>Nota:</strong> Dikjarazzjonijiet li huma faċilment verifikabbli minn utent medju (per eżempju, \"il-popolazzjoni taċ-Ċina hija nofs dik ta 'l-Italja\") mhumiex ikkunsidrati bħala denji ta' kontroll, peress li ma jeħtiġux verifika esperta.</p><p><strong>Disinformazzjoni</strong>: Id-diżinformazzjoni hija meta informazzjoni falza jew qarrieqa hija maħluqa deliberatament u mifruxa ma 'nies.  <em>għandu l-intenzjoni li jqarraq</em> int.  <em>\"Indikazzjoni tar-Riskju Infodemiku\"</em>- </p><p>Trid tkun taf aktar?  <em>Valutazzjoni tar-riskji ta '' Infodemics 'b'reazzjoni għal Epidemiji Covid-19</em>- <strong>Imġieba tal-Bniedem tan-Natura</strong>, 4 (12), 1285–1293.</p>"
+            "title": "X’jinkludi l-pjattaforma?",
+            "html": "<p style='margin-bottom:12px'>🎓 <strong>Attivitajiet edukattivi:</strong> Ittestja l-għarfien tiegħek dwar diskors ta’ mibegħda u diżinformazzjoni permezz ta’ eżerċizzji interattivi!</p><p style='margin-bottom:12px'>🌐 <strong>Esplora messaġġi fuq Telegram:</strong> Skopri kif eluf ta’ kanali fuq Telegram huma konnessi permezz ta’ mappa interattiva (<em>Network</em>), x’qed jgħidu verament (<em>Channel</em>) u kif jidhru l-kontenuti mimlijin mibegħda u diżinformazzjoni (<em>Conversation</em>).</p><p style='margin-bottom:12px'>💬 <strong>Kitba ta’ counterspeech:</strong> Meta u kif għandek twieġeb għal mibegħda bbażata fuq diżinformazzjoni? Hawnhekk issib mudell ta’ djalogu li jissimula interazzjoni ma’ hater, u joħloq tweġibiet ta’ <em>counterspeech</em> ibbażati fuq il-fatti.</p><p>🌍 <strong>Lingwi:</strong> Il-pjattaforma tappoġġja 5 lingwi: Ingliż, Spanjol, Taljan, Malti u Pollakk.</p>"
           },
           {
-            "title": "Xi tfisser il-pjattaforma?",
-            "html": "<p><strong>Dejta:</strong> Il-pjattaforma tinkludi dejta statika: madwar 10 miljun messaġġ tat-telegramma miġbura minn kważi 1,000 chats pubbliċi, li jkopru 4 lingwi (Ingliż, Taljan, Spanjol, u Pollakk). </p><p><strong>Analiżijiet:</strong> L-għarfien muri hawn huma ġġenerati awtomatikament bl-użu ta 'teknoloġiji bbażati fuq l-AI. </p><p><strong>Chatbot:</strong> Il-pjattaforma tinkludi mudell ta 'djalogu li jissimula l-interazzjoni ma' hater li jinfirex informazzjoni ħażina. </p>"
+            "title": "Kif juża l-AI Hatedemics?",
+            "html": "<ul style='padding-left:0; list-style:none'><li style='margin-bottom:12px'>📊 <strong>Analiżi tad-dejta:</strong> Tanalizza volumi kbar ta’ dejta minn Telegram biex turi x-xejriet ta’ mibegħda u diżinformazzjoni. L-għarfien jiġi ġġenerat mill-AI u xi kultant jista’ ma jkunx eżatt: jekk ikollok dubju, ikkonsulta lill-edukaturi.</li><li>🤖 <strong>Ġenerazzjoni ta’ djalogi ta’ counterspeech:</strong> Il-pjattaforma tinkludi mudell ta’ djalogu li jissimula interazzjonijiet ma’ haters, u toħloq tweġibiet ta’ <em>counterspeech</em> li jistgħu jiġu editjati mill-utenti biex jitgħallmu meta u kif jirrispondu bil-fatti.</li></ul>"
           },
           {
-            "title": "Twissija ta 'attivazzjoni",
-            "html": "<p><strong>TWISSIJA:</strong> Din il-pjattaforma fiha eżempji mhux imħarsa li xi utenti jistgħu jsibu offensivi.</p>"
+            "title": "Twissija ta’ kontenut",
+            "html": "<p>⚠️ <strong>Twissija:</strong> il-pjattaforma fiha eżempji mhux imċensurati li xi qarrejja jistgħu jsibuhom offensivi.</p>"
           }
         ],
         "prev": "Lura",
@@ -874,6 +874,12 @@
   },
   "message": {
     "title": "Chat għarfien",
+    "reliability": {
+      
+      "reliable": "Affidabbli",
+      "unreliable": "Mhux affidabbli",
+      "unknown": "Mhux magħruf"
+    },
     "header": {
       "id": "ID",
       "date": "Data",
@@ -886,15 +892,21 @@
       "checkLabel": "Iċċekkja denja",
       "topic": "Suġġett",
       "target": "Mira",
+      "nrReactions": "Numru ta 'reazzjonijiet",
       "keywordsMatch": "Keywords jaqblu",
-      "counterspeech": "Ibda konversazzjoni"
+      "counterspeech": "Ibda konversazzjoni",
+      "averageReliability": "Affidabbiltà medja"
     },
     "dialog": {
       "start": "Ibda konverżazzjoni ġdida ma 'Target = {Target}",
       "jump": "Mur għall-konversazzjoni",
       "noProject": "L-ebda proġett disponibbli",
       "noData": "L-ebda dejta disponibbli",
-      "error": "Żball waqt li jġib id-dejta"
+      "error": "Żball waqt li jġib id-dejta",
+      "startConversation": "Ħu sehem f'din il-konversazzjoni",
+"startConversationTitle": "Ibda konversazzjoni ġdida",
+  "startConversationDescription": "Agħżel it-task tat-tema li tixtieq taħdem fuqha."
+
     },
     "noData": "L-ebda dejta disponibbli",
     "noTarget": "L-ebda mira identifikata",
@@ -910,7 +922,7 @@
       "DISABLED": "B'diżabilità",
       "JEWS": "Lhud",
       "MUSLIMS": "Musulmani",
-      "LGBT+": "LGBT +",
+      "LGBTQIA+": "LGBTQIA+",
       "MIGRANTS": "Migranti",
       "OTHER": "Ieħor",
       "POC": "Nies ta 'kulur",

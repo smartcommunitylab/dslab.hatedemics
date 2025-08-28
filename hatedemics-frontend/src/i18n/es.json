@@ -137,17 +137,21 @@
     "onboarding": {
         "steps": [
             {
-                "title": "Lo que es Hatedemics",
-                "html": "<p><strong>Odatemics</strong> es un proyecto europeo centrado en crear conciencia sobre el discurso de odio, la desinformación y cómo se cruzan estos dos problemas. </p><p><strong>Odatemics</strong> utiliza tecnologías basadas en IA de dos maneras principales:</p><ul><li><strong>Análisis de datos</strong>: Analiza grandes volúmenes de datos de una plataforma de mensajería popular (Telegram), proporcionando información sobre el discurso de odio y las tendencias de desinformación.</li><li><strong>Contrarrestar</strong>: Crea respuestas basadas en el diálogo al discurso de odio y información errónea, llamada \"contrapezo\". </li></ul><p>Visite el <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">Sitio web de Hatedemics</a> Para obtener más información sobre el proyecto.</p>"
-            },
-            {
+                "title": "¿Qué es Hatedemics?",
+                "html": "<p><strong>Hatedemics</strong> es un proyecto europeo centrado en concienciar sobre los discursos de odio, la desinformación y cómo estos dos problemas se entrelazan. El proyecto busca empoderar a ONG, organizaciones de la sociedad civil, verificadores de hechos, autoridades públicas y jóvenes para prevenir y combatir eficazmente la polarización, la intolerancia y las teorías conspirativas.</p><p>Visita la <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">página web de Hatedemics</a> para saber más.</p>"
+              },
+              {
                 "title": "¿Qué incluye la plataforma?",
-                "html": "<p><strong>Datos:</strong> La plataforma incluye datos estáticos: aproximadamente 10 millones de mensajes de telegrama recopilados de casi 1,000 chats públicos, que cubren 4 idiomas (inglés, italiano, español y polaco). </p><p><strong>Análisis:</strong> Las ideas que se muestran aquí se generan automáticamente utilizando tecnologías basadas en IA. </p><p><strong>Chatbot:</strong> La plataforma incluye un modelo de diálogo que simula la interacción con una desinformación de propagación de hater. </p>"
-            },
-            {
-                "title": "Advertencia de disparo",
-                "html": "<p><strong>Advertencia:</strong> Esta plataforma contiene ejemplos no observados que algunos usuarios pueden encontrar ofensivos.</p>"
-            }
+                "html": "<p style='margin-bottom:12px'>🎓 <strong>Actividades educativas:</strong> ¡Pon a prueba tus conocimientos sobre discurso de odio y desinformación con ejercicios interactivos!</p><p style='margin-bottom:12px'>🌐 <strong>Explora mensajes de Telegram:</strong> Descubre cómo miles de canales de Telegram están conectados con un mapa interactivo (<em>Network</em>), qué dicen realmente (<em>Channel</em>) y cómo se ven los contenidos de odio y desinformación (<em>Conversation</em>).</p><p style='margin-bottom:12px'>💬 <strong>Escritura de counterspeech:</strong> ¿Cuándo y cómo responder al discurso de odio basado en desinformación? Aquí encontrarás un modelo de diálogo que simula la interacción con un hater, generando respuestas de <em>counterspeech</em> basadas en hechos.</p><p>🌍 <strong>Idiomas:</strong> La plataforma está disponible en 5 idiomas: Inglés, Español, Italiano, Maltés y Polaco.</p>"
+              },
+              {
+                "title": "¿Cómo usa la IA Hatedemics?",
+                "html": "<ul style='padding-left:0; list-style:none'><li style='margin-bottom:12px'>📊 <strong>Análisis de datos:</strong> Analiza grandes volúmenes de datos de Telegram para revelar tendencias de odio y desinformación. Los resultados son generados por IA y pueden no ser siempre exactos: en caso de duda consulta con los educadores responsables.</li><li>🤖 <strong>Generación de diálogos de counterspeech:</strong> La plataforma incluye un modelo de diálogo que simula interacciones con haters, generando respuestas de <em>counterspeech</em> editables por los usuarios para aprender cuándo y cómo responder con hechos.</li></ul>"
+              },
+              {
+                "title": "Advertencia de contenido",
+                "html": "<p>⚠️ <strong>Atención:</strong> la plataforma contiene ejemplos no ocultados que algunos lectores pueden encontrar ofensivos.</p>"
+              }
         ],
         "prev": "Atrás",
         "next": "Próximo",
@@ -844,6 +848,11 @@
     },
     "message": {
         "title": "Insights de chat",
+        "reliability": {
+            "reliable": "Fiable",
+            "unreliable": "No fiable",
+            "unknown": "Desconocido"
+        },
         "header": {
             "id": "IDENTIFICACIÓN",
             "date": "Fecha",
@@ -852,19 +861,24 @@
             "mediaType": "Tipo",
             "reactions": "Reacciones",
             "nrViews": "Vistas",
+            "nrReactions": "Reacciones",
             "hateLabel": "Discurso de odio",
             "checkLabel": "Cheque digno",
             "topic": "Tema",
             "target": "Objetivo",
             "keywordsMatch": "Las palabras clave coinciden",
-            "counterspeech": "Iniciar conversación"
+            "counterspeech": "Iniciar conversación",
+            "averageReliability": "Reliabilidad media"
         },
         "dialog": {
             "start": "Inicie una nueva conversación con Target = {Target}",
             "jump": "Ir a la conversación",
             "noProject": "No hay proyectos disponibles",
             "noData": "No hay datos disponibles",
-            "error": "Error mientras busca datos"
+            "error": "Error mientras busca datos",
+            "startConversation": "Iniciar conversación",
+            "startConversationTitle": "Iniciar conversación",
+            "startConversationDescription": "Seleccione el argumento que desea utilizar para iniciar la conversación."
         },
         "noData": "No hay datos disponibles",
         "noTarget": "No se identificó el objetivo",
@@ -880,7 +894,7 @@
             "DISABLED": "Desactivado",
             "JEWS": "Judíos",
             "MUSLIMS": "Musulmanes",
-            "LGBT+": "LGBT+",
+            "LGBTQIA+": "LGBTQIA+",
             "MIGRANTS": "Migrantes",
             "OTHER": "Otro",
             "POC": "Gente de color",

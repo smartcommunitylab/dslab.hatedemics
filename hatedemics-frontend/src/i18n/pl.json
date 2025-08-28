@@ -137,17 +137,21 @@
     "onboarding": {
         "steps": [
             {
-                "title": "Co to jest nienawidzone",
-                "html": "<p><strong>Nienawidzone</strong> to europejski projekt koncentrujący się na podnoszeniu świadomości na temat mowy nienawiści, dezinformacji i ich przecinania tych dwóch problemów. </p><p><strong>Nienawidzone</strong> Wykorzystuje technologie oparte na sztucznej inteligencji na dwa główne sposoby:</p><ul><li><strong>Analiza danych</strong>: Analizuje duże ilości danych z popularnej platformy przesyłania wiadomości (telegram), zapewniając wgląd w mowę nienawiści i trendów dezinformacyjnych.</li><li><strong>Mowa kontraktu</strong>: Tworzy reakcje oparte na dialogach na mowę nienawiści i dezinformację, zwaną „kontraktową mową”. </li></ul><p>Odwiedź <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">Witryna nienawidzona</a> Aby dowiedzieć się więcej o projekcie.</p>"
-            },
-            {
-                "title": "Co obejmuje platforma?",
-                "html": "<p><strong>Dane:</strong> Platforma zawiera dane statyczne: około 10 milionów wiadomości telegramowych zebranych z prawie 1000 czatów publicznych, obejmujących 4 języki (angielski, włoski, hiszpański i polski). </p><p><strong>Ćwiczenie:</strong> Pokazane tutaj spostrzeżenia są generowane automatycznie przy użyciu technologii opartych na AI. </p><p><strong>Chatbot:</strong> Platforma zawiera model dialogu, który symuluje interakcję z rozkładającym hejterem dezinformacją. </p>"
-            },
-            {
-                "title": "Wyzwalacz ostrzeżenie",
-                "html": "<p><strong>Ostrzeżenie:</strong> Ta platforma zawiera niezamieszczone przykłady, które niektórzy użytkownicy mogą uznać za obraźliwe.</p>"
-            }
+                "title": "Czym jest Hatedemics?",
+                "html": "<p><strong>Hatedemics</strong> to europejski projekt mający na celu podnoszenie świadomości na temat mowy nienawiści, dezinformacji i tego, jak te dwa zjawiska się łączą. Projekt ma na celu wzmocnienie pozycji organizacji pozarządowych, społeczeństwa obywatelskiego, fact-checkerów, władz publicznych i młodzieży, aby skutecznie zapobiegać polaryzacji, nietolerancji i teoriom spiskowym.</p><pOdwiedź <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">stronę Hatedemics</a>, aby dowiedzieć się więcej.</p>"
+              },
+              {
+                "title": "Co zawiera platforma?",
+                "html": "<p style='margin-bottom:12px'>🎓 <strong>Działania edukacyjne:</strong> Sprawdź swoją wiedzę na temat mowy nienawiści i dezinformacji dzięki interaktywnym ćwiczeniom!</p><p style='margin-bottom:12px'>🌐 <strong>Eksploruj wiadomości na Telegramie:</strong> Odkryj, jak tysiące kanałów Telegram są połączone na interaktywnej mapie (<em>Network</em>), co naprawdę mówią (<em>Channel</em>) i jak wyglądają treści pełne nienawiści i dezinformacji (<em>Conversation</em>).</p><p style='margin-bottom:12px'>💬 <strong>Pisanie counterspeech:</strong> Kiedy i jak odpowiadać na mowę nienawiści opartą na dezinformacji? Tutaj znajdziesz model dialogu, który symuluje interakcję z hejterem, generując odpowiedzi <em>counterspeech</em> oparte na faktach.</p><p>🌍 <strong>Języki:</strong> Platforma obsługuje 5 języków: angielski, hiszpański, włoski, maltański i polski.</p>"
+              },
+              {
+                "title": "Jak Hatedemics wykorzystuje AI?",
+                "html": "<ul style='padding-left:0; list-style:none'><li style='margin-bottom:12px'>📊 <strong>Analiza danych:</strong> Analizuje duże zbiory danych z Telegrama, aby ujawnić trendy dotyczące mowy nienawiści i dezinformacji. Wnioski są generowane przez AI i mogą być niekiedy niedokładne: w razie wątpliwości skonsultuj się z edukatorami.</li><li>🤖 <strong>Generowanie dialogów counterspeech:</strong> Platforma oferuje model dialogu, który symuluje interakcje z hejterami, generując odpowiedzi <em>counterspeech</em> edytowalne przez użytkowników, aby nauczyć, kiedy i jak odpowiadać faktami.</li></ul>"
+              },
+              {
+                "title": "Ostrzeżenie o treści",
+                "html": "<p>⚠️ <strong>Uwaga:</strong> platforma zawiera nieocenzurowane przykłady, które niektórzy czytelnicy mogą uznać za obraźliwe.</p>"
+              }
         ],
         "prev": "Z powrotem",
         "next": "Następny",
@@ -773,6 +777,12 @@
     },
     "message": {
         "title": "Spostrzeżenia czatu",
+        "reliability": {
+      
+            "reliable": "fiabilny",
+            "unreliable": "niewiarygodny",
+            "unknown": "nieznany"
+          },
         "header": {
             "id": "ID",
             "date": "Data",
@@ -781,19 +791,25 @@
             "mediaType": "Typ",
             "reactions": "Reakcje",
             "nrViews": "Widoki",
+            "nrReactions": "Liczba reakcji",
             "hateLabel": "Nienawiść mowa",
             "checkLabel": "Sprawdź godny",
             "topic": "Temat",
             "target": "Cel",
             "keywordsMatch": "Słowa kluczowe pasują",
-            "counterspeech": "Rozpocznij rozmowę"
+            "counterspeech": "Rozpocznij rozmowę",
+            "averageReliability": "Sredni poziom fiabilnosci"
         },
         "dialog": {
             "start": "Rozpocznij nową rozmowę z Target = {Target}",
             "jump": "Idź do rozmowy",
             "noProject": "Brak dostępnych projektów",
             "noData": "Brak dostępnych danych",
-            "error": "Błąd podczas pobierania danych"
+            "error": "Błąd podczas pobierania danych",
+            "startConversation": "Rozpocznij nową rozmowę",
+            "startConversationTitle": "Rozpocznij nową rozmowę",
+            "startConversationDescription": "Wybierz zadanie tematyczne, nad którym chcesz pracować."
+          
         },
         "noData": "Brak dostępnych danych",
         "noTarget": "Nie zidentyfikowany cel",
@@ -809,7 +825,7 @@
             "DISABLED": "Wyłączony",
             "JEWS": "Żydzi",
             "MUSLIMS": "Muzułmanie",
-            "LGBT+": "LGBT+",
+            "LGBTQIA+": "LGBTQIA+",
             "MIGRANTS": "Migranci",
             "OTHER": "Inny",
             "POC": "Ludzie kolorowi",
