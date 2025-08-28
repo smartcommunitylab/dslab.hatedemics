@@ -61,6 +61,8 @@
         "guideDescription": "Cosa sapere prima di usare la piattaforma.",
         "guideButton": "Apri Guida",
         "guideTitle": "Glossario",
+        "guide": "Guida",
+        "selectDataset": "Seleziona il dataset",
         "guideItems": {
             "network": {
                 "title": "Rete",
@@ -711,7 +713,7 @@
     },
     "channel": {
         "title": "Esplorazione della Rete",
-        "subtitle": "<p>Qui sotto puoi vedere una rete di canali Telegram, in cui ogni canale è un punto ('nodo'). Questi canali sono collegati quando Telegram ne raccomanda automaticamente uno a un altro, di solito perché condividono molti degli stessi utenti.</p><p>Puoi esplorare la rete e la tabella per scoprire canali reali che potrebbero diffondere disinformazione o discorsi d'odio.</p><p>Modifica il colore e la dimensione dei canali, filtra e riordina le loro caratteristiche per trovare quelli che ti interessano di più.</p>",
+        "subtitle": "<p>Qui sotto puoi vedere una rete di canali Telegram, in cui ogni canale è un punto ('nodo'). Questi canali sono collegati quando Telegram ne raccomanda automaticamente uno a un altro, di solito perché condividono molti degli stessi utenti.</p><p>Puoi esplorare la rete e la tabella per scoprire canali reali che potrebbero diffondere disinformazione o discorsi d'odio.</p><p>Modifica il colore e la dimensione dei canali, filtra e riordina le loro caratteristiche per trovare quelli che ti interessano di più.</p> <p>Seleziona un canale per vedere le sue statistiche e i suoi argomenti principali.</p>",
         "infoTitle": "Informazioni sul Canale"
     },
     "project": {
@@ -761,7 +763,10 @@
             "defaultSize": "Dimensione predefinita per tutti i nodi",
             "low": "Basso",
             "medium": "Medio",
-            "high": "Alto"
+            "high": "Alto",
+            "nonExpandable": "Nodi non espandibili / valore nullo"
+
+
 
         },
         "color": {
@@ -772,8 +777,10 @@
             "in_degree": "Nodi in entrata",
             "n_in_recommendation": "Nodi in entrata",
             "n_out_recommendation": "Nodi in uscita",
-                        "n_out_recommended": "Nodi in uscita",
-            "n_in_recommended": "Nodi  in entrata"
+             "n_out_recommended": "Nodi in uscita",
+            "n_in_recommended": "Nodi  in entrata",
+            "community":"Comunità",
+            "louvain_community": "Ogni colore rappresenta una comunità diversa"
         },
         "size": {
             "disable": "Nessuno (dimensione fissa)",

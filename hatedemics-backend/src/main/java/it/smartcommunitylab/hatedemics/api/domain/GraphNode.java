@@ -23,6 +23,13 @@ public class GraphNode {
     private Integer n_out_recommended;
     private Integer n_in_recommendation;
     private String language;
+    private Integer louvain_community;
+    public Integer getLouvain_community() {
+        return louvain_community;
+    }
+    public void setLouvain_community(Integer louvain_community) {
+        this.louvain_community = louvain_community;
+    }
     public Integer getN_in_recommendation() {
         return n_in_recommendation;
     }

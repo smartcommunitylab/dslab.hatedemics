@@ -61,6 +61,8 @@
         "guideDescription": "Qué saber antes de usar la plataforma.",
         "guideButton": "Guía",
         "guideTitle": "Glosario",
+        "guide": "Guía",
+        "selectDataset": "Seleccionar conjunto de datos",
         "guideItems": {
             "network": {
                 "title": "Red",
@@ -705,7 +707,7 @@
     },
     "channel": {
         "title": "Exploración de red",
-        "subtitle": "<p>A continuación, puedes ver una red de canales de Telegram donde cada canal es un punto ('nodo'). Estos canales están conectados cuando Telegram recomienda automáticamente uno a otro, normalmente porque comparten muchos de los mismos usuarios.</p><p>Puedes explorar la red y la tabla para descubrir canales reales que podrían estar difundiendo desinformación o discursos de odio.</p><p>Ajusta el color y el tamaño de los canales, filtra y reordena sus características para encontrar los que más te interesen.</p>",
+        "subtitle": "<p>A continuación, puedes ver una red de canales de Telegram donde cada canal es un punto ('nodo'). Estos canales están conectados cuando Telegram recomienda automáticamente uno a otro, normalmente porque comparten muchos de los mismos usuarios.</p><p>Puedes explorar la red y la tabla para descubrir canales reales que podrían estar difundiendo desinformación o discursos de odio.</p><p>Ajusta el color y el tamaño de los canales, filtra y reordena sus características para encontrar los que más te interesen.</p> <p>Selecciona un canal para ver más detalles sobre sus temas principales y los mensajes que se han compartido en él.</p>",
         "infoTitle": "Información de canal"
     },
     "conversation": {
@@ -757,7 +759,8 @@
             "small": "Pequeño",
             "large": "Grande",
             "defaultColor": "Color predeterminado para todos los nodos",
-            "defaultSize": "Tamaño predeterminado para todos los nodos"
+            "defaultSize": "Tamaño predeterminado para todos los nodos",
+            "nonExpandable": "Nodos no expandibles / valor nulo"
         },
         "resetView": "Vista de reinicio",
         "color": {
@@ -772,7 +775,9 @@
             "n_in_recommendation": "En recomendaciones",
             "n_out_recommendation": "Recomendaciones",
             "n_out_recommended": "Recomendaciones",
-            "n_in_recommended": "En recomendaciones"
+            "n_in_recommended": "En recomendaciones",
+            "community": "Comunidad",
+            "louvain_community": "Cada color representa una comunidad diferente"
         },
         "size": {
             "disable": "Deshabilitar el tamaño",
