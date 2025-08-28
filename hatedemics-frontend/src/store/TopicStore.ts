@@ -42,20 +42,22 @@ export const useTopicsStore = defineStore("topicsStore", () => {
     }
     if (data?.topics)
       topics.value = Object.keys(data.topics).map((key) => {
-        
-      
+
+        const topic = data.topics[key];
+        const npwData = data.npw?.topics?.[key] ?? {};
+    
         return {
-          name: data.topics[key]["topic_label"],
-          count_percentage: data.topics[key]["topic-count_percentage"],
-          hs_percentage: data.topics[key]["topic-hs_percentage"],
-          cw_percentage: data.topics[key]["topic-cw_percentage"],
-          npw: data.npw.topics[key]["topic-npw"],
-          hate_npw: data.npw.topics[key]["topic-hate_npw"],
-          nonhate_npw: data.npw.topics[key]["topic-nonhate_npw"],
-          sentiment_percentage: getDominantSentiment(data.npw.topics[key]["topic-sentiment_percentage"])
-        }
+          name: topic["topic_label"],
+          count_percentage: topic["topic-count_percentage"],
+          hs_percentage: topic["topic-hs_percentage"],
+          cw_percentage: topic["topic-cw_percentage"],
+          npw: npwData["topic-npw"] ?? {},
+          hate_npw: npwData["topic-hate_npw"] ?? {},   
+          nonhate_npw: npwData["topic-nonhate_npw"] ?? {},
+          sentiment_percentage: getDominantSentiment(topic["topic-sentiment_percentage"] ?? {})
+        };
       });
-    else {
+        else {
       topics.value = [];
     }
   }

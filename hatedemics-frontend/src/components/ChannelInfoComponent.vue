@@ -16,7 +16,7 @@ const channelsStore = useChannelsStore();
 const { selectedChannelInfo } = storeToRefs(channelsStore);
 const { generic } = storeToRefs(topicsStore);
 
-const isExtended: ComputedRef<boolean> = computed(() => !!selectedChannelInfo?.value?.iri);
+const isExtended: ComputedRef<boolean> = computed(() => !!selectedChannelInfo?.value?.hs);
   const dataEntries: ComputedRef<[any, any][]> = computed(() => {
     if (generic?.value?.wordclouds === undefined) {
       return [];
