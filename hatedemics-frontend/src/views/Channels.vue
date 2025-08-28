@@ -7,12 +7,12 @@ import { storeToRefs } from "pinia";
 import type { ChannelInfo } from "@/services/types";
 import GraphComponent from "@/components/GraphComponentNew.vue";
 import ExploreGuideDialog from "@/components/ExploreGuideDialog.vue";
-import CounterspeechGuideDialog from "@/components/CounterspeechGuideDialog.vue";
+import TutorialHomeDialog from "@/components/TutorialHomeDialog.vue";
 // import { useGlobal } from "@/store";
 // const globalStore = useGlobal();
 
 const showExploreGuide = ref(false);
-const showCounterspeechGuide = ref(false);
+const showTutorialHome = ref(false);
 const { t } = useI18n();
 const channelsStore = useChannelsStore();
 const { channelsInfo, selectedChannelInfo, selectedLanguage } = storeToRefs(
@@ -150,17 +150,26 @@ const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
             />
 
             <v-spacer />
-
-            <!-- Bottone help a destra -->
             <v-btn
-              variant="outlined"
-              color="error"
+              color="primary"
+              variant="flat"
               size="small"
-              class="rounded-circle"
-              style="min-width: 36px; height: 36px; padding: 0"
               @click.stop="showExploreGuide = true"
+              prepend-icon="mdi-book-open"
+              class="me-2"
             >
-              <v-icon size="20">mdi-help</v-icon>
+              {{ t("home.guideTitle") }}
+            </v-btn>
+
+            <v-btn
+              color="primary"
+              variant="flat"
+              size="small"
+              @click.stop="showTutorialHome = true"
+              prepend-icon="mdi-help"
+              class="me-2"
+            >
+              {{ t("home.guide") }}
             </v-btn>
           </div>
         </v-expansion-panel-title>
@@ -182,9 +191,9 @@ const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
           </v-card-title>
           <v-divider class="mb-4"></v-divider> -->
           <v-row>
-            <v-col cols="4">
+            <v-col cols="3">
               <v-select
-                label="Language"
+              :label="t('home.selectDataset')"
                 v-model="selectedLanguage"
                 :items="languages"
                 item-title="language"
@@ -192,7 +201,7 @@ const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
                 variant="outlined"
                 density="compact"
                 color="primary"
-                class="mb-4"
+                class="mb-4 pl-4 pr-4"
               />
             </v-col>
           </v-row>
@@ -285,7 +294,7 @@ const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
     </v-btn>
   </v-container>
   <ExploreGuideDialog v-model="showExploreGuide" />
-  <CounterspeechGuideDialog v-model="showCounterspeechGuide" />
+  <TutorialHomeDialog v-model="showTutorialHome" />
 </template>
 
 <style scoped>

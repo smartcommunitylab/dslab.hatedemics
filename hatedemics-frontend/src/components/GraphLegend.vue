@@ -25,7 +25,7 @@ const currentSizeLabel = computed(() =>
 const colorThresholds = computed(() => {
   switch (props.colorBy) {
     case "iri":
-    return { min: 0, mid: 0.15, max: 0.3 };
+      return { min: 0, mid: 0.15, max: 0.3 };
 
     case "hs":
       return { min: 0, mid: 0.25, max: 0.5 };
@@ -59,46 +59,75 @@ const sizeThresholds = computed(() => {
     </h3>
 
     <!-- Colori -->
-    <div class="mb-6">
-      <h4 class="text-body-2 font-weight-medium mb-1">
-        {{ t("graphInteraction.legend.color") }}: 
-        <span class="font-italic">{{ currentColorLabel }}</span>
-      </h4>
+<div class="mb-6">
+  <h4 class="text-body-2 font-weight-medium mb-1">
+    {{ t("graphInteraction.legend.color") }}:
+    <span class="font-italic">{{ currentColorLabel }}</span>
+  </h4>
 
-      <template v-if="props.colorBy !== 'disabled'">
-        <div class="color-gradient-bar"
-     style="position: relative; height: 24px; border-radius: 4px;
-            background: linear-gradient(to right, rgb(0,255,0), rgb(255,255,0), rgb(255,0,0));">
+  <template v-if="props.colorBy !== 'disabled'">
+    <!-- 🌈 Caso normale (gradiente) -->
+    <template v-if="props.colorBy !== 'louvain_community'">
+      <div class="color-gradient-bar"
+        style="position: relative; height: 24px; border-radius: 4px;
+               background: linear-gradient(to right, rgb(0,255,0), rgb(255,255,0), rgb(255,0,0));">
+        <!-- Min -->
+        <div style="position: absolute; left: 0; bottom: -35px; font-size: 0.75rem; color: #444; text-align: center; width: 50px;">
+          {{ colorThresholds.min }}<br />
+          <span class="font-italic">{{ t("graphInteraction.legend.low") }}</span>
+        </div>
+        <!-- Mid -->
+        <div style="position: absolute; left: 50%; transform: translateX(-50%); bottom: -35px; font-size: 0.75rem; color: #444; text-align: center; width: 50px;">
+          {{ colorThresholds.mid }}<br />
+          <span class="font-italic">{{ t("graphInteraction.legend.medium") }}</span>
+        </div>
+        <!-- Max -->
+        <div style="position: absolute; right: 0; bottom: -35px; font-size: 0.75rem; color: #444; text-align: center; width: 50px;">
+          {{ colorThresholds.max }}<br />
+          <span class="font-italic">{{ t("graphInteraction.legend.high") }}</span>
+        </div>
+      </div>
+      <div class="d-flex align-center mt-2 mb-2 pt-8">
+          <div
+            style="width: 24px; height: 24px; border-radius: 4px; background-color: #1976d2; margin-right: 8px;"
+          ></div>
+          <span class="text-body-2">
+            {{ t("graphInteraction.legend.nonExpandable") }}
+          </span>
+        </div>
+    </template>
 
-  <!-- Min -->
-  <div style="position: absolute; left: 0; bottom: -35px; font-size: 0.75rem; color: #444; text-align: center; width: 50px;">
-    {{ colorThresholds.min }}<br />
-    <span class="font-italic">{{ t("graphInteraction.legend.low") }}</span>
-  </div>
+    <!-- 🟦 Caso community -->
+    <template v-else>
+      <div class="d-flex flex-column">
+        <!-- Box blu per nodi non espandibili rimane -->
+        <div class="d-flex align-center mt-2 mb-2">
+          <div
+            style="width: 24px; height: 24px; border-radius: 4px; background-color: #1976d2; margin-right: 8px;"
+          ></div>
+          <span class="text-body-2">
+            {{ t("graphInteraction.legend.nonExpandable") }}
+          </span>
+        </div>
 
-  <!-- Mid -->
-  <div style="position: absolute; left: 50%; transform: translateX(-50%); bottom: -35px; font-size: 0.75rem; color: #444; text-align: center; width: 50px;">
-    {{ colorThresholds.mid }}<br />
-    <span class="font-italic">{{ t("graphInteraction.legend.medium") }}</span>
-  </div>
+        <!-- Spiegazione colori community -->
+        <!-- <div class="text-body-2">
+          {{ t("graphInteraction.legend.communityExplanation") }}
+        </div> -->
+      </div>
+    </template>
+  </template>
 
-  <!-- Max -->
-  <div style="position: absolute; right: 0; bottom: -35px; font-size: 0.75rem; color: #444; text-align: center; width: 50px;">
-    {{ colorThresholds.max }}<br />
-    <span class="font-italic">{{ t("graphInteraction.legend.high") }}</span>
-  </div>
-</div>
+  <template v-else>
+    <small class="text-grey">{{ t("graphInteraction.legend.defaultColor") }}</small>
+  </template>
 
-      </template>
-      <template v-else>
-        <small class="text-grey">{{ t("graphInteraction.legend.defaultColor") }}</small>
-      </template>
     </div>
 
     <!-- Dimensioni -->
     <div class="pt-6">
       <h4 class="text-body-2 font-weight-medium mb-1">
-        {{ t("graphInteraction.legend.size") }}: 
+        {{ t("graphInteraction.legend.size") }}:
         <span class="font-italic">{{ currentSizeLabel }}</span>
       </h4>
 

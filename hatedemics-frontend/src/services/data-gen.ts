@@ -17,6 +17,7 @@ export type Node = {
     iri: number,
     n_out_recommended: number;
     n_in_recommendation: number;
+    louvain_community: number;
 };
 
 export type Link = {
@@ -60,7 +61,8 @@ async function initData() {
             iri: parseFloat(nodesData.data[node].iri),
             //  size:nodesData.data[node].iri* 20 + 5,
             n_out_recommended: nodesData.data[node].n_out_recommended,
-            n_in_recommendation: nodesData.data[node].n_in_recommendation
+            n_in_recommendation: nodesData.data[node].n_in_recommendation,
+            louvain_community: nodesData.data[node].louvain_community
         });
 
     }

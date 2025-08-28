@@ -24,12 +24,26 @@ const tooltip = ref<{ show: boolean; x: number; y: number; node: any | null }>({
   y: 0,
   node: null,
 });
+const communityColors = [
+  "#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd",
+  "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf",
+  "#393b79", "#637939", "#8c6d31", "#843c39", "#7b4173",
+  "#5254a3", "#9c9ede", "#6b6ecf", "#bd9e39", "#e7ba52",
+  "#ad494a", "#d6616b", "#ce6dbd", "#de9ed6", "#3182bd",
+  "#6baed6", "#9ecae1", "#c6dbef", "#e6550d", "#fd8d3c",
+  "#fdae6b", "#fdd0a2", "#31a354", "#74c476", "#a1d99b",
+  "#c7e9c0", "#756bb1", "#9e9ac8", "#bcbddc", "#dadaeb",
+  "#636363", "#969696", "#bdbdbd", "#d9d9d9", "#bc80bd",
+  "#ffed6f", "#1b9e77", "#d95f02", "#7570b3", "#e7298a"
+];
 const colorOptions = [
   { value: 'disabled', title: t('graphInteraction.color.disable') },
   { value: 'iri', title: t('graphInteraction.color.iri') },
   { value: 'hs', title: t('graphInteraction.color.hs') },
   { value: 'n_out_recommended', title: t('graphInteraction.color.out') },
-  { value: 'n_in_recommendation', title: t('graphInteraction.color.in') }
+  { value: 'n_in_recommendation', title: t('graphInteraction.color.in') },
+  { value: 'louvain_community', title: t('graphInteraction.color.community') } 
+
 ];
 
 const sizeOptions = [
@@ -73,6 +87,11 @@ const getNodeColor = (node: any, colorBy: string) => {
       return getColorByValue(node.n_out_recommended?node.n_out_recommended:undefined, 0, 300); 
     case "n_in_recommendation":
       return getColorByValue(node.n_in_recommendation?node.n_in_recommendation:undefined, 0, 300);
+      case "louvain_community": {
+      const community = node.louvain_community ?? -1;
+      if (community < 0) return "#ccc"; // colore di default se manca
+      return communityColors[community % communityColors.length];
+    }
     default:
       return "";
   }
