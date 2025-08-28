@@ -777,6 +777,12 @@
     },
     "message": {
         "title": "Spostrzeżenia czatu",
+        "reliability": {
+      
+            "reliable": "fiabilny",
+            "unreliable": "niewiarygodny",
+            "unknown": "nieznany"
+          },
         "header": {
             "id": "ID",
             "date": "Data",
@@ -785,19 +791,25 @@
             "mediaType": "Typ",
             "reactions": "Reakcje",
             "nrViews": "Widoki",
+            "nrReactions": "Liczba reakcji",
             "hateLabel": "Nienawiść mowa",
             "checkLabel": "Sprawdź godny",
             "topic": "Temat",
             "target": "Cel",
             "keywordsMatch": "Słowa kluczowe pasują",
-            "counterspeech": "Rozpocznij rozmowę"
+            "counterspeech": "Rozpocznij rozmowę",
+            "averageReliability": "Sredni poziom fiabilnosci"
         },
         "dialog": {
             "start": "Rozpocznij nową rozmowę z Target = {Target}",
             "jump": "Idź do rozmowy",
             "noProject": "Brak dostępnych projektów",
             "noData": "Brak dostępnych danych",
-            "error": "Błąd podczas pobierania danych"
+            "error": "Błąd podczas pobierania danych",
+            "startConversation": "Rozpocznij nową rozmowę",
+            "startConversationTitle": "Rozpocznij nową rozmowę",
+            "startConversationDescription": "Wybierz zadanie tematyczne, nad którym chcesz pracować."
+          
         },
         "noData": "Brak dostępnych danych",
         "noTarget": "Nie zidentyfikowany cel",
@@ -813,7 +825,7 @@
             "DISABLED": "Wyłączony",
             "JEWS": "Żydzi",
             "MUSLIMS": "Muzułmanie",
-            "LGBT+": "LGBT+",
+            "LGBTQIA+": "LGBTQIA+",
             "MIGRANTS": "Migranci",
             "OTHER": "Inny",
             "POC": "Ludzie kolorowi",

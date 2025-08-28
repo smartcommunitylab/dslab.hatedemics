@@ -848,6 +848,11 @@
     },
     "message": {
         "title": "Insights de chat",
+        "reliability": {
+            "reliable": "Fiable",
+            "unreliable": "No fiable",
+            "unknown": "Desconocido"
+        },
         "header": {
             "id": "IDENTIFICACIÓN",
             "date": "Fecha",
@@ -856,19 +861,24 @@
             "mediaType": "Tipo",
             "reactions": "Reacciones",
             "nrViews": "Vistas",
+            "nrReactions": "Reacciones",
             "hateLabel": "Discurso de odio",
             "checkLabel": "Cheque digno",
             "topic": "Tema",
             "target": "Objetivo",
             "keywordsMatch": "Las palabras clave coinciden",
-            "counterspeech": "Iniciar conversación"
+            "counterspeech": "Iniciar conversación",
+            "averageReliability": "Reliabilidad media"
         },
         "dialog": {
             "start": "Inicie una nueva conversación con Target = {Target}",
             "jump": "Ir a la conversación",
             "noProject": "No hay proyectos disponibles",
             "noData": "No hay datos disponibles",
-            "error": "Error mientras busca datos"
+            "error": "Error mientras busca datos",
+            "startConversation": "Iniciar conversación",
+            "startConversationTitle": "Iniciar conversación",
+            "startConversationDescription": "Seleccione el argumento que desea utilizar para iniciar la conversación."
         },
         "noData": "No hay datos disponibles",
         "noTarget": "No se identificó el objetivo",
@@ -884,7 +894,7 @@
             "DISABLED": "Desactivado",
             "JEWS": "Judíos",
             "MUSLIMS": "Musulmanes",
-            "LGBT+": "LGBT+",
+            "LGBTQIA+": "LGBTQIA+",
             "MIGRANTS": "Migrantes",
             "OTHER": "Otro",
             "POC": "Gente de color",

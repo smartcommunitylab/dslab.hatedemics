@@ -1,20 +1,29 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
-import ChatTableComponent from '@/components/ChatTableComponent.vue'
+import { computed, ref } from "vue";
+import ChatTableComponent from "@/components/ChatTableComponent.vue";
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 // import GraphComponent from '@/components/GraphComponent.vue';
 import { onMounted } from "vue";
-import { useMessagesStore } from '../store/MessageStore';
-import { useI18n } from 'vue-i18n';
-import { storeToRefs } from 'pinia';
-import type { Message } from '@/services/types';
-import SideBarInfoComponent from "@/components/SideBarInfoComponent.vue"
+import { useMessagesStore } from "../store/MessageStore";
+import { useI18n } from "vue-i18n";
+import { storeToRefs } from "pinia";
+import type { Message } from "@/services/types";
+import SideBarInfoComponent from "@/components/SideBarInfoComponent.vue";
 import type { ChannelInfo, Chat } from "@/services/types";
 import { useChannelsStore } from "@/store/ChannelStore";
 import { useChatsStore } from "@/store/ChatStore";
-import { useTopicsStore } from '@/store/TopicStore';
+import { useTopicsStore } from "@/store/TopicStore";
 import ExploreGuideDialog from "@/components/ExploreGuideDialog.vue";
+import { isEmptyOrSpaces } from "@/services/utility";
+import dialogApi from "@/services/dialog/dialogApi";
+import router from "@/router";
+import { useGlobal } from "@/store";
+const channelStore = useChannelsStore();
+const globalStore = useGlobal();
+
+const showSnackbar = (message: string) => globalStore.setMessage(message);
+const { selectedChannelInfo, selectedLanguage, channelsInfo } = storeToRefs(channelStore);
 
 const topicsStore = useTopicsStore();
 const { t } = useI18n();
@@ -23,9 +32,53 @@ const msg = ref<string>(t("conversation.title"));
 const chatStore = useChatsStore();
 const messagesStore = useMessagesStore();
 const { messages } = storeToRefs(messagesStore);
-const { selectedChannelInfo, channelsInfo } = storeToRefs(channelsStore);
 const { selectedChat, chats } = storeToRefs(chatStore);
 const showExploreGuide = ref(false);
+const showTopicsDialog = ref(false);
+const targetOptions = [
+  { title: t("message.filter.DISABLED"), value: "DISABLED" },
+  { title: t("message.filter.JEWS"), value: "JEWS" },
+  { title: t("message.filter.LGBTQIA+"), value: "LGBT+" },
+  { title: t("message.filter.MIGRANTS"), value: "MIGRANTS" },
+  { title: t("message.filter.MUSLIMS"), value: "MUSLIMS" },
+  { title: t("message.filter.POC"), value: "POC" },
+  { title: t("message.filter.WOMEN"), value: "WOMEN" },
+];
+// lista targets della chat corrente
+const allTargets = computed(() => {
+  // se i messages hanno il campo target come stringa, li mappo
+  const uniqueTargets = new Set<string>();
+  messages.value.forEach((m: any) => {
+    if (m.target && !isEmptyOrSpaces(m.target)) {
+      m.target
+        .replace(/[{}'"]/g, "")
+        .split(",")
+        .map((t: string) => t.trim())
+        .forEach((t: string) => uniqueTargets.add(t));
+    }
+  });
+  return Array.from(uniqueTargets);
+});
+
+// stessa logica che avevi in ChatTableComponent
+const startDialogue = async (target: string | null) => {
+  if (!target || target === "OTHER") return;
+
+  const lan = selectedChannelInfo.value?.language ?? selectedLanguage.value;
+  try {
+    const response = await dialogApi.getProjects();
+    const projects = response.data;
+    const projectID = projects.find((p: any) => p.name === `${target}-${lan}`)?.id;
+    if (projectID) {
+      router.push({ name: "tasks", params: { projectID } });
+    } else {
+      showSnackbar(t("message.dialog.noProject"));
+    }
+  } catch (error) {
+    showSnackbar(t("message.dialog.error"));
+  }
+  showTopicsDialog.value = false;
+};
 // Mappa le chat con label "Chat 1", "Chat 2", ecc.
 const chatOptions = computed(() =>
   chats.value.map((chat, index) => ({
@@ -33,11 +86,11 @@ const chatOptions = computed(() =>
     value: chat.id,
   }))
 );
-const search = ref('');
+const search = ref("");
 const loading = ref(false);
-  let page = 0;
-  const size = 10;
-  let allLoaded = false;
+let page = 0;
+const size = 10;
+let allLoaded = false;
 const fetchChannels = async (reset = false) => {
   if (reset) {
     page = 0;
@@ -47,16 +100,17 @@ const fetchChannels = async (reset = false) => {
   if (allLoaded || loading.value) return;
   loading.value = true;
   try {
-    const {success,total ,content } =  await channelsStore.dispatchGetChannels({page,size}, { label: search.value }
+    const { success, total, content } = await channelsStore.dispatchGetChannels(
+      { page, size },
+      { label: search.value }
     );
     if (!success) {
       console.error("API error, status:", total);
       return;
     }
-    if (content)
-      channelsInfo.value = content;
+    if (content) channelsInfo.value = content;
   } catch (error) {
-    console.error('Error fetching channels:', error);
+    console.error("Error fetching channels:", error);
   } finally {
     loading.value = false;
   }
@@ -67,13 +121,14 @@ const updateChannel = (channel: ChannelInfo) => {
 
 const updateChat = (chatId: string) => {
   chatStore.selectChat(chatId);
-  topicsStore.dispatchGetTopics(chatId);};
-  const onSearch = (newSearch: string) => {
+  topicsStore.dispatchGetTopics(chatId);
+};
+const onSearch = (newSearch: string) => {
   search.value = newSearch;
   fetchChannels(true);
 };
 
-const loadMore = (event: { target: any; }) => {
+const loadMore = (event: { target: any }) => {
   const target = event.target;
   if (target.scrollTop + target.clientHeight >= target.scrollHeight - 10) {
     fetchChannels();
@@ -148,44 +203,114 @@ const loadMore = (event: { target: any; }) => {
           @update:model-value="updateChannel"
           @update:search="onSearch"
           @scroll.passive="loadMore"
-          clearable 
+          clearable
         />
       </v-col>
 
       <v-col cols="4">
         <v-select
-  :label="t('channelInfo.chats')"
-  v-model="selectedChat"
-  :items="chatOptions"
-  item-title="title"
-  item-value="value"
-  variant="outlined"
-  density="comfortable"
-  @update:model-value="updateChat"
-/>
+          :label="t('channelInfo.chats')"
+          v-model="selectedChat"
+          :items="chatOptions"
+          item-title="title"
+          item-value="value"
+          variant="outlined"
+          density="comfortable"
+          @update:model-value="updateChat"
+        />
       </v-col>
     </v-row>
 
     <v-divider class="my-4" />
-   
+
     <!-- Layout con Sidebar e Tabella -->
     <v-row>
-
-
       <v-col cols="8" style="background-color: white">
         <div class="px-4 py-2">
           <h3 class="text-h6 mb-1 text-center">
-          <v-icon left>mdi-chat</v-icon>   {{ t("message.title") }}
+            <v-icon left>mdi-chat</v-icon> {{ t("message.title") }}
           </h3>
         </div>
         <ChatTableComponent />
       </v-col>
       <v-col cols="4">
         <SideBarInfoComponent :actions="false" />
+        <!-- Pulsante avvia dialogo -->
+        <div class="text-center mt-4">
+          <v-btn color="primary" @click="showTopicsDialog = true">
+            <v-icon left>mdi-arrow-right-bold-circle</v-icon>
+            {{ t("message.dialog.startConversation") }}
+          </v-btn>
+        </div>
       </v-col>
     </v-row>
   </v-container>
-  <ExploreGuideDialog v-model="showExploreGuide" />
+  <v-dialog v-model="showTopicsDialog" max-width="500px">
+  <v-card class="topics-dialog-card">
+    <!-- Titolo -->
+    <v-card-title class="text-h6 font-weight-bold">
+      {{ t("message.dialog.startConversationTitle") }}
+    </v-card-title>
 
+    <!-- Intro descrittiva -->
+    <v-card-subtitle class="text-body-2 mb-2">
+      {{ t("message.dialog.startConversationDescription") }}
+    </v-card-subtitle>
+
+    <v-divider></v-divider>
+
+    <!-- Lista target -->
+    <v-card-text>
+      <v-list> 
+        <v-list-item color="primary"
+        active-color="primary"
+        
+          v-for="option in targetOptions"
+          :key="option.value"
+          @click="startDialogue(option.value)"
+          :disabled="option.value === null || option.value === 'OTHER'"
+          class="topic-item"
+        >
+          <v-list-item-title v-if="option.value != 'OTHER'" >
+            {{ option.title }}
+          </v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-card-text>
+
+    <v-card-actions>
+      <v-spacer />
+      <v-btn text @click="showTopicsDialog = false">
+        {{ t("common.close") }}
+      </v-btn>
+    </v-card-actions>
+  </v-card>
+</v-dialog>
+
+  <ExploreGuideDialog v-model="showExploreGuide" />
 </template>
 
+<style lang="css" scoped>
+.topic-item {
+  border-radius: 12px;
+  transition: background-color 0.25s, color 0.25s, transform 0.15s, box-shadow 0.25s;
+  cursor: pointer;
+  padding: 10px 16px;
+  margin-bottom: 8px;
+  background-color: white; /* fondo chiaro di default */
+  color: var(--v-theme-primary); /* colore testo leggibile */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.topic-item:hover {
+  background-color: var(--v-theme-primary); /* colore primario app */
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.topic-item:active {
+  transform: translateY(0px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+</style>

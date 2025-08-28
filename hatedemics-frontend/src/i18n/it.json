@@ -851,6 +851,11 @@
     },
     "message": {
         "title": "Approfondimenti Chat ",
+        "reliability": {
+            "reliable": "Affidabile",
+            "unreliable": "Non affidabile",
+            "unknown": "Sconosciuto"
+        },
         "header": {
             "id": "ID",
             "date": "Data",
@@ -859,18 +864,23 @@
             "mediaType": "Tipo",
             "reactions": "Reazioni",
             "nrViews": "Visualizzazioni",
+            "nrReactions": "Reazioni",
             "hateLabel": "Hate Speech",
             "checkLabel": "Check Worthy",
             "topic": "Argomento",
             "target": "Destinatario",
             "keywordsMatch": "Parole chiave",
-            "counterspeech": "Inizia dialogo"
+            "counterspeech": "Inizia dialogo",
+            "averageReliability": "Affidabilità media"
         },
         "dialog": {
             "start": "Inizia una nuova conversazione con Destinatario={target}",
             "jump": "Vai alla conversazione",
             "noData": "Nessun dato disponibile",
-            "error": "Errore durante il caricamento della chat"
+            "error": "Errore durante il caricamento della chat",
+            "startConversation": "Avvia conversazione",
+            "startConversationTitle": "Inizia una nuova conversazione",
+            "startConversationDescription": "Seleziona un argomento per iniziare una nuova conversazione"
         },
         "noTarget": "Nessun destinatario identificato",
         "target": "Clicca per selezionare un destinatario",
@@ -886,7 +896,7 @@
             "DISABLED": "Disabili",
             "JEWS": "Ebrei",
             "MUSLIMS": "Musulmani",
-            "LGBT+": "LGBT+",
+            "LGBTQIA+": "LGBTQIA+",
             "MIGRANTS": "Migranti",
             "OTHER": "Altro",
             "POC": "Persone di colore",

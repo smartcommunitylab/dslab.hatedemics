@@ -882,6 +882,11 @@
     },
     "message": {
         "title": "Chat Insights",
+        "reliability": {
+      "unknown": "Unknown",
+      "reliable": "Reliable",
+      "unreliable": "Unreliable"
+    },
         "header": {
             "id": "ID",
             "date": "Date",
@@ -890,20 +895,24 @@
             "mediaType": "Type",
             "reactions": "Reactions",
             "nrViews": "Views",
+            "nrReactions": "Reactions",
             "hateLabel": "Hate Speech",
             "checkLabel": "Check Worthy",
             "topic": "Topic",
             "target": "Target",
             "keywordsMatch": "Keywords Match",
-            "counterspeech": "Start Conversation"
+            "counterspeech": "Start Conversation",
+            "averageReliability": "Average Reliability"
         },
         "dialog": {
             "start": "Start a new conversation with Target={target}",
             "jump": "Go to conversation",
             "noProject": "No projects available",
             "noData": "No data available",
-
-            "error": "Error while fetching data"
+            "startConversation": "Start conversation",
+            "error": "Error while fetching data",
+            "startConversationTitle": "Start a new conversation",
+            "startConversationDescription": "Select the topic task you want to work on."
         },
         "noData": "No data available",
         "noTarget": "No target identified",
@@ -916,14 +925,13 @@
             "all": "All",
             "yes": "Yes",
             "no": "No",
-            "DISABLED": "Disabled",
+            "DISABLED": "People with Disabilities",
             "JEWS": "Jews",
             "MUSLIMS": "Muslims",
-            "LGBT+": "LGBT+",
+            "LGBTQIA+": "LGBTQIA+",
             "MIGRANTS": "Migrants",
             "OTHER": "Other",
-            "POC": "People of Color",
-            "ROMANI": "Rom",
+            "POC": "Black People",
             "WOMEN": "Women"
         },
         "footer": {

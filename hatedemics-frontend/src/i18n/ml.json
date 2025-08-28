@@ -874,6 +874,12 @@
   },
   "message": {
     "title": "Chat għarfien",
+    "reliability": {
+      
+      "reliable": "Affidabbli",
+      "unreliable": "Mhux affidabbli",
+      "unknown": "Mhux magħruf"
+    },
     "header": {
       "id": "ID",
       "date": "Data",
@@ -886,15 +892,21 @@
       "checkLabel": "Iċċekkja denja",
       "topic": "Suġġett",
       "target": "Mira",
+      "nrReactions": "Numru ta 'reazzjonijiet",
       "keywordsMatch": "Keywords jaqblu",
-      "counterspeech": "Ibda konversazzjoni"
+      "counterspeech": "Ibda konversazzjoni",
+      "averageReliability": "Affidabbiltà medja"
     },
     "dialog": {
       "start": "Ibda konverżazzjoni ġdida ma 'Target = {Target}",
       "jump": "Mur għall-konversazzjoni",
       "noProject": "L-ebda proġett disponibbli",
       "noData": "L-ebda dejta disponibbli",
-      "error": "Żball waqt li jġib id-dejta"
+      "error": "Żball waqt li jġib id-dejta",
+      "startConversation": "Ħu sehem f'din il-konversazzjoni",
+"startConversationTitle": "Ibda konversazzjoni ġdida",
+  "startConversationDescription": "Agħżel it-task tat-tema li tixtieq taħdem fuqha."
+
     },
     "noData": "L-ebda dejta disponibbli",
     "noTarget": "L-ebda mira identifikata",
@@ -910,7 +922,7 @@
       "DISABLED": "B'diżabilità",
       "JEWS": "Lhud",
       "MUSLIMS": "Musulmani",
-      "LGBT+": "LGBT +",
+      "LGBTQIA+": "LGBTQIA+",
       "MIGRANTS": "Migranti",
       "OTHER": "Ieħor",
       "POC": "Nies ta 'kulur",
