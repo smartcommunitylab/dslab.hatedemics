@@ -248,7 +248,7 @@ const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
                   <td class="text-left">{{ safeNumberOrDash(item.cw) }}</td>
                   <td class="text-left">
                     <v-icon
-                      v-if="typeof item.iri === 'number' && item.iri >= 0"
+                      v-if="typeof item.hs === 'number' && item.hs >= 0"
                       class="status-icon success"
                     >
                       mdi-check

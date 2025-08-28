@@ -11,7 +11,7 @@ const { t } = useI18n();
 const channelsStore = useChannelsStore();
 const router = useRouter();
 const { actions = true } = defineProps<{ actions?: Boolean}>()
-const isExtended: ComputedRef<boolean> = computed(() => (channelsStore?.selectedChannelInfo?.iri ? true : false));
+const isExtended: ComputedRef<boolean> = computed(() => (channelsStore?.selectedChannelInfo?.hs ? true : false));
 const goToChats = () => {
   router.push({
     name: 'Inspector',
