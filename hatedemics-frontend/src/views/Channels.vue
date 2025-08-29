@@ -7,12 +7,12 @@ import { storeToRefs } from "pinia";
 import type { ChannelInfo } from "@/services/types";
 import GraphComponent from "@/components/GraphComponentNew.vue";
 import ExploreGuideDialog from "@/components/ExploreGuideDialog.vue";
-import TutorialHomeDialog from "@/components/TutorialHomeDialog.vue";
+import TutorialNetworkDialog from "@/components/TutorialNetworkDialog.vue";
 // import { useGlobal } from "@/store";
 // const globalStore = useGlobal();
 
 const showExploreGuide = ref(false);
-const showTutorialHome = ref(false);
+const showTutorialNetwork = ref(false);
 const { t } = useI18n();
 const channelsStore = useChannelsStore();
 const { channelsInfo, selectedChannelInfo, selectedLanguage } = storeToRefs(
@@ -165,7 +165,7 @@ const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
               color="primary"
               variant="flat"
               size="small"
-              @click.stop="showTutorialHome = true"
+              @click.stop="showTutorialNetwork = true"
               prepend-icon="mdi-help"
               class="me-2"
             >
@@ -294,7 +294,7 @@ const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
     </v-btn>
   </v-container>
   <ExploreGuideDialog v-model="showExploreGuide" />
-  <TutorialHomeDialog v-model="showTutorialHome" />
+  <TutorialNetworkDialog v-model="showTutorialNetwork" />
 </template>
 
 <style scoped>

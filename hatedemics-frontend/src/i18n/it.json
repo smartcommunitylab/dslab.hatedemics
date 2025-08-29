@@ -147,19 +147,19 @@
             {
                 "title": "Che cos’è Hatedemics",
                 "html": "<p><strong>Hatedemics</strong> è un progetto europeo che mira a sensibilizzare sul tema dell’odio online, della disinformazione e di come questi due fenomeni si intrecciano. L’obiettivo è dare strumenti a ONG, organizzazioni della società civile, fact-checker, autorità pubbliche e giovani per prevenire e contrastare efficacemente polarizzazione, intolleranza e teorie del complotto.</p><p>Visita il <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">sito web di Hatedemics</a> per saperne di più.</p>"
-              },
-              {
+            },
+            {
                 "title": "Cosa include la piattaforma?",
                 "html": "<p style='margin-bottom:12px'>🎓 <strong>Attività educative:</strong> Metti alla prova le tue conoscenze su odio e disinformazione con esercizi interattivi dedicati!</p><p style='margin-bottom:12px'>🌐 <strong>Esplora i messaggi su Telegram:</strong> Scopri come migliaia di canali Telegram sono connessi con una mappa interattiva (<em>Network</em>), cosa dicono davvero (<em>Channel</em>) e come appaiono i contenuti d’odio e fuorvianti (<em>Conversation</em>).</p><p style='margin-bottom:12px'>💬 <strong>Scrittura di counterspeech:</strong> Quando e come rispondere all’odio basato sulla disinformazione? Qui trovi un modello di dialogo che simula l’interazione con un hater, generando risposte di <em>counterspeech</em> basate sui fatti.</p><p>🌍 <strong>Lingue:</strong> La piattaforma supporta 5 lingue: Inglese, Spagnolo, Italiano, Maltese e Polacco.</p>"
-              },
-              {
+            },
+            {
                 "title": "Come usa l’IA Hatedemics?",
                 "html": "<ul style='padding-left:0; list-style:none'><li style='margin-bottom:12px'>📊 <strong>Analisi dei dati:</strong> Analizza grandi volumi di dati da Telegram per rivelare tendenze di odio e disinformazione. Gli insight sono generati dall’IA e potrebbero non essere sempre accurati: in caso di dubbio consulta gli educatori di riferimento.</li><li>🤖 <strong>Generazione di dialoghi di counterspeech:</strong> La piattaforma presenta un modello di dialogo che simula interazioni con haters, generando risposte di <em>counterspeech</em> modificabili dagli utenti per imparare quando e come rispondere con i fatti.</li></ul>"
-              },
-              {
+            },
+            {
                 "title": "Avvertenza sui contenuti",
                 "html": "<p>⚠️ <strong>Attenzione:</strong> la piattaforma contiene esempi non oscurati che alcuni lettori potrebbero trovare offensivi.</p>"
-              }
+            }
         ],
         "prev": "Indietro",
         "next": "Avanti",
@@ -713,7 +713,7 @@
     },
     "inspect": {
         "title": "Panoramica del Canale",
-        "subtitle": "Analizza i Canali e i Topics Fondamentali nella Rete dell'Odio e della Disinformazione"
+"subtitle": "<p>In questa pagina puoi visualizzare nel dettaglio il contenuto di un singolo canale Telegram. La tabella mostra i temi principali del canale, quanto compaiono nei messaggi, la percentuale di discorsi d’odio e di verificabilità (check-worthiness) per ciascuno e il sentiment prevalente.</p><p>A destra troverai le informazioni chiave sul canale, mentre le word cloud visualizzano quali termini compaiono più spesso nei messaggi non di odio e in quelli di odio, e nei messaggi considerati verificabili e non verificabili.</p><p>Usa i filtri e i pulsanti per passare dalla visuale delle chat dei canali agli argomenti, o per regolare il tipo di word cloud che vedi. Se posizioni il mouse su un’etichetta o su un pulsante, vedrai una breve spiegazione della sua funzione.</p>"
     },
     "channel": {
         "title": "Esplorazione della Rete",
@@ -734,7 +734,7 @@
     },
     "conversation": {
         "title": "Conversazione",
-        "subtitle": "Esplora le Conversazioni e Analizza i Messaggi nella Rete della Disinformazione e dell'Odio"
+        "subtitle": "In questa pagina puoi esplorare i singoli messaggi del canale.<br><br>Ogni riga della tabella mostra il <b>testo del messaggio</b>, la sua <b>data</b> e dettagli come il <b>numero di like</b>, se contiene <b>hate speech</b>, se è considerato <i>“check-worthy”</i>, e se è menzionato un <b>gruppo target</b>.<br><br>Queste informazioni ti permettono di capire non solo che tipo di contenuti vengono pubblicati, ma anche come il pubblico interagisce con essi.<br>Puoi filtrare i messaggi per <b>hate speech</b>, <b>check-worthiness</b> o <b>gruppo target</b> per concentrarti sulle conversazioni che ti interessano di più.<br><br>Puoi anche riordinare i messaggi cliccando sulle <b>intestazioni delle colonne</b>.<br>Ad esempio, se vuoi vedere come si è sviluppata una conversazione nel tempo, riordina la tabella per la colonna <b>Data</b>.<br><br>Passa il mouse sopra qualsiasi <b>etichetta</b> o <b>bottone</b> per vedere una breve spiegazione della sua funzione."
     },
     "channelTable": {
         "header": {
@@ -769,9 +769,6 @@
             "medium": "Medio",
             "high": "Alto",
             "nonExpandable": "Nodi non espandibili / valore nullo"
-
-
-
         },
         "color": {
             "disable": "Nessuno (colore fisso)",
@@ -781,9 +778,9 @@
             "in_degree": "Nodi in entrata",
             "n_in_recommendation": "Nodi in entrata",
             "n_out_recommendation": "Nodi in uscita",
-             "n_out_recommended": "Nodi in uscita",
+            "n_out_recommended": "Nodi in uscita",
             "n_in_recommended": "Nodi  in entrata",
-            "community":"Comunità",
+            "community": "Comunità",
             "louvain_community": "Ogni colore rappresenta una comunità diversa"
         },
         "size": {
@@ -795,10 +792,11 @@
             "label": "Etichetta",
             "out_degree": "Nodi in uscita",
             "in_degree": "Nodi in entrata",
-           "n_in_recommendation": "Nodi in entrata",
+            "n_in_recommendation": "Nodi in entrata",
             "n_out_recommendation": "Nodi in uscita",
             "n_out_recommended": "Nodi in uscita",
-            "n_in_recommended": "Nodi  in entrata" },
+            "n_in_recommended": "Nodi  in entrata"
+        },
         "resetView": " Reimposta vista",
         "tooltip": {
             "label": "Etichetta",
@@ -943,15 +941,99 @@
             "addRoundDown": "Aggiungi un turno vuoto <em>dopo</em> quello selezionato.",
             "magic": "Genera automaticamente una risposta e seleziona lo span testuale collegato.<br><em>Puoi comunque modificarla.</em>",
             "delete": "Elimina definitivamente questo turno.",
-            "about":"Descrizione del canale",
-            "channelId":"ID anonimo unico del canale",
-            "nMessages":"Quanti messaggi sono nel canale",
-            "nUsers":"Numero di utenti unici che hanno scritto messaggi nel canale",
-            "languages":"Lingua del canale",
-            "iri":"Indice di Rischio Infodemia del canale",
-            "hs_percentage":"Percentuale di messaggi considerati Hate Speech",
-            "cw_percentage":"Percentuale di messaggi considerati Check Worthy"
-
+            "about": "Descrizione del canale",
+            "channelId": "ID anonimo unico del canale",
+            "nMessages": "Quanti messaggi sono nel canale",
+            "nUsers": "Numero di utenti unici che hanno scritto messaggi nel canale",
+            "languages": "Lingua del canale",
+            "iri": "Indice di Rischio Infodemia del canale",
+            "hs_percentage": "Percentuale di messaggi considerati Hate Speech",
+            "cw_percentage": "Percentuale di messaggi considerati Check Worthy"
         }
+    },
+    "guide": {
+        "network": {
+            "title": "Guida alla Rete",
+            "networkNavigation": {
+                "title": "Navigazione della rete",
+                "description": "Questa rete mostra i <b>canali Telegram</b> raccolti e le loro connessioni.<br><br>Usa il mouse per <b>trascinare e zoomare</b> nella rete dei canali e clicca su un canale per vederne i dettagli.<br><br>Quando clicchi, la connessione del canale si illuminerà, apparirà un pannello informativo sulla destra e il pulsante <i>‘Esplora il canale’</i> sarà attivato se i suoi messaggi possono essere visualizzati (cioè se il canale è espandibile)."
+            },
+            "datasetLanguage": {
+                "title": "Selezione della lingua del dataset",
+                "description": "Usa il <b>menu a tendina</b> per selezionare il dataset di Telegram che vuoi esplorare.<br><br>La rete si aggiornerà automaticamente per mostrare i dati della tua selezione e la lingua scelta verrà mantenuta in tutte e tre le schede (<i>Rete, Panoramica del Canale e Conversazione</i>)."
+            },
+            "colorSize": {
+                "title": "Selezione Colore e Dimensione",
+                "description": "Usa le opzioni di <b>colore</b> e <b>dimensione</b> per esplorare la rete. Impostazioni diverse evidenziano caratteristiche chiave e rivelano schemi.<br><br>Ad esempio, impostando <b>colore = Rischio Infodemia</b> e <b>dimensione = Hate Speech</b> i canali ad alto rischio appaiono in <span style='color:red;'>rosso</span>, con quelli contenenti più hate speech rappresentati più grandi."
+            },
+            "nodeStats": {
+                "title": "Statistiche dei nodi",
+                "description": "Questa tabella mostra i dati di ogni canale nella rete. Hai due interazioni principali:<br><ul><li><b>Ordina la tabella:</b> clicca su qualsiasi titolo di colonna (es. <i>Numero di messaggi</i>) per riordinare i dati.</li><li><b>Trova un canale:</b> clicca su qualsiasi riga per evidenziare quel canale sulla mappa della rete e aprire il suo pannello informativo.</li></ul>"
+            },
+            "expandable": {
+                "title": "Espandibile",
+                "description": "Un canale è <b>espanso</b> se raccogliamo tutti i suoi messaggi, mostrati nella pagina <i>Conversazione</i>.<br><br>I canali non espandibili sono mostrati in <span style='color:blue;'>blu</span> nella rete."
+            },
+            "exploreChannel": {
+                "title": "Pulsante ‘Esplora il canale’",
+                "description": "Clicca sul pulsante <b>‘Esplora il canale’</b> per passare alla pagina <i>argomenti della chat</i> e vedere ulteriori informazioni e un’analisi dettagliata degli argomenti discussi nelle chat di quel canale."
+            },
+            "degreeCentrality": {
+                "title": "Centralità di grado",
+                "description": "Mostra quante <b>connessioni dirette</b> ha un punto (nel nostro caso un canale Telegram) nella rete.<br><br>Questo aiuta a capire quanto sia <i>“importante”</i> — pensa alla popolarità: <b>tanti amici!</b>"
+            },
+            "communities": {
+                "title": "Comunità",
+                "description": "Le comunità sono <b>gruppi naturali</b> all’interno delle reti.<br><br>Per rilevarle utilizziamo il metodo di <b>rilevamento delle comunità di Louvain</b>, che cerca gruppi con molte connessioni interne.<br>(Come un gruppo di amici in cui tutti si conoscono molto bene!)<br><br>Per maggiori dettagli, puoi consultare <a href='https://en.wikipedia.org/wiki/Louvain_method' target='_blank'>questo articolo</a>."
+            }
+        },
+        "channel": {
+    "title": "Guida del Canale",
+    "topic": {
+      "title": "Tema",
+      "description": "A partire da tutti i messaggi della chat selezionata, i temi più significativi vengono estratti tramite <b>topic modeling basato su IA</b>: i messaggi sono raggruppati in base alle somiglianze nel contenuto. Questi cluster rivelano gli argomenti più rilevanti della discussione, aiutando a capire di cosa si parla nel canale."
+    },
+    "hateSpeechPercent": {
+      "title": "Hate Speech %",
+      "description": "Grazie alla <b>classificazione basata su IA</b>, ogni messaggio del canale viene analizzato per rilevare se contiene discorsi d’odio (consulta il <i>Glossario</i> per la definizione di Hate Speech). Calcolando la <b>media dell’Hate Speech</b> nei messaggi collegati a ciascun tema, evidenziamo la prevalenza del discorso d’odio nelle conversazioni."
+    },
+    "checkWorthinessPercent": {
+      "title": "Check-Worthiness %",
+      "description": "Con la <b>classificazione basata su IA</b>, ogni messaggio è analizzato per capire se è <b>verificabile</b> (check-worthy), ovvero se contiene affermazioni che possono richiedere fact-checking (vedi <i>Glossario</i> per maggiori dettagli). Calcolando la <b>media del contenuto verificabile</b> per tema, evidenziamo la prevalenza di affermazioni potenzialmente fuorvianti o dubbie nelle conversazioni."
+    },
+    "prevalentSentiment": {
+      "title": "Sentiment prevalente",
+      "description": "Con l’<b>analisi del sentiment basata su IA</b>, ogni messaggio è classificato come <i>neutro</i>, <i>positivo</i> o <i>negativo</i>. Aggregando il sentiment di tutti i messaggi relativi a un tema, identifichiamo il <b>sentiment prevalente</b> di quel tema."
+    },
+    "wordCloud": {
+      "title": "Word Cloud",
+      "description": "La word cloud è una rappresentazione visiva delle parole più frequenti in un testo: più una parola è ricorrente, più è mostrata <b>grande</b> nella nuvola.<br><br>Permette di visualizzare quali termini compaiono più spesso nei messaggi <b>non d’odio</b> e di <b>odio</b>, e in quelli <b>verificabili</b> e <b>non verificabili</b>, a livello di <i>chat</i> o di <i>tema</i>."
+    }
+  },
+  "chats": {
+  "title": "Guida Rapida - Chat",
+  "reactions": {
+    "title": "Reazioni",
+    "description": "Il numero totale di reazioni (<b>mi piace</b>, <b>non mi piace</b>, <b>cuore</b> e così via) che un messaggio ha ricevuto. È un’indicazione della <b>popolarità</b> di un messaggio."
+  },
+  "reliability": {
+    "title": "Affidabilità",
+    "description": "Indica l’<b>affidabilità media</b> delle URL contenute nel messaggio. Viene valutata automaticamente in base al dominio: può essere <b>affidabile</b>, <b>non affidabile</b> o <b>sconosciuto</b>."
+  },
+  "target": {
+    "title": "Gruppo target",
+    "description": "Un target si riferisce all’<b>individuo</b> o al <b>gruppo di persone</b> menzionato in un messaggio. In questo progetto, identifichiamo se un messaggio contiene riferimenti a uno dei seguenti gruppi: <b>persone nere</b>, <b>LGBTQIA+</b>, <b>Ebrei</b>, <b>migranti</b>, <b>musulmani</b>, <b>persone con disabilità</b>, <b>donne</b>.<br><br>La presenza di un target non implica di per sé odio, ma permette di filtrare ulteriormente per vedere quali messaggi che menzionano questi gruppi sono anche <b>odiosi</b>, <b>checkworthy</b> o contengono <b>link non affidabili</b>."
+  },
+  "filtersTable": {
+    "title": "Filtri e intestazioni della tabella",
+    "description": "Usa i tre filtri (<b>Hate Speech</b>, <b>Check Worthy</b> e <b>Filtra per Target</b>) per mostrare solo le righe correlate.<br>Puoi anche cliccare sulle <b>intestazioni delle colonne</b> per ordinare le righe in base alla presenza o assenza di una variabile specifica."
+  },
+  "startConversation": {
+    "title": "Inizia conversazione",
+    "description": "Scrivi counterspeech",
+    "details": "Premi questo pulsante per scegliere un argomento per la scrittura del counterspeech. Verrai quindi reindirizzato alla <b>pagina di scrittura del counterspeech</b>."
+  }
+}
+
     }
 }

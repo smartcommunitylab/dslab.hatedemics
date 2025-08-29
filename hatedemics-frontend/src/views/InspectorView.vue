@@ -15,10 +15,12 @@ import SideBarInfoComponent from "@/components/SideBarInfoComponent.vue";
 import { computed } from "vue";
 
 import type { ChannelInfo } from "@/services/types";
+import TutorialInspectorDialog from "@/components/TutorialInspectorDialog.vue";
 
 const router = useRouter();
 const { t } = useI18n();
 const showExploreGuide = ref(false);
+const showTutorialInspector = ref(false);
 
 const channelsStore = useChannelsStore();
 const chatStore = useChatsStore();
@@ -114,17 +116,26 @@ const loadMore = (event: { target: any }) => {
             />
 
             <v-spacer />
-
-            <!-- Bottone help a destra -->
             <v-btn
-              variant="outlined"
-              color="error"
+              color="primary"
+              variant="flat"
               size="small"
-              class="rounded-circle"
-              style="min-width: 36px; height: 36px; padding: 0"
               @click.stop="showExploreGuide = true"
+              prepend-icon="mdi-book-open"
+              class="me-2"
             >
-              <v-icon size="20">mdi-help</v-icon>
+              {{ t("home.guideTitle") }}
+            </v-btn>
+
+            <v-btn
+              color="primary"
+              variant="flat"
+              size="small"
+              @click.stop="showTutorialInspector = true"
+              prepend-icon="mdi-help"
+              class="me-2"
+            >
+              {{ t("home.guide") }}
             </v-btn>
           </div>
         </v-expansion-panel-title>
@@ -136,9 +147,6 @@ const loadMore = (event: { target: any }) => {
         </v-expansion-panel-text>
       </v-expansion-panel>
     </v-expansion-panels>
-        <!-- <h2 class="text-h6 font-weight-medium ma-4">
-      {{ t("channel.subtitle") }}
-    </h2> -->
     <v-row>
       <v-col cols="4">
         <v-autocomplete
@@ -216,5 +224,6 @@ const loadMore = (event: { target: any }) => {
     </v-row>
   </v-container>
   <ExploreGuideDialog v-model="showExploreGuide" />
+  <TutorialInspectorDialog v-model="showTutorialInspector" />
 
 </template>
