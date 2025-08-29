@@ -51,7 +51,7 @@
         "description": "The Hatedemics platform leverages artificial intelligence to analyze online content, enhance critical thinking, and train responses to hate speech.",
         "network": "Explore the Network",
         "networkDescription": "An interactive map to observe the connections between channels, content, and dynamics related to hate and disinformation online. Discover what happens on the web, follow the flows, and identify the key nodes of toxic communication.",
-        "networkButton": "Go to the network",   
+        "networkButton": "Go to the network",
         "counterspeech": "Counterspeech Writing",
         "counterspeechDescription": "Train your ability to respond to hate and disinformation content with targeted writing exercises. Learn how to use reliable sources to create solid arguments and develop your critical thinking to change the tone of online debate.",
         "counterspeechButton": "Start writing",
@@ -87,7 +87,7 @@
         }
     },
     "networkGuide": {
-        "guideTitle": "Network's Glossary",
+        "guideTitle": "Exploration Glossary",
         "guideItems": {
             "network": {
                 "title": "Network",
@@ -139,19 +139,19 @@
             {
                 "title": "What is Hatedemics",
                 "html": "<p><strong>Hatedemics</strong> is a European project focused on raising awareness about hate speech, disinformation, and how these two issues intersect. The project aims to empower NGOs, civil society organisations, fact-checkers, public authorities, and young people to effectively prevent and combat polarisation, intolerance, and conspiracy theories.</p><p>Visit the <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">Hatedemics website</a> to learn more about the project.</p>"
-              },
-              {
+            },
+            {
                 "title": "What does the platform include?",
                 "html": "<p style='margin-bottom:12px'>🎓 <strong>Educational activities:</strong> Test your knowledge on hate speech and misinformation with dedicated interactive exercises!</p><p style='margin-bottom:12px'>🌐 <strong>Explore Telegram messages:</strong> Discover how thousands of Telegram channels connect with an interactive map (<em>Network</em>), see what they’re really talking about (<em>Channel</em>) and how hateful and misleading content from these channels looks like (<em>Conversation</em>).</p><p style='margin-bottom:12px'>💬 <strong>Counterspeech writing:</strong> When and how to reply to misinformation-driven hate speech? Here you can find a dialogue model that simulates the interaction with a hater spreading misinformation, generating fact-based de-escalatory responses called <em>counterspeech</em>.</p><p>🌍 <strong>Languages:</strong> The platform supports 5 languages: English, Spanish, Italian, Maltese and Polish.</p>"
-              },
-              {
+            },
+            {
                 "title": "How does Hatedemics use AI?",
                 "html": "<ul style='padding-left:0; list-style:none'><li style='margin-bottom:12px'>📊 <strong>Data Analysis:</strong> It analyzes large volumes of Telegram data to reveal hate speech and disinformation trends. Insights are AI-generated and may be occasionally inaccurate: please consult the referring educators if in doubt.</li><li>🤖 <strong>Counterspeech dialogue generation:</strong> The platform features a dialogue model that simulates interactions with haters, generating “counterspeech” responses to misinformation and hate speech. These AI-generated replies, editable by users, teach when and how to respond with facts.</li></ul>"
-              },
-              {
+            },
+            {
                 "title": "Trigger warning",
                 "html": "<p>⚠️ <strong>Warning:</strong> this platform contains unobfuscated examples some readers may find offensive.</p>"
-              }
+            }
         ],
         "prev": "Back",
         "next": "Next",
@@ -740,7 +740,7 @@
     },
     "inspect": {
         "title": "Channel overview",
-        "subtitle": "Analyze the Channels and the Main Topics in the Network of Hate and Disinformation"
+        "subtitle": "<p>On this page, you can overview the content of a single Telegram channel in detail. The table shows the main topics of the channel, how often they appear in the messages, the percentage of hate speech and check-worthiness within each, and their prevalent sentiment.</p><p>On the right, you’ll find key channel information, while the word clouds visualize which terms appear most often in non-hate and hate speech messages, as well as in check-worthy and not check-worthy messages.</p><p>Use the filters and buttons to switch views between channels’ chats and topics, or to adjust the type of word cloud you see. If you hover your mouse over any label or button, you’ll see a short explanation of what it does.</p>"
     },
     "channel": {
         "title": "Network exploration",
@@ -749,7 +749,7 @@
     },
     "conversation": {
         "title": "Conversation",
-        "subtitle": "Explore the Conversations and Analyze the Messages in the Network of Hate and Disinformation"
+        "subtitle":  "On this page, you can explore individual messages from the channel.<br><br>Each row in the table shows the <b>message text</b>, its <b>date</b>, and details such as the <b>number of likes</b>, whether it contains <b>hate speech</b>, whether it is considered <i>“check-worthy”</i>, and if one <b>target group</b> is mentioned.<br><br>These insights allow you to see not just what kinds of content are being posted, but also how audiences engage with it.<br>You can filter the messages by <b>hate speech</b>, <b>check-worthiness</b>, or <b>target group</b> to focus on the conversations that interest you most.<br><br>You can also reorder the messages by clicking on the <b>column headers</b>.<br>For example, if you want to see how a conversation developed over time, reorder the table by the <b>Date</b> column.<br><br>Hover your mouse over any <b>label</b> or <b>button</b> to see a short explanation of what it does."
     },
     "project": {
         "noProject": "No projects available",
@@ -815,7 +815,6 @@
             "community": "Community",
             "label": "Color",
             "louvain_community": "Every color represents a different community"
-
         },
         "size": {
             "disable": "Disable size",
@@ -824,9 +823,9 @@
             "in": "In Recommendations",
             "out": "Out Recommendations",
             "label": "Size",
-             "out_degree": "Out-degree ",
+            "out_degree": "Out-degree ",
             "in_degree": "In-degree ",
-"n_in_recommendation": "In Recommendations",
+            "n_in_recommendation": "In Recommendations",
             "n_out_recommendation": "Out Recommendations",
             "n_in_recommended": "In Recommendations",
             "n_out_recommended": "Out Recommendations"
@@ -883,10 +882,10 @@
     "message": {
         "title": "Chat Insights",
         "reliability": {
-      "unknown": "Unknown",
-      "reliable": "Reliable",
-      "unreliable": "Unreliable"
-    },
+            "unknown": "Unknown",
+            "reliable": "Reliable",
+            "unreliable": "Unreliable"
+        },
         "header": {
             "id": "ID",
             "date": "Date",
@@ -978,15 +977,102 @@
             "addRoundDown": "Add an empty turn <em>after</em> the selected one.",
             "magic": "Automatically generates a reply and selects the related text span.<br><em>You can still edit it.</em>",
             "delete": "Delete this turn permanently.",
-            "about":"Brief channel’s description",
-            "channelId":"Unique anonymised ID of the channel",
-            "nMessages":"How many messages are in the channel",
-            "nUsers":"How many users are in the channel",
-            "languages":"Languages used in the channel",
-            "iri":"Infodemic Risk Index of the channel",
-            "hs_percentage":"Percentage of messages that are considered Hate Speech",
-            "cw_percentage":"Percentage of messages that are considered Check Worthy"
-
+            "about": "Brief channel’s description",
+            "channelId": "Unique anonymised ID of the channel",
+            "nMessages": "How many messages are in the channel",
+            "nUsers": "How many users are in the channel",
+            "languages": "Languages used in the channel",
+            "iri": "Infodemic Risk Index of the channel",
+            "hs_percentage": "Percentage of messages that are considered Hate Speech",
+            "cw_percentage": "Percentage of messages that are considered Check Worthy"
+        }
+    },
+    "guide": {
+        "network": {
+            "title": "Network's Guide",
+            "networkNavigation": {
+                "title": "Network navigation",
+                "description": "This network displays the collected <b>Telegram channels</b> and their connections.<br><br>Use your mouse to <b>drag and zoom</b> across the channel network, and click on a channel to see its details.<br><br>When you click, the channel’s connection will light up, an info panel will appear on the right, and an <i>‘Explore the channel’</i> button will be activated if its messages can be viewed (i.e. if the channel is expandable)."
+            },
+            "datasetLanguage": {
+                "title": "Dataset language selection",
+                "description": "Use the <b>dropdown menu</b> to select the Telegram dataset you intend to explore.<br><br>The network will automatically update to show data for your selection, and the chosen language will hold across all three tabs (<i>Network, Channel Overview, and Conversation</i>)."
+            },
+            "colorSize": {
+                "title": "Color & Size selection",
+                "description": "Use the <b>color</b> and <b>size</b> options to explore the network. Different settings highlight key features and reveal patterns.<br><br>For example, setting <b>color = Infodemic Risk</b> and <b>size = Hate Speech</b> shows high-risk channels in <span style='color:red;'>red</span>, with those containing more hate speech appearing larger."
+            },
+            "nodeStats": {
+                "title": "Node Statistics",
+                "description": "This table shows the data for every channel in the network. You have two main interactions:<br><ul><li><b>Sort the Table:</b> Click on any column title (e.g., <i>Number of messages</i>) to reorder the data.</li><li><b>Find a Channel:</b> Click on any row to highlight that channel on the network map and open its info panel.</li></ul>"
+            },
+            "expandable": {
+                "title": "Expandable",
+                "description": "A channel is <b>expanded</b> if we collect all its chat messages, shown in the <i>Conversation</i> page.<br><br>Not expandable channels are shown in <span style='color:blue;'>blue</span> in the network."
+            },
+            "exploreChannel": {
+                "title": "‘Explore channel’ button",
+                "description": "Click the <b>‘Explore channel’</b> button to move to the <i>chat topics</i> page and see further information and a detailed breakdown of the topics discussed in that channel's chats."
+            },
+            "degreeCentrality": {
+                "title": "Degree centrality",
+                "description": "Shows how many <b>direct connections</b> a point (which for us is a Telegram channel) has in the network.<br><br>This helps to figure out how <i>“important”</i> it is — think popularity: <b>lots of friends!</b>"
+            },
+            "communities": {
+                "title": "Communities",
+                "description": "Communities are natural <b>groups</b> within the networks.<br><br>To detect them, we use the <b>Louvain community detection</b> method, which looks for groups where there are many connections inside the group.<br>(Like a friend group where everyone knows each other very well!)<br><br>For more details, you can check out <a href='https://en.wikipedia.org/wiki/Louvain_method' target='_blank'>this article</a>."
+            }
+        },
+        "channel": {
+            "title": "Channel Guide",
+            "topic": {
+              "title": "Topic",
+              "description": "Starting from all the messages in the selected chat, the most significant topics are extracted using <b>AI-based topic modeling</b>: messages are grouped together based on similarities in their content. These clusters reveal the most relevant themes of discussion, helping to identify what people are talking about in the channel."
+            },
+            "hateSpeechPercent": {
+              "title": "Hate Speech %",
+              "description": "Using <b>AI-based classification</b>, each message in a channel is analyzed to detect whether it contains hate speech (see the <i>Glossary</i> for more information about the definition of Hate Speech). By calculating the <b>average Hate Speech</b> within the messages related to each topic, we can highlight the prevalence of hate speech within the conversations."
+            },
+            "checkWorthinessPercent": {
+              "title": "Check-Worthiness %",
+              "description": "Using <b>AI-based classification</b>, each message in a channel is analyzed to detect whether it is <b>check-worthy</b>, meaning it contains claims or statements that may require fact-checking (see the <i>Glossary</i> for more on Check-Worthiness). By calculating the <b>average level of check-worthy content</b> within each topic, we highlight the prevalence of potentially misleading or questionable claims in the conversations."
+            },
+            "prevalentSentiment": {
+              "title": "Prevalent sentiment",
+              "description": "Using <b>AI-based sentiment analysis</b>, each message in a channel is classified as <i>neutral</i>, <i>positive</i>, or <i>negative</i>. By aggregating the sentiment of all messages related to a topic, we identify the <b>prevalent sentiment</b> of that topic."
+            },
+            "wordCloud": {
+              "title": "Word Cloud",
+              "description": "A word cloud is a visual representation of the most frequent words in a collection of text: the more often a word appears, the <b>larger</b> it is displayed in the cloud.<br><br>Use it to visualize which terms appear most often in <b>non-hate</b> and <b>hate speech</b> messages, and in <b>check-worthy</b> and <b>not check-worthy</b> messages, at <i>chat</i> or <i>topic</i> level."
+            }
+          },
+          "chats": {
+  "title": "Quick Guide - Chats",
+  "reactions": {
+    "title": "Reactions",
+    "description": "The total number of reactions (<b>like</b>, <b>dislikes</b>, <b>heart</b> and so on) a message received. It’s an indication of the <b>popularity</b> of a message."
+  },
+  "reliability": {
+    "title": "Reliability",
+    "description": "Indicates the <b>average reliability</b> of the urls contained in the message. It is automatically assessed according to the url domain: can be <b>reliable</b>, <b>unreliable</b>, or <b>unknown</b>."
+  },
+  "target": {
+    "title": "Target",
+    "description": "A target refers to the <b>individual</b> or <b>group of people</b> mentioned in a message. In this project, we identify whether a message contains a reference to one of the following groups: <b>black people</b>, <b>LGBTQIA+</b>, <b>Jews</b>, <b>migrants</b>, <b>Muslims</b>, <b>people with disabilities</b>, <b>women</b>.<br><br>The presence of a target does not by itself imply hate, but it allows further filtering to see which messages mentioning these groups are also <b>hateful</b>, <b>checkworthy</b>, or contain <b>unreliable links</b>."
+  },
+  "filtersTable": {
+    "title": "Filters and Table Headers",
+    "description": "Use the three filters (<b>Hate Speech</b>, <b>Check Worthy</b>, and <b>Filter by Target</b>) to display only the related rows.<br>You can also click on the <b>table headers</b> to sort the rows by the presence or absence of a specific variable."
+  },
+  "startConversation": {
+    "title": "Start conversation",
+    "description": "Write counterspeech",
+    "details": "Press this button to choose a topic for counterspeech writing. You’ll then be redirected to the <b>counterspeech writing page</b>."
+  }
+}
+,
+        "common": {
+            "close": "Close"
         }
     }
 }

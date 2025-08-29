@@ -19,6 +19,7 @@ import { isEmptyOrSpaces } from "@/services/utility";
 import dialogApi from "@/services/dialog/dialogApi";
 import router from "@/router";
 import { useGlobal } from "@/store";
+import TutorialDiscussionDialog from "@/components/TutorialDiscussionDialog.vue";
 const channelStore = useChannelsStore();
 const globalStore = useGlobal();
 
@@ -35,6 +36,7 @@ const { messages } = storeToRefs(messagesStore);
 const { selectedChat, chats } = storeToRefs(chatStore);
 const showExploreGuide = ref(false);
 const showTopicsDialog = ref(false);
+const showTutorialDiscussion = ref(false);
 const targetOptions = [
   { title: t("message.filter.DISABLED"), value: "DISABLED" },
   { title: t("message.filter.JEWS"), value: "JEWS" },
@@ -152,17 +154,26 @@ const loadMore = (event: { target: any }) => {
             />
 
             <v-spacer />
-
-            <!-- Bottone help a destra -->
             <v-btn
-              variant="outlined"
-              color="error"
+              color="primary"
+              variant="flat"
               size="small"
-              class="rounded-circle"
-              style="min-width: 36px; height: 36px; padding: 0"
               @click.stop="showExploreGuide = true"
+              prepend-icon="mdi-book-open"
+              class="me-2"
             >
-              <v-icon size="20">mdi-help</v-icon>
+              {{ t("home.guideTitle") }}
+            </v-btn>
+
+            <v-btn
+              color="primary"
+              variant="flat"
+              size="small"
+              @click.stop="showTutorialDiscussion = true"
+              prepend-icon="mdi-help"
+              class="me-2"
+            >
+              {{ t("home.guide") }}
             </v-btn>
           </div>
         </v-expansion-panel-title>
@@ -287,7 +298,8 @@ const loadMore = (event: { target: any }) => {
   </v-card>
 </v-dialog>
 
-  <ExploreGuideDialog v-model="showExploreGuide" />
+<ExploreGuideDialog v-model="showExploreGuide" />
+<TutorialDiscussionDialog v-model="showTutorialDiscussion" />
 </template>
 
 <style lang="css" scoped>

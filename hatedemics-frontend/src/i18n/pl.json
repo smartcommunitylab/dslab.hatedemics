@@ -61,7 +61,7 @@
         "guideDescription": "Co należy wiedzieć przed użyciem platformy.",
         "guideButton": "Otwarty przewodnik",
         "guideTitle": "Słowniczek",
-        "guide":"Otwarty przewodnik",
+        "guide": "Otwarty przewodnik",
         "selectDataset": "Wybierz zestaw danych",
         "guideItems": {
             "network": {
@@ -139,19 +139,19 @@
             {
                 "title": "Czym jest Hatedemics?",
                 "html": "<p><strong>Hatedemics</strong> to europejski projekt mający na celu podnoszenie świadomości na temat mowy nienawiści, dezinformacji i tego, jak te dwa zjawiska się łączą. Projekt ma na celu wzmocnienie pozycji organizacji pozarządowych, społeczeństwa obywatelskiego, fact-checkerów, władz publicznych i młodzieży, aby skutecznie zapobiegać polaryzacji, nietolerancji i teoriom spiskowym.</p><pOdwiedź <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">stronę Hatedemics</a>, aby dowiedzieć się więcej.</p>"
-              },
-              {
+            },
+            {
                 "title": "Co zawiera platforma?",
                 "html": "<p style='margin-bottom:12px'>🎓 <strong>Działania edukacyjne:</strong> Sprawdź swoją wiedzę na temat mowy nienawiści i dezinformacji dzięki interaktywnym ćwiczeniom!</p><p style='margin-bottom:12px'>🌐 <strong>Eksploruj wiadomości na Telegramie:</strong> Odkryj, jak tysiące kanałów Telegram są połączone na interaktywnej mapie (<em>Network</em>), co naprawdę mówią (<em>Channel</em>) i jak wyglądają treści pełne nienawiści i dezinformacji (<em>Conversation</em>).</p><p style='margin-bottom:12px'>💬 <strong>Pisanie counterspeech:</strong> Kiedy i jak odpowiadać na mowę nienawiści opartą na dezinformacji? Tutaj znajdziesz model dialogu, który symuluje interakcję z hejterem, generując odpowiedzi <em>counterspeech</em> oparte na faktach.</p><p>🌍 <strong>Języki:</strong> Platforma obsługuje 5 języków: angielski, hiszpański, włoski, maltański i polski.</p>"
-              },
-              {
+            },
+            {
                 "title": "Jak Hatedemics wykorzystuje AI?",
                 "html": "<ul style='padding-left:0; list-style:none'><li style='margin-bottom:12px'>📊 <strong>Analiza danych:</strong> Analizuje duże zbiory danych z Telegrama, aby ujawnić trendy dotyczące mowy nienawiści i dezinformacji. Wnioski są generowane przez AI i mogą być niekiedy niedokładne: w razie wątpliwości skonsultuj się z edukatorami.</li><li>🤖 <strong>Generowanie dialogów counterspeech:</strong> Platforma oferuje model dialogu, który symuluje interakcje z hejterami, generując odpowiedzi <em>counterspeech</em> edytowalne przez użytkowników, aby nauczyć, kiedy i jak odpowiadać faktami.</li></ul>"
-              },
-              {
+            },
+            {
                 "title": "Ostrzeżenie o treści",
                 "html": "<p>⚠️ <strong>Uwaga:</strong> platforma zawiera nieocenzurowane przykłady, które niektórzy czytelnicy mogą uznać za obraźliwe.</p>"
-              }
+            }
         ],
         "prev": "Z powrotem",
         "next": "Następny",
@@ -559,9 +559,9 @@
                                     }
                                 ],
                                 "feedback": {
-                 "correct": "Poprawnie! Na stronie nie ma podanych autorów ani zespołu redakcyjnego.\n\nWpisy są publikowane przez profil o nazwie „globalna świadomość”, który nie zawiera żadnej wizytówki, opisu ani danych identyfikujących autora.\n\nBrakuje informacji o wykształceniu, kompetencjach czy doświadczeniu osób odpowiedzialnych za treści.",
-"incorrect": "Niepoprawnie! Na stronie nie ma podanych autorów ani zespołu redakcyjnego.\n\nWpisy są publikowane przez profil o nazwie „globalna świadomość”, który nie zawiera żadnej wizytówki, opisu ani danych identyfikujących autora.\n\nBrakuje informacji o wykształceniu, kompetencjach czy doświadczeniu osób odpowiedzialnych za treści."
-                }
+                                    "correct": "Poprawnie! Na stronie nie ma podanych autorów ani zespołu redakcyjnego.\n\nWpisy są publikowane przez profil o nazwie „globalna świadomość”, który nie zawiera żadnej wizytówki, opisu ani danych identyfikujących autora.\n\nBrakuje informacji o wykształceniu, kompetencjach czy doświadczeniu osób odpowiedzialnych za treści.",
+                                    "incorrect": "Niepoprawnie! Na stronie nie ma podanych autorów ani zespołu redakcyjnego.\n\nWpisy są publikowane przez profil o nazwie „globalna świadomość”, który nie zawiera żadnej wizytówki, opisu ani danych identyfikujących autora.\n\nBrakuje informacji o wykształceniu, kompetencjach czy doświadczeniu osób odpowiedzialnych za treści."
+                                }
                             },
                             {
                                 "question": "Gdzie możesz znaleźć informacje o zawartości strony i metodologii?",
@@ -628,7 +628,7 @@
                             }
                         ],
                         "conclusionTitle": "Wniosek",
-"conclusion": "Strona globalna.info jest niewiarygodnym źródłem informacji i nie warto jej ufać.\n\nNa stronie nie ma podanych autorów ani zespołu redakcyjnego — wpisy są publikowane przez anonimowy profil „globalna świadomość”, który nie zawiera żadnych danych identyfikujących autorów ani informacji o ich wykształceniu czy kompetencjach.\n\nBrakuje jakichkolwiek informacji dotyczących zawartości strony, metodologii, celu działania czy sposobu doboru i weryfikacji treści. Nie ma też żadnych dowodów na rzetelność czy naukowe podejście do prezentowanych informacji.\n\nChoć strona posiada certyfikat SSL, nie ma innych danych dotyczących bezpieczeństwa, takich jak polityka prywatności czy informacje o administratorze. Dostępny jest jedynie regulamin sklepu z ofertą produktów, który nie jest powiązany z merytoryczną zawartością portalu.\n\nTreści publikowane na tej stronie nie są potwierdzane przez żadne wiarygodne źródła. Wręcz przeciwnie — organizacje fact-checkingowe, takie jak Stowarzyszenie Demagog, AFP Sprawdzam oraz fakenews.pl, wielokrotnie wskazują, że globalna.info rozpowszechnia liczne fałszywe informacje.\n\nNa stronie nie ma również żadnych dowodów opartych na faktach czy danych naukowych — brakuje podanych źródeł, a informacje nie bazują na wiarygodnych badaniach czy instytucjach naukowych.\n\nPodsumowując, globalna.info nie spełnia podstawowych kryteriów wiarygodności i rzetelności, dlatego nie powinna być traktowana jako źródło wartościowych czy sprawdzonych informacji."
+                        "conclusion": "Strona globalna.info jest niewiarygodnym źródłem informacji i nie warto jej ufać.\n\nNa stronie nie ma podanych autorów ani zespołu redakcyjnego — wpisy są publikowane przez anonimowy profil „globalna świadomość”, który nie zawiera żadnych danych identyfikujących autorów ani informacji o ich wykształceniu czy kompetencjach.\n\nBrakuje jakichkolwiek informacji dotyczących zawartości strony, metodologii, celu działania czy sposobu doboru i weryfikacji treści. Nie ma też żadnych dowodów na rzetelność czy naukowe podejście do prezentowanych informacji.\n\nChoć strona posiada certyfikat SSL, nie ma innych danych dotyczących bezpieczeństwa, takich jak polityka prywatności czy informacje o administratorze. Dostępny jest jedynie regulamin sklepu z ofertą produktów, który nie jest powiązany z merytoryczną zawartością portalu.\n\nTreści publikowane na tej stronie nie są potwierdzane przez żadne wiarygodne źródła. Wręcz przeciwnie — organizacje fact-checkingowe, takie jak Stowarzyszenie Demagog, AFP Sprawdzam oraz fakenews.pl, wielokrotnie wskazują, że globalna.info rozpowszechnia liczne fałszywe informacje.\n\nNa stronie nie ma również żadnych dowodów opartych na faktach czy danych naukowych — brakuje podanych źródeł, a informacje nie bazują na wiarygodnych badaniach czy instytucjach naukowych.\n\nPodsumowując, globalna.info nie spełnia podstawowych kryteriów wiarygodności i rzetelności, dlatego nie powinna być traktowana jako źródło wartościowych czy sprawdzonych informacji."
                     }
                 ]
             }
@@ -636,7 +636,7 @@
     },
     "inspect": {
         "title": "Przegląd kanału",
-        "subtitle": "Przeanalizuj kanały i główne tematy w sieci nienawiści i dezinformacji"
+"subtitle": "<p>Na tej stronie możesz szczegółowo przejrzeć zawartość pojedynczego kanału Telegram. Tabela pokazuje główne tematy kanału, jak często występują w wiadomościach, procent mowy nienawiści oraz wartość do weryfikacji (check-worthiness) dla każdego z nich oraz dominujący sentyment.</p><p>Po prawej stronie znajdziesz kluczowe informacje o kanale, natomiast chmury słów (word clouds) wizualizują, które terminy pojawiają się najczęściej w wiadomościach niezawierających mowy nienawiści i w tych zawierających mowę nienawiści oraz w wiadomościach nadających się do weryfikacji i nie nadających się do weryfikacji.</p><p>Użyj filtrów i przycisków, aby przełączać widoki między czatami kanałów a tematami albo aby dostosować typ wyświetlanej chmury słów. Jeśli najedziesz kursorem myszy na jakąkolwiek etykietę lub przycisk, zobaczysz krótkie wyjaśnienie jego działania.</p>"
     },
     "channel": {
         "title": "Eksploracja sieci",
@@ -645,7 +645,7 @@
     },
     "conversation": {
         "title": "Rozmowa",
-        "subtitle": "Przeglądaj rozmowy i analizuj wiadomości w sieci nienawiści i dezinformacji"
+        "subtitle": "Na tej stronie możesz przeglądać poszczególne wiadomości z kanału.<br><br>Każdy wiersz w tabeli pokazuje <b>tekst wiadomości</b>, jej <b>datę</b> oraz szczegóły, takie jak <b>liczba polubień</b>, czy zawiera <b>mowę nienawiści</b>, czy jest uznana za <i>„check-worthy”</i> oraz czy wspomniana jest jakaś <b>grupa docelowa</b>.<br><br>Te informacje pozwalają zobaczyć nie tylko jakie treści są publikowane, ale także jak reaguje na nie publiczność.<br>Możesz filtrować wiadomości według <b>mowy nienawiści</b>, <b>check-worthiness</b> lub <b>grupy docelowej</b>, aby skupić się na interesujących Cię rozmowach.<br><br>Możesz także zmienić kolejność wiadomości, klikając w <b>nagłówki kolumn</b>.<br>Na przykład, jeśli chcesz zobaczyć, jak rozmowa rozwijała się w czasie, uporządkuj tabelę według kolumny <b>Data</b>.<br><br>Najedź myszką na dowolną <b>etykietę</b> lub <b>przycisk</b>, aby zobaczyć krótkie wyjaśnienie jego funkcji."
     },
     "project": {
         "noProject": "Brak dostępnych projektów",
@@ -723,7 +723,7 @@
             "in_degree": "Na stopniu ",
             "n_in_recommendation": "W zaleceń",
             "n_out_recommendation": "Zalecenia",
-                        "n_out_recommended": "Zalecenia",
+            "n_out_recommended": "Zalecenia",
             "n_in_recommended": "W zaleceń"
         },
         "tooltip": {
@@ -778,11 +778,10 @@
     "message": {
         "title": "Spostrzeżenia czatu",
         "reliability": {
-      
             "reliable": "fiabilny",
             "unreliable": "niewiarygodny",
             "unknown": "nieznany"
-          },
+        },
         "header": {
             "id": "ID",
             "date": "Data",
@@ -809,7 +808,6 @@
             "startConversation": "Rozpocznij nową rozmowę",
             "startConversationTitle": "Rozpocznij nową rozmowę",
             "startConversationDescription": "Wybierz zadanie tematyczne, nad którym chcesz pracować."
-          
         },
         "noData": "Brak dostępnych danych",
         "noTarget": "Nie zidentyfikowany cel",
@@ -885,5 +883,90 @@
             "hs_percentage": "Procent wiadomości uznanych za mowę nienawiści",
             "cw_percentage": "Procent wiadomości uznanych za warte sprawdzenia"
         }
+    },
+    "guide": {
+        "network": {
+            "title": "Przewodnik po sieci",
+            "networkNavigation": {
+                "title": "Nawigacja w sieci",
+                "description": "Ta sieć pokazuje zebrane <b>kanały Telegram</b> i ich połączenia.<br><br>Użyj myszy, aby <b>przeciągać i powiększać</b> sieć kanałów i kliknij kanał, aby zobaczyć jego szczegóły.<br><br>Po kliknięciu połączenie kanału się podświetli, po prawej stronie pojawi się panel informacyjny, a przycisk <i>‘Eksploruj kanał’</i> zostanie aktywowany, jeśli jego wiadomości mogą być wyświetlone (tj. jeśli kanał jest rozszerzalny)."
+            },
+            "datasetLanguage": {
+                "title": "Wybór języka zbioru danych",
+                "description": "Użyj <b>menu rozwijanego</b>, aby wybrać zbiór danych Telegram, który chcesz eksplorować.<br><br>Sieć automatycznie zaktualizuje się, aby pokazać dane dla twojego wyboru, a wybrany język zostanie zachowany we wszystkich trzech zakładkach (<i>Sieć, Przegląd kanałów i Rozmowa</i>)."
+            },
+            "colorSize": {
+                "title": "Wybór koloru i rozmiaru",
+                "description": "Użyj opcji <b>koloru</b> i <b>rozmiaru</b>, aby eksplorować sieć. Różne ustawienia podkreślają kluczowe cechy i ujawniają wzorce.<br><br>Na przykład ustawienie <b>kolor = Ryzyko infodemii</b> i <b>rozmiar = Mowa nienawiści</b> pokazuje kanały wysokiego ryzyka na <span style='color:red;'>czerwono</span>, przy czym te zawierające więcej mowy nienawiści są większe."
+            },
+            "nodeStats": {
+                "title": "Statystyki węzłów",
+                "description": "Ta tabela pokazuje dane dla każdego kanału w sieci. Masz dwie główne interakcje:<br><ul><li><b>Sortowanie tabeli:</b> Kliknij dowolny nagłówek kolumny (np. <i>Liczba wiadomości</i>), aby posortować dane.</li><li><b>Znajdź kanał:</b> Kliknij dowolny wiersz, aby podświetlić ten kanał na mapie sieci i otworzyć jego panel informacyjny.</li></ul>"
+            },
+            "expandable": {
+                "title": "Rozszerzalny",
+                "description": "Kanał jest <b>rozszerzony</b>, jeśli zbieramy wszystkie jego wiadomości, pokazane na stronie <i>Rozmowa</i>.<br><br>Kanały nierozszerzalne są pokazane na <span style='color:blue;'>niebiesko</span> w sieci."
+            },
+            "exploreChannel": {
+                "title": "Przycisk ‘Eksploruj kanał’",
+                "description": "Kliknij przycisk <b>‘Eksploruj kanał’</b>, aby przejść do strony <i>tematów czatu</i> i zobaczyć więcej informacji oraz szczegółowy podział tematów omawianych na czacie tego kanału."
+            },
+            "degreeCentrality": {
+                "title": "Centralność stopnia",
+                "description": "Pokazuje, ile <b>bezpośrednich połączeń</b> ma punkt (dla nas kanał Telegram) w sieci.<br><br>Pomaga to zrozumieć, jak bardzo jest <i>“ważny”</i> — pomyśl o popularności: <b>wielu znajomych!</b>"
+            },
+            "communities": {
+                "title": "Społeczności",
+                "description": "Społeczności to naturalne <b>grupy</b> w sieciach.<br><br>Aby je wykryć, używamy metody <b>detekcji społeczności Louvain</b>, która szuka grup z wieloma połączeniami wewnętrznymi.<br>(Jak grupa znajomych, w której wszyscy bardzo dobrze się znają!)<br><br>Aby uzyskać więcej szczegółów, możesz sprawdzić <a href='https://en.wikipedia.org/wiki/Louvain_method' target='_blank'>ten artykuł</a>."
+            }
+        },
+        "channel": {
+    "title": "Przewodnik kanału",
+    "topic": {
+      "title": "Temat",
+      "description": "Począwszy od wszystkich wiadomości w wybranym czacie, najważniejsze tematy są wydobywane przy użyciu <b>modelowania tematów opartego na AI</b>: wiadomości są grupowane na podstawie podobieństw treści. Te klastry ujawniają najistotniejsze wątki dyskusji, pomagając zrozumieć, o czym mówi się na kanale."
+    },
+    "hateSpeechPercent": {
+      "title": "Mowa nienawiści %",
+      "description": "Przy użyciu <b>klasyfikacji opartej na AI</b> każda wiadomość jest analizowana pod kątem występowania mowy nienawiści (zob. <i>Glossary</i> po definicję). Obliczając <b>średni poziom mowy nienawiści</b> w wiadomościach powiązanych z danym tematem, pokazujemy, jak bardzo mowa nienawiści jest obecna w rozmowach."
+    },
+    "checkWorthinessPercent": {
+      "title": "Check-Worthiness %",
+      "description": "Dzięki <b>klasyfikacji opartej na AI</b> każdą wiadomość oceniamy, czy jest <b>warta weryfikacji</b> (check-worthy), tzn. czy zawiera twierdzenia wymagające fact-checkingu (szczegóły w <i>Glossary</i>). Obliczając <b>średni poziom treści wartych weryfikacji</b> w ramach tematu, podkreślamy rozpowszechnienie potencjalnie wprowadzających w błąd lub wątpliwych twierdzeń."
+    },
+    "prevalentSentiment": {
+      "title": "Dominujący sentyment",
+      "description": "Za pomocą <b>analizy sentymentu opartej na AI</b> każda wiadomość jest klasyfikowana jako <i>neutralna</i>, <i>pozytywna</i> lub <i>negatywna</i>. Agregując sentyment wszystkich wiadomości powiązanych z tematem, identyfikujemy <b>dominujący sentyment</b> tego tematu."
+    },
+    "wordCloud": {
+      "title": "Chmura słów",
+      "description": "Chmura słów to wizualizacja najczęściej występujących słów w zbiorze tekstów: im częściej dane słowo się pojawia, tym jest <b>większe</b> w chmurze.<br><br>Pozwala zobaczyć, które terminy najczęściej występują w wiadomościach <b>bez mowy nienawiści</b> i z <b>mową nienawiści</b>, a także w wiadomościach <b>wartych weryfikacji</b> i <b>niewartych weryfikacji</b>, na poziomie <i>czatu</i> lub <i>tematu</i>."
+    }
+  },
+  "chats": {
+  "title": "Szybki przewodnik - Czat",
+  "reactions": {
+    "title": "Reakcje",
+    "description": "Łączna liczba reakcji (<b>lubię to</b>, <b>nie lubię</b>, <b>serce</b> itp.), jakie otrzymała wiadomość. To wskaźnik <b>popularności</b> wiadomości."
+  },
+  "reliability": {
+    "title": "Wiarygodność",
+    "description": "Wskazuje <b>średnią wiarygodność</b> adresów URL zawartych w wiadomości. Jest automatycznie oceniana według domeny URL: może być <b>wiarygodna</b>, <b>niewiarygodna</b> lub <b>nieznana</b>."
+  },
+  "target": {
+    "title": "Grupa docelowa",
+    "description": "Grupa docelowa odnosi się do <b>osoby</b> lub <b>grupy osób</b> wspomnianych w wiadomości. W tym projekcie identyfikujemy, czy wiadomość zawiera odniesienie do jednej z następujących grup: <b>czarnoskórzy</b>, <b>LGBTQIA+</b>, <b>Żydzi</b>, <b>migranci</b>, <b>muzułmanie</b>, <b>osoby niepełnosprawne</b>, <b>kobiety</b>.<br><br>Obecność grupy docelowej sama w sobie nie oznacza nienawiści, ale pozwala na dalsze filtrowanie, aby zobaczyć, które wiadomości odnoszące się do tych grup są również <b>nienawistne</b>, <b>checkworthy</b> lub zawierają <b>niewiarygodne linki</b>."
+  },
+  "filtersTable": {
+    "title": "Filtry i nagłówki tabel",
+    "description": "Użyj trzech filtrów (<b>Hate Speech</b>, <b>Check Worthy</b> i <b>Filtruj według grupy docelowej</b>), aby wyświetlić tylko powiązane wiersze.<br>Możesz również kliknąć w <b>nagłówki kolumn</b>, aby posortować wiersze według obecności lub braku konkretnej zmiennej."
+  },
+  "startConversation": {
+    "title": "Rozpocznij rozmowę",
+    "description": "Napisz counterspeech",
+    "details": "Naciśnij ten przycisk, aby wybrać temat do napisania counterspeech. Następnie zostaniesz przekierowany na <b>stronę pisania counterspeech</b>."
+  }
+}
+
     }
 }
