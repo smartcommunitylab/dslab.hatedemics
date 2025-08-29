@@ -309,14 +309,14 @@ const loadMore = (event: { target: any }) => {
   cursor: pointer;
   padding: 10px 16px;
   margin-bottom: 8px;
-  background-color: white; /* fondo chiaro di default */
-  color: var(--v-theme-primary); /* colore testo leggibile */
+  background-color: var(--v-theme-surface); /* sfondo del tema */
+  color: var(--v-theme-primary); /* testo primario */
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .topic-item:hover {
-  background-color: var(--v-theme-primary); /* colore primario app */
-  color: white;
+  background-color: var(--v-theme-primary); /* background primario */
+  color: var(--v-theme-on-primary);       /* testo leggibile sul primario */
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
@@ -325,4 +325,11 @@ const loadMore = (event: { target: any }) => {
   transform: translateY(0px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
+
+/* forza anche il testo interno dei componenti Vuetify a ereditare il colore */
+.topic-item .v-list-item-title {
+  color: inherit;
+}
+
+
 </style>
