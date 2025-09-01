@@ -153,6 +153,8 @@
                 "html": "<p>⚠️ <strong>Atención:</strong> la plataforma contiene ejemplos no ocultados que algunos lectores pueden encontrar ofensivos.</p>"
             }
         ],
+        "chooseLanguage": "Elige tu idioma",
+  "continue": "Continuar",
         "prev": "Atrás",
         "next": "Próximo",
         "close": "Cerca",
@@ -161,7 +163,7 @@
     "educational": {
         "eduCard1Title": "Declaración de derechos humanos",
         "eduCard1Desc": "Descubra los principios centrales que protegen la dignidad humana.",
-        "eduCard1Button": "Explorar derechos",
+        "eduCard1Button": "Actividad de inicio",
         "eduCardBiasTitle": "Sesgos y falacias",
         "eduCardBiasDesc": "Explore las falacias lógicas y los sesgos cognitivos detrás del discurso de odio y la desinformación.",
         "eduCardBiasButton": "Actividad de inicio",
