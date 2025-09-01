@@ -153,6 +153,8 @@
                 "html": "<p>⚠️ <strong>Uwaga:</strong> platforma zawiera nieocenzurowane przykłady, które niektórzy czytelnicy mogą uznać za obraźliwe.</p>"
             }
         ],
+        "chooseLanguage": "Wybierz jezyk",
+        "continue": "Kontyntynuj",
         "prev": "Z powrotem",
         "next": "Następny",
         "close": "Zamknąć",
@@ -636,7 +638,7 @@
     },
     "inspect": {
         "title": "Przegląd kanału",
-"subtitle": "<p>Na tej stronie możesz szczegółowo przejrzeć zawartość pojedynczego kanału Telegram. Tabela pokazuje główne tematy kanału, jak często występują w wiadomościach, procent mowy nienawiści oraz wartość do weryfikacji (check-worthiness) dla każdego z nich oraz dominujący sentyment.</p><p>Po prawej stronie znajdziesz kluczowe informacje o kanale, natomiast chmury słów (word clouds) wizualizują, które terminy pojawiają się najczęściej w wiadomościach niezawierających mowy nienawiści i w tych zawierających mowę nienawiści oraz w wiadomościach nadających się do weryfikacji i nie nadających się do weryfikacji.</p><p>Użyj filtrów i przycisków, aby przełączać widoki między czatami kanałów a tematami albo aby dostosować typ wyświetlanej chmury słów. Jeśli najedziesz kursorem myszy na jakąkolwiek etykietę lub przycisk, zobaczysz krótkie wyjaśnienie jego działania.</p>"
+        "subtitle": "<p>Na tej stronie możesz szczegółowo przejrzeć zawartość pojedynczego kanału Telegram. Tabela pokazuje główne tematy kanału, jak często występują w wiadomościach, procent mowy nienawiści oraz wartość do weryfikacji (check-worthiness) dla każdego z nich oraz dominujący sentyment.</p><p>Po prawej stronie znajdziesz kluczowe informacje o kanale, natomiast chmury słów (word clouds) wizualizują, które terminy pojawiają się najczęściej w wiadomościach niezawierających mowy nienawiści i w tych zawierających mowę nienawiści oraz w wiadomościach nadających się do weryfikacji i nie nadających się do weryfikacji.</p><p>Użyj filtrów i przycisków, aby przełączać widoki między czatami kanałów a tematami albo aby dostosować typ wyświetlanej chmury słów. Jeśli najedziesz kursorem myszy na jakąkolwiek etykietę lub przycisk, zobaczysz krótkie wyjaśnienie jego działania.</p>"
     },
     "channel": {
         "title": "Eksploracja sieci",
@@ -921,52 +923,51 @@
             }
         },
         "channel": {
-    "title": "Przewodnik kanału",
-    "topic": {
-      "title": "Temat",
-      "description": "Począwszy od wszystkich wiadomości w wybranym czacie, najważniejsze tematy są wydobywane przy użyciu <b>modelowania tematów opartego na AI</b>: wiadomości są grupowane na podstawie podobieństw treści. Te klastry ujawniają najistotniejsze wątki dyskusji, pomagając zrozumieć, o czym mówi się na kanale."
-    },
-    "hateSpeechPercent": {
-      "title": "Mowa nienawiści %",
-      "description": "Przy użyciu <b>klasyfikacji opartej na AI</b> każda wiadomość jest analizowana pod kątem występowania mowy nienawiści (zob. <i>Glossary</i> po definicję). Obliczając <b>średni poziom mowy nienawiści</b> w wiadomościach powiązanych z danym tematem, pokazujemy, jak bardzo mowa nienawiści jest obecna w rozmowach."
-    },
-    "checkWorthinessPercent": {
-      "title": "Check-Worthiness %",
-      "description": "Dzięki <b>klasyfikacji opartej na AI</b> każdą wiadomość oceniamy, czy jest <b>warta weryfikacji</b> (check-worthy), tzn. czy zawiera twierdzenia wymagające fact-checkingu (szczegóły w <i>Glossary</i>). Obliczając <b>średni poziom treści wartych weryfikacji</b> w ramach tematu, podkreślamy rozpowszechnienie potencjalnie wprowadzających w błąd lub wątpliwych twierdzeń."
-    },
-    "prevalentSentiment": {
-      "title": "Dominujący sentyment",
-      "description": "Za pomocą <b>analizy sentymentu opartej na AI</b> każda wiadomość jest klasyfikowana jako <i>neutralna</i>, <i>pozytywna</i> lub <i>negatywna</i>. Agregując sentyment wszystkich wiadomości powiązanych z tematem, identyfikujemy <b>dominujący sentyment</b> tego tematu."
-    },
-    "wordCloud": {
-      "title": "Chmura słów",
-      "description": "Chmura słów to wizualizacja najczęściej występujących słów w zbiorze tekstów: im częściej dane słowo się pojawia, tym jest <b>większe</b> w chmurze.<br><br>Pozwala zobaczyć, które terminy najczęściej występują w wiadomościach <b>bez mowy nienawiści</b> i z <b>mową nienawiści</b>, a także w wiadomościach <b>wartych weryfikacji</b> i <b>niewartych weryfikacji</b>, na poziomie <i>czatu</i> lub <i>tematu</i>."
-    }
-  },
-  "chats": {
-  "title": "Szybki przewodnik - Czat",
-  "reactions": {
-    "title": "Reakcje",
-    "description": "Łączna liczba reakcji (<b>lubię to</b>, <b>nie lubię</b>, <b>serce</b> itp.), jakie otrzymała wiadomość. To wskaźnik <b>popularności</b> wiadomości."
-  },
-  "reliability": {
-    "title": "Wiarygodność",
-    "description": "Wskazuje <b>średnią wiarygodność</b> adresów URL zawartych w wiadomości. Jest automatycznie oceniana według domeny URL: może być <b>wiarygodna</b>, <b>niewiarygodna</b> lub <b>nieznana</b>."
-  },
-  "target": {
-    "title": "Grupa docelowa",
-    "description": "Grupa docelowa odnosi się do <b>osoby</b> lub <b>grupy osób</b> wspomnianych w wiadomości. W tym projekcie identyfikujemy, czy wiadomość zawiera odniesienie do jednej z następujących grup: <b>czarnoskórzy</b>, <b>LGBTQIA+</b>, <b>Żydzi</b>, <b>migranci</b>, <b>muzułmanie</b>, <b>osoby niepełnosprawne</b>, <b>kobiety</b>.<br><br>Obecność grupy docelowej sama w sobie nie oznacza nienawiści, ale pozwala na dalsze filtrowanie, aby zobaczyć, które wiadomości odnoszące się do tych grup są również <b>nienawistne</b>, <b>checkworthy</b> lub zawierają <b>niewiarygodne linki</b>."
-  },
-  "filtersTable": {
-    "title": "Filtry i nagłówki tabel",
-    "description": "Użyj trzech filtrów (<b>Hate Speech</b>, <b>Check Worthy</b> i <b>Filtruj według grupy docelowej</b>), aby wyświetlić tylko powiązane wiersze.<br>Możesz również kliknąć w <b>nagłówki kolumn</b>, aby posortować wiersze według obecności lub braku konkretnej zmiennej."
-  },
-  "startConversation": {
-    "title": "Rozpocznij rozmowę",
-    "description": "Napisz counterspeech",
-    "details": "Naciśnij ten przycisk, aby wybrać temat do napisania counterspeech. Następnie zostaniesz przekierowany na <b>stronę pisania counterspeech</b>."
-  }
-}
-
+            "title": "Przewodnik kanału",
+            "topic": {
+                "title": "Temat",
+                "description": "Począwszy od wszystkich wiadomości w wybranym czacie, najważniejsze tematy są wydobywane przy użyciu <b>modelowania tematów opartego na AI</b>: wiadomości są grupowane na podstawie podobieństw treści. Te klastry ujawniają najistotniejsze wątki dyskusji, pomagając zrozumieć, o czym mówi się na kanale."
+            },
+            "hateSpeechPercent": {
+                "title": "Mowa nienawiści %",
+                "description": "Przy użyciu <b>klasyfikacji opartej na AI</b> każda wiadomość jest analizowana pod kątem występowania mowy nienawiści (zob. <i>Glossary</i> po definicję). Obliczając <b>średni poziom mowy nienawiści</b> w wiadomościach powiązanych z danym tematem, pokazujemy, jak bardzo mowa nienawiści jest obecna w rozmowach."
+            },
+            "checkWorthinessPercent": {
+                "title": "Check-Worthiness %",
+                "description": "Dzięki <b>klasyfikacji opartej na AI</b> każdą wiadomość oceniamy, czy jest <b>warta weryfikacji</b> (check-worthy), tzn. czy zawiera twierdzenia wymagające fact-checkingu (szczegóły w <i>Glossary</i>). Obliczając <b>średni poziom treści wartych weryfikacji</b> w ramach tematu, podkreślamy rozpowszechnienie potencjalnie wprowadzających w błąd lub wątpliwych twierdzeń."
+            },
+            "prevalentSentiment": {
+                "title": "Dominujący sentyment",
+                "description": "Za pomocą <b>analizy sentymentu opartej na AI</b> każda wiadomość jest klasyfikowana jako <i>neutralna</i>, <i>pozytywna</i> lub <i>negatywna</i>. Agregując sentyment wszystkich wiadomości powiązanych z tematem, identyfikujemy <b>dominujący sentyment</b> tego tematu."
+            },
+            "wordCloud": {
+                "title": "Chmura słów",
+                "description": "Chmura słów to wizualizacja najczęściej występujących słów w zbiorze tekstów: im częściej dane słowo się pojawia, tym jest <b>większe</b> w chmurze.<br><br>Pozwala zobaczyć, które terminy najczęściej występują w wiadomościach <b>bez mowy nienawiści</b> i z <b>mową nienawiści</b>, a także w wiadomościach <b>wartych weryfikacji</b> i <b>niewartych weryfikacji</b>, na poziomie <i>czatu</i> lub <i>tematu</i>."
+            }
+        },
+        "chats": {
+            "title": "Szybki przewodnik - Czat",
+            "reactions": {
+                "title": "Reakcje",
+                "description": "Łączna liczba reakcji (<b>lubię to</b>, <b>nie lubię</b>, <b>serce</b> itp.), jakie otrzymała wiadomość. To wskaźnik <b>popularności</b> wiadomości."
+            },
+            "reliability": {
+                "title": "Wiarygodność",
+                "description": "Wskazuje <b>średnią wiarygodność</b> adresów URL zawartych w wiadomości. Jest automatycznie oceniana według domeny URL: może być <b>wiarygodna</b>, <b>niewiarygodna</b> lub <b>nieznana</b>."
+            },
+            "target": {
+                "title": "Grupa docelowa",
+                "description": "Grupa docelowa odnosi się do <b>osoby</b> lub <b>grupy osób</b> wspomnianych w wiadomości. W tym projekcie identyfikujemy, czy wiadomość zawiera odniesienie do jednej z następujących grup: <b>czarnoskórzy</b>, <b>LGBTQIA+</b>, <b>Żydzi</b>, <b>migranci</b>, <b>muzułmanie</b>, <b>osoby niepełnosprawne</b>, <b>kobiety</b>.<br><br>Obecność grupy docelowej sama w sobie nie oznacza nienawiści, ale pozwala na dalsze filtrowanie, aby zobaczyć, które wiadomości odnoszące się do tych grup są również <b>nienawistne</b>, <b>checkworthy</b> lub zawierają <b>niewiarygodne linki</b>."
+            },
+            "filtersTable": {
+                "title": "Filtry i nagłówki tabel",
+                "description": "Użyj trzech filtrów (<b>Hate Speech</b>, <b>Check Worthy</b> i <b>Filtruj według grupy docelowej</b>), aby wyświetlić tylko powiązane wiersze.<br>Możesz również kliknąć w <b>nagłówki kolumn</b>, aby posortować wiersze według obecności lub braku konkretnej zmiennej."
+            },
+            "startConversation": {
+                "title": "Rozpocznij rozmowę",
+                "description": "Napisz counterspeech",
+                "details": "Naciśnij ten przycisk, aby wybrać temat do napisania counterspeech. Następnie zostaniesz przekierowany na <b>stronę pisania counterspeech</b>."
+            }
+        }
     }
 }

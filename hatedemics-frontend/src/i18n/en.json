@@ -153,6 +153,8 @@
                 "html": "<p>⚠️ <strong>Warning:</strong> this platform contains unobfuscated examples some readers may find offensive.</p>"
             }
         ],
+        "chooseLanguage": "Choose your language",
+        "continue": "Continue",
         "prev": "Back",
         "next": "Next",
         "close": "Close",

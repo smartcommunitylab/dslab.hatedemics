@@ -143,6 +143,7 @@
         "title": "Benvenuti in Hatedemics"
     },
     "onboarding": {
+
         "steps": [
             {
                 "title": "Che cos’è Hatedemics",
@@ -161,6 +162,8 @@
                 "html": "<p>⚠️ <strong>Attenzione:</strong> la piattaforma contiene esempi non oscurati che alcuni lettori potrebbero trovare offensivi.</p>"
             }
         ],
+        "chooseLanguage": "Scegli la lingua",
+  "continue": "Continua",
         "prev": "Indietro",
         "next": "Avanti",
         "close": "Chiudi",
