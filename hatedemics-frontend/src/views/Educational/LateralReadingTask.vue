@@ -40,6 +40,9 @@
       <h2 class="text-h6 font-weight-bold text-center mb-6">
   {{ currentQuestion.question }}
 </h2>
+<div class="text-subtitle-2 text-center mb-4">
+    {{ t("educational.tasks.lateralreading.selectMultiple") }}
+  </div>
   <v-row dense>
     <v-col
       v-for="(option, idx) in currentQuestion.options"
@@ -61,7 +64,7 @@
 
     <!-- Submit/Feedback -->
     <v-btn v-if="!showFeedback" color="primary" class="mt-4" @click="submitAnswer">
-      Submit
+      {{ t("educational.tasks.lateralreading.submit") }}
     </v-btn>
 
     <v-alert v-if="showFeedback" :type="isCorrect ? 'success' : 'error'" class="mt-4">
@@ -75,7 +78,7 @@
       color="primary"
       @click="nextQuestion"
     >
-      Next
+      {{ t("educational.tasks.lateralreading.nextQuestion") }}
     </v-btn>
 
     <!-- Trigger apertura dialog quando è l'ultima domanda -->
@@ -94,7 +97,7 @@
           color="primary"
           @click="closeConclusionDialog"
           >
-          Next Section
+        {{ t("educational.tasks.lateralreading.nextExercise")  }}
         </v-btn>
         <v-btn
           v-else

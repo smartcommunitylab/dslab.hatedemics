@@ -20,18 +20,12 @@
         </p>
         <!-- Immagine opzionale -->
         <div v-if="currentQuestion.image" class="mb-4 text-center">
-          <div class="image-wrapper" @click="imageDialog = true">
-            <v-img
-              :src="currentQuestion.image"
-              height="200"
-              width="100%"
-              contain
-              class="rounded"
-            />
-            <div class="zoom-overlay">
-              <v-icon size="36">mdi-magnify</v-icon>
-            </div>
-          </div>
+          <div class="image-wrapper" @click="questionImageDialog = true">
+  <v-img :src="currentQuestion.image" height="200" width="100%" contain class="rounded" />
+  <div class="zoom-overlay">
+    <v-icon size="36">mdi-magnify</v-icon>
+  </div>
+</div>
         </div>
 
         <!-- Risposte -->
@@ -68,28 +62,14 @@
           />
         </div> -->
         <div v-if="feedbackImage" class="mb-4 text-center">
-          <div class="image-wrapper" @click="imageDialog = true">
-            <v-img
-              :src="feedbackImage"
-              height="200"
-              width="100%"
-              contain
-              class="rounded"
-            />
-            <div class="zoom-overlay">
-              <v-icon size="36">mdi-magnify</v-icon>
-            </div>
-          </div>
+          <div v-if="feedbackImage" class="image-wrapper" @click="feedbackImageDialog = true">
+  <v-img :src="feedbackImage" height="200" width="100%" contain class="rounded" />
+  <div class="zoom-overlay">
+    <v-icon size="36">mdi-magnify</v-icon>
+  </div>
+</div>
         </div>
-        <!-- Dialog per feedback image -->
-        <v-dialog v-model="feedbackDialog" max-width="800px">
-          <v-card>
-            <v-img :src="feedbackImage" contain max-height="600" />
-            <v-card-actions class="justify-end">
-              <v-btn color="primary" @click="feedbackDialog = false">Close</v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-dialog>
+       
 
         <!-- Avanti -->
         <v-btn
@@ -112,15 +92,25 @@
       </v-col>
     </v-row>
 
-    <!-- Dialog immagine -->
-    <v-dialog v-model="imageDialog" max-width="800px">
-      <v-card>
-        <v-img :src="currentQuestion.image" contain max-height="600px" />
-        <v-card-actions class="justify-end">
-          <v-btn color="primary" @click="imageDialog = false">Close</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
+    <!-- Dialog immagine della domanda -->
+<v-dialog v-model="questionImageDialog" max-width="800px">
+  <v-card>
+    <v-img :src="currentQuestion.image" contain max-height="600px" />
+    <v-card-actions class="justify-end">
+      <v-btn color="primary" @click="questionImageDialog = false">Close</v-btn>
+    </v-card-actions>
+  </v-card>
+</v-dialog>
+
+<!-- Dialog immagine del feedback -->
+<v-dialog v-model="feedbackImageDialog" max-width="800px">
+  <v-card>
+    <v-img :src="feedbackImage" contain max-height="600px" />
+    <v-card-actions class="justify-end">
+      <v-btn color="primary" @click="feedbackImageDialog = false">Close</v-btn>
+    </v-card-actions>
+  </v-card>
+</v-dialog>
   </v-container>
 </template>
 <script setup lang="ts">
@@ -137,8 +127,8 @@ const showFeedback = ref(false);
 const imageDialog = ref(false);
 
 const currentQuestion = computed(() => questions.value[currentIndex.value]);
-const feedbackDialog = ref(false);
-
+const questionImageDialog = ref(false)
+const feedbackImageDialog = ref(false)
 const feedbackImage = computed(() => {
   if (!showFeedback.value || !currentQuestion.value.feedback) return null;
 
