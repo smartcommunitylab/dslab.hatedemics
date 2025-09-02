@@ -87,32 +87,70 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useI18n } from "vue-i18n";
-import { computed } from "vue";
 
 
 const { t, tm } = useI18n();
 
-function shuffleArray(array: any[]) {
+function shuffleArray(array: Pair[]) {
   return array
     .map(value => ({ value, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
     .map(({ value }) => value);
 }
 
-// Raw data
-const rawPairs = tm("educational.tasks.bias.pairs");
+interface Pair {
+  id: string;
+  left: string;
+  right: string;
+}
 
-// Columns
-const leftColumn = ref(shuffleArray(rawPairs).map(p => ({ id: p.id, label: p.left })));
-const rightColumn = ref(shuffleArray(rawPairs).map(p => ({ id: p.id, label: p.right })));
+interface MatchedPair {
+  left: PairItem;
+  right: PairItem;
+  color: { bg: string; border: string };
+}
+
+interface PairItem {
+  id: string;
+  label: string;
+}
+
+
 
 // State
 const showDialog = ref(false);
-const selectedLeft = ref(null);
-const selectedRight = ref(null);
-const matchedPairs = ref<{ left: any; right: any; color: any }[]>([]);
+const selectedLeft = ref<PairItem | null>(null);
+const selectedRight = ref<PairItem | null>(null);
+const matchedPairs = ref<MatchedPair[]>([]);
 const correctCount = ref(0);
 const incorrectCount = ref(0);
+
+// Select item
+function selectItem(item: PairItem, side: "left" | "right") {
+  if (side === "left") selectedLeft.value = item;
+  else selectedRight.value = item;
+
+  if (selectedLeft.value && selectedRight.value) {
+    matchedPairs.value.push({
+      left: selectedLeft.value,
+      right: selectedRight.value,
+      color: getNextColor(),
+    });
+    selectedLeft.value = null;
+    selectedRight.value = null;
+  }
+}
+
+
+const rawPairs: Pair[] = tm("educational.tasks.bias.pairs").pairs;
+// Columns
+const leftColumn = ref<PairItem[]>(
+  shuffleArray(rawPairs).map((p) => ({ id: p.id, label: p.left }))
+);
+const rightColumn = ref<PairItem[]>(
+  shuffleArray(rawPairs).map((p) => ({ id: p.id, label: p.right }))
+);
+
 
 // Color palette
 const colors = [
@@ -125,38 +163,7 @@ const colors = [
 ];
 let colorIndex = 0;
 const getNextColor = () => colors[colorIndex++ % colors.length];
-const correctPairsLabels = computed(() => {
-  const labels = matchedPairs.value
-    .filter(p => p.left.id === p.right.id)
-    .map(p => p.left.label.split(" - ")[0].trim());
-  
-  console.log("Correct labels:", labels);
-  return labels;
-});
 
-const incorrectPairsLabels = computed(() => {
-  const labels = matchedPairs.value
-    .filter(p => p.left.id !== p.right.id)
-    .map(p => p.left.label.split(" - ")[0].trim());
-
-  console.log("Incorrect labels:", labels);
-  return labels;
-});
-// Select item
-function selectItem(item: any, side: "left" | "right") {
-  if (side === "left") selectedLeft.value = item;
-  else selectedRight.value = item;
-
-  if (selectedLeft.value && selectedRight.value) {
-    matchedPairs.value.push({
-      left: selectedLeft.value,
-      right: selectedRight.value,
-      color: getNextColor(),
-    });
-    selectedLeft.value = null;
-    selectedRight.value = null;
-  } 
-}
 
 // Get style
 function getItemStyle(id: string, side: "left" | "right") {
