@@ -142,7 +142,7 @@ function selectItem(item: PairItem, side: "left" | "right") {
 }
 
 
-const rawPairs: Pair[] = tm("educational.tasks.bias.pairs").pairs;
+const rawPairs: Pair[] = tm("educational.tasks.bias.pairs");
 // Columns
 const leftColumn = ref<PairItem[]>(
   shuffleArray(rawPairs).map((p) => ({ id: p.id, label: p.left }))

@@ -5,7 +5,7 @@
         "button": "Login"
     },
     "common": {
-        "close": "Zamknąć",
+        "close": "Zamknij",
         "ok": "OK"
     },
     "menu": {
@@ -137,7 +137,7 @@
     "onboarding": {
         "steps": [
             {
-                "title": "Czym jest Hatedemics?",
+                "title": "Co to jest HATEDEMICS?",
                 "html": "<p><strong>Hatedemics</strong> to europejski projekt mający na celu podnoszenie świadomości na temat mowy nienawiści, dezinformacji i tego, jak te dwa zjawiska się łączą. Projekt ma na celu wzmocnienie pozycji organizacji pozarządowych, społeczeństwa obywatelskiego, fact-checkerów, władz publicznych i młodzieży, aby skutecznie zapobiegać polaryzacji, nietolerancji i teoriom spiskowym.</p><pOdwiedź <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">stronę Hatedemics</a>, aby dowiedzieć się więcej.</p>"
             },
             {
@@ -155,8 +155,8 @@
         ],
         "chooseLanguage": "Wybierz jezyk",
         "continue": "Kontyntynuj",
-        "prev": "Z powrotem",
-        "next": "Następny",
+        "prev": "Wróć",
+        "next": "Dalej",
         "close": "Zamknąć",
         "neverShow": "Nie pokazuj ponownie"
     },
@@ -170,11 +170,11 @@
         "eduCard3Title": "Obalanie",
         "eduCard3Desc": "Dowiedz się, jak skutecznie obalić dezinformację.",
         "eduCard3Button": "Rozpocznij aktywność",
-        "eduCard4Title": "Czytanie boczne",
-        "eduCard4Desc": "Dowiedz się, jak czytać i rozumieć treści online.",
+        "eduCard4Title": "Czytanie w poziomie",
+        "eduCard4Desc": "Dowiedz się,  jak analizować treści treści online.",
         "eduCard4Button": "Rozpocznij aktywność",
         "warningTitle": "Ostrzeżenie",
-        "warningText": "Zajęcia te zawierają niezakłonne przykłady, które niektórzy czytelnicy mogą uznać za obraźliwe. ",
+        "warningText": "Zajęcia te zawierają przykłady obrazujące hejt, które niektórzy czytelnicy mogą uznać za obraźliwe. ",
         "warningButton": "Rozumiem",
         "warningCheckbox": "Nie pokazuj ponownie tej wiadomości",
         "tasks": {
@@ -243,9 +243,9 @@
             "debunking": {
                 "title": "Debunking",
                 "description": "Celem weryfikacji faktów, nazywanej fact-checkingiem lub debunkingiem, jest zapewnienie obywatelom narzędzi i informacji, które pozwolą im formułować opinie w oparciu o wszystkie dostępne dane i potwierdzone fakty, a tym samym podejmować świadome decyzje. Dezinformacja może wpływać na sposób myślenia społeczeństwa i radzenia sobie z codziennymi problemami, dlatego głównym zadaniem weryfikatorów faktów (tzw. fact-checkerów) jest rzucanie światła na te kwestie i dostarczanie danych na ich temat. Weryfikacja faktów polega przede wszystkim na wykrywaniu fałszywych informacji, weryfikowaniu ich treści i rozpowszechnianiu informacji o ich nieprawdziwości.\nOsoby zajmujące się weryfikacją faktów na co dzień pracują nad obalaniem fałszywych informacji – analizują treści i wyjaśniają, dlaczego są one nieprawdziwe, najczęściej dopiero po tym, jak zostały udostępnione i zdobyły popularność w mediach społecznościowych. Działania te są niezwykle istotne z punktu widzenia opinii publicznej, ponieważ pomagają zapobiec temu, by kolejne osoby czytały, udostępniały i wierzyły w nieprawdziwe treści. Niektóre przypadki wymagają czasochłonnych analiz i użycia specjalistycznych narzędzi. Inne zaś opierają się głównie na uważnej obserwacji i dotarciu do konkretnych, wiarygodnych źródeł informacji.\nSpróbujmy! W tym ćwiczeniu nauczysz się pod okiem instruktora kilku technik wykrywania fałszywych twierdzeń oraz dowiesz się, dlaczego ważne jest, aby uruchomić krytyczne myślenie i zidentyfikować, w jaki sposób wiralowe rozprzestrzenianie się niektórych fałszywych informacji może tworzyć i wzmacniać narracje dezinformacyjne.",
-                "objectivesTitle": "Cele działalności",
+                "objectivesTitle": "Efekty kształcenia",
                 "objectives":"<p><strong>Obalanie mitów:</strong> nauka, w sposób prowadzony, niektórych technik obalania fałszywych informacji.</p><p><strong>Rozwijanie myślenia krytycznego za pomocą strategii pre-bunking:</strong> podczas ćwiczenia użytkownicy odkrywają, czym są narracje dezinformacyjne i mogą zastanowić się nad tymi najbardziej rozpowszechnionymi w swoim kraju.</p><p><strong>Aktywowanie myślenia krytycznego:</strong> poprzez zrozumienie, jak wirusowe rozprzestrzenianie niektórych oszustw może tworzyć i wzmacniać narracje dezinformacyjne.</p>",
-                "task": "Naśladuj działania weryfikatora faktów, wybierając najskuteczniejszy sposób zdemaskowania podejrzanej treści. Czy potrafisz również zidentyfikować powiązaną z nią narrację dezinformacyjną?",
+                "task": "Naśladuj działania weryfikatora faktów, wybierając najskuteczniejszy sposób zdemaskowania podejrzanej treści. Czy potrafisz również zidentyfikować powiązaną z nią narrację dezinformacyjną? → Wciel się w rolę fact-checkera i sprawdź podejrzane treści. Wybierz najlepszy sposób, by je zweryfikować. Czy potrafisz wskazać, jaka dezinformacyjna narracja za nią stoi?",
                 "startButton": "Rozpocznij aktywność",
                 "correct": "Poprawnie! Dobra robota.",
                 "incorrect": "Niepoprawna odpowiedź. Spróbuj ponownie.",
@@ -311,7 +311,7 @@
                         "correct": 0,
                         "feedback": {
                             "correct": "Ta metoda umożliwia szybkie dotarcie do zweryfikowanych informacji od profesjonalnych fact-checkerów i instytucji publicznych. Dzięki temu możemy potwierdzić autentyczność treści, zrozumieć jej kontekst oraz uniknąć powielania dezinformacji. Korzystanie z wiarygodnych źródeł jest kluczowym elementem skutecznego fact-checkingu.\nLink: <a href='https://demagog.org.pl/fake_news/zelenski-odmawia-przyjecia-6-tys-cial-poleglych-zolnierzy-to-rosyjska-propaganda/' target='_blank'>https://demagog.org.pl/fake_news/zelenski-odmawia-przyjecia-6-tys-cial-poleglych-zolnierzy-to-rosyjska-propaganda/</a>.",
-                            "incorrect": "Świetna robota! Udało Ci się potwierdzić, że taki artykuł nie został opublikowany w Wall Street Journal, więc post, który widzisz bazuje na niewiarygodnym źródle. Ktoś podszywa się pod popularną gazetę, aby zyskać nasze zaufanie. Oznacza to, że mamy do czynienia z dezinformacją. Dzięki tej weryfikacji unikniesz powielania fałszywych treści i możesz świadomie podzielić się rzetelną informacją z innymi. To właśnie w ten sposób działa skuteczny fact-checking! Link: <a href='https://demagog.org.pl/fake_news/zelenski-odmawia-przyjecia-6-tys-cial-poleglych-zolnierzy-to-rosyjska-propaganda/' target='_blank'>https://demagog.org.pl/fake_news/zelenski-odmawia-przyjecia-6-tys-cial-poleglych-zolnierzy-to-rosyjska-propaganda/</a>."
+                            "incorrect": "Wnikliwy fact-checker sprawdza zawsze informacje w przynajmniej dwóch różnych i niezależnych od siebie źródłach. Dlatego nie poddawaj się, nawet jeżeli nie znajdziesz od razu odpowiedzi. Nasi koledzy i koleżanki nie zawsze mają wystarczającą wiedzę na dany temat, dlatego nie traktuj ich zdania jako ostatecznej odpowiedzi. Mogę się mylić. Link: <a href='https://demagog.org.pl/fake_news/zelenski-odmawia-przyjecia-6-tys-cial-poleglych-zolnierzy-to-rosyjska-propaganda/' target='_blank'>https://demagog.org.pl/fake_news/zelenski-odmawia-przyjecia-6-tys-cial-poleglych-zolnierzy-to-rosyjska-propaganda/</a>."
                         }
                     }
                 ]
@@ -367,13 +367,13 @@
                 "reflectionText": "Czy łatwo czy trudno było dopasować sytuacje do błędów logicznych / błędów poznawczych?\n\nCzy znałeś niektóre z nich? Które? Które były dla Ciebie zupełnie nowe?\n\nCzy możesz podać konkretne przykłady z Twojej rzeczywistości, które reprezentują niektóre z tych błędów i uprzedzeń?\n\nCzy znasz inne przykłady błędów logicznych / błędów poznawczych?\n\nJak znajomość tych błędów / błędów poznawczych może nam pomóc w działaniu przeciwko mowie nienawiści i dezinformacji?"
             },
             "lateralreading": {
-                "submit": "Prześlij ",
+                "Zatwierdź": "Prześlij ",
                 "nextQuestion": "Następna sekcja",
                 "nextExercise": "Następne ćwiczenie",
                 "selectMultiple": "Możesz wybrać więcej niż jeden zrzut ekranu",
                 "title": "Czytanie w poziomie",
                 "description": "Czytanie w poziomie (ang. <strong>lateral reading</strong>) to metoda, która pozwala nam szybko ocenić, czy treść strony internetowej pochodzi z wiarygodnych źródeł i opiera się na rzetelnych danych informacjach czy literaturze przedmiotu. W badaniu przeprowadzonym przez Stanford History Education Group (<a href=\"https://cor.inquirygroup.org/research/lateral-reading-on-the-open-internet/\" target=\"_blank\">link</a>) edukatorzy wykazali, że jest to skuteczny sposób oceny jakości nieznanej wcześniej strony internetowej.<br><br>Ta bardzo istotna strategia (<a href=\"https://cor.inquirygroup.org/curriculum/collections/teaching-lateral-reading/\" target=\"_blank\">link</a>), stosowana przez fact-checkerów do oceny informacji w Internecie, polega nie na czytaniu strony internetowej „wertykalnie” (pionowo), jakby była dokumentem drukowanym, aby ocenić jej jakość, ale na użyciu metody zwanej „czytaniem w poziomie”. Oznacza to analizowanie strony internetowej poprzez otwieranie kilku kart przeglądarki, aby odpowiedzieć na kluczowe pytania dotyczące jej treści.<ul><li>Kto jest autorem treści? Czy to ekspert w danej dziedzinie?</li><li>Czy możemy znaleźć dowody? Czy treść opiera się na faktach i danych?</li><li>Czy treść została opublikowana przez inne wiarygodne źródła? Co one o niej mówią?</li></ul>Oprócz powyższych kluczowych pytań technika czytania w poziomie zachęca nas do rozwijania myślenia krytycznego i głębszej analizy innych aspektów treści, takich jak:<ul><li>Kto finansuje lub sponsoruje stronę, na której opublikowano pierwotny materiał?</li><li>Co inne wiarygodne i cieszące się autorytetem źródła mówią na temat tej strony?</li><li>Kiedy wyszukujesz informację na temat oryginalnego artykułu, czy najwyżej pozycjonowane wyniki pochodzą od organizacji zajmujących się fact-checkingiem?</li><li>Czy pojawiły się pytania dotyczące innych artykułów napisanych przez tego autora?</li><li>Czy informacje znalezione w innych źródłach przeczą oryginalnemu materiałowi?</li><li>Czy wiarygodne media informacyjne informują o tym, co czytasz — lub co równie ważne, czy o tym nie informują?</li></ul>Czytanie w poziomie pomaga nam lepiej ocenić nasze źródła informacji – czyli odróżniać prawdę od fałszu – i świadomie korzystać z naszego prawa do decydowania, w jaki sposób zdobywamy informacje.",
-                "objectivesTitle": "Cele ćwiczenia",
+                "objectivesTitle": "Efekty kształcenia",
                 "objectives": "<ul><li>Poznawanie zasad przejrzystości i czynników pozwalających ocenić wiarygodność źródeł</li><li>Rozwijanie umiejętności identyfikowania godnych zaufania źródeł informacji</li></ul>",
                 "startButton": "Rozpocznij",
                 "task": "Spróbujmy! Twoim zadaniem jest ocena wiarygodności zaproponowanej strony z wiadomościami. Wykorzystaj w tym celu metody <strong>czytania w poziomie</strong>. Sprawdź wszystkie zrzuty ekranu i zweryfikuj, czy możesz znaleźć dowody wskazujące na to, że ta strona jest wiarygodnym źródłem. Dopasuj je do odpowiedniego typu informacji, który możesz znaleźć, lub kliknij „Nie znaleziono”.",
@@ -393,31 +393,31 @@
                                 "question": "Gdzie możesz znaleźć informacje o autorze?",
                                 "options": [
                                     {
-                                        "text": "Screenshot 1",
+                                        "text": "Zrzut ekranu  1",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 2",
+                                        "text": "Zrzut ekranu  2",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 3",
+                                        "text": "Zrzut ekranu  3",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 4",
+                                        "text": "Zrzut ekranu  4",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 5",
+                                        "text": "Zrzut ekranu  5",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 6",
+                                        "text": "Zrzut ekranu  6",
                                         "correct": true
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "Na żadnym",
                                         "correct": false
                                     }
                                 ],
@@ -430,31 +430,31 @@
                                 "question": "Gdzie możesz znaleźć informacje o zawartości strony i metodologii?",
                                 "options": [
                                     {
-                                        "text": "Screenshot 1",
+                                        "text": "Zrzut ekranu  1",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 2",
+                                        "text": "Zrzut ekranu  2",
                                         "correct": true
                                     },
                                     {
-                                        "text": "Screenshot 3",
+                                        "text": "Zrzut ekranu  3",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 4",
+                                        "text": "Zrzut ekranu  4",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 5",
+                                        "text": "Zrzut ekranu  5",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 6",
+                                        "text": "Zrzut ekranu  6",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "Na żadnym",
                                         "correct": false
                                     }
                                 ],
@@ -467,31 +467,31 @@
                                 "question": "Czy możesz znaleźć informacje o bezpieczeństwie strony?",
                                 "options": [
                                     {
-                                        "text": "Screenshot 1",
+                                        "text": "Zrzut ekranu  1",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 2",
+                                        "text": "Zrzut ekranu  2",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 3",
+                                        "text": "Zrzut ekranu  3",
                                         "correct": true
                                     },
                                     {
-                                        "text": "Screenshot 4",
+                                        "text": "Zrzut ekranu  4",
                                         "correct": true
                                     },
                                     {
-                                        "text": "Screenshot 5",
+                                        "text": "Zrzut ekranu  5",
                                         "correct": true
                                     },
                                     {
-                                        "text": "Screenshot 6",
+                                        "text": "Zrzut ekranu  6",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "Na żadnym",
                                         "correct": false
                                     }
                                 ],
@@ -504,31 +504,31 @@
                                 "question": "Czy treści są publikowane przez inne wiarygodne źródło?",
                                 "options": [
                                     {
-                                        "text": "Screenshot 1",
+                                        "text": "Zrzut ekranu  1",
                                         "correct": true
                                     },
                                     {
-                                        "text": "Screenshot 2",
+                                        "text": "Zrzut ekranu  2",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 3",
+                                        "text": "Zrzut ekranu  3",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 4",
+                                        "text": "Zrzut ekranu  4",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 5",
+                                        "text": "Zrzut ekranu  5",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 6",
+                                        "text": "Zrzut ekranu  6",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "Na żadnym",
                                         "correct": false
                                     }
                                 ],
@@ -552,15 +552,15 @@
                                 "question": "Gdzie możesz znaleźć informacje o autorze?",
                                 "options": [
                                     {
-                                        "text": "Screenshot 1",
+                                        "text": "Zrzut ekranu  1",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 2",
+                                        "text": "Zrzut ekranu  2",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "Na żadnym",
                                         "correct": true
                                     }
                                 ],
@@ -573,15 +573,15 @@
                                 "question": "Gdzie możesz znaleźć informacje o zawartości strony i metodologii?",
                                 "options": [
                                     {
-                                        "text": "Screenshot 1",
+                                        "text": "Zrzut ekranu  1",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 2",
+                                        "text": "Zrzut ekranu  2",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "Na żadnym",
                                         "correct": true
                                     }
                                 ],
@@ -594,16 +594,16 @@
                                 "question": "Czy możesz znaleźć informacje o bezpieczeństwie strony?",
                                 "options": [
                                     {
-                                        "text": "Screenshot 1",
+                                        "text": "Zrzut ekranu  1",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 2",
+                                        "text": "Zrzut ekranu  2",
                                         "correct": true
                                     },
                                     {
-                                        "text": "Not Found",
-                                        "correct": true
+                                        "text": "Na żadnym",
+                                        "correct": false
                                     }
                                 ],
                                 "feedback": {
@@ -615,15 +615,15 @@
                                 "question": "Czy treści są publikowane przez inne wiarygodne źródło?",
                                 "options": [
                                     {
-                                        "text": "Screenshot 1",
+                                        "text": "Zrzut ekranu  1",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Screenshot 2",
+                                        "text": "Zrzut ekranu  2",
                                         "correct": false
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "Na żadnym",
                                         "correct": true
                                     }
                                 ],
