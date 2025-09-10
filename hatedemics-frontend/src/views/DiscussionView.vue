@@ -1,16 +1,12 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import ChatTableComponent from "@/components/ChatTableComponent.vue";
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-// import GraphComponent from '@/components/GraphComponent.vue';
-import { onMounted } from "vue";
+
 import { useMessagesStore } from "../store/MessageStore";
 import { useI18n } from "vue-i18n";
 import { storeToRefs } from "pinia";
-import type { Message } from "@/services/types";
 import SideBarInfoComponent from "@/components/SideBarInfoComponent.vue";
-import type { ChannelInfo, Chat } from "@/services/types";
+import type { ChannelInfo } from "@/services/types";
 import { useChannelsStore } from "@/store/ChannelStore";
 import { useChatsStore } from "@/store/ChatStore";
 import { useTopicsStore } from "@/store/TopicStore";
@@ -20,11 +16,13 @@ import dialogApi from "@/services/dialog/dialogApi";
 import router from "@/router";
 import { useGlobal } from "@/store";
 import TutorialDiscussionDialog from "@/components/TutorialDiscussionDialog.vue";
+import { useLocale } from "vuetify";
 const channelStore = useChannelsStore();
 const globalStore = useGlobal();
-
+useLocale();
+const { locale: currentI18nLocale } = useI18n();
 const showSnackbar = (message: string) => globalStore.setMessage(message);
-const { selectedChannelInfo, selectedLanguage, channelsInfo } = storeToRefs(channelStore);
+const { selectedChannelInfo, channelsInfo } = storeToRefs(channelStore);
 
 const topicsStore = useTopicsStore();
 const { t } = useI18n();
@@ -37,7 +35,7 @@ const { selectedChat, chats } = storeToRefs(chatStore);
 const showExploreGuide = ref(false);
 const showTopicsDialog = ref(false);
 const showTutorialDiscussion = ref(false);
-const targetOptions = [
+const targetOptions = computed(() => [
   { title: t("message.filter.DISABLED"), value: "DISABLED" },
   { title: t("message.filter.JEWS"), value: "JEWS" },
   { title: t("message.filter.LGBTQIA+"), value: "LGBT+" },
@@ -45,42 +43,49 @@ const targetOptions = [
   { title: t("message.filter.MUSLIMS"), value: "MUSLIMS" },
   { title: t("message.filter.POC"), value: "POC" },
   { title: t("message.filter.WOMEN"), value: "WOMEN" },
-];
+]);
 // lista targets della chat corrente
-const allTargets = computed(() => {
-  // se i messages hanno il campo target come stringa, li mappo
-  const uniqueTargets = new Set<string>();
-  messages.value.forEach((m: any) => {
-    if (m.target && !isEmptyOrSpaces(m.target)) {
-      m.target
-        .replace(/[{}'"]/g, "")
-        .split(",")
-        .map((t: string) => t.trim())
-        .forEach((t: string) => uniqueTargets.add(t));
-    }
-  });
-  return Array.from(uniqueTargets);
-});
 
-// stessa logica che avevi in ChatTableComponent
 const startDialogue = async (target: string | null) => {
   if (!target || target === "OTHER") return;
 
-  const lan = selectedChannelInfo.value?.language ?? selectedLanguage.value;
+  // Prendi la lingua della piattaforma da vue-i18n
+  const lang = currentI18nLocale.value.toUpperCase(); // IT, EN, PL, ES, MT
+
+  // Mappa dei target tradotti
+  const targetTranslations: Record<string, Record<string, string>> = {
+    IT: { DISABLED: "Persone con disabilità", POC: "Persone nere", MIGRANTS: "Migranti", WOMEN: "Donne", "LGBT+": "LGBTQIA+", JEWS: "Ebrei", MUSLIMS: "Musulmani" },
+    PL: { DISABLED: "Osoby z niepełnosprawnościami", POC: "Czarnoskórzy", MIGRANTS: "Migranci", WOMEN: "Kobiety", "LGBT+": "LGBTQIA+", JEWS: "Żydzi", MUSLIMS: "Muzułmanie" },
+    ES: { DISABLED: "Personas con discapacidad", POC: "Personas negras", MIGRANTS: "Migrantes", WOMEN: "Mujeres", "LGBT+": "LGBTQIA+", JEWS: "Hebreos", MUSLIMS: "Musulmanes" },
+    MT: { DISABLED: "Individwi b'diżabilità", POC: "Nies suwed", MIGRANTS: "Migranti", WOMEN: "Nisa", "LGBT+": "LGBTIQ+", JEWS: "Lhud", MUSLIMS: "Musulmani" },
+    EN: { DISABLED: "People with disabilities", POC: "Black people", MIGRANTS: "Migrants", WOMEN: "Women", "LGBT+": "LGBTQIA+", JEWS: "Jews", MUSLIMS: "Muslims" },
+  };
+
+  const translatedTarget = targetTranslations[lang]?.[target];
+
+  if (!translatedTarget) {
+    showSnackbar(t("message.dialog.noProject"));
+    showTopicsDialog.value = false;
+    return;
+  }
+
   try {
-    const response = await dialogApi.getProjects();
-    const projects = response.data;
-    const projectID = projects.find((p: any) => p.name === `${target}-${lan}`)?.id;
-    if (projectID) {
-      router.push({ name: "tasks", params: { projectID } });
+    const projects = await dialogApi.getProjects();
+    const project = projects.data.find((p: any) => p.name === translatedTarget);
+
+    if (project) {
+      router.push({ name: "tasks", params: { projectID: project.id } });
     } else {
       showSnackbar(t("message.dialog.noProject"));
     }
   } catch (error) {
     showSnackbar(t("message.dialog.error"));
   }
+
   showTopicsDialog.value = false;
 };
+
+
 // Mappa le chat con label "Chat 1", "Chat 2", ecc.
 const chatOptions = computed(() =>
   chats.value.map((chat, index) => ({
@@ -273,19 +278,20 @@ const loadMore = (event: { target: any }) => {
     <!-- Lista target -->
     <v-card-text>
       <v-list> 
-        <v-list-item color="primary"
-        active-color="primary"
-        
-          v-for="option in targetOptions"
-          :key="option.value"
-          @click="startDialogue(option.value)"
-          :disabled="option.value === null || option.value === 'OTHER'"
-          class="topic-item"
-        >
-          <v-list-item-title v-if="option.value != 'OTHER'" >
-            {{ option.title }}
-          </v-list-item-title>
-        </v-list-item>
+        <v-list-item
+  color="primary"
+  active-color="primary"
+  v-for="option in targetOptions"
+  :key="option.value"
+  @click="startDialogue(option.value)"
+  :disabled="option.value === null || option.value === 'OTHER'"
+  class="topic-item"
+>
+  <v-list-item-title v-if="option.value != 'OTHER'">
+    {{ option.title }}
+  </v-list-item-title>
+</v-list-item>
+
       </v-list>
     </v-card-text>
 

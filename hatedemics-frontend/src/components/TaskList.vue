@@ -166,8 +166,9 @@ export default {
     <v-row justify="center">
       <v-col cols="10">
         <p class="text-h2"></p>
-        <h1 class="text-h5 font-weight-bold text-primary ma-4">Project "{{ projectName }}" Dialogues</h1>
-        <h2 class="text-h6 font-weight-medium ma-4">
+        <h1 class="text-h5 font-weight-bold text-primary ma-4">
+  {{ t("project.dialoguesTitle", { name: projectName }) }}
+</h1>        <h2 class="text-h6 font-weight-medium ma-4">
           {{ t('tasks.subtitle') }}
         </h2>
       </v-col>

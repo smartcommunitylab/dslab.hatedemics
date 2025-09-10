@@ -153,7 +153,7 @@
                 "html": "<p>⚠️ <strong>Uwaga:</strong> platforma zawiera nieocenzurowane przykłady, które niektórzy czytelnicy mogą uznać za obraźliwe.</p>"
             }
         ],
-        "chooseLanguage": "Wybierz jezyk",
+        "chooseLanguage": "Wybierz język swojej platformy",
         "continue": "Kontyntynuj",
         "prev": "Wróć",
         "next": "Dalej",
@@ -655,7 +655,8 @@
     },
     "project": {
         "noProject": "Brak dostępnych projektów",
-        "noData": "Brak dostępnych danych"
+        "noData": "Brak dostępnych danych",
+        "dialoguesTitle": "Dialogi projektu \"{name}\""
     },
     "projects": {
         "title": "Projektowanie",

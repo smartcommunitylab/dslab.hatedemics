@@ -1,81 +1,100 @@
-<script>
-import { useVariablesStore } from '@/store/DialogStore'
-import { useLoginStore } from '@/store/LoginStore'
-import { useGlobal } from '@/store';
-import { API } from '@/services'
-import ListItem from './singleFileComponents/project-list-item.vue'
-import DialogGeneric from '@/components/dialogs/dialog-generic.vue'
-import { useI18n } from 'vue-i18n';
+<script setup>
+import { ref, computed, onMounted } from "vue";
+import { useVariablesStore } from "@/store/DialogStore";
+import { useLoginStore } from "@/store/LoginStore";
+import { useGlobal } from "@/store";
+import { API } from "@/services";
+import ListItem from "./singleFileComponents/project-list-item.vue";
+import DialogGeneric from "@/components/dialogs/dialog-generic.vue";
+import { useI18n } from "vue-i18n";
+import { useLocale } from "vuetify";
 
-export default {
-  components: {
-    ListItem,
-    DialogGeneric
-  },
-  data() {
-    return {
-      usersList: undefined,
-      showDialogCreateProject: false,
-      variablesStore: useVariablesStore(),
-      loginStore: useLoginStore(),
-      globalStore: useGlobal(),
-      ds: API.dialogs,
-      t: useI18n().t,
-      projects: undefined,
-      expandedPanels: [] // Controlla quali sezioni sono aperte
-    }
-  },
-  computed: {
-    groupedProjects() {
-      return this.groupProjectsByLanguage();
-    }
-  },
-  mounted() {
-    this.updateProjects();
-    if (this.loginStore.is_admin) {
-      this.updateUsers();
-    }
-  },
-  methods: {
-    updateUsers() {
-      API.login.getUsers().then(data => {
-        this.usersList = data.data;
-      });
-    },
-    updateProjects() {
-      this.projects = undefined;
-      API.dialogs.getProjects().then(
-        data => {
-          this.projects = data.data;
-        },
-        error => {
-          this.globalStore.setMessage(this.t('error.api'));
-          this.projects = [];
-        }
-      );
-    },
-    groupProjectsByLanguage() {
-      const groups = {
-        English: [],
-        Polish: [],
-        Italian: [],
-        Spanish: [],
-        Maltese: [],
-        Other: []
-      };
-      if (!this.projects) return groups;
+// store e utilità
+const variablesStore = useVariablesStore();
+const loginStore = useLoginStore();
+const globalStore = useGlobal();
+const { t } = useI18n();
+import { useAppLocale } from "@/composables/useAppLocale";
+const current = useAppLocale();
 
-      this.projects.forEach(project => {
-        const match = project.name.match(/(EN|PL|IT|ES|MT)$/);
-        const langMap = { EN: 'English', PL: 'Polish', IT: 'Italian', ES: 'Spanish', MT: 'Maltese' };
-        const lang = match ? langMap[match[1]] : 'Other';
-        groups[lang].push(project);
-      });
+// stato reattivo
+const usersList = ref();
+const projects = ref();
+const showDialogCreateProject = ref(false);
 
-      return groups;
-    }
-  }
+// mapping lingua Vuetify → gruppi
+const langMap = {
+  en: "English",
+  it: "Italian",
+  pl: "Polish",
+  es: "Spanish",
+  mt: "Maltese",
+};
+
+// --- funzioni
+function groupProjectsByLanguage() {
+  const groups = {
+    English: [],
+    Polish: [],
+    Italian: [],
+    Spanish: [],
+    Maltese: [],
+  };
+  if (!projects.value) return groups;
+
+  const langOrder = ["Polish", "Italian", "Maltese", "Spanish", "English"];
+  projects.value.forEach((project, index) => {
+    const lang = langOrder[index % langOrder.length];
+    groups[lang].push(project);
+  });
+
+  return groups;
 }
+
+const groupedProjects = computed(() => groupProjectsByLanguage());
+
+// 🔑 filtra solo quelli della lingua attuale
+const currentLanguageProjects = computed(() => {
+  console.log("🔄 Recomputing currentLanguageProjects...");
+  console.log("current.value:", current.value);
+
+  // normalizza codice lingua
+  const shortCode = current.value.split("-")[0]; 
+  console.log("shortCode:", shortCode);
+
+  const langKey = langMap[shortCode] || "English";
+  console.log("langKey:", langKey);
+
+  return groupedProjects.value[langKey] || [];
+});
+
+
+function updateUsers() {
+  API.login.getUsers().then((data) => {
+    usersList.value = data.data;
+  });
+}
+
+function updateProjects() {
+  projects.value = undefined;
+  API.dialogs.getProjects().then(
+    (data) => {
+      projects.value = data.data;
+    },
+    () => {
+      globalStore.setMessage(t("error.api"));
+      projects.value = [];
+    }
+  );
+}
+
+// lifecycle
+onMounted(() => {
+  updateProjects();
+  if (loginStore.is_admin) {
+    updateUsers();
+  }
+});
 </script>
 
 <template>
@@ -90,44 +109,42 @@ export default {
     <v-container fluid v-if="projects === undefined">
       <v-row>
         <v-col cols="12" class="text-center">
-          <v-progress-circular indeterminate class="mx-auto" :size="128"></v-progress-circular>
+          <v-progress-circular
+            indeterminate
+            class="mx-auto"
+            :size="128"
+          ></v-progress-circular>
         </v-col>
       </v-row>
     </v-container>
 
     <v-container fluid v-else>
+      <h1 class="text-h5 font-weight-bold text-primary ma-4">Projects</h1>
+      <h2 class="text-h6 font-weight-medium ma-4">
+        {{ t("projects.subtitle") }}
+      </h2>
 
-          <h1 class="text-h5 font-weight-bold text-primary ma-4">Projects</h1>
-<h2 class="text-h6 font-weight-medium ma-4">
-          {{ t('projects.subtitle') }}
-        </h2>
+      <!-- ✅ lista piatta filtrata per lingua -->
+      <v-row v-if="currentLanguageProjects.length > 0">
+        <v-col
+          cols="12"
+          v-for="project in currentLanguageProjects"
+          :key="project.id"
+        >
+          <ListItem
+          class="elevation-0"
+            :title="project.name"
+            :users="project.users"
+            :id="project.id"
+            :isActive="project.is_active"
+            @refresh="updateProjects"
+          />
+        </v-col>
+      </v-row>
 
-      <v-expansion-panels v-model="expandedPanels" multiple>
-        <template v-for="(projects, lang) in groupedProjects" :key="lang">
-          <v-expansion-panel v-if="projects.length > 0">
-            <v-expansion-panel-title>
-              <h3 class="text-h4">{{ lang }}</h3>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <template v-for="project in projects" :key="project.id">
-                <ListItem
-                  :title="project.name"
-                  :users="project.users"
-                  :id="project.id"
-                  :isActive="project.is_active"
-                  @refresh="updateProjects"
-                />
-              </template>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-        </template>
-      </v-expansion-panels>
-
-      <v-row v-if="groupedProjects.English.length === 0 && groupedProjects.Polish.length === 0 &&
-                    groupedProjects.Italian.length === 0 && groupedProjects.Español.length === 0 && groupedProjects.Maltese.length === 0 &&
-                    groupedProjects.Other.length === 0">
+      <v-row v-else>
         <v-col cols="12" class="text-center">
-          <p class="text-body-1">{{ t('project.noData') }}</p>
+          <p class="text-body-1">{{ t("project.noData") }}</p>
         </v-col>
       </v-row>
     </v-container>

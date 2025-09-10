@@ -162,7 +162,7 @@
                 "html": "<p>⚠️ <strong>Attenzione:</strong> la piattaforma contiene esempi non oscurati che alcuni lettori potrebbero trovare offensivi.</p>"
             }
         ],
-        "chooseLanguage": "Scegli la lingua",
+        "chooseLanguage": "Scegli la lingua della piattaforma",
   "continue": "Continua",
         "prev": "Indietro",
         "next": "Avanti",
@@ -730,7 +730,8 @@
     },
     "project": {
         "noProject": "Nessun progetto disponibile",
-        "noData": "Nessun dato disponibile"
+        "noData": "Nessun dato disponibile",
+        "dialoguesTitle": "Dialoghi del progetto \"{name}\""
     },
     "projects": {
         "title": "Progetti",
