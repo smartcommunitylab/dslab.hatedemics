@@ -87,50 +87,42 @@
         }
     },
     "networkGuide": {
-        "guideTitle": "Słowniczek po sieci kanałów telegram",
-        "guideItems": {
-            "network": {
-                "title": "Sieć",
-                "description": "Ta sieć wyświetla kanały telegramowe jako punkty, a linie pokazują, jak są połączone. "
-            },
-            "expanded": {
-                "title": "Rozszerzony",
-                "description": "Kanał to <strong>rozszerzony</strong> Jeśli zebraliśmy wszystkie jego wiadomości czatowe."
-            },
-            "inOutRecommendations": {
-                "title": "Zalecenia w i out",
-                "description": "<strong>W zaleceń</strong> Czy łączna liczba razy poleca kanał - im więcej jest zalecany, tym bardziej popularny jest!<br><strong>Zalecenia</strong> to liczba kanałów, którą zaleca - wyższa liczba oznacza, że wskazuje na wiele innych treści."
-            },
-            "iri": {
-                "title": "Infodemiczny wskaźnik ryzyka (IRI)",
-                "description": "IRI mierzy, jak niewiarygodny jest kanał, od 0 (całkowicie niezawodny) do 1 (w pełni niewiarygodne). <br>Aby uzyskać więcej informacji: <a href='https://www.nature.com/articles/s41562-020-00994-6' target='_blank'>Gallotti i in., 2020 (Nature Human Behaviour)</a>."
-            },
-            "diri": {
-                "title": "Dynamiczny wskaźnik ryzyka infodemicznego (DIRI)",
-                "description": "Diri analizuje, jak aktywnie użytkownicy angażują się w zawodne treści. "
-            },
-            "sdiri": {
-                "title": "Półdynamiczny wskaźnik ryzyka infodemicznego (SDIRI)",
-                "description": "SDIRI śledzi światło i szybkie interakcje z niewiarygodnymi treściami, takimi jak reakcje (emoji, polubienia). "
-            },
-            "unrel": {
-                "title": "Indeks niewiarygodności (UNLE)",
-                "description": "Ten indeks pokazuje, jak bardzo zawodna treść udostępnia kanał w porównaniu z wszystkimi swoimi wiadomościami łączącymi z dowolnym źródłem. "
-            },
-            "domains": {
-                "title": "Znane i nieznane domeny",
-                "description": "<strong>Znane domeny</strong> to strony internetowe, dla których mamy dane niezawodności. <strong>Nieznane domeny</strong> Czy te bez takich danych. "
-            },
-            "centrality": {
-                "title": "Miary centralne",
-                "description": "Środki te pokazują, jak ważny jest kanał w sieci:<br><strong>Centralność stopnia:</strong> Liczba bezpośrednich linków (popularność).<br><strong>Międzypaństwo:</strong> Działa jak pomost między innymi kanałami.<br><strong>Bliskość:</strong> Jak szybko może dotrzeć do innych.<br><strong>Wektor własny:</strong> Jak jest to połączone z innymi wpływowymi kanałami.<br>Zobacz także: <em>Pósfai i Barabási, 2016 - Network Science</em>."
-            },
-            "communities": {
-                "title": "Społeczności",
-                "description": "Te metody społeczności pomagają zidentyfikować naturalne <strong>grupy</strong> w sieciach, jak w sieci społecznościowej:<br><br><strong>Społeczność Louvain:</strong> Szuka grup, w których w grupie jest wiele połączeń. <em>(Jak grupa przyjaciół, w której wszyscy bardzo się znają!)</em><br><strong>Społeczność Infomap:</strong> Znajduje grupy na podstawie tego, jak łatwo informacje (lub wiadomości) mogą przemieszczać się w tej grupie. <em>(Jak klub, w którym wiadomości rozprzestrzeniają się bardzo szybko wśród członków!)</em><br><br>Aby uzyskać więcej informacji, możesz sprawdzić te artykuły:<br><a href='https://hal.science/hal-01231784' target='_blank'>Dugué, N., i Perez, A. (2015). </a><br><a href='https://www.pnas.org/doi/epdf/10.1073/pnas.0706851105' target='_blank'>Rosvall, M., i Bergstrom, C. T. (2008). </a>"
-            }
-        }
+  "guideTitle": "Glosariusz Eksploracji",
+  "guideItems": {
+    "telegramDataset": {
+      "title": "Zbiór danych Telegram",
+      "description": "<p><strong>Zbiór danych</strong> to uporządkowana kolekcja informacji. Platforma obejmuje około <strong>10 milionów wiadomości z Telegrama</strong>, pobranych z około <strong>500 kanałów</strong>, w <em>4 językach</em> (angielski, włoski, hiszpański i polski).</p><p>Wybrano Telegram, ponieważ oferuje <strong>darmowy dostęp do gromadzenia danych na dużą skalę</strong>, w przeciwieństwie do innych popularnych komunikatorów.</p>"
     },
+    "telegramChannels": {
+      "title": "Kanały i czaty Telegram",
+      "description": "<p><strong>Kanał Telegram</strong> to przestrzeń, w której jeden lub kilku administratorów może publikować wiadomości dla szerokiej publiczności.</p><p>Kanał może mieć jeden lub więcej <strong>czatów</strong> o różnych ustawieniach: na przykład niektóre, w których tylko administratorzy mogą publikować wiadomości, i inne, w których wszyscy mogą brać udział.</p><p>Czaty lub rozmowy w kanale odnoszą się do wiadomości tam publikowanych i sposobu, w jaki reaguje publiczność.</p>"
+    },
+    "network": {
+      "title": "Sieć",
+      "description": "<p><strong>Sieć</strong> to struktura, która przedstawia podmioty jako punkty, a relacje między nimi jako linie.</p><p>W tej sieci pobrane kanały Telegram są wyświetlane jako <strong>punkty</strong>, a linie pokazują, jak są połączone. Kanał jest powiązany z innym, gdy Telegram automatycznie go <em>rekomenduje</em>, na podstawie liczby użytkowników wspólnych dla obu kanałów.</p>"
+    },
+    "disinformation": {
+      "title": "Dezinformacja",
+      "description": "<p><strong>Dezinformacja</strong> to fałszywe lub wprowadzające w błąd informacje tworzone, udostępniane lub rozpowszechniane celowo, aby <em>oszukać</em> lub <em>manipulować</em> ludźmi.</p><p>Często używana jest do <strong>wpływania na opinie</strong>, siania zamętu lub osiągania celów <em>politycznych, społecznych lub finansowych</em>.</p>"
+    },
+    "reliability": {
+      "title": "Wiarygodność",
+      "description": "<p><strong>Wiarygodność</strong> mierzy, jak bardzo źródło lub link jest rzetelny i dokładny. Określana jest na podstawie <em>ręcznej oceny</em> strony internetowej.</p><p><strong>Wysoki wynik wiarygodności</strong> oznacza, że źródło można uznać za godne zaufania i dostarczające dobrze udokumentowanych informacji.</p>"
+    },
+    "infodemicRisk": {
+      "title": "Ryzyko Infodemii",
+      "description": "<p><strong>Ryzyko Infodemii</strong> wskazuje, jak bardzo kanał jest wiarygodny, w skali od <strong>0</strong> (całkowicie wiarygodny) do <strong>1</strong> (całkowicie niewiarygodny).</p><p>Opiera się na wiarygodności stron internetowych udostępnianych w kanale oraz na tym, w jakim stopniu użytkownicy są <em>narażeni</em> na te linki (uwzględnia liczbę wyświetleń).</p><p><strong>Niska wartość</strong> oznacza, że użytkownicy są narażeni na bardziej wiarygodne informacje.</p><p>Więcej szczegółów znajdziesz w <a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">tym artykule</a>.</p>"
+    },
+    "hateSpeech": {
+      "title": "Mowa nienawiści",
+      "description": "<p><strong>Mowa nienawiści</strong> odnosi się do wypowiedzi, które podżegają, promują, usprawiedliwiają lub rozpowszechniają <strong>nienawiść, przemoc, dyskryminację lub wrogość</strong> wobec osoby lub grupy na podstawie cech tożsamości, takich jak rasa, religia, pochodzenie etniczne, płeć, orientacja seksualna, niepełnosprawność lub podobne cechy.</p><p>Obejmuje zarówno jawne formy <em>podżegania do przemocy</em>, jak i bardziej subtelne formy <em>dehumanizacji</em> lub <em>języka pogardliwego</em>.</p>"
+    },
+    "checkWorthyness": {
+      "title": "Wartość sprawdzenia",
+      "description": "<p>Treść jest uznawana za <strong>wartą sprawdzenia</strong>, gdy ma <em>znaczenie publiczne</em> i może wymagać weryfikacji przez fact-checkerów.</p><p>Wiadomość jest warta sprawdzenia, gdy:</p><ul><li>Zawiera <strong>twierdzenie faktyczne</strong>, które można zweryfikować lub obalić,</li><li>Może <strong>wpływać na opinie, zachowania lub debatę publiczną</strong>,</li><li>Dotyczy <strong>tematów wrażliwych lub o dużym wpływie</strong> (np. polityka, zdrowie, bezpieczeństwo, migracja),</li><li>Wykazuje oznaki możliwej <em>dezinformacji</em> lub <em>misinformacji</em>.</li></ul>"
+    }
+  }
+},
     "welcome": {
         "title": "Witamy w nienawidzących"
     },
@@ -827,14 +819,12 @@
             "all": "Wszystko",
             "yes": "Tak",
             "no": "NIE",
-            "DISABLED": "Wyłączony",
+            "DISABLED": "Osoby z niepełnosprawnościami",
             "JEWS": "Żydzi",
             "MUSLIMS": "Muzułmanie",
             "LGBTQIA+": "LGBTQIA+",
             "MIGRANTS": "Migranci",
-            "OTHER": "Inny",
-            "POC": "Ludzie kolorowi",
-            "ROMANI": "Rom",
+            "POC": "Czarnoskórzy",
             "WOMEN": "Kobiety"
         },
         "footer": {

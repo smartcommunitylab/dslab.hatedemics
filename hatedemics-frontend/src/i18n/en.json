@@ -87,50 +87,42 @@
         }
     },
     "networkGuide": {
-        "guideTitle": "Exploration Glossary",
-        "guideItems": {
-            "network": {
-                "title": "Network",
-                "description": "This network displays Telegram channels as points, and lines show how they're connected. A channel is linked to another when Telegram automatically recommends it, based on how many users both channels share."
-            },
-            "expanded": {
-                "title": "Expanded",
-                "description": "A channel is <strong>expanded</strong> if we’ve collected all of its chat messages."
-            },
-            "inOutRecommendations": {
-                "title": "In & Out Recommendations",
-                "description": "<strong>In recommendations</strong> is the total number of times a channel is recommended by others – the more it’s recommended, the more popular it is!<br><strong>Out recommendations</strong> is the number of channels this one recommends – a higher number means it points to a lot of other content."
-            },
-            "iri": {
-                "title": "Infodemic Risk Index (IRI)",
-                "description": "The IRI measures how unreliable a channel is, from 0 (completely reliable) to 1 (fully unreliable). It’s based on the trustworthiness of websites shared and how many people are exposed to them (based on views).<br>For more details: <a href='https://www.nature.com/articles/s41562-020-00994-6' target='_blank'>Gallotti et al., 2020 (Nature Human Behaviour)</a>."
-            },
-            "diri": {
-                "title": "Dynamic Infodemic Risk Index (dIRI)",
-                "description": "The dIRI looks at how actively users engage with unreliable content. It considers stronger interactions like replies or reshares. A higher value means users are actively engaging with unreliable messages."
-            },
-            "sdiri": {
-                "title": "Semi-Dynamic Infodemic Risk Index (sdIRI)",
-                "description": "The sdIRI tracks light and quick interactions with unreliable content, like reactions (emojis, likes). It helps measure passive or subtle engagement with disinformation."
-            },
-            "unrel": {
-                "title": "Unreliability Index (Unrel)",
-                "description": "This index shows how much unreliable content a channel shares compared to all its messages linking to any source. A score close to 1 means most of the content comes from untrustworthy websites."
-            },
-            "domains": {
-                "title": "Known & Unknown Domains",
-                "description": "<strong>Known domains</strong> are websites we have reliability data for. <strong>Unknown domains</strong> are those without such data. More known domains means stronger and more accurate disinformation metrics."
-            },
-            "centrality": {
-                "title": "Centrality Measures",
-                "description": "These measures show how important a channel is in the network:<br><strong>Degree centrality:</strong> Number of direct links (popularity).<br><strong>Betweenness:</strong> Acts as a bridge between other channels.<br><strong>Closeness:</strong> How quickly it can reach others.<br><strong>Eigenvector:</strong> How connected it is to other influential channels.<br>See also: <em>Pósfai & Barabási, 2016 - Network Science</em>."
-            },
-            "communities": {
-                "title": "Communities",
-                "description": "These community methods help identify natural <strong>groups</strong> within networks, like in a social network:<br><br><strong>Louvain Community:</strong> Looks for groups where there are many connections inside the group. <em>(Like a friend group where everyone knows each other very well!)</em><br><strong>Infomap Community:</strong> Finds groups based on how easily information (or messages) can move within that group. <em>(Like a club where news spreads super fast among members!)</em><br><br>For more details, you can check out these articles:<br><a href='https://hal.science/hal-01231784' target='_blank'>Dugué, N., & Perez, A. (2015). Directed Louvain: maximizing modularity in directed networks</a><br><a href='https://www.pnas.org/doi/epdf/10.1073/pnas.0706851105' target='_blank'>Rosvall, M., & Bergstrom, C. T. (2008). Maps of random walks on complex networks reveal community structure</a>"
-            }
-        }
+  "guideTitle": "Exploration Glossary",
+  "guideItems": {
+    "telegramDataset": {
+      "title": "Telegram Dataset",
+      "description": "<p>A <strong>dataset</strong> is a structured collection of data. The platform includes approximately <strong>10 million Telegram messages</strong> which were downloaded from around <strong>500 channels</strong>, covering <em>4 languages</em> (English, Italian, Spanish and Polish).</p><p>Telegram was chosen as it provides <strong>free access to large-scale data collection</strong>, unlike other popular messaging platforms.</p>"
     },
+    "telegramChannels": {
+      "title": "Telegram Channels and chats",
+      "description": "<p>A <strong>Telegram channel</strong> is a space where one or a few admins can post messages to a large audience.</p><p>A channel can have one or more <strong>chats</strong> with different settings: for example, some where only admins can publish messages, and others where everyone can participate.</p><p>A channel’s chats or conversations refer to the messages posted there and the way audiences react.</p>"
+    },
+    "network": {
+      "title": "Network",
+      "description": "<p>A <strong>network</strong> is a structure that represents entities as points and the relationships between them as lines.</p><p>In this network, the downloaded Telegram channels are displayed as <strong>points</strong>, and lines show how they're connected. A channel is linked to another when Telegram automatically <em>recommends</em> it, based on how many users both channels share.</p>"
+    },
+    "disinformation": {
+      "title": "Disinformation",
+      "description": "<p><strong>Disinformation</strong> is false or misleading information that is created, shared, or spread deliberately with the intention to <em>deceive</em> or <em>manipulate</em> people.</p><p>It is often used to <strong>influence opinions</strong>, sow confusion, or achieve <em>political, social, or financial</em> goals.</p>"
+    },
+    "reliability": {
+      "title": "Reliability",
+      "description": "<p><strong>Reliability</strong> captures how trustworthy and accurate a link is. It is determined through a <em>manual evaluation</em> of the website.</p><p>A <strong>higher reliability score</strong> indicates that the source can be trusted to provide accurate and well-founded information.</p>"
+    },
+    "infodemicRisk": {
+      "title": "Infodemic Risk",
+      "description": "<p>The <strong>Infodemic Risk</strong> tells us how much the channel is reliable, ranging from <strong>0</strong> (completely reliable) to <strong>1</strong> (fully unreliable).</p><p>It is based on how reliable the websites shared in the channel are, and how much people in the channel are <em>exposed</em> to those links (it considers the number of views).</p><p>A <strong>low number</strong> means users are exposed to more reliable information!</p><p>For more details, you can check out <a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">this article</a>.</p>"
+    },
+    "hateSpeech": {
+      "title": "Hate Speech",
+      "description": "<p><strong>Hate Speech</strong> refers to expressions that incite, promote, justify, or spread <strong>hatred, violence, discrimination, or hostility</strong> against a person or group based on identity traits such as race, religion, ethnicity, gender, sexual orientation, disability, or similar characteristics.</p><p>It encompasses both overt <em>incitement to violence</em> and subtler forms of <em>dehumanization</em> or <em>derogatory language</em>.</p>"
+    },
+    "checkWorthyness": {
+      "title": "Check-worthyness",
+      "description": "<p><strong>Check-Worthy</strong> refers to a message, claim, or piece of content that is likely to be of <em>public interest</em> and may require verification by fact-checkers.</p><p>A message is considered check-worthy when it:</p><ul><li>Makes a <strong>factual claim</strong> that can be verified or disproven,</li><li>Has the potential to <strong>influence opinions, behaviors, or public debate</strong>,</li><li>Addresses <strong>sensitive or high-impact topics</strong> (e.g. politics, health, security, migration),</li><li>Or shows signs of possible <em>misinformation</em> or <em>disinformation</em>.</li></ul>"
+    }
+  }
+},
     "welcome": {
         "title": "Welcome to Hatedemics"
     },
@@ -932,12 +924,11 @@
             "all": "All",
             "yes": "Yes",
             "no": "No",
-            "DISABLED": "People with Disabilities",
+            "DISABLED": "People with disabilities",
             "JEWS": "Jews",
             "MUSLIMS": "Muslims",
             "LGBTQIA+": "LGBTQIA+",
             "MIGRANTS": "Migrants",
-            "OTHER": "Other",
             "POC": "Black People",
             "WOMEN": "Women"
         },

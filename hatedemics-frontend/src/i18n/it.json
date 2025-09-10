@@ -87,58 +87,43 @@
         }
     },
     "networkGuide": {
-        "guideTitle": "Glossario",
-        "guideItems": {
-            "network": {
-                "title": "Rete",
-                "description": "<p>Questa rete visualizza i canali Telegram come punti, e le linee mostrano come sono collegati tra loro. Un canale è collegato a un altro quando Telegram lo raccomanda automaticamente, in base al numero di utenti che entrambi i canali condividono.</p>"
-            },
-            "dataCollection": {
-                "title": "Raccolta dati",
-                "description": "<p>La raccolta dei dati avviene in più fasi. Partiamo da un insieme iniziale di canali noti per contenuti disinformativi o d’odio. Raccogliamo le loro informazioni e i canali che raccomandano. Poi seguiamo queste raccomandazioni, esplorando nuovi canali, fino a raggiungere il numero desiderato. Infine, tra i canali esplorati selezioniamo quelli più importanti nella lingua che ci interessa, e per questi raccogliamo tutti i loro messaggi.</p>"
-            },
-            "explored": {
-                "title": "Esplorato",
-                "description": "<p>Un canale è <strong>esplorato</strong> se abbiamo raccolto la lista dei canali che raccomanda.</p>"
-            },
-            "expanded": {
-                "title": "Espanso",
-                "description": "<p>Un canale è <strong>espanso</strong> se abbiamo raccolto tutti i suoi messaggi pubblicati in chat.</p>"
-            },
-            "inOutRecommendations": {
-                "title": "Raccomandazioni in entrata e in uscita",
-                "description": "<p><strong>Raccomandazioni in entrata</strong>: numero totale di raccomandazioni ricevute da un canale. Un numero alto indica che è molto popolare!</p><p><strong>Raccomandazioni in uscita</strong>: numero di raccomandazioni che un canale dà ad altri. Un numero alto significa che suggerisce molti contenuti!</p>"
-            },
-            "iri": {
-                "title": "Infodemic Risk Index (IRI)",
-                "description": "<p>L'<strong>Infodemic Risk Index</strong> (IRI) misura quanto è affidabile un canale, da 0 (completamente affidabile) a 1 (molto inaffidabile). È basato sull’affidabilità dei siti web condivisi nel canale e sul numero di visualizzazioni di quei link. Un valore basso indica che gli utenti sono più esposti a informazioni affidabili.</p><p>Per maggiori dettagli, vedi questo articolo: Gallotti, R., Valle, F., Castaldo, N., Sacco, P., & De Domenico, M. (2020). <em>Assessing the risks of ‘infodemics’ in response to COVID-19 epidemics</em>. Nature Human Behaviour, 4(12), 1285–1293. <a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">Link</a></p>"
-            },
-            "diri": {
-                "title": "Indice dinamico di rischio infodemico (dIRI)",
-                "description": "<p>Il <strong>dIRI</strong> è simile all’IRI, ma si concentra sulle interazioni attive con i contenuti inaffidabili. Invece di contare solo le visualizzazioni, considera azioni più impegnative come rispondere o ricondividere. Se una notizia inaffidabile riceve molte interazioni attive, il valore del dIRI sarà più alto.</p>"
-            },
-            "sdiri": {
-                "title": "Indice semi-dinamico di rischio infodemico (sdIRI)",
-                "description": "<p>Lo <strong>sdIRI</strong> si concentra sulle interazioni rapide con contenuti inaffidabili, come reazioni con emoji o 'mi piace'. Diversamente dal dIRI, che considera azioni più forti, lo sdIRI misura il coinvolgimento 'silenzioso'. Un valore alto indica molte reazioni veloci a contenuti inaffidabili.</p>"
-            },
-            "unrel": {
-                "title": "Indice di Inaffidabilità (Unrel)",
-                "description": "<p>L'<strong>indice di Inaffidabilità</strong> mostra la percentuale di messaggi che puntano a siti non affidabili, rispetto al totale dei messaggi che contengono link a fonti informative. Più il valore si avvicina a 1, maggiore è la quantità di contenuti inaffidabili condivisi.</p>"
-            },
-            "domains": {
-                "title": "Domini noti e sconosciuti",
-                "description": "<p><strong>Domini noti</strong>: numero di siti condivisi per cui abbiamo informazioni sull’affidabilità. <br><strong>Domini sconosciuti</strong>: siti per cui non abbiamo informazioni.</p><p>Più domini noti abbiamo, più precisa sarà la nostra misurazione della diffusione della disinformazione.</p>"
-            },
-            "centrality": {
-                "title": "Misure di centralità",
-                "description": "<p>Nell’analisi delle reti, queste misure servono per capire quanto è importante un punto (un canale Telegram) nella rete:</p><ul><li><strong>Degree centrality</strong>: quante connessioni dirette ha (popolarità).</li><li><strong>Betweenness centrality</strong>: quanto agisce da ponte tra altri punti (è un connettore chiave!).</li><li><strong>Closeness centrality</strong>: quanto velocemente può raggiungere tutti gli altri (è ben connesso!).</li><li><strong>Eigenvector centrality</strong>: quanto è connesso a canali molto ben connessi (ha amici famosi!).</li></ul><p>Per approfondire: Pósfai, M., & Barabási, A. L. (2016). <em>Network science</em> (Vol. 3). Cambridge University Press.</p>"
-            },
-            "communities": {
-                "title": "Comunità",
-                "description": "Questi metodi di rilevamento delle comunità aiutano a identificare <strong>gruppi</strong> naturali all'interno delle reti, come nei social network:<br><br><strong>Comunità di Louvain:</strong> Cerca gruppi in cui ci sono molte connessioni interne. <em>(Come un gruppo di amici in cui tutti si conoscono molto bene!)</em><br><strong>Comunità di Infomap:</strong> Trova gruppi in base a quanto facilmente le informazioni (o i messaggi) possono circolare al loro interno. <em>(Come un circolo dove le notizie si diffondono velocemente tra i membri!)</em><br><br>Per maggiori dettagli, puoi consultare questi articoli:<br><a href='https://hal.science/hal-01231784' target='_blank'>Dugué, N., & Perez, A. (2015). Directed Louvain: maximizing modularity in directed networks</a><br><a href='https://www.pnas.org/doi/epdf/10.1073/pnas.0706851105' target='_blank'>Rosvall, M., & Bergstrom, C. T. (2008). Maps of random walks on complex networks reveal community structure</a>"
-            }
-        }
+  "guideTitle": "Glossario di Esplorazione",
+  "guideItems": {
+    "telegramDataset": {
+      "title": "Dataset Telegram",
+      "description": "<p>Un <strong>dataset</strong> è una raccolta strutturata di dati. La piattaforma include circa <strong>10 milioni di messaggi Telegram</strong> scaricati da circa <strong>500 canali</strong>, in <em>4 lingue</em> (inglese, italiano, spagnolo e polacco).</p><p>Telegram è stato scelto perché offre <strong>accesso gratuito a raccolte di dati su larga scala</strong>, a differenza di altre piattaforme di messaggistica popolari.</p>"
     },
+    "telegramChannels": {
+      "title": "Canali e chat Telegram",
+      "description": "<p>Un <strong>canale Telegram</strong> è uno spazio in cui uno o più amministratori possono pubblicare messaggi a un vasto pubblico.</p><p>Un canale può avere una o più <strong>chat</strong> con impostazioni diverse: per esempio, alcune in cui solo gli amministratori possono pubblicare messaggi e altre in cui tutti possono partecipare.</p><p>Le chat o conversazioni di un canale si riferiscono ai messaggi pubblicati e al modo in cui il pubblico reagisce.</p>"
+    },
+    "network": {
+      "title": "Rete",
+      "description": "<p>Una <strong>rete</strong> è una struttura che rappresenta entità come punti e le relazioni tra esse come linee.</p><p>In questa rete, i canali Telegram scaricati sono visualizzati come <strong>punti</strong>, e le linee mostrano come sono collegati. Un canale è collegato a un altro quando Telegram lo <em>raccomanda</em> automaticamente, in base al numero di utenti in comune.</p>"
+    },
+    "disinformation": {
+      "title": "Disinformazione",
+      "description": "<p>La <strong>disinformazione</strong> è informazione falsa o fuorviante creata, condivisa o diffusa deliberatamente con l’intenzione di <em>ingannare</em> o <em>manipolare</em> le persone.</p><p>Viene spesso utilizzata per <strong>influenzare le opinioni</strong>, creare confusione o perseguire obiettivi <em>politici, sociali o economici</em>.</p>"
+    },
+    "reliability": {
+      "title": "Affidabilità",
+      "description": "<p>L’<strong>affidabilità</strong> misura quanto un link sia attendibile e accurato. È determinata tramite una <em>valutazione manuale</em> del sito web.</p><p>Un <strong>punteggio di affidabilità alto</strong> indica che la fonte può essere considerata attendibile e fornire informazioni ben fondate.</p>"
+    },
+    "infodemicRisk": {
+      "title": "Rischio Infodemico",
+      "description": "<p>Il <strong>Rischio Infodemico</strong> indica quanto il canale sia affidabile, variando da <strong>0</strong> (completamente affidabile) a <strong>1</strong> (del tutto inaffidabile).</p><p>È calcolato in base all’affidabilità dei siti condivisi nel canale e a quanto gli utenti del canale siano <em>esposti</em> a tali link (considerando il numero di visualizzazioni).</p><p>Un <strong>valore basso</strong> significa che gli utenti sono esposti a informazioni più affidabili!</p><p>Per maggiori dettagli, consulta <a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">questo articolo</a>.</p>"
+    },
+    "hateSpeech": {
+      "title": "Discorsi d’odio",
+      "description": "<p>I <strong>discorsi d’odio</strong> comprendono espressioni che incitano, promuovono, giustificano o diffondono <strong>odio, violenza, discriminazione o ostilità</strong> contro una persona o un gruppo sulla base di caratteristiche identitarie come razza, religione, etnia, genere, orientamento sessuale, disabilità o simili.</p><p>Includono sia forme esplicite di <em>incitamento alla violenza</em>, sia forme più sottili di <em>disumanizzazione</em> o <em>linguaggio denigratorio</em>.</p>"
+    },
+    "checkWorthyness": {
+      "title": "Verificabilità",
+      "description": "<p>Un contenuto è definito <strong>verificabile</strong> quando ha rilevanza di <em>interesse pubblico</em> e può richiedere un controllo da parte dei fact-checker.</p><p>Un messaggio è considerato verificabile quando:</p><ul><li>Contiene un <strong>dato fattuale</strong> che può essere verificato o smentito,</li><li>Ha il potenziale di <strong>influenzare opinioni, comportamenti o il dibattito pubblico</strong>,</li><li>Affronta <strong>temi sensibili o di grande impatto</strong> (es. politica, salute, sicurezza, migrazione),</li><li>Mostra segni di possibile <em>misinformazione</em> o <em>disinformazione</em>.</li></ul>"
+    }
+  }
+}
+,
     "welcome": {
         "title": "Benvenuti in Hatedemics"
     },
@@ -900,14 +885,12 @@
             "all": "Tutti",
             "yes": "Si",
             "no": "No",
-            "DISABLED": "Disabili",
+            "DISABLED": "Persone con disabilità",
             "JEWS": "Ebrei",
             "MUSLIMS": "Musulmani",
             "LGBTQIA+": "LGBTQIA+",
             "MIGRANTS": "Migranti",
-            "OTHER": "Altro",
-            "POC": "Persone di colore",
-            "ROMANI": "Rom",
+            "POC": "Persone nere",
             "WOMEN": "Donne"
         },
         "footer": {

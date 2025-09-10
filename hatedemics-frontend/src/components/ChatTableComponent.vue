@@ -280,12 +280,10 @@ const getReliabilityIcon = (value: number) => {
             { title: t('message.filter.all'), value: null },
             { title: t('message.filter.DISABLED'), value: 'DISABLED' },
             { title: t('message.filter.JEWS'), value: 'JEWS' },
-            { title: t('message.filter.LGBT+'), value: 'LGBT+' },
+            { title: t('message.filter.LGBTQIA+'), value: 'LGBTQIA+' },
             { title: t('message.filter.MIGRANTS'), value: 'MIGRANTS' },
             { title: t('message.filter.MUSLIMS'), value: 'MUSLIMS' },
-            { title: t('message.filter.OTHER'), value: 'OTHER' },
             { title: t('message.filter.POC'), value: 'POC' },
-            { title: t('message.filter.ROMANI'), value: 'ROMANI' },
             { title: t('message.filter.WOMEN'), value: 'WOMEN' },
           ]"
           item-value="value"
@@ -418,6 +416,7 @@ const getReliabilityIcon = (value: number) => {
         <v-list-item
           v-for="target in parsedTargets"
           :key="target"
+          
           :disabled="isEmptyOrSpaces(target) || target === 'OTHER'"
           :class="{
             'has-target': selectedMessage?.target,
