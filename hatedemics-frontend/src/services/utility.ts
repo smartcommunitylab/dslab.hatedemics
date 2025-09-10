@@ -62,8 +62,15 @@ export function processingChannelInfo(data: ChannelInfo[]) {
       }).format(new Date(date));
     };
     export function isEmptyOrSpaces(str: string | null): boolean {
-      return str === null || str.match(/^ *$/) !== null;
-  }
+      if (str === null) return true;
+
+      const normalized = str.trim().toLowerCase();
+      return (
+        normalized === "" ||
+        normalized === "nan" ||
+        normalized === "null" ||
+        normalized === "undefined"
+      );  }
   export const cleanString = (str:string):string =>{
     if (!str) return ''; // Evita errori con stringhe undefined/null
     return str.replace(/[{}'"]/g, ''); // Rimuove parentesi graffe, virgolette singole e doppie

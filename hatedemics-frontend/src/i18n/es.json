@@ -87,50 +87,42 @@
         }
     },
     "networkGuide": {
-        "guideTitle": "Glosario de la red de canales Telegram",
-        "guideItems": {
-            "network": {
-                "title": "Red",
-                "description": "Esta red muestra los canales de telegrama como puntos, y las líneas muestran cómo están conectados. "
-            },
-            "expanded": {
-                "title": "Expandido",
-                "description": "Un canal es <strong>expandido</strong> Si hemos recopilado todos sus mensajes de chat."
-            },
-            "inOutRecommendations": {
-                "title": "Recomendaciones de entrada y salida",
-                "description": "<strong>En recomendaciones</strong> Es el número total de veces que otros recomiendan un canal: ¡cuanto más se recomienda, más popular es!<br><strong>Recomendaciones</strong> es el número de canales que este recomienda: un número más alto significa que apunta a mucho otro contenido."
-            },
-            "iri": {
-                "title": "Índice de riesgo infodémico (IRI)",
-                "description": "El IRI mide cuán poco confiable es un canal, desde 0 (completamente confiable) hasta 1 (totalmente poco confiable). <br>Para más detalles: <a href='https://www.nature.com/articles/s41562-020-00994-6' target='_blank'>Gallotti et al., 2020 (comportamiento humano de la naturaleza)</a>."
-            },
-            "diri": {
-                "title": "Índice de riesgo infodémico dinámico (DIRI)",
-                "description": "El Diri analiza cómo los usuarios activamente se involucran con contenido poco confiable. "
-            },
-            "sdiri": {
-                "title": "Índice de riesgo infodémico semi-dinámico (SDIRI)",
-                "description": "El SDIRI rastrea interacciones ligeras y rápidas con contenido poco confiable, como reacciones (emojis, me gusta). "
-            },
-            "unrel": {
-                "title": "Índice de falta de fiabilidad (no)",
-                "description": "Este índice muestra cuánto contenido poco confiable comparte un canal en comparación con todos sus mensajes que vinculan a cualquier fuente. "
-            },
-            "domains": {
-                "title": "Dominios conocidos y desconocidos",
-                "description": "<strong>Dominios conocidos</strong> son sitios web para los que tenemos datos de confiabilidad. <strong>Dominios desconocidos</strong> son aquellos sin tales datos. "
-            },
-            "centrality": {
-                "title": "Medidas de centralidad",
-                "description": "Estas medidas muestran cuán importante es un canal en la red:<br><strong>Centralidad de grado:</strong> Número de enlaces directos (popularidad).<br><strong>Mercidez:</strong> Actúa como un puente entre otros canales.<br><strong>Cercanía:</strong> Qué tan rápido puede llegar a otros.<br><strong>Vector propio:</strong> Qué conectado está a otros canales influyentes.<br>Ver también: <em>Pósfai y Barabási, 2016 - Network Science</em>."
-            },
-            "communities": {
-                "title": "Comunidades",
-                "description": "Estos métodos comunitarios ayudan a identificar natural <strong>grupos</strong> dentro de las redes, como en una red social:<br><br><strong>Comunidad de Lovain:</strong> Busca grupos donde hay muchas conexiones dentro del grupo. <em>(¡Como un grupo de amigos donde todos se conocen muy bien!)</em><br><strong>Comunidad de Infomap:</strong> Encuentra grupos basados en la facilidad de la información (o mensajes) puede moverse dentro de ese grupo. <em>(¡Como un club donde las noticias se extienden muy rápido entre los miembros!)</em><br><br>Para más detalles, puede consultar estos artículos:<br><a href='https://hal.science/hal-01231784' target='_blank'>Dugué, N. y Pérez, A. (2015). </a><br><a href='https://www.pnas.org/doi/epdf/10.1073/pnas.0706851105' target='_blank'>Rosvall, M. y Bergstrom, C. T. (2008). </a>"
-            }
-        }
+  "guideTitle": "Glosario de Exploración",
+  "guideItems": {
+    "telegramDataset": {
+      "title": "Conjunto de datos de Telegram",
+      "description": "<p>Un <strong>conjunto de datos</strong> es una colección estructurada de información. La plataforma incluye aproximadamente <strong>10 millones de mensajes de Telegram</strong> descargados de unos <strong>500 canales</strong>, en <em>4 idiomas</em> (inglés, italiano, español y polaco).</p><p>Se eligió Telegram porque ofrece <strong>acceso gratuito a la recopilación de datos a gran escala</strong>, a diferencia de otras plataformas de mensajería populares.</p>"
     },
+    "telegramChannels": {
+      "title": "Canales y chats de Telegram",
+      "description": "<p>Un <strong>canal de Telegram</strong> es un espacio donde uno o varios administradores pueden publicar mensajes para una gran audiencia.</p><p>Un canal puede tener uno o más <strong>chats</strong> con configuraciones diferentes: por ejemplo, algunos en los que solo los administradores pueden publicar mensajes y otros donde todos pueden participar.</p><p>Los chats o conversaciones de un canal se refieren a los mensajes publicados allí y a la forma en que las audiencias reaccionan.</p>"
+    },
+    "network": {
+      "title": "Red",
+      "description": "<p>Una <strong>red</strong> es una estructura que representa entidades como puntos y las relaciones entre ellas como líneas.</p><p>En esta red, los canales de Telegram descargados se muestran como <strong>puntos</strong>, y las líneas indican cómo están conectados. Un canal está vinculado a otro cuando Telegram lo <em>recomienda</em> automáticamente, en función de cuántos usuarios comparten ambos canales.</p>"
+    },
+    "disinformation": {
+      "title": "Desinformación",
+      "description": "<p>La <strong>desinformación</strong> es información falsa o engañosa que se crea, comparte o difunde deliberadamente con la intención de <em>engañar</em> o <em>manipular</em> a las personas.</p><p>A menudo se utiliza para <strong>influir en opiniones</strong>, sembrar confusión o lograr objetivos <em>políticos, sociales o económicos</em>.</p>"
+    },
+    "reliability": {
+      "title": "Fiabilidad",
+      "description": "<p>La <strong>fiabilidad</strong> mide cuán confiable y precisa es una fuente o un enlace. Se determina mediante una <em>evaluación manual</em> del sitio web.</p><p>Un <strong>puntaje de fiabilidad alto</strong> indica que la fuente puede considerarse confiable y proporcionar información bien fundamentada.</p>"
+    },
+    "infodemicRisk": {
+      "title": "Riesgo Infodémico",
+      "description": "<p>El <strong>Riesgo Infodémico</strong> indica el grado de fiabilidad de un canal, variando entre <strong>0</strong> (completamente fiable) y <strong>1</strong> (totalmente no fiable).</p><p>Se calcula en función de la fiabilidad de los sitios compartidos en el canal y de cuánto los usuarios están <em>expuestos</em> a esos enlaces (considerando el número de visualizaciones).</p><p>Un <strong>valor bajo</strong> significa que los usuarios están expuestos a información más confiable.</p><p>Para más detalles, consulta <a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">este artículo</a>.</p>"
+    },
+    "hateSpeech": {
+      "title": "Discurso de odio",
+      "description": "<p>El <strong>discurso de odio</strong> se refiere a expresiones que incitan, promueven, justifican o difunden <strong>odio, violencia, discriminación u hostilidad</strong> contra una persona o grupo en función de rasgos identitarios como raza, religión, etnia, género, orientación sexual, discapacidad u otras características similares.</p><p>Incluye tanto formas explícitas de <em>incitación a la violencia</em> como formas más sutiles de <em>deshumanización</em> o <em>lenguaje despectivo</em>.</p>"
+    },
+    "checkWorthyness": {
+      "title": "Verificabilidad",
+      "description": "<p>Un contenido se considera <strong>verificable</strong> cuando es de <em>interés público</em> y puede requerir comprobación por parte de los verificadores de hechos.</p><p>Un mensaje es verificable cuando:</p><ul><li>Hace una <strong>afirmación factual</strong> que puede verificarse o refutarse,</li><li>Tiene el potencial de <strong>influir en opiniones, comportamientos o el debate público</strong>,</li><li>Aborda <strong>temas sensibles o de alto impacto</strong> (p. ej., política, salud, seguridad, migración),</li><li>Muestra signos de posible <em>misinformación</em> o <em>desinformación</em>.</li></ul>"
+    }
+  }
+},
     "welcome": {
         "title": "Bienvenido a Hatedemics"
     },
@@ -897,14 +889,12 @@
             "all": "Todo",
             "yes": "Sí",
             "no": "No",
-            "DISABLED": "Desactivado",
+            "DISABLED": "Personas con discapacidad",
             "JEWS": "Judíos",
             "MUSLIMS": "Musulmanes",
             "LGBTQIA+": "LGBTQIA+",
             "MIGRANTS": "Migrantes",
-            "OTHER": "Otro",
-            "POC": "Gente de color",
-            "ROMANI": "Memoria de sólo lectura",
+            "POC": "Personas negras",
             "WOMEN": "Mujer"
         },
         "footer": {

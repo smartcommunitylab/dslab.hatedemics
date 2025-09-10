@@ -86,50 +86,43 @@
     }
   },
   "networkGuide": {
-    "guideTitle": "Gwida tan-Network tal-kanali Telegram",
-    "guideItems": {
-      "network": {
-        "title": "Network",
-        "description": "In-network turi l-kanali Telegram bħala punti u l-linji li juru l-konnessjonijiet tagħhom. Kanal huwa konness ma’ ieħor meta Telegram jirrakkomandah awtomatikament, bbażat fuq in-numru ta’ utenti kondiviżi."
-      },
-      "expanded": {
-        "title": "Espans",
-        "description": "Kanal huwa <strong>espans</strong> jekk ġabna l-messaġġi kollha tiegħu."
-      },
-      "inOutRecommendations": {
-        "title": "Rakkomandazzjonijiet li daħlu u li ħarġu",
-        "description": "<strong>Rakkomandazzjonijiet li daħlu</strong> huma kemm-il darba kanal ikun rakkomandat minn oħrajn – aktar rakkomandazzjonijiet ifisser aktar popolarità!<br><strong>Rakkomandazzjonijiet li ħarġu</strong> huma kemm-il kanali kanal jirrakkomanda – numru għoli ifisser li qed imexxi għal ħafna kontenut ieħor."
-      },
-      "iri": {
-        "title": "Indiċi tar-Riskju tal-Infodemia (IRI)",
-        "description": "IRI jitkejjel kemm kanal hu inaffidabbli, minn 0 (kompletament affidabbli) sa 1 (kompletament inaffidabbli). Ibbażat fuq l-affidabbiltà tas-siti u n-numru ta’ nies li jarawhom.<br>Għal aktar informazzjoni: <a href='https://www.nature.com/articles/s41562-020-00994-6' target='_blank'>Gallotti et al., 2020 (Nature Human Behaviour)</a>."
-      },
-      "diri": {
-        "title": "Indiċi Dinamiku tar-Riskju tal-Infodemia (dIRI)",
-        "description": "dIRI jkejjel kemm l-utenti jinteraġixxu attivament ma’ kontenut inaffidabbli, inkluż tweġibiet u qsim. Valur għoli ifisser interazzjoni attiva ma’ messaġġi inaffidabbli."
-      },
-      "sdiri": {
-        "title": "Indiċi Semi-dinamiku tar-Riskju tal-Infodemia (sdIRI)",
-        "description": "sdIRI jkejjel interazzjonijiet ħfief u veloċi ma’ kontenut inaffidabbli, bħal reazzjonijiet (emoticons, likes). Jgħin biex jitkejjel inġib passiv lejn id-disinformazzjoni."
-      },
-      "unrel": {
-        "title": "Indiċi ta’ Inaffidabbiltà (Unrel)",
-        "description": "Indikatur ta’ kemm tal-kontenut ta’ kanal ġej minn sorsi mhux affidabbli meta mqabbel mal-messaġġi kollha li fihom links. Valur viċin 1 ifisser li l-biċċa l-kbira tal-kontenut hu minn siti mhux affidabbli."
-      },
-      "domains": {
-        "title": "Dominji Magħrufa u Mhux Magħrufa",
-        "description": "<strong>Dominji magħrufa</strong> huma siti li għandna informazzjoni dwar l-affidabbiltà tagħhom. <strong>Dominji mhux magħrufa</strong> huma siti mingħajr tali informazzjoni. Aktar dominji magħrufa jfisser iktar preċiżjoni fl-indikaturi dwar id-disinformazzjoni."
-      },
-      "centrality": {
-        "title": "Metriċi taċ-Ċentralità",
-        "description": "Metriċi li juru l-importanza ta’ kanal fin-network:<br><strong>Grad taċ-Ċentralità:</strong> Numru ta’ konnessjonijiet diretti (popolarità).<br><strong>Betweenness:</strong> Funzjoni ta’ pont bejn kanali oħra.<br><strong>Closeness:</strong> Kemm malajr jista’ jilħaq oħrajn.<br><strong>Eigenvector:</strong> Kemm hu konness ma’ kanali influwenti oħra.<br>Ċempel ukoll: <em>Pósfai & Barabási, 2016 - Network Science</em>."
-      },
-      "communities": {
-        "title": "Komunitajiet",
-        "description": "Metodi biex jidentifikaw <strong>gruppi</strong> fin-network, bħal fil-komunitajiet soċjali:<br><br><strong>Metodu Louvain:</strong> Jfittex gruppi b’ħafna konnessjonijiet interni. <em>(Bħal grupp ta’ ħbieb li kollha jafuhom!)</em><br><strong>Metodu Infomap:</strong> Jidentifika gruppi skont kemm informazzjoni tixxandar faċilment fihom. <em>(Bħal klabb fejn aħbarijiet jaqsmu malajr!)</em><br><br>Aktar informazzjoni:<br><a href='https://hal.science/hal-01231784' target='_blank'>Dugué, N., & Perez, A. (2015). Directed Louvain: maximizing modularity in directed networks</a><br><a href='https://www.pnas.org/doi/epdf/10.1073/pnas.0706851105' target='_blank'>Rosvall, M., & Bergstrom, C. T. (2008). Maps of random walks on complex networks reveal community structure</a>"
-      }
+  "guideTitle": "Glossarju tal-Esplorazzjoni",
+  "guideItems": {
+    "telegramDataset": {
+      "title": "Dataset ta’ Telegram",
+      "description": "<p><strong>Dataset</strong> huwa ġabra strutturata ta’ dejta. Il-pjattaforma tinkludi madwar <strong>10 miljun messaġġ ta’ Telegram</strong>, miġbura minn madwar <strong>500 kanal</strong>, f’<em>4 lingwi</em> (Ingliż, Taljan, Spanjol u Malti).</p><p>Telegram intgħażel għax jipprovdi <strong>aċċess bla ħlas għal ġbir ta’ dejta fuq skala kbira</strong>, b’differenza minn pjattaformi ta’ messaġġi oħra popolari.</p>"
+    },
+    "telegramChannels": {
+      "title": "Kanali u chats ta’ Telegram",
+      "description": "<p><strong>Kanal ta’ Telegram</strong> huwa spazju fejn wieħed jew ftit amministraturi jistgħu jippubblikaw messaġġi lil udjenza kbira.</p><p>Kanal jista’ jkollu wieħed jew aktar <strong>chats</strong> b’settings differenti: pereżempju, xi wħud fejn biss l-amministraturi jistgħu jippubblikaw, u oħrajn fejn kulħadd jista’ jipparteċipa.</p><p>Il-chats jew konversazzjonijiet ta’ kanal jirreferu għall-messaġġi ppubblikati hemmhekk u kif l-udjenza tirreaġixxi għalihom.</p>"
+    },
+    "network": {
+      "title": "Network",
+      "description": "<p><strong>Network</strong> huwa struttura li tirrappreżenta entitajiet bħala punti, u r-relazzjonijiet bejniethom bħala linji.</p><p>F’dan in-network, il-kanali ta’ Telegram imniżżla jidhru bħala <strong>punti</strong>, u l-linji juru kif huma konnessi. Kanal ikun marbut ma’ ieħor meta Telegram <em>jirrakkomandah</em> awtomatikament, abbażi ta’ kemm utenti għandhom komuni ż-żewġ kanali.</p>"
+    },
+    "disinformation": {
+      "title": "Diżinformazzjoni",
+      "description": "<p><strong>Diżinformazzjoni</strong> hija informazzjoni falza jew qarrieqa li tinħoloq, tinqasam jew tinxtered intenzjonalment bil-għan li <em>tqarraq</em> jew <em>timmaneġġja</em> lin-nies.</p><p>Ħafna drabi tintuża biex <strong>tinfluwenza opinjonijiet</strong>, tixxerred konfużjoni jew tinkiseb <em>għan politiku, soċjali jew finanzjarju</em>.</p>"
+    },
+    "reliability": {
+      "title": "Affidabbiltà",
+      "description": "<p><strong>Affidabbiltà</strong> tfisser kemm hu ta’ min jafdaha u preċiża link jew sors. Din tiġi determinata permezz ta’ <em>evalwazzjoni manwali</em> tas-sit web.</p><p><strong>Punteġġ għoli ta’ affidabbiltà</strong> jindika li s-sors jista’ jitqies bħala wieħed ta’ min jafdah u li jipprovdi informazzjoni preċiża u sodisfatta.</p>"
+    },
+    "infodemicRisk": {
+      "title": "Riskju ta’ Infodemija",
+      "description": "<p><strong>Riskju ta’ Infodemija</strong> jindika kemm hu affidabbli kanal, fuq skala minn <strong>0</strong> (kompletament affidabbli) sa <strong>1</strong> (kompletament mhux affidabbli).</p><p>Ibbażat fuq kemm huma affidabbli s-siti web li jinqasmu fil-kanal, u kemm l-utenti huma <em>esposti</em> għal dawk il-links (iqis ukoll in-numru ta’ views).</p><p><strong>Valur baxx</strong> ifisser li l-utenti huma esposti għal informazzjoni aktar affidabbli.</p><p>Għal aktar dettalji tista’ tikkonsulta <a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">dan l-artiklu</a>.</p>"
+    },
+    "hateSpeech": {
+      "title": "Diskors ta’ mibegħda",
+      "description": "<p><strong>Diskors ta’ mibegħda</strong> jirreferi għal espressjonijiet li jinkoraġġixxu, jippromwovu, jiġġustifikaw jew ixerrdu <strong>mibegħda, vjolenza, diskriminazzjoni jew ostilità</strong> kontra persuna jew grupp ibbażat fuq karatteristiċi ta’ identità bħal razza, reliġjon, etniċità, sess, orjentazzjoni sesswali, diżabilità jew karatteristiċi simili.</p><p>Dan jinkludi kemm <em>inkoraġġiment dirett għall-vjolenza</em> kif ukoll forom aktar sottili ta’ <em>deumanizzazzjoni</em> jew <em>lingwaġġ derogatorju</em>.</p>"
+    },
+    "checkWorthyness": {
+      "title": "Denju li jiġi vverifikat",
+      "description": "<p>Kontenut jitqies bħala <strong>denju ta’ verifika</strong> meta jkollu <em>importanza pubblika</em> u jista’ jeħtieġ verifika minn fact-checkers.</p><p>Messaġġ jitqies denju ta’ verifika meta:</p><ul><li>Jagħmel <strong>pretensjoni fattwali</strong> li tista’ tiġi vverifikata jew miċħuda,</li><li>Għandu l-potenzjal li <strong>jinfluwenza opinjonijiet, imġiba jew dibattitu pubbliku</strong>,</li><li>Jindirizza <strong>sujetti sensittivi jew ta’ impatt għoli</strong> (eż. politika, saħħa, sigurtà, migrazzjoni),</li><li>Juri sinjali ta’ possibbli <em>diżinformazzjoni</em> jew <em>misinformazzjoni</em>.</li></ul>"
     }
-  },
+  }
+}
+,
   "welcome": {
     "title": "Merħba fil-Hatedemics"
   },
@@ -924,14 +917,12 @@
       "all": "Kollha",
       "yes": "IVA",
       "no": "LE",
-      "DISABLED": "B'diżabilità",
+      "DISABLED": "Individwi b'diżabilità",
       "JEWS": "Lhud",
       "MUSLIMS": "Musulmani",
       "LGBTQIA+": "LGBTQIA+",
       "MIGRANTS": "Migranti",
-      "OTHER": "Ieħor",
-      "POC": "Nies ta 'kulur",
-      "ROMANI": "Rom",
+      "POC": "Nies suwed",
       "WOMEN": "Nisa"
     },
     "footer": {
