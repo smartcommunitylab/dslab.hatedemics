@@ -153,7 +153,7 @@
                 "html": "<p>⚠️ <strong>Warning:</strong> this platform contains unobfuscated examples some readers may find offensive.</p>"
             }
         ],
-        "chooseLanguage": "Choose your language",
+        "chooseLanguage": "Select your platform language",
         "continue": "Continue",
         "prev": "Back",
         "next": "Next",
@@ -759,7 +759,8 @@
     },
     "project": {
         "noProject": "No projects available",
-        "noData": "No data available"
+        "noData": "No data available",
+        "dialoguesTitle": "Project \"{name}\" Dialogues"
     },
     "projects": {
         "title": "Projects",

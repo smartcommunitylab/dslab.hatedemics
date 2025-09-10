@@ -6,23 +6,35 @@
   >
     <v-card class="pa-6 rounded-lg">
       <!-- Selezione lingua PRIMA dello stepper -->
-      <div v-if="!languageChosen" class="p-6">
-        <h2 class="text-lg font-semibold mb-4">{{ t("onboarding.chooseLanguage") }}</h2>
-        <v-select
-          v-model="selectedLocale"
-          :items="availableLocales"
-          item-title="label"
-          item-value="code"
-          label="Language"
-          hide-details
-          density="compact"
-        />
-        <div class="text-right mt-4">
-          <v-btn color="primary" @click="confirmLanguage">
-            {{ t("onboarding.continue") }}
-          </v-btn>
-        </div>
-      </div>
+      <!-- Selezione lingua PRIMA dello stepper -->
+<div v-if="!languageChosen" class="p-6">
+  <h2 class="text-lg font-semibold mb-4">{{ t("onboarding.chooseLanguage") }}</h2>
+  <v-select
+    v-model="selectedLocale"
+    :items="availableLocales"
+    item-title="label"
+    item-value="code"
+    :label="t('onboarding.language')"
+    hide-details
+    density="compact"
+  />
+
+  <!-- Checkbox anche qui -->
+  <v-checkbox
+    v-model="neverShow"
+    :label="t('onboarding.neverShow')"
+    hide-details
+    density="compact"
+    class="mt-4"
+  />
+
+  <div class="text-right mt-4">
+    <v-btn color="primary" @click="confirmLanguage">
+      {{ t("onboarding.continue") }}
+    </v-btn>
+  </div>
+</div>
+
 
       <!-- Stepper solo DOPO la scelta lingua -->
       <v-stepper

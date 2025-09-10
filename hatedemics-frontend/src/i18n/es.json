@@ -153,7 +153,7 @@
                 "html": "<p>⚠️ <strong>Atención:</strong> la plataforma contiene ejemplos no ocultados que algunos lectores pueden encontrar ofensivos.</p>"
             }
         ],
-        "chooseLanguage": "Elige tu idioma",
+        "chooseLanguage": "Seleccione el idioma de su plataforma",
   "continue": "Continuar",
         "prev": "Atrás",
         "next": "Próximo",
@@ -725,7 +725,8 @@
         "subtitle": "En esta página puedes explorar los mensajes individuales del canal.<br><br>Cada fila de la tabla muestra el <b>texto del mensaje</b>, su <b>fecha</b> y detalles como el <b>número de me gusta</b>, si contiene <b>discurso de odio</b>, si se considera <i>“digno de verificación”</i>, y si se menciona algún <b>grupo objetivo</b>.<br><br>Estos datos te permiten ver no solo qué tipo de contenido se publica, sino también cómo interactúa la audiencia con él.<br>Puedes filtrar los mensajes por <b>discurso de odio</b>, <b>digno de verificación</b> o <b>grupo objetivo</b> para centrarte en las conversaciones que más te interesen.<br><br>También puedes reordenar los mensajes haciendo clic en los <b>encabezados de las columnas</b>.<br>Por ejemplo, si deseas ver cómo se desarrolló una conversación a lo largo del tiempo, reordena la tabla por la columna <b>Fecha</b>.<br><br>Pasa el ratón sobre cualquier <b>etiqueta</b> o <b>botón</b> para ver una breve explicación de su función."    },
     "project": {
         "noProject": "No hay proyectos disponibles",
-        "noData": "No hay datos disponibles"
+        "noData": "No hay datos disponibles",
+        "dialoguesTitle": "Proyecto Diálogos \"{nombre}\""
     },
     "projects": {
         "title": "Proyectos",

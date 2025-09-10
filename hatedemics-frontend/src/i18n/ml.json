@@ -152,7 +152,7 @@
         "html": "<p>⚠️ <strong>Twissija:</strong> il-pjattaforma fiha eżempji mhux imċensurati li xi qarrejja jistgħu jsibuhom offensivi.</p>"
       }
     ],
-    "chooseLanguage": "Agħżel il-lingwa",
+    "chooseLanguage": "Agħżel il-lingwa tal-pjattaforma tiegħek",
   "continue": "Kompli",
     "prev": "Lura",
     "next": "Sussegwentement",
@@ -758,7 +758,8 @@
   },
   "project": {
     "noProject": "L-ebda proġett disponibbli",
-    "noData": "L-ebda dejta disponibbli"
+    "noData": "L-ebda dejta disponibbli",
+"dialoguesTitle": "Djalogi tal-Proġett \"{name}\""
   },
   "projects": {
     "title": "Proġetti",

@@ -93,8 +93,9 @@ export default {
               <v-card-actions> 
               <DynamicButton
               icon="mdi-text-box-plus"
+              class="ms-3"
               :text="'Start Dialogue'"
-                  @click.prevent="openTaskList(id)"
+              @click.prevent="openTaskList(id)"
                 />
                 <!-- <DynamicButton
                   :icon="'mdi-file-document-multiple-outline'"
@@ -113,6 +114,8 @@ export default {
 <!--                />-->
                 <DynamicButton
                   v-if="loginStore.is_admin"
+                  class="ms-3"
+
                   :icon="'mdi-trash-can-outline'"
                   :text="'Delete'"
                   color="error"

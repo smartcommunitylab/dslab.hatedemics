@@ -91,37 +91,6 @@ const openMenu = (event: MouseEvent, item: any) => {
   menuY.value = event.pageY;
   selectedMessage.value = item;
 };
-
-const startDialogue = async (message: any) => {
-  if (selectedMessage.value) {
-    //TODO
-    //get projectID  by lang and target
-    const target = cleanString(message); //message.target;
-    const lan = selectedLanguage.value;
-
-    try {
-      const response = await dialogApi.getProjects();
-      const projects = response.data;
-      // get id of project with name Target - Language
-      const projectID = projects.find((p: any) => p.name === `${target}-${lan}`)?.id;
-      if (projectID) {
-        router.push({ name: "tasks", params: { projectID } });
-      } else {
-        showSnackbar(t("message.dialog.noProject"));
-      }
-    } catch (error) {
-      showSnackbar(t("message.dialog.error"));
-    }
-  }
-  menu.value = false;
-};
-const jumpToConversation = () => {
-  if (selectedMessage.value) {
-    //TODO
-    // reorder list by date and start from here
-  }
-  menu.value = false;
-};
 const onSortChange = (sort: any) => {
   if (sort.length > 0) {
     const { key, order } = sort[0]; // Estraggo il primo criterio di ordinamento
@@ -166,10 +135,6 @@ const getRowClass = (item: any) => {
   return {
     class: !isEmptyOrSpaces(item?.item?.target) ? "has-target" : "",
   };
-};
-const startDialogueWithTarget = function (target: any) {
-  // Logica per avviare una conversazione con il target
-  console.log(`Start conversation with ${target}`);
 };
 
 // Define parsedTargets as a computed property
@@ -442,27 +407,26 @@ const getReliabilityIcon = (value: number) => {
       </template>
     </v-data-table-server>
     <!-- Menu contestuale -->
-    <v-menu
+    <!-- <v-menu
       v-model="menu"
       :style="{ top: `${menuY}px`, left: `${menuX}px` }"
       absolute
       offset-y
-    >
+    > -->
       <v-list>
         <!-- Itera su ogni target e crea una voce dinamica per ciascuno -->
         <v-list-item
           v-for="target in parsedTargets"
           :key="target"
-          @click="startDialogue(target)"
           :disabled="isEmptyOrSpaces(target) || target === 'OTHER'"
           :class="{
             'has-target': selectedMessage?.target,
             'no-target': !selectedMessage?.target,
           }"
         >
-          <v-list-item-title>
+          <!-- <v-list-item-title>
             {{ t("message.dialog.start", { target }) }}
-          </v-list-item-title>
+          </v-list-item-title> -->
           <!-- <v-list-item-title v-if="target!== 'OTHER'">
         {{ t("message.dialog.start",{ target }) }}
       </v-list-item-title>
@@ -471,21 +435,21 @@ const getReliabilityIcon = (value: number) => {
       </v-list-item-title> -->
         </v-list-item>
       </v-list>
-    </v-menu>
+    <!-- </v-menu> -->
   </v-container>
 </template>
 
 <style scoped>
 /* Default hover */
-.v-data-table :deep(tbody tr:hover) {
+/* .v-data-table :deep(tbody tr:hover) {
   background-color: rgba(0, 0, 0, 0.05);
   cursor: pointer;
 }
 
 /* Hover su righe con target */
-.v-data-table :deep(tbody tr.has-target:hover) {
-  background-color: rgba(255, 0, 0, 0.2) !important; /* Rosso chiaro */
-}
+/* .v-data-table :deep(tbody tr.has-target:hover) {
+  background-color: rgba(255, 0, 0, 0.2) !important; 
+} */
 .chat-message {
   margin: 8px 0;
   padding: 10px 15px;
