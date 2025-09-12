@@ -3,7 +3,7 @@ import type DrawerMenuItem from '@/interfaces/DrawerMenuItemInterface';
 import ExploreGuideDialog from '@/components/ExploreGuideDialog.vue';
 import CounterspeechGuideDialog from '@/components/CounterspeechGuideDialog.vue';
 import { API } from '@/services';
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
@@ -12,10 +12,11 @@ const showExploreGuide = ref(false);
 const showCounterspeechGuide = ref(false);
 
 const logout = () => {
-  API.login.logout()
+  API.login.logout();
 };
 
-const items: DrawerMenuItem[] = [
+// ✅ trasformato in computed
+const items = computed<DrawerMenuItem[]>(() => [
   {
     title: t('menu.home'),
     icon: 'mdi-home',
@@ -78,18 +79,12 @@ const items: DrawerMenuItem[] = [
   {
     title: t('menu.logout'),
     icon: 'mdi-logout',
-    action: logout 
+    action: logout
   }
-];
+]);
 
-const expandedGroups = ref<Record<string, boolean>>(
-  items.reduce((acc, item) => {
-    if (item.items) acc[item.title] = true;
-    return acc;
-  }, {} as Record<string, boolean>)
-);
+const expandedGroups = ref<Record<string, boolean>>({});
 </script>
-
 
 <template>
   <v-list nav>
@@ -104,7 +99,6 @@ const expandedGroups = ref<Record<string, boolean>>(
           :title="item.title"
           :to="item.to"
           link
-          :action="item.action"
         />
         <v-list-item
           v-else-if="item.action"
@@ -140,7 +134,7 @@ const expandedGroups = ref<Record<string, boolean>>(
       </template>
     </template>
   </v-list>
+
   <ExploreGuideDialog v-model="showExploreGuide" />
   <CounterspeechGuideDialog v-model="showCounterspeechGuide" />
-
 </template>

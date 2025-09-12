@@ -16,7 +16,7 @@ const channelsStore = useChannelsStore();
 const { selectedChannelInfo } = storeToRefs(channelsStore);
 const { generic } = storeToRefs(topicsStore);
 
-const isExtended: ComputedRef<boolean> = computed(() => !!selectedChannelInfo?.value?.hs);
+const isExtended: ComputedRef<boolean> = computed(() => selectedChannelInfo?.value?.expandable === "True");
   const dataEntries: ComputedRef<[any, any][]> = computed(() => {
     if (generic?.value?.wordclouds === undefined) {
       return [];
@@ -40,14 +40,14 @@ watch(selectedChannelInfo, async (newVal) => {
 </script>
 
 <template>
-  <v-container>
-    <v-card v-if="selectedChannelInfo" class="mx-auto pa-0 rounded" elevation="0">
-      <v-card-text class="bg-surface-light pt-4">
+  <v-container class="pa-0" fluid>
+    <v-card v-if="selectedChannelInfo" class="mx-auto pa-0 rounded bg-surface-light" elevation="0" >
+      <v-card-text class="pt-4">
         <v-row dense>
 
           <v-tooltip>
             <template v-slot:activator="{ props }">
-          <v-col cols="12" sm="6" v-if="selectedChannelInfo?.label"  v-bind="props">
+          <v-col cols="12"  v-if="selectedChannelInfo?.label"  v-bind="props">
             <v-icon class="mr-2" color="primary">mdi-tag</v-icon>
             <span class="font-weight-bold">{{ t("channelInfo.label") }}</span>
             {{ selectedChannelInfo.label }}
@@ -60,7 +60,7 @@ watch(selectedChannelInfo, async (newVal) => {
             <template v-slot:activator="{ props }">
               <v-col
                 cols="12"
-                sm="6"
+                
                 v-if="selectedChannelInfo?.preprocessed_about"
                 v-bind="props"
               >
@@ -75,7 +75,7 @@ watch(selectedChannelInfo, async (newVal) => {
           </v-tooltip>
             <v-tooltip>
               <template v-slot:activator="{ props }">
-          <v-col cols="12" sm="6" v-if="selectedChannelInfo?.message_count"  v-bind="props">
+          <v-col cols="12"  v-if="selectedChannelInfo?.message_count"  v-bind="props">
             <v-icon class="mr-2" color="primary">mdi-message</v-icon>
             <span class="font-weight-bold">{{ t("channelInfo.nMessages") }}</span>
             {{ selectedChannelInfo.message_count }}
@@ -86,7 +86,7 @@ watch(selectedChannelInfo, async (newVal) => {
             </v-tooltip>
           <v-tooltip>
             <template v-slot:activator="{ props }">
-          <v-col cols="12" sm="6" v-if="selectedChannelInfo?.participants_count"  v-bind="props">
+          <v-col cols="12"  v-if="selectedChannelInfo?.participants_count"  v-bind="props">
             <v-icon class="mr-2" color="primary">mdi-account-group</v-icon>
             <span class="font-weight-bold">{{ t("channelInfo.nUsers") }}</span>
             {{ selectedChannelInfo.participants_count }}
@@ -97,7 +97,7 @@ watch(selectedChannelInfo, async (newVal) => {
             </v-tooltip>
           <v-tooltip>
             <template v-slot:activator="{ props }">
-          <v-col cols="12" sm="6" v-if="selectedChannelInfo?.language"  v-bind="props">
+          <v-col cols="12"  v-if="selectedChannelInfo?.language"  v-bind="props">
             <v-icon class="mr-2" color="primary">mdi-translate</v-icon>
             <span class="font-weight-bold">{{ t("channelInfo.languages") }}</span>
             {{ selectedChannelInfo.language }}
@@ -108,7 +108,7 @@ watch(selectedChannelInfo, async (newVal) => {
             </v-tooltip>
           <v-tooltip>
             <template v-slot:activator="{ props }">
-          <v-col cols="12" sm="6" v-if="selectedChannelInfo?.iri !== null"  v-bind="props">
+          <v-col cols="12"  v-if="selectedChannelInfo?.iri !== null"  v-bind="props">
             <v-icon class="mr-2" color="primary">mdi-chart-line</v-icon>
             <span class="font-weight-bold">{{ t("channelInfo.iri") }}</span>
             {{ selectedChannelInfo.iri?.toFixed(3) }}
@@ -119,7 +119,7 @@ watch(selectedChannelInfo, async (newVal) => {
             </v-tooltip>
           <v-tooltip>
             <template v-slot:activator="{ props }">
-          <v-col cols="12" sm="6" v-if="generic?.hs_percentage !== undefined"  v-bind="props">
+          <v-col cols="12"  v-if="generic?.hs_percentage !== undefined"  v-bind="props">
             <v-icon class="mr-2" color="error">mdi-emoticon-angry</v-icon>
             <span class="font-weight-bold">{{ t("channelInfo.hs_percentage") }}</span>
             {{ generic.hs_percentage }}%
@@ -130,7 +130,7 @@ watch(selectedChannelInfo, async (newVal) => {
             </v-tooltip>
           <v-tooltip>
             <template v-slot:activator="{ props }">
-          <v-col cols="12" sm="6" v-if="generic?.cw_percentage !== undefined"  v-bind="props">
+          <v-col cols="12"  v-if="generic?.cw_percentage !== undefined"  v-bind="props">
             <v-icon class="mr-2" color="error">mdi-magnify-close</v-icon>
             <span class="font-weight-bold">{{ t("channelInfo.cw_percentage") }}</span>
             {{ generic.cw_percentage }}%
@@ -140,42 +140,47 @@ watch(selectedChannelInfo, async (newVal) => {
 
             </v-tooltip>
         </v-row>
-
-        <!-- <v-divider class="my-4"></v-divider> -->
-
-        <!-- <v-list v-if="dataEntries.length">
-          <v-list-subheader class="text-h6 font-weight-bold">
-            {{ t("channelInfo.topics") }}
-          </v-list-subheader>
-          <v-chip
-            v-for="([key, value], index) in dataEntries"
-            :key="index"
-            :ripple="false"
-            class="ma-1"
-          >
-            {{ value.topic_label }}
-          </v-chip>
-        </v-list> -->
       </v-card-text>
 
       <v-card-actions v-if="isExtended">
-        <v-col cols="12" class="d-flex justify-center">
-          <v-btn
-            color="primary"
-            variant="flat"
-            @click="goToChats"
-            block
-            class="mt-4 pa-6 text-h5"
-            prepend-icon="mdi-text-box"
-          >
-            {{ t("channelInfo.exploreChannel") }}
-          </v-btn>
-        </v-col>
-      </v-card-actions>
+  <v-col cols="12" class="d-flex justify-center">
+    <v-btn
+      color="primary"
+      variant="flat"
+      @click="goToChats"
+      block
+      class="mt-4 "
+    >
+      {{ t("channelInfo.exploreChannel") }}
+    </v-btn>
+  </v-col>
+</v-card-actions>
     </v-card>
-
     <v-alert v-else type="info" class="mt-4" color="primary">
       {{ t("channelInfo.emptySelection") }}
     </v-alert>
   </v-container>
 </template>
+<style scoped>
+.responsive-btn {
+  padding: 12px 16px; 
+  font-size: 1.25rem;
+  white-space: normal; 
+  word-break: break-word;
+  text-align: center;
+  min-width: 150px; 
+  max-width: 100%;  
+}
+
+@media (max-width: 600px) {
+  .responsive-btn {
+    font-size: 1rem; 
+    padding: 8px 12px;
+  }
+
+  .responsive-btn .v-icon {
+    font-size: 18px; /* icona più piccola su mobile */
+  }
+}
+
+</style>

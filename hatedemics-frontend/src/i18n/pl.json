@@ -10,11 +10,11 @@
     },
     "menu": {
         "home": "Dom",
-        "educational": "Edukacyjny",
-        "explore": "Badać",
+        "educational": "Działania edukacyjne",
+        "explore": "Przeglądaj dane Telegramu",
         "network": "Sieć",
         "channel": "Kanał",
-        "conversation": "Rozmowa",
+        "conversation": "Przeglądaj czaty",
         "quickGuide": "Słowniczek",
         "counterspeech": "Mowa kontraktu",
         "projects": "Projektowanie",
@@ -49,13 +49,13 @@
     "home": {
         "title": "Walka z Nienawiścią i Dezinformacją Online",
         "description": "Platforma Hatedemics wykorzystuje sztuczną inteligencję do analizowania treści online, rozwijania krytycznego myślenia i uczenia reakcji na mowę nienawiści.",
-        "network": "Poznaj sieć",
+        "network": "Odkryj sieć Telegrama",
         "networkDescription": "Interaktywna mapa obserwowania połączeń między kanałami, treścią i dynamiką związaną z nienawiścią i dezinformacją online. ",
         "networkButton": "Przejdź do sieci",
         "counterspeech": "Pisanie mowy",
         "counterspeechDescription": "Trenuj swoją zdolność do reagowania na treść nienawiści i dezinformacji dzięki ukierunkowanym ćwiczeniom pisania. ",
         "counterspeechButton": "Zacznij pisać",
-        "educational": "Edukacyjny",
+        "educational": "Działalność edukacyjna",
         "educationalDescription": "Przeglądaj zasoby i materiały edukacyjne, aby zrozumieć i przeciwdziałać nienawiści online.",
         "educationalButton": "Przejdź do sekcji edukacyjnej",
         "guideDescription": "Co należy wiedzieć przed użyciem platformy.",
@@ -642,7 +642,7 @@
         "infoTitle": "Informacje o kanale"
     },
     "conversation": {
-        "title": "Rozmowa",
+    "title": "Wewnątrz czatów",
         "subtitle": "Na tej stronie możesz przeglądać poszczególne wiadomości z kanału.<br><br>Każdy wiersz w tabeli pokazuje <b>tekst wiadomości</b>, jej <b>datę</b> oraz szczegóły, takie jak <b>liczba polubień</b>, czy zawiera <b>mowę nienawiści</b>, czy jest uznana za <i>„check-worthy”</i> oraz czy wspomniana jest jakaś <b>grupa docelowa</b>.<br><br>Te informacje pozwalają zobaczyć nie tylko jakie treści są publikowane, ale także jak reaguje na nie publiczność.<br>Możesz filtrować wiadomości według <b>mowy nienawiści</b>, <b>check-worthiness</b> lub <b>grupy docelowej</b>, aby skupić się na interesujących Cię rozmowach.<br><br>Możesz także zmienić kolejność wiadomości, klikając w <b>nagłówki kolumn</b>.<br>Na przykład, jeśli chcesz zobaczyć, jak rozmowa rozwijała się w czasie, uporządkuj tabelę według kolumny <b>Data</b>.<br><br>Najedź myszką na dowolną <b>etykietę</b> lub <b>przycisk</b>, aby zobaczyć krótkie wyjaśnienie jego funkcji."
     },
     "project": {
@@ -651,7 +651,7 @@
         "dialoguesTitle": "Dialogi projektu \"{name}\""
     },
     "projects": {
-        "title": "Projektowanie",
+        "title": "Pisanie kontrmowy”",
         "subtitle": "Wybierz język, w którym chcesz wyszkolić swoje umiejętności, aby reagować na treść nienawiści i dezinformacji."
     },
     "tasks": {
@@ -671,7 +671,7 @@
             "nInRecommendations": "W zaleceń",
             "nOutRecommendations": "Zalecenia",
             "expandable": "Rozszerzalne",
-            "label": "Etykieta kanału"
+            "label": "Nazwa kanału"
         }
     },
     "language": {
@@ -681,6 +681,10 @@
         "pl": "Polski"
     },
     "graphInteraction": {
+        "collapseLegend": "Zwiń legendę",
+        "expandLegend": "Rozwiń legendę",
+        "collapseInfo": "Zwiń informacje o kanale",
+        "expandInfo": "Rozwiń informacje o kanale",
         "legend": {
             "title": "Legenda",
             "color": "Kolor",
@@ -754,10 +758,10 @@
     "channelInfo": {
         "about": "O:",
         "channelId": "Identyfikator kanału:",
-        "label": "Etykieta kanału:",
+        "label": "Nazwa kanału:",
         "title": "Tytuł",
         "description": "Opis:",
-        "nMessages": "Całkowite wiadomości:",
+        "nMessages": "Liczba wiadomości:",
         "nUsers": "Liczba użytkowników:",
         "languages": "Języki:",
         "iri": "Ryzyko infodemiczne:",
@@ -795,8 +799,8 @@
             "topic": "Temat",
             "target": "Cel",
             "keywordsMatch": "Słowa kluczowe pasują",
-            "counterspeech": "Rozpocznij rozmowę",
-            "averageReliability": "Sredni poziom fiabilnosci"
+            "counterspeech": "Napisz kontrmowę",
+            "averageReliability": "Niezawodność adresów URL"
         },
         "dialog": {
             "start": "Rozpocznij nową rozmowę z Target = {Target}",
@@ -804,8 +808,8 @@
             "noProject": "Brak dostępnych projektów",
             "noData": "Brak dostępnych danych",
             "error": "Błąd podczas pobierania danych",
-            "startConversation": "Rozpocznij nową rozmowę",
-            "startConversationTitle": "Rozpocznij nową rozmowę",
+            "startConversation": "Napisz kontrmowę",
+            "startConversationTitle": "Napisz kontrmowę",
             "startConversationDescription": "Wybierz zadanie tematyczne, nad którym chcesz pracować."
         },
         "noData": "Brak dostępnych danych",

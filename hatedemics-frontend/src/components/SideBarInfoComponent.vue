@@ -35,51 +35,51 @@ onMounted(async () => {
 
       <v-card-text class="bg-surface-light pt-4">
         <v-row dense>
-          <v-col cols="12" sm="6" v-if="selectedChannelInfo?.preprocessed_about">
+          <v-col cols="12" v-if="selectedChannelInfo?.preprocessed_about">
             
             <v-icon class="mr-2" color="primary">mdi-tag</v-icon>
             <span class="font-weight-bold">{{ t("channelInfo.label") }}</span>
             {{ selectedChannelInfo.label }}
           </v-col>
 
-          <v-col cols="12" sm="6" v-if="selectedChannelInfo?.id">
+          <v-col cols="12" v-if="selectedChannelInfo?.id">
             <v-icon class="mr-2" color="primary">mdi-information</v-icon>
             <span class="font-weight-bold">{{ t("channelInfo.about") }}</span>
             <span class="text-wrap">{{ selectedChannelInfo.preprocessed_about }}</span>
             
           </v-col>
 
-          <v-col cols="12" sm="6" v-if="selectedChannelInfo?.message_count">
+          <v-col cols="12" v-if="selectedChannelInfo?.message_count">
             <v-icon class="mr-2" color="primary">mdi-message</v-icon>
             <span class="font-weight-bold">{{ t("channelInfo.nMessages") }}</span>
             {{ selectedChannelInfo.message_count }}
           </v-col>
 
-          <v-col cols="12" sm="6" v-if="selectedChannelInfo?.participants_count">
+          <v-col cols="12" v-if="selectedChannelInfo?.participants_count">
             <v-icon class="mr-2" color="primary">mdi-account-group</v-icon>
             <span class="font-weight-bold">{{ t("channelInfo.nUsers") }}</span>
             {{ selectedChannelInfo.participants_count }}
           </v-col>
 
-          <v-col cols="12" sm="6" v-if="selectedChannelInfo?.language">
+          <v-col cols="12" v-if="selectedChannelInfo?.language">
             <v-icon class="mr-2" color="primary">mdi-translate</v-icon>
             <span class="font-weight-bold">{{ t("channelInfo.languages") }}</span>
             {{ selectedChannelInfo.language }}
           </v-col>
 
-          <v-col cols="12" sm="6" v-if="selectedChannelInfo?.iri !== null">
+          <v-col cols="12" v-if="selectedChannelInfo?.iri !== null">
             <v-icon class="mr-2" color="primary">mdi-chart-line</v-icon>
             <span class="font-weight-bold">{{ t("channelInfo.iri") }}</span>
             {{ selectedChannelInfo.iri?.toFixed(3) }}
           </v-col>
 
-          <v-col cols="12" sm="6" v-if="generic?.hs_percentage !== undefined">
+          <v-col cols="12" v-if="generic?.hs_percentage !== undefined">
             <v-icon class="mr-2" color="error">mdi-emoticon-angry</v-icon>
             <span class="font-weight-bold">{{ t("channelInfo.hs_percentage") }}</span>
             {{ generic.hs_percentage }}%
           </v-col>
 
-          <v-col cols="12" sm="6" v-if="generic?.cw_percentage !== undefined">
+          <v-col cols="12" v-if="generic?.cw_percentage !== undefined">
             <v-icon class="mr-2" color="error">mdi-magnify-close</v-icon>
             <span class="font-weight-bold">{{ t("channelInfo.cw_percentage") }}</span>
             {{ generic.cw_percentage }}%

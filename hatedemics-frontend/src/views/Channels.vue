@@ -8,8 +8,10 @@ import type { ChannelInfo } from "@/services/types";
 import GraphComponent from "@/components/GraphComponentNew.vue";
 import ExploreGuideDialog from "@/components/ExploreGuideDialog.vue";
 import TutorialNetworkDialog from "@/components/TutorialNetworkDialog.vue";
-// import { useGlobal } from "@/store";
-// const globalStore = useGlobal();
+import { useTopicsStore } from "@/store/TopicStore";
+import { useRouter } from "vue-router";
+const topicsStore = useTopicsStore();
+const router = useRouter();
 
 const showExploreGuide = ref(false);
 const showTutorialNetwork = ref(false);
@@ -18,6 +20,7 @@ const channelsStore = useChannelsStore();
 const { channelsInfo, selectedChannelInfo, selectedLanguage } = storeToRefs(
   channelsStore
 );
+
 
 const msg = t("channel.title");
 const search = ref("");
@@ -58,7 +61,7 @@ const headers = computed(() => [
   { title: t("channelTable.header.IRI"), key: "IRI", sortable: true },
   { title: t("channelTable.header.hs"), key: "hs", sortable: true },
   { title: t("channelTable.header.CW"), key: "cw", sortable: true },
-  { title: t("channelTable.header.expandable"), key: "IRI", sortable: true },
+  { title: t("channelTable.header.expandable"), key: "expandable", sortable: true },
 ]);
 const pagination = reactive({
   page: 0,
@@ -69,6 +72,14 @@ const resetChannels = () => {
   pagination.page = 0;
   channelsStore.unselectChannel();
   fetchChannels();
+};
+const onRowDblClick = async (item: ChannelInfo) => {
+  if (!item) return;
+  // Carica i topic per il canale selezionato
+  await topicsStore.dispatchGetTopics(item.id);
+
+  // Naviga alla pagina Inspector
+  router.push({ name: 'Inspector' });
 };
 const fetchChannels = async () => {
   loading.value = true; // Avvia il loading
@@ -191,7 +202,9 @@ const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
           </v-card-title>
           <v-divider class="mb-4"></v-divider> -->
           <v-row>
-            <v-col cols="3">
+            <v-col cols="3"
+            :style="{ flexBasis:  '250px' , flexGrow: 0, transition: 'flex-basis 0.3s' }"
+            class="d-flex flex-column">
               <v-select
               :label="t('home.selectDataset')"
                 v-model="selectedLanguage"
@@ -243,6 +256,7 @@ const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
               </template>
               <template v-slot:item="{ item }">
                 <tr
+                @dblclick="onRowDblClick(item)"
                   @click="handleClick(item)"
                   :class="{ selected: item.id === selectedChannelInfo?.id }"
                   class="hover-row"
@@ -257,7 +271,7 @@ const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
                   <td class="text-left">{{ safeNumberOrDash(item.cw) }}</td>
                   <td class="text-left">
                     <v-icon
-                      v-if="typeof item.hs === 'number' && item.hs >= 0"
+                      v-if="item.expandable === 'True'"
                       class="status-icon success"
                     >
                       mdi-check

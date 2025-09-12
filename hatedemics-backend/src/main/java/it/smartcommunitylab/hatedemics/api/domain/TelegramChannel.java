@@ -50,8 +50,8 @@ public class TelegramChannel {
     private Integer nInRecommendation;
     @JsonProperty("expandable")
     @Column(name = "expandable")
-    private Boolean expandable;
-    private Boolean explored;
+    private String expandable;
+    private String explored;
     @JsonProperty("n_out_recommended")
     @Column(name = "n_out_recommended")
     private Integer nOutRecommended;
@@ -126,10 +126,10 @@ public class TelegramChannel {
     public void setLastQueriedAt(Date lastQueriedAt) {
         this.lastQueriedAt = lastQueriedAt;
     }
-    public Boolean getExplored() {
+    public String getExplored() {
         return explored;
     }
-    public void setExplored(Boolean explored) {
+    public void setExplored(String explored) {
         this.explored = explored;
     }
     public String getPreprocessed_about() {
@@ -259,5 +259,11 @@ public class TelegramChannel {
     }
     public void setHs(Double hs) {
         this.hs = hs;
+    }
+    public String getExpandable() {
+        return expandable;
+    }
+    public void setExpandable(String expandable) {
+        this.expandable = expandable;
     }
 }

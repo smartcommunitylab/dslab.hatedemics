@@ -10,11 +10,11 @@
     },
     "menu": {
         "home": "Home",
-        "educational": "Didattica",
-        "explore": "Esplora",
+        "educational": "Attività Educative",
+        "explore": "Esplora i Dati di Telegram",
         "network": "Rete",
         "channel": "Canale",
-        "conversation": "Conversazione",
+        "conversation": "Chat",
         "quickGuide": "Glossario",
         "counterspeech": "Contro-narrazione",
         "projects": "Progetti",
@@ -49,13 +49,13 @@
     "home": {
         "title": "Combattere Odio e Disinformazione Online",
         "description": "La piattaforma Hatedemics sfrutta l'intelligenza artificiale per analizzare i contenuti online, migliorare il pensiero critico e addestrare le risposte ai discorsi d'odio.",
-        "network": "Esplora la Rete",
+        "network": "Esplora il Network di Telegram",
         "networkDescription": "Una mappa interattiva per osservare le connessioni tra canali, contenuti e dinamiche legate a odio e disinformazione online. Scopri cosa accade in rete, segui i flussi e individua i nodi chiave della comunicazione tossica.",
         "networkButton": "Vai alla rete",
         "counterspeech": "Counterspeech Writing",
         "counterspeechDescription": "Allena la tua capacità di risposta a contenuti d’odio e disinformazione con esercizi di scrittura mirati. Impara come usare fonti attendibili per creare argomentazioni solide e sviluppa il tuo spirito critico per cambiare il tono del dibattito online.",
         "counterspeechButton": "Inizia a scrivere",
-        "educational": "Educativo",
+        "educational": "Attività Educative",
         "educationalDescription": "Esplora risorse e materiali educativi per comprendere e contrastare l'odio online.",
         "educationalButton": "Vai alla sezione Educativa",
         "guideDescription": "Cosa sapere prima di usare la piattaforma.",
@@ -719,7 +719,7 @@
         "dialoguesTitle": "Dialoghi del progetto \"{name}\""
     },
     "projects": {
-        "title": "Progetti",
+        "title": "Scrittura di contro-narrazioni",
         "subtitle": "Scegli la lingua in cui vuoi allenare le tue abilità di risposta a contenuti d'odio e disinformazione."
     },
     "tasks": {
@@ -727,7 +727,7 @@
         "subtitle": "Seleziona l'argomento su cui concentrarti per creare risposte efficaci e argomentazioni contro la disinformazione."
     },
     "conversation": {
-        "title": "Conversazione",
+        "title": "Dentro le chat",
         "subtitle": "In questa pagina puoi esplorare i singoli messaggi del canale.<br><br>Ogni riga della tabella mostra il <b>testo del messaggio</b>, la sua <b>data</b> e dettagli come il <b>numero di like</b>, se contiene <b>hate speech</b>, se è considerato <i>“check-worthy”</i>, e se è menzionato un <b>gruppo target</b>.<br><br>Queste informazioni ti permettono di capire non solo che tipo di contenuti vengono pubblicati, ma anche come il pubblico interagisce con essi.<br>Puoi filtrare i messaggi per <b>hate speech</b>, <b>check-worthiness</b> o <b>gruppo target</b> per concentrarti sulle conversazioni che ti interessano di più.<br><br>Puoi anche riordinare i messaggi cliccando sulle <b>intestazioni delle colonne</b>.<br>Ad esempio, se vuoi vedere come si è sviluppata una conversazione nel tempo, riordina la tabella per la colonna <b>Data</b>.<br><br>Passa il mouse sopra qualsiasi <b>etichetta</b> o <b>bottone</b> per vedere una breve spiegazione della sua funzione."
     },
     "channelTable": {
@@ -743,7 +743,7 @@
             "nInRecommendations": "Raccomandazioni in entrata",
             "nOutRecommendations": "Raccomandazioni in uscita",
             "expandable": "Espandibile",
-            "label": "Etichetta Canale"
+            "label": "Nome del Canale"
         }
     },
     "language": {
@@ -753,6 +753,10 @@
         "pl": "Polacco"
     },
     "graphInteraction": {
+        "collapseLegend": "Riduci legenda",
+        "expandLegend": "Espandi legenda",
+        "collapseInfo": "Collassa Informazioni Canale",
+        "expandInfo": "Espandi Informazioni Canale",
         "legend": {
             "title": "Legenda",
             "color": "Colore per",
@@ -821,17 +825,17 @@
     "channelInfo": {
         "about": "Informazioni:",
         "channelId": "ID Canale:",
-        "label": "Etichetta Canale:",
+        "label": "Nome del Canale:",
         "title": "Titolo",
         "description": "Descrizione:",
-        "nMessages": "Totale messaggi:",
+        "nMessages": "Numero di messaggi:",
         "nUsers": "Numero di utenti:",
         "languages": "Lingue:",
         "iri": "Infodemic Risk:",
         "hateSpeech": "Hate Speech Risk:",
         "lastUpdate": "Ultimo aggiornamento:",
         "mainTopics": "Principali argomenti:",
-        "messages": "Vai alla chat",
+        "messages": "Esplora le chat",
         "channels": "Canali",
         "chats": "Chat",
         "emptySelection": "Nessuna selezione. Scegliere un canale per visualizzare le statistiche",
@@ -862,16 +866,16 @@
             "topic": "Argomento",
             "target": "Destinatario",
             "keywordsMatch": "Parole chiave",
-            "counterspeech": "Inizia dialogo",
-            "averageReliability": "Affidabilità media"
+            "counterspeech": "Scrivi contro-narrazione",
+            "averageReliability": "Affidabilità degli URL"
         },
         "dialog": {
             "start": "Inizia una nuova conversazione con Destinatario={target}",
             "jump": "Vai alla conversazione",
             "noData": "Nessun dato disponibile",
             "error": "Errore durante il caricamento della chat",
-            "startConversation": "Avvia conversazione",
-            "startConversationTitle": "Inizia una nuova conversazione",
+            "startConversation": "Scrivi contro-narrazione",
+            "startConversationTitle": "Scrivi contro-narrazione",
             "startConversationDescription": "Seleziona un argomento per iniziare una nuova conversazione"
         },
         "noTarget": "Nessun destinatario identificato",

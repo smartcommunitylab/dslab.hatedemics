@@ -10,14 +10,14 @@
   },
   "menu": {
     "home": "Dar",
-    "educational": "Edukattiv",
-    "explore": "Esplora",
+    "educational": "Attivitajiet Edukattivi",
+    "explore": "Esplora d-dejta ta' Telegram",
     "network": "Netwerk",
     "channel": "Kanal",
-    "conversation": "Konversazzjoni",
+    "conversation": "Esplora l-iċ-chat",
     "quickGuide": "Gwida Mgħaġġla",
     "counterspeech": "Kontra-diskors",
-    "projects": "Proġetti",
+    "projects": "Kontra-diskors",
     "credits": "Ringrazzjamenti",
     "logout": "Oħroġ"
   },
@@ -49,13 +49,13 @@
   "home": {
     "title": "Il-ġlieda kontra l-odju u d-disinformazzjoni fuq il-web",
     "description": "HATEDEMICS hija pjattaforma li tuża l-intelliġenza artifiċjali biex tanalizza kontenut online, tissaħħaħ il-ħsieb kritiku u tipprepara risposti għall-kliem ta’ odju.",
-    "network": "Esplora n-Network",
+    "network": "Esplora n-Netwerk ta’ Telegram",
     "networkDescription": "Mappa interattiva li turi l-konnessjonijiet bejn il-kanali, il-kontenut u d-dinamika ta’ odju u disinformazzjoni fuq l-internet. Ara x’qed jiġri fuq in-network, segwi l-flussi u identifika l-punti ewlenin tal-komunikazzjoni tossika.",
     "networkButton": "Mur fin-Network",
     "counterspeech": "Oħloq Kontranarrattivi",
     "counterspeechDescription": "Eżerċizzji ta’ kitba mmirati biex ittrenja kif tirrispondi għall-kliem ta’ odju u disinformazzjoni. Titgħallem tuża sorsi affidabbli biex toħloq argumenti b’saħħithom u tiżviluppa ħsieb kritiku biex tibdel it-ton tad-diskussjoni online.",
     "counterspeechButton": "Ibda tikteb",
-    "educational": "Edukazzjoni",
+    "educational": "Attivitajiet edukattivi",
     "educationalDescription": "Esplora riżorsi u materjali edukattivi biex tifhem u tikkoopera kontra l-kliem ta’ odju fuq il-web.",
     "educationalButton": "Mur fl-Edukazzjoni",
     "guideDescription": "X’għandek tkun taf qabel tuża l-pjattaforma.",
@@ -746,7 +746,7 @@
     "infoTitle": "Informazzjoni tal-kanal"
   },
   "conversation": {
-    "title": "Konversazzjoni",
+    "title": "Ġewwa l-chats",
     "subtitle": "F’din il-paġna tista’ tesplora messaġġi individwali mill-kanal.<br><br>Kull ringiela fit-tabella turi <b>test tal-messaġġ</b>, il-<b>data</b> tiegħu u dettalji bħal <b-in-numru ta’ likes</b>, jekk fih <b>diskors ta’ mibegħda</b>, jekk hu meqjus <i>“check-worthy”</i>, u jekk hemm xi <b>grupp mira</b> imsemmija.<br><br>Dawn l-informazzjoni jippermettu li tara mhux biss liema tip ta’ kontenut qed jiġi ppubblikat, iżda wkoll kif il-pubbliku jirreaġixxi għalih.<br>Tista’ tiffiltra l-messaġġi skont <b>diskors ta’ mibegħda</b>, <b>check-worthiness</b> jew <b>grupp mira</b> biex tiffoka fuq il-konversazzjonijiet li jinteressawk l-iktar.<br><br>Tista’ wkoll tirranġa mill-ġdid il-messaġġi billi tikklikkja fuq l-<b>intestaturi tal-kolonni</b>.<br>Per eżempju, jekk trid tara kif inbena konversazzjoni maż-żmien, ordna t-tabella skont il-kolonna <b>Data</b>.<br><br>Poġġi l-maws fuq kwalunkwe <b>etiketta</b> jew <b>buttuna</b> biex tara spjegazzjoni qasira ta’ x’taħdem."
   },
   "project": {
@@ -755,7 +755,7 @@
 "dialoguesTitle": "Djalogi tal-Proġett \"{name}\""
   },
   "projects": {
-    "title": "Proġetti",
+    "title": "Ibda konversazzjoni",
     "subtitle": "Agħżel il-lingwa li fiha trid tħarreġ il-ħiliet tiegħek biex twieġeb għall-kontenut ta 'mibegħda u diżinformazzjoni."
   },
   "tasks": {
@@ -775,7 +775,7 @@
       "nInRecommendations": "Fir-rakkomandazzjonijiet",
       "nOutRecommendations": "Rakkomandazzjonijiet barra",
       "expandable": "Espansibbli",
-      "label": "Tikketta"
+      "label": "Isem tal-kanal"
     }
   },
   "language": {
@@ -785,6 +785,10 @@
     "pl": "Pollakk"
   },
   "graphInteraction": {
+    "collapseLegend": "Agħlaq il-leġġenda",
+    "expandLegend": "Espandi l-leġġenda",
+    "collapseInfo": "Aqta’ l-informazzjoni tal-kanal",
+    "expandInfo": "Espandi l-informazzjoni tal-kanal",
     "legend": {
       "title": "Leġġenda",
       "color": "Kulur",
@@ -826,7 +830,7 @@
       "n_in_recommended": "Fir-rakkomandazzjonijiet"
     },
     "tooltip": {
-      "label": "Tikketta",
+      "label": "Isem tal-kanal",
       "message_count": "Numru ta 'messaġġi",
       "partecipants_count": "Numru ta 'utenti",
       "id": "ID tal-kanal:",
@@ -855,7 +859,7 @@
     "channelId": "ID tal-kanal:",
     "title": "Titlu",
     "description": "Deskrizzjoni:",
-    "nMessages": "Messaġġi totali:",
+    "nMessages": "Numru ta' messaġġi:",
     "nUsers": "Numru ta 'Utenti:",
     "languages": "Lingwi:",
     "iri": "Riskju infodemiku:",
@@ -893,8 +897,8 @@
       "target": "Mira",
       "nrReactions": "Numru ta 'reazzjonijiet",
       "keywordsMatch": "Keywords jaqblu",
-      "counterspeech": "Ibda konversazzjoni",
-      "averageReliability": "Affidabbiltà medja"
+      "counterspeech": "Ikteb Kontrodiskors",
+      "averageReliability": "Affidabbiltà tal-URLs"
     },
     "dialog": {
       "start": "Ibda konverżazzjoni ġdida ma 'Target = {Target}",
@@ -902,8 +906,8 @@
       "noProject": "L-ebda proġett disponibbli",
       "noData": "L-ebda dejta disponibbli",
       "error": "Żball waqt li jġib id-dejta",
-      "startConversation": "Ħu sehem f'din il-konversazzjoni",
-      "startConversationTitle": "Ibda konversazzjoni ġdida",
+      "startConversation": "Ikteb Kontrodiskors",
+      "startConversationTitle": "Ikteb Kontrodiskors",
       "startConversationDescription": "Agħżel it-task tat-tema li tixtieq taħdem fuqha."
     },
     "noData": "L-ebda dejta disponibbli",

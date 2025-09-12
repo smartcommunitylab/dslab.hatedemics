@@ -89,6 +89,8 @@ onMounted(() => {
       v-model="drawer"
       temporary
       v-if="!route.meta.hideNavbar"
+      :rail="true"
+      rail-width="300"
       class="bg-primary text-on-primary"
       app
       permanent

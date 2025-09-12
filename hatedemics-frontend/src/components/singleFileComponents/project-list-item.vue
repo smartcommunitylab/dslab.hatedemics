@@ -75,12 +75,12 @@ export default {
       :data="{id: id}"
     ></DialogGeneric>
 
-    <v-row>
-      <v-col cols="12">
-        <v-card @click.prevent="openTaskList(id)">
+    <v-row class="ma-0 pa-0">
+      <v-col cols="12" class="pa-0">
+        <v-card @click.prevent="openTaskList(id)" elevation="0" class="hoverable pa-0">
           <v-row align="center">
             <v-col >
-              <v-row class="d-flex justify-left">
+              <v-row class="d-flex justify-left pa-0">
                 <v-col>
                   <v-card-title>{{ title }}</v-card-title>
                   <v-card-subtitle

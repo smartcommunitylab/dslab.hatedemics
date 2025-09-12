@@ -42,7 +42,7 @@ const colorOptions = [
   { value: 'hs', title: t('graphInteraction.color.hs') },
   { value: 'n_out_recommended', title: t('graphInteraction.color.out') },
   { value: 'n_in_recommendation', title: t('graphInteraction.color.in') },
-  { value: 'louvain_community', title: t('graphInteraction.color.community') } 
+  { value: 'louvain_community', title: t('graphInteraction.color.community') }
 
 ];
 
@@ -66,14 +66,15 @@ const graphContainer = ref<HTMLElement | null>(null);
 const isFullScreen = ref(false);
 let graphInstance: any = null;
 const optionsExpanded = ref(true);
+const infoExpanded = ref(true);
 
 const getColorByValue = (value: number | undefined, min: number, max: number) => {
   if (value === undefined || value === null || value === -1) return "";
 
   const normalized = Math.max(0, Math.min(1, (value - min) / (max - min)));
 
-  const r = Math.floor(255 * normalized);         
-  const g = Math.floor(255 * (1 - normalized));   
+  const r = Math.floor(255 * normalized);
+  const g = Math.floor(255 * (1 - normalized));
   return `rgb(${r}, ${g}, 0)`;
 };
 
@@ -82,9 +83,9 @@ const getNodeColor = (node: any, colorBy: string) => {
     case "iri":
       return getColorByValue(node.iri?node.iri:undefined,0,0.7);
     case "hs":
-      return getColorByValue(node.hs?node.hs:undefined, 0, 0.3); 
+      return getColorByValue(node.hs?node.hs:undefined, 0, 0.3);
     case "n_out_recommended":
-      return getColorByValue(node.n_out_recommended?node.n_out_recommended:undefined, 0, 300); 
+      return getColorByValue(node.n_out_recommended?node.n_out_recommended:undefined, 0, 300);
     case "n_in_recommendation":
       return getColorByValue(node.n_in_recommendation?node.n_in_recommendation:undefined, 0, 300);
       case "louvain_community": {
@@ -143,9 +144,9 @@ watch(colorBy, (newValue) => {
 });
 function resetGraphView() {
   if (!graphInstance) return;
-  graphInstance.zoomToFit(1000); 
+  graphInstance.zoomToFit(1000);
   colorBy.value = "iri";
-  sizeBy.value = 'n_out_recommended';
+  sizeBy.value = 'hs';
 }
 watch(selectedChannelInfo, (newValue, oldValue) => {
   if (newValue?.id === oldValue?.id) return;
@@ -176,7 +177,7 @@ const initializeGraph = () => {
   .nodeLabel(node => {
       const nodeData = node as Node;
       return `
-      
+
        <strong>${t('graphInteraction.tooltip.label') }</strong> ${nodeData?.label } <br />
       <strong>${ t('graphInteraction.tooltip.message_count') }</strong> ${nodeData?.message_count} <br />
       <strong>${ t('graphInteraction.tooltip.partecipants_count') }</strong> ${nodeData?.participants_count} <br />
@@ -199,17 +200,17 @@ const initializeGraph = () => {
     const sizeRaw = getNodeSize(node, sizeBy.value);
 const size = Math.max(1, isNaN(sizeRaw) ? 1 : sizeRaw);
     ctx.save();
-    
+
     // Pulsing animation
     const time = Date.now() / 1000;
     const pulseSize = Math.sin(time * 2) * 2 + 8; // Oscillates between 6 and 10
-    
+
     // Draw outer highlight ring
     ctx.beginPath();
     ctx.arc(node.x!, node.y!, size + pulseSize, 0, 2 * Math.PI);
     ctx.fillStyle = isSelected ? 'rgba(211, 47, 47, 0.15)' : 'rgba(245, 124, 0, 0.15)';
     ctx.fill();
-    
+
     // Draw inner highlight ring
     ctx.beginPath();
     ctx.arc(node.x!, node.y!, size + 4, 0, 2 * Math.PI);
@@ -231,7 +232,7 @@ const size = Math.max(1, isNaN(sizeRaw) ? 1 : sizeRaw);
 
     })
 
-  setTimeout(() => graphInstance.zoomToFit(1000), 500); // piccola attesa per assicurarsi che il layout sia stabile
+  setTimeout(() => graphInstance.zoomToFit(1000,20), 500);
 
 };
 function getLinkWidth(link: any): number {
@@ -292,19 +293,30 @@ document.addEventListener("fullscreenchange", () => {
 
 onMounted(async () => {
   loading.value = true; // Mostra il loader
-  try{
-  await initData();
-  await nextTick(); // Attendi il prossimo aggiornamento del DOM
-  initializeGraph();
+  try {
+    await initData();
+    await nextTick(); // Attendi il prossimo aggiornamento del DOM
+    initializeGraph();
+
+    // 🔥 Se ho già un selectedChannelInfo quando torno
+    if (selectedChannelInfo.value?.id) {
+      const nodeToSelect = nodes.find(n => n.name === selectedChannelInfo?.value?.id);
+      if (nodeToSelect) {
+        selectNode(nodeToSelect);
+        zoomToNode(nodeToSelect);
+      }
+    }
   } finally {
-   loading.value = false; // Nasconde il loader dopo il caricamento
+    loading.value = false; // Nasconde il loader dopo il caricamento
   }
+
   const erd = elementResizeDetectorMaker();
   if (!graphContainer.value) return;
-  erd.listenTo(graphContainer.value, (el:any) => {
+  erd.listenTo(graphContainer.value, (el: any) => {
     graphInstance.width(el.offsetWidth).height(el.offsetHeight);
   });
 });
+
 
   onUnmounted(() => {
   if (graphInstance) {
@@ -325,75 +337,142 @@ const duration = 1000; // durata animazione in ms
 
 graphInstance.centerAt(node.x ?? 0, node.y ?? 0, duration);
 graphInstance.zoom(targetZoom, duration);
-  
 
-       
+
+
 }
-
 </script>
 
 <template>
   <v-container fluid class="pa-0 d-flex">
-
     <!-- SIDEBAR -->
     <v-row>
-      <v-col cols="12" md="3" class="d-flex flex-column">
-  <v-card class="pa-4 d-flex flex-column fill-height flat" elevation="0">
+      <v-col
+        cols="12"
+        md="2"
+        :style="{
+          flexBasis: optionsExpanded ? '250px' : '50px',
+          flexGrow: 0,
+          transition: 'flex-basis 0.3s',
+        }"
+        class="d-flex flex-column"
+      >
+        <v-card
+          class="pa-4 d-flex flex-column fill-height"
+          elevation="0"
+          outlined
+          style="border-radius: 8px; border-color: #90a4ae"
+        >
+          <!-- Pulsante espandi/collassa -->
+          <v-tooltip bottom>
+            <template #activator="{ props }">
+              <v-btn
+                v-bind="props"
+                color="primary"
+                class="mb-4"
+                @click="optionsExpanded = !optionsExpanded"
+                elevation="2"
+                :style="'width: 48px; height: 48px; min-width: 0; padding: 0; border-radius: 50%;'"
+              >
+                <v-icon>{{
+                  optionsExpanded ? "mdi-chevron-left" : "mdi-chevron-right"
+                }}</v-icon>
+              </v-btn>
+            </template>
+            <span>{{
+              optionsExpanded
+                ? t("graphInteraction.collapseLegend")
+                : t("graphInteraction.expandLegend")
+            }}</span>
+          </v-tooltip>
 
+          <!-- Transizione contenuto -->
+          <v-expand-transition>
+            <div v-show="optionsExpanded">
+              <v-select
+                v-model="colorBy"
+                :items="colorOptions"
+                :label="t('graphInteraction.color.label')"
+                density="compact"
+                variant="outlined"
+                class="mb-2"
+              />
+              <v-select
+                v-model="sizeBy"
+                :items="sizeOptions"
+                :label="t('graphInteraction.size.label')"
+                density="compact"
+                variant="outlined"
+                class="mb-2"
+              />
+              <v-btn color="secondary" class="mb-2" block @click="resetGraphView">
+                {{ t("graphInteraction.resetView") }}
+              </v-btn>
+              <GraphLegend :colorBy="colorBy" :sizeBy="sizeBy" />
+            </div>
+          </v-expand-transition>
+        </v-card>
+      </v-col>
 
+      <v-col
+    class="d-flex flex-column"
+    style="flex-grow:1; min-width:0;"
+  >        <!-- GRAFICO + LOADING -->
+        <div class="flex-grow-1 position-relative">
+          <v-overlay :model-value="loading" class="align-center justify-center">
+            <v-progress-circular color="primary" size="64" indeterminate />
+          </v-overlay>
 
-    <!-- Sezione Opzioni (collassabile in verticale) -->
-    <!-- <v-expand-transition> -->
-  <div v-if="optionsExpanded" class="mb-4">
-    <v-select
-      v-model="colorBy"
-      :items="colorOptions"
-      :label="t('graphInteraction.color.label')"
-      density="compact"
-      variant="outlined"
-      class="mb-2"
-    />
-    <v-select
-      v-model="sizeBy"
-      :items="sizeOptions"
-      :label="t('graphInteraction.size.label')"
-      density="compact"
-      variant="outlined"
-      class="mb-2"
-    />
-    
-    <!-- <v-btn color="primary" class="mb-2" @click="toggleFullScreen">
-      {{ t('graphInteraction.fs.go') }}
-    </v-btn> -->
-    <v-btn color="secondary" class="mb-2" @click="resetGraphView">
-  {{ t('graphInteraction.resetView') }}
-</v-btn>
-<GraphLegend :colorBy="colorBy" :sizeBy="sizeBy" />
+          <div id="graph-container" ref="graphContainer" class="graph-box">
+            <!-- Force-graph 2D mount here -->
+          </div>
+        </div>
+      </v-col>
+      <v-col
+        cols="12"
+        md="2"
+        :style="{
+          flexBasis: infoExpanded ? '250px' : '50px',
+          flexGrow: 0,
+          transition: 'flex-basis 0.3s',
+        }"
+        class="d-flex flex-column"
+      >
+        <v-card
+          class="pa-0 d-flex flex-column fill-height"
+          elevation="0"
+          outlined
+          style="border-radius: 8px; border-color: #90a4ae"
+        >
+          <v-tooltip bottom>
+            <template #activator="{ props }">
+              <v-btn
+                v-bind="props"
+                color="primary"
+                class="mb-4"
+                @click="infoExpanded = !infoExpanded"
+                elevation="2"
+                :style="'width: 48px; height: 48px; min-width: 0; padding: 0; border-radius: 50%;'"
+              >
+                <v-icon>{{
+                  infoExpanded ? "mdi-chevron-right" : "mdi-chevron-left"
+                }}</v-icon>
+              </v-btn>
+            </template>
+            <span>{{
+              infoExpanded
+                ? t("graphInteraction.collapseInfo")
+                : t("graphInteraction.expandInfo")
+            }}</span>
+          </v-tooltip>
 
-  </div>
-
-
-  </v-card>
-</v-col>
-
-<v-col cols="12" md="6" class="d-flex flex-column">
-    <!-- GRAFICO + LOADING -->
-    <div class="flex-grow-1 position-relative">
-      <v-overlay :model-value="loading" class="align-center justify-center">
-        <v-progress-circular color="primary" size="64" indeterminate />
-      </v-overlay>
-
-      <div id="graph-container"  ref="graphContainer"class="graph-box">
-        <!-- Force-graph 2D mount here -->
-      </div>
-    </div>
-    </v-col>
-    <v-col cols="12" md="3" class="d-flex flex-column">
-    <div class="flex-grow-1 position-relative">
-      <ChannelInfoComponent />
-
-    </div>
-    </v-col>
+          <v-expand-transition>
+            <div v-show="infoExpanded" class="flex-grow-1 pa-0">
+              <ChannelInfoComponent />
+            </div>
+          </v-expand-transition>
+        </v-card>
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -418,7 +497,7 @@ graphInstance.zoom(targetZoom, duration);
 }
 
 .graph-container {
-  width: 100%;  /* Adatta il contenitore */
+  width: 100%; /* Adatta il contenitore */
   height: 100%; /* Imposta un'altezza adatta */
   border: 1px solid #ccc; /* Aiuta a visualizzare i confini */
   margin: auto;
@@ -473,7 +552,7 @@ graphInstance.zoom(targetZoom, duration);
   z-index: 10;
 }
 .graph-box {
-  height: 50vh;
+  height: 60vh;
   width: 100%;
   background-color: white;
   border: 2px solid #90a4ae; /* grigio azzurrato */

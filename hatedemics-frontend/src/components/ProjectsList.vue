@@ -119,20 +119,22 @@ onMounted(() => {
     </v-container>
 
     <v-container fluid v-else>
-      <h1 class="text-h5 font-weight-bold text-primary ma-4">Projects</h1>
+      <h1 class="text-h5 font-weight-bold text-primary ma-4">        {{ t("projects.title") }}
+      </h1>
       <h2 class="text-h6 font-weight-medium ma-4">
         {{ t("projects.subtitle") }}
       </h2>
 
       <!-- ✅ lista piatta filtrata per lingua -->
-      <v-row v-if="currentLanguageProjects.length > 0">
+      <v-row v-if="currentLanguageProjects.length > 0" class="pa-0">
         <v-col
           cols="12"
           v-for="project in currentLanguageProjects"
           :key="project.id"
+          class="pa-0 ma-0" 
         >
           <ListItem
-          class="elevation-0"
+          elevation="0"
             :title="project.name"
             :users="project.users"
             :id="project.id"

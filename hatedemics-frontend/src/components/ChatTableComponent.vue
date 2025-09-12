@@ -196,41 +196,29 @@ const getFooterText = () => {
     totalItems: totalItems.value,
   });
   // return `${pageStart}-${pageStop} of ${totalItems.value} retrieved messages`;
-};
-const getReliabilityText = (value: number) => {
-  switch (value) {
-    case -1: return t("message.reliability.unknown");
-    case 0: return t("message.reliability.reliable");
-    case 1: return t("message.reliability.unreliable");
-    default: return t("message.reliability.unknown");
+};const getReliabilityText = (value: number) => {
+  if (value === -1) {
+    return t("message.reliability.unknown");
+  } else if (value >= 0 && value < 1) {
+    return t("message.reliability.unreliable");
+  } else if (value === 1) {
+    return t("message.reliability.reliable");
   }
+  return t("message.reliability.unknown");
 };
-
 
 const getReliabilityColor = (value: number) => {
-  switch (value) {
-    case -1:
-      return "gray";
-    case 0:
-      return "green";
-    case 1:
-      return "red";
-    default:
-      return "gray";
-  }
+  if (value === -1) return "gray";
+  if (value >= 0 && value < 1) return "red";
+  if (value === 1) return "green";
+  return "gray";
 };
 
 const getReliabilityIcon = (value: number) => {
-  switch (value) {
-    case -1:
-      return "mdi-help-circle-outline";
-    case 0:
-      return "mdi-check-circle";
-    case 1:
-      return "mdi-alert-circle";
-    default:
-      return "mdi-help-circle-outline";
-  }
+  if (value === -1) return "mdi-help-circle-outline";
+  if (value >= 0 && value < 1) return "mdi-alert-circle";
+  if (value === 1) return "mdi-check-circle";
+  return "mdi-help-circle-outline";
 };
 </script>
 
@@ -314,7 +302,8 @@ const getReliabilityIcon = (value: number) => {
       @click:row="(event: MouseEvent, { item }: any) => openMenu(event, item)"
     >
       <template v-slot:item.date="{ item }">
-        <td class="text-left">{{ formatDate(item.date) }}</td>
+        <td class="text-left">    {{ new Date(item.date).toLocaleDateString(undefined, { day: "2-digit", month: "2-digit" }) }}
+        </td>
       </template>
       <template v-slot:item.preprocessed_message_number_media="{ item }">
         <div class="chat-message" :style="{ backgroundColor: getColor(item.from_user) }">
