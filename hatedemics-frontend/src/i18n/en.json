@@ -10,14 +10,14 @@
     },
     "menu": {
         "home": "Home",
-        "educational": "Educational",
-        "explore": "Explore",
+        "educational": "Educational Activities",
+        "explore": "Explore Telegram Data",
         "network": "Network",
         "channel": "Channel",
-        "conversation": "Conversation",
+        "conversation": "Chat",
         "quickGuide": "Glossary",
         "counterspeech": "Counterspeech",
-        "projects": "Projects",
+        "projects": "Counterspeech",
         "credits": "Credits",
         "logout": "Logout"
     },
@@ -49,13 +49,13 @@
     "home": {
         "title": "Fighting Hate and Disinformation Online",
         "description": "The Hatedemics platform leverages artificial intelligence to analyze online content, enhance critical thinking, and train responses to hate speech.",
-        "network": "Explore the Network",
+        "network": "Explore the Telegram Network",
         "networkDescription": "An interactive map to observe the connections between channels, content, and dynamics related to hate and disinformation online. Discover what happens on the web, follow the flows, and identify the key nodes of toxic communication.",
         "networkButton": "Go to the network",
         "counterspeech": "Counterspeech Writing",
         "counterspeechDescription": "Train your ability to respond to hate and disinformation content with targeted writing exercises. Learn how to use reliable sources to create solid arguments and develop your critical thinking to change the tone of online debate.",
         "counterspeechButton": "Start writing",
-        "educational": "Educational",
+        "educational": "Educational Activities",
         "educationalDescription": "Explore resources and educational materials to understand and counter online hate.",
         "educationalButton": "Go to Educational Section",
         "guideDescription": "What to know before using the platform.",
@@ -741,12 +741,12 @@
         "subtitle": "<p>On this page, you can overview the content of a single Telegram channel in detail. The table shows the main topics of the channel, how often they appear in the messages, the percentage of hate speech and check-worthiness within each, and their prevalent sentiment.</p><p>On the right, you’ll find key channel information, while the word clouds visualize which terms appear most often in non-hate and hate speech messages, as well as in check-worthy and not check-worthy messages.</p><p>Use the filters and buttons to switch views between channels’ chats and topics, or to adjust the type of word cloud you see. If you hover your mouse over any label or button, you’ll see a short explanation of what it does.</p>"
     },
     "channel": {
-        "title": "Network exploration",
+        "title": "Telegram Channels Network",
         "subtitle": "<p>Below, you can see a network of Telegram channels where each channel is a point ('node'). These channels are linked when Telegram automatically recommends one to another, usually because they share many of the same users.</p><p>You can dive into the network and the table to uncover real-world channels that might be spreading disinformation or hate speech.</p><p>Adjust the color and size of the channels, filter and reorder their features to find the ones that interest you most.</p><p>If you hover your mouse over any label or button, you’ll see a short description of what it does to help guide you.</p>",
         "infoTitle": "Channel information"
     },
     "conversation": {
-        "title": "Conversation",
+        "title": "Inside the Chats",
         "subtitle": "On this page, you can explore individual messages from the channel.<br><br>Each row in the table shows the <b>message text</b>, its <b>date</b>, and details such as the <b>number of likes</b>, whether it contains <b>hate speech</b>, whether it is considered <i>“check-worthy”</i>, and if one <b>target group</b> is mentioned.<br><br>These insights allow you to see not just what kinds of content are being posted, but also how audiences engage with it.<br>You can filter the messages by <b>hate speech</b>, <b>check-worthiness</b>, or <b>target group</b> to focus on the conversations that interest you most.<br><br>You can also reorder the messages by clicking on the <b>column headers</b>.<br>For example, if you want to see how a conversation developed over time, reorder the table by the <b>Date</b> column.<br><br>Hover your mouse over any <b>label</b> or <b>button</b> to see a short explanation of what it does."
     },
     "project": {
@@ -755,7 +755,7 @@
         "dialoguesTitle": "Project \"{name}\" Dialogues"
     },
     "projects": {
-        "title": "Projects",
+        "title": "Counterspeech writing",
         "subtitle": "Choose the language in which you want to train your skills to respond to hate and disinformation content."
     },
     "tasks": {
@@ -775,7 +775,7 @@
             "nInRecommendations": "In Recommendations",
             "nOutRecommendations": "Out Recommendations",
             "expandable": "Expandable",
-            "label": "Channel Label"
+            "label": "Channel Name"
         }
     },
     "language": {
@@ -786,6 +786,10 @@
         "mt": "Maltese"
     },
     "graphInteraction": {
+        "collapseLegend": "Collapse Legend",
+        "expandLegend": "Expand Legend",
+        "collapseInfo": "Collapse Channel Info",
+        "expandInfo": "Expand Channel Info",
         "legend": {
             "title": "Legend",
             "color": "Color",
@@ -859,17 +863,17 @@
     "channelInfo": {
         "about": "About:",
         "channelId": "Channel ID:",
-        "label": "Channel Label:",
+        "label": "Channel Name:",
         "title": "Title",
         "description": "Description:",
-        "nMessages": "Total messages:",
+        "nMessages": "Number of messages:",
         "nUsers": "Number of users:",
         "languages": "Languages:",
         "iri": "Infodemic Risk:",
         "hateSpeech": "Hate Speech Risk:",
         "lastUpdate": "Last update:",
         "mainTopics": "Main topics:",
-        "messages": "Go to conversation",
+        "messages": "Explore the Chats",
         "emptySelection": "No selection yet. Please select a channel",
         "noData": "No data available",
         "exploreChannel": "Explore Channel",
@@ -900,17 +904,17 @@
             "topic": "Topic",
             "target": "Target",
             "keywordsMatch": "Keywords Match",
-            "counterspeech": "Start Conversation",
-            "averageReliability": "Average Reliability"
+            "counterspeech": "Write Counterspeech",
+            "averageReliability": "Url(s) reliability"
         },
         "dialog": {
             "start": "Start a new conversation with Target={target}",
             "jump": "Go to conversation",
             "noProject": "No projects available",
             "noData": "No data available",
-            "startConversation": "Start conversation",
+            "startConversation": "Write Counterspeech",
             "error": "Error while fetching data",
-            "startConversationTitle": "Start a new conversation",
+            "startConversationTitle": "Write Counterspeech",
             "startConversationDescription": "Select the topic task you want to work on."
         },
         "noData": "No data available",

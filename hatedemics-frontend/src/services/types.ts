@@ -21,7 +21,7 @@ export type ChannelInfo = {
   distance_from_seed: number
   language: string
   n_in_recommendation: number
-  expandable: boolean
+  explored: string
   n_out_recommended: number
   participation_score: number
   message_count: number

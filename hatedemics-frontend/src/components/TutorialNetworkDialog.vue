@@ -9,7 +9,7 @@ const guideItems = [
   { key: "datasetLanguage", icon: "mdi-translate", color: "primary" },
   { key: "colorSize", icon: "mdi-format-color-fill", color: "primary" },
   { key: "nodeStats", icon: "mdi-table", color: "primary" },
-  { key: "expandable", icon: "mdi-expand-all", color: "primary" },
+  { key: "explored", icon: "mdi-expand-all", color: "primary" },
   { key: "exploreChannel", icon: "mdi-eye", color: "primary" },
   { key: "degreeCentrality", icon: "mdi-chart-bubble", color: "primary" },
   { key: "communities", icon: "mdi-account-group", color: "primary" }

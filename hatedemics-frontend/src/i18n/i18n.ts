@@ -6,7 +6,7 @@ import es from "./es.json";
 import ml from "./ml.json";
 
 function loadLocaleMessages() {
-  const locales = [{ en: en }, { it: it }, { pl: pl }, { es: es },  { ml: ml }];
+  const locales = [{ en: en }, { it: it }, { pl: pl }, { es: es },  { mt: ml }];
   const messages:any = {};
   locales.forEach((lang:any) => {
     const key:any = Object.keys(lang);
