@@ -22,6 +22,7 @@ export type ChannelInfo = {
   language: string
   n_in_recommendation: number
   explored: string
+  expandable: string 
   n_out_recommended: number
   participation_score: number
   message_count: number

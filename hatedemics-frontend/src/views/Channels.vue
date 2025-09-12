@@ -61,7 +61,7 @@ const headers = computed(() => [
   { title: t("channelTable.header.IRI"), key: "IRI", sortable: true },
   { title: t("channelTable.header.hs"), key: "hs", sortable: true },
   { title: t("channelTable.header.CW"), key: "cw", sortable: true },
-  { title: t("channelTable.header.expandable"), key: "explored", sortable: true },
+  { title: t("channelTable.header.expandable"), key: "expandable", sortable: true },
 ]);
 const pagination = reactive({
   page: 0,
@@ -271,7 +271,7 @@ const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
                   <td class="text-left">{{ safeNumberOrDash(item.cw) }}</td>
                   <td class="text-left">
                     <v-icon
-                      v-if="item.explored === 'True'"
+                      v-if="item.expandable === 'True'"
                       class="status-icon success"
                     >
                       mdi-check

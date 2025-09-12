@@ -48,6 +48,9 @@ public class TelegramChannel {
     @JsonProperty("n_in_recommendation")
     @Column(name = "n_in_recommendation")
     private Integer nInRecommendation;
+    @JsonProperty("expandable")
+    @Column(name = "expandable")
+    private String expandable;
     private String explored;
     @JsonProperty("n_out_recommended")
     @Column(name = "n_out_recommended")
@@ -256,5 +259,11 @@ public class TelegramChannel {
     }
     public void setHs(Double hs) {
         this.hs = hs;
+    }
+    public String getExpandable() {
+        return expandable;
+    }
+    public void setExpandable(String expandable) {
+        this.expandable = expandable;
     }
 }
