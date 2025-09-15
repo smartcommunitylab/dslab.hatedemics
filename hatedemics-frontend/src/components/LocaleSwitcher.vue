@@ -54,14 +54,14 @@ function selectCode(code: string) {
     >
       <!-- Selezione chiusa: mostro solo la bandiera (usiamo il computed per evitare ambiguità) -->
       <template #selection>
-        <span class="flag-only">{{ selectedLocaleObj?.flag }} {{ selectedLocaleObj.label }}</span>
+        <span class="flag-only">{{ selectedLocaleObj?.flag }} {{ selectedLocaleObj?.label }}</span>
       </template>
 
       <!-- Menu aperto: ogni voce mostra bandiera + label (singola riga) -->
       <template #item="{ item, props }">
-        <v-list-item v-bind="props" @click="selectCode(item.raw.code)">
-          <v-list-item-title>{{ item.flag }} {{ item.label }}</v-list-item-title>
-        </v-list-item>
+        <v-list-item v-bind="props" @click="selectCode((item as any).raw.code)">
+  <v-list-item-title>{{ (item as any).raw.flag }} {{ (item as any).raw.label }}</v-list-item-title>
+</v-list-item>
       </template>
     </v-select>
   </div>
