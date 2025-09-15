@@ -87,42 +87,42 @@
         }
     },
     "networkGuide": {
-  "guideTitle": "Glosario de Exploración",
-  "guideItems": {
-    "telegramDataset": {
-      "title": "Conjunto de datos de Telegram",
-      "description": "<p>Un <strong>conjunto de datos</strong> es una colección estructurada de información. La plataforma incluye aproximadamente <strong>10 millones de mensajes de Telegram</strong> descargados de unos <strong>500 canales</strong>, en <em>4 idiomas</em> (inglés, italiano, español y polaco).</p><p>Se eligió Telegram porque ofrece <strong>acceso gratuito a la recopilación de datos a gran escala</strong>, a diferencia de otras plataformas de mensajería populares.</p>"
+        "guideTitle": "Glosario de Exploración",
+        "guideItems": {
+            "telegramDataset": {
+                "title": "Conjunto de datos de Telegram",
+                "description": "<p>Un <strong>conjunto de datos</strong> es una colección estructurada de información. La plataforma incluye aproximadamente <strong>10 millones de mensajes de Telegram</strong> descargados de unos <strong>500 canales</strong>, en <em>4 idiomas</em> (inglés, italiano, español y polaco).</p><p>Se eligió Telegram porque ofrece <strong>acceso gratuito a la recopilación de datos a gran escala</strong>, a diferencia de otras plataformas de mensajería populares.</p>"
+            },
+            "telegramChannels": {
+                "title": "Canales y chats de Telegram",
+                "description": "<p>Un <strong>canal de Telegram</strong> es un espacio donde uno o varios administradores pueden publicar mensajes para una gran audiencia.</p><p>Un canal puede tener uno o más <strong>chats</strong> con configuraciones diferentes: por ejemplo, algunos en los que solo los administradores pueden publicar mensajes y otros donde todos pueden participar.</p><p>Los chats o conversaciones de un canal se refieren a los mensajes publicados allí y a la forma en que las audiencias reaccionan.</p>"
+            },
+            "network": {
+                "title": "Red",
+                "description": "<p>Una <strong>red</strong> es una estructura que representa entidades como puntos y las relaciones entre ellas como líneas.</p><p>En esta red, los canales de Telegram descargados se muestran como <strong>puntos</strong>, y las líneas indican cómo están conectados. Un canal está vinculado a otro cuando Telegram lo <em>recomienda</em> automáticamente, en función de cuántos usuarios comparten ambos canales.</p>"
+            },
+            "disinformation": {
+                "title": "Desinformación",
+                "description": "<p>La <strong>desinformación</strong> es información falsa o engañosa que se crea, comparte o difunde deliberadamente con la intención de <em>engañar</em> o <em>manipular</em> a las personas.</p><p>A menudo se utiliza para <strong>influir en opiniones</strong>, sembrar confusión o lograr objetivos <em>políticos, sociales o económicos</em>.</p>"
+            },
+            "reliability": {
+                "title": "Fiabilidad",
+                "description": "<p>La <strong>fiabilidad</strong> mide cuán confiable y precisa es una fuente o un enlace. Se determina mediante una <em>evaluación manual</em> del sitio web.</p><p>Un <strong>puntaje de fiabilidad alto</strong> indica que la fuente puede considerarse confiable y proporcionar información bien fundamentada.</p>"
+            },
+            "infodemicRisk": {
+                "title": "Riesgo Infodémico",
+                "description": "<p>El <strong>Riesgo Infodémico</strong> indica el grado de fiabilidad de un canal, variando entre <strong>0</strong> (completamente fiable) y <strong>1</strong> (totalmente no fiable).</p><p>Se calcula en función de la fiabilidad de los sitios compartidos en el canal y de cuánto los usuarios están <em>expuestos</em> a esos enlaces (considerando el número de visualizaciones).</p><p>Un <strong>valor bajo</strong> significa que los usuarios están expuestos a información más confiable.</p><p>Para más detalles, consulta <a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">este artículo</a>.</p>"
+            },
+            "hateSpeech": {
+                "title": "Discurso de odio",
+                "description": "<p>El <strong>discurso de odio</strong> se refiere a expresiones que incitan, promueven, justifican o difunden <strong>odio, violencia, discriminación u hostilidad</strong> contra una persona o grupo en función de rasgos identitarios como raza, religión, etnia, género, orientación sexual, discapacidad u otras características similares.</p><p>Incluye tanto formas explícitas de <em>incitación a la violencia</em> como formas más sutiles de <em>deshumanización</em> o <em>lenguaje despectivo</em>.</p>"
+            },
+            "checkWorthyness": {
+                "title": "Verificabilidad",
+                "description": "<p>Un contenido se considera <strong>verificable</strong> cuando es de <em>interés público</em> y puede requerir comprobación por parte de los verificadores de hechos.</p><p>Un mensaje es verificable cuando:</p><ul><li>Hace una <strong>afirmación factual</strong> que puede verificarse o refutarse,</li><li>Tiene el potencial de <strong>influir en opiniones, comportamientos o el debate público</strong>,</li><li>Aborda <strong>temas sensibles o de alto impacto</strong> (p. ej., política, salud, seguridad, migración),</li><li>Muestra signos de posible <em>misinformación</em> o <em>desinformación</em>.</li></ul>"
+            }
+        }
     },
-    "telegramChannels": {
-      "title": "Canales y chats de Telegram",
-      "description": "<p>Un <strong>canal de Telegram</strong> es un espacio donde uno o varios administradores pueden publicar mensajes para una gran audiencia.</p><p>Un canal puede tener uno o más <strong>chats</strong> con configuraciones diferentes: por ejemplo, algunos en los que solo los administradores pueden publicar mensajes y otros donde todos pueden participar.</p><p>Los chats o conversaciones de un canal se refieren a los mensajes publicados allí y a la forma en que las audiencias reaccionan.</p>"
-    },
-    "network": {
-      "title": "Red",
-      "description": "<p>Una <strong>red</strong> es una estructura que representa entidades como puntos y las relaciones entre ellas como líneas.</p><p>En esta red, los canales de Telegram descargados se muestran como <strong>puntos</strong>, y las líneas indican cómo están conectados. Un canal está vinculado a otro cuando Telegram lo <em>recomienda</em> automáticamente, en función de cuántos usuarios comparten ambos canales.</p>"
-    },
-    "disinformation": {
-      "title": "Desinformación",
-      "description": "<p>La <strong>desinformación</strong> es información falsa o engañosa que se crea, comparte o difunde deliberadamente con la intención de <em>engañar</em> o <em>manipular</em> a las personas.</p><p>A menudo se utiliza para <strong>influir en opiniones</strong>, sembrar confusión o lograr objetivos <em>políticos, sociales o económicos</em>.</p>"
-    },
-    "reliability": {
-      "title": "Fiabilidad",
-      "description": "<p>La <strong>fiabilidad</strong> mide cuán confiable y precisa es una fuente o un enlace. Se determina mediante una <em>evaluación manual</em> del sitio web.</p><p>Un <strong>puntaje de fiabilidad alto</strong> indica que la fuente puede considerarse confiable y proporcionar información bien fundamentada.</p>"
-    },
-    "infodemicRisk": {
-      "title": "Riesgo Infodémico",
-      "description": "<p>El <strong>Riesgo Infodémico</strong> indica el grado de fiabilidad de un canal, variando entre <strong>0</strong> (completamente fiable) y <strong>1</strong> (totalmente no fiable).</p><p>Se calcula en función de la fiabilidad de los sitios compartidos en el canal y de cuánto los usuarios están <em>expuestos</em> a esos enlaces (considerando el número de visualizaciones).</p><p>Un <strong>valor bajo</strong> significa que los usuarios están expuestos a información más confiable.</p><p>Para más detalles, consulta <a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">este artículo</a>.</p>"
-    },
-    "hateSpeech": {
-      "title": "Discurso de odio",
-      "description": "<p>El <strong>discurso de odio</strong> se refiere a expresiones que incitan, promueven, justifican o difunden <strong>odio, violencia, discriminación u hostilidad</strong> contra una persona o grupo en función de rasgos identitarios como raza, religión, etnia, género, orientación sexual, discapacidad u otras características similares.</p><p>Incluye tanto formas explícitas de <em>incitación a la violencia</em> como formas más sutiles de <em>deshumanización</em> o <em>lenguaje despectivo</em>.</p>"
-    },
-    "checkWorthyness": {
-      "title": "Verificabilidad",
-      "description": "<p>Un contenido se considera <strong>verificable</strong> cuando es de <em>interés público</em> y puede requerir comprobación por parte de los verificadores de hechos.</p><p>Un mensaje es verificable cuando:</p><ul><li>Hace una <strong>afirmación factual</strong> que puede verificarse o refutarse,</li><li>Tiene el potencial de <strong>influir en opiniones, comportamientos o el debate público</strong>,</li><li>Aborda <strong>temas sensibles o de alto impacto</strong> (p. ej., política, salud, seguridad, migración),</li><li>Muestra signos de posible <em>misinformación</em> o <em>desinformación</em>.</li></ul>"
-    }
-  }
-},
     "welcome": {
         "title": "Bienvenido a Hatedemics"
     },
@@ -146,13 +146,15 @@
             }
         ],
         "chooseLanguage": "Seleccione el idioma de su plataforma",
-  "continue": "Continuar",
+        "continue": "Continuar",
         "prev": "Atrás",
         "next": "Próximo",
         "close": "Cerca",
         "neverShow": "No te muestres de nuevo"
     },
     "educational": {
+        "title": "Actividades Educativas",
+  "subtitle": "<p>En esta sección encontrarás ejercicios interactivos diseñados para ayudarte a comprender los mecanismos detrás de la desinformación y el discurso de odio.</p><p>Podrás explorar <b>sesgos cognitivos</b> y <b>falacias lógicas</b>, practicar técnicas de <b>verificación y desmentido</b>, aprender los principios fundamentales de la <b>Declaración de Derechos Humanos</b> para entender la protección de la dignidad humana y aplicar la <b>lectura lateral</b> para evaluar críticamente los contenidos en línea.</p><p>Cada actividad es una oportunidad para entrenar el pensamiento crítico y volverse más resistente a la manipulación y la desinformación.</p>",
         "eduCard1Title": "Declaración de derechos humanos",
         "eduCard1Desc": "Descubra los principios centrales que protegen la dignidad humana.",
         "eduCard1Button": "Actividad de inicio",
@@ -236,7 +238,7 @@
                 "title": "Desmitificación",
                 "description": "<strong>Qué es la desmitificación:</strong> Cuando algunas personas piensan en un verificador de hechos (fact‑checker), solo ven a un periodista que investiga una afirmación, la verifica y confirma si es verdadera o no, el proceso de desmitificación. Sin embargo, luchar contra la desinformación eficazmente hoy en día exige mucho más: detectar rápidamente posibles bulos antes de que se vuelvan virales y afecten a más personas; explicar que no todo es blanco o negro, ayudar a las personas a estar bien preparadas frente a falsedades mediante la alfabetización mediática o regulación; crear herramientas que dificulten que nos engañen o combatir juntos contra la manipulación: esto es lo que llamamos pre‑bunking.<br><br><strong>Qué es una narrativa de desinformación:</strong> Lo que los creadores de desinformación quieren que creas. Cuando una idea se repite muchas veces, la gente tiende a creerla. Además, un solo bulo puede contener varias narrativas.",
                 "objectivesTitle": "Objetivos",
-                "objectives":  "<p><strong>Desmentir:</strong> aprender, de manera guiada, algunas técnicas de desmentido.</p><p><strong>Desarrollar el pensamiento crítico usando la estrategia de pre-bunking:</strong> durante el ejercicio, los usuarios descubren cuáles son las narrativas de desinformación y pueden reflexionar sobre las más difundidas en su país.</p><p><strong>Activar el pensamiento crítico:</strong> comprendiendo cómo la viralización de algunos engaños puede crear y fortalecer las narrativas de desinformación.</p>",
+                "objectives": "<p><strong>Desmentir:</strong> aprender, de manera guiada, algunas técnicas de desmentido.</p><p><strong>Desarrollar el pensamiento crítico usando la estrategia de pre-bunking:</strong> durante el ejercicio, los usuarios descubren cuáles son las narrativas de desinformación y pueden reflexionar sobre las más difundidas en su país.</p><p><strong>Activar el pensamiento crítico:</strong> comprendiendo cómo la viralización de algunos engaños puede crear y fortalecer las narrativas de desinformación.</p>",
                 "task": "<strong>Simula las acciones de un fact‑checker</strong> seleccionando la forma más eficaz de desmentir un evento afirmado. ¿Puedes también identificar la narrativa de desinformación relacionada?",
                 "startButton": "Comenzar actividad",
                 "correct": "¡Correcto! Bien hecho.",
@@ -363,7 +365,7 @@
             },
             "lateralreading": {
                 "submit": "Enviar",
-                "nextQuestion":" Siguiente pregunta",
+                "nextQuestion": " Siguiente pregunta",
                 "selectMultiple": "Puedes seleccionar más de 1 captura de pantalla",
                 "nextExercise": "Siguiente ejercicio",
                 "title": "Lectura lateral",
@@ -417,7 +419,7 @@
                                         "correct": true
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "No encontrado",
                                         "correct": false
                                     }
                                 ],
@@ -458,7 +460,7 @@
                                         "correct": true
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "No encontrado",
                                         "correct": false
                                     }
                                 ],
@@ -499,7 +501,7 @@
                                         "correct": false
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "No encontrado",
                                         "correct": false
                                     }
                                 ],
@@ -540,7 +542,7 @@
                                         "correct": false
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "No encontrado",
                                         "correct": false
                                     }
                                 ],
@@ -587,7 +589,7 @@
                                         "correct": false
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "No encontrado",
                                         "correct": false
                                     }
                                 ],
@@ -620,7 +622,7 @@
                                         "correct": false
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "No encontrado",
                                         "correct": false
                                     }
                                 ],
@@ -653,7 +655,7 @@
                                         "correct": true
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "No encontrado",
                                         "correct": false
                                     }
                                 ],
@@ -686,7 +688,7 @@
                                         "correct": false
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "No encontrado",
                                         "correct": false
                                     }
                                 ],
@@ -705,7 +707,7 @@
     },
     "inspect": {
         "title": "Descripción general del canal",
-"subtitle": "<p>En esta página puedes ver en detalle el contenido de un solo canal de Telegram. La tabla muestra los temas principales del canal, con qué frecuencia aparecen en los mensajes, el porcentaje de discurso de odio y la verificabilidad (check-worthiness) dentro de cada tema y el sentimiento predominante.</p><p>A la derecha encontrarás información clave del canal, mientras que las nubes de palabras (word clouds) visualizan qué términos aparecen con más frecuencia en los mensajes no de odio y en los de odio, así como en los mensajes que merecen verificación y los que no.</p><p>Utiliza los filtros y los botones para cambiar entre las vistas de los chats de los canales y los temas, o para ajustar el tipo de nube de palabras que ves. Si pasas el ratón por encima de cualquier etiqueta o botón, verás una breve explicación de lo que hace.</p>"
+        "subtitle": "<p>En esta página puedes ver en detalle el contenido de un solo canal de Telegram. La tabla muestra los temas principales del canal, con qué frecuencia aparecen en los mensajes, el porcentaje de discurso de odio y la verificabilidad (check-worthiness) dentro de cada tema y el sentimiento predominante.</p><p>A la derecha encontrarás información clave del canal, mientras que las nubes de palabras (word clouds) visualizan qué términos aparecen con más frecuencia en los mensajes no de odio y en los de odio, así como en los mensajes que merecen verificación y los que no.</p><p>Utiliza los filtros y los botones para cambiar entre las vistas de los chats de los canales y los temas, o para ajustar el tipo de nube de palabras que ves. Si pasas el ratón por encima de cualquier etiqueta o botón, verás una breve explicación de lo que hace.</p>"
     },
     "channel": {
         "title": "Exploración de red",
@@ -714,7 +716,8 @@
     },
     "conversation": {
         "title": "Dentro de los chats",
-        "subtitle": "En esta página puedes explorar los mensajes individuales del canal.<br><br>Cada fila de la tabla muestra el <b>texto del mensaje</b>, su <b>fecha</b> y detalles como el <b>número de me gusta</b>, si contiene <b>discurso de odio</b>, si se considera <i>“digno de verificación”</i>, y si se menciona algún <b>grupo objetivo</b>.<br><br>Estos datos te permiten ver no solo qué tipo de contenido se publica, sino también cómo interactúa la audiencia con él.<br>Puedes filtrar los mensajes por <b>discurso de odio</b>, <b>digno de verificación</b> o <b>grupo objetivo</b> para centrarte en las conversaciones que más te interesen.<br><br>También puedes reordenar los mensajes haciendo clic en los <b>encabezados de las columnas</b>.<br>Por ejemplo, si deseas ver cómo se desarrolló una conversación a lo largo del tiempo, reordena la tabla por la columna <b>Fecha</b>.<br><br>Pasa el ratón sobre cualquier <b>etiqueta</b> o <b>botón</b> para ver una breve explicación de su función."    },
+        "subtitle": "En esta página puedes explorar los mensajes individuales del canal.<br><br>Cada fila de la tabla muestra el <b>texto del mensaje</b>, su <b>fecha</b> y detalles como el <b>número de me gusta</b>, si contiene <b>discurso de odio</b>, si se considera <i>“digno de verificación”</i>, y si se menciona algún <b>grupo objetivo</b>.<br><br>Estos datos te permiten ver no solo qué tipo de contenido se publica, sino también cómo interactúa la audiencia con él.<br>Puedes filtrar los mensajes por <b>discurso de odio</b>, <b>digno de verificación</b> o <b>grupo objetivo</b> para centrarte en las conversaciones que más te interesen.<br><br>También puedes reordenar los mensajes haciendo clic en los <b>encabezados de las columnas</b>.<br>Por ejemplo, si deseas ver cómo se desarrolló una conversación a lo largo del tiempo, reordena la tabla por la columna <b>Fecha</b>.<br><br>Pasa el ratón sobre cualquier <b>etiqueta</b> o <b>botón</b> para ver una breve explicación de su función."
+    },
     "project": {
         "noProject": "No hay proyectos disponibles",
         "noData": "No hay datos disponibles",
@@ -754,7 +757,7 @@
         "collapseLegend": "Colapsar leyenda",
         "expandLegend": "Expandir leyenda",
         "collapseInfo": "Ocultar información del canal",
-        "expandInfo":"Mostrar información del canal",
+        "expandInfo": "Mostrar información del canal",
         "legend": {
             "title": "Leyenda",
             "color": "Color",
@@ -939,6 +942,7 @@
         "addDynamicTurn": "Agregar giro dinámico",
         "addFromGround": "Agregar de tierra",
         "tooltip": {
+            "label": "Nombre del canal",
             "startEmpty": "Presione aquí para crear un giro vacío.",
             "addDynamicTurn": "Genere automáticamente una sugerencia para comenzar.<br>Todavía puede modificarlo después.",
             "addRoundUp": "Agregar un giro vacío <em>antes</em> el seleccionado.",
@@ -974,7 +978,7 @@
                 "title": "Estadísticas de los nodos",
                 "description": "Esta tabla muestra los datos de cada canal en la red. Tienes dos interacciones principales:<br><ul><li><b>Ordenar la tabla:</b> Haz clic en cualquier título de columna (ej. <i>Número de mensajes</i>) para reordenar los datos.</li><li><b>Encontrar un canal:</b> Haz clic en cualquier fila para resaltar ese canal en el mapa de la red y abrir su panel de información.</li></ul>"
             },
-            "expandable": {
+            "explored": {
                 "title": "Ampliable",
                 "description": "Un canal es <b>ampliado</b> si recopilamos todos sus mensajes, que se muestran en la página de <i>Conversación</i>.<br><br>Los canales no ampliables se muestran en <span style='color:blue;'>azul</span> en la red."
             },
@@ -992,52 +996,55 @@
             }
         },
         "channel": {
-    "title": "Guía del canal",
-    "topic": {
-      "title": "Tema",
-      "description": "A partir de todos los mensajes del chat seleccionado, los temas más significativos se extraen mediante <b>modelado de temas basado en IA</b>: los mensajes se agrupan según similitudes en su contenido. Estos clústeres revelan los temas de discusión más relevantes y ayudan a identificar de qué se habla en el canal."
+            "title": "Guía del canal",
+            "topic": {
+                "title": "Tema",
+                "description": "A partir de todos los mensajes del chat seleccionado, los temas más significativos se extraen mediante <b>modelado de temas basado en IA</b>: los mensajes se agrupan según similitudes en su contenido. Estos clústeres revelan los temas de discusión más relevantes y ayudan a identificar de qué se habla en el canal."
+            },
+            "hateSpeechPercent": {
+                "title": "Discurso de odio %",
+                "description": "Usando <b>clasificación basada en IA</b>, cada mensaje del canal se analiza para detectar si contiene discurso de odio (consulta el <i>Glosario</i> para más información sobre la definición). Al calcular la <b>media de discurso de odio</b> en los mensajes relacionados con cada tema, destacamos la prevalencia del discurso de odio en las conversaciones."
+            },
+            "checkWorthinessPercent": {
+                "title": "Check-Worthiness %",
+                "description": "Con <b>clasificación basada en IA</b>, se analiza cada mensaje para determinar si es <b>digno de verificación</b> (check-worthy), es decir, si contiene afirmaciones que podrían requerir verificación de hechos (consulta el <i>Glosario</i>). Al calcular el <b>nivel medio de contenido digno de verificación</b> en cada tema, destacamos la prevalencia de posibles afirmaciones engañosas o cuestionables."
+            },
+            "prevalentSentiment": {
+                "title": "Sentimiento predominante",
+                "description": "Mediante <b>análisis de sentimiento basado en IA</b>, cada mensaje se clasifica como <i>neutral</i>, <i>positivo</i> o <i>negativo</i>. Al agregar el sentimiento de todos los mensajes relacionados con un tema, identificamos el <b>sentimiento predominante</b> de ese tema."
+            },
+            "wordCloud": {
+                "title": "Nube de palabras",
+                "description": "Una nube de palabras es una representación visual de las palabras más frecuentes en un texto: cuanto más a menudo aparece una palabra, más <b>grande</b> se muestra en la nube.<br><br>Úsala para visualizar qué términos aparecen con más frecuencia en mensajes <b>sin discurso de odio</b> y con <b>discurso de odio</b>, y en mensajes <b>dignos de verificación</b> y <b>no dignos de verificación</b>, a nivel de <i>chat</i> o de <i>tema</i>."
+            }
+        },
+        "chats": {
+            "title": "Guía Rápida - Chats",
+            "reactions": {
+                "title": "Reacciones",
+                "description": "El número total de reacciones (<b>me gusta</b>, <b>no me gusta</b>, <b>corazón</b>, etc.) que recibió un mensaje. Es un indicador de la <b>popularidad</b> de un mensaje."
+            },
+            "reliability": {
+                "title": "Fiabilidad",
+                "description": "Indica la <b>fiabilidad media</b> de las URL contenidas en el mensaje. Se evalúa automáticamente según el dominio: puede ser <b>fiable</b>, <b>no fiable</b> o <b>desconocido</b>."
+            },
+            "target": {
+                "title": "Grupo objetivo",
+                "description": "Un grupo objetivo se refiere al <b>individuo</b> o <b>grupo de personas</b> mencionado en un mensaje. En este proyecto identificamos si un mensaje contiene referencia a uno de los siguientes grupos: <b>personas negras</b>, <b>LGBTQIA+</b>, <b>judíos</b>, <b>migrantes</b>, <b>musulmanes</b>, <b>personas con discapacidad</b>, <b>mujeres</b>.<br><br>La presencia de un grupo objetivo no implica por sí misma odio, pero permite filtrar para ver qué mensajes que mencionan estos grupos también son <b>odiosos</b>, <b>checkworthy</b> o contienen <b>enlaces no fiables</b>."
+            },
+            "filtersTable": {
+                "title": "Filtros y encabezados de tabla",
+                "description": "Usa los tres filtros (<b>Hate Speech</b>, <b>Check Worthy</b> y <b>Filtrar por grupo objetivo</b>) para mostrar solo las filas relacionadas.<br>También puedes hacer clic en los <b>encabezados de columna</b> para ordenar las filas según la presencia o ausencia de una variable específica."
+            },
+            "startConversation": {
+                "title": "Iniciar conversación",
+                "description": "Escribir counterspeech",
+                "details": "Presiona este botón para elegir un tema para escribir counterspeech. Luego serás redirigido a la <b>página de escritura de counterspeech</b>."
+            }
+        }
     },
-    "hateSpeechPercent": {
-      "title": "Discurso de odio %",
-      "description": "Usando <b>clasificación basada en IA</b>, cada mensaje del canal se analiza para detectar si contiene discurso de odio (consulta el <i>Glosario</i> para más información sobre la definición). Al calcular la <b>media de discurso de odio</b> en los mensajes relacionados con cada tema, destacamos la prevalencia del discurso de odio en las conversaciones."
-    },
-    "checkWorthinessPercent": {
-      "title": "Check-Worthiness %",
-      "description": "Con <b>clasificación basada en IA</b>, se analiza cada mensaje para determinar si es <b>digno de verificación</b> (check-worthy), es decir, si contiene afirmaciones que podrían requerir verificación de hechos (consulta el <i>Glosario</i>). Al calcular el <b>nivel medio de contenido digno de verificación</b> en cada tema, destacamos la prevalencia de posibles afirmaciones engañosas o cuestionables."
-    },
-    "prevalentSentiment": {
-      "title": "Sentimiento predominante",
-      "description": "Mediante <b>análisis de sentimiento basado en IA</b>, cada mensaje se clasifica como <i>neutral</i>, <i>positivo</i> o <i>negativo</i>. Al agregar el sentimiento de todos los mensajes relacionados con un tema, identificamos el <b>sentimiento predominante</b> de ese tema."
-    },
-    "wordCloud": {
-      "title": "Nube de palabras",
-      "description": "Una nube de palabras es una representación visual de las palabras más frecuentes en un texto: cuanto más a menudo aparece una palabra, más <b>grande</b> se muestra en la nube.<br><br>Úsala para visualizar qué términos aparecen con más frecuencia en mensajes <b>sin discurso de odio</b> y con <b>discurso de odio</b>, y en mensajes <b>dignos de verificación</b> y <b>no dignos de verificación</b>, a nivel de <i>chat</i> o de <i>tema</i>."
-    }
-  },
-  "chats": {
-  "title": "Guía Rápida - Chats",
-  "reactions": {
-    "title": "Reacciones",
-    "description": "El número total de reacciones (<b>me gusta</b>, <b>no me gusta</b>, <b>corazón</b>, etc.) que recibió un mensaje. Es un indicador de la <b>popularidad</b> de un mensaje."
-  },
-  "reliability": {
-    "title": "Fiabilidad",
-    "description": "Indica la <b>fiabilidad media</b> de las URL contenidas en el mensaje. Se evalúa automáticamente según el dominio: puede ser <b>fiable</b>, <b>no fiable</b> o <b>desconocido</b>."
-  },
-  "target": {
-    "title": "Grupo objetivo",
-    "description": "Un grupo objetivo se refiere al <b>individuo</b> o <b>grupo de personas</b> mencionado en un mensaje. En este proyecto identificamos si un mensaje contiene referencia a uno de los siguientes grupos: <b>personas negras</b>, <b>LGBTQIA+</b>, <b>judíos</b>, <b>migrantes</b>, <b>musulmanes</b>, <b>personas con discapacidad</b>, <b>mujeres</b>.<br><br>La presencia de un grupo objetivo no implica por sí misma odio, pero permite filtrar para ver qué mensajes que mencionan estos grupos también son <b>odiosos</b>, <b>checkworthy</b> o contienen <b>enlaces no fiables</b>."
-  },
-  "filtersTable": {
-    "title": "Filtros y encabezados de tabla",
-    "description": "Usa los tres filtros (<b>Hate Speech</b>, <b>Check Worthy</b> y <b>Filtrar por grupo objetivo</b>) para mostrar solo las filas relacionadas.<br>También puedes hacer clic en los <b>encabezados de columna</b> para ordenar las filas según la presencia o ausencia de una variable específica."
-  },
-  "startConversation": {
-    "title": "Iniciar conversación",
-    "description": "Escribir counterspeech",
-    "details": "Presiona este botón para elegir un tema para escribir counterspeech. Luego serás redirigido a la <b>página de escritura de counterspeech</b>."
-  }
-}
-
-    }
+    "buttons": {
+        "startDialogue": "Iniciar diálogo",
+        "delete": "Eliminar"
+      }
 }

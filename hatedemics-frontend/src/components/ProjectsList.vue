@@ -119,10 +119,10 @@ onMounted(() => {
     </v-container>
 
     <v-container fluid v-else>
-      <h1 class="text-h5 font-weight-bold text-primary ma-4">        {{ t("projects.title") }}
+      <h1 class="text-h5 font-weight-bold text-primary ma-4">        {{ t("tasks.title") }}
       </h1>
       <h2 class="text-h6 font-weight-medium ma-4">
-        {{ t("projects.subtitle") }}
+        {{ t("tasks.subtitle") }}
       </h2>
 
       <!-- ✅ lista piatta filtrata per lingua -->

@@ -35,6 +35,8 @@ const { selectedChat, chats } = storeToRefs(chatStore);
 const showExploreGuide = ref(false);
 const showTopicsDialog = ref(false);
 const showTutorialDiscussion = ref(false);
+const showSidebar = ref(true);
+
 const targetOptions = computed(() => [
   { title: t("message.filter.DISABLED"), value: "DISABLED" },
   { title: t("message.filter.JEWS"), value: "JEWS" },
@@ -54,11 +56,51 @@ const startDialogue = async (target: string | null) => {
 
   // Mappa dei target tradotti
   const targetTranslations: Record<string, Record<string, string>> = {
-    IT: { DISABLED: "Persone con disabilità", POC: "Persone nere", MIGRANTS: "Migranti", WOMEN: "Donne", "LGBT+": "LGBTQIA+", JEWS: "Ebrei", MUSLIMS: "Musulmani" },
-    PL: { DISABLED: "Osoby z niepełnosprawnościami", POC: "Czarnoskórzy", MIGRANTS: "Migranci", WOMEN: "Kobiety", "LGBT+": "LGBTQIA+", JEWS: "Żydzi", MUSLIMS: "Muzułmanie" },
-    ES: { DISABLED: "Personas con discapacidad", POC: "Personas negras", MIGRANTS: "Migrantes", WOMEN: "Mujeres", "LGBT+": "LGBTQIA+", JEWS: "Hebreos", MUSLIMS: "Musulmanes" },
-    MT: { DISABLED: "Individwi b'diżabilità", POC: "Nies suwed", MIGRANTS: "Migranti", WOMEN: "Nisa", "LGBT+": "LGBTIQ+", JEWS: "Lhud", MUSLIMS: "Musulmani" },
-    EN: { DISABLED: "People with disabilities", POC: "Black people", MIGRANTS: "Migrants", WOMEN: "Women", "LGBT+": "LGBTQIA+", JEWS: "Jews", MUSLIMS: "Muslims" },
+    IT: {
+      DISABLED: "Persone con disabilità",
+      POC: "Persone nere",
+      MIGRANTS: "Migranti",
+      WOMEN: "Donne",
+      "LGBT+": "LGBTQIA+",
+      JEWS: "Ebrei",
+      MUSLIMS: "Musulmani",
+    },
+    PL: {
+      DISABLED: "Osoby z niepełnosprawnościami",
+      POC: "Czarnoskórzy",
+      MIGRANTS: "Migranci",
+      WOMEN: "Kobiety",
+      "LGBT+": "LGBTQIA+",
+      JEWS: "Żydzi",
+      MUSLIMS: "Muzułmanie",
+    },
+    ES: {
+      DISABLED: "Personas con discapacidad",
+      POC: "Personas negras",
+      MIGRANTS: "Migrantes",
+      WOMEN: "Mujeres",
+      "LGBT+": "LGBTQIA+",
+      JEWS: "Hebreos",
+      MUSLIMS: "Musulmanes",
+    },
+    MT: {
+      DISABLED: "Individwi b'diżabilità",
+      POC: "Nies suwed",
+      MIGRANTS: "Migranti",
+      WOMEN: "Nisa",
+      "LGBT+": "LGBTIQ+",
+      JEWS: "Lhud",
+      MUSLIMS: "Musulmani",
+    },
+    EN: {
+      DISABLED: "People with disabilities",
+      POC: "Black people",
+      MIGRANTS: "Migrants",
+      WOMEN: "Women",
+      "LGBT+": "LGBTQIA+",
+      JEWS: "Jews",
+      MUSLIMS: "Muslims",
+    },
   };
 
   const translatedTarget = targetTranslations[lang]?.[target];
@@ -84,7 +126,6 @@ const startDialogue = async (target: string | null) => {
 
   showTopicsDialog.value = false;
 };
-
 
 // Mappa le chat con label "Chat 1", "Chat 2", ecc.
 const chatOptions = computed(() =>
@@ -191,6 +232,8 @@ const loadMore = (event: { target: any }) => {
       </v-expansion-panel>
     </v-expansion-panels>
 
+    <v-container fluid class="pa-4" style="background-color: white;">
+
     <!-- Selettori di Canale e Chat -->
     <v-row>
       <v-col cols="4">
@@ -240,8 +283,10 @@ const loadMore = (event: { target: any }) => {
     <v-divider class="my-4" />
 
     <!-- Layout con Sidebar e Tabella -->
+    <!-- Layout con Sidebar e Tabella -->
     <v-row>
-      <v-col cols="8" style="background-color: white">
+      <!-- Colonna Tabella -->
+      <v-col :cols="showSidebar ? 10 : 11" style="background-color: white">
         <div class="px-4 py-2">
           <h3 class="text-h6 mb-1 text-center">
             <v-icon left>mdi-chat</v-icon> {{ t("message.title") }}
@@ -249,63 +294,90 @@ const loadMore = (event: { target: any }) => {
         </div>
         <ChatTableComponent />
       </v-col>
-      <v-col cols="4">
-        <SideBarInfoComponent :actions="false" />
-        <!-- Pulsante avvia dialogo -->
-        <div class="text-center mt-4">
-          <v-btn color="primary" @click="showTopicsDialog = true">
-            <v-icon left>mdi-arrow-right-bold-circle</v-icon>
-            {{ t("message.dialog.startConversation") }}
-          </v-btn>
-        </div>
-      </v-col>
+
+      <!-- Colonna Sidebar -->
+      <v-col :cols="showSidebar ? 2 : 1" class="transition-col d-flex flex-column ">
+        <!-- Pulsante toggle allineato a sinistra -->
+  <v-tooltip bottom>
+    <template #activator="{ props }">
+      <v-btn
+        v-bind="props"
+        color="primary"
+        class="mb-4"
+        @click="showSidebar = !showSidebar"
+        elevation="2"
+        style="width: 48px; height: 48px; min-width: 0; padding: 0; border-radius: 50%;"
+      >
+        <v-icon>{{ showSidebar ? "mdi-chevron-right" : "mdi-chevron-left" }}</v-icon>
+      </v-btn>
+    </template>
+    <span>
+      {{ showSidebar ? t("graphInteraction.collapseInfo") : t("graphInteraction.expandInfo") }}
+    </span>
+  </v-tooltip>
+
+  <!-- Contenuto animato -->
+  <v-expand-x-transition>
+    <div v-show="showSidebar" class="w-100">
+      <SideBarInfoComponent :actions="false" class="expandable-content" />
+
+      <!-- Pulsante avvia dialogo -->
+      <div class="text-center mt-4 w-100">
+        <v-btn color="primary" @click="showTopicsDialog = true" block>
+          <v-icon left>mdi-arrow-right-bold-circle</v-icon>
+          {{ t("message.dialog.startConversation") }}
+        </v-btn>
+      </div>
+    </div>
+  </v-expand-x-transition>
+</v-col>
     </v-row>
+    </v-container>
   </v-container>
   <v-dialog v-model="showTopicsDialog" max-width="500px">
-  <v-card class="topics-dialog-card">
-    <!-- Titolo -->
-    <v-card-title class="text-h6 font-weight-bold">
-      {{ t("message.dialog.startConversationTitle") }}
-    </v-card-title>
+    <v-card class="topics-dialog-card">
+      <!-- Titolo -->
+      <v-card-title class="text-h6 font-weight-bold">
+        {{ t("message.dialog.startConversationTitle") }}
+      </v-card-title>
 
-    <!-- Intro descrittiva -->
-    <v-card-subtitle class="text-body-2 mb-2">
-      {{ t("message.dialog.startConversationDescription") }}
-    </v-card-subtitle>
+      <!-- Intro descrittiva -->
+      <v-card-subtitle class="text-body-2 mb-2">
+        {{ t("message.dialog.startConversationDescription") }}
+      </v-card-subtitle>
 
-    <v-divider></v-divider>
+      <v-divider></v-divider>
 
-    <!-- Lista target -->
-    <v-card-text>
-      <v-list> 
-        <v-list-item
-  color="primary"
-  active-color="primary"
-  v-for="option in targetOptions"
-  :key="option.value"
-  @click="startDialogue(option.value)"
-  :disabled="option.value === null || option.value === 'OTHER'"
-  class="topic-item"
->
-  <v-list-item-title v-if="option.value != 'OTHER'">
-    {{ option.title }}
-  </v-list-item-title>
-</v-list-item>
+      <!-- Lista target -->
+      <v-card-text>
+        <v-list>
+          <v-list-item
+            color="primary"
+            active-color="primary"
+            v-for="option in targetOptions"
+            :key="option.value"
+            @click="startDialogue(option.value)"
+            :disabled="option.value === null || option.value === 'OTHER'"
+            class="topic-item"
+          >
+            <v-list-item-title v-if="option.value != 'OTHER'">
+              {{ option.title }}
+            </v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-card-text>
 
-      </v-list>
-    </v-card-text>
+      <v-card-actions>
+        <v-spacer />
+        <v-btn text @click="showTopicsDialog = false">
+          {{ t("common.close") }}
+        </v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-dialog>
 
-    <v-card-actions>
-      <v-spacer />
-      <v-btn text @click="showTopicsDialog = false">
-        {{ t("common.close") }}
-      </v-btn>
-    </v-card-actions>
-  </v-card>
-</v-dialog>
-
-<ExploreGuideDialog v-model="showExploreGuide" />
-<TutorialDiscussionDialog v-model="showTutorialDiscussion" />
+  <ExploreGuideDialog v-model="showExploreGuide" />
+  <TutorialDiscussionDialog v-model="showTutorialDiscussion" />
 </template>
 
 <style lang="css" scoped>
@@ -322,7 +394,7 @@ const loadMore = (event: { target: any }) => {
 
 .topic-item:hover {
   background-color: var(--v-theme-primary); /* background primario */
-  color: var(--v-theme-on-primary);       /* testo leggibile sul primario */
+  color: var(--v-theme-on-primary); /* testo leggibile sul primario */
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
@@ -337,5 +409,8 @@ const loadMore = (event: { target: any }) => {
   color: inherit;
 }
 
-
+.expandable-content {
+  overflow: hidden;
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
 </style>

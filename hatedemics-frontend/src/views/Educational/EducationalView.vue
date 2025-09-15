@@ -6,6 +6,7 @@ const { t } = useI18n();
 
 const showWarning = ref(false);
 const dontShowAgain = ref(false);
+const msg = t("educational.title");
 
 onMounted(() => {
   if (!localStorage.getItem('edu-warning-accepted')) {
@@ -22,7 +23,32 @@ function acceptWarning() {
 </script>
 
 <template>
-  <v-container>
+  <v-container fluid>
+    <v-expansion-panels variant="accordion" elevation="0" class="ma-4">
+      <v-expansion-panel>
+        <v-expansion-panel-title expand-icon="" collapse-icon="" v-slot="{ expanded }">
+          <div class="d-flex align-center w-100">
+            <!-- Titolo -->
+            <h1 class="text-h5 font-weight-bold text-primary me-2">{{ msg }}</h1>
+
+            <!-- Freccia manuale vicino al titolo -->
+            <v-icon
+              :icon="expanded ? 'mdi-menu-up' : 'mdi-menu-down'"
+              class="me-2 text-primary"
+            />
+
+            <v-spacer />
+      
+          </div>
+        </v-expansion-panel-title>
+
+        <v-expansion-panel-text>
+          <h2 class="text-h6 font-weight-light">
+            <span v-html="t('educational.subtitle')" />
+          </h2>
+        </v-expansion-panel-text>
+      </v-expansion-panel>
+    </v-expansion-panels>
     <v-row justify="center" align="stretch" class="mt-4" dense>
       <!-- Educational Card 1 -->
       <v-col cols="12" md="4">

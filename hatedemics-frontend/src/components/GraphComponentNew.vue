@@ -18,12 +18,6 @@ const loading = ref(false);
 const colorBy = ref('iri');          // colore = infodemic risk score
 const sizeBy = ref('hs');   // dimensione = hate speech
 let selectedNode: { id: string; iri?: number; followers?: number } | null = null;
-const tooltip = ref<{ show: boolean; x: number; y: number; node: any | null }>({
-  show: false,
-  x: 0,
-  y: 0,
-  node: null,
-});
 const communityColors = [
   "#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd",
   "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf",
@@ -54,13 +48,8 @@ const sizeOptions = [
   { value: 'n_in_recommendation', title: t('graphInteraction.size.in') }
 ];
 
-function toggleFullScreen() {
-  const elem = document.documentElement;
-  if (!document.fullscreenElement) elem.requestFullscreen();
-  else document.exitFullscreen();
-}
 const channelsStore = useChannelsStore();
-const { selectedChannelInfo, selectedLanguage } = storeToRefs(channelsStore);
+const { selectedChannelInfo } = storeToRefs(channelsStore);
 const defaultLinkColors = new Map();
 const graphContainer = ref<HTMLElement | null>(null);
 const isFullScreen = ref(false);
@@ -191,7 +180,7 @@ const initializeGraph = () => {
     .nodeColor((node: any) => getNodeColor(node, colorBy.value))
 .nodeVal((node: any) => getNodeSize(node, sizeBy.value))
 .nodeCanvasObjectMode(() => 'before')
-.nodeCanvasObject((node, ctx, globalScale) => {
+.nodeCanvasObject((node, ctx) => {
   const isSelected = node.id === selectedNode?.id;
   const isLinked = node.id && typeof node.id === 'string' && highlightedNodes.value.has(node.id);
 
@@ -387,8 +376,8 @@ graphInstance.zoom(targetZoom, duration);
           </v-tooltip>
 
           <!-- Transizione contenuto -->
-          <v-expand-transition>
-            <div v-show="optionsExpanded">
+          <v-expand-x-transition>
+            <div v-if="optionsExpanded" class="expandable-content">
               <v-select
                 v-model="colorBy"
                 :items="colorOptions"
@@ -410,7 +399,7 @@ graphInstance.zoom(targetZoom, duration);
               </v-btn>
               <GraphLegend :colorBy="colorBy" :sizeBy="sizeBy" />
             </div>
-          </v-expand-transition>
+          </v-expand-x-transition>
         </v-card>
       </v-col>
 
@@ -466,11 +455,11 @@ graphInstance.zoom(targetZoom, duration);
             }}</span>
           </v-tooltip>
 
-          <v-expand-transition>
-            <div v-show="infoExpanded" class="flex-grow-1 pa-0">
+          <v-expand-x-transition>
+            <div v-if="infoExpanded" class="expandable-content">
               <ChannelInfoComponent />
             </div>
-          </v-expand-transition>
+          </v-expand-x-transition>
         </v-card>
       </v-col>
     </v-row>
@@ -558,5 +547,9 @@ graphInstance.zoom(targetZoom, duration);
   border: 2px solid #90a4ae; /* grigio azzurrato */
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+.expandable-content {
+  overflow: hidden;
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 </style>

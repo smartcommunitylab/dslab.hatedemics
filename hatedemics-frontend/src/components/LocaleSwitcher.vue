@@ -1,66 +1,105 @@
-<script setup>
-import { useConfig } from "@/store";
-import { useTheme } from "vuetify";
-import { VSelect } from 'vuetify/components'; // Importa il componente VSelect
+<script setup lang="ts">
+import { ref, watch, computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+import { useConfig } from '@/store';
 
+// store
 const configStore = useConfig();
-const theme = useTheme();
+const { locale } = useI18n(); // locale è un Ref<string>
+
+// lista lingue (code, label, flag)
+const locales = [
+  { code: 'en', label: 'English', flag: '🇬🇧' },
+  { code: 'it', label: 'Italiano', flag: '🇮🇹' },
+  { code: 'pl', label: 'Polski', flag: '🇵🇱' },
+  { code: 'es', label: 'Español', flag: '🇪🇸' },
+  { code: 'mt', label: 'Malti', flag: '🇲🇹' },
+];
+
+// selected = codice lingua (string). Lo sincronizziamo con i18n.locale e configStore
+const selected = ref<string>(locale.value ?? 'en');
+
+watch(selected, (v) => {
+  if (!v) return;
+  // aggiorna i18n e lo store quando l'utente cambia selezione
+  locale.value = v;
+  configStore.setLocale(v);
+});
+
+// se qualcun altro cambia locale (es. dall'app), aggiorna la select
+watch(locale, (v) => {
+  if (v && selected.value !== v) selected.value = v;
+});
+
+// computed per ottenere l'oggetto della lingua selezionata (utile nello slot selection)
+const selectedLocaleObj = computed(() => locales.find((l) => l.code === selected.value) ?? null);
+
+// helper per selezionare manualmente (usato nel slot item)
+function selectCode(code: string) {
+  selected.value = code;
+}
 </script>
 
 <template>
   <div class="locale-switcher">
-    <!-- Barra di selezione della lingua -->
     <v-select
-      v-model="$i18n.locale"
-      :items="$i18n.availableLocales"
-      @change="configStore.setLocale($event)"
+      v-model="selected"
+      :items="locales"
+      item-title="label"
+      item-value="code"
       hide-details
-      dense
+      density="compact"
       class="locale-select"
-      item-text="locale"
-      item-value="locale"
-      :menu-props="{ maxHeight: '300' }"
-    />
+      :menu-props="{ maxHeight: '300', closeOnContentClick: true }"
+    >
+      <!-- Selezione chiusa: mostro solo la bandiera (usiamo il computed per evitare ambiguità) -->
+      <template #selection>
+        <span class="flag-only">{{ selectedLocaleObj?.flag }} {{ selectedLocaleObj.label }}</span>
+      </template>
+
+      <!-- Menu aperto: ogni voce mostra bandiera + label (singola riga) -->
+      <template #item="{ item, props }">
+        <v-list-item v-bind="props" @click="selectCode(item.raw.code)">
+          <v-list-item-title>{{ item.flag }} {{ item.label }}</v-list-item-title>
+        </v-list-item>
+      </template>
+    </v-select>
   </div>
 </template>
 
 <style scoped>
-/* Stili personalizzati per il v-select */
+.locale-switcher {
+  display: flex;
+  align-items: center;
+}
+
+/* chiuso: piccolo, mostra solo la bandiera */
 .locale-select {
-  width: 150px;
-  margin: 8px;
-  font-size: 16px;
-  background-color: var(--v-theme-surface); /* Rimuove la trasparenza */
+  min-width: 56px;
+  margin: 4px 8px;
+  padding: 2px;
   border-radius: 8px;
-  border: 2px solid var(--v-theme-primary); /* Imposta il bordo */
+  border: 1px solid var(--v-theme-outline, rgba(0,0,0,0.12));
+  text-align: center;
+  margin-right: 16px;
 }
 
-/* Rimuovi la label (di default Vuetify aggiunge una label) */
-.v-select .v-input__control .v-input__slot {
-  padding: 8px 12px; /* Padding personalizzato per la selezione */
+/* all'apertura la dropdown userà gli item slot, quindi verrà mostrata la label */
+.flag-only {
+  font-size: 18px;
+  line-height: 1;
 }
 
-/* Stile per la selezione dell'elemento */
-.v-select .v-select__selection {
-  color: var(--v-theme-on-surface); /* Colore del testo selezionato */
-  background-color: var(--v-theme-surface); /* Rimuove la trasparenza */
-  padding: 8px 12px;
+/* migliorie visive voce menu */
+.v-list-item .v-list-item-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* Stile per il menu a discesa */
-.v-select .v-menu__content {
-  background-color: var(--v-theme-surface); /* Imposta lo sfondo del menu */
-  border-radius: 8px;
-}
-
-/* Rimuovi il testo sopra la selezione (la label) */
-.v-select .v-input__control .v-label {
-  display: none;
-}
-
-/* Cambia il colore dell'elemento selezionato al passaggio del mouse */
-.v-select .v-select__item--active {
-  background-color: var(--v-theme-primary); 
-  color: var(--v-theme-on-primary);
+/* puoi regolare questo se vuoi un select più largo quando è chiuso */
+@media (min-width: 800px) {
+  /* es. su schermi grandi puoi aumentare */
+  /* .locale-select { width: 72px; min-width:72px; } */
 }
 </style>

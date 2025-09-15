@@ -153,6 +153,8 @@
         "neverShow": "Don't show again"
     },
     "educational": {
+        "title": "Educational Activities",
+        "subtitle": "<p>In this section you will find interactive exercises designed to help you understand the mechanisms behind disinformation and hate speech.</p><p>You can explore <b>cognitive biases</b> and <b>logical fallacies</b>, practice <b>debunking techniques</b>, learn the principles of the <b>Human Rights Declaration</b> to understand the fundamental rights protecting human dignity, and apply <b>lateral reading</b> skills to critically evaluate online content.</p><p>Each activity is an opportunity to train your critical thinking and become more resilient against manipulation and misinformation.</p>",
         "eduCard1Title": "Human Rights Declaration",
         "eduCard1Desc": "Discover the core principles protecting human dignity.",
         "eduCard1Button": "Explore Rights",
@@ -974,6 +976,7 @@
         "addDynamicTurn": "Add dynamic turn",
         "addFromGround": "Add from ground",
         "tooltip": {
+            "label":"Channel Name",
             "startEmpty": "Press here to create an empty turn.",
             "addDynamicTurn": "Automatically generate a suggestion to start from.<br>You can still modify it afterward.",
             "addRoundUp": "Add an empty turn <em>before</em> the selected one.",
@@ -1009,7 +1012,7 @@
                 "title": "Node Statistics",
                 "description": "This table shows the data for every channel in the network. You have two main interactions:<br><ul><li><b>Sort the Table:</b> Click on any column title (e.g., <i>Number of messages</i>) to reorder the data.</li><li><b>Find a Channel:</b> Click on any row to highlight that channel on the network map and open its info panel.</li></ul>"
             },
-            "expandable": {
+            "explored": {
                 "title": "Expandable",
                 "description": "A channel is <b>expanded</b> if we collect all its chat messages, shown in the <i>Conversation</i> page.<br><br>Not expandable channels are shown in <span style='color:blue;'>blue</span> in the network."
             },
@@ -1076,5 +1079,9 @@
         "common": {
             "close": "Close"
         }
-    }
+    },
+    "buttons": {
+    "startDialogue": "Start Dialogue",
+    "delete": "Delete"
+  }
 }
