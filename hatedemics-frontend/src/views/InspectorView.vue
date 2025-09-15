@@ -35,6 +35,7 @@ const msg = ref<string>(t("inspect.title"));
 let page = 0;
 const size = 10;
 let allLoaded = false;
+const showSidebar = ref(true);
 
 // Mappa le chat con label "Chat 1", "Chat 2", ecc.
 const chatOptions = computed(() =>
@@ -61,7 +62,7 @@ const fetchChannels = async (reset = false) => {
     const { success, total, content } = await channelsStore.dispatchGetChannels(
       { page, size },
       { label: search.value }
-      );
+    );
     if (!success) {
       console.error("API error, status:", total);
       return;
@@ -147,6 +148,7 @@ const loadMore = (event: { target: any }) => {
         </v-expansion-panel-text>
       </v-expansion-panel>
     </v-expansion-panels>
+    <v-container fluid class="pa-4" style="background-color: white;">
     <v-row>
       <v-col cols="4">
         <v-autocomplete
@@ -179,15 +181,15 @@ const loadMore = (event: { target: any }) => {
           @update:model-value="updateChat"
         /> -->
         <v-select
-  :label="t('channelInfo.chats')"
-  v-model="selectedChat"
-  :items="chatOptions"
-  item-title="title"
-  item-value="value"
-  variant="outlined"
-  density="comfortable"
-  @update:model-value="updateChat"
-/>
+          :label="t('channelInfo.chats')"
+          v-model="selectedChat"
+          :items="chatOptions"
+          item-title="title"
+          item-value="value"
+          variant="outlined"
+          density="comfortable"
+          @update:model-value="updateChat"
+        />
       </v-col>
 
       <v-col cols="4" class="d-flex justify-center">
@@ -204,26 +206,50 @@ const loadMore = (event: { target: any }) => {
       </v-col>
     </v-row>
     <v-row>
-      <!-- Colonna Centrale: Tabella -->
-      <v-col cols="5">
-        <TopicsTableComponent />
-      </v-col>
+  <!-- Colonna centrale -->
+  <v-col :cols="showSidebar ? 5 : 6" class="transition-col">
+    <TopicsTableComponent />
+  </v-col>
 
-      <!-- Colonna sin: Selettori sopra, WordCloud sotto -->
-      <v-col cols="3">
-        <v-row>
-          <v-col cols="12" class="mt-4">
-            <WordCloudComponent />
-          </v-col>
-        </v-row>
-      </v-col>
-      <!-- Colonna dx: Sidebar con più spazio -->
-      <v-col cols="4">
-        <SideBarInfoComponent :actions="false" />
-      </v-col>
-    </v-row>
+  <!-- Colonna sinistra -->
+  <v-col :cols="showSidebar ? 5 : 5">
+    <WordCloudComponent />
+  </v-col>
+
+  <!-- Sidebar a destra -->
+  <v-col :cols="showSidebar ? 2 : 1" class="transition-col d-flex flex-column ">
+    <v-tooltip bottom>
+      <template #activator="{ props }">
+        <v-btn
+          v-bind="props"
+          color="primary"
+          class="mb-4"
+          @click="showSidebar = !showSidebar"
+          elevation="2"
+          style="width: 48px; height: 48px; min-width: 0; padding: 0; border-radius: 50%;"
+        >
+          <v-icon>{{ showSidebar ? "mdi-chevron-right" : "mdi-chevron-left" }}</v-icon>
+        </v-btn>
+      </template>
+      <span>
+        {{ showSidebar ? t("graphInteraction.collapseInfo") : t("graphInteraction.expandInfo") }}
+      </span>
+    </v-tooltip>
+
+    <v-expand-x-transition>
+      <SideBarInfoComponent v-show="showSidebar" :actions="false" class="expandable-content"/>
+    </v-expand-x-transition>
+  </v-col>
+</v-row>
+</v-container>
   </v-container>
   <ExploreGuideDialog v-model="showExploreGuide" />
   <TutorialInspectorDialog v-model="showTutorialInspector" />
-
 </template>
+
+<style scoped>
+.expandable-content {
+  overflow: hidden;
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+</style>

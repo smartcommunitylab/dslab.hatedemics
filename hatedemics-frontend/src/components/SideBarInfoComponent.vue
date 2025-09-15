@@ -28,11 +28,8 @@ onMounted(async () => {
 </script>
 
 <template>
-  <v-container>
-    <v-card v-if="selectedChannelInfo" class="mx-auto pa-4 rounded-lg" elevation="0">
-
-
-
+  <v-container class="pa-0" fluid>
+    <v-card v-if="selectedChannelInfo" class="mx-auto pa-0 rounded-lg" elevation="0">
       <v-card-text class="bg-surface-light pt-4">
         <v-row dense>
           <v-col cols="12" v-if="selectedChannelInfo?.preprocessed_about">

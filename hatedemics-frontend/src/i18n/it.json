@@ -155,6 +155,8 @@
         "neverShow": "Non mostrare più questo messaggio"
     },
     "educational": {
+        "title": "Attività Educative",
+        "subtitle": "<p>In questa sezione troverai esercizi interattivi pensati per aiutarti a comprendere i meccanismi alla base della disinformazione e dei discorsi d'odio.</p><p>Potrai esplorare <b>bias cognitivi</b> e <b>fallacie logiche</b>, esercitarti con tecniche di <b>debunking</b>, conoscere i principi fondamentali della <b>Dichiarazione dei Diritti Umani</b> per capire come viene tutelata la dignità umana e applicare tecniche di <b>lettura laterale</b> per valutare criticamente i contenuti online.</p><p>Ogni attività è un’occasione per allenare il pensiero critico e diventare più resistente alla manipolazione e alla disinformazione.</p>"      ,
         "eduCard1Title": "Dichiarazione dei Diritti Umani",
         "eduCard1Desc": "Scopri i principi fondamentali che tutelano la dignità umana.",
         "eduCard1Button": "Esplora i diritti",
@@ -423,7 +425,7 @@
                                         "correct": false
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "Nessuno dei precedenti",
                                         "correct": false
                                     }
                                 ],
@@ -468,7 +470,7 @@
                                         "correct": false
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "Nessuno dei precedenti",
                                         "correct": false
                                     }
                                 ],
@@ -513,7 +515,7 @@
                                         "correct": false
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "Nessuno dei precedenti",
                                         "correct": false
                                     }
                                 ],
@@ -558,7 +560,7 @@
                                         "correct": true
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "Nessuno dei precedenti",
                                         "correct": false
                                     }
                                 ],
@@ -600,7 +602,7 @@
                                         "correct": true
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "Nessuno dei precedenti",
                                         "correct": false
                                     }
                                 ],
@@ -629,7 +631,7 @@
                                         "correct": false
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "Nessuno dei precedenti",
                                         "correct": true
                                     }
                                 ],
@@ -658,7 +660,7 @@
                                         "correct": false
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "Nessuno dei precedenti",
                                         "correct": true
                                     }
                                 ],
@@ -687,7 +689,7 @@
                                         "correct": false
                                     },
                                     {
-                                        "text": "Not Found",
+                                        "text": "Nessuno dei precedenti",
                                         "correct": false
                                     }
                                 ],
@@ -704,10 +706,12 @@
             }
         }
     },
+   
     "inspect": {
         "title": "Panoramica del Canale",
 "subtitle": "<p>In questa pagina puoi visualizzare nel dettaglio il contenuto di un singolo canale Telegram. La tabella mostra i temi principali del canale, quanto compaiono nei messaggi, la percentuale di discorsi d’odio e di verificabilità (check-worthiness) per ciascuno e il sentiment prevalente.</p><p>A destra troverai le informazioni chiave sul canale, mentre le word cloud visualizzano quali termini compaiono più spesso nei messaggi non di odio e in quelli di odio, e nei messaggi considerati verificabili e non verificabili.</p><p>Usa i filtri e i pulsanti per passare dalla visuale delle chat dei canali agli argomenti, o per regolare il tipo di word cloud che vedi. Se posizioni il mouse su un’etichetta o su un pulsante, vedrai una breve spiegazione della sua funzione.</p>"
     },
+    
     "channel": {
         "title": "Esplorazione della Rete",
         "subtitle": "<p>Qui sotto puoi vedere una rete di canali Telegram, in cui ogni canale è un punto ('nodo'). Questi canali sono collegati quando Telegram ne raccomanda automaticamente uno a un altro, di solito perché condividono molti degli stessi utenti.</p><p>Puoi esplorare la rete e la tabella per scoprire canali reali che potrebbero diffondere disinformazione o discorsi d'odio.</p><p>Modifica il colore e la dimensione dei canali, filtra e riordina le loro caratteristiche per trovare quelli che ti interessano di più.</p> <p>Seleziona un canale per vedere le sue statistiche e i suoi argomenti principali.</p>",
@@ -931,6 +935,7 @@
         "addDynamicTurn": "Aggiungi turno dinamico",
         "addFromGround": "Aggiungi da fonte",
         "tooltip": {
+            "label":"Nome del Canale",
             "startEmpty": "Premi qui per creare un turno vuoto.",
             "addDynamicTurn": "Genera automaticamente un suggerimento da cui iniziare.<br>Puoi comunque modificarlo in seguito.",
             "addRoundUp": "Aggiungi un turno vuoto <em>prima</em> di quello selezionato.",
@@ -966,7 +971,7 @@
                 "title": "Statistiche dei nodi",
                 "description": "Questa tabella mostra i dati di ogni canale nella rete. Hai due interazioni principali:<br><ul><li><b>Ordina la tabella:</b> clicca su qualsiasi titolo di colonna (es. <i>Numero di messaggi</i>) per riordinare i dati.</li><li><b>Trova un canale:</b> clicca su qualsiasi riga per evidenziare quel canale sulla mappa della rete e aprire il suo pannello informativo.</li></ul>"
             },
-            "expandable": {
+            "explored": {
                 "title": "Espandibile",
                 "description": "Un canale è <b>espanso</b> se raccogliamo tutti i suoi messaggi, mostrati nella pagina <i>Conversazione</i>.<br><br>I canali non espandibili sono mostrati in <span style='color:blue;'>blu</span> nella rete."
             },
@@ -1031,5 +1036,9 @@
   }
 }
 
-    }
+    },
+    "buttons": {
+    "startDialogue": "Avvia Dialogo",
+    "delete": "Elimina"
+  }
 }

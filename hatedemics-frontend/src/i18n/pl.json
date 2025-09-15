@@ -153,6 +153,8 @@
         "neverShow": "Nie pokazuj ponownie"
     },
     "educational": {
+        "title": "Działania Edukacyjne",
+        "subtitle": "<p>W tej sekcji znajdziesz interaktywne ćwiczenia zaprojektowane, aby pomóc Ci zrozumieć mechanizmy stojące za dezinformacją i mową nienawiści.</p><p>Możesz odkrywać <b>biasy poznawcze</b> i <b>błędy logiczne</b>, ćwiczyć techniki <b>demaskowania</b>, poznać podstawowe zasady <b>Deklaracji Praw Człowieka</b>, aby zrozumieć ochronę ludzkiej godności, oraz stosować <b>czytanie boczne</b>, aby krytycznie oceniać treści online.</p><p>Każde ćwiczenie to okazja do rozwijania myślenia krytycznego i budowania odporności na manipulację oraz dezinformację.</p>",      
         "eduCard1Title": "Deklaracja praw człowieka",
         "eduCard1Desc": "Odkryj podstawowe zasady chroniące ludzką godność.",
         "eduCard1Button": "Odkrywać prawa",
@@ -869,6 +871,7 @@
         "addDynamicTurn": "Dodaj dynamiczny obrót",
         "addFromGround": "Dodaj z ziemi",
         "tooltip": {
+            "label":"Nazwa kanału",
             "startEmpty": "Naciśnij tutaj, aby utworzyć pusty zakręt.",
             "addDynamicTurn": "Automatycznie generuj sugestię na początek.<br>Nadal możesz to później zmodyfikować.",
             "addRoundUp": "Dodaj pusty obrót <em>zanim</em> wybrany.",
@@ -904,7 +907,7 @@
                 "title": "Statystyki węzłów",
                 "description": "Ta tabela pokazuje dane dla każdego kanału w sieci. Masz dwie główne interakcje:<br><ul><li><b>Sortowanie tabeli:</b> Kliknij dowolny nagłówek kolumny (np. <i>Liczba wiadomości</i>), aby posortować dane.</li><li><b>Znajdź kanał:</b> Kliknij dowolny wiersz, aby podświetlić ten kanał na mapie sieci i otworzyć jego panel informacyjny.</li></ul>"
             },
-            "expandable": {
+            "explored": {
                 "title": "Rozszerzalny",
                 "description": "Kanał jest <b>rozszerzony</b>, jeśli zbieramy wszystkie jego wiadomości, pokazane na stronie <i>Rozmowa</i>.<br><br>Kanały nierozszerzalne są pokazane na <span style='color:blue;'>niebiesko</span> w sieci."
             },
@@ -968,5 +971,9 @@
                 "details": "Naciśnij ten przycisk, aby wybrać temat do napisania counterspeech. Następnie zostaniesz przekierowany na <b>stronę pisania counterspeech</b>."
             }
         }
-    }
+    },
+    "buttons": {
+    "startDialogue": "Rozpocznij dialog",
+    "delete": "Usuń"
+  }
 }
