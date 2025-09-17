@@ -13,7 +13,7 @@ import GraphLegend from "@/components/GraphLegend.vue";
 
 const { t } = useI18n();
 const highlightedNodes = ref<Set<string>>(new Set());
-
+const sizeScale = ref(1.0);
 const loading = ref(false);
 const colorBy = ref('iri');          // colore = infodemic risk score
 const sizeBy = ref('hs');   // dimensione = hate speech
@@ -77,7 +77,7 @@ const getNodeColor = (node: any, colorBy: string) => {
       return getColorByValue(node.n_out_recommended?node.n_out_recommended:undefined, 0, 300);
     case "n_in_recommendation":
       return getColorByValue(node.n_in_recommendation?node.n_in_recommendation:undefined, 0, 300);
-      case "louvain_community": {
+    case "louvain_community": {
       const community = node.louvain_community ?? -1;
       if (community < 0) return "#ccc"; // colore di default se manca
       return communityColors[community % communityColors.length];
@@ -101,19 +101,27 @@ const scaleNodeSize = (value: number|undefined, min: number, max: number, sizeMi
    * @param {string} sizeBy - Il campo da utilizzare per determinare la grandezza
    * @returns {number} La grandezza del nodo
    */
-const getNodeSize = (node: any, sizeBy: string) => {
+   const getNodeSize = (node: any, sizeBy: string) => {
+  let baseSize = 8; // default se nulla
+
   switch (sizeBy) {
     case "iri":
-      return scaleNodeSize(node.iri?node.iri:undefined, 0, 50, 10, 50); // hs tra 0 e 1 → grandezza tra 20 e 60
+      baseSize = scaleNodeSize(node.iri ? node.iri : undefined, 0, 50, 10, 50);
+      break;
     case "hs":
-      return scaleNodeSize(node.hs?node.hs*100:undefined, 0, 50, 10, 50); // hs tra 0 e 1 → grandezza tra 20 e 50
+      baseSize = scaleNodeSize(node.hs ? node.hs * 100 : undefined, 0, 50, 10, 50);
+      break;
     case "n_out_recommended":
-      return scaleNodeSize(node.n_out_recommended?node.n_out_recommended:undefined, 0, 300, 10, 50); // out_degree tra 0 e 10 → 5-20
+      baseSize = scaleNodeSize(node.n_out_recommended, 0, 300, 10, 50);
+      break;
     case "n_in_recommendation":
-      return scaleNodeSize(node.n_in_recommendation?node.n_in_recommendation:undefined, 0, 300, 10, 50);
+      baseSize = scaleNodeSize(node.n_in_recommendation, 0, 300, 10, 50);
+      break;
     default:
-      return 0; // Default size
+      baseSize = 8;
   }
+
+  return Math.pow(baseSize, sizeScale.value);
 };
 
 
@@ -124,7 +132,11 @@ watch(sizeBy, (newValue) => {
     // graphInstance.refresh();  // Forza l'aggiornamento
   }
 });
-
+watch(sizeScale, () => {
+  if (graphInstance) {
+    graphInstance.nodeVal((node: any) => getNodeSize(node, sizeBy.value));
+  }
+});
 watch(colorBy, (newValue) => {
   if (graphInstance) {
     graphInstance.nodeColor((node: any) => getNodeColor(node, newValue));
@@ -136,6 +148,7 @@ function resetGraphView() {
   graphInstance.zoomToFit(1000);
   colorBy.value = "iri";
   sizeBy.value = 'hs';
+  sizeScale.value = 1.0;
 }
 watch(selectedChannelInfo, (newValue, oldValue) => {
   if (newValue?.id === oldValue?.id) return;
@@ -209,6 +222,11 @@ const size = Math.max(1, isNaN(sizeRaw) ? 1 : sizeRaw);
     ctx.restore();
   }
 })
+
+
+
+
+
 .linkWidth(getLinkWidth)
 .linkColor((link: any) => {
   defaultLinkColors.set(link, "gray");
@@ -347,7 +365,7 @@ graphInstance.zoom(targetZoom, duration);
         class="d-flex flex-column"
       >
         <v-card
-          class="pa-4 d-flex flex-column fill-height"
+          class="pa-1 d-flex flex-column fill-height"
           elevation="0"
           outlined
           style="border-radius: 8px; border-color: #90a4ae"
@@ -384,7 +402,7 @@ graphInstance.zoom(targetZoom, duration);
                 :label="t('graphInteraction.color.label')"
                 density="compact"
                 variant="outlined"
-                class="mb-2"
+                class="mb-2 mt-2"
               />
               <v-select
                 v-model="sizeBy"
@@ -394,6 +412,20 @@ graphInstance.zoom(targetZoom, duration);
                 variant="outlined"
                 class="mb-2"
               />
+              <div class="mb-4">
+                <label class="text-body-2 font-weight-medium mb-1 d-block">
+                  {{ t("graphInteraction.size.scale") }}
+                </label>
+                <v-slider
+                  v-model="sizeScale"
+                  :min="0.5"
+                  :max="3"
+                  :step="0.1"
+                  class="w-100"
+                  thumb-label="always"
+                  color="primary"
+                />
+              </div>
               <v-btn color="secondary" class="mb-2" block @click="resetGraphView">
                 {{ t("graphInteraction.resetView") }}
               </v-btn>
@@ -403,10 +435,8 @@ graphInstance.zoom(targetZoom, duration);
         </v-card>
       </v-col>
 
-      <v-col
-    class="d-flex flex-column"
-    style="flex-grow:1; min-width:0;"
-  >        <!-- GRAFICO + LOADING -->
+      <v-col class="d-flex flex-column" style="flex-grow: 1; min-width: 0">
+        <!-- GRAFICO + LOADING -->
         <div class="flex-grow-1 position-relative">
           <v-overlay :model-value="loading" class="align-center justify-center">
             <v-progress-circular color="primary" size="64" indeterminate />

@@ -801,7 +801,7 @@
       "large": "Kbir",
       "defaultColor": "Kulur awtomatiku għan-nodi kollha",
       "defaultSize": "Daqs awtomatiku għan-nodi kollha",
-      "nonExpandable": "Kanali li ma jistgħux jespandu"
+      "nonExpandable": "Valur null"
     },
     "resetView": "Irrisettja veduta",
     "color": {
@@ -828,7 +828,8 @@
       "out_degree": "Barra l-grad ",
       "in_degree": "Fil-grad ",
       "n_out_recommended": "Rakkomandazzjonijiet barra",
-      "n_in_recommended": "Fir-rakkomandazzjonijiet"
+      "n_in_recommended": "Fir-rakkomandazzjonijiet",
+      "scale":"Piż"
     },
     "tooltip": {
       "label": "Isem tal-kanal",

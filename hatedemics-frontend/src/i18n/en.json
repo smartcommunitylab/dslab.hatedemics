@@ -803,7 +803,7 @@
             "large": "Large",
             "defaultColor": "Default Color for all nodes",
             "defaultSize": "Default Size for all nodes",
-            "nonExpandable": "Non expandable nodes / null value"
+            "nonExpandable": "Undefined value"
         },
         "resetView": "Reset view",
         "color": {
@@ -834,7 +834,8 @@
             "n_in_recommendation": "In Recommendations",
             "n_out_recommendation": "Out Recommendations",
             "n_in_recommended": "In Recommendations",
-            "n_out_recommended": "Out Recommendations"
+            "n_out_recommended": "Out Recommendations",
+            "scale": "Weighted scale"
         },
         "tooltip": {
             "label": "Label",

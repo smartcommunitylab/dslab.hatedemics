@@ -698,7 +698,7 @@
             "large": "Duży",
             "defaultColor": "Domyślny kolor dla wszystkich węzłów",
             "defaultSize": "Domyślny rozmiar dla wszystkich węzłów",
-            "nonExpandable": "Nie można rozwinąć"
+            "nonExpandable": "Wartość null"
         },
         "resetView": "Zresetuj widok",
         "color": {
@@ -729,7 +729,8 @@
             "n_in_recommendation": "W zaleceń",
             "n_out_recommendation": "Zalecenia",
             "n_out_recommended": "Zalecenia",
-            "n_in_recommended": "W zaleceń"
+            "n_in_recommended": "W zaleceń",
+            "scale":"Waga"
         },
         "tooltip": {
             "label": "Etykieta",
