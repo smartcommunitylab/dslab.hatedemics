@@ -770,7 +770,7 @@
             "low": "Basso",
             "medium": "Medio",
             "high": "Alto",
-            "nonExpandable": "Nodi non espandibili / valore nullo"
+            "nonExpandable": "Valore nullo"
         },
         "color": {
             "disable": "Nessuno (colore fisso)",
@@ -797,7 +797,8 @@
             "n_in_recommendation": "Nodi in entrata",
             "n_out_recommendation": "Nodi in uscita",
             "n_out_recommended": "Nodi in uscita",
-            "n_in_recommended": "Nodi  in entrata"
+            "n_in_recommended": "Nodi  in entrata",
+            "scale": "Peso"
         },
         "resetView": " Reimposta vista",
         "tooltip": {

@@ -769,7 +769,7 @@
             "large": "Grande",
             "defaultColor": "Color predeterminado para todos los nodos",
             "defaultSize": "Tamaño predeterminado para todos los nodos",
-            "nonExpandable": "Nodos no expandibles / valor nulo"
+            "nonExpandable": "Valor nulo"
         },
         "resetView": "Vista de reinicio",
         "color": {
@@ -800,7 +800,8 @@
             "n_in_recommendation": "En recomendaciones",
             "n_out_recommendation": "Recomendaciones",
             "n_out_recommended": "Recomendaciones",
-            "n_in_recommended": "En recomendaciones"
+            "n_in_recommended": "En recomendaciones",
+            "scale":"Peso"
         },
         "tooltip": {
             "label": "Etiqueta",
