@@ -220,16 +220,18 @@ const loadMore = (event: { target: any }) => {
   <v-col :cols="showSidebar ? 2 : 1" class="transition-col d-flex flex-column ">
     <v-tooltip bottom>
       <template #activator="{ props }">
+      <div>
         <v-btn
           v-bind="props"
           color="primary"
           class="mb-4"
           @click="showSidebar = !showSidebar"
           elevation="2"
-          style="width: 48px; height: 48px; min-width: 0; padding: 0; border-radius: 50%;"
+          block
         >
           <v-icon>{{ showSidebar ? "mdi-chevron-right" : "mdi-chevron-left" }}</v-icon>
         </v-btn>
+      </div>
       </template>
       <span>
         {{ showSidebar ? t("graphInteraction.collapseInfo") : t("graphInteraction.expandInfo") }}
