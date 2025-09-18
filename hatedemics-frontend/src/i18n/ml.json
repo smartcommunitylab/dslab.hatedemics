@@ -848,7 +848,7 @@
     }
   },
   "topicsTable": {
-    "title": "Suġġetti ewlenin tal-kanal",
+    "title": "Suġġetti ewlenin taċ-chat",
     "header": {
       "title": "Titlu",
       "count": "% tal-messaġġi",
@@ -943,7 +943,7 @@
     "generic": "Ġeneriku",
     "select": "Agħżel it-tip WordCloud",
     "selectTopic": "Agħżel suġġett",
-    "channel": "Kanal",
+    "channel": "Chat",
     "titles": {
       "hate": "Diskors ta ’mibegħda",
       "is_checkworthy": "Iċċekkja denja",

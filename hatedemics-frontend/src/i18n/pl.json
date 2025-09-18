@@ -749,7 +749,7 @@
         }
     },
     "topicsTable": {
-        "title": "Główne tematy kanału",
+        "title": "Główne tematy czatu",
         "header": {
             "title": "Tytuł",
             "count": "% wiadomości",
@@ -846,7 +846,7 @@
         "generic": "Ogólny",
         "select": "Wybierz WordCloud Typ",
         "selectTopic": "Wybierz temat",
-        "channel": "Kanał",
+        "channel": "Czat",
         "titles": {
             "hate": "Nienawiść mowa",
             "is_checkworthy": "Sprawdź godny",

@@ -818,7 +818,7 @@
         }
     },
     "topicsTable": {
-        "title": "Argomenti principali del canale",
+        "title": "Argomenti principali della chat",
         "header": {
             "title": "Titolo",
             "count": "% di messaggi",
@@ -914,7 +914,7 @@
         "generic": "Generico",
         "select": "Seleziona tipo WordCloud",
         "selectTopic": "Seleziona un argomento",
-        "channel": "Canale",
+        "channel": "Chat",
         "titles": {
             "hate": "Hate Speech",
             "is_checkworthy": "Check Worthy",
