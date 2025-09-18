@@ -77,7 +77,7 @@ container_scanning:
 deploy-prod:
   stage: deploy
   image: 
-    name: bitnami/kubectl:latest
+    name: smartcommunitylab/k8s-ansible-clusterctl:1.33.3-1.10.3
     entrypoint: ['']
   environment:
     name: dslab
