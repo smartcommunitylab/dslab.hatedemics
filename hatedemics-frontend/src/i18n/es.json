@@ -820,7 +820,7 @@
         }
     },
     "topicsTable": {
-        "title": "Temas principales del canal",
+        "title": "Temas principales del chat",
         "header": {
             "title": "Título",
             "count": "% de mensajes",
@@ -917,7 +917,7 @@
         "generic": "Genérico",
         "select": "Seleccione Tipo de Cloud de Word",
         "selectTopic": "Seleccione un tema",
-        "channel": "Canal",
+        "channel": "Chat",
         "titles": {
             "hate": "Discurso de odio",
             "is_checkworthy": "Cheque digno",
