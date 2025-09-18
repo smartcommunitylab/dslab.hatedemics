@@ -373,18 +373,20 @@ graphInstance.zoom(targetZoom, duration);
           <!-- Pulsante espandi/collassa -->
           <v-tooltip bottom>
             <template #activator="{ props }">
+            <div>
               <v-btn
+                block
                 v-bind="props"
                 color="primary"
                 class="mb-4"
                 @click="optionsExpanded = !optionsExpanded"
                 elevation="2"
-                :style="'width: 48px; height: 48px; min-width: 0; padding: 0; border-radius: 50%;'"
               >
                 <v-icon>{{
                   optionsExpanded ? "mdi-chevron-left" : "mdi-chevron-right"
                 }}</v-icon>
               </v-btn>
+            </div>
             </template>
             <span>{{
               optionsExpanded
@@ -465,18 +467,20 @@ graphInstance.zoom(targetZoom, duration);
         >
           <v-tooltip bottom>
             <template #activator="{ props }">
+            <div>
               <v-btn
                 v-bind="props"
                 color="primary"
+                block
                 class="mb-4"
                 @click="infoExpanded = !infoExpanded"
                 elevation="2"
-                :style="'width: 48px; height: 48px; min-width: 0; padding: 0; border-radius: 50%;'"
               >
                 <v-icon>{{
                   infoExpanded ? "mdi-chevron-right" : "mdi-chevron-left"
                 }}</v-icon>
               </v-btn>
+            </div>
             </template>
             <span>{{
               infoExpanded
