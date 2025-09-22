@@ -15,6 +15,7 @@ export type Node = {
     cw: number;
     hs: number,
     iri: number,
+    degree_centrality: number;
     n_out_recommended: number;
     n_in_recommendation: number;
     louvain_community: number;
@@ -60,6 +61,7 @@ async function initData() {
             hs: nodesData.data[node].hs,
             iri: parseFloat(nodesData.data[node].iri),
             //  size:nodesData.data[node].iri* 20 + 5,
+            degree_centrality: nodesData.data[node].degree_centrality,
             n_out_recommended: nodesData.data[node].n_out_recommended,
             n_in_recommendation: nodesData.data[node].n_in_recommendation,
             louvain_community: nodesData.data[node].louvain_community

@@ -23,6 +23,7 @@ export type ChannelInfo = {
   n_in_recommendation: number
   explored: string
   expandable: string 
+  degree_centrality: number
   n_out_recommended: number
   participation_score: number
   message_count: number

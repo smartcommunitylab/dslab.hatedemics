@@ -51,6 +51,11 @@ onMounted(async () => {
             <span class="font-weight-bold">{{ t("channelInfo.nMessages") }}</span>
             {{ selectedChannelInfo.message_count }}
           </v-col>
+          <v-col cols="12" v-if="selectedChannelInfo?.degree_centrality">
+            <v-icon class="mr-2" color="primary">mdi-graph-outline</v-icon>
+            <span class="font-weight-bold">{{ t("channelInfo.degreeCentrality") }}</span>
+            {{ selectedChannelInfo.degree_centrality }}
+          </v-col>
 
           <v-col cols="12" v-if="selectedChannelInfo?.participants_count">
             <v-icon class="mr-2" color="primary">mdi-account-group</v-icon>

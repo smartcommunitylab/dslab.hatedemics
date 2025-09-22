@@ -180,7 +180,7 @@
                 "objectivesTitle": "Obiettivi",
                 "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Sviluppare conoscenze sui diritti umani;</li><li>Aumentare la consapevolezza su come il tema dei diritti umani sia oggetto di incitamento all'odio e sia bersaglio anche della disinformazione;</li><li>Apprendere tecniche di argomentazione per ragire e contrastare l'incitamento all'odio e la disinformazione.</li></ul>",
                 "startButton": "Inizia",
-                "task": "Formate 11 gruppi. Ogni gruppo prende una carta. Ogni gruppo discute il significato del diritto umano scritto sulla propria carta. Dopo 5 minuti, il primo gruppo spiega cosa significhi questo diritto e come possa esere oggetto di incitamento all'odio. L'insegnante può aggiungere ulteriori spiegazioni se necessario. Quindi, il gruppo successivo, con la carta successiva, spiega il significato del proprio diritto e il suo potenziale collegamento al discorso d'odio. Questo processo si ripete finché tutti i gruppi non avranno condiviso la spiegazione della propria carta.",
+                "task": "Formate 12 gruppi. Ogni gruppo prende una carta. Ogni gruppo discute il significato del diritto umano scritto sulla propria carta. Dopo 5 minuti, il primo gruppo spiega cosa significhi questo diritto e come possa esere oggetto di incitamento all'odio. L'insegnante può aggiungere ulteriori spiegazioni se necessario. Quindi, il gruppo successivo, con la carta successiva, spiega il significato del proprio diritto e il suo potenziale collegamento al discorso d'odio. Questo processo si ripete finché tutti i gruppi non avranno condiviso la spiegazione della propria carta.",
                 "completetask": "Ho completato l'attività",
                 "taskCompleteTitle": "Attività completata",
                 "taskCompleteText": "Conoscevi già tutti i diritti umani menzionati? Quali ti sono nuovi?È stato facile o difficile spiegare il significato di questi diritti e trovare un collegamento tra questi diritti e l'incitamento all'odio?Puoi nominare altri diritti umani che non sono stati menzionati?",
@@ -274,6 +274,7 @@
                     {
                         "title": "Domanda 2",
                         "question": "Effettuando una ricerca per immagini inversa avresti trovato questa immagine. Cosa puoi dedurre osservandola?",
+                        "image": "/img/debunking/it/answer1.png",
                         "options": [
                             {
                                 "text": "E' una immagine generata da Intelligenza Artificiale"
@@ -744,6 +745,7 @@
             "IRI": "Infodemic Risk",
             "CW": "Check Worthy",
             "hs": "Hate Speech",
+            "degreeCentrality": "Centralità di Grado",
             "nInRecommendations": "Raccomandazioni in entrata",
             "nOutRecommendations": "Raccomandazioni in uscita",
             "expandable": "Espandibile",
@@ -782,6 +784,7 @@
             "n_out_recommendation": "Nodi in uscita",
             "n_out_recommended": "Nodi in uscita",
             "n_in_recommended": "Nodi  in entrata",
+            "degree_centrality": "Centralità di Grado",
             "community": "Comunità",
             "louvain_community": "Ogni colore rappresenta una comunità diversa"
         },
@@ -798,6 +801,7 @@
             "n_out_recommendation": "Nodi in uscita",
             "n_out_recommended": "Nodi in uscita",
             "n_in_recommended": "Nodi  in entrata",
+            "degree_centrality": "Centralità di Grado",
             "scale": "Peso"
         },
         "resetView": " Reimposta vista",
@@ -810,7 +814,8 @@
             "hs": "Hate Speech:",
             "cw": "Check Worthy:",
             "in": "In recommendations:",
-            "out": "Out recommendations:"
+            "out": "Out recommendations:",
+            "degree_centrality": "Centralità di Grado:"
         },
         "fs": {
             "exit": "Finestra",
@@ -848,7 +853,8 @@
         "topics": "Argomenti principali",
         "exploreChannel": "Esplora il canale",
         "hs_percentage": "Hate Speech:",
-        "cw_percentage": "Check Worthy:"
+        "cw_percentage": "Check Worthy:",
+        "degreeCentrality": "Centralità di Grado:"
     },
     "message": {
         "title": "Approfondimenti Chat ",
@@ -950,7 +956,8 @@
             "languages": "Lingua del canale",
             "iri": "Indice di Rischio Infodemia del canale",
             "hs_percentage": "Percentuale di messaggi considerati Hate Speech",
-            "cw_percentage": "Percentuale di messaggi considerati Check Worthy"
+            "cw_percentage": "Percentuale di messaggi considerati Check Worthy",
+            "degreeCentrality": "Centralità di Grado del canale"
         }
     },
     "guide": {

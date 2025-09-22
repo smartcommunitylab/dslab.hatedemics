@@ -178,7 +178,7 @@
                 "objectivesTitle": "Objectives",
                 "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Developing knowledge about human rights;</li><li>Rising awareness about connection between human rights and hate speech and disinformation;</li><li>Learning possible argument for reaction on hate speech and disinformation.</li></ul>",
                 "startButton": "Start",
-                "task": "Form 11 groups. Each group picks up one card. Each group discusses the meaning of the human right written on their card. After 5 minutes, the first group explains what the right means to them and how it connects to hate speech. The teacher may add to their explanation if needed.\nThen, the next group with the following card explains the meaning of their right and its connection to hate speech. Repeat this process until all groups have shared.",
+                "task": "Form 12 groups. Each group picks up one card. Each group discusses the meaning of the human right written on their card. After 5 minutes, the first group explains what the right means to them and how it connects to hate speech. The teacher may add to their explanation if needed.\nThen, the next group with the following card explains the meaning of their right and its connection to hate speech. Repeat this process until all groups have shared.",
                 "completetask": "I have completed the activity",
                 "taskCompleteTitle": "Activity completed",
                 "taskCompleteText": "Did you already know all the human rights mentioned? Which ones are new to you? Was it easy or difficult to explain the meaning of these rights and find a link between them and hate speech? Can you name other human rights that were not mentioned?",
@@ -247,7 +247,7 @@
                 "questions": [
                     {
                         "title": "Question 1",
-                        "scenario_description": "You have received this picture that shows a photo of a boat with illegal immigrants trying to get to Australia. It´s says the boat was blocked and the immigrants were all returned back.",
+                        "scenario_description": "You have received this picture that shows a photo of a boat with illegal immigrants trying to get to Australia. It says the boat was blocked and the immigrants were all returned back.",
                         "question": "How would you verify?",
                         "image": "/img/debunking/en/question1.jpg",
                         "options": [
@@ -272,6 +272,7 @@
                     {
                         "title": "Question 2",
                         "question": "By performing a reverse image search you would have found this image. What can you conclude from observing it?",
+                        "image": "/img/debunking/en/answer1.jpg",
                         "options": [
                             {
                                 "text": "It´s an AI picture"
@@ -603,11 +604,11 @@
                                 "options": [
                                     {
                                         "text": "Screenshot 1",
-                                        "correct": false
+                                        "correct": true
                                     },
                                     {
                                         "text": "Screenshot 2",
-                                        "correct": false
+                                        "correct": true
                                     },
                                     {
                                         "text": "Screenshot 3",
@@ -623,12 +624,12 @@
                                     },
                                     {
                                         "text": "Not Found",
-                                        "correct": true
+                                        "correct": false
                                     }
                                 ],
                                 "feedback": {
-                                    "correct": "Well done! We cannot find this information, just a vague mention about ‘our team of writers’ in the ‘about us section’. We can read that ‘The ThePeoplesVoice.tv website (the ‘Site’) is comprised of various web pages operated by ‘Fact Checked Limited.’ (screenshot 1) A search for ‘Fact Checked Limited’ does not provide information about the authors of the website. Instead, we can find debunks from fact-checking websites such as Africa check, Maldita and TheCanadianPress, which highlight false content published by Fact Checked Limited. If we check some of the ‘news articles’ published we can find that Baxter Dmitry is the author of several articles (screenshot 5). The search for Baxter Dmitry does not bring information about the alleged journalist (such as his biography, a LinkedIn profile or other contributions in different media). Instead, we can find some articles that show that Baxter Dmitry is a regular contributor of this ‘alternative reality web’ or that had previously been posing as an unrelated Latvian man using a stolen profile photo.",
-                                    "incorrect": "Not quite.We cannot find this information, just a vague mention about ‘our team of writers’ in the ‘about us section’. We can read that ‘The ThePeoplesVoice.tv website (the ‘Site’) is comprised of various web pages operated by ‘Fact Checked Limited.’ (screenshot 1) A search for ‘Fact Checked Limited’ does not provide information about the authors of the website. Instead, we can find debunks from fact-checking websites such as Africa check, Maldita and TheCanadianPress, which highlight false content published by Fact Checked Limited. If we check some of the ‘news articles’ published we can find that Baxter Dmitry is the author of several articles (screenshot 5). The search for Baxter Dmitry does not bring information about the alleged journalist (such as his biography, a LinkedIn profile or other contributions in different media). Instead, we can find some articles that show that Baxter Dmitry is a regular contributor of this ‘alternative reality web’ or that had previously been posing as an unrelated Latvian man using a stolen profile photo."
+                                    "correct": "Well done! We cannot find  complete and transparent information, just a vague mention (screenshot 2) about ‘our team of writers’ in the ‘about us section’. We can read that ‘The ThePeoplesVoice.tv website (the ‘Site’) is comprised of various web pages operated by ‘Fact Checked Limited.’ (screenshot 3) A search for ‘Fact Checked Limited’ does not provide information about the authors of the website. Instead, we can find debunks from fact-checking websites such as Africa check, Maldita and TheCanadianPress, which highlight false content published by Fact Checked Limited.If we check some of the ‘news articles’ published (screenshot 6) we can find that Baxter Dmitry is the author of several articles (screenshot 5). The search for Baxter Dmitry does not bring information about the alleged journalist (such as his biography, a LinkedIn profile or other contributions in different media). Instead, we can find some articles that show that Baxter Dmitry is a regular contributor of this ‘alternative reality web’ or that had previously been posing as an unrelated Latvian man using a stolen profile photo.",
+                                    "incorrect": "Not quite.We cannot find  complete and transparent information, just a vague mention (screenshot 2) about ‘our team of writers’ in the ‘about us section’. We can read that ‘The ThePeoplesVoice.tv website (the ‘Site’) is comprised of various web pages operated by ‘Fact Checked Limited.’ (screenshot 3) A search for ‘Fact Checked Limited’ does not provide information about the authors of the website. Instead, we can find debunks from fact-checking websites such as Africa check, Maldita and TheCanadianPress, which highlight false content published by Fact Checked Limited.If we check some of the ‘news articles’ published (screenshot 6) we can find that Baxter Dmitry is the author of several articles (screenshot 5). The search for Baxter Dmitry does not bring information about the alleged journalist (such as his biography, a LinkedIn profile or other contributions in different media). Instead, we can find some articles that show that Baxter Dmitry is a regular contributor of this ‘alternative reality web’ or that had previously been posing as an unrelated Latvian man using a stolen profile photo."
                                 }
                             },
                             {
@@ -771,6 +772,7 @@
             "id": "ID",
             "messages": "Number of messages",
             "partecipants": "Number of users",
+            "degreeCentrality": "Degree Centrality",
             "IRI": "Infodemic Risk",
             "CW": "Check Worthy",
             "hs": "Hate Speech",
@@ -820,7 +822,8 @@
             "n_out_recommended": "Out Recommendations",
             "community": "Community",
             "label": "Color",
-            "louvain_community": "Every color represents a different community"
+            "louvain_community": "Every color represents a different community",
+            "degree_centrality": "Degree Centrality"
         },
         "size": {
             "disable": "Disable size",
@@ -835,7 +838,9 @@
             "n_out_recommendation": "Out Recommendations",
             "n_in_recommended": "In Recommendations",
             "n_out_recommended": "Out Recommendations",
-            "scale": "Weighted scale"
+            "scale": "Weighted scale",
+            "degree_centrality": "Degree Centrality"
+
         },
         "tooltip": {
             "label": "Label",
@@ -846,7 +851,9 @@
             "hs": "Hate Speech:",
             "cw": "Check Worthy:",
             "in": "In Recommendations:",
-            "out": "Out Recommendations:"
+            "out": "Out Recommendations:",
+            "degree_centrality": "Degree Centrality:"
+
         },
         "fs": {
             "exit": "Exit",
@@ -884,7 +891,9 @@
         "channels": "Channels",
         "chats": "Chats",
         "hs_percentage": "Hate Speech:",
-        "cw_percentage": "Check Worthy:"
+        "cw_percentage": "Check Worthy:",
+        "degreeCentrality": "Degree Centrality:"
+
     },
     "message": {
         "title": "Chat Insights",
@@ -991,7 +1000,8 @@
             "languages": "Languages used in the channel",
             "iri": "Infodemic Risk Index of the channel",
             "hs_percentage": "Percentage of messages that are considered Hate Speech",
-            "cw_percentage": "Percentage of messages that are considered Check Worthy"
+            "cw_percentage": "Percentage of messages that are considered Check Worthy",
+            "degreeCentrality":"Network degree centrality of the channel"
         }
     },
     "guide": {

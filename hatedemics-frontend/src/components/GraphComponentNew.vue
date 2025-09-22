@@ -34,8 +34,7 @@ const colorOptions = [
   { value: 'disabled', title: t('graphInteraction.color.disable') },
   { value: 'iri', title: t('graphInteraction.color.iri') },
   { value: 'hs', title: t('graphInteraction.color.hs') },
-  { value: 'n_out_recommended', title: t('graphInteraction.color.out') },
-  { value: 'n_in_recommendation', title: t('graphInteraction.color.in') },
+  { value: 'degree_centrality', title: t('graphInteraction.color.degree_centrality') },
   { value: 'louvain_community', title: t('graphInteraction.color.community') }
 
 ];
@@ -44,8 +43,7 @@ const sizeOptions = [
   { value: 'disabled', title: t('graphInteraction.size.disable') },
   { value: 'iri', title: t('graphInteraction.size.iri') },
   { value: 'hs', title: t('graphInteraction.size.hs') },
-  { value: 'n_out_recommended', title: t('graphInteraction.size.out') },
-  { value: 'n_in_recommendation', title: t('graphInteraction.size.in') }
+  { value: 'degree_centrality', title: t('graphInteraction.size.degree_centrality') },
 ];
 
 const channelsStore = useChannelsStore();
@@ -73,10 +71,8 @@ const getNodeColor = (node: any, colorBy: string) => {
       return getColorByValue(node.iri?node.iri:undefined,0,0.7);
     case "hs":
       return getColorByValue(node.hs?node.hs:undefined, 0, 0.3);
-    case "n_out_recommended":
-      return getColorByValue(node.n_out_recommended?node.n_out_recommended:undefined, 0, 300);
-    case "n_in_recommendation":
-      return getColorByValue(node.n_in_recommendation?node.n_in_recommendation:undefined, 0, 300);
+    case "degree_centrality":
+      return getColorByValue(node.degree_centrality?node.degree_centrality:undefined, 0, 0.3);
     case "louvain_community": {
       const community = node.louvain_community ?? -1;
       if (community < 0) return "#ccc"; // colore di default se manca
@@ -111,11 +107,8 @@ const scaleNodeSize = (value: number|undefined, min: number, max: number, sizeMi
     case "hs":
       baseSize = scaleNodeSize(node.hs ? node.hs * 100 : undefined, 0, 50, 10, 50);
       break;
-    case "n_out_recommended":
-      baseSize = scaleNodeSize(node.n_out_recommended, 0, 300, 10, 50);
-      break;
-    case "n_in_recommendation":
-      baseSize = scaleNodeSize(node.n_in_recommendation, 0, 300, 10, 50);
+    case "degree_centrality":
+      baseSize = scaleNodeSize(node.degree_centrality*100, 0, 50, 10, 50);
       break;
     default:
       baseSize = 8;
@@ -186,8 +179,8 @@ const initializeGraph = () => {
       <strong>${ t('graphInteraction.tooltip.iri') }</strong> ${nodeData?.iri?.toFixed(3)} <br />
       <strong>${ t('graphInteraction.tooltip.cw') }</strong> ${ nodeData?.cw?.toFixed(3) } <br />
       <strong>${ t('graphInteraction.tooltip.hs') }</strong> ${ nodeData?.hs?.toFixed(3) } <br />
-      <strong>${ t('graphInteraction.tooltip.in') }</strong> ${ nodeData?.n_in_recommendation?.toFixed(3) } <br />
-      <strong>${ t('graphInteraction.tooltip.out') }</strong> ${ nodeData?.n_out_recommended?.toFixed(3) } <br />`;
+      <strong>${ t('graphInteraction.tooltip.degree_centrality') }</strong> ${ nodeData?.degree_centrality?.toFixed(3) } <br />
+      <strong>${ t('graphInteraction.tooltip.louvain_community') }</strong> ${ nodeData?.louvain_community?.toFixed(3) } <br />`;
     })
     // .nodeAutoColorBy(colorBy.value)
     .nodeColor((node: any) => getNodeColor(node, colorBy.value))
@@ -279,7 +272,7 @@ const resetHighlighting = () => {
   selectedNode = null;
   highlightedNodes.value.clear();
   colorBy.value = "iri";
-  sizeBy.value = "n_out_recommended";
+  sizeBy.value = "hs";
   graphInstance.nodeColor((n: any) => getNodeColor(n, colorBy.value));
   graphInstance.linkWidth(() => 0.5);
   graphInstance.linkColor((link: any) => defaultLinkColors.get(link) || 'gray');
