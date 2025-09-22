@@ -29,9 +29,8 @@ const colorThresholds = computed(() => {
 
     case "hs":
       return { min: 0, mid: 0.25, max: 0.5 };
-    case "n_out_recommended":
-    case "n_in_recommendation":
-      return { min: 0, mid: 150, max: 300 };
+    case "degree_centrality":
+      return { min: 0, mid: 0.5, max: 1 };
     default:
       return { min: 0, mid: 0.5, max: 1 };
   }
@@ -42,10 +41,8 @@ const sizeThresholds = computed(() => {
     case "iri":
     case "hs":
       return { min: 0, mid: 0.5, max: 1 };
-    case "n_out_recommended":
-      return { min: 0, mid: 150, max: 300 };
-    case "n_in_recommendation":
-      return { min: 0, mid: 150, max: 300 };
+    case "degree_centrality":
+     return { min: 0, mid: 0.5, max: 1 };
     default:
       return { min: 0, mid: 0.5, max: 1 };
   }

@@ -19,7 +19,9 @@ async function getChannelsInfo(
             }
           });} 1
 async function getChannels(selectedLanguage: string) {
-    return await axiosInstance.get(`channels`, { params: { language: selectedLanguage ? selectedLanguage : 'IT' } })
+    const resp= await axiosInstance.get(`channels`, { params: { language: selectedLanguage ? selectedLanguage : 'IT' } })
+    console.log(resp.data)
+    return resp
 }
 async function getChannel(idChannel: string, language: string) {
     return await axiosInstance.get(`channels/${language}/${idChannel}`);

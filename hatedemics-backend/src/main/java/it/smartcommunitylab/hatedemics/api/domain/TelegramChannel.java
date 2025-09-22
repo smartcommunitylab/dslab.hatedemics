@@ -55,6 +55,10 @@ public class TelegramChannel {
     @JsonProperty("n_out_recommended")
     @Column(name = "n_out_recommended")
     private Integer nOutRecommended;
+    @JsonProperty("degree_centrality")
+    @Column(name = "degree_centrality") 
+    private Double degreeCentrality;
+
     @JsonProperty("participation_score")
     @Column(name = "participation_score")
     private Double participationScore;
@@ -265,5 +269,11 @@ public class TelegramChannel {
     }
     public void setExpandable(String expandable) {
         this.expandable = expandable;
+    }
+    public Double getDegreeCentrality() {
+        return degreeCentrality;
+    }
+    public void setDegreeCentrality(Double degreeCentrality) {
+        this.degreeCentrality = degreeCentrality;
     }
 }

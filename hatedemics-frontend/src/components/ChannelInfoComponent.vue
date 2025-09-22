@@ -106,6 +106,17 @@ watch(selectedChannelInfo, async (newVal) => {
             <div class="tooltip-html" v-html="t('dialog.tooltip.languages')"></div>
 
             </v-tooltip>
+            <v-tooltip>
+            <template v-slot:activator="{ props }">
+          <v-col cols="12"  v-if="selectedChannelInfo?.degree_centrality"  v-bind="props">
+            <v-icon class="mr-2" color="primary">mdi-graph-outline</v-icon>
+            <span class="font-weight-bold">{{ t("channelInfo.degreeCentrality") }}</span>
+            {{ selectedChannelInfo.degree_centrality }}
+          </v-col>
+        </template>
+            <div class="tooltip-html" v-html="t('dialog.tooltip.degreeCentrality')"></div>
+
+            </v-tooltip>
           <v-tooltip>
             <template v-slot:activator="{ props }">
           <v-col cols="12"  v-if="selectedChannelInfo?.iri !== null"  v-bind="props">

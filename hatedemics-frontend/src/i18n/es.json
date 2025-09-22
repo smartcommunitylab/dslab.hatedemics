@@ -154,19 +154,19 @@
     },
     "educational": {
         "title": "Actividades Educativas",
-  "subtitle": "<p>En esta sección encontrarás ejercicios interactivos diseñados para ayudarte a comprender los mecanismos detrás de la desinformación y el discurso de odio.</p><p>Podrás explorar <b>sesgos cognitivos</b> y <b>falacias lógicas</b>, practicar técnicas de <b>verificación y desmentido</b>, aprender los principios fundamentales de la <b>Declaración de Derechos Humanos</b> para entender la protección de la dignidad humana y aplicar la <b>lectura lateral</b> para evaluar críticamente los contenidos en línea.</p><p>Cada actividad es una oportunidad para entrenar el pensamiento crítico y volverse más resistente a la manipulación y la desinformación.</p>",
+        "subtitle": "<p>En esta sección encontrarás ejercicios interactivos diseñados para ayudarte a comprender los mecanismos detrás de la desinformación y el discurso de odio.</p><p>Podrás explorar <b>sesgos cognitivos</b> y <b>falacias lógicas</b>, practicar técnicas de <b>verificación y desmentido</b>, aprender los principios fundamentales de la <b>Declaración de Derechos Humanos</b> para entender la protección de la dignidad humana y aplicar la <b>lectura lateral</b> para evaluar críticamente los contenidos en línea.</p><p>Cada actividad es una oportunidad para entrenar el pensamiento crítico y volverse más resistente a la manipulación y la desinformación.</p>",
         "eduCard1Title": "Declaración de derechos humanos",
         "eduCard1Desc": "Descubra los principios centrales que protegen la dignidad humana.",
-        "eduCard1Button": "Actividad de inicio",
+        "eduCard1Button": "Acceder a la actividad",
         "eduCardBiasTitle": "Sesgos y falacias",
         "eduCardBiasDesc": "Explore las falacias lógicas y los sesgos cognitivos detrás del discurso de odio y la desinformación.",
-        "eduCardBiasButton": "Actividad de inicio",
+        "eduCardBiasButton": "Acceder a la actividad",
         "eduCard3Title": "Desacreditación",
         "eduCard3Desc": "Aprenda a desinformación de desinformación de manera efectiva.",
-        "eduCard3Button": "Actividad de inicio",
+        "eduCard3Button": "Acceder a la actividad",
         "eduCard4Title": "Lectura lateral",
         "eduCard4Desc": "Aprenda a leer y comprender el contenido en línea.",
-        "eduCard4Button": "Actividad de inicio",
+        "eduCard4Button": "Acceder a la actividad",
         "warningTitle": "Advertencia",
         "warningText": "Estas actividades contienen ejemplos no observados que algunos lectores pueden encontrar ofensivo. ",
         "warningButton": "Entiendo",
@@ -178,7 +178,7 @@
                 "objectivesTitle": "Objetivos de la actividad",
                 "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Desarrollar conocimientos sobre derechos humanos;</li><li>Concienciar sobre la conexión entre los derechos humanos, el discurso de odio y la desinformación;</li><li>Aprender posibles argumentos para reaccionar ante el discurso de odio y la desinformación.</li></ul>",
                 "startButton": "Comenzar",
-                "task": "Formamos 11 grupos. Cada grupo coge una tarjeta y debate sobre el significado del derecho humano escrito en ella. Después de 5 minutos, el primer grupo explica qué significa este derecho para ellos y cómo se relaciona con el discurso de odio. El profesor puede ampliar su explicación si es necesario. Luego, el siguiente grupo, con la siguiente tarjeta, explica el significado de su derecho y su relación con el discurso de odio. Repetimos este proceso hasta que todos los grupos hayan hablado.",
+                "task": "Formamos 12 grupos. Cada grupo coge una tarjeta y debate sobre el significado del derecho humano escrito en ella. Después de 5 minutos, el primer grupo explica qué significa este derecho para ellos y cómo se relaciona con el discurso de odio. El profesor puede ampliar su explicación si es necesario. Luego, el siguiente grupo, con la siguiente tarjeta, explica el significado de su derecho y su relación con el discurso de odio. Repetimos este proceso hasta que todos los grupos hayan hablado.",
                 "completetask": "He completado la actividad",
                 "taskCompleteTitle": "Actividad completada",
                 "taskCompleteText": "¿Ya conocías todos los derechos humanos mencionados? ¿Cuáles son nuevos para ti? ¿Fue fácil o difícil explicar el significado de estos derechos y encontrar una relación entre ellos y el discurso de odio? ¿Puedes nombrar otros derechos humanos que no se mencionaron?",
@@ -236,7 +236,7 @@
             },
             "debunking": {
                 "title": "Desmitificación",
-                "description": "<strong>Qué es la desmitificación:</strong> Cuando algunas personas piensan en un verificador de hechos (fact‑checker), solo ven a un periodista que investiga una afirmación, la verifica y confirma si es verdadera o no, el proceso de desmitificación. Sin embargo, luchar contra la desinformación eficazmente hoy en día exige mucho más: detectar rápidamente posibles bulos antes de que se vuelvan virales y afecten a más personas; explicar que no todo es blanco o negro, ayudar a las personas a estar bien preparadas frente a falsedades mediante la alfabetización mediática o regulación; crear herramientas que dificulten que nos engañen o combatir juntos contra la manipulación: esto es lo que llamamos pre‑bunking.<br><br><strong>Qué es una narrativa de desinformación:</strong> Lo que los creadores de desinformación quieren que creas. Cuando una idea se repite muchas veces, la gente tiende a creerla. Además, un solo bulo puede contener varias narrativas.",
+                "description": "<strong>Qué es la debunking:</strong> Cuando algunas personas piensan en un verificador de hechos (fact‑checker), solo ven a un periodista que investiga una afirmación, la verifica y confirma si es verdadera o no, el proceso de desmitificación. Sin embargo, luchar contra la desinformación eficazmente hoy en día exige mucho más: detectar rápidamente posibles bulos antes de que se vuelvan virales y afecten a más personas; explicar que no todo es blanco o negro, ayudar a las personas a estar bien preparadas frente a falsedades mediante la alfabetización mediática o regulación; crear herramientas que dificulten que nos engañen o combatir juntos contra la manipulación: esto es lo que llamamos pre‑bunking.<br><br><strong>Qué es una narrativa de desinformación:</strong> Lo que los creadores de desinformación quieren que creas. Cuando una idea se repite muchas veces, la gente tiende a creerla. Además, un solo bulo puede contener varias narrativas.",
                 "objectivesTitle": "Objetivos",
                 "objectives": "<p><strong>Desmentir:</strong> aprender, de manera guiada, algunas técnicas de desmentido.</p><p><strong>Desarrollar el pensamiento crítico usando la estrategia de pre-bunking:</strong> durante el ejercicio, los usuarios descubren cuáles son las narrativas de desinformación y pueden reflexionar sobre las más difundidas en su país.</p><p><strong>Activar el pensamiento crítico:</strong> comprendiendo cómo la viralización de algunos engaños puede crear y fortalecer las narrativas de desinformación.</p>",
                 "task": "<strong>Simula las acciones de un fact‑checker</strong> seleccionando la forma más eficaz de desmentir un evento afirmado. ¿Puedes también identificar la narrativa de desinformación relacionada?",
@@ -737,6 +737,7 @@
             "date": "Fecha",
             "id": "IDENTIFICACIÓN",
             "messages": "Número de mensajes",
+            "degreeCentrality": "Centralidad de grado",
             "partecipants": "Número de usuarios",
             "IRI": "Riesgo infodémico",
             "CW": "Cheque digno",
@@ -780,6 +781,7 @@
             "out": "Recomendaciones",
             "out_degree": "Atenuar ",
             "in_degree": "En grados ",
+            "degree_centrality": "Centralidad de grado",
             "label": "Color",
             "n_in_recommendation": "En recomendaciones",
             "n_out_recommendation": "Recomendaciones",
@@ -797,11 +799,12 @@
             "label": "Tamaño",
             "out_degree": "Atenuar ",
             "in_degree": "En grados ",
+            "degree_centrality": "Centralidad de grado",
             "n_in_recommendation": "En recomendaciones",
             "n_out_recommendation": "Recomendaciones",
             "n_out_recommended": "Recomendaciones",
             "n_in_recommended": "En recomendaciones",
-            "scale":"Peso"
+            "scale": "Peso"
         },
         "tooltip": {
             "label": "Etiqueta",
@@ -810,6 +813,7 @@
             "id": "ID de canal:",
             "iri": "Riesgo infodémico:",
             "hs": "Discurso de odio:",
+            "degree_centrality": "Centralidad de grado:",
             "cw": "Check Worthy:",
             "in": "En recomendaciones:",
             "out": "Recomendaciones de salida:"
@@ -850,7 +854,8 @@
         "channels": "Canales",
         "chats": "Charlatanes",
         "hs_percentage": "Discurso de odio:",
-        "cw_percentage": "Check Worthy:"
+        "cw_percentage": "Check Worthy:",
+        "degreeCentrality": "Centralidad de grado:"
     },
     "message": {
         "title": "Insights de chat",
@@ -957,7 +962,8 @@
             "languages": "Idiomas utilizados en el canal",
             "iri": "Índice de Riesgo de Infodemia del canal",
             "hs_percentage": "Porcentaje de mensajes considerados discurso de odio",
-            "cw_percentage": "Porcentaje de mensajes considerados dignos de verificación"
+            "cw_percentage": "Porcentaje de mensajes considerados dignos de verificación",
+            "degreeCentrality": "Centralidad de grado del canal"
         }
     },
     "guide": {
@@ -1047,5 +1053,5 @@
     "buttons": {
         "startDialogue": "Iniciar diálogo",
         "delete": "Eliminar"
-      }
+    }
 }

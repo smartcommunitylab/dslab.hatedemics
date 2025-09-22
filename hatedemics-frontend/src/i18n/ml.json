@@ -177,7 +177,7 @@
         "objectivesTitle": "Għanijiet",
         "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Żvilupp ta 'għarfien dwar id-drittijiet tal-bniedem;</li><li>Żieda fl-għarfien dwar il-konnessjoni bejn id-drittijiet tal-bniedem u d-diskors ta 'mibegħda u d-diżinformazzjoni;</li><li>Tagħlim ta 'argument possibbli għal reazzjoni fuq diskors ta' mibegħda u diżinformazzjoni.</li></ul>",
         "startButton": "Ibda",
-        "task": "Gruppi tal-Formola 11. ",
+        "task": "Gruppi tal-Formola 12. ",
         "completetask": "Imxejt l-attività",
         "taskCompleteTitle": "Attività mimlija",
         "taskCompleteText": "Diġà kont taf id-drittijiet tal-bniedem kollha msemmija? Liema kienu ġodda għalik?Kien faċli jew diffiċli li tispjega t-tifsira ta’ dawn id-drittijiet u ssib rabta bejniethom u d-diskors ta’ mibegħda?Tista' ssemmi xi drittijiet umani oħra li ma ssemmewx?",
@@ -271,6 +271,8 @@
           {
             "title": "Mistoqsija 2",
             "question": "Billi twettaq tfittxija bil-maqlub tal-immaġni kont issib din l-immaġni. X’tistaʼ tikkonkludi billi tosservaha?",
+            "image": "/img/debunking/en/answer1.jpg",
+
             "options": [
               {
                 "text": "Hija stampa AI"
@@ -769,6 +771,7 @@
       "date": "Data",
       "id": "ID",
       "messages": "Numru ta 'messaġġi",
+      "degree_centrality": "Ċentralità tal-grad",
       "partecipants": "Numru ta 'utenti",
       "IRI": "Riskju infodemiku",
       "CW": "Iċċekkja denja",
@@ -812,6 +815,7 @@
       "out": "Rakkomandazzjonijiet barra",
       "out_degree": "Barra l-grad ",
       "in_degree": "Fil-grad ",
+      "degree_centrality": "Ċentralità tal-grad",
       "label": "Kulur",
       "n_out_recommended": "Rakkomandazzjonijiet barra",
       "n_in_recommended": "Fir-rakkomandazzjonijiet",
@@ -825,6 +829,7 @@
       "in": "Fir-rakkomandazzjonijiet",
       "out": "Rakkomandazzjonijiet barra",
       "label": "Daqs",
+      "degree_centrality": "Ċentralità tal-grad",
       "out_degree": "Barra l-grad ",
       "in_degree": "Fil-grad ",
       "n_out_recommended": "Rakkomandazzjonijiet barra",
@@ -839,6 +844,7 @@
       "iri": "Riskju infodemiku:",
       "hs": "Diskors tal-mibegħda:",
       "cw": "Iċċekkja denja:",
+      "degree_centrality": "Ċentralità tal-grad:",
       "in": "Fir-rakkomandazzjonijiet:",
       "out": "Rakkomandazzjonijiet barra:"
     },
@@ -876,7 +882,8 @@
     "channels": "Kanali",
     "chats": "Chats",
     "hs_percentage": "Diskors tal-mibegħda:",
-    "cw_percentage": "Iċċekkja denja:"
+    "cw_percentage": "Iċċekkja denja:",
+    "degreeCentrality": "Ċentralità tal-grad:"
   },
   "message": {
     "title": "Chat għarfien",
@@ -983,7 +990,8 @@
       "languages": "Lingwi użati fil-kanal",
       "iri": "Indiċi tar-Riskju ta’ Infodemija tal-kanal",
       "hs_percentage": "Perċentwal ta’ messaġġi meqjusa bħala Diskors ta’ Mibegħda",
-      "cw_percentage": "Perċentwal ta’ messaġġi meqjusa bħala denji ta’ verifika"
+      "cw_percentage": "Perċentwal ta’ messaġġi meqjusa bħala denji ta’ verifika",
+      "degreeCentrality": "Ċentralità tal-grad tal-kanal fin-netwerk"
     }
   },
   "guide": {

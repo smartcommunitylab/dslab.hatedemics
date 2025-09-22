@@ -49,15 +49,11 @@ const headers = computed(() => [
     sortable: true,
   },
   {
-    title: t("in Rec"),
-    key: "n_in_recommendation",
+    title: t("channelTable.header.degreeCentrality"),
+    key: "degree_centrality",
     sortable: true,
   },
-  {
-    title: t("out Rec"),
-    key: "n_out_recommended",
-    sortable: true,
-  },
+
   { title: t("channelTable.header.IRI"), key: "IRI", sortable: true },
   { title: t("channelTable.header.hs"), key: "hs", sortable: true },
   { title: t("channelTable.header.CW"), key: "cw", sortable: true },
@@ -264,8 +260,7 @@ const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
                   <td class="text-left">{{ safeText(item.label) }}</td>
                   <td class="text-left">{{ safeNumber(item.message_count) }}</td>
                   <td class="text-left">{{ safeNumber(item.participants_count) }}</td>
-                  <td class="text-left">{{ safeNumber(item.n_in_recommendation) }}</td>
-                  <td class="text-left">{{ safeNumber(item.n_out_recommended) }}</td>
+                  <td class="text-left">{{ safeNumberOrDash(item.degree_centrality) }}</td>
                   <td class="text-left">{{ safeNumberOrDash(item.iri) }}</td>
                   <td class="text-left">{{ safeNumberOrDash(item.hs) }}</td>
                   <td class="text-left">{{ safeNumberOrDash(item.cw) }}</td>

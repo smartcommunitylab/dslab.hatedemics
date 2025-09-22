@@ -24,6 +24,13 @@ public class GraphNode {
     private Integer n_in_recommendation;
     private String language;
     private Integer louvain_community;
+    private Double degree_centrality;
+    public Double getDegree_centrality() {
+        return degree_centrality;
+    }
+    public void setDegree_centrality(Double degree_centrality) {
+        this.degree_centrality = degree_centrality;
+    }
     public Integer getLouvain_community() {
         return louvain_community;
     }
