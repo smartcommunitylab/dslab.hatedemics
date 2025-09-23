@@ -365,8 +365,11 @@
       "lateralreading": {
         "submit": "Ibgħat",
         "nextQuestion": "Mistoqsija li jmiss",
+        "prevQuestion": "Mistoqsija preċedenti",
         "nextExercise": "Eżerċizzju li jmiss",
+        "conclusion": "Konklużjoni",
         "title": "Qari laterali",
+        "subtitle": "Hawn taħt tista' tara diversi screenshots. Aħseb dwar liema waħda twieġeb l-aħjar il-mistoqsija li ġejja.",
         "selectMultiple": "Tista’ tagħżel aktar minn screenshot wieħed",
         "description": "<p><strong>Iddebbunka:</strong> titgħallem, b'mod gwidat, xi tekniki ta’ ddebbunking.</p><p><strong>Żviluppa ħsieb kritiku billi tuża l-istrateġija ta’ pre-bunking:</strong> matul l-eżerċizzju, l-utenti jiskopru x’inhi n-narrattivi tad-disinformazzjoni u jistgħu jirriflettu dwar l-aktar waħda mifruxa fil-pajjiż tagħhom.</p><p><strong>Attiva ħsieb kritiku:</strong> billi tifhem kif il-viraliżżazzjoni ta’ xi ħaġa foloz tista’ toħloq u ssaħħaħ in-narrattivi tad-disinformazzjoni.</p>",
         "objectivesTitle": "L-Għan ta' l-attività",
