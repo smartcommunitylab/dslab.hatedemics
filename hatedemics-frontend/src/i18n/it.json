@@ -891,6 +891,10 @@
         },
         "noTarget": "Nessun destinatario identificato",
         "target": "Clicca per selezionare un destinatario",
+        "hate": "Odio",
+        "notHate": "Nessun odio",
+        "worthy": "Verificabile",
+        "notWorthy": "Non verificabile",
         "noData": "Nessun dato disponibile",
         "filter": {
             "target": "Filtra per target",
@@ -993,7 +997,7 @@
             },
             "communities": {
                 "title": "Comunità",
-                "description": "Le comunità sono <b>gruppi naturali</b> all’interno delle reti.<br><br>Per rilevarle utilizziamo il metodo di <b>rilevamento delle comunità di Louvain</b>, che cerca gruppi con molte connessioni interne.<br>(Come un gruppo di amici in cui tutti si conoscono molto bene!)<br><br>Per maggiori dettagli, puoi consultare <a href='https://en.wikipedia.org/wiki/Louvain_method' target='_blank'>questo articolo</a>."
+                "description": "Nella scienza delle reti,le comunità sono <b>gruppi naturali</b> all’interno delle reti.<br><br>Per rilevarle utilizziamo il metodo di <b>rilevamento delle comunità di Louvain</b>, che cerca gruppi con molte connessioni interne.<br>(Come un gruppo di amici in cui tutti si conoscono molto bene!)<br><br>Per maggiori dettagli, puoi consultare <a href='https://en.wikipedia.org/wiki/Louvain_method' target='_blank'>questo articolo</a>."
             }
         },
         "channel": {
@@ -1048,5 +1052,8 @@
     "buttons": {
     "startDialogue": "Avvia Dialogo",
     "delete": "Elimina"
+  },
+  "locale": {
+    "selectLanguage": "Seleziona la lingua dell’interfaccia"
   }
 }

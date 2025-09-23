@@ -326,30 +326,30 @@ const getReliabilityIcon = (value: number) => {
       </template>
 
       <template v-slot:item.hate_label="{ item }">
-        <div class="text-center">
+        <div >
           <v-icon
             :icon="item.hate_label ? 'mdi-emoticon-angry' : 'mdi-emoticon-happy-outline'"
             :color="item.hate_label ? 'red' : 'green'"
           />
           <div class="mt-1" :style="{ color: item.hate_label ? 'red' : 'green' }">
-            {{ item.hate_label ? "Hate" : "Not Hate" }}
+            {{ item.hate_label ? t("message.hate") : t("message.notHate") }}
           </div>
         </div>
       </template>
 
       <template v-slot:item.checkworthy_label="{ item }">
-        <div class="text-center">
+        <div >
           <v-icon
             :icon="item.checkworthy_label ? 'mdi-magnify-close' : 'mdi-check-circle'"
             :color="item.checkworthy_label ? 'red' : 'green'"
           />
           <div class="mt-1" :style="{ color: item.checkworthy_label ? 'red' : 'green' }">
-            {{ item.checkworthy_label ? "Check Worthy" : "Not Check Worthy" }}
+            {{ item.checkworthy_label ? t("message.worthy") : t("message.notWorthy") }}
           </div>
         </div>
       </template>
       <template v-slot:item.average_reliability="{ item }">
-        <div class="text-center">
+        <div >
           <v-icon
             :icon="getReliabilityIcon(item.average_reliability)"
             :color="getReliabilityColor(item.average_reliability)"

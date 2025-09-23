@@ -891,6 +891,10 @@
             "startConversationTitle": "Escribir contradiscurso",
             "startConversationDescription": "Seleccione el argumento que desea utilizar para iniciar la conversación."
         },
+        "hate": "I hate",
+"notHate": "No hate",
+"worthy": "Verifiable",
+"notWorthy": "Not verifiable",
         "noData": "No hay datos disponibles",
         "noTarget": "No se identificó el objetivo",
         "target": "Haga clic aquí para comenzar una nueva conversación",
@@ -999,7 +1003,7 @@
             },
             "communities": {
                 "title": "Comunidades",
-                "description": "Las comunidades son <b>grupos naturales</b> dentro de las redes.<br><br>Para detectarlas usamos el método de <b>detección de comunidades de Louvain</b>, que busca grupos con muchas conexiones internas.<br>(¡Como un grupo de amigos donde todos se conocen muy bien!)<br><br>Para más detalles, puedes consultar <a href='https://en.wikipedia.org/wiki/Louvain_method' target='_blank'>este artículo</a>."
+                "description": "En la ciencia de redes, las comunidades son naturales <b>grupos naturales</b> dentro de las redes.<br><br>Para detectarlas usamos el método de <b>detección de comunidades de Louvain</b>, que busca grupos con muchas conexiones internas.<br>(¡Como un grupo de amigos donde todos se conocen muy bien!)<br><br>Para más detalles, puedes consultar <a href='https://en.wikipedia.org/wiki/Louvain_method' target='_blank'>este artículo</a>."
             }
         },
         "channel": {
@@ -1053,5 +1057,8 @@
     "buttons": {
         "startDialogue": "Iniciar diálogo",
         "delete": "Eliminar"
-    }
+    },
+    "locale": {
+    "selectLanguage": "Selecciona el idioma de la interfaz"
+  }
 }

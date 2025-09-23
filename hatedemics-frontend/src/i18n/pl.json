@@ -822,6 +822,10 @@
             "startConversationTitle": "Napisz kontrmowę",
             "startConversationDescription": "Wybierz zadanie tematyczne, nad którym chcesz pracować."
         },
+        "hate": "I hate",
+"notHate": "No hate",
+"worthy": "Verifiable",
+"notWorthy": "Not verifiable",
         "noData": "Brak dostępnych danych",
         "noTarget": "Nie zidentyfikowany cel",
         "target": "Kliknij tutaj, aby rozpocząć nową rozmowę",
@@ -930,7 +934,7 @@
             },
             "communities": {
                 "title": "Społeczności",
-                "description": "Społeczności to naturalne <b>grupy</b> w sieciach.<br><br>Aby je wykryć, używamy metody <b>detekcji społeczności Louvain</b>, która szuka grup z wieloma połączeniami wewnętrznymi.<br>(Jak grupa znajomych, w której wszyscy bardzo dobrze się znają!)<br><br>Aby uzyskać więcej szczegółów, możesz sprawdzić <a href='https://en.wikipedia.org/wiki/Louvain_method' target='_blank'>ten artykuł</a>."
+                "description": "W nauce o sieciach społeczności są czymś naturalnym <b>grupy</b> w sieciach.<br><br>Aby je wykryć, używamy metody <b>detekcji społeczności Louvain</b>, która szuka grup z wieloma połączeniami wewnętrznymi.<br>(Jak grupa znajomych, w której wszyscy bardzo dobrze się znają!)<br><br>Aby uzyskać więcej szczegółów, możesz sprawdzić <a href='https://en.wikipedia.org/wiki/Louvain_method' target='_blank'>ten artykuł</a>."
             }
         },
         "channel": {
@@ -984,5 +988,8 @@
     "buttons": {
     "startDialogue": "Rozpocznij dialog",
     "delete": "Usuń"
+  },
+  "locale": {
+    "selectLanguage": "Wybierz język interfejsu"
   }
 }

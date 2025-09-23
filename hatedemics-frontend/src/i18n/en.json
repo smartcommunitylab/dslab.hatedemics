@@ -929,6 +929,10 @@
             "startConversationTitle": "Write Counterspeech",
             "startConversationDescription": "Select the topic task you want to work on."
         },
+        "hate": "I hate",
+        "notHate": "No hate",
+        "worthy": "Worthy",
+        "notWorthy": "Not Worthy",
         "noData": "No data available",
         "noTarget": "No target identified",
         "target": "Click here to start a new conversation",
@@ -1037,7 +1041,7 @@
             },
             "communities": {
                 "title": "Communities",
-                "description": "Communities are natural <b>groups</b> within the networks.<br><br>To detect them, we use the <b>Louvain community detection</b> method, which looks for groups where there are many connections inside the group.<br>(Like a friend group where everyone knows each other very well!)<br><br>For more details, you can check out <a href='https://en.wikipedia.org/wiki/Louvain_method' target='_blank'>this article</a>."
+                "description": "In network science, communities are natural <b>groups</b> within the networks.<br><br>To detect them, we use the <b>Louvain community detection</b> method, which looks for groups where there are many connections inside the group.<br>(Like a friend group where everyone knows each other very well!)<br><br>For more details, you can check out <a href='https://en.wikipedia.org/wiki/Louvain_method' target='_blank'>this article</a>."
             }
         },
         "channel": {
@@ -1094,5 +1098,8 @@
     "buttons": {
     "startDialogue": "Start Dialogue",
     "delete": "Delete"
+  },
+  "locale": {
+    "selectLanguage": "Select interface language"
   }
 }
