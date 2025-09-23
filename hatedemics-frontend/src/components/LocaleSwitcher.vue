@@ -35,13 +35,13 @@ watch(locale, (v) => {
 const selectedLocaleObj = computed(() => locales.find((l) => l.code === selected.value) ?? null);
 
 // helper per selezionare manualmente (usato nel slot item)
-function selectCode(code: string) {
-  selected.value = code;
-}
+const { t } = useI18n();
+
 </script>
 
 <template>
   <div class="locale-switcher">
+    <label class="locale-label">{{ t('locale.selectLanguage') }}</label>
     <v-select
   v-model="selected"
   :items="locales"
@@ -98,5 +98,11 @@ function selectCode(code: string) {
 @media (min-width: 800px) {
   /* es. su schermi grandi puoi aumentare */
   /* .locale-select { width: 72px; min-width:72px; } */
+}
+.locale-label {
+  font-weight: 500;
+  margin-bottom: 4px;
+  display: block;
+  font-size: 14px;
 }
 </style>

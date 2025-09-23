@@ -365,9 +365,12 @@
             "lateralreading": {
                 "submit": "Zatwierdź",
                 "nextQuestion": "Dalej",
+                "prevQuestion": "Wstecz",
                 "nextExercise": "Następne zadanie",
+                "conclusion": "Podsumowanie",
                 "selectMultiple": "Możesz wybrać więcej niż jeden zrzut ekranu",
                 "title": "Czytanie w poziomie",
+                "subtitle": "Poniżej możesz zobaczyć różne zrzuty ekranu. Zastanów się, który z nich najlepiej odpowiada na poniższe pytanie.",
                 "description": "Czytanie w poziomie (ang. <strong>lateral reading</strong>) to metoda, która pozwala nam szybko ocenić, czy treść strony internetowej pochodzi z wiarygodnych źródeł i opiera się na rzetelnych danych informacjach czy literaturze przedmiotu. W badaniu przeprowadzonym przez Stanford History Education Group (<a href=\"https://cor.inquirygroup.org/research/lateral-reading-on-the-open-internet/\" target=\"_blank\">link</a>) edukatorzy wykazali, że jest to skuteczny sposób oceny jakości nieznanej wcześniej strony internetowej.<br><br>Ta bardzo istotna strategia (<a href=\"https://cor.inquirygroup.org/curriculum/collections/teaching-lateral-reading/\" target=\"_blank\">link</a>), stosowana przez fact-checkerów do oceny informacji w Internecie, polega nie na czytaniu strony internetowej „wertykalnie” (pionowo), jakby była dokumentem drukowanym, aby ocenić jej jakość, ale na użyciu metody zwanej „czytaniem w poziomie”. Oznacza to analizowanie strony internetowej poprzez otwieranie kilku kart przeglądarki, aby odpowiedzieć na kluczowe pytania dotyczące jej treści.<ul><li>Kto jest autorem treści? Czy to ekspert w danej dziedzinie?</li><li>Czy możemy znaleźć dowody? Czy treść opiera się na faktach i danych?</li><li>Czy treść została opublikowana przez inne wiarygodne źródła? Co one o niej mówią?</li></ul>Oprócz powyższych kluczowych pytań technika czytania w poziomie zachęca nas do rozwijania myślenia krytycznego i głębszej analizy innych aspektów treści, takich jak:<ul><li>Kto finansuje lub sponsoruje stronę, na której opublikowano pierwotny materiał?</li><li>Co inne wiarygodne i cieszące się autorytetem źródła mówią na temat tej strony?</li><li>Kiedy wyszukujesz informację na temat oryginalnego artykułu, czy najwyżej pozycjonowane wyniki pochodzą od organizacji zajmujących się fact-checkingiem?</li><li>Czy pojawiły się pytania dotyczące innych artykułów napisanych przez tego autora?</li><li>Czy informacje znalezione w innych źródłach przeczą oryginalnemu materiałowi?</li><li>Czy wiarygodne media informacyjne informują o tym, co czytasz — lub co równie ważne, czy o tym nie informują?</li></ul>Czytanie w poziomie pomaga nam lepiej ocenić nasze źródła informacji – czyli odróżniać prawdę od fałszu – i świadomie korzystać z naszego prawa do decydowania, w jaki sposób zdobywamy informacje.",
                 "objectivesTitle": "Efekty kształcenia",
                 "objectives": "<ul><li>Poznawanie zasad przejrzystości i czynników pozwalających ocenić wiarygodność źródeł</li><li>Rozwijanie umiejętności identyfikowania godnych zaufania źródeł informacji</li></ul>",
@@ -822,6 +825,10 @@
             "startConversationTitle": "Napisz kontrmowę",
             "startConversationDescription": "Wybierz zadanie tematyczne, nad którym chcesz pracować."
         },
+        "hate": "I hate",
+"notHate": "No hate",
+"worthy": "Verifiable",
+"notWorthy": "Not verifiable",
         "noData": "Brak dostępnych danych",
         "noTarget": "Nie zidentyfikowany cel",
         "target": "Kliknij tutaj, aby rozpocząć nową rozmowę",
@@ -930,7 +937,7 @@
             },
             "communities": {
                 "title": "Społeczności",
-                "description": "Społeczności to naturalne <b>grupy</b> w sieciach.<br><br>Aby je wykryć, używamy metody <b>detekcji społeczności Louvain</b>, która szuka grup z wieloma połączeniami wewnętrznymi.<br>(Jak grupa znajomych, w której wszyscy bardzo dobrze się znają!)<br><br>Aby uzyskać więcej szczegółów, możesz sprawdzić <a href='https://en.wikipedia.org/wiki/Louvain_method' target='_blank'>ten artykuł</a>."
+                "description": "W nauce o sieciach społeczności są czymś naturalnym <b>grupy</b> w sieciach.<br><br>Aby je wykryć, używamy metody <b>detekcji społeczności Louvain</b>, która szuka grup z wieloma połączeniami wewnętrznymi.<br>(Jak grupa znajomych, w której wszyscy bardzo dobrze się znają!)<br><br>Aby uzyskać więcej szczegółów, możesz sprawdzić <a href='https://en.wikipedia.org/wiki/Louvain_method' target='_blank'>ten artykuł</a>."
             }
         },
         "channel": {
@@ -984,5 +991,8 @@
     "buttons": {
     "startDialogue": "Rozpocznij dialog",
     "delete": "Usuń"
+  },
+  "locale": {
+    "selectLanguage": "Wybierz język interfejsu"
   }
 }

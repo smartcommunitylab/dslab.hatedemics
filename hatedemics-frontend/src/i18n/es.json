@@ -366,9 +366,12 @@
             "lateralreading": {
                 "submit": "Enviar",
                 "nextQuestion": " Siguiente pregunta",
+                "prevQuestion": "Pregunta anterior",
+                "conclusion": "Conclusión",
                 "selectMultiple": "Puedes seleccionar más de 1 captura de pantalla",
                 "nextExercise": "Siguiente ejercicio",
                 "title": "Lectura lateral",
+                "subtitle":"A continuación puedes ver varias capturas de pantalla. Piensa cuál responde mejor a la siguiente pregunta.",
                 "description": "<strong>Lectura lateral</strong> es una técnica que nos permite evaluar rápidamente si el contenido de una página web proviene de fuentes confiables y está basado en datos, referencias e información de calidad.<br><br>En una investigación realizada por el <a href=\"https://cor.inquirygroup.org/research/lateral-reading-on-the-open-internet/\" target=\"_blank\" rel=\"noopener\">Stanford History Education Group</a>, los educadores descubrieron que es una manera eficiente de evaluar la calidad de un sitio web desconocido.<br><br>Esta poderosa estrategia (<a href=\"https://cor.inquirygroup.org/curriculum/collections/teaching-lateral-reading/\" target=\"_blank\" rel=\"noopener\">utilizada por los verificadores de datos</a>) para evaluar información en línea consiste en no leer un sitio web de forma ‘vertical’, como si fuera un documento impreso, sino emplear un método llamado ‘lectura lateral’.<br><br>Esto significa analizar la página web abriendo varias pestañas para responder preguntas clave sobre el contenido:<br><ul><li>¿Quién es el autor del contenido? ¿Es una fuente experta?</li><li>¿Podemos encontrar evidencia? ¿Está basada en hechos y datos?</li><li>¿Está publicado por otras fuentes confiables? ¿Qué dicen al respecto?</li></ul><br>Además de estas preguntas clave, la técnica de lectura lateral nos invita a fomentar el pensamiento crítico y profundizar analizando otros aspectos del contenido, como:<br><ul><li>¿Quién financia o patrocina el sitio donde se publicó el artículo original?</li><li>¿Qué dicen otras fuentes autorizadas sobre ese sitio?</li><li>Cuando buscas el tema del artículo original, ¿los primeros resultados provienen de organizaciones de verificación de datos?</li><li>¿Se han planteado dudas sobre otros artículos escritos por el autor?</li><li>¿La información que encuentras en otros lugares contradice el artículo original?</li><li>¿Medios de comunicación confiables están informando —o tal vez más importante, no están informando— sobre lo que estás leyendo?</li></ul><br><strong>La lectura lateral</strong> nos ayuda a evaluar mejor nuestras fuentes de información —es decir, a distinguir entre la verdad y la mentira— y a ejercer de manera consciente nuestro derecho a elegir cómo accedemos a la información.",
                 "objectivesTitle": "Objetivos",
                 "objectives": "<ul><li>Aprender sobre la transparencia y los factores de credibilidad de las fuentes</li><li>Desarrollar la competencia para identificar fuentes de información confiables</li></ul>",
@@ -721,7 +724,7 @@
     "project": {
         "noProject": "No hay proyectos disponibles",
         "noData": "No hay datos disponibles",
-        "dialoguesTitle": "Proyecto Diálogos \"{nombre}\""
+        "dialoguesTitle": "Proyecto Diálogos \"{name}\""
     },
     "projects": {
         "title": "Redacción de counterspeech",
@@ -891,6 +894,10 @@
             "startConversationTitle": "Escribir contradiscurso",
             "startConversationDescription": "Seleccione el argumento que desea utilizar para iniciar la conversación."
         },
+        "hate": "I hate",
+"notHate": "No hate",
+"worthy": "Verifiable",
+"notWorthy": "Not verifiable",
         "noData": "No hay datos disponibles",
         "noTarget": "No se identificó el objetivo",
         "target": "Haga clic aquí para comenzar una nueva conversación",
@@ -999,7 +1006,7 @@
             },
             "communities": {
                 "title": "Comunidades",
-                "description": "Las comunidades son <b>grupos naturales</b> dentro de las redes.<br><br>Para detectarlas usamos el método de <b>detección de comunidades de Louvain</b>, que busca grupos con muchas conexiones internas.<br>(¡Como un grupo de amigos donde todos se conocen muy bien!)<br><br>Para más detalles, puedes consultar <a href='https://en.wikipedia.org/wiki/Louvain_method' target='_blank'>este artículo</a>."
+                "description": "En la ciencia de redes, las comunidades son naturales <b>grupos naturales</b> dentro de las redes.<br><br>Para detectarlas usamos el método de <b>detección de comunidades de Louvain</b>, que busca grupos con muchas conexiones internas.<br>(¡Como un grupo de amigos donde todos se conocen muy bien!)<br><br>Para más detalles, puedes consultar <a href='https://en.wikipedia.org/wiki/Louvain_method' target='_blank'>este artículo</a>."
             }
         },
         "channel": {
@@ -1053,5 +1060,8 @@
     "buttons": {
         "startDialogue": "Iniciar diálogo",
         "delete": "Eliminar"
-    }
+    },
+    "locale": {
+    "selectLanguage": "Selecciona el idioma de la interfaz"
+  }
 }

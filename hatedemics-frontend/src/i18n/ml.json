@@ -365,8 +365,11 @@
       "lateralreading": {
         "submit": "Ibgħat",
         "nextQuestion": "Mistoqsija li jmiss",
+        "prevQuestion": "Mistoqsija preċedenti",
         "nextExercise": "Eżerċizzju li jmiss",
+        "conclusion": "Konklużjoni",
         "title": "Qari laterali",
+        "subtitle": "Hawn taħt tista' tara diversi screenshots. Aħseb dwar liema waħda twieġeb l-aħjar il-mistoqsija li ġejja.",
         "selectMultiple": "Tista’ tagħżel aktar minn screenshot wieħed",
         "description": "<p><strong>Iddebbunka:</strong> titgħallem, b'mod gwidat, xi tekniki ta’ ddebbunking.</p><p><strong>Żviluppa ħsieb kritiku billi tuża l-istrateġija ta’ pre-bunking:</strong> matul l-eżerċizzju, l-utenti jiskopru x’inhi n-narrattivi tad-disinformazzjoni u jistgħu jirriflettu dwar l-aktar waħda mifruxa fil-pajjiż tagħhom.</p><p><strong>Attiva ħsieb kritiku:</strong> billi tifhem kif il-viraliżżazzjoni ta’ xi ħaġa foloz tista’ toħloq u ssaħħaħ in-narrattivi tad-disinformazzjoni.</p>",
         "objectivesTitle": "L-Għan ta' l-attività",
@@ -919,6 +922,10 @@
       "startConversationTitle": "Ikteb Kontrodiskors",
       "startConversationDescription": "Agħżel it-task tat-tema li tixtieq taħdem fuqha."
     },
+    "hate": "I hate",
+"notHate": "No hate",
+"worthy": "Verifiable",
+"notWorthy": "Not verifiable",
     "noData": "L-ebda dejta disponibbli",
     "noTarget": "L-ebda mira identifikata",
     "target": "Ikklikkja hawn biex tibda konversazzjoni ġdida",
@@ -1027,7 +1034,7 @@
       },
       "communities": {
         "title": "Komunitajiet",
-        "description": "Il-komunitajiet huma <b>gruppi naturali</b> ġewwa n-netwerks.<br><br>Biex insibuhom, nużaw il-metodu tal-<b>skoperta tal-komunità Louvain</b>, li jfittix gruppi fejn hemm ħafna konnessjonijiet interni.<br>(Bħal grupp ta’ ħbieb fejn kulħadd jaf lil xulxin sewwa!)"
+        "description": "Fix-xjenza tan-netwerks, il-komunitajiet huma naturali <b>gruppi naturali</b> ġewwa n-netwerks.<br><br>Biex insibuhom, nużaw il-metodu tal-<b>skoperta tal-komunità Louvain</b>, li jfittix gruppi fejn hemm ħafna konnessjonijiet interni.<br>(Bħal grupp ta’ ħbieb fejn kulħadd jaf lil xulxin sewwa!)"
       }
     },
     "channel": {
@@ -1081,5 +1088,8 @@
   "buttons": {
     "startDialogue": "Ibda djalogu",
     "delete": "Ħassar"
+  },
+  "locale": {
+    "selectLanguage": "Agħżel il-lingwa tal-interface"
   }
 }

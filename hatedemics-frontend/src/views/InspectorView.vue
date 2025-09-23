@@ -148,29 +148,29 @@ const loadMore = (event: { target: any }) => {
         </v-expansion-panel-text>
       </v-expansion-panel>
     </v-expansion-panels>
-    <v-container fluid class="pa-4" style="background-color: white;">
-    <v-row>
-      <v-col cols="4">
-        <v-autocomplete
-          return-object
-          :label="t('channelInfo.channels')"
-          v-model="selectedChannelInfo"
-          :items="channelsInfo"
-          :loading="loading"
-          item-title="label"
-          item-value="id"
-          variant="outlined"
-          density="comfortable"
-          :filter="() => true"
-          @update:model-value="updateChannel"
-          @update:search="onSearch"
-          @scroll.passive="loadMore"
-          clearable
-        />
-      </v-col>
+    <v-container fluid class="pa-4" style="background-color: white">
+      <v-row>
+        <v-col cols="4">
+          <v-autocomplete
+            return-object
+            :label="t('channelInfo.channels')"
+            v-model="selectedChannelInfo"
+            :items="channelsInfo"
+            :loading="loading"
+            item-title="label"
+            item-value="id"
+            variant="outlined"
+            density="comfortable"
+            :filter="() => true"
+            @update:model-value="updateChannel"
+            @update:search="onSearch"
+            @scroll.passive="loadMore"
+            clearable
+          />
+        </v-col>
 
-      <v-col cols="4">
-        <!-- <v-select
+        <v-col cols="4">
+          <!-- <v-select
           :label="t('channelInfo.chats')"
           v-model="selectedChat"
           :items="chats"
@@ -180,19 +180,19 @@ const loadMore = (event: { target: any }) => {
           density="comfortable"
           @update:model-value="updateChat"
         /> -->
-        <v-select
-          :label="t('channelInfo.chats')"
-          v-model="selectedChat"
-          :items="chatOptions"
-          item-title="title"
-          item-value="value"
-          variant="outlined"
-          density="comfortable"
-          @update:model-value="updateChat"
-        />
-      </v-col>
+          <v-select
+            :label="t('channelInfo.chats')"
+            v-model="selectedChat"
+            :items="chatOptions"
+            item-title="title"
+            item-value="value"
+            variant="outlined"
+            density="comfortable"
+            @update:model-value="updateChat"
+          />
+        </v-col>
 
-      <v-col cols="4" class="d-flex justify-center">
+        <!-- <v-col cols="4" class="d-flex justify-center">
         <v-btn
           color="primary"
           variant="elevated"
@@ -203,47 +203,66 @@ const loadMore = (event: { target: any }) => {
         >
           {{ t("channelInfo.messages") }}
         </v-btn>
-      </v-col>
-    </v-row>
-    <v-row>
-  <!-- Colonna centrale -->
-  <v-col :cols="showSidebar ? 5 : 6" class="transition-col">
-    <TopicsTableComponent />
-  </v-col>
+      </v-col> -->
+      </v-row>
+      <v-row>
+        <!-- Colonna centrale -->
+        <v-col :cols="showSidebar ? 5 : 6" class="transition-col">
+          <TopicsTableComponent />
+        </v-col>
 
-  <!-- Colonna sinistra -->
-  <v-col :cols="showSidebar ? 5 : 5">
-    <WordCloudComponent />
-  </v-col>
+        <!-- Colonna sinistra -->
+        <v-col :cols="showSidebar ? 5 : 5">
+          <WordCloudComponent />
+        </v-col>
 
-  <!-- Sidebar a destra -->
-  <v-col :cols="showSidebar ? 2 : 1" class="transition-col d-flex flex-column ">
-    <v-tooltip bottom>
-      <template #activator="{ props }">
-      <div>
-        <v-btn
-          v-bind="props"
-          color="primary"
-          class="mb-4"
-          @click="showSidebar = !showSidebar"
-          elevation="2"
-          block
-        >
-          <v-icon>{{ showSidebar ? "mdi-chevron-right" : "mdi-chevron-left" }}</v-icon>
-        </v-btn>
-      </div>
-      </template>
-      <span>
-        {{ showSidebar ? t("graphInteraction.collapseInfo") : t("graphInteraction.expandInfo") }}
-      </span>
-    </v-tooltip>
+        <!-- Sidebar a destra -->
+        <v-col :cols="showSidebar ? 2 : 1" class="transition-col d-flex flex-column">
+          <v-tooltip bottom>
+            <template #activator="{ props }">
+              <div>
+                <v-btn
+                  v-bind="props"
+                  color="primary"
+                  class="mb-4"
+                  @click="showSidebar = !showSidebar"
+                  elevation="2"
+                  block
+                >
+                  <v-icon>{{
+                    showSidebar ? "mdi-chevron-right" : "mdi-chevron-left"
+                  }}</v-icon>
+                </v-btn>
+              </div>
+            </template>
+            <span>
+              {{
+                showSidebar
+                  ? t("graphInteraction.collapseInfo")
+                  : t("graphInteraction.expandInfo")
+              }}
+            </span>
+          </v-tooltip>
 
-    <v-expand-x-transition>
-      <SideBarInfoComponent v-show="showSidebar" :actions="false" class="expandable-content"/>
-    </v-expand-x-transition>
-  </v-col>
-</v-row>
-</v-container>
+          <v-expand-x-transition>
+            <div style="background-color:rgb(var(--v-theme-on-surface-variant)) !important;" class="pa-4 rounded-lg"                 v-show="showSidebar"
+            >
+              <SideBarInfoComponent
+                :actions="false"
+                class="expandable-content"
+                v-show="showSidebar"
+              />
+              <div class="text-center mt-4 w-100" v-show="showSidebar">
+                <v-btn color="primary" @click="goToChats" block>
+                  <!-- <v-icon left>mdi-forum </v-icon> -->
+                  {{ t("channelInfo.messages") }}
+                </v-btn>
+              </div>
+            </div>
+          </v-expand-x-transition>
+        </v-col>
+      </v-row>
+    </v-container>
   </v-container>
   <ExploreGuideDialog v-model="showExploreGuide" />
   <TutorialInspectorDialog v-model="showTutorialInspector" />
