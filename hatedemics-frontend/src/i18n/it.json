@@ -6,7 +6,9 @@
     },
     "common": {
         "close": "Chiudi",
-        "ok": "OK"
+        "ok": "OK",
+        "yes": "Sì",
+        "no": "No"
     },
     "menu": {
         "home": "Home",
@@ -87,48 +89,46 @@
         }
     },
     "networkGuide": {
-  "guideTitle": "Glossario di Esplorazione",
-  "guideItems": {
-    "telegramDataset": {
-      "title": "Dataset Telegram",
-      "description": "<p>Un <strong>dataset</strong> è una raccolta strutturata di dati. La piattaforma include circa <strong>10 milioni di messaggi Telegram</strong> scaricati da circa <strong>500 canali</strong>, in <em>4 lingue</em> (inglese, italiano, spagnolo e polacco).</p><p>Telegram è stato scelto perché offre <strong>accesso gratuito a raccolte di dati su larga scala</strong>, a differenza di altre piattaforme di messaggistica popolari.</p>"
+        "guideTitle": "Glossario di Esplorazione",
+        "guideItems": {
+            "telegramDataset": {
+                "title": "Dataset Telegram",
+                "description": "<p>Un <strong>dataset</strong> è una raccolta strutturata di dati. La piattaforma include circa <strong>10 milioni di messaggi Telegram</strong> scaricati da circa <strong>500 canali</strong>, in <em>4 lingue</em> (inglese, italiano, spagnolo e polacco).</p><p>Telegram è stato scelto perché offre <strong>accesso gratuito a raccolte di dati su larga scala</strong>, a differenza di altre piattaforme di messaggistica popolari.</p>"
+            },
+            "telegramChannels": {
+                "title": "Canali e chat Telegram",
+                "description": "<p>Un <strong>canale Telegram</strong> è uno spazio in cui uno o più amministratori possono pubblicare messaggi a un vasto pubblico.</p><p>Un canale può avere una o più <strong>chat</strong> con impostazioni diverse: per esempio, alcune in cui solo gli amministratori possono pubblicare messaggi e altre in cui tutti possono partecipare.</p><p>Le chat o conversazioni di un canale si riferiscono ai messaggi pubblicati e al modo in cui il pubblico reagisce.</p>"
+            },
+            "network": {
+                "title": "Rete",
+                "description": "<p>Una <strong>rete</strong> è una struttura che rappresenta entità come punti e le relazioni tra esse come linee.</p><p>In questa rete, i canali Telegram scaricati sono visualizzati come <strong>punti</strong>, e le linee mostrano come sono collegati. Un canale è collegato a un altro quando Telegram lo <em>raccomanda</em> automaticamente, in base al numero di utenti in comune.</p>"
+            },
+            "disinformation": {
+                "title": "Disinformazione",
+                "description": "<p>La <strong>disinformazione</strong> è informazione falsa o fuorviante creata, condivisa o diffusa deliberatamente con l’intenzione di <em>ingannare</em> o <em>manipolare</em> le persone.</p><p>Viene spesso utilizzata per <strong>influenzare le opinioni</strong>, creare confusione o perseguire obiettivi <em>politici, sociali o economici</em>.</p>"
+            },
+            "reliability": {
+                "title": "Affidabilità",
+                "description": "<p>L’<strong>affidabilità</strong> misura quanto un link sia attendibile e accurato. È determinata tramite una <em>valutazione manuale</em> del sito web.</p><p>Un <strong>punteggio di affidabilità alto</strong> indica che la fonte può essere considerata attendibile e fornire informazioni ben fondate.</p>"
+            },
+            "infodemicRisk": {
+                "title": "Rischio Infodemico",
+                "description": "<p>Il <strong>Rischio Infodemico</strong> indica quanto il canale sia affidabile, variando da <strong>0</strong> (completamente affidabile) a <strong>1</strong> (del tutto inaffidabile).</p><p>È calcolato in base all’affidabilità dei siti condivisi nel canale e a quanto gli utenti del canale siano <em>esposti</em> a tali link (considerando il numero di visualizzazioni).</p><p>Un <strong>valore basso</strong> significa che gli utenti sono esposti a informazioni più affidabili!</p><p>Per maggiori dettagli, consulta <a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">questo articolo</a>.</p>"
+            },
+            "hateSpeech": {
+                "title": "Discorsi d’odio",
+                "description": "<p>I <strong>discorsi d’odio</strong> comprendono espressioni che incitano, promuovono, giustificano o diffondono <strong>odio, violenza, discriminazione o ostilità</strong> contro una persona o un gruppo sulla base di caratteristiche identitarie come razza, religione, etnia, genere, orientamento sessuale, disabilità o simili.</p><p>Includono sia forme esplicite di <em>incitamento alla violenza</em>, sia forme più sottili di <em>disumanizzazione</em> o <em>linguaggio denigratorio</em>.</p>"
+            },
+            "checkWorthyness": {
+                "title": "Verificabilità",
+                "description": "<p>Un contenuto è definito <strong>verificabile</strong> quando ha rilevanza di <em>interesse pubblico</em> e può richiedere un controllo da parte dei fact-checker.</p><p>Un messaggio è considerato verificabile quando:</p><ul><li>Contiene un <strong>dato fattuale</strong> che può essere verificato o smentito,</li><li>Ha il potenziale di <strong>influenzare opinioni, comportamenti o il dibattito pubblico</strong>,</li><li>Affronta <strong>temi sensibili o di grande impatto</strong> (es. politica, salute, sicurezza, migrazione),</li><li>Mostra segni di possibile <em>misinformazione</em> o <em>disinformazione</em>.</li></ul>"
+            }
+        }
     },
-    "telegramChannels": {
-      "title": "Canali e chat Telegram",
-      "description": "<p>Un <strong>canale Telegram</strong> è uno spazio in cui uno o più amministratori possono pubblicare messaggi a un vasto pubblico.</p><p>Un canale può avere una o più <strong>chat</strong> con impostazioni diverse: per esempio, alcune in cui solo gli amministratori possono pubblicare messaggi e altre in cui tutti possono partecipare.</p><p>Le chat o conversazioni di un canale si riferiscono ai messaggi pubblicati e al modo in cui il pubblico reagisce.</p>"
-    },
-    "network": {
-      "title": "Rete",
-      "description": "<p>Una <strong>rete</strong> è una struttura che rappresenta entità come punti e le relazioni tra esse come linee.</p><p>In questa rete, i canali Telegram scaricati sono visualizzati come <strong>punti</strong>, e le linee mostrano come sono collegati. Un canale è collegato a un altro quando Telegram lo <em>raccomanda</em> automaticamente, in base al numero di utenti in comune.</p>"
-    },
-    "disinformation": {
-      "title": "Disinformazione",
-      "description": "<p>La <strong>disinformazione</strong> è informazione falsa o fuorviante creata, condivisa o diffusa deliberatamente con l’intenzione di <em>ingannare</em> o <em>manipolare</em> le persone.</p><p>Viene spesso utilizzata per <strong>influenzare le opinioni</strong>, creare confusione o perseguire obiettivi <em>politici, sociali o economici</em>.</p>"
-    },
-    "reliability": {
-      "title": "Affidabilità",
-      "description": "<p>L’<strong>affidabilità</strong> misura quanto un link sia attendibile e accurato. È determinata tramite una <em>valutazione manuale</em> del sito web.</p><p>Un <strong>punteggio di affidabilità alto</strong> indica che la fonte può essere considerata attendibile e fornire informazioni ben fondate.</p>"
-    },
-    "infodemicRisk": {
-      "title": "Rischio Infodemico",
-      "description": "<p>Il <strong>Rischio Infodemico</strong> indica quanto il canale sia affidabile, variando da <strong>0</strong> (completamente affidabile) a <strong>1</strong> (del tutto inaffidabile).</p><p>È calcolato in base all’affidabilità dei siti condivisi nel canale e a quanto gli utenti del canale siano <em>esposti</em> a tali link (considerando il numero di visualizzazioni).</p><p>Un <strong>valore basso</strong> significa che gli utenti sono esposti a informazioni più affidabili!</p><p>Per maggiori dettagli, consulta <a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">questo articolo</a>.</p>"
-    },
-    "hateSpeech": {
-      "title": "Discorsi d’odio",
-      "description": "<p>I <strong>discorsi d’odio</strong> comprendono espressioni che incitano, promuovono, giustificano o diffondono <strong>odio, violenza, discriminazione o ostilità</strong> contro una persona o un gruppo sulla base di caratteristiche identitarie come razza, religione, etnia, genere, orientamento sessuale, disabilità o simili.</p><p>Includono sia forme esplicite di <em>incitamento alla violenza</em>, sia forme più sottili di <em>disumanizzazione</em> o <em>linguaggio denigratorio</em>.</p>"
-    },
-    "checkWorthyness": {
-      "title": "Verificabilità",
-      "description": "<p>Un contenuto è definito <strong>verificabile</strong> quando ha rilevanza di <em>interesse pubblico</em> e può richiedere un controllo da parte dei fact-checker.</p><p>Un messaggio è considerato verificabile quando:</p><ul><li>Contiene un <strong>dato fattuale</strong> che può essere verificato o smentito,</li><li>Ha il potenziale di <strong>influenzare opinioni, comportamenti o il dibattito pubblico</strong>,</li><li>Affronta <strong>temi sensibili o di grande impatto</strong> (es. politica, salute, sicurezza, migrazione),</li><li>Mostra segni di possibile <em>misinformazione</em> o <em>disinformazione</em>.</li></ul>"
-    }
-  }
-}
-,
     "welcome": {
         "title": "Benvenuti in Hatedemics"
     },
     "onboarding": {
-
         "steps": [
             {
                 "title": "Che cos’è Hatedemics",
@@ -148,7 +148,7 @@
             }
         ],
         "chooseLanguage": "Scegli la lingua della piattaforma",
-  "continue": "Continua",
+        "continue": "Continua",
         "prev": "Indietro",
         "next": "Avanti",
         "close": "Chiudi",
@@ -156,7 +156,7 @@
     },
     "educational": {
         "title": "Attività Educative",
-        "subtitle": "<p>In questa sezione troverai esercizi interattivi pensati per aiutarti a comprendere i meccanismi alla base della disinformazione e dei discorsi d'odio.</p><p>Potrai esplorare <b>bias cognitivi</b> e <b>fallacie logiche</b>, esercitarti con tecniche di <b>debunking</b>, conoscere i principi fondamentali della <b>Dichiarazione dei Diritti Umani</b> per capire come viene tutelata la dignità umana e applicare tecniche di <b>lettura laterale</b> per valutare criticamente i contenuti online.</p><p>Ogni attività è un’occasione per allenare il pensiero critico e diventare più resistente alla manipolazione e alla disinformazione.</p>"      ,
+        "subtitle": "<p>In questa sezione troverai esercizi interattivi pensati per aiutarti a comprendere i meccanismi alla base della disinformazione e dei discorsi d'odio.</p><p>Potrai esplorare <b>bias cognitivi</b> e <b>fallacie logiche</b>, esercitarti con tecniche di <b>debunking</b>, conoscere i principi fondamentali della <b>Dichiarazione dei Diritti Umani</b> per capire come viene tutelata la dignità umana e applicare tecniche di <b>lettura laterale</b> per valutare criticamente i contenuti online.</p><p>Ogni attività è un’occasione per allenare il pensiero critico e diventare più resistente alla manipolazione e alla disinformazione.</p>",
         "eduCard1Title": "Dichiarazione dei Diritti Umani",
         "eduCard1Desc": "Scopri i principi fondamentali che tutelano la dignità umana.",
         "eduCard1Button": "Esplora i diritti",
@@ -239,7 +239,7 @@
                 "title": "Debunking",
                 "description": "L'obiettivo del fact-checking è fornire ai cittadini strumenti e informazioni che consentano loro di formarsi un'opinione sulla base di dati e fatti verificati, in modo da prendere decisioni consapevoli. La disinformazione può influenzare il modo in cui la società pensa e affronta i problemi quotidiani, ed è per questo che la missione principale dei fact-checker è quella di far luce e raccogliere dati sui temi rilevanti per la società. In generale, il fact-checking consiste nell'individuare le bufale, verificarne il contenuto e diffonderne la smentita. Queste azioni compongono la cosiddetta attività di debunking (debunking dall'inglese smascherare, confutare, smentire).\nI fact-checker lavorano quotidianamente con il debunking: verificano i contenuti e spiegano perché qualcosa è falso dopo che è stato condiviso e reso virale sui social media. Questa attività è importante per la società, il dibattito pubblico, perfino per la sicurezza della società in generale, e per evitare che più persone leggano, condividano e credano alle bugie e ai contenuti manipolati che circolano in Internet. Alcune attività di debunking sono molto difficili: richiedono molto tempo e l'uso di strumenti specifici. Altre richiedono solo molta osservazione e la ricerca di informazioni specifiche e affidabili.\nProviamoci! In questa attività imparerai, in modo guidato, alcune tecniche di debunking e perché è importante attivare il pensiero critico e riconoscere come la viralità di alcune bufale possa creare e rafforzare le narrazioni che sfrutta la disinformazione.",
                 "objectivesTitle": "Obiettivi dell'attività",
-                "objectives":"<p><strong> Debunk:</strong> imparare, in modo guidato, alcune tecniche di debunking.</p><p><strong>Sviluppare il pensiero critico usando la strategia del pre-bunking:</strong> durante l'esercizio, gli utenti scoprono cosa sono le narrative di disinformazione e possono riflettere su quelle più diffuse nel loro paese.</p><p><strong>Attivare il pensiero critico:</strong> comprendendo come la viralizzazione di alcune bufale possa creare e rafforzare le narrative di disinformazione.</p>",
+                "objectives": "<p><strong> Debunk:</strong> imparare, in modo guidato, alcune tecniche di debunking.</p><p><strong>Sviluppare il pensiero critico usando la strategia del pre-bunking:</strong> durante l'esercizio, gli utenti scoprono cosa sono le narrative di disinformazione e possono riflettere su quelle più diffuse nel loro paese.</p><p><strong>Attivare il pensiero critico:</strong> comprendendo come la viralizzazione di alcune bufale possa creare e rafforzare le narrative di disinformazione.</p>",
                 "startButton": "Inizia l'attività",
                 "task": "Simula le azioni di un fact-checker selezionando il metodo più efficace per smascherare un contenuto sospetto. Riesci anche a identificare la narrazione di disinformazione correlata?",
                 "correct": "Corretto!",
@@ -316,7 +316,7 @@
             },
             "bias": {
                 "title": "Riconoscere i Bias",
-  "description": "<strong>Fallacie logiche associate al discorso d’odio e alla disinformazione</strong><br><br>Il contenuto del discorso d’odio e della disinformazione può a volte sembrare molto convincente. Questo perché chi diffonde odio spesso si affida a fallacie logiche – costrutti che i gruppi d’odio usano per giustificare le proprie cause e credere che chiunque si imbatta in questi contenuti li considererà ragionevoli e veritieri. Le fallacie logiche possono basarsi su premesse false, premesse vere ma conclusioni errate, oppure premesse e conclusioni corrette ma un argomento ingannevole. Alcune fallacie sono create intenzionalmente per ingannare o rendere virale la disinformazione.<br><br>Esistono molte fallacie che compaiono nei discorsi d’odio. Eccone alcune:<br><br><strong>Argumentum ad populum</strong> – un modo non sostanziale di argomentare in cui l’oratore fa appello ai gusti, preferenze e pregiudizi della folla (es. La maggioranza delle persone nel nostro paese la pensa così, quindi dobbiamo agire in questo modo);<br><br><strong>Ipse dixit</strong> – argomentare senza fornire una prova valida (es. Lo ha detto il partito politico, quindi deve essere vero);<br><br><strong>La china scivolosa</strong> – quando si sostiene che una posizione o decisione porterà inevitabilmente a una serie di conseguenze negative (es. Non possiamo permettere ai migranti di restare nel nostro paese, altrimenti porteranno le loro famiglie e avranno figli, causando la perdita dei nostri lavori e il collasso del sistema sociale, e alla fine perderemo il controllo del nostro paese);<br><br><strong>Falsa dicotomia</strong> – quando si afferma che esistono solo due modi di affrontare un problema, ignorando altre possibili opzioni (es. Puoi solo votare questo partito o vivere per sempre nel pericolo);<br><br><strong>Post hoc, ergo propter hoc</strong> – errore logico che consiste nel concludere che esista un nesso causale tra due eventi solo perché uno è accaduto prima dell’altro (es. Da quando abbiamo la nuova insegnante di matematica, prendo brutti voti. Deve essere colpa sua);<br><br><strong>Argumentum ad hominem</strong> – attaccare la persona che fa un’argomentazione invece dell’argomento stesso (es. Non ascoltare l’opinione di Marco sul progetto — è pigro e non fa mai nulla di giusto);<br><br><strong>Cherry picking</strong> – selezionare solo le prove che supportano la propria tesi ignorando quelle contrarie (es. \"L’hate speech non fa male. Guarda questo studio che dice che è solo offensivo, non pericoloso\" – ignorando decine di altri studi che mostrano i danni psicologici e sociali);<br><br><strong>Appello alla tradizione</strong> – quando si sostiene che qualcosa è buono o vero solo perché è sempre stato fatto così (es. Nella nostra scuola ci sono sempre stati più uomini che donne nel consiglio, e ha sempre funzionato bene);<br><br><strong>Argomento aneddotico</strong> – usare una singola esperienza personale per sostenere una tesi generale (es. Non credo che l’hate speech causi veri danni. Ho sentito battute offensive per anni e nessuno che conosco ne ha mai sofferto seriamente);<br><br><strong>Ad ignorantiam</strong> – affermare che qualcosa è vero o falso solo perché non è stato dimostrato il contrario (es. Nessuno ha mai provato che gli studenti copino agli esami online, quindi non succede).<br><br><strong>Bias cognitivi</strong><br><br>Il nostro cervello utilizza scorciatoie per prendere decisioni rapide nella vita quotidiana. Queste scorciatoie aiutano a concentrarci sulle informazioni più importanti, evitando di essere sopraffatti. Tuttavia, a volte portano a errori di ragionamento. I diffusori di disinformazione conoscono molto bene questi meccanismi. Ecco alcuni esempi:<br><br><strong>Membership bias</strong> – tendenza a favorire il proprio gruppo rispetto agli altri (es. Il comitato ha finanziato il progetto guidato da un collega, anche se un’altra proposta era migliore, dicendo: \"Conosciamo e ci fidiamo dei nostri\");<br><br><strong>Availability bias</strong> – tendenza a basarsi sulle informazioni che vengono subito in mente (es. Dopo un servizio TV su incidenti aerei, qualcuno sostiene che volare sia più pericoloso di guidare, nonostante le statistiche dimostrino il contrario);<br><br><strong>Causality bias</strong> – credere che ci sia una relazione causale tra eventi indipendenti (es. Ogni volta che indosso i miei calzini fortunati, la mia squadra vince – quindi devono essere la ragione);<br><br><strong>Blind spot bias</strong> – credere di essere meno influenzati dai bias rispetto agli altri (es. Io sono obiettivo, al contrario degli altri che si fanno condizionare dalle emozioni);<br><br><strong>Confirmation bias</strong> – cercare e ricordare solo le informazioni che confermano le proprie convinzioni (es. Chi crede che i vaccini siano pericolosi legge solo articoli a supporto e ignora le ricerche scientifiche contrarie);<br><br><strong>Authority bias</strong> – dare maggiore peso all’opinione di una figura autorevole (es. Deve essere vero – lo ha detto un famoso medico in TV, anche senza prove).",
+                "description": "<strong>Fallacie logiche associate al discorso d’odio e alla disinformazione</strong><br><br>Il contenuto del discorso d’odio e della disinformazione può a volte sembrare molto convincente. Questo perché chi diffonde odio spesso si affida a fallacie logiche – costrutti che i gruppi d’odio usano per giustificare le proprie cause e credere che chiunque si imbatta in questi contenuti li considererà ragionevoli e veritieri. Le fallacie logiche possono basarsi su premesse false, premesse vere ma conclusioni errate, oppure premesse e conclusioni corrette ma un argomento ingannevole. Alcune fallacie sono create intenzionalmente per ingannare o rendere virale la disinformazione.<br><br>Esistono molte fallacie che compaiono nei discorsi d’odio. Eccone alcune:<br><br><strong>Argumentum ad populum</strong> – un modo non sostanziale di argomentare in cui l’oratore fa appello ai gusti, preferenze e pregiudizi della folla (es. La maggioranza delle persone nel nostro paese la pensa così, quindi dobbiamo agire in questo modo);<br><br><strong>Ipse dixit</strong> – argomentare senza fornire una prova valida (es. Lo ha detto il partito politico, quindi deve essere vero);<br><br><strong>La china scivolosa</strong> – quando si sostiene che una posizione o decisione porterà inevitabilmente a una serie di conseguenze negative (es. Non possiamo permettere ai migranti di restare nel nostro paese, altrimenti porteranno le loro famiglie e avranno figli, causando la perdita dei nostri lavori e il collasso del sistema sociale, e alla fine perderemo il controllo del nostro paese);<br><br><strong>Falsa dicotomia</strong> – quando si afferma che esistono solo due modi di affrontare un problema, ignorando altre possibili opzioni (es. Puoi solo votare questo partito o vivere per sempre nel pericolo);<br><br><strong>Post hoc, ergo propter hoc</strong> – errore logico che consiste nel concludere che esista un nesso causale tra due eventi solo perché uno è accaduto prima dell’altro (es. Da quando abbiamo la nuova insegnante di matematica, prendo brutti voti. Deve essere colpa sua);<br><br><strong>Argumentum ad hominem</strong> – attaccare la persona che fa un’argomentazione invece dell’argomento stesso (es. Non ascoltare l’opinione di Marco sul progetto — è pigro e non fa mai nulla di giusto);<br><br><strong>Cherry picking</strong> – selezionare solo le prove che supportano la propria tesi ignorando quelle contrarie (es. \"L’hate speech non fa male. Guarda questo studio che dice che è solo offensivo, non pericoloso\" – ignorando decine di altri studi che mostrano i danni psicologici e sociali);<br><br><strong>Appello alla tradizione</strong> – quando si sostiene che qualcosa è buono o vero solo perché è sempre stato fatto così (es. Nella nostra scuola ci sono sempre stati più uomini che donne nel consiglio, e ha sempre funzionato bene);<br><br><strong>Argomento aneddotico</strong> – usare una singola esperienza personale per sostenere una tesi generale (es. Non credo che l’hate speech causi veri danni. Ho sentito battute offensive per anni e nessuno che conosco ne ha mai sofferto seriamente);<br><br><strong>Ad ignorantiam</strong> – affermare che qualcosa è vero o falso solo perché non è stato dimostrato il contrario (es. Nessuno ha mai provato che gli studenti copino agli esami online, quindi non succede).<br><br><strong>Bias cognitivi</strong><br><br>Il nostro cervello utilizza scorciatoie per prendere decisioni rapide nella vita quotidiana. Queste scorciatoie aiutano a concentrarci sulle informazioni più importanti, evitando di essere sopraffatti. Tuttavia, a volte portano a errori di ragionamento. I diffusori di disinformazione conoscono molto bene questi meccanismi. Ecco alcuni esempi:<br><br><strong>Membership bias</strong> – tendenza a favorire il proprio gruppo rispetto agli altri (es. Il comitato ha finanziato il progetto guidato da un collega, anche se un’altra proposta era migliore, dicendo: \"Conosciamo e ci fidiamo dei nostri\");<br><br><strong>Availability bias</strong> – tendenza a basarsi sulle informazioni che vengono subito in mente (es. Dopo un servizio TV su incidenti aerei, qualcuno sostiene che volare sia più pericoloso di guidare, nonostante le statistiche dimostrino il contrario);<br><br><strong>Causality bias</strong> – credere che ci sia una relazione causale tra eventi indipendenti (es. Ogni volta che indosso i miei calzini fortunati, la mia squadra vince – quindi devono essere la ragione);<br><br><strong>Blind spot bias</strong> – credere di essere meno influenzati dai bias rispetto agli altri (es. Io sono obiettivo, al contrario degli altri che si fanno condizionare dalle emozioni);<br><br><strong>Confirmation bias</strong> – cercare e ricordare solo le informazioni che confermano le proprie convinzioni (es. Chi crede che i vaccini siano pericolosi legge solo articoli a supporto e ignora le ricerche scientifiche contrarie);<br><br><strong>Authority bias</strong> – dare maggiore peso all’opinione di una figura autorevole (es. Deve essere vero – lo ha detto un famoso medico in TV, anche senza prove).",
                 "objectivesTitle": "Obiettivi dell'attività",
                 "objectives": "<ul><li>Sviluppare la consapevolezza dei meccanismi sociali, dei pregiudizi cognitivi e delle fallacie logiche</li><li>Sviluppare la capacit&agrave; di pensiero critico</li></ul><p>I meccanismi sociali, i pregiudizi cognitivi e le fallacie logiche sono fattori che favoriscono la diffusione di discorsi d'odio e della disinformazione. Conoscendone alcuni, possiamo essere meno influenzabili da essi e pi&ugrave; critici nei confronti di altre forme di manipolazione.</p>",
                 "startButton": "Attività",
@@ -367,6 +367,7 @@
             "lateralreading": {
                 "submit": "Invia",
                 "next": "Prossima domanda",
+                "showConclusion": "Avanti",
                 "nextQuestion": "Prossima domanda",
                 "prevQuestion": "Domanda precedente",
                 "selectMultiple": "Puoi selezionare più di 1 screenshot",
@@ -575,6 +576,12 @@
                             }
                         ],
                         "conclusionTitle": "Conclusione",
+                        "conclusionQuestion": "Hai trovato l'autore e puoi confermare che si tratta di una fonte autorevole? \nHai trovato prove basate su fatti e dati? \nIl contenuto è pubblicato da altre fonti attendibili?",
+                        "affidabile": true,
+                        "feedback": {
+                            "correct": "Corretto! ",
+                            "incorrect": "Sbagliato! "
+                        },
                         "conclusion": "Possiamo concludere che Quotidianosanità è un sito web che offre informazioni sanitarie di alta qualità. La sua metodologia è chiara e trasparente, basata su fonti multiple. I suoi autori sono correttamente identificati e rintracciabili. Pertanto, è una fonte adeguata per informazioni su argomenti relativi alla salute."
                     },
                     {
@@ -704,18 +711,22 @@
                             }
                         ],
                         "conclusionTitle": "Conclusione",
+                        "conclusionQuestion": "Hai trovato l'autore e puoi confermare che si tratta di una fonte autorevole? \nHai trovato prove basate su fatti e dati? \nIl contenuto è pubblicato da altre fonti attendibili?",
+                        "affidabile": false,
+                        "feedback": {
+                            "correct": "Corretto! ",
+                            "incorrect": "Sbagliato! "
+                        },
                         "conclusion": "Possiamo concludere che il sito web \"ImolaOggi\" si presenta come un giornale online che potrebbe sembrare dal nome un quotidiano locale della città di Imola che pubblica anche notizie di livello nazionale e internazionale. Grazie alla tecnica del Lateral Reading si può chiaramente verificare che il sito ImolaOggi non è un sito web attendibile nè una testata giornalistica riconosciuta. Il sito web diffonde contenuti manipolati, distorti e di hate speech."
                     }
                 ]
             }
         }
     },
-   
     "inspect": {
         "title": "Panoramica del Canale",
-"subtitle": "<p>In questa pagina puoi visualizzare nel dettaglio il contenuto di un singolo canale Telegram. La tabella mostra i temi principali del canale, quanto compaiono nei messaggi, la percentuale di discorsi d’odio e di verificabilità (check-worthiness) per ciascuno e il sentiment prevalente.</p><p>A destra troverai le informazioni chiave sul canale, mentre le word cloud visualizzano quali termini compaiono più spesso nei messaggi non di odio e in quelli di odio, e nei messaggi considerati verificabili e non verificabili.</p><p>Usa i filtri e i pulsanti per passare dalla visuale delle chat dei canali agli argomenti, o per regolare il tipo di word cloud che vedi. Se posizioni il mouse su un’etichetta o su un pulsante, vedrai una breve spiegazione della sua funzione.</p>"
+        "subtitle": "<p>In questa pagina puoi visualizzare nel dettaglio il contenuto di un singolo canale Telegram. La tabella mostra i temi principali del canale, quanto compaiono nei messaggi, la percentuale di discorsi d’odio e di verificabilità (check-worthiness) per ciascuno e il sentiment prevalente.</p><p>A destra troverai le informazioni chiave sul canale, mentre le word cloud visualizzano quali termini compaiono più spesso nei messaggi non di odio e in quelli di odio, e nei messaggi considerati verificabili e non verificabili.</p><p>Usa i filtri e i pulsanti per passare dalla visuale delle chat dei canali agli argomenti, o per regolare il tipo di word cloud che vedi. Se posizioni il mouse su un’etichetta o su un pulsante, vedrai una breve spiegazione della sua funzione.</p>"
     },
-    
     "channel": {
         "title": "Esplorazione della Rete",
         "subtitle": "<p>Qui sotto puoi vedere una rete di canali Telegram, in cui ogni canale è un punto ('nodo'). Questi canali sono collegati quando Telegram ne raccomanda automaticamente uno a un altro, di solito perché condividono molti degli stessi utenti.</p><p>Puoi esplorare la rete e la tabella per scoprire canali reali che potrebbero diffondere disinformazione o discorsi d'odio.</p><p>Modifica il colore e la dimensione dei canali, filtra e riordina le loro caratteristiche per trovare quelli che ti interessano di più.</p> <p>Seleziona un canale per vedere le sue statistiche e i suoi argomenti principali.</p>",
@@ -949,7 +960,7 @@
         "addDynamicTurn": "Aggiungi turno dinamico",
         "addFromGround": "Aggiungi da fonte",
         "tooltip": {
-            "label":"Nome del Canale",
+            "label": "Nome del Canale",
             "startEmpty": "Premi qui per creare un turno vuoto.",
             "addDynamicTurn": "Genera automaticamente un suggerimento da cui iniziare.<br>Puoi comunque modificarlo in seguito.",
             "addRoundUp": "Aggiungi un turno vuoto <em>prima</em> di quello selezionato.",
@@ -1004,59 +1015,58 @@
             }
         },
         "channel": {
-    "title": "Guida del Canale",
-    "topic": {
-      "title": "Tema",
-      "description": "A partire da tutti i messaggi della chat selezionata, i temi più significativi vengono estratti tramite <b>topic modeling basato su IA</b>: i messaggi sono raggruppati in base alle somiglianze nel contenuto. Questi cluster rivelano gli argomenti più rilevanti della discussione, aiutando a capire di cosa si parla nel canale."
-    },
-    "hateSpeechPercent": {
-      "title": "Hate Speech %",
-      "description": "Grazie alla <b>classificazione basata su IA</b>, ogni messaggio del canale viene analizzato per rilevare se contiene discorsi d’odio (consulta il <i>Glossario</i> per la definizione di Hate Speech). Calcolando la <b>media dell’Hate Speech</b> nei messaggi collegati a ciascun tema, evidenziamo la prevalenza del discorso d’odio nelle conversazioni."
-    },
-    "checkWorthinessPercent": {
-      "title": "Check-Worthiness %",
-      "description": "Con la <b>classificazione basata su IA</b>, ogni messaggio è analizzato per capire se è <b>verificabile</b> (check-worthy), ovvero se contiene affermazioni che possono richiedere fact-checking (vedi <i>Glossario</i> per maggiori dettagli). Calcolando la <b>media del contenuto verificabile</b> per tema, evidenziamo la prevalenza di affermazioni potenzialmente fuorvianti o dubbie nelle conversazioni."
-    },
-    "prevalentSentiment": {
-      "title": "Sentiment prevalente",
-      "description": "Con l’<b>analisi del sentiment basata su IA</b>, ogni messaggio è classificato come <i>neutro</i>, <i>positivo</i> o <i>negativo</i>. Aggregando il sentiment di tutti i messaggi relativi a un tema, identifichiamo il <b>sentiment prevalente</b> di quel tema."
-    },
-    "wordCloud": {
-      "title": "Word Cloud",
-      "description": "La word cloud è una rappresentazione visiva delle parole più frequenti in un testo: più una parola è ricorrente, più è mostrata <b>grande</b> nella nuvola.<br><br>Permette di visualizzare quali termini compaiono più spesso nei messaggi <b>non d’odio</b> e di <b>odio</b>, e in quelli <b>verificabili</b> e <b>non verificabili</b>, a livello di <i>chat</i> o di <i>tema</i>."
-    }
-  },
-  "chats": {
-  "title": "Guida Rapida - Chat",
-  "reactions": {
-    "title": "Reazioni",
-    "description": "Il numero totale di reazioni (<b>mi piace</b>, <b>non mi piace</b>, <b>cuore</b> e così via) che un messaggio ha ricevuto. È un’indicazione della <b>popolarità</b> di un messaggio."
-  },
-  "reliability": {
-    "title": "Affidabilità",
-    "description": "Indica l’<b>affidabilità media</b> delle URL contenute nel messaggio. Viene valutata automaticamente in base al dominio: può essere <b>affidabile</b>, <b>non affidabile</b> o <b>sconosciuto</b>."
-  },
-  "target": {
-    "title": "Gruppo target",
-    "description": "Un target si riferisce all’<b>individuo</b> o al <b>gruppo di persone</b> menzionato in un messaggio. In questo progetto, identifichiamo se un messaggio contiene riferimenti a uno dei seguenti gruppi: <b>persone nere</b>, <b>LGBTQIA+</b>, <b>Ebrei</b>, <b>migranti</b>, <b>musulmani</b>, <b>persone con disabilità</b>, <b>donne</b>.<br><br>La presenza di un target non implica di per sé odio, ma permette di filtrare ulteriormente per vedere quali messaggi che menzionano questi gruppi sono anche <b>odiosi</b>, <b>checkworthy</b> o contengono <b>link non affidabili</b>."
-  },
-  "filtersTable": {
-    "title": "Filtri e intestazioni della tabella",
-    "description": "Usa i tre filtri (<b>Hate Speech</b>, <b>Check Worthy</b> e <b>Filtra per Target</b>) per mostrare solo le righe correlate.<br>Puoi anche cliccare sulle <b>intestazioni delle colonne</b> per ordinare le righe in base alla presenza o assenza di una variabile specifica."
-  },
-  "startConversation": {
-    "title": "Inizia conversazione",
-    "description": "Scrivi counterspeech",
-    "details": "Premi questo pulsante per scegliere un argomento per la scrittura del counterspeech. Verrai quindi reindirizzato alla <b>pagina di scrittura del counterspeech</b>."
-  }
-}
-
+            "title": "Guida del Canale",
+            "topic": {
+                "title": "Tema",
+                "description": "A partire da tutti i messaggi della chat selezionata, i temi più significativi vengono estratti tramite <b>topic modeling basato su IA</b>: i messaggi sono raggruppati in base alle somiglianze nel contenuto. Questi cluster rivelano gli argomenti più rilevanti della discussione, aiutando a capire di cosa si parla nel canale."
+            },
+            "hateSpeechPercent": {
+                "title": "Hate Speech %",
+                "description": "Grazie alla <b>classificazione basata su IA</b>, ogni messaggio del canale viene analizzato per rilevare se contiene discorsi d’odio (consulta il <i>Glossario</i> per la definizione di Hate Speech). Calcolando la <b>media dell’Hate Speech</b> nei messaggi collegati a ciascun tema, evidenziamo la prevalenza del discorso d’odio nelle conversazioni."
+            },
+            "checkWorthinessPercent": {
+                "title": "Check-Worthiness %",
+                "description": "Con la <b>classificazione basata su IA</b>, ogni messaggio è analizzato per capire se è <b>verificabile</b> (check-worthy), ovvero se contiene affermazioni che possono richiedere fact-checking (vedi <i>Glossario</i> per maggiori dettagli). Calcolando la <b>media del contenuto verificabile</b> per tema, evidenziamo la prevalenza di affermazioni potenzialmente fuorvianti o dubbie nelle conversazioni."
+            },
+            "prevalentSentiment": {
+                "title": "Sentiment prevalente",
+                "description": "Con l’<b>analisi del sentiment basata su IA</b>, ogni messaggio è classificato come <i>neutro</i>, <i>positivo</i> o <i>negativo</i>. Aggregando il sentiment di tutti i messaggi relativi a un tema, identifichiamo il <b>sentiment prevalente</b> di quel tema."
+            },
+            "wordCloud": {
+                "title": "Word Cloud",
+                "description": "La word cloud è una rappresentazione visiva delle parole più frequenti in un testo: più una parola è ricorrente, più è mostrata <b>grande</b> nella nuvola.<br><br>Permette di visualizzare quali termini compaiono più spesso nei messaggi <b>non d’odio</b> e di <b>odio</b>, e in quelli <b>verificabili</b> e <b>non verificabili</b>, a livello di <i>chat</i> o di <i>tema</i>."
+            }
+        },
+        "chats": {
+            "title": "Guida Rapida - Chat",
+            "reactions": {
+                "title": "Reazioni",
+                "description": "Il numero totale di reazioni (<b>mi piace</b>, <b>non mi piace</b>, <b>cuore</b> e così via) che un messaggio ha ricevuto. È un’indicazione della <b>popolarità</b> di un messaggio."
+            },
+            "reliability": {
+                "title": "Affidabilità",
+                "description": "Indica l’<b>affidabilità media</b> delle URL contenute nel messaggio. Viene valutata automaticamente in base al dominio: può essere <b>affidabile</b>, <b>non affidabile</b> o <b>sconosciuto</b>."
+            },
+            "target": {
+                "title": "Gruppo target",
+                "description": "Un target si riferisce all’<b>individuo</b> o al <b>gruppo di persone</b> menzionato in un messaggio. In questo progetto, identifichiamo se un messaggio contiene riferimenti a uno dei seguenti gruppi: <b>persone nere</b>, <b>LGBTQIA+</b>, <b>Ebrei</b>, <b>migranti</b>, <b>musulmani</b>, <b>persone con disabilità</b>, <b>donne</b>.<br><br>La presenza di un target non implica di per sé odio, ma permette di filtrare ulteriormente per vedere quali messaggi che menzionano questi gruppi sono anche <b>odiosi</b>, <b>checkworthy</b> o contengono <b>link non affidabili</b>."
+            },
+            "filtersTable": {
+                "title": "Filtri e intestazioni della tabella",
+                "description": "Usa i tre filtri (<b>Hate Speech</b>, <b>Check Worthy</b> e <b>Filtra per Target</b>) per mostrare solo le righe correlate.<br>Puoi anche cliccare sulle <b>intestazioni delle colonne</b> per ordinare le righe in base alla presenza o assenza di una variabile specifica."
+            },
+            "startConversation": {
+                "title": "Inizia conversazione",
+                "description": "Scrivi counterspeech",
+                "details": "Premi questo pulsante per scegliere un argomento per la scrittura del counterspeech. Verrai quindi reindirizzato alla <b>pagina di scrittura del counterspeech</b>."
+            }
+        }
     },
     "buttons": {
-    "startDialogue": "Avvia Dialogo",
-    "delete": "Elimina"
-  },
-  "locale": {
-    "selectLanguage": "Seleziona la lingua dell’interfaccia"
-  }
+        "startDialogue": "Avvia Dialogo",
+        "delete": "Elimina"
+    },
+    "locale": {
+        "selectLanguage": "Seleziona la lingua dell’interfaccia"
+    }
 }

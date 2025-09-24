@@ -6,7 +6,9 @@
     },
     "common": {
         "close": "Cerca",
-        "ok": "DE ACUERDO"
+        "ok": "DE ACUERDO",
+        "yes": "SI",
+        "no": "NO"
     },
     "menu": {
         "home": "Hogar",
@@ -367,11 +369,12 @@
                 "submit": "Enviar",
                 "nextQuestion": " Siguiente pregunta",
                 "prevQuestion": "Pregunta anterior",
+                "showConclusion": "Continuar",
                 "conclusion": "Conclusión",
                 "selectMultiple": "Puedes seleccionar más de 1 captura de pantalla",
                 "nextExercise": "Siguiente ejercicio",
                 "title": "Lectura lateral",
-                "subtitle":"A continuación puedes ver varias capturas de pantalla. Piensa cuál responde mejor a la siguiente pregunta.",
+                "subtitle": "A continuación puedes ver varias capturas de pantalla. Piensa cuál responde mejor a la siguiente pregunta.",
                 "description": "<strong>Lectura lateral</strong> es una técnica que nos permite evaluar rápidamente si el contenido de una página web proviene de fuentes confiables y está basado en datos, referencias e información de calidad.<br><br>En una investigación realizada por el <a href=\"https://cor.inquirygroup.org/research/lateral-reading-on-the-open-internet/\" target=\"_blank\" rel=\"noopener\">Stanford History Education Group</a>, los educadores descubrieron que es una manera eficiente de evaluar la calidad de un sitio web desconocido.<br><br>Esta poderosa estrategia (<a href=\"https://cor.inquirygroup.org/curriculum/collections/teaching-lateral-reading/\" target=\"_blank\" rel=\"noopener\">utilizada por los verificadores de datos</a>) para evaluar información en línea consiste en no leer un sitio web de forma ‘vertical’, como si fuera un documento impreso, sino emplear un método llamado ‘lectura lateral’.<br><br>Esto significa analizar la página web abriendo varias pestañas para responder preguntas clave sobre el contenido:<br><ul><li>¿Quién es el autor del contenido? ¿Es una fuente experta?</li><li>¿Podemos encontrar evidencia? ¿Está basada en hechos y datos?</li><li>¿Está publicado por otras fuentes confiables? ¿Qué dicen al respecto?</li></ul><br>Además de estas preguntas clave, la técnica de lectura lateral nos invita a fomentar el pensamiento crítico y profundizar analizando otros aspectos del contenido, como:<br><ul><li>¿Quién financia o patrocina el sitio donde se publicó el artículo original?</li><li>¿Qué dicen otras fuentes autorizadas sobre ese sitio?</li><li>Cuando buscas el tema del artículo original, ¿los primeros resultados provienen de organizaciones de verificación de datos?</li><li>¿Se han planteado dudas sobre otros artículos escritos por el autor?</li><li>¿La información que encuentras en otros lugares contradice el artículo original?</li><li>¿Medios de comunicación confiables están informando —o tal vez más importante, no están informando— sobre lo que estás leyendo?</li></ul><br><strong>La lectura lateral</strong> nos ayuda a evaluar mejor nuestras fuentes de información —es decir, a distinguir entre la verdad y la mentira— y a ejercer de manera consciente nuestro derecho a elegir cómo accedemos a la información.",
                 "objectivesTitle": "Objetivos",
                 "objectives": "<ul><li>Aprender sobre la transparencia y los factores de credibilidad de las fuentes</li><li>Desarrollar la competencia para identificar fuentes de información confiables</li></ul>",
@@ -556,6 +559,12 @@
                             }
                         ],
                         "conclusionTitle": "Conclusión",
+                        "conclusionQuestion": "¿Has encontrado al autor y confirmado que es una fuente experta? ¿Has encontrado evidencias basadas en hechos y datos? ¿El contenido ha sido publicado por otras fuentes confiables?",
+                        "affidabile": true,
+                        "feedback": {
+                            "correct": "¡Correcto!",
+                            "incorrect": "¡Incorrecto!"
+                        },
                         "conclusion": "MedlinePlus es un sitio web que ofrece información de salud de alta calidad y fácil de entender. Su metodología es clara y transparente, basada en múltiples fuentes. Sus autores están correctamente identificados y localizables. Por lo tanto es una fuente adecuada para informarse sobre temas relacionados al ámbito de la salud."
                     },
                     {
@@ -702,6 +711,12 @@
                             }
                         ],
                         "conclusionTitle": "Conclusión",
+                        "conclusionQuestion": "¿Has encontrado al autor y confirmado que es una fuente experta? ¿Has encontrado evidencias basadas en hechos y datos? ¿El contenido ha sido publicado por otras fuentes confiables?",
+                        "affidabile": false,
+                        "feedback": {
+                            "correct": "¡Correcto!",
+                            "incorrect": "¡Incorrecto!"
+                        },
                         "conclusion": "Después de aplicar la lectura lateral para evaluar la página Rambla Libre concluimos que no podemos asegurar que se trate de una fuente de información fiable. La página se autodenomina “medio digital” (y está estructura como si fuera un medio) pero no presenta al lector informaciones fundamentales como listado de autores, metodología o financiación. Asimismo, la mayoría de sus artículos no incluyen declaraciones de expertos y algunos son identificados como bulos por medios de verificación."
                     }
                 ]
@@ -895,9 +910,9 @@
             "startConversationDescription": "Seleccione el argumento que desea utilizar para iniciar la conversación."
         },
         "hate": "I hate",
-"notHate": "No hate",
-"worthy": "Verifiable",
-"notWorthy": "Not verifiable",
+        "notHate": "No hate",
+        "worthy": "Verifiable",
+        "notWorthy": "Not verifiable",
         "noData": "No hay datos disponibles",
         "noTarget": "No se identificó el objetivo",
         "target": "Haga clic aquí para comenzar una nueva conversación",
@@ -1062,6 +1077,6 @@
         "delete": "Eliminar"
     },
     "locale": {
-    "selectLanguage": "Selecciona el idioma de la interfaz"
-  }
+        "selectLanguage": "Selecciona el idioma de la interfaz"
+    }
 }

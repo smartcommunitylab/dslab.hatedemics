@@ -6,7 +6,9 @@
   },
   "common": {
     "close": "Agħlaq",
-    "ok": "OK"
+    "ok": "OK",
+    "yes": "Iva",
+    "no": "Le"
   },
   "menu": {
     "home": "Dar",
@@ -272,7 +274,6 @@
             "title": "Mistoqsija 2",
             "question": "Billi twettaq tfittxija bil-maqlub tal-immaġni kont issib din l-immaġni. X’tistaʼ tikkonkludi billi tosservaha?",
             "image": "/img/debunking/en/answer1.jpg",
-
             "options": [
               {
                 "text": "Hija stampa AI"
@@ -366,6 +367,7 @@
         "submit": "Ibgħat",
         "nextQuestion": "Mistoqsija li jmiss",
         "prevQuestion": "Mistoqsija preċedenti",
+        "showConclusion": "Tista' tara l-konklużjoni",
         "nextExercise": "Eżerċizzju li jmiss",
         "conclusion": "Konklużjoni",
         "title": "Qari laterali",
@@ -589,6 +591,12 @@
               }
             ],
             "conclusionTitle": "Konklużjoni",
+            "conclusionQuestion": "Sibt l-awtur u kkonfermajt li huwa sors espert? Sibt evidenza bbażata fuq fatti u dejta? Il-kontenut huwa ppubblikat minn sorsi affidabbli oħra?",
+            "affidabile": true,
+            "feedback": {
+              "correct": "Korrett!",
+              "incorrect": "Mhux korrett!"
+            },
             "conclusion": "Nistgħu nikkonkludu li MedlinePlus hija websajt li toffri informazzjoni dwar is-saħħa ta’ kwalità għolja u faċli biex tinftiehem. Il-metodoloġija tagħha hija ċara u trasparenti, ibbażata fuq sorsi diversi. L-awturi huma identifikati b'mod tajjeb u huma traċċabbli. Għalhekk, dan is-sit huwa sors tajjeb biex issib informazzjoni dwar suġġetti relatati mas-saħħa."
           },
           {
@@ -736,6 +744,12 @@
               }
             ],
             "conclusionTitle": "Konklużjoni",
+            "conclusionQuestion": "Sibt l-awtur u kkonfermajt li huwa sors espert? Sibt evidenza bbażata fuq fatti u dejta? Il-kontenut huwa ppubblikat minn sorsi affidabbli oħra?",
+            "affidabile": false,
+            "feedback": {
+              "correct": "Korrett!",
+              "incorrect": "Mhux korrett!"
+            },
             "conclusion": "Wara li applikajna l-metodu ta’ qari Laterali, sibna li ‘The People’s Voice’ mhux sors li tista' sserraħ fuqu. Jidher bħala sit tal-midja li jippubblika kontenut b’‘Fact Checked stampat’, iżda fil-fatt, il-websajt tippubblika informazzjoni ħażina li tidher bħala reali."
           }
         ]
@@ -837,7 +851,7 @@
       "in_degree": "Fil-grad ",
       "n_out_recommended": "Rakkomandazzjonijiet barra",
       "n_in_recommended": "Fir-rakkomandazzjonijiet",
-      "scale":"Piż"
+      "scale": "Piż"
     },
     "tooltip": {
       "label": "Isem tal-kanal",
@@ -923,9 +937,9 @@
       "startConversationDescription": "Agħżel it-task tat-tema li tixtieq taħdem fuqha."
     },
     "hate": "I hate",
-"notHate": "No hate",
-"worthy": "Verifiable",
-"notWorthy": "Not verifiable",
+    "notHate": "No hate",
+    "worthy": "Verifiable",
+    "notWorthy": "Not verifiable",
     "noData": "L-ebda dejta disponibbli",
     "noTarget": "L-ebda mira identifikata",
     "target": "Ikklikkja hawn biex tibda konversazzjoni ġdida",
