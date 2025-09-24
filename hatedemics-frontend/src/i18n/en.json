@@ -6,7 +6,9 @@
     },
     "common": {
         "close": "Close",
-        "ok": "OK"
+        "ok": "OK",
+        "yes": "Yes",
+        "no": "No"
     },
     "menu": {
         "home": "Home",
@@ -365,6 +367,7 @@
             "lateralreading": {
                 "submit": "Submit",
                 "nextQuestion": "Next question",
+                "showConclusion": "Show conclusion",
                 "prevQuestion": "Previous question",
                 "nextExercise": "Next exercise",
                 "conclusion": "Conclusion",
@@ -589,6 +592,12 @@
                             }
                         ],
                         "conclusionTitle": "Conclusion",
+                        "conclusionQuestion": "Have you found the author and confirmed it is an expert source? Have you found evidences based on facts and data?Is the content published by other reliable sources?",
+                        "affidabile": true,
+                        "feedback": {
+                            "correct": "Correct! ",
+                            "incorrect": "Incorrect! "
+                        },
                         "conclusion": "We can conclude that MedlinePlus is a website that offers high-quality, easy-to-understand health information. Its methodology is clear and transparent, based on multiple sources. Its authors are correctly identified and traceable. Therefore, it is a suitable source for information on health-related topics."
                     },
                     {
@@ -736,6 +745,12 @@
                             }
                         ],
                         "conclusionTitle": "Conclusion",
+                        "conclusionQuestion": "Have you found the author and confirmed it is an expert source? Have you found evidences based on facts and data?Is the content published by other reliable sources?",
+                        "affidabile": false,
+                        "feedback": {
+                            "correct": "Correct! ",
+                            "incorrect": "Incorrect! "
+                        },
                         "conclusion": "After applying the Lateral reading method, we found that ‘The People's Voice’ is not a reliable source. It has the appearance of a media website and publishes content with a ‘Fact Checked stamped’, but in fact, the website publishes misinformation that is shared as real."
                     }
                 ]

@@ -6,7 +6,9 @@
     },
     "common": {
         "close": "Zamknij",
-        "ok": "OK"
+        "ok": "OK",
+        "yes": "Tak",
+        "no": "Nie"
     },
     "menu": {
         "home": "Dom",
@@ -168,7 +170,7 @@
         "eduCard4Desc": "Dowiedz się,  jak analizować treści online.",
         "eduCard4Button": "Rozpocznij aktywność",
         "warningTitle": "Ostrzeżenie",
-        "warningText": "Zajęcia te zawierają przykłady obrazujące hejt, które niektórzy czytelnicy mogą uznać za obraźliwe. ",
+        "warningText": "Zajęcia te zawierają niezakłonne przykłady, które niektórzy czytelnicy mogą uznać za obraźliwe.",
         "warningButton": "Rozumiem",
         "warningCheckbox": "Nie pokazuj ponownie tej wiadomości",
         "tasks": {
@@ -366,6 +368,7 @@
                 "submit": "Zatwierdź",
                 "nextQuestion": "Dalej",
                 "prevQuestion": "Wstecz",
+                "showConclusion": "Dalej",
                 "nextExercise": "Następne zadanie",
                 "conclusion": "Podsumowanie",
                 "selectMultiple": "Możesz wybrać więcej niż jeden zrzut ekranu",
@@ -426,8 +429,8 @@
                                     }
                                 ],
                                 "feedback": {
-                                    "correct": "Dobrze zrobione! Informacje o autorze można znaleźć w zakładce „O portalu”, a następnie na podstronie „Zespół redakcyjny” (https://szczepienia.pzh.gov.pl/o-portalu/zespol-redakcyjny/), dostępnej z górnego paska menu strony szczepienia.pzh.gov.pl. \n W tej sekcji znajdują się dane o osobach odpowiedzialnych za treści publikowane na portalu – wraz z ich funkcjami, afiliacjami i specjalizacjami, co pozwala zweryfikować ich eksperckość i wiarygodność.",
-                                    "incorrect": "Nie do końca. Informacje o autorze można znaleźć w zakładce „O portalu”, a następnie na podstronie „Zespół redakcyjny” (https://szczepienia.pzh.gov.pl/o-portalu/zespol-redakcyjny/), dostępnej z górnego paska menu strony szczepienia.pzh.gov.pl. \n W tej sekcji znajdują się dane o osobach odpowiedzialnych za treści publikowane na portalu – wraz z ich funkcjami, afiliacjami i specjalizacjami, co pozwala zweryfikować ich eksperckość i wiarygodność."
+                                    "correct": "Dobrze zrobione! Informacje o autorze można znaleźć w zakładce „O portalu”, a następnie na podstronie „Zespół redakcyjny” (https://szczepienia.pzh.gov.pl/o-portalu/zespol-redakcyjny/), dostępnej z górnego paska menu strony szczepienia.pzh.gov.pl.W tej sekcji znajdują się dane o osobach odpowiedzialnych za treści publikowane na portalu – wraz z ich funkcjami, afiliacjami i specjalizacjami, co pozwala zweryfikować ich eksperckość i wiarygodność.",
+                                    "incorrect": "Niepoprawnie! Informacje o zawartości strony i jej metodologii można znaleźć w zakładce „O portalu” na stronie szczepienia.pzh.gov.pl. Z opisu wynika, że portal został uruchomiony przez Narodowy Instytut Zdrowia Publicznego PZH – PIB we współpracy z Polskim Towarzystwem Wakcynologii, w ramach międzynarodowej inicjatywy WHO – Vaccine Safety Network. Posiada on akredytację WHO i figuruje na liście stron rekomendowanych jako źródła rzetelnych informacji o szczepieniach. Treści na portalu są tworzone z myślą zarówno o osobach ogólnych, jak i profesjonalistach medycznych, a wszystkie informacje są: - oparte na faktach naukowych, - podane w formie pytań i odpowiedzi, - dotyczą bezpieczeństwa i skuteczności szczepień, kalendarza szczepień, organizacji systemu szczepień oraz aktualności z dziedziny wakcynologii. Dodatkowo, treści powstają we współpracy z ekspertami o uznanym autorytecie w środowisku medycznym, co potwierdza rzetelność metodologiczną portalu.Całość działania serwisu jest finansowana m.in. z Narodowego Programu Zdrowia na lata 2020–2025."
                                 }
                             },
                             {
@@ -555,7 +558,13 @@
                             }
                         ],
                         "conclusionTitle": "Wniosek",
-                        "conclusion": "W ostatecznym rozrachunku strona szczepienia.pzh.gov.pl jest godna zaufania i można z niej czerpać wiarygodne informacje.\n\nPortal jest prowadzony przez Narodowy Instytut Zdrowia Publicznego PZH – Państwowy Instytut Badawczy, we współpracy z Polskim Towarzystwem Wakcynologii, posiada akredytację WHO i jest rekomendowany przez międzynarodowe oraz krajowe instytucje zdrowotne.\n\nNa stronie można znaleźć szczegółowe informacje o autorach i zespole redakcyjnym, którzy są uznanymi ekspertami z dziedziny zdrowia publicznego i wakcynologii, a ich kwalifikacje i publikacje są transparentnie udostępnione i można je zweryfikować w innych wiarygodnych źródłach.\n\nTreści są przygotowywane zgodnie z rzetelną metodologią, oparte na faktach i danych naukowych, a pod artykułami zamieszczane są źródła z autorytatywnych instytucji, takich jak WHO czy CDC.\n\nStrona dba również o bezpieczeństwo użytkowników – posiada certyfikat SSL, politykę prywatności, deklarację dostępności oraz formularz kontaktowy.\n\nCo więcej, publikowane na portalu treści są cytowane i rekomendowane przez inne wiarygodne źródła, w tym serwisy fact-checkingowe i oficjalne strony rządowe.\n\nWszystko to sprawia, że szczepienia.pzh.gov.pl jest wiarygodnym i profesjonalnym źródłem informacji na temat szczepień i zdrowia publicznego."
+                        "conclusionQuestion": "Czy znalazłeś autora i potwierdziłeś, że jest to źródło eksperckie? Czy znalazłeś dowody oparte na faktach i danych? Czy treść została opublikowana przez inne wiarygodne źródła?",
+                        "affidabile": true,
+                        "feedback": {
+                        "correct": "Poprawnie! ",
+                        "incorrect": "Niepoprawnie! "
+                        },
+                        "conclusion": "W ostatecznym rozrachunku strona szczepienia.pzh.gov.pl jest godna zaufania i można z niej czerpać wiarygodne informacje. Portal jest prowadzony przez Narodowy Instytut Zdrowia Publicznego PZH – Państwowy Instytut Badawczy, we współpracy z Polskim Towarzystwem Wakcynologii, posiada akredytację WHO i jest rekomendowany przez międzynarodowe oraz krajowe instytucje zdrowotne. Na stronie można znaleźć szczegółowe informacje o autorach i zespole redakcyjnym, którzy są uznanymi ekspertami z dziedziny zdrowia publicznego i wakcynologii, a ich kwalifikacje i publikacje są transparentnie udostępnione i można je zweryfikować w innych wiarygodnych źródłach. Treści są przygotowywane zgodnie z rzetelną metodologią, oparte na faktach i danych naukowych, a pod artykułami zamieszczane są źródła z autorytatywnych instytucji, takich jak WHO czy CDC. Strona dba również o bezpieczeństwo użytkowników – posiada certyfikat SSL, politykę prywatności, deklarację dostępności oraz formularz kontaktowy. Co więcej, publikowane na portalu treści są cytowane i rekomendowane przez inne wiarygodne źródła, w tym serwisy fact-checkingowe i oficjalne strony rządowe. Wszystko to sprawia, że szczepienia.pzh.gov.pl jest wiarygodnym i profesjonalnym źródłem informacji na temat szczepień i zdrowia publicznego."
                     },
                     {
                         "intro": "<p>https://globalna.info/</p>",
@@ -650,6 +659,12 @@
                             }
                         ],
                         "conclusionTitle": "Wniosek",
+                        "conclusionQuestion": "Czy znalazłeś autora i potwierdziłeś, że jest to źródło eksperckie? Czy znalazłeś dowody oparte na faktach i danych? Czy treść została opublikowana przez inne wiarygodne źródła?",
+                        "affidabile": false,
+                        "feedback": {
+                        "correct": "Poprawnie! ",
+                        "incorrect": "Niepoprawnie! "
+                        },
                         "conclusion": "Strona globalna.info jest niewiarygodnym źródłem informacji i nie warto jej ufać.\n\nNa stronie nie ma podanych autorów ani zespołu redakcyjnego — wpisy są publikowane przez anonimowy profil „globalna świadomość”, który nie zawiera żadnych danych identyfikujących autorów ani informacji o ich wykształceniu czy kompetencjach.\n\nBrakuje jakichkolwiek informacji dotyczących zawartości strony, metodologii, celu działania czy sposobu doboru i weryfikacji treści. Nie ma też żadnych dowodów na rzetelność czy naukowe podejście do prezentowanych informacji.\n\nChoć strona posiada certyfikat SSL, nie ma innych danych dotyczących bezpieczeństwa, takich jak polityka prywatności czy informacje o administratorze. Dostępny jest jedynie regulamin sklepu z ofertą produktów, który nie jest powiązany z merytoryczną zawartością portalu.\n\nTreści publikowane na tej stronie nie są potwierdzane przez żadne wiarygodne źródła. Wręcz przeciwnie — organizacje fact-checkingowe, takie jak Stowarzyszenie Demagog, AFP Sprawdzam oraz fakenews.pl, wielokrotnie wskazują, że globalna.info rozpowszechnia liczne fałszywe informacje.\n\nNa stronie nie ma również żadnych dowodów opartych na faktach czy danych naukowych — brakuje podanych źródeł, a informacje nie bazują na wiarygodnych badaniach czy instytucjach naukowych.\n\nPodsumowując, globalna.info nie spełnia podstawowych kryteriów wiarygodności i rzetelności, dlatego nie powinna być traktowana jako źródło wartościowych czy sprawdzonych informacji."
                     }
                 ]

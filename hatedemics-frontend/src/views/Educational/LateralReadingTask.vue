@@ -1,147 +1,185 @@
 <template>
   <v-container v-if="currentSection">
     <!-- Intro -->
-    <div >
-      <h1 class="text-h4 font-weight-bold">{{ t("educational.tasks.lateralreading.title") }}</h1>
-      <h3 class="text-h6 ">{{ t("educational.tasks.lateralreading.subtitle") }}</h3>
+    <div>
+      <h1 class="text-h4 font-weight-bold">
+        {{ t("educational.tasks.lateralreading.title") }}
+      </h1>
+      <h3 class="text-h6">{{ t("educational.tasks.lateralreading.subtitle") }}</h3>
       <div class="mt-6" v-html="currentSection.intro" />
     </div>
-   <!-- Domanda -->
-   <div v-if="currentQuestion">
+    <!-- Domanda -->
+    <div v-if="currentQuestion">
       <h2 class="text-h6 font-weight-bold text-center mb-6">
-        <span class="text-subtitle-2 text-grey mr-2 ">{{ questionCounter }}</span>
+        <span class="text-subtitle-2 text-grey mr-2">{{ questionCounter }}</span>
         <span>{{ currentQuestion.question }}</span>
-</h2>
+      </h2>
 
-<div class="text-subtitle-2 text-center mb-4">
-    {{ t("educational.tasks.lateralreading.selectMultiple") }}
-  </div>
-  <div class="mb-6 d-flex justify-space-between align-center nav-buttons">
-    <!-- Previous -->
-    <v-btn
-      variant="outlined"
-      color="secondary"
-      :disabled="currentIndex === 0 && !showFeedback"
-      @click="prevQuestion"
-    >
-      <v-icon start>mdi-arrow-left</v-icon>
-      {{ t("educational.tasks.lateralreading.prevQuestion") }}
-    </v-btn>
+      <div class="text-subtitle-2 text-center mb-4">
+        {{ t("educational.tasks.lateralreading.selectMultiple") }}
+      </div>
+      <div class="mb-6 d-flex justify-space-between align-center nav-buttons">
+        <!-- Previous -->
+        <v-btn
+          variant="outlined"
+          color="secondary"
+          :disabled="currentIndex === 0 && !showFeedback"
+          @click="prevQuestion"
+        >
+          <v-icon start>mdi-arrow-left</v-icon>
+          {{ t("educational.tasks.lateralreading.prevQuestion") }}
+        </v-btn>
 
-    <!-- Submit -->
-    <v-btn
-      color="primary"
-      :disabled="selected.length === 0 || showFeedback"
-      @click="submitAnswer"
-    >
-      <v-icon start>mdi-check</v-icon>
-      {{ t("educational.tasks.lateralreading.submit") }}
-    </v-btn>
+        <!-- Submit -->
+        <v-btn
+          color="primary"
+          :disabled="selected.length === 0 || showFeedback"
+          @click="submitAnswer"
+        >
+          <v-icon start>mdi-check</v-icon>
+          {{ t("educational.tasks.lateralreading.submit") }}
+        </v-btn>
 
-    <!-- Next -->
-    <v-btn
-      color="primary"
-      variant="elevated"
-      :disabled="!showFeedback"
-      @click="currentIndex < currentSection.questions.length - 1 ? nextQuestion() : openConclusion()"
-    >
-      {{ currentIndex < currentSection.questions.length - 1 ? t("educational.tasks.lateralreading.nextQuestion") : t("educational.tasks.lateralreading.conclusion") }}
-      <v-icon end>mdi-arrow-right</v-icon>
-    </v-btn>
-  </div>
-</div>
-<v-alert v-if="showFeedback" :type="isCorrect ? 'success' : 'error'" class="ma-4">
-      {{ feedbackText }}
-    </v-alert>
-<v-row dense>
-  <v-col
-    v-for="(option, idx) in currentQuestion?.options"
-    :key="idx"
-    cols="12"
-    sm="6"
-    md="4"
-    lg="3"
-    class="text-center"
-  >
-    <!-- Se NON è l'ultima opzione, mostro l'immagine -->
-    <div
-      v-if="idx < currentSection.images.length"
-      class="image-wrapper"
-      @click="selectedImage = currentSection.images[idx]; imageDialog = true"
-    >
-      <v-img
-        :src="currentSection.images[idx]"
-        height="180"
-        width="100%"
-        contain
-        class="rounded elevation-3 border-screenshot"
-        style="background-color: white;"
-      />
-      <div class="zoom-overlay">
-        <v-icon size="36">mdi-magnify</v-icon>
+        <!-- Next -->
+        <v-btn
+          color="primary"
+          variant="elevated"
+          :disabled="!showFeedback"
+          @click="
+            currentIndex < currentSection.questions.length - 1
+              ? nextQuestion()
+              : openConclusion()
+          "
+        >
+          {{
+            currentIndex < currentSection.questions.length - 1
+              ? t("educational.tasks.lateralreading.nextQuestion")
+              : t("educational.tasks.lateralreading.conclusion")
+          }}
+          <v-icon end>mdi-arrow-right</v-icon>
+        </v-btn>
       </div>
     </div>
+    <v-alert v-if="showFeedback" :type="isCorrect ? 'success' : 'error'" class="ma-4">
+      {{ feedbackText }}
+    </v-alert>
+    <v-row dense>
+      <v-col
+        v-for="(option, idx) in currentQuestion?.options"
+        :key="idx"
+        cols="12"
+        sm="6"
+        md="4"
+        lg="3"
+        class="text-center"
+      >
+        <!-- Se NON è l'ultima opzione, mostro l'immagine -->
+        <div
+          v-if="idx < currentSection.images.length"
+          class="image-wrapper"
+          @click="
+            selectedImage = currentSection.images[idx];
+            imageDialog = true;
+          "
+        >
+          <v-img
+            :src="currentSection.images[idx]"
+            height="180"
+            width="100%"
+            contain
+            class="rounded elevation-3 border-screenshot"
+            style="background-color: white"
+          />
+          <div class="zoom-overlay">
+            <v-icon size="36">mdi-magnify</v-icon>
+          </div>
+        </div>
 
-    <!-- Se è l'ultima opzione ("Not Found"), mostro un box fittizio -->
-    <div
-      v-else
-      class="image-wrapper d-flex align-center justify-center"
-      style="background-color: #f5f5f5;"
-    >
-      <v-icon size="64" color="grey">mdi-close-octagon</v-icon>
-    </div>
+        <!-- Se è l'ultima opzione ("Not Found"), mostro un box fittizio -->
+        <div
+          v-else
+          class="image-wrapper d-flex align-center justify-center"
+          style="background-color: #f5f5f5"
+        >
+          <v-icon size="64" color="grey">mdi-close-octagon</v-icon>
+        </div>
 
-    <!-- Checkbox sotto -->
-    <v-checkbox
-    v-model="selected"
-    :value="idx"
-    :label="option.text"
-    class="mt-2"
-    :class="{
-      'correct-label': showFeedback && option.correct,
-      'wrong-label': showFeedback && !option.correct
-    }"
-  />
-  </v-col>
-</v-row>
-
-
-    <!-- Submit/Feedback -->
-
-
-
-
-
+        <!-- Checkbox sotto -->
+        <v-checkbox
+          v-model="selected"
+          :value="idx"
+          :label="option.text"
+          class="mt-2"
+          :class="{
+            'correct-label': showFeedback && option.correct,
+            'wrong-label': showFeedback && !option.correct,
+          }"
+        />
+      </v-col>
+    </v-row>
 
     <!-- Trigger apertura dialog quando è l'ultima domanda -->
-<template v-if="showFeedback && currentIndex === currentSection.questions.length - 1">
-  <v-dialog v-model="conclusionDialog" persistent max-width="800">
-    <v-card>
-      <v-card-title class="text-h6 font-weight-bold">
-        {{ currentSection.conclusionTitle || t("educational.tasks.lateralreading.conclusionTitle") || "Conclusion" }}
-      </v-card-title>
-      <v-card-text>
+    <template v-if="showFeedback && currentIndex === currentSection.questions.length - 1">
+      <v-dialog v-model="conclusionDialog" persistent max-width="800">
+  <v-card>
+    <v-card-title class="text-h6 font-weight-bold">
+      {{
+        currentSection.conclusionTitle ||
+        t("educational.tasks.lateralreading.conclusionTitle") ||
+        "Conclusion"
+      }}
+    </v-card-title>
+
+    <v-card-text>
+      <!-- Step 1: mostra la domanda bonus -->
+      <div v-if="!bonusAnswered">
+        <p class="mb-4">{{ currentSection.conclusionQuestion }}</p>
+        <v-radio-group v-model="bonusAnswer">
+          <v-radio :label="t('common.yes')" value="true"></v-radio>
+          <v-radio :label="t('common.no')" value="false"></v-radio>
+        </v-radio-group>
+      </div>
+
+      <!-- Step 2: mostra la conclusione solo dopo risposta -->
+      <div v-else>
+        <p class="font-weight-bold mb-2">
+          {{ bonusFeedback }}
+        </p>
         <div v-html="currentSection.conclusion" />
-      </v-card-text>
-      <v-card-actions class="justify-end">
-        <v-btn
-          v-if="currentSectionIndex < taskSections.length - 1"
-          color="primary"
-          @click="closeConclusionDialog"
-          >
-        {{ t("educational.tasks.lateralreading.nextExercise")  }}
-        </v-btn>
-        <v-btn
-          v-else
-          color="success"
-          @click="() => router.replace('/educational')"
-        >
-          Finish
-        </v-btn>
-      </v-card-actions>
-    </v-card>
-  </v-dialog>
-</template>
+      </div>
+    </v-card-text>
+
+    <v-card-actions class="justify-end">
+      <!-- bottone per passare dalla domanda alla conclusione -->
+      <v-btn
+        v-if="!bonusAnswered"
+        color="primary"
+        :disabled="bonusAnswer === null"
+        @click="bonusAnswered = true"
+      >
+        {{ t("educational.tasks.lateralreading.showConclusion") }}
+      </v-btn>
+
+      <!-- bottone finale -->
+      <v-btn
+        v-else-if="currentSectionIndex < taskSections.length - 1"
+        color="primary"
+        @click="closeConclusionDialog"
+      >
+        {{ t("educational.tasks.lateralreading.nextExercise") }}
+      </v-btn>
+
+      <v-btn
+        v-else
+        color="success"
+        @click="() => router.replace('/educational')"
+      >
+        Finish
+      </v-btn>
+    </v-card-actions>
+  </v-card>
+</v-dialog>
+    </template>
 
     <!-- Dialog immagini -->
     <v-dialog v-model="imageDialog" max-width="800">
@@ -156,25 +194,44 @@
 </template>
 
 <script setup lang="ts">
-import { ref,  computed } from 'vue';
-import { useI18n } from 'vue-i18n';
-import { useRouter } from 'vue-router'
+import { ref, computed } from "vue";
+import { useI18n } from "vue-i18n";
+import { useRouter } from "vue-router";
 
-const router = useRouter()
+const router = useRouter();
 const { t, tm } = useI18n();
 
-const taskSections = computed(() => tm("educational.tasks.lateralreading.sections") || []);
+const taskSections = computed(
+  () => tm("educational.tasks.lateralreading.sections") || []
+);
 const currentSectionIndex = ref(0);
 const currentSection = computed(() => taskSections.value[currentSectionIndex.value]);
 
 const currentIndex = ref(0);
-const currentQuestion = computed(() => currentSection.value?.questions?.[currentIndex.value]);
+const currentQuestion = computed(
+  () => currentSection.value?.questions?.[currentIndex.value]
+);
 const selected = ref<number[]>([]);
 const showFeedback = ref(false);
 const selectedImage = ref("");
 const imageDialog = ref(false);
 const conclusionDialog = ref<boolean>(false);
-  function closeConclusionDialog() {
+  const bonusAnswer = ref<string | null>(null); // risposta dell'utente (true/false come stringa)
+const bonusAnswered = ref(false);
+
+const bonusFeedback = computed(() => {
+  if (!currentSection.value) return "";
+
+  const isReliable = currentSection.value.affidabile; // boolean dal JSON
+  const answerBool = bonusAnswer.value === "true";
+
+  if (answerBool === isReliable) {
+    return currentSection.value.feedback.correct;
+  } else {
+    return currentSection.value.feedback.incorrect;
+  }
+});
+function closeConclusionDialog() {
   nextSection();
   conclusionDialog.value = false;
 }
@@ -188,9 +245,10 @@ const questionCounter = computed(() => {
   return `${currentIndex.value + 1}/${totalQuestions.value}`;
 });
 const isCorrect = computed(() => {
-  const correctIndexes = currentQuestion.value?.options
-    ?.map((opt: { correct: boolean }, idx: number) => (opt.correct ? idx : null))
-    .filter((idx: null) => idx !== null) || [];
+  const correctIndexes =
+    currentQuestion.value?.options
+      ?.map((opt: { correct: boolean }, idx: number) => (opt.correct ? idx : null))
+      .filter((idx: null) => idx !== null) || [];
 
   return (
     selected.value.length === correctIndexes.length &&
@@ -205,13 +263,16 @@ const feedbackText = computed(() => {
     : currentQuestion.value.feedback.incorrect;
 });
 
-function submitAnswer() {
-  showFeedback.value = true;
 
-}
 function openConclusion() {
   conclusionDialog.value = true;
+  bonusAnswer.value = null;
+  bonusAnswered.value = false;
 }
+function submitAnswer() {
+  showFeedback.value = true;
+}
+
 function nextQuestion() {
   currentIndex.value++;
   selected.value = [];
@@ -237,8 +298,6 @@ function nextSection() {
   selected.value = [];
   showFeedback.value = false;
 }
-
-
 </script>
 <style scoped>
 .option-card {
