@@ -1,7 +1,7 @@
 <template>
   <v-container v-if="currentSection">
     <!-- Intro -->
-    <div v-if="currentIndex === 0">
+    <div >
       <h1 class="text-h4 font-weight-bold">{{ t("educational.tasks.lateralreading.title") }}</h1>
       <h3 class="text-h6 ">{{ t("educational.tasks.lateralreading.subtitle") }}</h3>
       <div class="mt-6" v-html="currentSection.intro" />
@@ -9,29 +9,50 @@
    <!-- Domanda -->
    <div v-if="currentQuestion">
       <h2 class="text-h6 font-weight-bold text-center mb-6">
-  {{ currentQuestion.question }}
+        <span class="text-subtitle-2 text-grey mr-2 ">{{ questionCounter }}</span>
+        <span>{{ currentQuestion.question }}</span>
 </h2>
+
 <div class="text-subtitle-2 text-center mb-4">
     {{ t("educational.tasks.lateralreading.selectMultiple") }}
   </div>
-  <!-- <v-row dense>
-    <v-col
-      v-for="(option, idx) in currentQuestion.options"
-      :key="idx"
-      cols="12"
-      sm="6"
-      md="4"
-      lg="3"
+  <div class="mb-6 d-flex justify-space-between align-center nav-buttons">
+    <!-- Previous -->
+    <v-btn
+      variant="outlined"
+      color="secondary"
+      :disabled="currentIndex === 0 && !showFeedback"
+      @click="prevQuestion"
     >
-      <v-checkbox
-        :label="option.text"
-        v-model="selected"
-        :value="idx"
-        class="my-1"
-      />
-    </v-col>
-  </v-row> -->
+      <v-icon start>mdi-arrow-left</v-icon>
+      {{ t("educational.tasks.lateralreading.prevQuestion") }}
+    </v-btn>
+
+    <!-- Submit -->
+    <v-btn
+      color="primary"
+      :disabled="selected.length === 0 || showFeedback"
+      @click="submitAnswer"
+    >
+      <v-icon start>mdi-check</v-icon>
+      {{ t("educational.tasks.lateralreading.submit") }}
+    </v-btn>
+
+    <!-- Next -->
+    <v-btn
+      color="primary"
+      variant="elevated"
+      :disabled="!showFeedback"
+      @click="currentIndex < currentSection.questions.length - 1 ? nextQuestion() : openConclusion()"
+    >
+      {{ currentIndex < currentSection.questions.length - 1 ? t("educational.tasks.lateralreading.nextQuestion") : t("educational.tasks.lateralreading.conclusion") }}
+      <v-icon end>mdi-arrow-right</v-icon>
+    </v-btn>
+  </div>
 </div>
+<v-alert v-if="showFeedback" :type="isCorrect ? 'success' : 'error'" class="ma-4">
+      {{ feedbackText }}
+    </v-alert>
 <v-row dense>
   <v-col
     v-for="(option, idx) in currentQuestion?.options"
@@ -72,55 +93,23 @@
 
     <!-- Checkbox sotto -->
     <v-checkbox
-      v-model="selected"
-      :value="idx"
-      :label="option.text"
-      class="mt-2"
-    />
+    v-model="selected"
+    :value="idx"
+    :label="option.text"
+    class="mt-2"
+    :class="{
+      'correct-label': showFeedback && option.correct,
+      'wrong-label': showFeedback && !option.correct
+    }"
+  />
   </v-col>
 </v-row>
 
 
     <!-- Submit/Feedback -->
 
-    <v-alert v-if="showFeedback" :type="isCorrect ? 'success' : 'error'" class="mt-4">
-      {{ feedbackText }}
-    </v-alert>
 
-<!-- Navigazione -->
-<div class="mt-6 d-flex justify-space-between align-center nav-buttons">
-  <!-- Previous -->
-  <v-btn
-    variant="outlined"
-    color="secondary"
-    :disabled="currentIndex === 0 && !showFeedback"
-    @click="prevQuestion"
-  >
-    <v-icon start>mdi-arrow-left</v-icon>
-    {{ t("educational.tasks.lateralreading.prevQuestion") }}
-  </v-btn>
 
-  <!-- Submit -->
-  <v-btn
-    color="primary"
-    :disabled="selected.length === 0 || showFeedback"
-    @click="submitAnswer"
-  >
-    <v-icon start>mdi-check</v-icon>
-    {{ t("educational.tasks.lateralreading.submit") }}
-  </v-btn>
-
-  <!-- Next -->
-  <v-btn
-  color="primary"
-  variant="elevated"
-  :disabled="!showFeedback"
-  @click="currentIndex < currentSection.questions.length - 1 ? nextQuestion() : openConclusion()"
->
-  {{ currentIndex < currentSection.questions.length - 1 ? t("educational.tasks.lateralreading.nextQuestion") : t("educational.tasks.lateralreading.conclusion") }}
-  <v-icon end>mdi-arrow-right</v-icon>
-</v-btn>
-</div>
 
 
 
@@ -189,6 +178,15 @@ const conclusionDialog = ref<boolean>(false);
   nextSection();
   conclusionDialog.value = false;
 }
+
+// Totale domande della sezione
+const totalQuestions = computed(() => currentSection.value?.questions?.length || 0);
+
+// Contatore domanda (mostra 1/3, 2/3, ecc.)
+const questionCounter = computed(() => {
+  if (!currentSection.value) return "";
+  return `${currentIndex.value + 1}/${totalQuestions.value}`;
+});
 const isCorrect = computed(() => {
   const correctIndexes = currentQuestion.value?.options
     ?.map((opt: { correct: boolean }, idx: number) => (opt.correct ? idx : null))
@@ -214,23 +212,23 @@ function submitAnswer() {
 function openConclusion() {
   conclusionDialog.value = true;
 }
-function prevQuestion() {
-  if (showFeedback.value) {
-    // Reset della domanda corrente
-    selected.value = [];
-    showFeedback.value = false;
-  } else if (currentIndex.value > 0) {
-    // Vai alla domanda precedente
-    currentIndex.value--;
-    selected.value = [];
-    showFeedback.value = false;
-  }
-}
-
 function nextQuestion() {
   currentIndex.value++;
   selected.value = [];
   showFeedback.value = false;
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function prevQuestion() {
+  if (showFeedback.value) {
+    selected.value = [];
+    showFeedback.value = false;
+  } else if (currentIndex.value > 0) {
+    currentIndex.value--;
+    selected.value = [];
+    showFeedback.value = false;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 }
 
 function nextSection() {
@@ -298,5 +296,22 @@ function nextSection() {
 
 .nav-buttons .v-btn {
   min-width: 160px;
+}
+.correct-border {
+  border: 3px solid #2e7d32; /* verde */
+}
+
+.wrong-border {
+  border: 3px solid #c62828; /* rosso */
+}
+
+.correct-label {
+  color: #2e7d32 !important;
+  font-weight: 600;
+}
+
+.wrong-label {
+  color: #c62828 !important;
+  font-weight: 600;
 }
 </style>

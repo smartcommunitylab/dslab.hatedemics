@@ -385,7 +385,8 @@
                             "/img/lateralReading/pl/szczepienia/3.png",
                             "/img/lateralReading/pl/szczepienia/4.png",
                             "/img/lateralReading/pl/szczepienia/5.png",
-                            "/img/lateralReading/pl/szczepienia/6.png"
+                            "/img/lateralReading/pl/szczepienia/6.png",
+                            "/img/lateralReading/pl/szczepienia/7.png"
                         ],
                         "questions": [
                             {
@@ -414,6 +415,10 @@
                                     {
                                         "text": "Zrzut ekranu  6",
                                         "correct": true
+                                    },
+                                    {
+                                        "text": "Zrzut ekranu  7",
+                                        "correct": false
                                     },
                                     {
                                         "text": "Na żadnym",
@@ -453,13 +458,17 @@
                                         "correct": false
                                     },
                                     {
+                                        "text": "Zrzut ekranu  7",
+                                        "correct": true
+                                    },
+                                    {
                                         "text": "Na żadnym",
                                         "correct": false
                                     }
                                 ],
                                 "feedback": {
                                     "correct": "Poprawnie! Informacje o zawartości strony i jej metodologii można znaleźć w zakładce „O portalu” na stronie szczepienia.pzh.gov.pl.\nZ opisu wynika, że portal został uruchomiony przez Narodowy Instytut Zdrowia Publicznego PZH – PIB we współpracy z Polskim Towarzystwem Wakcynologii, w ramach międzynarodowej inicjatywy WHO – Vaccine Safety Network. Posiada on akredytację WHO i figuruje na liście stron rekomendowanych jako źródła rzetelnych informacji o szczepieniach.\nTreści na portalu są tworzone z myślą zarówno o osobach ogólnych, jak i profesjonalistach medycznych, a wszystkie informacje są:\n- oparte na faktach naukowych,\n- podane w formie pytań i odpowiedzi,\n- dotyczą bezpieczeństwa i skuteczności szczepień, kalendarza szczepień, organizacji systemu szczepień oraz aktualności z dziedziny wakcynologii.\nDodatkowo, treści powstają we współpracy z ekspertami o uznanym autorytecie w środowisku medycznym, co potwierdza rzetelność metodologiczną portalu.\nCałość działania serwisu jest finansowana m.in. z Narodowego Programu Zdrowia na lata 2020–2025.",
-                                    "incorrect": "Niepoprawnie!Informacje o zawartości strony i jej metodologii można znaleźć w zakładce „O portalu” na stronie szczepienia.pzh.gov.pl.\nZ opisu wynika, że portal został uruchomiony przez Narodowy Instytut Zdrowia Publicznego PZH – PIB we współpracy z Polskim Towarzystwem Wakcynologii, w ramach międzynarodowej inicjatywy WHO – Vaccine Safety Network. Posiada on akredytację WHO i figuruje na liście stron rekomendowanych jako źródła rzetelnych informacji o szczepieniach.\nTreści na portalu są tworzone z myślą zarówno o osobach ogólnych, jak i profesjonalistach medycznych, a wszystkie informacje są:\n- oparte na faktach naukowych,\n- podane w formie pytań i odpowiedzi,\n- dotyczą bezpieczeństwa i skuteczności szczepień, kalendarza szczepień, organizacji systemu szczepień oraz aktualności z dziedziny wakcynologii.\nDodatkowo, treści powstają we współpracy z ekspertami o uznanym autorytecie w środowisku medycznym, co potwierdza rzetelność metodologiczną portalu.\nCałość działania serwisu jest finansowana m.in. z Narodowego Programu Zdrowia na lata 2020–2025."
+                                    "incorrect": "Niepoprawnie! Informacje o zawartości strony i jej metodologii można znaleźć w zakładce „O portalu” na stronie szczepienia.pzh.gov.pl.\nZ opisu wynika, że portal został uruchomiony przez Narodowy Instytut Zdrowia Publicznego PZH – PIB we współpracy z Polskim Towarzystwem Wakcynologii, w ramach międzynarodowej inicjatywy WHO – Vaccine Safety Network. Posiada on akredytację WHO i figuruje na liście stron rekomendowanych jako źródła rzetelnych informacji o szczepieniach.\nTreści na portalu są tworzone z myślą zarówno o osobach ogólnych, jak i profesjonalistach medycznych, a wszystkie informacje są:\n- oparte na faktach naukowych,\n- podane w formie pytań i odpowiedzi,\n- dotyczą bezpieczeństwa i skuteczności szczepień, kalendarza szczepień, organizacji systemu szczepień oraz aktualności z dziedziny wakcynologii.\nDodatkowo, treści powstają we współpracy z ekspertami o uznanym autorytecie w środowisku medycznym, co potwierdza rzetelność metodologiczną portalu.\nCałość działania serwisu jest finansowana m.in. z Narodowego Programu Zdrowia na lata 2020–2025."
                                 }
                             },
                             {
@@ -487,6 +496,10 @@
                                     },
                                     {
                                         "text": "Zrzut ekranu  6",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Zrzut ekranu  7",
                                         "correct": false
                                     },
                                     {
@@ -524,6 +537,10 @@
                                     },
                                     {
                                         "text": "Zrzut ekranu  6",
+                                        "correct": false
+                                    },
+                                    {
+                                        "text": "Zrzut ekranu  7",
                                         "correct": false
                                     },
                                     {
