@@ -238,6 +238,8 @@
             },
             "debunking": {
                 "title": "Debunking",
+                "back":"Wróć",
+                "finalMessage":"Udało Ci się ukończyć zadanie! Możesz teraz przejść do kolejnej aktywności.",
                 "description": "Celem weryfikacji faktów, nazywanej fact-checkingiem lub debunkingiem, jest zapewnienie obywatelom narzędzi i informacji, które pozwolą im formułować opinie w oparciu o wszystkie dostępne dane i potwierdzone fakty, a tym samym podejmować świadome decyzje. Dezinformacja może wpływać na sposób myślenia społeczeństwa i radzenia sobie z codziennymi problemami, dlatego głównym zadaniem weryfikatorów faktów (tzw. fact-checkerów) jest rzucanie światła na te kwestie i dostarczanie danych na ich temat. Weryfikacja faktów polega przede wszystkim na wykrywaniu fałszywych informacji, weryfikowaniu ich treści i rozpowszechnianiu informacji o ich nieprawdziwości.\nOsoby zajmujące się weryfikacją faktów na co dzień pracują nad obalaniem fałszywych informacji – analizują treści i wyjaśniają, dlaczego są one nieprawdziwe, najczęściej dopiero po tym, jak zostały udostępnione i zdobyły popularność w mediach społecznościowych. Działania te są niezwykle istotne z punktu widzenia opinii publicznej, ponieważ pomagają zapobiec temu, by kolejne osoby czytały, udostępniały i wierzyły w nieprawdziwe treści. Niektóre przypadki wymagają czasochłonnych analiz i użycia specjalistycznych narzędzi. Inne zaś opierają się głównie na uważnej obserwacji i dotarciu do konkretnych, wiarygodnych źródeł informacji.\nSpróbujmy! W tym ćwiczeniu nauczysz się pod okiem instruktora kilku technik wykrywania fałszywych twierdzeń oraz dowiesz się, dlaczego ważne jest, aby uruchomić krytyczne myślenie i zidentyfikować, w jaki sposób wiralowe rozprzestrzenianie się niektórych fałszywych informacji może tworzyć i wzmacniać narracje dezinformacyjne.",
                 "objectivesTitle": "Efekty kształcenia",
                 "objectives":"<p><strong>Obalanie mitów:</strong> nauka, w sposób prowadzony, niektórych technik obalania fałszywych informacji.</p><p><strong>Rozwijanie myślenia krytycznego za pomocą strategii pre-bunking:</strong> podczas ćwiczenia użytkownicy odkrywają, czym są narracje dezinformacyjne i mogą zastanowić się nad tymi najbardziej rozpowszechnionymi w swoim kraju.</p><p><strong>Aktywowanie myślenia krytycznego:</strong> poprzez zrozumienie, jak wirusowe rozprzestrzenianie niektórych oszustw może tworzyć i wzmacniać narracje dezinformacyjne.</p>",
@@ -246,6 +248,7 @@
                 "correct": "Poprawnie! Dobra robota.",
                 "incorrect": "Niepoprawna odpowiedź. Spróbuj ponownie.",
                 "next": "Następne pytanie",
+                "completedTitle": "Zadanie ukończone",
                 "finish": "Zakończ",
                 "questions": [
                     {
@@ -267,9 +270,9 @@
                         "correct": 1,
                         "feedback": {
                             "correct": "Poprawna odpowiedź! Najlepiej sprawdzić u źródła, czy gazeta Wall Street Journal faktycznie opublikowała taką informację. ",
-                            "correctImage": "/img/debunking/pl/answer1.jpg",
-                            "incorrect": "Wyszukiwarka Twittera czy narzędzie do weryfikacji zdjęć/wideo oraz AI InVid/WeVerify nie pomogą zbytnio w tym zadaniu. Przede wszystkim musimy sprawdzić źródło, na którym bazuje ta informacja - czyli w tym przypadku gazetę Wall Street Journal. ",
-                            "incorrectImage": "/img/debunking/pl/answer1.jpg"
+                            "correctImage": "/img/debunking/pl/answer1.png",
+                            "incorrect": "Wyszukiwarka Twittera czy narzędzie do weryfikacji zdjęć/wideo oraz AI InVid/WeVerify nie pomogą zbytnio w tym zadaniu. Przede wszystkim musimy sprawdzić źródło, na którym bazuje ta informacja - czyli w tym przypadku gazetę Wall Street Journal.  ",
+                            "incorrectImage": "/img/debunking/pl/answer1.png"
                         }
                     },
                     {
@@ -289,7 +292,10 @@
                         "correct": 1,
                         "feedback": {
                             "correct": "W ten sposób możemy szybko sprawdzić, czy dany materiał faktycznie został opublikowany na oficjalnej stronie tego medium. Dzięki temu unikamy ryzyka kliknięcia w fałszywe strony podszywające się pod znane redakcje, a jednocześnie mogę zweryfikować, czy treść jest zgodna z oryginalną publikacją. Jest to jedna z podstawowych technik fact-checkingu, która pozwala upewnić się, że korzystamy z wiarygodnych źródeł i nie powielamy dezinformacji.",
-                            "incorrect": "Sztuczna inteligencja, jak ChatGPT, nie ma dostępu do pełnych, aktualnych baz danych ani treści chronionych za subskrypcją. Odpowiedzi mogą być niepełne lub błędne, co nie gwarantuje potwierdzenia autentyczności artykułu. Natomiast ręczne przeglądanie strony przy dużej liczbie publikacji i ograniczeniach technicznych utrudnia weryfikację i zajmie bardzo dużo czasu - na zrzucie ekranu nie mamy podanej informacji kiedy artykuł w Wall Street Journal został opublikowany."
+                            "correctImage": "/img/debunking/pl/answer2.png",
+                            "incorrect": "Sztuczna inteligencja, jak ChatGPT, nie ma dostępu do pełnych, aktualnych baz danych ani treści chronionych za subskrypcją. Odpowiedzi mogą być niepełne lub błędne, co nie gwarantuje potwierdzenia autentyczności artykułu. Natomiast ręczne przeglądanie strony przy dużej liczbie publikacji i ograniczeniach technicznych utrudnia weryfikację i zajmie bardzo dużo czasu - na zrzucie ekranu nie mamy podanej informacji kiedy artykuł w Wall Street Journal został opublikowany.",
+                            "incorrectImage": "/img/debunking/pl/answer2.png"
+
                         }
                     },
                     {
@@ -309,7 +315,10 @@
                         "correct": 0,
                         "feedback": {
                             "correct": "Ta metoda umożliwia szybkie dotarcie do zweryfikowanych informacji od profesjonalnych fact-checkerów i instytucji publicznych. Dzięki temu możemy potwierdzić autentyczność treści, zrozumieć jej kontekst oraz uniknąć powielania dezinformacji. Korzystanie z wiarygodnych źródeł jest kluczowym elementem skutecznego fact-checkingu.\nLink: <a href='https://demagog.org.pl/fake_news/zelenski-odmawia-przyjecia-6-tys-cial-poleglych-zolnierzy-to-rosyjska-propaganda/' target='_blank'>https://demagog.org.pl/fake_news/zelenski-odmawia-przyjecia-6-tys-cial-poleglych-zolnierzy-to-rosyjska-propaganda/</a>.",
-                            "incorrect": "Wnikliwy fact-checker sprawdza zawsze informacje w przynajmniej dwóch różnych i niezależnych od siebie źródłach. Dlatego nie poddawaj się, nawet jeżeli nie znajdziesz od razu odpowiedzi. Nasi koledzy i koleżanki nie zawsze mają wystarczającą wiedzę na dany temat, dlatego nie traktuj ich zdania jako ostatecznej odpowiedzi. Mogę się mylić. Link: <a href='https://demagog.org.pl/fake_news/zelenski-odmawia-przyjecia-6-tys-cial-poleglych-zolnierzy-to-rosyjska-propaganda/' target='_blank'>https://demagog.org.pl/fake_news/zelenski-odmawia-przyjecia-6-tys-cial-poleglych-zolnierzy-to-rosyjska-propaganda/</a>."
+                            "correctImage": "/img/debunking/pl/answer3.png",
+                            "incorrect": "Wnikliwy fact-checker sprawdza zawsze informacje w przynajmniej dwóch różnych i niezależnych od siebie źródłach. Dlatego nie poddawaj się, nawet jeżeli nie znajdziesz od razu odpowiedzi. Nasi koledzy i koleżanki nie zawsze mają wystarczającą wiedzę na dany temat, dlatego nie traktuj ich zdania jako ostatecznej odpowiedzi. Mogę się mylić. Link: <a href='https://demagog.org.pl/fake_news/zelenski-odmawia-przyjecia-6-tys-cial-poleglych-zolnierzy-to-rosyjska-propaganda/' target='_blank'>https://demagog.org.pl/fake_news/zelenski-odmawia-przyjecia-6-tys-cial-poleglych-zolnierzy-to-rosyjska-propaganda/</a>.",
+                            "incorrectImage": "/img/debunking/pl/answer3.png"
+
                         }
                     }
                 ]

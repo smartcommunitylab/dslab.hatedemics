@@ -237,6 +237,8 @@
             },
             "debunking": {
                 "title": "Debunking",
+                "back": "Indietro",
+                "finalMessage":"Hai completato il compito! Puoi ora passare alla prossima attività.",
                 "description": "L'obiettivo del fact-checking è fornire ai cittadini strumenti e informazioni che consentano loro di formarsi un'opinione sulla base di dati e fatti verificati, in modo da prendere decisioni consapevoli. La disinformazione può influenzare il modo in cui la società pensa e affronta i problemi quotidiani, ed è per questo che la missione principale dei fact-checker è quella di far luce e raccogliere dati sui temi rilevanti per la società. In generale, il fact-checking consiste nell'individuare le bufale, verificarne il contenuto e diffonderne la smentita. Queste azioni compongono la cosiddetta attività di debunking (debunking dall'inglese smascherare, confutare, smentire).\nI fact-checker lavorano quotidianamente con il debunking: verificano i contenuti e spiegano perché qualcosa è falso dopo che è stato condiviso e reso virale sui social media. Questa attività è importante per la società, il dibattito pubblico, perfino per la sicurezza della società in generale, e per evitare che più persone leggano, condividano e credano alle bugie e ai contenuti manipolati che circolano in Internet. Alcune attività di debunking sono molto difficili: richiedono molto tempo e l'uso di strumenti specifici. Altre richiedono solo molta osservazione e la ricerca di informazioni specifiche e affidabili.\nProviamoci! In questa attività imparerai, in modo guidato, alcune tecniche di debunking e perché è importante attivare il pensiero critico e riconoscere come la viralità di alcune bufale possa creare e rafforzare le narrazioni che sfrutta la disinformazione.",
                 "objectivesTitle": "Obiettivi dell'attività",
                 "objectives": "<p><strong> Debunk:</strong> imparare, in modo guidato, alcune tecniche di debunking.</p><p><strong>Sviluppare il pensiero critico usando la strategia del pre-bunking:</strong> durante l'esercizio, gli utenti scoprono cosa sono le narrative di disinformazione e possono riflettere su quelle più diffuse nel loro paese.</p><p><strong>Attivare il pensiero critico:</strong> comprendendo come la viralizzazione di alcune bufale possa creare e rafforzare le narrative di disinformazione.</p>",
@@ -245,6 +247,7 @@
                 "correct": "Corretto!",
                 "incorrect": "Sbagliato! Riprova.",
                 "next": "Prossima domanda",
+                "completedTitle": "Hai completato l'attività di debunking!",
                 "finish": "Termina l'attività",
                 "questions": [
                     {

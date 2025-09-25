@@ -237,6 +237,8 @@
             },
             "debunking": {
                 "title": "Debunking",
+                "back": "Back",
+                "finalMessage": "You have completed the activity! You can now move to the next activity.",
                 "description": "The objective of fact-checking is to provide citizens with tools and information that allow them to form opinions with all the data and verified facts at hand and, consequently, make informed decisions. Misinformation can influence how society thinks and how it deals with everyday problems, and that's why fact-checkers' central mission is to shed light and data on these issues. Broadly speaking, fact-checking involves detecting hoaxes, verifying their content, and spreading the denial.\nFact-checkers work daily on debunking: they verify content and explain why something is false after it’s been shared and viralized in social media. It’s important for the public record and to avoid that more people read, share and believe lies. Some debunkings are very difficult: take lots of time and require the use of specific tools. Others just require a lot of observation and searching for specific reliable information. \nLet´s try! In this exercise you will learn, in a guided way, some debunk techniques and why it's important to activate critical thinking and identify how the viralizing of some hoaxes can create and strengthen disinformation narratives.",
                 "objectivesTitle": "Objectives of the activity",
                 "objectives": "<p><strong>Debunk:</strong> learn, in a guided way, some debunk techniques.</p><p><strong>Develop critical thinking using the pre-bunking strategy:</strong> during the exercise, the users discover what are disinformation narratives and can reflect about the most spread ones in their country.</p><p><strong>Activate critical thinking:</strong> by understanding how the viralizing of some hoaxes can create and strengthen disinformation narratives.</p>",
@@ -244,6 +246,7 @@
                 "task": "Simulate the actions of a fact-checker by selecting the most effective way to debunk a suspicious content. Can you also identify the related disinformation narrative?",
                 "correct": "Correct! Well done.",
                 "incorrect": "Incorrect answer. Try again.",
+                "completedTitle": "Activity completed",
                 "next": "Next question",
                 "finish": "Finish",
                 "questions": [
