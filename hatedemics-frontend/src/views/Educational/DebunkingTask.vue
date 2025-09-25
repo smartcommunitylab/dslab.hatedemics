@@ -71,24 +71,36 @@
         </div>
        
 
-        <!-- Avanti -->
-        <v-btn
-          v-if="showFeedback && !isLastQuestion"
-          class="mt-4"
-          color="primary"
-          @click="nextQuestion"
-        >
-          {{ t("educational.tasks.debunking.next") }}
-        </v-btn>
+<!-- Avanti / Indietro -->
+<div class="d-flex justify-space-between align-center mt-4">
+  <!-- Back -->
+  <v-btn
+    color="secondary"
+    variant="outlined"
+    :disabled="currentIndex === 0"
+    @click="prevQuestion"
+  >
+    <v-icon start>mdi-arrow-left</v-icon>
+    {{ t("educational.tasks.debunking.back") }}
+  </v-btn>
 
-        <v-btn
-          v-if="showFeedback && isLastQuestion"
-          class="mt-4"
-          color="success"
-          to="/educational"
-        >
-          {{ t("educational.tasks.debunking.finish") }}
-        </v-btn>
+  <!-- Contatore -->
+  <span class="text-subtitle-2 align-self-center">
+    {{ currentIndex + 1 }}/{{ questions.length }}
+  </span>
+
+  <!-- Next / Finish -->
+  <v-btn
+    color="primary"
+    :disabled="selectedIndex === null" 
+    @click="isLastQuestion ? finishQuiz() : nextQuestion()"
+  >
+    {{ isLastQuestion ? t("educational.tasks.debunking.finish") : t("educational.tasks.debunking.next") }}
+    <v-icon end>mdi-arrow-right</v-icon>
+  </v-btn>
+</div>
+
+
       </v-col>
     </v-row>
 
@@ -111,22 +123,40 @@
     </v-card-actions>
   </v-card>
 </v-dialog>
+    <!-- Dialog finale -->
+    <v-dialog v-model="finalDialog" persistent max-width="500">
+      <v-card>
+        <v-card-title class="text-h6 font-weight-bold">
+          {{ t("educational.tasks.debunking.completedTitle") }}
+        </v-card-title>
+        <v-card-text>
+          <p>{{ finalMessage }}</p>
+        </v-card-text>
+        <v-card-actions class="justify-end">
+          <v-btn color="success" @click="goToNextActivity">
+            {{ t("educational.tasks.debunking.finish") }}
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </v-container>
 </template>
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
-
-const { t, tm, locale } = useI18n();
-
+import { useRouter } from "vue-router";
+const router = useRouter();
+const { t, tm } = useI18n();
 const questions = computed(() => tm("educational.tasks.debunking.questions") || []);
 
 const currentIndex = ref(0);
 const selectedIndex = ref<number | null>(null);
 const showFeedback = ref(false);
-const imageDialog = ref(false);
 
 const currentQuestion = computed(() => questions.value[currentIndex.value]);
+const finalDialog = ref(false);
+const isLastQuestion = computed(() => currentIndex.value === questions.value.length - 1);
+
 const questionImageDialog = ref(false)
 const feedbackImageDialog = ref(false)
 const feedbackImage = computed(() => {
@@ -140,22 +170,45 @@ const isAnswerCorrect = computed(() => {
   return selectedIndex.value === currentQuestion.value.correct;
 });
 
-const isLastQuestion = computed(() => {
-  return currentIndex.value === questions.value.length - 1;
-});
+
 
 function selectAnswer(index: number) {
   if (showFeedback.value) return;
   selectedIndex.value = index;
   showFeedback.value = true;
 }
+function prevQuestion() {
+  if (currentIndex.value > 0) {
+    currentIndex.value--;
+    selectedIndex.value = null;
+    showFeedback.value = false;
+  }
+}
+function goToNextActivity() {
+  finalDialog.value = false;
+  router.replace("/educational"); 
+}
 
+// Messaggio finale localizzato
+const finalMessage = computed(() => t("educational.tasks.debunking.finalMessage"));
+
+function finishQuiz() {
+  // per ora reindirizza alla pagina principale
+  // puoi personalizzare se vuoi un dialog finale
+  finalDialog.value = true;
+}
 function nextQuestion() {
   if (currentIndex.value < questions.value.length - 1) {
     currentIndex.value++;
     selectedIndex.value = null;
     showFeedback.value = false;
+  } else {
+    openFinalDialog();
   }
+}
+
+function openFinalDialog() {
+  finalDialog.value = true;
 }
 const feedbackMessage = computed(() => {
   if (!showFeedback.value || !currentQuestion.value.feedback) return "";

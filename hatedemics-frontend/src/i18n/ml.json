@@ -236,6 +236,8 @@
       },
       "debunking": {
         "title": "Konfutazzjoni",
+        "back": "Lura",
+        "finalMessage":" L-attività intemm. Grazzi talli ħadt sehem!",
         "description": "L-objettiv tal-verifika tal-fatti huwa li jipprovdi l-għodda liċ-ċittadini biex jiffurmaw opinjoni ibbażata fuq fatti u dejta, ħalli b’hekk jkunu jistgħu jieħdu deċiżjoni infurmata. Il-miżinformazzjoni tista’ tinfluwenza kif is-soċjetà taħseb, u kif tittrata problemi tà kuljum. Għalhekk il-fact-checkers għandhom missjoni ċentrali  li titfa' d-dawl u d-data dwar dawn il-kwistjonijiet. B'mod ġenerali, il-verifika tal-fatti tinvolvi  l-iskoperta ta' ingann, il-verifika tal-kontenut tagħhom, u t-tixrid taċ-ċaħda. Il-verifikaturi tal-fatti jaħdmu kuljum fuq il-konfutazzjoni: huma jivverifikaw il-kontenut u jispjegaw għaliex xi ħaġa hija falza wara li tkun ġiet kondiviża u viralizzata fil-midja soċjali. Huwa importanti għar-rekord pubbliku u biex jiġi evitat li aktar nies jaqraw, jaqsmu u jemmnu l-gideb. Xi konfutazzjonijiet huma diffiċli ħafna: jieħdu ħafna ħin u jeħtieġu l-użu ta' għodod speċifiċi. Oħrajn jeħtieġu biss ħafna osservazzjoni u tiftix għal informazzjoni speċifika affidabbli.  Ejja nippruvaw! F'dan l-eżerċizzju inti se titgħallem, kif tuża xi tekniki sabiex tkun taf kif tiċħad b’mod kritiku, waqt li tifhem dak li huwa importanti. B’dan il-metodu jkun possibbli li tuża għodda biex tidentifika kif il-viralizzazzjoni ta' xi frodi tista' toħloq u ssaħħaħ in-narrattiva tad-diżinformazzjoni.",
         "objectivesTitle": "L-Għan tal-Attività",
         "objectives": "Ikkonfuta u tgħallem dwar x'inhuma n-narrattivi ta' diżinformazzjoni. Dan huwa wkoll eżerċizzju ta’ qabel il-konfutazzjoni: skopri x’inhuma narrattivi ta’ diżinformazzjoni u dawk l-aktar mifruxa f’pajjiżhom. Int se titgħallem, b'mod iggwidat, xi metodi ta' konfutazzjoni u għaliex huwa importanti li tuża l-ħsieb kritiku u tidentifika kif il-viralizzazzjoni ta' xi ingann jista' joħloq u jssaħħaħ narrattivi ta' diżinformazzjoni.",
@@ -243,6 +245,7 @@
         "task": "Issimula l-azzjonijiet ta’ verifikatur tal-fatti  billi tagħżel l-aktar mod effettiv biex tiċħad kontenut suspettuż. Tista' tidentifika wkoll in-narrattiva ta' diżinformazzjoni relatata?",
         "correct": "Korretta! ",
         "incorrect": "Tweġiba żbaljata. ",
+        "completedTitle": "Attività lesta",
         "next": "Mistoqsija li jmiss",
         "finish": "Lest",
         "questions": [

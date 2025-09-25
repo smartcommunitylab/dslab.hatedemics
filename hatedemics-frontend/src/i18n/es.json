@@ -238,6 +238,8 @@
             },
             "debunking": {
                 "title": "Desmitificación",
+                "back": "Atrás",
+                "finalMessage": "Has completado la actividad! Ahora puedes pasar a la siguiente actividad.",
                 "description": "<strong>Qué es la debunking:</strong> Cuando algunas personas piensan en un verificador de hechos (fact‑checker), solo ven a un periodista que investiga una afirmación, la verifica y confirma si es verdadera o no, el proceso de desmitificación. Sin embargo, luchar contra la desinformación eficazmente hoy en día exige mucho más: detectar rápidamente posibles bulos antes de que se vuelvan virales y afecten a más personas; explicar que no todo es blanco o negro, ayudar a las personas a estar bien preparadas frente a falsedades mediante la alfabetización mediática o regulación; crear herramientas que dificulten que nos engañen o combatir juntos contra la manipulación: esto es lo que llamamos pre‑bunking.<br><br><strong>Qué es una narrativa de desinformación:</strong> Lo que los creadores de desinformación quieren que creas. Cuando una idea se repite muchas veces, la gente tiende a creerla. Además, un solo bulo puede contener varias narrativas.",
                 "objectivesTitle": "Objetivos",
                 "objectives": "<p><strong>Desmentir:</strong> aprender, de manera guiada, algunas técnicas de desmentido.</p><p><strong>Desarrollar el pensamiento crítico usando la estrategia de pre-bunking:</strong> durante el ejercicio, los usuarios descubren cuáles son las narrativas de desinformación y pueden reflexionar sobre las más difundidas en su país.</p><p><strong>Activar el pensamiento crítico:</strong> comprendiendo cómo la viralización de algunos engaños puede crear y fortalecer las narrativas de desinformación.</p>",
@@ -245,12 +247,13 @@
                 "startButton": "Comenzar actividad",
                 "correct": "¡Correcto! Bien hecho.",
                 "incorrect": "Respuesta incorrecta. Inténtalo de nuevo.",
+                "completedTitle": "Actividad completada",
                 "next": "Siguiente pregunta",
                 "finish": "Finalizar",
                 "questions": [
                     {
                         "title": "Pregunta 1",
-                        "scenario_description": "Has recibido esta imagen que muestra una foto de una manifestación feminista donde una participante lleva un cartel que dice: “Quiero que mi hija tenga el derecho a abortar que yo no tuve.” No estás seguro de si es auténtica.",
+                        "scenario_description": "Has recibido una imagen que muestra una fotografía de una manifestación feminista, en la que una participante sostiene un cartel con el mensaje: “Quiero que mi hija tenga el derecho a abortar que yo no tuve”. No estás seguro/a de si la imagen es real o ha sido manipulada.",
                         "question": "¿Cómo lo verificarías?",
                         "image": "/img/debunking/es/question1.jpg",
                         "options": [
@@ -258,59 +261,59 @@
                                 "text": "Búsqueda inversa de imagen"
                             },
                             {
-                                "text": "Búsqueda avanzada en Twitter (ahora X)"
+                                "text": "Búsqueda avanzada en X (Twitter)"
                             },
                             {
-                                "text": "Herramienta de IA"
+                                "text": "Herramienta de Inteligencia artificial"
                             }
                         ],
                         "correct": 0,
                         "feedback": {
-                            "correct": "¡Correcto! Has realizado con éxito una búsqueda inversa de imágenes y encontrado esta foto.",
+                            "correct": "¡Enhorabuena! Has hecho una búsqueda inversa de imagen y has encontrado esta foto:  ",
                             "correctImage": "/img/debunking/es/answer1.jpg",
-                            "incorrect": " Lamentablemente, ni una búsqueda avanzada en Twitter ni una herramienta de IA habrían sido útiles en este caso. La foto no está publicada en X( antes Twitter) por lo que no tiene sentido utilizar la búsqueda avanzada de esta herramienta. Visualmente no hay indicaciones ",
+                            "incorrect": "Lamentablemente, ni una búsqueda avanzada en Twitter ni una herramienta de IA habrían sido útiles en este caso. La foto no está publicada en X( antes Twitter) por lo que no tiene sentido utilizar la búsqueda avanzada de esta herramienta. Visualmente no hay indicaciones de que la foto fuera generada por IA y, además las herramientas de detección automática de imágenes no ofrecen resultados fiables al 100%. En cambio, con una búsqueda de imagen inversa podrías haber encontrado esta imagen:",
                             "incorrectImage": "/img/debunking/es/answer1.jpg"
                         }
                     },
                     {
                         "title": "Pregunta 2",
-                        "question": "Realizando una búsqueda inversa de imagen habrías encontrado esta imagen. ¿Qué puedes concluir al observarla?",
+                        "question": "¿Qué puedes concluir observando esta foto?",
                         "image": "/img/debunking/es/question2.jpg",
                         "options": [
                             {
-                                "text": "Es una imagen generada por IA"
+                                "text": "Es una foto generada por inteligencia artificial."
                             },
                             {
-                                "text": "Es una imagen real fuera de contexto"
+                                "text": "Esta es la foto original y está sacada de contexto. "
                             },
                             {
-                                "text": "Parece ser la imagen original"
+                                "text": "Esta es la foto original y la anterior una manipulación hecha con un editor de imágenes."
                             }
                         ],
                         "correct": 2,
                         "feedback": {
-                            "correct": "Correcto: esta es la imagen original. En particular, esta imagen fue publicada originalmente en 2023. Podemos concluir, por tanto, que la primera imagen que viste fue manipulada y cambia la frase que contenía originalmente, “I am the mother of the girl you will never touch,” publicada en un sitio sobre las manifestaciones del 8M en Monterrey (México) en marzo de 2023 y ha circulado manipulada.",
-                            "incorrect": "Incorrecto: esta es la imagen original. En particular, esta imagen fue publicada originalmente en 2023. Podemos concluir, por tanto, que la primera imagen que viste fue manipulada y cambia la frase que contenía originalmente, “I am the mother of the girl you will never touch,” publicada en un sitio sobre las manifestaciones del 8M en Monterrey (México) en marzo de 2023 y ha circulado manipulada."
+                            "correct": "Correcto: Esta es la imagen original. En concreto, podemos ver que se publicó en 2023. Por lo tanto, podemos concluir que la primera imagen fue manipulada para modificar la frase original: «Soy la madre de la niña que nunca tocarás». La foto original fue publicada en página sobre las marchas del 8M en Monterrey (México) en marzo de 2023, y desde entonces la versión manipulada ha estado circulando.",
+                            "incorrect": "Incorrecto: Esta es la imagen original. En concreto, se publicó originalmente en 2023. Por lo tanto, podemos concluir que la primera imagen que viste fue manipulada y modifica la frase original: «Soy la madre de la niña que nunca tocarás». La imagen original fue publicada en un sitio web sobre las marchas del 8M en Monterrey (México) en marzo de 2023 y desde entonces la versión manipulada ha estado circulando. No hay indicios de que la foto haya sido generada por IA como inconsistencias, deformidades, marcas de agua u verificaciones que indiquen el uso de Inteligencia artificial en el montaje. "
                         }
                     },
                     {
                         "title": "Pregunta 3",
-                        "question": "¿Qué tipo de narrativa de desinformación puede reforzar este bulo?",
+                        "question": "¿Qué tipo de narrativa desinformadora puede fortalecer este bulo?",
                         "options": [
                             {
-                                "text": "Las feministas odian a los hombres"
+                                "text": "Feministas odian a los hombres"
                             },
                             {
-                                "text": "Las feministas dicen cosas absurdas"
+                                "text": "Feminists dicen cosas absurdas"
                             },
                             {
-                                "text": "Las feministas no deberían participar en manifestaciones."
+                                "text": "Feministas no deben participar en manifestaciones "
                             }
                         ],
                         "correct": 1,
                         "feedback": {
-                            "correct": "¡Correcto!<br><br>Consulta cómo los fact‑checkers profesionales refutaron esta desinformación: <a href='https://maldita.es/feminismo/bulo/20250310/cartel‑derechoalaborto‑manipulado/' target='_blank'>análisis de Maldita.es</a>",
-                            "incorrect": "Incorrecto.<br><br>Consulta cómo los fact‑checkers profesionales refutaron esta desinformación: <a href='https://maldita.es/feminismo/bulo/20250310/cartel‑derechoalaborto‑manipulado/' target='_blank'>análisis de Maldita.es</a>"
+                            "correct": "¡Correcto!<br><br>Las narrrativas desinformadoras pueden manipularnos y distorsionar nuestra percepción de la realidad para que apoyemos una ideología o fomentar el discurso de odio. Estas se difunden a través de la creciente circulación de bulos y contenidos desinformadores que las respaldan. No compartir contenidos sospechosos y reconocer esas narrativas ayuda a frenar las mentiras y el discurso de odio. Aquí puedes ver cómo los verificadores profesionales desmintieron esta desinformación: <br><br>Consulta cómo los fact‑checkers profesionales refutaron esta desinformación: <a href='https://maldita.es/malditobulo/20250310/cartel-derechoalaborto-manipulado/' target='_blank'>análisis de Maldita.es</a>",
+                            "incorrect": "Incorrecto.<br><br>Las narrrativas desinformadoras pueden manipularnos y distorsionar nuestra percepción de la realidad para que apoyemos una ideología o fomentar el discurso de odio. Estas se difunden a través de la creciente circulación de bulos y contenidos desinformadores que las respaldan. No compartir contenidos sospechosos y reconocer esas narrativas ayuda a frenar las mentiras y el discurso de odio. Aquí puedes ver cómo los verificadores profesionales desmintieron esta desinformación: <br><br>Consulta cómo los fact‑checkers profesionales refutaron esta desinformación: <a href='https://maldita.es/malditobulo/20250310/cartel-derechoalaborto-manipulado/' target='_blank'>análisis de Maldita.es</a>"
                         }
                     }
                 ]
