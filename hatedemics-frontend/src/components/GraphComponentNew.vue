@@ -346,16 +346,23 @@ graphInstance.zoom(targetZoom, duration);
 <template>
   <v-container fluid class="pa-0 d-flex">
     <!-- SIDEBAR -->
-    <v-row>
+    <v-row class="fill-height">
       <v-col
         cols="12"
         md="2"
+        class="d-flex flex-column"
+        v-show="$vuetify.display.mdAndUp"
         :style="{
-          flexBasis: optionsExpanded ? '250px' : '50px',
+          flexBasis: $vuetify.display.smAndDown
+            ? optionsExpanded
+              ? '200px'
+              : '0px'
+            : optionsExpanded
+            ? '250px'
+            : '50px',
           flexGrow: 0,
           transition: 'flex-basis 0.3s',
         }"
-        class="d-flex flex-column"
       >
         <v-card
           class="pa-1 d-flex flex-column fill-height"
@@ -366,20 +373,20 @@ graphInstance.zoom(targetZoom, duration);
           <!-- Pulsante espandi/collassa -->
           <v-tooltip bottom>
             <template #activator="{ props }">
-            <div>
-              <v-btn
-                block
-                v-bind="props"
-                color="primary"
-                class="mb-4"
-                @click="optionsExpanded = !optionsExpanded"
-                elevation="2"
-              >
-                <v-icon>{{
-                  optionsExpanded ? "mdi-chevron-left" : "mdi-chevron-right"
-                }}</v-icon>
-              </v-btn>
-            </div>
+              <div>
+                <v-btn
+                  block
+                  v-bind="props"
+                  color="primary"
+                  class="mb-4"
+                  @click="optionsExpanded = !optionsExpanded"
+                  elevation="2"
+                >
+                  <v-icon>{{
+                    optionsExpanded ? "mdi-chevron-left" : "mdi-chevron-right"
+                  }}</v-icon>
+                </v-btn>
+              </div>
             </template>
             <span>{{
               optionsExpanded
@@ -422,7 +429,10 @@ graphInstance.zoom(targetZoom, duration);
                 />
               </div>
               <v-btn color="secondary" class="mb-2" block @click="resetGraphView">
-                {{ t("graphInteraction.resetView") }}
+                <v-icon start>mdi-refresh</v-icon>
+                <span v-if="$vuetify.display.smAndUp">{{
+                  t("graphInteraction.resetView")
+                }}</span>
               </v-btn>
               <GraphLegend :colorBy="colorBy" :sizeBy="sizeBy" />
             </div>
@@ -430,7 +440,12 @@ graphInstance.zoom(targetZoom, duration);
         </v-card>
       </v-col>
 
-      <v-col class="d-flex flex-column" style="flex-grow: 1; min-width: 0">
+      <v-col
+        cols="12"
+        md="8"
+        class="d-flex flex-column"
+        style="flex-grow: 1; min-width: 0"
+      >
         <!-- GRAFICO + LOADING -->
         <div class="flex-grow-1 position-relative">
           <v-overlay :model-value="loading" class="align-center justify-center">
@@ -445,12 +460,19 @@ graphInstance.zoom(targetZoom, duration);
       <v-col
         cols="12"
         md="2"
+        class="d-flex flex-column"
+        v-show="$vuetify.display.mdAndUp"
         :style="{
-          flexBasis: infoExpanded ? '250px' : '50px',
+          flexBasis: $vuetify.display.smAndDown
+            ? infoExpanded
+              ? '200px'
+              : '0px'
+            : infoExpanded
+            ? '250px'
+            : '50px',
           flexGrow: 0,
           transition: 'flex-basis 0.3s',
         }"
-        class="d-flex flex-column"
       >
         <v-card
           class="pa-0 d-flex flex-column fill-height"
@@ -460,20 +482,20 @@ graphInstance.zoom(targetZoom, duration);
         >
           <v-tooltip bottom>
             <template #activator="{ props }">
-            <div>
-              <v-btn
-                v-bind="props"
-                color="primary"
-                block
-                class="mb-4"
-                @click="infoExpanded = !infoExpanded"
-                elevation="2"
-              >
-                <v-icon>{{
-                  infoExpanded ? "mdi-chevron-right" : "mdi-chevron-left"
-                }}</v-icon>
-              </v-btn>
-            </div>
+              <div>
+                <v-btn
+                  v-bind="props"
+                  color="primary"
+                  block
+                  class="mb-4"
+                  @click="infoExpanded = !infoExpanded"
+                  elevation="2"
+                >
+                  <v-icon>{{
+                    infoExpanded ? "mdi-chevron-right" : "mdi-chevron-left"
+                  }}</v-icon>
+                </v-btn>
+              </div>
             </template>
             <span>{{
               infoExpanded

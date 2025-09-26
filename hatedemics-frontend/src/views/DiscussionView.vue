@@ -113,7 +113,33 @@ const startDialogue = async (target: string | null) => {
 
   try {
     const projects = await dialogApi.getProjects();
-    const project = projects.data.find((p: any) => p.name === translatedTarget);
+    const matchedProjects = projects.data.filter((p: any) => p.name === translatedTarget);
+
+    // Se c'è un solo match, lo prendiamo direttamente
+    let project: any;
+
+// Se c'è un solo match, lo prendiamo direttamente
+if (matchedProjects.length === 1) {
+  project = matchedProjects[0];
+} else {
+  // Ordine delle lingue: se la lingua corrente è presente nell'array, scegli quella
+  const langPriority: Record<string, number> = {
+    PL: 0,
+    IT: 1,
+    ES: 2,
+    EN: 3,
+  };
+
+  // Se la lingua corrente esiste in langPriority e abbiamo un progetto corrispondente
+  const idx = langPriority[lang as keyof typeof langPriority];
+  if (idx !== undefined && matchedProjects[idx]) {
+    project = matchedProjects[idx];
+  } else {
+    // fallback: prendiamo il primo match
+    project = matchedProjects[0];
+  }
+}
+
 
     if (project) {
       router.push({ name: "tasks", params: { projectID: project.id } });
@@ -232,12 +258,11 @@ const loadMore = (event: { target: any }) => {
       </v-expansion-panel>
     </v-expansion-panels>
 
-    <v-container fluid class="pa-4" style="background-color: white;">
-
-    <!-- Selettori di Canale e Chat -->
-    <v-row>
-      <v-col cols="4">
-        <!-- <v-autocomplete
+    <v-container fluid class="pa-4" style="background-color: white">
+      <!-- Selettori di Canale e Chat -->
+      <v-row>
+        <v-col cols="4">
+          <!-- <v-autocomplete
           return-object
           :label="t('channelInfo.channels')"
           v-model="selectedChannelInfo"
@@ -248,92 +273,98 @@ const loadMore = (event: { target: any }) => {
           density="comfortable"
           @update:model-value="updateChannel"
         /> -->
-        <v-autocomplete
-          return-object
-          :label="t('channelInfo.channels')"
-          v-model="selectedChannelInfo"
-          :items="channelsInfo"
-          :loading="loading"
-          item-title="label"
-          item-value="id"
-          variant="outlined"
-          density="comfortable"
-          :filter="() => true"
-          @update:model-value="updateChannel"
-          @update:search="onSearch"
-          @scroll.passive="loadMore"
-          clearable
-        />
-      </v-col>
+          <v-autocomplete
+            return-object
+            :label="t('channelInfo.channels')"
+            v-model="selectedChannelInfo"
+            :items="channelsInfo"
+            :loading="loading"
+            item-title="label"
+            item-value="id"
+            variant="outlined"
+            density="comfortable"
+            :filter="() => true"
+            @update:model-value="updateChannel"
+            @update:search="onSearch"
+            @scroll.passive="loadMore"
+            clearable
+          />
+        </v-col>
 
-      <v-col cols="4">
-        <v-select
-          :label="t('channelInfo.chats')"
-          v-model="selectedChat"
-          :items="chatOptions"
-          item-title="title"
-          item-value="value"
-          variant="outlined"
-          density="comfortable"
-          @update:model-value="updateChat"
-        />
-      </v-col>
-    </v-row>
+        <v-col cols="4">
+          <v-select
+            :label="t('channelInfo.chats')"
+            v-model="selectedChat"
+            :items="chatOptions"
+            item-title="title"
+            item-value="value"
+            variant="outlined"
+            density="comfortable"
+            @update:model-value="updateChat"
+          />
+        </v-col>
+      </v-row>
 
-    <v-divider class="my-4" />
+      <v-divider class="my-4" />
 
-    <!-- Layout con Sidebar e Tabella -->
-    <!-- Layout con Sidebar e Tabella -->
-    <v-row>
-      <!-- Colonna Tabella -->
-      <v-col :cols="showSidebar ? 10 : 11" style="background-color: white">
-        <div class="px-4 py-2">
-          <h3 class="text-h6 mb-1 text-center">
-            <v-icon left>mdi-chat</v-icon> {{ t("message.title") }}
-          </h3>
-        </div>
-        <ChatTableComponent />
-      </v-col>
+      <!-- Layout con Sidebar e Tabella -->
+      <!-- Layout con Sidebar e Tabella -->
+      <v-row>
+        <!-- Colonna Tabella -->
+        <v-col :cols="showSidebar ? 10 : 11" style="background-color: white">
+          <div class="px-4 py-2">
+            <h3 class="text-h6 mb-1 text-center">
+              <v-icon left>mdi-chat</v-icon> {{ t("message.title") }}
+            </h3>
+          </div>
+          <ChatTableComponent />
+        </v-col>
 
-      <!-- Colonna Sidebar -->
-      <v-col :cols="showSidebar ? 2 : 1" class="transition-col d-flex flex-column ">
-        <!-- Pulsante toggle allineato a sinistra -->
-  <v-tooltip bottom>
-    <template #activator="{ props }">
-    <div>
-      <v-btn
-        v-bind="props"
-        color="primary"
-        class="mb-4"
-        @click="showSidebar = !showSidebar"
-        elevation="2"
-        block
-      >
-        <v-icon>{{ showSidebar ? "mdi-chevron-right" : "mdi-chevron-left" }}</v-icon>
-      </v-btn>
-    </div>
-    </template>
-    <span>
-      {{ showSidebar ? t("graphInteraction.collapseInfo") : t("graphInteraction.expandInfo") }}
-    </span>
-  </v-tooltip>
+        <!-- Colonna Sidebar -->
+        <v-col :cols="showSidebar ? 2 : 1" class="transition-col d-flex flex-column">
+          <!-- Pulsante toggle allineato a sinistra -->
+          <v-tooltip bottom>
+            <template #activator="{ props }">
+              <div>
+                <v-btn
+                  v-bind="props"
+                  color="primary"
+                  class="mb-4"
+                  @click="showSidebar = !showSidebar"
+                  elevation="2"
+                  block
+                >
+                  <v-icon>{{
+                    showSidebar ? "mdi-chevron-right" : "mdi-chevron-left"
+                  }}</v-icon>
+                </v-btn>
+              </div>
+            </template>
+            <span>
+              {{
+                showSidebar
+                  ? t("graphInteraction.collapseInfo")
+                  : t("graphInteraction.expandInfo")
+              }}
+            </span>
+          </v-tooltip>
 
-  <!-- Contenuto animato -->
-  <v-expand-x-transition>
-    <div v-show="showSidebar" class="w-100">
-      <SideBarInfoComponent :actions="false" class="expandable-content" />
+          <!-- Contenuto animato -->
+          <v-expand-x-transition>
+            <div v-show="showSidebar" class="w-100">
+              <SideBarInfoComponent :actions="false" class="expandable-content" />
 
-      <!-- Pulsante avvia dialogo -->
-      <div class="text-center mt-4 w-100">
-        <v-btn color="primary" @click="showTopicsDialog = true" block>
-          <v-icon left>mdi-arrow-right-bold-circle</v-icon>
-          {{ t("message.dialog.startConversation") }}
-        </v-btn>
-      </div>
-    </div>
-  </v-expand-x-transition>
-</v-col>
-    </v-row>
+              <!-- Pulsante avvia dialogo -->
+              <div class="text-center mt-4 w-100">
+                <v-btn color="primary" @click="showTopicsDialog = true" block>
+                  <v-icon left>mdi-arrow-right-bold-circle</v-icon>
+                  {{ t("message.dialog.startConversation") }}
+                </v-btn>
+              </div>
+            </div>
+          </v-expand-x-transition>
+        </v-col>
+      </v-row>
     </v-container>
   </v-container>
   <v-dialog v-model="showTopicsDialog" max-width="500px">

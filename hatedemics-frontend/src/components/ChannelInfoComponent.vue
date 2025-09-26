@@ -41,26 +41,27 @@ watch(selectedChannelInfo, async (newVal) => {
 
 <template>
   <v-container class="pa-0" fluid>
-    <v-card v-if="selectedChannelInfo" class="mx-auto pa-0 rounded bg-surface-light" elevation="0" >
+    <v-card
+      v-if="selectedChannelInfo"
+      class="mx-auto pa-0 rounded bg-surface-light"
+      elevation="0"
+    >
       <v-card-text class="pt-4">
         <v-row dense>
-
           <v-tooltip>
             <template v-slot:activator="{ props }">
-          <v-col cols="12"  v-if="selectedChannelInfo?.label"  v-bind="props">
-            <v-icon class="mr-2" color="primary">mdi-tag</v-icon>
-            <span class="font-weight-bold">{{ t("channelInfo.label") }}</span>
-            {{ selectedChannelInfo.label }}
-          </v-col>
+              <v-col cols="12" v-if="selectedChannelInfo?.label" v-bind="props">
+                <v-icon class="mr-2" color="primary">mdi-tag</v-icon>
+                <span class="font-weight-bold">{{ t("channelInfo.label") }}</span>
+                {{ selectedChannelInfo.label }}
+              </v-col>
             </template>
             <div class="tooltip-html" v-html="t('dialog.tooltip.label')"></div>
-
-            </v-tooltip>
-            <v-tooltip>
+          </v-tooltip>
+          <v-tooltip>
             <template v-slot:activator="{ props }">
               <v-col
                 cols="12"
-                
                 v-if="selectedChannelInfo?.preprocessed_about"
                 v-bind="props"
               >
@@ -73,99 +74,96 @@ watch(selectedChannelInfo, async (newVal) => {
             </template>
             <div class="tooltip-html" v-html="t('dialog.tooltip.about')"></div>
           </v-tooltip>
-            <v-tooltip>
-              <template v-slot:activator="{ props }">
-          <v-col cols="12"  v-if="selectedChannelInfo?.message_count"  v-bind="props">
-            <v-icon class="mr-2" color="primary">mdi-message</v-icon>
-            <span class="font-weight-bold">{{ t("channelInfo.nMessages") }}</span>
-            {{ selectedChannelInfo.message_count }}
-          </v-col>
-        </template>
+          <v-tooltip>
+            <template v-slot:activator="{ props }">
+              <v-col cols="12" v-if="selectedChannelInfo?.message_count" v-bind="props">
+                <v-icon class="mr-2" color="primary">mdi-message</v-icon>
+                <span class="font-weight-bold">{{ t("channelInfo.nMessages") }}</span>
+                {{ selectedChannelInfo.message_count }}
+              </v-col>
+            </template>
             <div class="tooltip-html" v-html="t('dialog.tooltip.nMessages')"></div>
-
-            </v-tooltip>
+          </v-tooltip>
           <v-tooltip>
             <template v-slot:activator="{ props }">
-          <v-col cols="12"  v-if="selectedChannelInfo?.participants_count"  v-bind="props">
-            <v-icon class="mr-2" color="primary">mdi-account-group</v-icon>
-            <span class="font-weight-bold">{{ t("channelInfo.nUsers") }}</span>
-            {{ selectedChannelInfo.participants_count }}
-          </v-col>
-        </template>
+              <v-col
+                cols="12"
+                v-if="selectedChannelInfo?.participants_count"
+                v-bind="props"
+              >
+                <v-icon class="mr-2" color="primary">mdi-account-group</v-icon>
+                <span class="font-weight-bold">{{ t("channelInfo.nUsers") }}</span>
+                {{ selectedChannelInfo.participants_count }}
+              </v-col>
+            </template>
             <div class="tooltip-html" v-html="t('dialog.tooltip.nUsers')"></div>
-
-            </v-tooltip>
+          </v-tooltip>
           <v-tooltip>
             <template v-slot:activator="{ props }">
-          <v-col cols="12"  v-if="selectedChannelInfo?.language"  v-bind="props">
-            <v-icon class="mr-2" color="primary">mdi-translate</v-icon>
-            <span class="font-weight-bold">{{ t("channelInfo.languages") }}</span>
-            {{ selectedChannelInfo.language }}
-          </v-col>
-        </template>
+              <v-col cols="12" v-if="selectedChannelInfo?.language" v-bind="props">
+                <v-icon class="mr-2" color="primary">mdi-translate</v-icon>
+                <span class="font-weight-bold">{{ t("channelInfo.languages") }}</span>
+                {{ selectedChannelInfo.language }}
+              </v-col>
+            </template>
             <div class="tooltip-html" v-html="t('dialog.tooltip.languages')"></div>
-
-            </v-tooltip>
-            <v-tooltip>
+          </v-tooltip>
+          <v-tooltip>
             <template v-slot:activator="{ props }">
-          <v-col cols="12"  v-if="selectedChannelInfo?.degree_centrality"  v-bind="props">
-            <v-icon class="mr-2" color="primary">mdi-graph-outline</v-icon>
-            <span class="font-weight-bold">{{ t("channelInfo.degreeCentrality") }}</span>
-            {{ selectedChannelInfo.degree_centrality }}
-          </v-col>
-        </template>
+              <v-col
+                cols="12"
+                v-if="selectedChannelInfo?.degree_centrality"
+                v-bind="props"
+              >
+                <v-icon class="mr-2" color="primary">mdi-graph-outline</v-icon>
+                <span class="font-weight-bold">{{
+                  t("channelInfo.degreeCentrality")
+                }}</span>
+                {{ selectedChannelInfo.degree_centrality }}
+              </v-col>
+            </template>
             <div class="tooltip-html" v-html="t('dialog.tooltip.degreeCentrality')"></div>
-
-            </v-tooltip>
+          </v-tooltip>
           <v-tooltip>
             <template v-slot:activator="{ props }">
-          <v-col cols="12"  v-if="selectedChannelInfo?.iri !== null"  v-bind="props">
-            <v-icon class="mr-2" color="primary">mdi-chart-line</v-icon>
-            <span class="font-weight-bold">{{ t("channelInfo.iri") }}</span>
-            {{ selectedChannelInfo.iri?.toFixed(3) }}
-          </v-col>
-        </template>
+              <v-col cols="12" v-if="selectedChannelInfo?.iri !== null" v-bind="props">
+                <v-icon class="mr-2" color="primary">mdi-chart-line</v-icon>
+                <span class="font-weight-bold">{{ t("channelInfo.iri") }}</span>
+                {{ selectedChannelInfo.iri?.toFixed(3) }}
+              </v-col>
+            </template>
             <div class="tooltip-html" v-html="t('dialog.tooltip.iri')"></div>
-
-            </v-tooltip>
+          </v-tooltip>
           <v-tooltip>
             <template v-slot:activator="{ props }">
-          <v-col cols="12"  v-if="generic?.hs_percentage !== undefined"  v-bind="props">
-            <v-icon class="mr-2" color="error">mdi-emoticon-angry</v-icon>
-            <span class="font-weight-bold">{{ t("channelInfo.hs_percentage") }}</span>
-            {{ generic.hs_percentage }}%
-          </v-col>
-        </template>
+              <v-col cols="12" v-if="generic?.hs_percentage !== undefined" v-bind="props">
+                <v-icon class="mr-2" color="error">mdi-emoticon-angry</v-icon>
+                <span class="font-weight-bold">{{ t("channelInfo.hs_percentage") }}</span>
+                {{ generic.hs_percentage }}%
+              </v-col>
+            </template>
             <div class="tooltip-html" v-html="t('dialog.tooltip.hs_percentage')"></div>
-
-            </v-tooltip>
+          </v-tooltip>
           <v-tooltip>
             <template v-slot:activator="{ props }">
-          <v-col cols="12"  v-if="generic?.cw_percentage !== undefined"  v-bind="props">
-            <v-icon class="mr-2" color="error">mdi-magnify-close</v-icon>
-            <span class="font-weight-bold">{{ t("channelInfo.cw_percentage") }}</span>
-            {{ generic.cw_percentage }}%
-          </v-col>
-        </template>
+              <v-col cols="12" v-if="generic?.cw_percentage !== undefined" v-bind="props">
+                <v-icon class="mr-2" color="error">mdi-magnify-close</v-icon>
+                <span class="font-weight-bold">{{ t("channelInfo.cw_percentage") }}</span>
+                {{ generic.cw_percentage }}%
+              </v-col>
+            </template>
             <div class="tooltip-html" v-html="t('dialog.tooltip.cw_percentage')"></div>
-
-            </v-tooltip>
+          </v-tooltip>
         </v-row>
       </v-card-text>
 
       <v-card-actions v-if="isExtended">
-  <v-col cols="12" class="d-flex justify-center">
-    <v-btn
-      color="primary"
-      variant="flat"
-      @click="goToChats"
-      block
-      class="mt-4 "
-    >
-      {{ t("channelInfo.exploreChannel") }}
-    </v-btn>
-  </v-col>
-</v-card-actions>
+        <v-col cols="12" class="d-flex justify-center">
+          <v-btn color="primary" variant="flat" @click="goToChats" block class="mt-4" v-if="$vuetify.display.smAndUp">
+            {{ t("channelInfo.exploreChannel") }}
+          </v-btn>
+        </v-col>
+      </v-card-actions>
     </v-card>
     <v-alert v-else type="info" class="mt-4" color="primary">
       {{ t("channelInfo.emptySelection") }}
@@ -174,18 +172,18 @@ watch(selectedChannelInfo, async (newVal) => {
 </template>
 <style scoped>
 .responsive-btn {
-  padding: 12px 16px; 
+  padding: 12px 16px;
   font-size: 1.25rem;
-  white-space: normal; 
+  white-space: normal;
   word-break: break-word;
   text-align: center;
-  min-width: 150px; 
-  max-width: 100%;  
+  min-width: 150px;
+  max-width: 100%;
 }
 
 @media (max-width: 600px) {
   .responsive-btn {
-    font-size: 1rem; 
+    font-size: 1rem;
     padding: 8px 12px;
   }
 
@@ -193,5 +191,4 @@ watch(selectedChannelInfo, async (newVal) => {
     font-size: 18px; /* icona più piccola su mobile */
   }
 }
-
 </style>

@@ -204,7 +204,6 @@ export default {
     </template>
 
     <v-list-item-title>{{ task.name }}</v-list-item-title>
-    <v-list-item-subtitle>{{ task.id }}</v-list-item-subtitle>
 
     <template v-slot:append>
     
