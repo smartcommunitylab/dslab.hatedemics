@@ -83,18 +83,15 @@ export default {
     <v-row class="ma-0 pa-0">
       <v-col cols="12" class="pa-0">
         <v-card @click.prevent="openTaskList(id)" elevation="0" class="hoverable pa-0">
-          <v-row align="center">
-            <v-col>
-              <v-row class="d-flex justify-left pa-0">
-                <v-col>
+          <v-row align="center" class="ma-0 pa-0">
+            <v-col class="ma-0 pa-0">
+              <v-row class="d-flex justify-left pa-0 ma-0">
+                <v-col cols="12" class="pa-0 ma-0">
                   <v-card-title>{{ title }}</v-card-title>
-                  <v-card-subtitle
-                    >Project ID: {{ id }}. Project {{ isActive ? "Active" : "Inactive" }}
-                  </v-card-subtitle>
                 </v-col>
               </v-row>
             </v-col>
-            <v-col cols="2">
+            <v-col cols="2" >
               <v-card-actions>
                 <DynamicButton
                   icon="mdi-text-box-plus"
