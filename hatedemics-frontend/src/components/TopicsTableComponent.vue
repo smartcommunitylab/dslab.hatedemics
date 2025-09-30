@@ -18,11 +18,11 @@ const { topics, selectedTopic } = storeToRefs(topicsStore)
 const router = useRouter();
 const search = ref("");
 const headers = computed(() => [
-  { title: t('topicsTable.header.title'), key: "name", align: "" },
-  { title: t('topicsTable.header.count'), key: "count_percentage", align: "center"  },
-  {title:t('topicsTable.header.cw'),key:"cw_percentage", align: "center" },
-  {title:t('topicsTable.header.hs'),key:"hs_percentage", align: "center" },
-  {title:t('topicsTable.header.sentiment_percentage'),key:"sentiment_percentage", align: "center" },
+  { title: t('topicsTable.header.title'), key: "name" },
+  { title: t('topicsTable.header.count'), key: "count_percentage"   },
+  {title:t('topicsTable.header.cw'),key:"cw_percentage"  },
+  {title:t('topicsTable.header.hs'),key:"hs_percentage"  },
+  {title:t('topicsTable.header.sentiment_percentage'),key:"sentiment_percentage"  },
 ]);
 const handleClick = ( item:Topic) =>{
   // console.log("Clicked item: ", row)

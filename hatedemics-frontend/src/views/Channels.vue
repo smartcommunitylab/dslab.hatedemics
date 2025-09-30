@@ -41,23 +41,23 @@ const languages = [
 ];
 
 const headers = computed(() => [
-  { title: t("channelTable.header.label"), key: "label", sortable: true , align: "center" },
-  { title: t("channelTable.header.messages"), key: "message_count", sortable: true , align: "center" },
+  { title: t("channelTable.header.label"), key: "label", sortable: true   },
+  { title: t("channelTable.header.messages"), key: "message_count", sortable: true   },
   {
     title: t("channelTable.header.partecipants"),
     key: "participants_count",
-    sortable: true, align: "center" 
+    sortable: true  
   },
   {
     title: t("channelTable.header.degreeCentrality"),
     key: "degree_centrality",
-    sortable: true, align: "center" 
+    sortable: true  
   },
 
-  { title: t("channelTable.header.IRI"), key: "IRI", sortable: true , align: "center" },
-  { title: t("channelTable.header.hs"), key: "hs", sortable: true, align: "center"  },
-  { title: t("channelTable.header.CW"), key: "cw", sortable: true, align: "center"  },
-  { title: t("channelTable.header.expandable"), key: "expandable", sortable: true , align: "center" },
+  { title: t("channelTable.header.IRI"), key: "IRI", sortable: true   },
+  { title: t("channelTable.header.hs"), key: "hs", sortable: true   },
+  { title: t("channelTable.header.CW"), key: "cw", sortable: true   },
+  { title: t("channelTable.header.expandable"), key: "expandable", sortable: true   },
 ]);
 const pagination = reactive({
   page: 0,

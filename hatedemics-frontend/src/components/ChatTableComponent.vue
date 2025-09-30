@@ -38,23 +38,23 @@ const itemsPerPageOptions = [
   { title: "150", value: 150 },
 ];
 const headers = computed(() => [
-  { title: t("message.header.date"), key: "date", sortable: true , align: "center"},
+  { title: t("message.header.date"), key: "date", sortable: true  },
   {
     title: t("message.header.message"),
     key: "preprocessed_message_number_media",
-    sortable: true, align: "center"
+    sortable: true 
   },
-  { title: t("message.header.from"), key: "from_user", sortable: true , align: "center"},
-  { title: t("message.header.nrReactions"), key: "nr_reactions", sortable: true , align: "center"},
-  { title: t("message.header.hateLabel"), key: "hate_label", sortable: true , align: "center"},
-  { title: t("message.header.checkLabel"), key: "checkworthy_label", sortable: true , align: "center"},
+  { title: t("message.header.from"), key: "from_user", sortable: true  },
+  { title: t("message.header.nrReactions"), key: "nr_reactions", sortable: true  },
+  { title: t("message.header.hateLabel"), key: "hate_label", sortable: true  },
+  { title: t("message.header.checkLabel"), key: "checkworthy_label", sortable: true  },
   {
     title: t("message.header.averageReliability"),
     key: "average_reliability",
-    sortable: true, align: "center"
+    sortable: true 
   },
   // { title: t("message.header.topic"), key: "topic_label", sortable: true },
-  { title: t("message.header.target"), key: "target", sortable: true , align: "center"},
+  { title: t("message.header.target"), key: "target", sortable: true  },
   // { title: t("message.header.counterspeech"), key: "actions", sortable: false },
 ]);
 
