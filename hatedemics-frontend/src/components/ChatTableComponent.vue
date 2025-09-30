@@ -38,23 +38,23 @@ const itemsPerPageOptions = [
   { title: "150", value: 150 },
 ];
 const headers = computed(() => [
-  { title: t("message.header.date"), key: "date", sortable: true },
+  { title: t("message.header.date"), key: "date", sortable: true , align: "center"},
   {
     title: t("message.header.message"),
     key: "preprocessed_message_number_media",
-    sortable: true,
+    sortable: true, align: "center"
   },
-  { title: t("message.header.from"), key: "from_user", sortable: true },
-  { title: t("message.header.nrReactions"), key: "nr_reactions", sortable: true },
-  { title: t("message.header.hateLabel"), key: "hate_label", sortable: true },
-  { title: t("message.header.checkLabel"), key: "checkworthy_label", sortable: true },
+  { title: t("message.header.from"), key: "from_user", sortable: true , align: "center"},
+  { title: t("message.header.nrReactions"), key: "nr_reactions", sortable: true , align: "center"},
+  { title: t("message.header.hateLabel"), key: "hate_label", sortable: true , align: "center"},
+  { title: t("message.header.checkLabel"), key: "checkworthy_label", sortable: true , align: "center"},
   {
     title: t("message.header.averageReliability"),
     key: "average_reliability",
-    sortable: true,
+    sortable: true, align: "center"
   },
   // { title: t("message.header.topic"), key: "topic_label", sortable: true },
-  { title: t("message.header.target"), key: "target", sortable: true },
+  { title: t("message.header.target"), key: "target", sortable: true , align: "center"},
   // { title: t("message.header.counterspeech"), key: "actions", sortable: false },
 ]);
 
@@ -331,25 +331,28 @@ const getReliabilityIcon = (value: number) => {
             :icon="item.hate_label ? 'mdi-emoticon-angry' : 'mdi-emoticon-happy-outline'"
             :color="item.hate_label ? 'red' : 'green'"
           />
-          <div class="mt-1" :style="{ color: item.hate_label ? 'red' : 'green' }">
+          <!-- <div class="mt-1" :style="{ color: item.hate_label ? 'red' : 'green' }">
             {{ item.hate_label ? t("message.hate") : t("message.notHate") }}
-          </div>
+          </div> -->
         </div>
       </template>
 
       <template v-slot:item.checkworthy_label="{ item }">
         <div >
-          <v-icon
-            :icon="item.checkworthy_label ? 'mdi-magnify-close' : 'mdi-check-circle'"
-            :color="item.checkworthy_label ? 'red' : 'green'"
+          <v-icon v-if="item.checkworthy_label"
+            icon="mdi-alert-outline"
+            color="red"
           />
-          <div class="mt-1" :style="{ color: item.checkworthy_label ? 'red' : 'green' }">
+          <!-- <div class="mt-1" :style="{ color: item.checkworthy_label ? 'red' : 'green' }">
             {{ item.checkworthy_label ? t("message.worthy") : t("message.notWorthy") }}
+          </div> -->
+          <div class="mt-1" v-else>
+            -
           </div>
         </div>
       </template>
       <template v-slot:item.average_reliability="{ item }">
-        <div >
+        <div class="text-center">
           <v-icon
             :icon="getReliabilityIcon(item.average_reliability)"
             :color="getReliabilityColor(item.average_reliability)"

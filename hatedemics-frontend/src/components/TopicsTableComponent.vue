@@ -18,11 +18,11 @@ const { topics, selectedTopic } = storeToRefs(topicsStore)
 const router = useRouter();
 const search = ref("");
 const headers = computed(() => [
-  { title: t('topicsTable.header.title'), key: "name" },
-  { title: t('topicsTable.header.count'), key: "count_percentage" },
-  {title:t('topicsTable.header.cw'),key:"cw_percentage"},
-  {title:t('topicsTable.header.hs'),key:"hs_percentage"},
-  {title:t('topicsTable.header.sentiment_percentage'),key:"sentiment_percentage"},
+  { title: t('topicsTable.header.title'), key: "name", align: "" },
+  { title: t('topicsTable.header.count'), key: "count_percentage", align: "center"  },
+  {title:t('topicsTable.header.cw'),key:"cw_percentage", align: "center" },
+  {title:t('topicsTable.header.hs'),key:"hs_percentage", align: "center" },
+  {title:t('topicsTable.header.sentiment_percentage'),key:"sentiment_percentage", align: "center" },
 ]);
 const handleClick = ( item:Topic) =>{
   // console.log("Clicked item: ", row)
@@ -78,11 +78,11 @@ const sortBy = ref<SortItem[]>([{ key: "hs_percentage", order: "desc" }]);
           :class="{ selected: props.item.name === selectedTopic?.name }"
           class="hover-row"
         >
-          <td class="text-xs-right">{{ props.item.name }}</td>
-          <td class="text-xs-right">{{ props.item.count_percentage }}</td>
-          <td class="text-xs-right">{{ props.item.cw_percentage }}</td>
-          <td class="text-xs-right">{{ props.item.hs_percentage }}</td>
-          <td class="text-xs-right">
+          <td class="text-xs-right text-center">{{ props.item.name }}</td>
+          <td class="text-xs-right text-center">{{ props.item.count_percentage }}</td>
+          <td class="text-xs-right text-center">{{ props.item.cw_percentage }}</td>
+          <td class="text-xs-right text-center">{{ props.item.hs_percentage }}</td>
+          <td class="text-xs-right text-center">
             <v-icon :color="sentimentToEmoji(props.item.sentiment_percentage).color">
               {{ sentimentToEmoji(props.item.sentiment_percentage).icon }}
             </v-icon>
