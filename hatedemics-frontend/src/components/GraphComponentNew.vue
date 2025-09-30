@@ -441,8 +441,7 @@ graphInstance.zoom(targetZoom, duration);
       </v-col>
 
       <v-col
-        cols="12"
-        md="8"
+
         class="d-flex flex-column"
         style="flex-grow: 1; min-width: 0"
       >
@@ -460,7 +459,7 @@ graphInstance.zoom(targetZoom, duration);
       <v-col
         cols="12"
         md="2"
-        class="d-flex flex-column"
+        class="d-flex flex-column transition-width"
         v-show="$vuetify.display.mdAndUp"
         :style="{
           flexBasis: $vuetify.display.smAndDown

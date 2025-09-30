@@ -159,8 +159,14 @@ watch(selectedChannelInfo, async (newVal) => {
 
       <v-card-actions v-if="isExtended">
         <v-col cols="12" class="d-flex justify-center">
-          <v-btn color="primary" variant="flat" @click="goToChats" block class="mt-4" v-if="$vuetify.display.smAndUp">
-            {{ t("channelInfo.exploreChannel") }}
+          <v-btn
+            color="primary"
+            variant="flat"
+            @click="goToChats"
+            block
+            class="mt-4 responsive-btn"
+          >
+            <span class="btn-text">{{ t("channelInfo.exploreChannel") }}</span>
           </v-btn>
         </v-col>
       </v-card-actions>
@@ -171,24 +177,10 @@ watch(selectedChannelInfo, async (newVal) => {
   </v-container>
 </template>
 <style scoped>
-.responsive-btn {
-  padding: 12px 16px;
-  font-size: 1.25rem;
-  white-space: normal;
-  word-break: break-word;
+.btn-text {
+  white-space: normal !important;
+  word-break: break-word !important;
+  display: block;
   text-align: center;
-  min-width: 150px;
-  max-width: 100%;
-}
-
-@media (max-width: 600px) {
-  .responsive-btn {
-    font-size: 1rem;
-    padding: 8px 12px;
-  }
-
-  .responsive-btn .v-icon {
-    font-size: 18px; /* icona più piccola su mobile */
-  }
 }
 </style>
