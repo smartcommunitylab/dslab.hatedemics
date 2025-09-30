@@ -41,23 +41,23 @@ const languages = [
 ];
 
 const headers = computed(() => [
-  { title: t("channelTable.header.label"), key: "label", sortable: true },
-  { title: t("channelTable.header.messages"), key: "message_count", sortable: true },
+  { title: t("channelTable.header.label"), key: "label", sortable: true , align: "center" },
+  { title: t("channelTable.header.messages"), key: "message_count", sortable: true , align: "center" },
   {
     title: t("channelTable.header.partecipants"),
     key: "participants_count",
-    sortable: true,
+    sortable: true, align: "center" 
   },
   {
     title: t("channelTable.header.degreeCentrality"),
     key: "degree_centrality",
-    sortable: true,
+    sortable: true, align: "center" 
   },
 
-  { title: t("channelTable.header.IRI"), key: "IRI", sortable: true },
-  { title: t("channelTable.header.hs"), key: "hs", sortable: true },
-  { title: t("channelTable.header.CW"), key: "cw", sortable: true },
-  { title: t("channelTable.header.expandable"), key: "expandable", sortable: true },
+  { title: t("channelTable.header.IRI"), key: "IRI", sortable: true , align: "center" },
+  { title: t("channelTable.header.hs"), key: "hs", sortable: true, align: "center"  },
+  { title: t("channelTable.header.CW"), key: "cw", sortable: true, align: "center"  },
+  { title: t("channelTable.header.expandable"), key: "expandable", sortable: true , align: "center" },
 ]);
 const pagination = reactive({
   page: 0,
@@ -257,14 +257,14 @@ const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
                   :class="{ selected: item.id === selectedChannelInfo?.id }"
                   class="hover-row"
                 >
-                  <td class="text-left">{{ safeText(item.label) }}</td>
-                  <td class="text-left">{{ safeNumber(item.message_count) }}</td>
-                  <td class="text-left">{{ safeNumber(item.participants_count) }}</td>
-                  <td class="text-left">{{ safeNumberOrDash(item.degree_centrality) }}</td>
-                  <td class="text-left">{{ safeNumberOrDash(item.iri) }}</td>
-                  <td class="text-left">{{ safeNumberOrDash(item.hs) }}</td>
-                  <td class="text-left">{{ safeNumberOrDash(item.cw) }}</td>
-                  <td class="text-left">
+                  <td class="text-center">{{ safeText(item.label) }}</td>
+                  <td class="text-center">{{ safeNumber(item.message_count) }}</td>
+                  <td class="text-center">{{ safeNumber(item.participants_count) }}</td>
+                  <td class="text-center">{{ safeNumberOrDash(item.degree_centrality) }}</td>
+                  <td class="text-center">{{ safeNumberOrDash(item.iri) }}</td>
+                  <td class="text-center">{{ safeNumberOrDash(item.hs) }}</td>
+                  <td class="text-center">{{ safeNumberOrDash(item.cw) }}</td>
+                  <td class="text-center">
                     <v-icon
                       v-if="item.expandable === 'True'"
                       class="status-icon success"
@@ -273,7 +273,7 @@ const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
                     </v-icon>
                     <v-icon v-else class="status-icon error"> mdi-close </v-icon>
                   </td>
-                  <td class="text-left"></td>
+                  <td class="text-center"></td>
                 </tr>
               </template>
             </v-data-table-server>
