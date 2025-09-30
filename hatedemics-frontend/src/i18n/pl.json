@@ -644,27 +644,6 @@
                                     "correct": "Poprawnie! Strona posiada ważny certyfikat SSL (co oznacza, że połączenie jest szyfrowane – HTTPS).\n\nPoza tym brak jest jakichkolwiek dodatkowych informacji o bezpieczeństwie – nie ma polityki prywatności, informacji o administratorze, ani danych kontaktowych związanych z bezpieczeństwem.\n\nDostępny jest jedynie regulamin sklepu, który pozwala zakupić różne produkty, ale nie odnosi się on do treści informacyjnych publikowanych na stronie.",
                                     "incorrect": "Niepoprawnie! Strona posiada ważny certyfikat SSL (co oznacza, że połączenie jest szyfrowane – HTTPS).\n\nPoza tym brak jest jakichkolwiek dodatkowych informacji o bezpieczeństwie – nie ma polityki prywatności, informacji o administratorze, ani danych kontaktowych związanych z bezpieczeństwem.\n\nDostępny jest jedynie regulamin sklepu, który pozwala zakupić różne produkty, ale nie odnosi się on do treści informacyjnych publikowanych na stronie."
                                 }
-                            },
-                            {
-                                "question": "Czy treści są publikowane przez inne wiarygodne źródło?",
-                                "options": [
-                                    {
-                                        "text": "Zrzut ekranu  1",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Zrzut ekranu  2",
-                                        "correct": false
-                                    },
-                                    {
-                                        "text": "Na żadnym",
-                                        "correct": true
-                                    }
-                                ],
-                                "feedback": {
-                                    "correct": "Nie, treści publikowane na stronie globalna.info nie są potwierdzane przez inne wiarygodne źródła. Wręcz przeciwnie, organizacje fact-checkingowe jak Stowarzyszenie Demagog, AFP Sprawdzam czy fakenews.pl wskazują, że strona publikuje liczne fałszywe informacje.",
-                                    "incorrect": "Nie, treści publikowane na stronie globalna.info nie są potwierdzane przez inne wiarygodne źródła. Wręcz przeciwnie, organizacje fact-checkingowe jak Stowarzyszenie Demagog, AFP Sprawdzam czy fakenews.pl wskazują, że strona publikuje liczne fałszywe informacje."
-                                }
                             }
                         ],
                         "conclusionTitle": "Wniosek",
