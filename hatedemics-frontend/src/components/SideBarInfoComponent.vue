@@ -72,19 +72,19 @@ onMounted(async () => {
           <v-col cols="12" v-if="selectedChannelInfo?.iri !== null">
             <v-icon class="mr-2" color="primary">mdi-chart-line</v-icon>
             <span class="font-weight-bold">{{ t("channelInfo.iri") }}</span>
-            {{ selectedChannelInfo.iri?.toFixed(3) }}
+            {{ selectedChannelInfo.iri?.toFixed(2) }}
           </v-col>
 
           <v-col cols="12" v-if="generic?.hs_percentage !== undefined">
             <v-icon class="mr-2" color="error">mdi-emoticon-angry</v-icon>
             <span class="font-weight-bold">{{ t("channelInfo.hs_percentage") }}</span>
-            {{ generic.hs_percentage }}%
+            {{ selectedChannelInfo.hs?.toFixed(2) }}%
           </v-col>
 
           <v-col cols="12" v-if="generic?.cw_percentage !== undefined">
             <v-icon class="mr-2" color="error">mdi-magnify-close</v-icon>
             <span class="font-weight-bold">{{ t("channelInfo.cw_percentage") }}</span>
-            {{ generic.cw_percentage }}%
+            {{ selectedChannelInfo.cw?.toFixed(2) }}%
           </v-col>
         </v-row>
 
