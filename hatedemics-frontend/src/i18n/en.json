@@ -19,7 +19,7 @@
         "conversation": "Chat",
         "quickGuide": "Glossary",
         "counterspeech": "Counterspeech",
-        "projects": "Counterspeech",
+        "projects": "Topics",
         "credits": "Credits",
         "logout": "Logout"
     },
@@ -129,6 +129,7 @@
         "title": "Welcome to Hatedemics"
     },
     "onboarding": {
+        "language":"Language",
         "steps": [
             {
                 "title": "What is Hatedemics",
@@ -783,7 +784,7 @@
         "subtitle": "Choose the language in which you want to train your skills to respond to hate and disinformation content."
     },
     "tasks": {
-        "title": "Tasks",
+        "title": "Topics",
         "subtitle": "Select the topic you want to focus on to create effective responses and arguments against disinformation."
     },
     "channelTable": {

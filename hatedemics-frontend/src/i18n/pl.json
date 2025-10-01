@@ -19,7 +19,7 @@
         "conversation": "Przeglądaj czaty",
         "quickGuide": "Słowniczek",
         "counterspeech": "Mowa kontraktu",
-        "projects": "Projektowanie",
+        "projects": "Tematy",
         "credits": "Kredyty",
         "logout": "Logout"
     },
@@ -129,6 +129,7 @@
         "title": "Witamy w nienawidzących"
     },
     "onboarding": {
+        "language": "Język",
         "steps": [
             {
                 "title": "Co to jest HATEDEMICS?",
@@ -682,7 +683,7 @@
         "subtitle": "Wybierz język, w którym chcesz wyszkolić swoje umiejętności, aby reagować na treść nienawiści i dezinformacji."
     },
     "tasks": {
-        "title": "Zadania",
+        "title": "Tematy",
         "subtitle": "Wybierz temat, na którym chcesz się skupić, aby stworzyć skuteczne odpowiedzi i argumenty przeciwko dezinformacji."
     },
     "channelTable": {
