@@ -19,7 +19,7 @@
         "conversation": "Explora los chats",
         "quickGuide": "Glosario",
         "counterspeech": "Contrarrestar",
-        "projects": "Proyectos",
+        "projects": "Temas",
         "credits": "Créditos",
         "logout": "Cierre de sesión"
     },
@@ -129,6 +129,7 @@
         "title": "Bienvenido a Hatedemics"
     },
     "onboarding": {
+        "language": "Idioma",
         "steps": [
             {
                 "title": "¿Qué es Hatedemics?",
@@ -749,7 +750,7 @@
         "subtitle": "Elija el idioma en el que desea capacitar a sus habilidades para responder al contenido de odio y desinformación."
     },
     "tasks": {
-        "title": "Tareas",
+        "title": "Temas",
         "subtitle": "Seleccione el tema en el que desea centrarse para crear respuestas y argumentos efectivos contra la desinformación."
     },
     "channelTable": {

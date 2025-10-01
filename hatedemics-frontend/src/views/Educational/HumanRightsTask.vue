@@ -2,7 +2,16 @@
   <v-container>
     <h1 class="text-h4 font-weight-bold mb-4">{{ t('educational.tasks.humanRights.title') }}</h1>
     <p class="mb-8">{{ t('educational.tasks.humanRights.task') }}</p>
-
+    <!-- Pulsante fine task -->
+    <div class="mb-8 text-center">
+      <v-btn
+        color="success"
+        size="large"
+        @click="openTaskCompleteDialog"
+      >
+        {{ t('educational.tasks.humanRights.completetask') }}
+      </v-btn>
+    </div>
     <v-row dense>
       <v-col
         v-for="(article, index) in articles"
@@ -27,16 +36,7 @@
       </v-col>
     </v-row>
 
-    <!-- Pulsante fine task -->
-    <div class="mt-8 text-center">
-      <v-btn
-        color="success"
-        size="large"
-        @click="openTaskCompleteDialog"
-      >
-        {{ t('educational.tasks.humanRights.completetask') }}
-      </v-btn>
-    </div>
+
 
     <!-- Dialogo articolo -->
     <v-dialog v-model="dialog" max-width="600">

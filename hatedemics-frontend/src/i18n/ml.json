@@ -19,7 +19,7 @@
     "conversation": "Esplora l-iċ-chat",
     "quickGuide": "Gwida Mgħaġġla",
     "counterspeech": "Kontra-diskors",
-    "projects": "Kontra-diskors",
+    "projects": "Suġġetti",
     "credits": "Ringrazzjamenti",
     "logout": "Oħroġ"
   },
@@ -128,6 +128,7 @@
     "title": "Merħba fil-Hatedemics"
   },
   "onboarding": {
+    "language": "Lingwa",
     "steps": [
       {
         "title": "X’inhu Hatedemics?",
@@ -782,7 +783,7 @@
     "subtitle": "Agħżel il-lingwa li fiha trid tħarreġ il-ħiliet tiegħek biex twieġeb għall-kontenut ta 'mibegħda u diżinformazzjoni."
   },
   "tasks": {
-    "title": "Kompiti",
+    "title": "Suġġetti",
     "subtitle": "Agħżel is-suġġett li trid tiffoka fuq biex toħloq tweġibiet u argumenti effettivi kontra d-diżinformazzjoni."
   },
   "channelTable": {
