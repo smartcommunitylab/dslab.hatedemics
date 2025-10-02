@@ -568,7 +568,7 @@
                             }
                         ],
                         "conclusionTitle": "Wniosek",
-                        "conclusionQuestion": "Czy znalazłeś autora i potwierdziłeś, że jest to źródło eksperckie? Czy znalazłeś dowody oparte na faktach i danych? Czy treść została opublikowana przez inne wiarygodne źródła?",
+                        "conclusionQuestion": "Odpowiedz na poniższe pytania zgodnie z treścią przedstawioną na załączonych zrzutach ekranu: Czy podano informacje o autorach i czy można zweryfikować ich wiedzę specjalistyczną? Czy treść zawierała dowody poparte faktami i danymi? Czy te same informacje zostały opublikowane lub potwierdzone przez inne wiarygodne źródła?",
                         "affidabile": true,
                         "feedback": {
                         "correct": "Poprawnie! ",
@@ -648,7 +648,7 @@
                             }
                         ],
                         "conclusionTitle": "Wniosek",
-                        "conclusionQuestion": "Czy znalazłeś autora i potwierdziłeś, że jest to źródło eksperckie? Czy znalazłeś dowody oparte na faktach i danych? Czy treść została opublikowana przez inne wiarygodne źródła?",
+                        "conclusionQuestion": "Odpowiedz na poniższe pytania zgodnie z treścią przedstawioną na załączonych zrzutach ekranu: Czy podano informacje o autorach i czy można zweryfikować ich wiedzę specjalistyczną? Czy treść zawierała dowody poparte faktami i danymi? Czy te same informacje zostały opublikowane lub potwierdzone przez inne wiarygodne źródła?",
                         "affidabile": false,
                         "feedback": {
                         "correct": "Poprawnie! ",

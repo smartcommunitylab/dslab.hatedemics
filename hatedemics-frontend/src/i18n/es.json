@@ -563,7 +563,7 @@
                             }
                         ],
                         "conclusionTitle": "Conclusión",
-                        "conclusionQuestion": "¿Has encontrado al autor y confirmado que es una fuente experta? ¿Has encontrado evidencias basadas en hechos y datos? ¿El contenido ha sido publicado por otras fuentes confiables?",
+"conclusionQuestion": "Responda las siguientes preguntas según el contenido presentado en las capturas de pantalla: ¿Se proporcionó información sobre los autores y se pudo verificar su experiencia? ¿El contenido incluyó evidencia respaldada por hechos y datos? ¿Se publicó la misma información o fue confirmada por otras fuentes confiables?",
                         "affidabile": true,
                         "feedback": {
                             "correct": "¡Correcto!",
@@ -715,7 +715,7 @@
                             }
                         ],
                         "conclusionTitle": "Conclusión",
-                        "conclusionQuestion": "¿Has encontrado al autor y confirmado que es una fuente experta? ¿Has encontrado evidencias basadas en hechos y datos? ¿El contenido ha sido publicado por otras fuentes confiables?",
+"conclusionQuestion": "Responda las siguientes preguntas según el contenido presentado en las capturas de pantalla: ¿Se proporcionó información sobre los autores y se pudo verificar su experiencia? ¿El contenido incluyó evidencia respaldada por hechos y datos? ¿Se publicó la misma información o fue confirmada por otras fuentes confiables?",
                         "affidabile": false,
                         "feedback": {
                             "correct": "¡Correcto!",

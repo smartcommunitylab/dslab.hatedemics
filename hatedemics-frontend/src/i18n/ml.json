@@ -595,7 +595,7 @@
               }
             ],
             "conclusionTitle": "Konklużjoni",
-            "conclusionQuestion": "Sibt l-awtur u kkonfermajt li huwa sors espert? Sibt evidenza bbażata fuq fatti u dejta? Il-kontenut huwa ppubblikat minn sorsi affidabbli oħra?",
+"conclusionQuestion": "Wieġeb il-mistoqsijiet li ġejjin skont il-kontenut ippreżentat fl-iskrinshots ipprovduti: Ingħatat informazzjoni dwar l-awturi, u setgħet tiġi vverifikata l-kompetenza tagħhom? Il-kontenut inkluda evidenza appoġġjata minn fatti u dejta? L-istess informazzjoni ġiet ippubblikata jew ikkonfermata minn sorsi affidabbli oħra?",
             "affidabile": true,
             "feedback": {
               "correct": "Korrett!",
@@ -748,7 +748,7 @@
               }
             ],
             "conclusionTitle": "Konklużjoni",
-            "conclusionQuestion": "Sibt l-awtur u kkonfermajt li huwa sors espert? Sibt evidenza bbażata fuq fatti u dejta? Il-kontenut huwa ppubblikat minn sorsi affidabbli oħra?",
+"conclusionQuestion": "Wieġeb il-mistoqsijiet li ġejjin skont il-kontenut ippreżentat fl-iskrinshots ipprovduti: Ingħatat informazzjoni dwar l-awturi, u setgħet tiġi vverifikata l-kompetenza tagħhom? Il-kontenut inkluda evidenza appoġġjata minn fatti u dejta? L-istess informazzjoni ġiet ippubblikata jew ikkonfermata minn sorsi affidabbli oħra?",
             "affidabile": false,
             "feedback": {
               "correct": "Korrett!",
