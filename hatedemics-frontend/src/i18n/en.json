@@ -596,7 +596,7 @@
                             }
                         ],
                         "conclusionTitle": "Conclusion",
-                        "conclusionQuestion": "Have you found the author and confirmed it is an expert source? Have you found evidences based on facts and data?Is the content published by other reliable sources?",
+                        "conclusionQuestion": "Answer the following questions according to the content presented in the provided screenshots: Was information about the authors provided, and could their expertise be verified? Did the content include evidence supported by facts and data? Was the same information published or confirmed by other reliable sources?",
                         "affidabile": true,
                         "feedback": {
                             "correct": "Correct! ",
@@ -749,7 +749,7 @@
                             }
                         ],
                         "conclusionTitle": "Conclusion",
-                        "conclusionQuestion": "Have you found the author and confirmed it is an expert source? Have you found evidences based on facts and data?Is the content published by other reliable sources?",
+                        "conclusionQuestion": "Answer the following questions according to the content presented in the provided screenshots: Was information about the authors provided, and could their expertise be verified? Did the content include evidence supported by facts and data? Was the same information published or confirmed by other reliable sources?",
                         "affidabile": false,
                         "feedback": {
                             "correct": "Correct! ",

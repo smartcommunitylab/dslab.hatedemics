@@ -580,8 +580,9 @@
                             }
                         ],
                         "conclusionTitle": "Conclusione",
-                        "conclusionQuestion": "Hai trovato l'autore e puoi confermare che si tratta di una fonte autorevole? \nHai trovato prove basate su fatti e dati? \nIl contenuto è pubblicato da altre fonti attendibili?",
-                        "affidabile": true,
+
+                        "conclusionQuestion": "Rispondi alle seguenti domande in base al contenuto presentato negli screenshot forniti: sono state fornite informazioni sugli autori e la loro competenza è stata verificata? Il contenuto includeva prove supportate da fatti e dati? Le stesse informazioni sono state pubblicate o confermate da altre fonti affidabili?",
+                                                "affidabile": true,
                         "feedback": {
                             "correct": "Corretto! ",
                             "incorrect": "Sbagliato! "
@@ -715,8 +716,9 @@
                             }
                         ],
                         "conclusionTitle": "Conclusione",
-                        "conclusionQuestion": "Hai trovato l'autore e puoi confermare che si tratta di una fonte autorevole? \nHai trovato prove basate su fatti e dati? \nIl contenuto è pubblicato da altre fonti attendibili?",
-                        "affidabile": false,
+
+                        "conclusionQuestion": "Rispondi alle seguenti domande in base al contenuto presentato negli screenshot forniti: sono state fornite informazioni sugli autori e la loro competenza è stata verificata? Il contenuto includeva prove supportate da fatti e dati? Le stesse informazioni sono state pubblicate o confermate da altre fonti affidabili?",
+                                                "affidabile": false,
                         "feedback": {
                             "correct": "Corretto! ",
                             "incorrect": "Sbagliato! "
