@@ -954,16 +954,16 @@
         }
     },
     "dialog": {
-        "dataSources": "Fonti dati",
+        "dataSources": "Articolo di fact-checking",
         "externalGround": "Fonte esterna",
         "documentName": "Nome documento",
         "externalLink": "Link esterno",
         "text": "Testo",
         "confirm": "Conferma",
         "dialogue": "Dialogo",
-        "groundTextSpans": "Testi di riferimento",
-        "startEmpty": "Inizia vuoto",
-        "addDynamicTurn": "Aggiungi turno dinamico",
+        "groundTextSpans": "Prove a supporto dall'articolo",
+        "startEmpty": "Scrivi il turno",
+        "addDynamicTurn": "Genera un turno",
         "addFromGround": "Aggiungi da fonte",
         "tooltip": {
             "label": "Nome del Canale",

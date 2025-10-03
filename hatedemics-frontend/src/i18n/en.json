@@ -1000,16 +1000,16 @@
         "noData": "No data available"
     },
     "dialog": {
-        "dataSources": "Data sources",
+        "dataSources": "Fact-checking article",
         "externalGround": "External ground",
         "documentName": "Document name",
         "externalLink": "External link",
         "text": "Text",
         "confirm": "Confirm",
         "dialogue": "Dialogue",
-        "groundTextSpans": "Ground text spans",
-        "startEmpty": "Start empty",
-        "addDynamicTurn": "Add dynamic turn",
+        "groundTextSpans": "Supporting evidence from article",
+        "startEmpty": "Write turn",
+        "addDynamicTurn": "Generate turn",
         "addFromGround": "Add from ground",
         "tooltip": {
             "label":"Channel Name",
