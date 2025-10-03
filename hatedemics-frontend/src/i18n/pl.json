@@ -895,16 +895,16 @@
         "noData": "Brak dostępnych danych"
     },
     "dialog": {
-        "dataSources": "Źródła danych",
+        "dataSources": "Artykuł sprawdzający fakty",
         "externalGround": "Podłoże zewnętrzne",
         "documentName": "Nazwa dokumentu",
         "externalLink": "Link zewnętrzny",
         "text": "Tekst",
         "confirm": "Potwierdzać",
         "dialogue": "Dialog",
-        "groundTextSpans": "Tekst podstawowy",
-        "startEmpty": "Zacznij puste",
-        "addDynamicTurn": "Dodaj dynamiczny obrót",
+        "groundTextSpans": "Dowody pomocnicze z artykułu",
+        "startEmpty": "Napisz turę",
+        "addDynamicTurn": "Generuj obrót",
         "addFromGround": "Dodaj z ziemi",
         "tooltip": {
             "label":"Nazwa kanału",

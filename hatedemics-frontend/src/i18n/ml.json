@@ -989,16 +989,16 @@
     "noData": "L-ebda dejta disponibbli"
   },
   "dialog": {
-    "dataSources": "Sorsi tad-dejta",
+    "dataSources": "Artiklu ta' verifika tal-fatti",
     "externalGround": "Art esterna",
     "documentName": "Isem tad-Dokument",
     "externalLink": "Rabta esterna",
     "text": "Test",
     "confirm": "Ikkonferma",
     "dialogue": "Djalogu",
-    "groundTextSpans": "Tifrex ta 'test fuq l-art",
-    "startEmpty": "Ibda vojt",
-    "addDynamicTurn": "Żid dawra dinamika",
+    "groundTextSpans": "Evidenza ta' appoġġ mill-artiklu",
+    "startEmpty": "Ikteb id-dawra",
+    "addDynamicTurn": "Iġġenera dawra",
     "addFromGround": "Żid mill-art",
     "tooltip": {
       "label": "Isem tal-kanal",
