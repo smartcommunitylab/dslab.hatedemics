@@ -981,7 +981,8 @@
             "iri": "Indice di Rischio Infodemia del canale",
             "hs_percentage": "Percentuale di messaggi considerati Hate Speech",
             "cw_percentage": "Percentuale di messaggi considerati Check Worthy",
-            "degreeCentrality": "Centralità di Grado del canale"
+            "degreeCentrality": "Centralità di Grado del canale",
+            "louvain_community": "Comunità Louvain del canale"
         }
     },
     "guide": {

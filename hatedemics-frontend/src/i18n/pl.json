@@ -922,7 +922,8 @@
             "iri": "Wskaźnik ryzyka infodemii kanału",
             "hs_percentage": "Procent wiadomości uznanych za mowę nienawiści",
             "cw_percentage": "Procent wiadomości uznanych za warte sprawdzenia",
-            "degreeCentrality": "Stopień centralności kanału w sieci"
+            "degreeCentrality": "Stopień centralności kanału w sieci",
+            "louvain_community":"Społeczność kanału Louvain"
         }
     },
     "guide": {

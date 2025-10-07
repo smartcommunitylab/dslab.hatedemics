@@ -1016,7 +1016,8 @@
       "iri": "Indiċi tar-Riskju ta’ Infodemija tal-kanal",
       "hs_percentage": "Perċentwal ta’ messaġġi meqjusa bħala Diskors ta’ Mibegħda",
       "cw_percentage": "Perċentwal ta’ messaġġi meqjusa bħala denji ta’ verifika",
-      "degreeCentrality": "Ċentralità tal-grad tal-kanal fin-netwerk"
+      "degreeCentrality": "Ċentralità tal-grad tal-kanal fin-netwerk",
+      "louvain_community":"Il-komunità ta' Louvain tal-kanal"
     }
   },
   "guide": {

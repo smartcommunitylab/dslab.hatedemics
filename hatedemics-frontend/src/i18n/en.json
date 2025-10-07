@@ -1027,7 +1027,8 @@
             "iri": "Infodemic Risk Index of the channel",
             "hs_percentage": "Percentage of messages that are considered Hate Speech",
             "cw_percentage": "Percentage of messages that are considered Check Worthy",
-            "degreeCentrality":"Network degree centrality of the channel"
+            "degreeCentrality":"Network degree centrality of the channel",
+            "louvain_community":"Louvain community of the channel"
         }
     },
     "guide": {
