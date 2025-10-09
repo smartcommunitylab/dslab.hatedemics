@@ -31,7 +31,7 @@
                 "description": "<p><strong>Mowa kontraktu</strong> jest definiowany jako wszystkie działania komunikatywne mające na celu obalenie mowy nienawiści za pomocą przekonujących powodów oraz prawdziwych i związanych z nimi argumentów (Schieb i Preuss, 2016).</p>"
             },
             "dataSources": {
-                "title": "Źródła danych",
+                "title": "Artykuł sprawdzający fakty",
                 "description": "<p>Zawiera artykuł sprawdzający fakty z certyfikowanego wydawcy (sygnatariusz <a href=\"https://ifcncodeofprinciples.poynter.org/\" target=\"_blank\">IFCN Kodeks zasad</a>).</p>"
             },
             "dialogue": {
@@ -39,12 +39,12 @@
                 "description": "<p>Stwórz dialog, który symuluje interakcję między kimś, kto rozpowszechnia nienawiść/dezinformację a operatorem odpowiadającym argumentami opartymi na faktach.</p>"
             },
             "groundText": {
-                "title": "Tekst podstawowy",
-                "description": "<p>Możesz dodać części artykułu sprawdzającego fakty, które obsługują odpowiedź operatora.</p><p>Tekst podstawowy jest <em>Automatycznie dodane</em> Po generowaniu zakrętu.  <strong>Ręcznie podkreśl</strong> Część artykułu i kliknij przycisk „Link”.</p>"
+                "title": "Dowody pomocnicze z artykułu",
+                "description": "<p>Możesz dodać części artykułu sprawdzającego fakty, które obsługują odpowiedź operatora.</p><p>Dowody potwierdzające (\"tekst podstawowy jest\") <em>Automatycznie dodane</em> Po generowaniu zakrętu.  <strong>Ręcznie podkreśl</strong> Część artykułu i kliknij przycisk „Link”.</p>"
             },
             "newTurn": {
                 "title": "Nowy zakręt",
-                "description": "<p>Możesz dodać nowy zwrot na różne sposoby:</p><ul><li>Dodaj pusty obrót za pomocą przycisków „+”.</li><li>Automatycznie generuj zwrot za pomocą wybranej części artykułu.</li><li>Wybierz część jako tekst gruntowy, a następnie kliknij „Generuj z podłoża”.</li></ul><p><strong>Uwaga:</strong> Nawet automatycznie wygenerowane zakręty i tekst uziemienia zawsze można edytować.</p>"
+                "description": "<p>Możesz dodać nową turę na różne sposoby:</p><ul><li>Dodaj pustą turę za pomocą przycisków „+”.</li><li>Automatycznie wygeneruj turę za pomocą przycisku z magiczną różdżką.</li><li>Wybierz fragment artykułu jako materiał pomocniczy, a następnie kliknij „Dodaj z podstawy”.</li></ul><p><strong>Uwaga:</strong> Nawet automatycznie wygenerowane tury i tekst podstawowy można zawsze edytować.</p>"
             }
         }
     },
