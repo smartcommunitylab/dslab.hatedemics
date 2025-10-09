@@ -18,7 +18,7 @@
         "channel": "Canale",
         "conversation": "Chat",
         "quickGuide": "Glossario",
-        "counterspeech": "Contro-narrazione",
+        "counterspeech": "Contro-narrativa",
         "projects": "Argomenti",
         "credits": "Crediti",
         "logout": "Esci"
@@ -27,11 +27,11 @@
         "guideTitle": "Glossario",
         "guideItems": {
             "counterspeech": {
-                "title": "Contro-narrazione",
-                "description": "<p><strong>La contro-narrazione</strong> è definita come l'insieme di azioni comunicative volte a contrastare l'odio con argomentazioni convincenti, vere e basate sui fatti (Schieb e Preuss, 2016).</p>"
+                "title": "Contro-narrativa",
+                "description": "<p><strong>Una contro-narrativa</strong> è definita come l'insieme di azioni comunicative volte a contrastare l'odio con argomentazioni convincenti, vere e basate sui fatti (Schieb e Preuss, 2016).</p>"
             },
             "dataSources": {
-                "title": "Fonti dei dati",
+                "title": "Articolo di fact-checking",
                 "description": "<p>Contiene un articolo di fact-checking pubblicato da una fonte certificata (firmataria del <a href=\"https://ifcncodeofprinciples.poynter.org/\" target=\"_blank\">Codice dei Principi IFCN</a>).</p>"
             },
             "dialogue": {
@@ -39,12 +39,12 @@
                 "description": "<p>Qui puoi creare un dialogo che simula l'interazione tra una persona che diffonde odio o disinformazione e un operatore che risponde con argomentazioni basate sui fatti.</p>"
             },
             "groundText": {
-                "title": "Ground text",
-                "description": "<p>Puoi aggiungere porzioni dell’articolo di fact-checking su cui si basa la risposta dell’operatore.</p><p>Il ground text viene <em>aggiunto automaticamente</em> quando un turno è generato, ma può anche essere <strong>selezionato manualmente</strong> evidenziando una parte dell’articolo e cliccando sul pulsante “link”.</p>"
+                "title": "Prove a sostegno tratte dall'articolo",
+                "description": "<p>Puoi aggiungere porzioni dell’articolo di fact-checking su cui si basa la risposta dell’operatore.</p><p>Le fonti (\"ground text\") vengono <em>aggiunte automaticamente</em> quando un turno è generato, ma possono anche essere <strong>selezionate manualmente</strong> evidenziando una parte dell’articolo e cliccando sul pulsante “link”.</p>"
             },
             "newTurn": {
                 "title": "Nuovo turno",
-                "description": "<p>Puoi aggiungere un nuovo turno in diversi modi:</p><ul><li>Aggiungi un turno vuoto con i pulsanti “+”.</li><li>Genera automaticamente un turno selezionando una parte dell’articolo.</li><li>Seleziona una porzione come ground text e poi clicca su “Genera da ground”.</li></ul><p><strong>Nota:</strong> Anche i turni e i testi generati automaticamente possono sempre essere modificati.</p>"
+                "description": "<p>Puoi aggiungere un nuovo turno in diversi modi:</p><ul><li>Aggiungi un turno vuoto con i pulsanti “+”.</li><li>Genera automaticamente un turno con il pulsante a forma di bacchetta magica.</li><li>Seleziona una parte dell’articolo come prova di supporto, quindi fai clic su “Aggiungi da fonte”.</li></ul><p><strong>Nota:</strong> Anche i turni generati automaticamente e il testo di base possono sempre essere modificati.</p>"
             }
         }
     },
@@ -897,7 +897,7 @@
             "topic": "Argomento",
             "target": "Destinatario",
             "keywordsMatch": "Parole chiave",
-            "counterspeech": "Scrivi contro-narrazione",
+            "counterspeech": "Scrivi contro-narrativa",
             "averageReliability": "Affidabilità degli URL"
         },
         "dialog": {
@@ -905,8 +905,8 @@
             "jump": "Vai alla conversazione",
             "noData": "Nessun dato disponibile",
             "error": "Errore durante il caricamento della chat",
-            "startConversation": "Scrivi contro-narrazione",
-            "startConversationTitle": "Scrivi contro-narrazione",
+            "startConversation": "Scrivi contro-narrativa",
+            "startConversationTitle": "Scrivi contro-narrativa",
             "startConversationDescription": "Seleziona un argomento per iniziare una nuova conversazione"
         },
         "noTarget": "Nessun destinatario identificato",

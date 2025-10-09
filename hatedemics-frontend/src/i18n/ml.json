@@ -31,7 +31,7 @@
         "description": "<p><strong>Il-kontra-diskors</strong> huwa definit bħala kull azzjoni komunikattiva mmirata biex tiċħad id-diskors ta’ mibegħda permezz ta’ raġunijiet konvinċenti u argumenti veri u bbażati fuq il-fatti (Schieb u Preuss, 2016).</p>"
       },
       "dataSources": {
-        "title": "Sorsi tad-dejta",
+        "title": "Artiklu li jiċċekkja l-fatti",
         "description": "<p>Jinkludi artiklu ta’ verifika tal-fatti minn pubblikatur iċċertifikat (iffirmatarju tal-<a href=\"https://ifcncodeofprinciples.poynter.org/\" target=\"_blank\">Kodiċi tal-Prinċipji tal-IFCN</a>).</p>"
       },
       "dialogue": {
@@ -39,12 +39,12 @@
         "description": "<p>Oħloq djalogu li jissimula l-interazzjoni bejn xi ħadd li jxandar mibegħda/dezinformazzjoni u operatur li jwieġeb b’argumenti bbażati fuq il-fatti.</p>"
       },
       "groundText": {
-        "title": "Test ta’ referenza",
+        "title": "Evidenza ta' sostenn mill-artikolu",
         "description": "<p>Tista’ żżid partijiet mill-artiklu ta’ verifika tal-fatti li jappoġġjaw it-tweġiba tal-operatur.</p><p>It-test ta’ referenza jiġi <em>miżjud awtomatikament</em> meta jinħoloq turn. Tista’ wkoll <strong>tħares manwalment</strong> parti mill-artiklu u tikklikkja l-buttuna “għaqqad”.</p>"
       },
       "newTurn": {
         "title": "Turn ġdid",
-        "description": "<p>Tista’ żżid turn ġdid b’diversi modi:</p><ul><li>Żid turn vojt bil-buttuni “+”.</li><li>Ġenera turn awtomatikament billi tuża parti magħżula mill-artiklu.</li><li>Agħżel parti bħala test ta’ referenza u mbagħad ikklikkja “Ġenera mir-referenza”.</li></ul><p><strong>Nota:</strong> Anke t-turi u t-testijiet ta’ referenza ġġenerati awtomatikament jistgħu dejjem jiġu modifikati.</p>"
+        "description": "<p>Tista’ żżid dawra ġdida b’diversi modi:</p><ul><li>Żid dawra vojta bil-buttuni “+”.</li><li>Iġġenera awtomatikament dawra bil-buttuna tal-virga maġika.</li><li>Agħżel parti mill-artiklu bħala evidenza ta’ sostenn, imbagħad ikklikkja “Żid mill-artiklu bażi”.</li></ul><p><strong>Nota:</strong> Anke d-dawriet iġġenerati awtomatikament u t-test bażiku jistgħu dejjem jiġu editjati.</p>"
       }
     }
   },
