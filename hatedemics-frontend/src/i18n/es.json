@@ -168,7 +168,7 @@
         "eduCard3Desc": "Aprende a desmentir la desinformación de manera efectiva.",
         "eduCard3Button": "Empezar actividad",
         "eduCard4Title": "Lectura lateral",
-        "eduCard4Desc": "Aprende a leer y comprender el contenido en línea.",
+        "eduCard4Desc": "Aprende a leer y verificar contenido en línea.",
         "eduCard4Button": "Empezar actividad",
         "warningTitle": "Advertencia",
         "warningText": "Estas actividades contienen ejemplos reales que algunas personas pueden encontrar ofensivos.  Si no te encuentras cómodo/a con alguna actividad o parte de una actividad, háznoslo saber o siéntete libre de abandonar la actividad.",
@@ -563,7 +563,7 @@
                             }
                         ],
                         "conclusionTitle": "Conclusión",
-                        "conclusionQuestion": "Responda las siguientes preguntas según el contenido presentado en las capturas de pantalla: ¿Se proporcionó información sobre los autores y se pudo verificar su experiencia? ¿El contenido incluyó evidencia respaldada por hechos y datos? ¿Se publicó la misma información o fue confirmada por otras fuentes confiables?",
+                        "conclusionQuestion": "Responde a las siguientes preguntas tras haber realizado el ejercicio: ¿Has encontrado al autor y confirmado que es una fuente experta? ¿Has encontrado evidencias basadas en datos y hechos? ¿El contenido está publicado por otras fuentes fiables?",
                         "affidabile": true,
                         "feedback": {
                             "correct": "¡Correcto!",
@@ -715,7 +715,7 @@
                             }
                         ],
                         "conclusionTitle": "Conclusión",
-                        "conclusionQuestion": "Responda las siguientes preguntas según el contenido presentado en las capturas de pantalla: ¿Se proporcionó información sobre los autores y se pudo verificar su experiencia? ¿El contenido incluyó evidencia respaldada por hechos y datos? ¿Se publicó la misma información o fue confirmada por otras fuentes confiables?",
+                        "conclusionQuestion": "Responde a las siguientes preguntas tras haber realizado el ejercicio: ¿Has encontrado al autor y confirmado que es una fuente experta? ¿Has encontrado evidencias basadas en datos y hechos? ¿El contenido está publicado por otras fuentes fiables?",
                         "affidabile": false,
                         "feedback": {
                             "correct": "¡Correcto!",
@@ -732,7 +732,7 @@
         "subtitle": "<p>En esta página puedes ver en detalle el contenido de un solo canal de Telegram. La tabla muestra los temas principales del canal, con qué frecuencia aparecen en los mensajes, el porcentaje de discurso de odio y la verificabilidad (check-worthiness) dentro de cada tema y el sentimiento predominante.</p><p>A la derecha encontrarás información clave del canal, mientras que las nubes de palabras (word clouds) visualizan qué términos aparecen con más frecuencia en los mensajes no de odio y en los de odio, así como en los mensajes que merecen verificación y los que no.</p><p>Utiliza los filtros y los botones para cambiar entre las vistas de los chats de los canales y los temas, o para ajustar el tipo de nube de palabras que ves. Si pasas el ratón por encima de cualquier etiqueta o botón, verás una breve explicación de lo que hace.</p>"
     },
     "channel": {
-        "title": "Exploración de red",
+        "title": "Explora la red",
         "subtitle": "<p>A continuación, puedes ver una red de canales de Telegram donde cada canal es un punto ('nodo'). Estos canales están conectados cuando Telegram recomienda automáticamente uno a otro, normalmente porque comparten muchos de los mismos usuarios.</p><p>Puedes explorar la red y la tabla para descubrir canales reales que podrían estar difundiendo desinformación o discursos de odio.</p><p>Ajusta el color y el tamaño de los canales, filtra y reordena sus características para encontrar los que más te interesen.</p> <p>Selecciona un canal para ver más detalles sobre sus temas principales y los mensajes que se han compartido en él.</p>",
         "infoTitle": "Información de canal"
     },
@@ -973,6 +973,9 @@
         "startEmpty": "Escribe respuesta",
         "addDynamicTurn": "Generar respuesta",
         "addFromGround": "Agregar desde la fuente",
+        "confirmTitle": "Confirmar",
+    "confirmLeavePage": "Si abandonas esta página, podrías perder tu progreso. ¿Estás seguro?",
+  
         "tooltip": {
             "label": "Nombre del canal",
             "startEmpty": "Presione aquí para crear una respuesta vacía.",

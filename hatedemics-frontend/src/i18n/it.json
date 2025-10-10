@@ -965,6 +965,9 @@
         "startEmpty": "Scrivi il turno",
         "addDynamicTurn": "Genera un turno",
         "addFromGround": "Aggiungi da fonte",
+        "confirmTitle": "Conferma",
+        "confirmLeavePage": "Se lasci questa pagina, potresti perdere i tuoi progressi. Sei sicuro?",
+    
         "tooltip": {
             "label": "Nome del Canale",
             "startEmpty": "Premi qui per creare un turno vuoto.",

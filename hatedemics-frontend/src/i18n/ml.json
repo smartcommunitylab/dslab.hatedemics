@@ -1000,6 +1000,9 @@
     "startEmpty": "Ikteb id-dawra",
     "addDynamicTurn": "Iġġenera dawra",
     "addFromGround": "Żid mill-art",
+    "confirmTitle": "Ikkonferma",
+    "confirmLeavePage": "Jekk titlaq minn din il-paġna, tista' titlef il-progress tiegħek. Int żgur?",
+ 
     "tooltip": {
       "label": "Isem tal-kanal",
       "startEmpty": "Agħfas hawn biex toħloq dawra vojta.",

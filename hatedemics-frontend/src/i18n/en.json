@@ -168,7 +168,7 @@
         "eduCard3Desc": "Learn how to debunk  disinformation effectively.",
         "eduCard3Button": "Start Activity",
         "eduCard4Title": "Lateral Reading",
-        "eduCard4Desc": "Learn how to read and understand online content.",
+        "eduCard4Desc": "Learn how to read and check online content.",
         "eduCard4Button": "Start Activity",
         "warningTitle": "Warning",
         "warningText": "These activities contain unobfuscated examples some readers may find offensive. If any activity or part of activity makes you feel uncomfortable or you feel triggered please refer to us or feel free to leave the room.",
@@ -1011,6 +1011,8 @@
         "startEmpty": "Write turn",
         "addDynamicTurn": "Generate turn",
         "addFromGround": "Add from ground",
+        "confirmTitle": "Confirm",
+        "confirmLeavePage": "If you leave this page, you might lose your progress. Are you sure?",    
         "tooltip": {
             "label":"Channel Name",
             "startEmpty": "Press here to create an empty turn.",
