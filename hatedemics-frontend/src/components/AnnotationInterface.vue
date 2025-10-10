@@ -190,21 +190,19 @@ export default {
   beforeRouteLeave: async function () {
     // Inspired by: https://stackoverflow.com/questions/51980296/detect-back-button-in-navigation-guards-of-vue-router
     // and: https://router.vuejs.org/guide/advanced/navigation-guards.html#In-Component-Guards
-    if (this.unsavedChanges) {
-      if (
-        !(await this.$refs.confirm.open(
-          "Confirm",
-          "If you leave this page, you might lose your progress. Are you sure?",
-          {
-            okText: "Yes",
-            cancelText: "No",
-            noconfirm: false,
-            color: "error",
-          }
-        ))
-      ) {
-        return false;
-      }
+    if (
+      !(await this.$refs.confirm.open(
+        this.t("dialog.confirmTitle"),
+        this.t("dialog.confirmLeavePage"),
+        {
+          okText: this.t("common.yes"),
+          cancelText: this.t("common.no"),
+          noconfirm: false,
+          color: "error",
+        }
+      ))
+    ) {
+      return false;
     }
   },
   methods: {

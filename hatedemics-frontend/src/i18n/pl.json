@@ -906,6 +906,9 @@
         "startEmpty": "Napisz turę",
         "addDynamicTurn": "Generuj obrót",
         "addFromGround": "Dodaj z ziemi",
+        "confirmTitle": "Potwierdź",
+    "confirmLeavePage": "Jeśli opuścisz tę stronę, możesz stracić swoje postępy. Czy na pewno chcesz kontynuować?",
+
         "tooltip": {
             "label":"Nazwa kanału",
             "startEmpty": "Naciśnij tutaj, aby utworzyć pusty zakręt.",
