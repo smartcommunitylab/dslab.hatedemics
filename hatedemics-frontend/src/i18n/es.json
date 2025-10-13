@@ -105,7 +105,7 @@
             },
             "disinformation": {
                 "title": "Desinformación",
-                "description": "<p>La <strong>desinformación</strong> es información falsa o engañosa que se crea, comparte o difunde deliberadamente con la intención de <em>engañar</em> o <em>manipular</em> a las personas.</p><p>A menudo se utiliza para <strong>influir en opiniones</strong>, sembrar confusión o lograr objetivos <em>políticos, sociales o económicos</em>.</p>"
+                "description": "<p><strong>Desinformación</strong> es contenido falso compartido con la intención de causar daño. La creación de este tipo de contenido se motiva con mayor frecuencia por el deseo de ganar dinero, obtener publicidad o aumentar la influencia política.</p>"
             },
             "reliability": {
                 "title": "Fiabilidad",
@@ -117,7 +117,7 @@
             },
             "hateSpeech": {
                 "title": "Discurso de odio",
-                "description": "<p>El <strong>discurso de odio</strong> se refiere a expresiones que incitan, promueven, justifican o difunden <strong>odio, violencia, discriminación u hostilidad</strong> contra una persona o grupo en función de rasgos identitarios como raza, religión, etnia, género, orientación sexual, discapacidad u otras características similares.</p><p>Incluye tanto formas explícitas de <em>incitación a la violencia</em> como formas más sutiles de <em>deshumanización</em> o <em>lenguaje despectivo</em>.</p>"
+                "description": "<p><strong>Discurso de odio</strong> se define como la expresión de opiniones ofensivas o discriminatorias, contenidos o comunicaciones hacia grupos específicos de personas o individuos, en base a sus características de identidad, como género, edad, orientación sexual, nacionalidad, etnia, religión, color de piel, discapacidad u otras.</p>"
             },
             "checkWorthyness": {
                 "title": "Susceptible de verificación",

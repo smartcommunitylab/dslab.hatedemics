@@ -89,47 +89,47 @@
         }
     },
     "networkGuide": {
-  "guideTitle": "Exploration Glossary",
-  "guideItems": {
-    "telegramDataset": {
-      "title": "Telegram Dataset",
-      "description": "<p>A <strong>dataset</strong> is a structured collection of data. The platform includes approximately <strong>10 million Telegram messages</strong> which were downloaded from around <strong>500 channels</strong>, covering <em>4 languages</em> (English, Italian, Spanish and Polish).</p><p>Telegram was chosen as it provides <strong>free access to large-scale data collection</strong>, unlike other popular messaging platforms.</p>"
+        "guideTitle": "Exploration Glossary",
+        "guideItems": {
+            "telegramDataset": {
+                "title": "Telegram Dataset",
+                "description": "<p>A <strong>dataset</strong> is a structured collection of data. The platform includes approximately <strong>10 million Telegram messages</strong> which were downloaded from around <strong>500 channels</strong>, covering <em>4 languages</em> (English, Italian, Spanish and Polish).</p><p>Telegram was chosen as it provides <strong>free access to large-scale data collection</strong>, unlike other popular messaging platforms.</p>"
+            },
+            "telegramChannels": {
+                "title": "Telegram Channels and chats",
+                "description": "<p>A <strong>Telegram channel</strong> is a space where one or a few admins can post messages to a large audience.</p><p>A channel can have one or more <strong>chats</strong> with different settings: for example, some where only admins can publish messages, and others where everyone can participate.</p><p>A channel’s chats or conversations refer to the messages posted there and the way audiences react.</p>"
+            },
+            "network": {
+                "title": "Network",
+                "description": "<p>A <strong>network</strong> is a structure that represents entities as points and the relationships between them as lines.</p><p>In this network, the downloaded Telegram channels are displayed as <strong>points</strong>, and lines show how they're connected. A channel is linked to another when Telegram automatically <em>recommends</em> it, based on how many users both channels share.</p>"
+            },
+            "disinformation": {
+                "title": "Disinformation",
+                "description": "<p><strong>Disinformation</strong> is false content shared with the intention of causing harm. The creation of this type of content is most often motivated by the desire to earn money, gain publicity or increase political influence.</p>"
+            },
+            "reliability": {
+                "title": "Reliability",
+                "description": "<p><strong>Reliability</strong> captures how trustworthy and accurate a link is. It is determined through a <em>manual evaluation</em> of the website.</p><p>A <strong>higher reliability score</strong> indicates that the source can be trusted to provide accurate and well-founded information.</p>"
+            },
+            "infodemicRisk": {
+                "title": "Infodemic Risk",
+                "description": "<p>The <strong>Infodemic Risk</strong> tells us how much the channel is reliable, ranging from <strong>0</strong> (completely reliable) to <strong>1</strong> (fully unreliable).</p><p>It is based on how reliable the websites shared in the channel are, and how much people in the channel are <em>exposed</em> to those links (it considers the number of views).</p><p>A <strong>low number</strong> means users are exposed to more reliable information!</p><p>For more details, you can check out <a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">this article</a>.</p>"
+            },
+            "hateSpeech": {
+                "title": "Hate Speech",
+                "description": "<p><strong>Hate Speech</strong> is defined as the expression of offensive, discriminatory opinions, content or communications towards specific groups of people or individuals on the basis of their identity characteristics, such as gender, age, sexual orientation, nationality, ethnicity, religion, skin colour, disability or other.</p>"
+            },
+            "checkWorthyness": {
+                "title": "Check-worthyness",
+                "description": "<p><strong>Check-Worthy</strong> refers to a message, claim, or piece of content that is likely to be of <em>public interest</em> and may require verification by fact-checkers.</p><p>A message is considered check-worthy when it:</p><ul><li>Makes a <strong>factual claim</strong> that can be verified or disproven,</li><li>Has the potential to <strong>influence opinions, behaviors, or public debate</strong>,</li><li>Addresses <strong>sensitive or high-impact topics</strong> (e.g. politics, health, security, migration),</li><li>Or shows signs of possible <em>misinformation</em> or <em>disinformation</em>.</li></ul>"
+            }
+        }
     },
-    "telegramChannels": {
-      "title": "Telegram Channels and chats",
-      "description": "<p>A <strong>Telegram channel</strong> is a space where one or a few admins can post messages to a large audience.</p><p>A channel can have one or more <strong>chats</strong> with different settings: for example, some where only admins can publish messages, and others where everyone can participate.</p><p>A channel’s chats or conversations refer to the messages posted there and the way audiences react.</p>"
-    },
-    "network": {
-      "title": "Network",
-      "description": "<p>A <strong>network</strong> is a structure that represents entities as points and the relationships between them as lines.</p><p>In this network, the downloaded Telegram channels are displayed as <strong>points</strong>, and lines show how they're connected. A channel is linked to another when Telegram automatically <em>recommends</em> it, based on how many users both channels share.</p>"
-    },
-    "disinformation": {
-      "title": "Disinformation",
-      "description": "<p><strong>Disinformation</strong> is false or misleading information that is created, shared, or spread deliberately with the intention to <em>deceive</em> or <em>manipulate</em> people.</p><p>It is often used to <strong>influence opinions</strong>, sow confusion, or achieve <em>political, social, or financial</em> goals.</p>"
-    },
-    "reliability": {
-      "title": "Reliability",
-      "description": "<p><strong>Reliability</strong> captures how trustworthy and accurate a link is. It is determined through a <em>manual evaluation</em> of the website.</p><p>A <strong>higher reliability score</strong> indicates that the source can be trusted to provide accurate and well-founded information.</p>"
-    },
-    "infodemicRisk": {
-      "title": "Infodemic Risk",
-      "description": "<p>The <strong>Infodemic Risk</strong> tells us how much the channel is reliable, ranging from <strong>0</strong> (completely reliable) to <strong>1</strong> (fully unreliable).</p><p>It is based on how reliable the websites shared in the channel are, and how much people in the channel are <em>exposed</em> to those links (it considers the number of views).</p><p>A <strong>low number</strong> means users are exposed to more reliable information!</p><p>For more details, you can check out <a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">this article</a>.</p>"
-    },
-    "hateSpeech": {
-      "title": "Hate Speech",
-      "description": "<p><strong>Hate Speech</strong> refers to expressions that incite, promote, justify, or spread <strong>hatred, violence, discrimination, or hostility</strong> against a person or group based on identity traits such as race, religion, ethnicity, gender, sexual orientation, disability, or similar characteristics.</p><p>It encompasses both overt <em>incitement to violence</em> and subtler forms of <em>dehumanization</em> or <em>derogatory language</em>.</p>"
-    },
-    "checkWorthyness": {
-      "title": "Check-worthyness",
-      "description": "<p><strong>Check-Worthy</strong> refers to a message, claim, or piece of content that is likely to be of <em>public interest</em> and may require verification by fact-checkers.</p><p>A message is considered check-worthy when it:</p><ul><li>Makes a <strong>factual claim</strong> that can be verified or disproven,</li><li>Has the potential to <strong>influence opinions, behaviors, or public debate</strong>,</li><li>Addresses <strong>sensitive or high-impact topics</strong> (e.g. politics, health, security, migration),</li><li>Or shows signs of possible <em>misinformation</em> or <em>disinformation</em>.</li></ul>"
-    }
-  }
-},
     "welcome": {
         "title": "Welcome to Hatedemics"
     },
     "onboarding": {
-        "language":"Language",
+        "language": "Language",
         "steps": [
             {
                 "title": "What is Hatedemics",
@@ -399,7 +399,7 @@
                         ],
                         "questions": [
                             {
-                                "question": "Where can you find the author? ",
+                                "question": "Where can you find the author of the content? ",
                                 "options": [
                                     {
                                         "text": "Screenshot 1",
@@ -616,7 +616,7 @@
                         ],
                         "questions": [
                             {
-                                "question": "Where can you find the author?",
+                                "question": "Where can you find the author of the content?",
                                 "options": [
                                     {
                                         "text": "Screenshot 1",
@@ -862,7 +862,6 @@
             "n_out_recommended": "Out Recommendations",
             "scale": "Weighted scale",
             "degree_centrality": "Degree Centrality"
-
         },
         "tooltip": {
             "label": "Label",
@@ -875,7 +874,6 @@
             "in": "In Recommendations:",
             "out": "Out Recommendations:",
             "degree_centrality": "Degree Centrality:"
-
         },
         "fs": {
             "exit": "Exit",
@@ -915,7 +913,6 @@
         "hs_percentage": "Hate Speech:",
         "cw_percentage": "Check Worthy:",
         "degreeCentrality": "Degree Centrality:"
-
     },
     "message": {
         "title": "Chat Insights",
@@ -1012,9 +1009,9 @@
         "addDynamicTurn": "Generate turn",
         "addFromGround": "Add from ground",
         "confirmTitle": "Confirm",
-        "confirmLeavePage": "If you leave this page, you might lose your progress. Are you sure?",    
+        "confirmLeavePage": "If you leave this page, you might lose your progress. Are you sure?",
         "tooltip": {
-            "label":"Channel Name",
+            "label": "Channel Name",
             "startEmpty": "Press here to create an empty turn.",
             "addDynamicTurn": "Automatically generate a suggestion to start from.<br>You can still modify it afterward.",
             "addRoundUp": "Add an empty turn <em>before</em> the selected one.",
@@ -1029,8 +1026,8 @@
             "iri": "Infodemic Risk Index of the channel",
             "hs_percentage": "Percentage of messages that are considered Hate Speech",
             "cw_percentage": "Percentage of messages that are considered Check Worthy",
-            "degreeCentrality":"Network degree centrality of the channel",
-            "louvain_community":"Louvain community of the channel"
+            "degreeCentrality": "Network degree centrality of the channel",
+            "louvain_community": "Louvain community of the channel"
         }
     },
     "guide": {
@@ -1121,10 +1118,10 @@
         }
     },
     "buttons": {
-    "startDialogue": "Start Dialogue",
-    "delete": "Delete"
-  },
-  "locale": {
-    "selectLanguage": "Select interface language"
-  }
+        "startDialogue": "Start Dialogue",
+        "delete": "Delete"
+    },
+    "locale": {
+        "selectLanguage": "Select interface language"
+    }
 }
