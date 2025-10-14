@@ -104,7 +104,7 @@
       },
       "disinformation": {
         "title": "Diżinformazzjoni",
-        "description": "<p><strong>Diżinformazzjoni</strong> hija informazzjoni falza jew qarrieqa li tinħoloq, tinqasam jew tinxtered intenzjonalment bil-għan li <em>tqarraq</em> jew <em>timmaneġġja</em> lin-nies.</p><p>Ħafna drabi tintuża biex <strong>tinfluwenza opinjonijiet</strong>, tixxerred konfużjoni jew tinkiseb <em>għan politiku, soċjali jew finanzjarju</em>.</p>"
+        "description": "<p><strong>Disinformazzjoni</strong> huwa kontenut falz imqassam bil-għan li jikkawża ħsara. Il-ħolqien ta’ dan it-tip ta’ kontenut spiss ikun motivat mid-desiderju li jinħoloq flus, jinkiseb pubbliċità jew jiżdied l-influwenza politika.</p>"
       },
       "reliability": {
         "title": "Affidabbiltà",
@@ -116,7 +116,7 @@
       },
       "hateSpeech": {
         "title": "Diskors ta’ mibegħda",
-        "description": "<p><strong>Diskors ta’ mibegħda</strong> jirreferi għal espressjonijiet li jinkoraġġixxu, jippromwovu, jiġġustifikaw jew ixerrdu <strong>mibegħda, vjolenza, diskriminazzjoni jew ostilità</strong> kontra persuna jew grupp ibbażat fuq karatteristiċi ta’ identità bħal razza, reliġjon, etniċità, sess, orjentazzjoni sesswali, diżabilità jew karatteristiċi simili.</p><p>Dan jinkludi kemm <em>inkoraġġiment dirett għall-vjolenza</em> kif ukoll forom aktar sottili ta’ <em>deumanizzazzjoni</em> jew <em>lingwaġġ derogatorju</em>.</p>"
+        "description": "<p><strong>Kliem ta’ mibegħda</strong> huwa definit bħala l-espressjoni ta’ opinjonijiet offensivi jew diskriminatorji, kontenut jew komunikazzjonijiet lejn gruppi speċifiċi ta’ nies jew individwi fuq bażi ta’ karatteristiċi ta’ identità tagħhom, bħal sess, età, orientament sesswali, nazzjonalità, etniċità, reliġjon, kulur tal-ġilda, diżabilità jew oħrajn.</p>"
       },
       "checkWorthyness": {
         "title": "Denju li jiġi vverifikat",
@@ -398,7 +398,7 @@
             ],
             "questions": [
               {
-                "question": "Fejn tista' ssib l-awtur?",
+                "question": "Fejn tista' ssib l-awtur tal-kontenut?",
                 "options": [
                   {
                     "text": "Screenshot 1",
@@ -615,7 +615,7 @@
             ],
             "questions": [
               {
-                "question": "Fejn tista 'ssib l-awtur?",
+                "question": "Fejn tista' ssib l-awtur tal-kontenut?",
                 "options": [
                   {
                     "text": "Screenshot 1",

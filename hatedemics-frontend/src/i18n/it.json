@@ -105,7 +105,7 @@
             },
             "disinformation": {
                 "title": "Disinformazione",
-                "description": "<p>La <strong>disinformazione</strong> è informazione falsa o fuorviante creata, condivisa o diffusa deliberatamente con l’intenzione di <em>ingannare</em> o <em>manipolare</em> le persone.</p><p>Viene spesso utilizzata per <strong>influenzare le opinioni</strong>, creare confusione o perseguire obiettivi <em>politici, sociali o economici</em>.</p>"
+                "description": "<p><strong>Disinformazione</strong> è contenuto falso condiviso con l'intenzione di arrecare danno. La creazione di questo tipo di contenuto è spesso motivata dal desiderio di guadagnare denaro, ottenere visibilità o aumentare l'influenza politica.</p>"
             },
             "reliability": {
                 "title": "Affidabilità",
@@ -117,7 +117,7 @@
             },
             "hateSpeech": {
                 "title": "Discorsi d’odio",
-                "description": "<p>I <strong>discorsi d’odio</strong> comprendono espressioni che incitano, promuovono, giustificano o diffondono <strong>odio, violenza, discriminazione o ostilità</strong> contro una persona o un gruppo sulla base di caratteristiche identitarie come razza, religione, etnia, genere, orientamento sessuale, disabilità o simili.</p><p>Includono sia forme esplicite di <em>incitamento alla violenza</em>, sia forme più sottili di <em>disumanizzazione</em> o <em>linguaggio denigratorio</em>.</p>"
+                "description": "<p><strong>Hate speech</strong> è definito come l'espressione di opinioni offensive o discriminatorie, contenuti o comunicazioni verso specifici gruppi di persone o individui sulla base delle loro caratteristiche identitarie, come genere, età, orientamento sessuale, nazionalità, etnia, religione, colore della pelle, disabilità o altre.</p>"
             },
             "checkWorthyness": {
                 "title": "Verificabilità",
@@ -399,7 +399,7 @@
                         ],
                         "questions": [
                             {
-                                "question": "E' possibile identificare l'autore?",
+                                "question": "E' possibile identificare l'autore del contenuto?",
                                 "options": [
                                     {
                                         "text": "Screenshot 1",
@@ -599,7 +599,7 @@
                         ],
                         "questions": [
                             {
-                                "question": "E' possibile identificare l'autore?",
+                                "question": "E' possibile identificare l'autore del contenuto?",
                                 "options": [
                                     {
                                         "text": "Screenshot 1",
