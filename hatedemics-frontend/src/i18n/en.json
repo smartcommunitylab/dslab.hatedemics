@@ -334,32 +334,32 @@
                 "pairs": [
                     {
                         "id": "a",
-                        "left": "Argumentum ad populum – a non-substantive way of arguing in which the speaker appeals to the tastes, preferences and prejudices of the crowd. Based on national egoism, instincts, stereotypes or prejudices, the speaker tries to win over the crowd to their thesis",
+                        "left": "<strong>Argumentum ad populum </strong> – a non-substantive way of arguing in which the speaker appeals to the tastes, preferences and prejudices of the crowd. Based on national egoism, instincts, stereotypes or prejudices, the speaker tries to win over the crowd to their thesis",
                         "right": "During a heated online discussion about immigration, a user posts: \"Everyone knows that these people are dangerous and bring crime. Just look at how many people in our town agree with me. We need to get them out to protect our community.\""
                     },
                     {
                         "id": "b",
-                        "left": "Appeal to tradition – when an argument assumes something is good or true simply because it is being traditionally done or believed, without considering whether it is still valid in the present context",
+                        "left": "<strong>Appeal to tradition </strong>– when an argument assumes something is good or true simply because it is being traditionally done or believed, without considering whether it is still valid in the present context",
                         "right": "During a community meeting about updating local school policies to be more inclusive of LGBTQ+ students, a long-time resident stands up and says: \"For generations, we have taught that marriage is only between a man and a woman. This is how it has always been and how it should stay. Promoting these new ideas in our schools is an attack on our traditions and values.\""
                     },
                     {
                         "id": "c",
-                        "left": "Post hoc, ergo propter hoc – logical error in wrongly concluding that there is a causal connection between two events merely because one occurred before the other",
+                        "left": "<strong>Post hoc, ergo propter hoc </strong>– logical error in wrongly concluding that there is a causal connection between two events merely because one occurred before the other",
                         "right": "During a public debate on refugee resettlement, a speaker points to a recent rise in unemployment that occurred shortly after a group of refugees arrived in the town. They declare, \"Ever since they arrived, our unemployment rates have shot up. It's obvious they are taking all the jobs from hardworking local people.\""
                     },
                     {
                         "id": "d",
-                        "left": "Membership bias – tendency to favour own group over other groups",
+                        "left": "<strong>Membership bias </strong> – tendency to favour own group over other groups",
                         "right": "During an online discussion about a recent crime reported in the news, a person writes, \"As someone who has lived in this neighbourhood my whole life, I can tell you it's the new immigrants causing all the trouble. We 'originals' know what's really going on, and things were peaceful before they came.\""
                     },
                     {
                         "id": "e",
-                        "left": "Blind spot bias is the tendency to see oneself as less biased than other people",
+                        "left": "<strong>Blind spot bias </strong>– is the tendency to see oneself as less biased than other people",
                         "right": "During a heated debate about religious groups, a participant states, \"Unlike those people, whose beliefs are full of prejudice and intolerance, I've examined my views objectively. My conclusion that their religion is inherently backward and dangerous isn't a bias; it's just an uncomfortable fact.\""
                     },
                     {
                         "id": "f",
-                        "left": "A slippery slope fallacy – occurs when someone claims that a position or decision will lead to a series of unintended negative consequences",
+                        "left": "<strong>A slippery slope fallacy </strong>– occurs when someone claims that a position or decision will lead to a series of unintended negative consequences",
                         "right": "During a debate about allowing a new community center for a minority group, a speaker argues: \"If we allow them to build this center, next they'll demand their own laws. Soon, they'll be taking over our neighbourhoods and imposing their culture on our children. We must stop this now, or we will lose our entire way of life.\""
                     }
                 ],
