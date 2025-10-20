@@ -10,8 +10,9 @@
           :class="getItemClass(leftColumn[i - 1].id, 'left')"
           @click="selectItem(leftColumn[i - 1], 'left')"
         >
-          <v-card-text class="font-weight-black text-h7 text-center">
-            {{ leftColumn[i - 1].label }}
+          <v-card-text class="text-h7 text-center mt-4">
+            <!-- render HTML for left label -->
+            <div v-html="leftColumn[i - 1].label"></div>
           </v-card-text>
         </v-card>
       </v-col>
@@ -22,9 +23,12 @@
           @click="selectItem(rightColumn[i - 1], 'right')"
         >
           <v-card-text class="mt-4">
-            {{ rightColumn[i - 1].label }}
+            <!-- render HTML for right label -->
+            <div v-html="rightColumn[i - 1].label"></div>
+
             <span v-if="getPairedLabel(rightColumn[i - 1].id)" class="paired-label">
-              {{ getPairedLabel(rightColumn[i - 1].id) }}
+              <!-- paired label also as HTML -->
+              <span v-html="getPairedLabel(rightColumn[i - 1].id)"></span>
             </span>
           </v-card-text>
         </v-card>
@@ -39,48 +43,47 @@
     </v-row>
 
     <v-dialog v-model="showDialog" max-width="600">
-  <v-card>
-    <v-card-title class="text-h6 font-weight-bold">
-      {{ t("educational.tasks.bias.summaryTitle") }}
-    </v-card-title>
-    <v-card-text>
-  <p>
-    ✅ {{ t('educational.tasks.bias.correct') }}: {{ correctCount }}
-  </p>
-  <ul>
-    <li 
-      v-for="pair in matchedPairs.filter(p => p.left && p.right && p.left.id === p.right.id)" 
-      :key="pair.left.id"
-    >
-      <span class="paired-label-popup">{{ pair.left.label }}</span>
-    </li>
-  </ul>
+      <v-card>
+        <v-card-title class="text-h6 font-weight-bold">
+          {{ t("educational.tasks.bias.summaryTitle") }}
+        </v-card-title>
+        <v-card-text>
+          <p>
+            ✅ {{ t('educational.tasks.bias.correct') }}: {{ correctCount }}
+          </p>
+          <ul>
+            <li 
+              v-for="pair in matchedPairs.filter(p => p.left && p.right && p.left.id === p.right.id)" 
+              :key="pair.left.id"
+            >
+              <!-- render left.label as HTML in popup -->
+              <span class="paired-label-popup" v-html="pair.left.label"></span>
+            </li>
+          </ul>
 
-  <p>
-    ❌ {{ t('educational.tasks.bias.incorrect') }}: {{ incorrectCount }}
-  </p>
-  <ul>
-    <li 
-      v-for="pair in matchedPairs.filter(p => p.left && p.right && p.left.id !== p.right.id)" 
-      :key="pair.left.id + '-wrong'"
-    >
-      <span class="paired-label-popup">{{ pair.left.label }}</span>
-    </li>
-  </ul>
-  <v-divider class="my-4"></v-divider>
+          <p>
+            ❌ {{ t('educational.tasks.bias.incorrect') }}: {{ incorrectCount }}
+          </p>
+          <ul>
+            <li 
+              v-for="pair in matchedPairs.filter(p => p.left && p.right && p.left.id !== p.right.id)" 
+              :key="pair.left.id + '-wrong'"
+            >
+              <span class="paired-label-popup" v-html="pair.left.label"></span>
+            </li>
+          </ul>
+          <v-divider class="my-4"></v-divider>
 
-<p class="text-body-1" style="white-space: pre-line">
-  {{ t("educational.tasks.bias.reflectionText") }}
-</p>
+          <p class="text-body-1" style="white-space: pre-line">
+            {{ t("educational.tasks.bias.reflectionText") }}
+          </p>
+        </v-card-text>
 
-</v-card-text>
-
-    <v-card-actions class="justify-end">
-      <v-btn color="primary" @click="showDialog = false">{{ t('common.ok') }}</v-btn>
-    </v-card-actions>
-  </v-card>
-</v-dialog>
-
+        <v-card-actions class="justify-end">
+          <v-btn color="primary" @click="showDialog = false">{{ t('common.ok') }}</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </v-container>
 </template>
 
@@ -112,7 +115,7 @@ interface MatchedPair {
 
 interface PairItem {
   id: string;
-  label: string;
+  label: string; // contains HTML
 }
 
 

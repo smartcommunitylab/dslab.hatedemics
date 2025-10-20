@@ -8,7 +8,9 @@
         "close": "Cerrar",
         "ok": "De acuerdo",
         "yes": "Sí",
-        "no": "No"
+        "no": "No",
+                "showMore": "Mostrar más",
+        "showLess": "Mostrar menos"
     },
     "menu": {
         "home": "Inicio",
@@ -333,32 +335,32 @@
                 "pairs": [
                     {
                         "id": "a",
-                        "left": "Argumentum ad populum (apelación al pueblo): forma de argumentar no sustantiva en la que se apela a gustos, prejuicios o creencias del público. Se basa en el egoísmo nacional, estereotipos o prejuicios, y busca que la mayoría apoye una tesis por ser popular.",
+                        "left": "<strong>Argumentum ad populum (apelación al pueblo)</strong>: forma de argumentar no sustantiva en la que se apela a gustos, prejuicios o creencias del público. Se basa en el egoísmo nacional, estereotipos o prejuicios, y busca que la mayoría apoye una tesis por ser popular.",
                         "right": "Durante una intensa discusión en redes sociales sobre personas negras, un usuario publica: «Todo el mundo sabe que estas personas son peligrosas y traen delincuencia. Basta con ver cuántos en nuestro pueblo están de acuerdo conmigo. Tenemos que echarlos para proteger a nuestra comunidad»."
                     },
                     {
                         "id": "b",
-                        "left": "Apelación a la tradición: justificar algo como verdad o bueno solo porque siempre se ha hecho o pensado así, sin cuestionar si sigue siendo válido",
+                        "left": "<strong>Apelación a la tradición</strong>: justificar algo como verdad o bueno solo porque siempre se ha hecho o pensado así, sin cuestionar si sigue siendo válido",
                         "right": "En una reunión de la comunidad educativa sobre la actualización de las políticas escolares para ser más inclusivas con estudiantes LGBTQ+, un vecino de toda la vida se levanta y dice: “Durante generaciones hemos enseñado que el matrimonio es solo entre un hombre y una mujer. Así ha sido siempre y así debe seguir siendo. Promover estas nuevas ideas en nuestras escuelas es un ataque a nuestros valores.”"
                     },
                     {
                         "id": "c",
-                        "left": "Falacia post hoc o de falsa causa– error lógico que consiste en concluir erróneamente que dos hechos están causalmente relacionados solo porque uno ocurrió después del otro.",
+                        "left": "<strong>Falacia post hoc o de falsa causa</strong>– error lógico que consiste en concluir erróneamente que dos hechos están causalmente relacionados solo porque uno ocurrió después del otro.",
                         "right": "En un debate público sobre la reubicación de los refugiados, un participante que toma la palabra señala un reciente aumento del desempleo ocurrido poco después de la llegada de un grupo de refugiados al pueblo:“Desde que llegaron, las tasas de desempleo se han disparado. Está claro que están quitando el trabajo a los trabajadores de aquí.”"
                     },
                     {
                         "id": "d",
-                        "left": "Sesgo de grupo: tendencia a favorecer a nuestro propio grupo frente a otros.",
+                        "left": "<strong>Sesgo de grupo</strong>: tendencia a favorecer a nuestro propio grupo frente a otros.",
                         "right": "Durante una discusión en línea sobre un crimen reciente reportado en las noticias, una persona escribe: «Como alguien que ha vivido en este barrio toda mi vida, puedo decirles que son los nuevos inmigrantes los que causan todos los problemas. Nosotros, los 'originarios', sabemos lo que realmente está pasando, y la situación era tranquila antes de que llegaran»."
                     },
                     {
                         "id": "e",
-                        "left": "Sesgo del punto ciego: pensar que uno mismo es menos susceptible a los sesgos que los demás.",
+                        "left": "<strong>Sesgo del punto ciego</strong>: pensar que uno mismo es menos susceptible a los sesgos que los demás.",
                         "right": "Durante un intenso debate sobre grupos religiosos, un participante afirma: `Lo que voy a decir puede que sea algo políticamente incorrecto, pero, a diferencia de ellos, que tienen creencias llenas de prejuicios e intolerancia, me puedo expresar con libertad, y aunque mi opinión pueda ser incómoda creo que su religión es retrógrada y peligrosa.`"
                     },
                     {
                         "id": "f",
-                        "left": "Pendiente resbaladiza (slippery slope): ocurre cuando alguien afirma que un posicionamiento o decisión llevará inevitablemente a una serie de consecuencias negativas exageradas",
+                        "left": "<strong>Pendiente resbaladiza (slippery slope)</strong>: ocurre cuando alguien afirma que un posicionamiento o decisión llevará inevitablemente a una serie de consecuencias negativas exageradas",
                         "right": "En el debate sobre la apertura de un nuevo centro comunitario que ha solicitado un grupo religioso minoritario en una barriada, un participante comenta en su intervención:“Si les permitimos construir este centro, lo siguiente será que exijan sus propias leyes. Pronto estarán controlando nuestros barrios e imponiendo su cultura a nuestros hijos. Debemos detener esto ahora o perderemos por completo nuestra forma de vida.”"
                     }
                 ],

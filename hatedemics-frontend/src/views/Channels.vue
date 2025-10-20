@@ -151,6 +151,8 @@ const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
             <h1 class="text-h5 font-weight-bold text-primary me-2">{{ msg }}</h1>
 
             <!-- Freccia manuale vicino al titolo -->
+            <span class="text-primary ms-5">      {{ expanded ? t("common.showLess") : t("common.showMore") }}
+            </span>
             <v-icon
               :icon="expanded ? 'mdi-menu-up' : 'mdi-menu-down'"
               class="me-2 text-primary"

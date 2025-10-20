@@ -8,7 +8,9 @@
     "close": "Agħlaq",
     "ok": "OK",
     "yes": "Iva",
-    "no": "Le"
+    "no": "Le",
+    "showMore": "Mostra di piċ",
+    "showLess": "Mostra inqas"
   },
   "menu": {
     "home": "Dar",
@@ -238,7 +240,7 @@
       "debunking": {
         "title": "Konfutazzjoni",
         "back": "Lura",
-        "finalMessage":" L-attività intemm. Grazzi talli ħadt sehem!",
+        "finalMessage": " L-attività intemm. Grazzi talli ħadt sehem!",
         "description": "L-objettiv tal-verifika tal-fatti huwa li jipprovdi l-għodda liċ-ċittadini biex jiffurmaw opinjoni ibbażata fuq fatti u dejta, ħalli b’hekk jkunu jistgħu jieħdu deċiżjoni infurmata. Il-miżinformazzjoni tista’ tinfluwenza kif is-soċjetà taħseb, u kif tittrata problemi tà kuljum. Għalhekk il-fact-checkers għandhom missjoni ċentrali  li titfa' d-dawl u d-data dwar dawn il-kwistjonijiet. B'mod ġenerali, il-verifika tal-fatti tinvolvi  l-iskoperta ta' ingann, il-verifika tal-kontenut tagħhom, u t-tixrid taċ-ċaħda. Il-verifikaturi tal-fatti jaħdmu kuljum fuq il-konfutazzjoni: huma jivverifikaw il-kontenut u jispjegaw għaliex xi ħaġa hija falza wara li tkun ġiet kondiviża u viralizzata fil-midja soċjali. Huwa importanti għar-rekord pubbliku u biex jiġi evitat li aktar nies jaqraw, jaqsmu u jemmnu l-gideb. Xi konfutazzjonijiet huma diffiċli ħafna: jieħdu ħafna ħin u jeħtieġu l-użu ta' għodod speċifiċi. Oħrajn jeħtieġu biss ħafna osservazzjoni u tiftix għal informazzjoni speċifika affidabbli.  Ejja nippruvaw! F'dan l-eżerċizzju inti se titgħallem, kif tuża xi tekniki sabiex tkun taf kif tiċħad b’mod kritiku, waqt li tifhem dak li huwa importanti. B’dan il-metodu jkun possibbli li tuża għodda biex tidentifika kif il-viralizzazzjoni ta' xi frodi tista' toħloq u ssaħħaħ in-narrattiva tad-diżinformazzjoni.",
         "objectivesTitle": "L-Għan tal-Attività",
         "objectives": "Ikkonfuta u tgħallem dwar x'inhuma n-narrattivi ta' diżinformazzjoni. Dan huwa wkoll eżerċizzju ta’ qabel il-konfutazzjoni: skopri x’inhuma narrattivi ta’ diżinformazzjoni u dawk l-aktar mifruxa f’pajjiżhom. Int se titgħallem, b'mod iggwidat, xi metodi ta' konfutazzjoni u għaliex huwa importanti li tuża l-ħsieb kritiku u tidentifika kif il-viralizzazzjoni ta' xi ingann jista' joħloq u jssaħħaħ narrattivi ta' diżinformazzjoni.",
@@ -331,32 +333,32 @@
         "pairs": [
           {
             "id": "a",
-            "left": "Argumentum ad populum – mod mhux sostantiv ta’ argument li bih il-kelliem jappella għall-gosti, il-preferenzi u l-preġudizzji tal-folla. Dan huwa ibbażat fuq egoiżmu nazzjonali, instinti, sterjotipi jew preġudizzji, sabiex il-kelliem jipprova jirbaħ in-nies billi jikkonvinċijhom li dan il-ħsieb huwa dak ġust.  ",
+            "left": "<strong>Argumentum ad populum  </strong>– mod mhux sostantiv ta’ argument li bih il-kelliem jappella għall-gosti, il-preferenzi u l-preġudizzji tal-folla. Dan huwa ibbażat fuq egoiżmu nazzjonali, instinti, sterjotipi jew preġudizzji, sabiex il-kelliem jipprova jirbaħ in-nies billi jikkonvinċijhom li dan il-ħsieb huwa dak ġust.  ",
             "right": "Waqt diskussjoni taħraq fuq l-internet dwar in-nies suwed, utent ipoġġi: ‘Kulħadd jaf li dawn in-nies huma perikolużi u jġibu l-kriminalità. Ħares lejn kemm nies fil-belt tagħna jaqblu miegħi. Irridu noħorġuhom biex nipproteġu l-komunità tagħna.’ "
           },
           {
             "id": "b",
-            "left": "Appell għat-tradizzjoni – meta argument jassumi li xi ħaġa hija tajba jew vera sempliċement għax qed issir jew titwemmen b'mod tradizzjonali, mingħajr ma jitqies jekk għadux validu fil-kuntest preżenti",
+            "left": "<strong>Appell għat-tradizzjoni </strong> – meta argument jassumi li xi ħaġa hija tajba jew vera sempliċement għax qed issir jew titwemmen b'mod tradizzjonali, mingħajr ma jitqies jekk għadux validu fil-kuntest preżenti",
             "right": "Waqt laqgħa komunitarja dwar l-aġġornament tal-politiki tal-iskejjel lokali biex ikunu aktar inklużivi tal-istudenti LGBTQ+, residenti jqum u jgħid: ‘Għal żmien twil, għallimna li ż-żwieġ huwa biss bejn raġel u mara. Dan dejjem hekk kien u għandu jibqa’ hekk. Il-promozzjoni ta’ dawn l-ideat ġodda fl-iskejjel tagħna huma attakk fuq il-valuri tagħna.’"
           },
           {
             "id": "Ċ",
-            "left": "Post hoc, ergo propter hoc – żball loġiku fil-konklużjoni ħażina li hemm konnessjoni kawżali bejn żewġ avvenimenti sempliċement għaliex wieħed seħħ qabel l-ieħor.",
+            "left": "<strong>Post hoc, ergo propter hoc </strong> – żball loġiku fil-konklużjoni ħażina li hemm konnessjoni kawżali bejn żewġ avvenimenti sempliċement għaliex wieħed seħħ qabel l-ieħor.",
             "right": "Waqt dibattitu pubbliku dwar ir-risistemazzjoni tar-refuġjati, kelliem jindika żieda riċenti fil-qgħad li seħħet ftit wara li grupp ta’ refuġjati waslu fil-belt. Huma jiddikjaraw, ‘Minn mindu waslu, ir-rati tal-qgħad tagħna żdiedu. Huwa ovvju li qed jieħdu l-impjiegi kollha mingħand nies lokali li jaħdmu iebes.’ "
           },
           {
             "id": "d",
-            "left": " Preġudizzju tas-sħubija – tendenza li tiffavorixxi l-grupp  tiegħek fuq gruppi oħra",
+            "left": "<strong>Preġudizzju tas-sħubija </strong>– tendenza li tiffavorixxi l-grupp  tiegħek fuq gruppi oħra",
             "right": "Waqt diskussjoni fuq l-internet dwar reat reċenti li ġie irrapportat fl-aħbarijiet, persuna tikteb, ‘Bħala xi ħadd li għex f’dan il-viċinat ħajti kollha, nista’ nassigurak li l-immigranti l-ġodda qed jikkawżaw dan l-inkwiet kollu. Aħna l-‘oriġinali’ nafu x’inhu verament għaddej, u l-affarijiet kienu paċifiċi qabel ma ġew.’"
           },
           {
             "id": "e",
-            "left": "Preġudizzju dwar elementi mhux viżivi hu t-tendenza li persuna tara lilha nnifsiha bħala inqas preġudikat minn nies oħra",
+            "left": "<strong>Preġudizzju dwar elementi mhux viżivi </strong>hu t-tendenza li persuna tara lilha nnifsiha bħala inqas preġudikat minn nies oħra",
             "right": "Waqt dibattitu jaħraq dwar gruppi reliġjużi, parteċipant qal, ‘Jistaʼ jkun fatt skomdu, imma b’differenza għal dawk li għandhom twemmin mimli bi preġudizzju u intolleranza, nikkonkludi  li r-reliġjon tagħhom hija intrinsikament bikrija u perikoluża.”"
           },
           {
             "id": "f",
-            "left": "Fallaċja ta’ inklinazzjoni qarrieqa – isseħħ meta xi ħadd isostni li pożizzjoni jew deċiżjoni se twassal għal serje ta’ konsegwenzi negattivi mhux intenzjonati",
+            "left": "<strong>Fallaċja ta’ inklinazzjoni qarrieqa </strong>– isseħħ meta xi ħadd isostni li pożizzjoni jew deċiżjoni se twassal għal serje ta’ konsegwenzi negattivi mhux intenzjonati",
             "right": "Waqt dibattitu dwar il-permess taʼ ċentru komunitarju ġdid għal grupp tà minoranza, kelliem qal: ‘Jekk inħalluhom jibnu dan iċ-ċentru, imbagħad malajr jitolbu biex jinkludu l-liġijiet tagħhom’.  Dalwaqt, se jkunu qed jieħdu f’idejhom il-viċinat tagħna u jimponu l-kultura tagħhom fuq it-tfal tagħna. Irridu nwaqqfu dan issa, jew nitilfu l-istil taʼ ħajja tagħna.’ "
           }
         ],
@@ -595,7 +597,7 @@
               }
             ],
             "conclusionTitle": "Konklużjoni",
-"conclusionQuestion": "Wieġeb il-mistoqsijiet li ġejjin skont il-kontenut ippreżentat fl-iskrinshots ipprovduti: Ingħatat informazzjoni dwar l-awturi, u setgħet tiġi vverifikata l-kompetenza tagħhom? Il-kontenut inkluda evidenza appoġġjata minn fatti u dejta? L-istess informazzjoni ġiet ippubblikata jew ikkonfermata minn sorsi affidabbli oħra?",
+            "conclusionQuestion": "Wieġeb il-mistoqsijiet li ġejjin skont il-kontenut ippreżentat fl-iskrinshots ipprovduti: Ingħatat informazzjoni dwar l-awturi, u setgħet tiġi vverifikata l-kompetenza tagħhom? Il-kontenut inkluda evidenza appoġġjata minn fatti u dejta? L-istess informazzjoni ġiet ippubblikata jew ikkonfermata minn sorsi affidabbli oħra?",
             "affidabile": true,
             "feedback": {
               "correct": "Korrett!",
@@ -748,7 +750,7 @@
               }
             ],
             "conclusionTitle": "Konklużjoni",
-"conclusionQuestion": "Wieġeb il-mistoqsijiet li ġejjin skont il-kontenut ippreżentat fl-iskrinshots ipprovduti: Ingħatat informazzjoni dwar l-awturi, u setgħet tiġi vverifikata l-kompetenza tagħhom? Il-kontenut inkluda evidenza appoġġjata minn fatti u dejta? L-istess informazzjoni ġiet ippubblikata jew ikkonfermata minn sorsi affidabbli oħra?",
+            "conclusionQuestion": "Wieġeb il-mistoqsijiet li ġejjin skont il-kontenut ippreżentat fl-iskrinshots ipprovduti: Ingħatat informazzjoni dwar l-awturi, u setgħet tiġi vverifikata l-kompetenza tagħhom? Il-kontenut inkluda evidenza appoġġjata minn fatti u dejta? L-istess informazzjoni ġiet ippubblikata jew ikkonfermata minn sorsi affidabbli oħra?",
             "affidabile": false,
             "feedback": {
               "correct": "Korrett!",
@@ -1002,7 +1004,6 @@
     "addFromGround": "Żid mill-art",
     "confirmTitle": "Ikkonferma",
     "confirmLeavePage": "Jekk titlaq minn din il-paġna, tista' titlef il-progress tiegħek. Int żgur?",
- 
     "tooltip": {
       "label": "Isem tal-kanal",
       "startEmpty": "Agħfas hawn biex toħloq dawra vojta.",
@@ -1020,7 +1021,7 @@
       "hs_percentage": "Perċentwal ta’ messaġġi meqjusa bħala Diskors ta’ Mibegħda",
       "cw_percentage": "Perċentwal ta’ messaġġi meqjusa bħala denji ta’ verifika",
       "degreeCentrality": "Ċentralità tal-grad tal-kanal fin-netwerk",
-      "louvain_community":"Il-komunità ta' Louvain tal-kanal"
+      "louvain_community": "Il-komunità ta' Louvain tal-kanal"
     }
   },
   "guide": {
