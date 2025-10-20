@@ -61,7 +61,7 @@
       </div>
     </div>
     <v-alert v-if="showFeedback" :type="isCorrect ? 'success' : 'error'" class="ma-4">
-      {{ feedbackText }}
+      <div v-html="feedbackText"></div>
     </v-alert>
     <v-row dense>
       <v-col

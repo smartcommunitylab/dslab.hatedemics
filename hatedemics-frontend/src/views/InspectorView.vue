@@ -254,7 +254,7 @@ const loadMore = (event: { target: any }) => {
                 v-show="showSidebar"
               />
               <div class="text-center mt-4 w-100" v-show="showSidebar">
-                <v-btn color="primary" @click="goToChats" block>
+                <v-btn color="primary responsive-btn" @click="goToChats" block>
                   <!-- <v-icon left>mdi-forum </v-icon> -->
                   {{ t("channelInfo.messages") }}
                 </v-btn>

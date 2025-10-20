@@ -357,7 +357,7 @@ const loadMore = (event: { target: any }) => {
 
               <!-- Pulsante avvia dialogo -->
               <div class="text-center mt-4 w-100">
-                <v-btn color="primary" @click="showTopicsDialog = true" block>
+                <v-btn color="primary responsive-btn" @click="showTopicsDialog = true" block>
                   <v-icon left>mdi-arrow-right-bold-circle</v-icon>
                   {{ t("message.dialog.startConversation") }}
                 </v-btn>

@@ -428,7 +428,7 @@ graphInstance.zoom(targetZoom, duration);
                   color="primary"
                 />
               </div>
-              <v-btn color="secondary" class="mb-2" block @click="resetGraphView">
+              <v-btn color="secondary" class="mt-4 responsive-btn" block @click="resetGraphView">
                 <v-icon start>mdi-refresh</v-icon>
                 <span v-if="$vuetify.display.smAndUp">{{
                   t("graphInteraction.resetView")

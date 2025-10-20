@@ -209,7 +209,7 @@ export default {
     
       <DynamicButton
         v-if="task.is_active"
-        class="ms-3"
+        class="ms-3 responsive-btn"
         :text="t('buttons.startDialogue')"
         color="blue-lighten-1"
         icon="mdi-text-box-plus"
@@ -219,7 +219,7 @@ export default {
       <template v-if="isManager">
         <DynamicButton
           v-if="task.is_active"
-          class="ms-3"
+          class="ms-3 responsive-btn"
           text="Disable"
           color="red-lighten-1"
           icon="mdi-lock"
@@ -227,7 +227,7 @@ export default {
         ></DynamicButton>
         <DynamicButton
           v-else
-          class="ms-3"
+          class="ms-3 responsive-btn"
           text="Enable"
           color="green-lighten-1"
           icon="mdi-lock-open-variant"

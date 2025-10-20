@@ -436,8 +436,8 @@
                                     }
                                 ],
                                 "feedback": {
-                                    "correct": "¡Bien hecho! Primero buscamos información sobre los autores. Encontramos que la página está creada por la Biblioteca Nacional de Medicina de los Estados Unidos y trae información sobre sus autores en el apartado 'Acerca de': https://medlineplus.gov/spanish/acercade/ . Además de eso, la página tiene como dominio .gov (utilizados por páginas que corresponden a un gobierno) otra garantía que podemos encontrar sobre su contenido. ",
-                                    "incorrect": "No exactamente. Primero buscamos información sobre los autores. Encontramos que la página está creada por la Biblioteca Nacional de Medicina de los Estados Unidos y trae información sobre sus autores en el apartado 'Acerca de': https://medlineplus.gov/spanish/acercade/ . Además de eso, la página tiene como dominio .gov (utilizados por páginas que corresponden a un gobierno) otra garantía que podemos encontrar sobre su contenido. "
+                                    "correct": "¡Bien hecho! Primero buscamos información sobre los autores. Encontramos que la página está creada por la Biblioteca Nacional de Medicina de los Estados Unidos y trae información sobre sus autores en el apartado 'Acerca de': <a href='https://medlineplus.gov/spanish/acercade/' target='_blank' style=\"color:white\">https://medlineplus.gov/spanish/acercade/</a>. . Además de eso, la página tiene como dominio .gov (utilizados por páginas que corresponden a un gobierno) otra garantía que podemos encontrar sobre su contenido. ",
+                                    "incorrect": "No exactamente. Primero buscamos información sobre los autores. Encontramos que la página está creada por la Biblioteca Nacional de Medicina de los Estados Unidos y trae información sobre sus autores en el apartado 'Acerca de': <a href='https://medlineplus.gov/spanish/acercade/' target='_blank' style=\"color:white\">https://medlineplus.gov/spanish/acercade/</a>.. Además de eso, la página tiene como dominio .gov (utilizados por páginas que corresponden a un gobierno) otra garantía que podemos encontrar sobre su contenido. "
                                 }
                             },
                             {
@@ -711,8 +711,8 @@
                                     }
                                 ],
                                 "feedback": {
-                                    "correct": "¡Correcto! Si copiamos algunos de los titulares publicados y hacemos una búsqueda en otra pestaña, comprobamos que publica bulos desmentidos por medios de verificación. Por ejemplo, nos encontramos con este contenido que ha sido desmentido por Maldita.es. Si abrimos otras pestañas y preguntamos, por ejemplo, qué es Rambla Libre o quién es el autor de Rambla Libre encontramos que se trata de un autodenominado “medio digital” producido por un periodista. Sin embargo, nuevamente, no encontramos más informaciones sobre los autores de sus contenidos, su financiación, o metodología.",
-                                    "incorrect": "¡Incorrecto! Si copiamos algunos de los titulares publicados y hacemos una búsqueda en otra pestaña, comprobamos que publica bulos desmentidos por medios de verificación. Por ejemplo, nos encontramos con este contenido que ha sido desmentido por Maldita.es. Si abrimos otras pestañas y preguntamos, por ejemplo, qué es Rambla Libre o quién es el autor de Rambla Libre encontramos que se trata de un autodenominado “medio digital” producido por un periodista. Sin embargo, nuevamente, no encontramos más informaciones sobre los autores de sus contenidos, su financiación, o metodología."
+                                    "correct": "¡Correcto! Si copiamos algunos de los titulares publicados y hacemos una búsqueda en otra pestaña, comprobamos que publica bulos desmentidos por medios de verificación. Por ejemplo, nos encontramos con <a href=\"https://maldita.es/malditobulo/20220121/infarto-nino-uci-hospital-virgen-arriaxaca-murcia-vacuna-covid-19/\" target=\"_blank\" style=\"color:white\">este contenido </a>que ha sido desmentido por Maldita.es. Si abrimos otras pestañas y preguntamos, por ejemplo, qué es Rambla Libre o quién es el autor de Rambla Libre encontramos que se trata de un autodenominado “medio digital” producido por un periodista. Sin embargo, nuevamente, no encontramos más informaciones sobre los autores de sus contenidos, su financiación, o metodología.",
+                                    "incorrect": "¡Incorrecto! Si copiamos algunos de los titulares publicados y hacemos una búsqueda en otra pestaña, comprobamos que publica bulos desmentidos por medios de verificación. Por ejemplo, nos encontramos con <a href=\"https://maldita.es/malditobulo/20220121/infarto-nino-uci-hospital-virgen-arriaxaca-murcia-vacuna-covid-19/\" target=\"_blank\" style=\"color:white\">este contenido </a> que ha sido desmentido por Maldita.es. Si abrimos otras pestañas y preguntamos, por ejemplo, qué es Rambla Libre o quién es el autor de Rambla Libre encontramos que se trata de un autodenominado “medio digital” producido por un periodista. Sin embargo, nuevamente, no encontramos más informaciones sobre los autores de sus contenidos, su financiación, o metodología."
                                 }
                             }
                         ],
@@ -761,7 +761,7 @@
             "date": "Fecha",
             "id": "IDENTIFICACIÓN",
             "messages": "Número de mensajes",
-            "degreeCentrality": "Centralidad de grado",
+            "degreeCentrality": "Nivel de conexiones",
             "partecipants": "Número de usuarios",
             "IRI": "Riesgo infodémico",
             "CW": "Cheque digno",
