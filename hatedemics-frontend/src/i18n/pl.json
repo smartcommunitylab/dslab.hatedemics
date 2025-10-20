@@ -340,32 +340,32 @@
                 "pairs": [
                     {
                         "id": "a",
-                        "left": "Argumentum ad populum – niefaktyczny sposób argumentacji, w którym mówca odwołuje się do gustów, preferencji i uprzedzeń tłumu. Opierając się na egoizmie narodowym, instynktach, stereotypach lub uprzedzeniach, mówca stara się przekonać tłum do swojej tezy",
+                        "left": "<strong>Argumentum ad populum – niefaktyczny sposób argumentacji, w którym mówca odwołuje się do gustów, preferencji i uprzedzeń tłumu. Opierając się na egoizmie narodowym, instynktach, stereotypach lub uprzedzeniach, mówca stara się przekonać tłum do swojej tezy",
                         "right": "Podczas gorącej dyskusji online na temat imigracji, użytkownik pisze: \"Wszyscy wiedzą, że ci ludzie są niebezpieczni i przynoszą przestępczość. Spójrzcie, ile osób w naszym mieście się ze mną zgadza. Musimy ich wyrzucić, aby chronić naszą społeczność.\""
                     },
                     {
                         "id": "b",
-                        "left": "Odwołanie do tradycji – gdy argument zakłada, że coś jest dobre lub prawdziwe tylko dlatego, że jest tradycyjnie praktykowane lub w to wierzymy, bez sprawdzania, czy jest nadal aktualne",
+                        "left": "<strong>Odwołanie do tradycji – gdy argument zakłada, że coś jest dobre lub prawdziwe tylko dlatego, że jest tradycyjnie praktykowane lub w to wierzymy, bez sprawdzania, czy jest nadal aktualne",
                         "right": "Podczas spotkania społeczności na temat aktualizacji polityk szkolnych, by były bardziej inkluzywne dla uczniów LGBTQ+, starszy mieszkaniec mówi: \"Przez pokolenia uczyliśmy, że małżeństwo to tylko między mężczyzną a kobietą. Tak zawsze było i tak powinno pozostać. Promowanie tych nowych idei w szkołach to atak na nasze tradycje i wartości.\""
                     },
                     {
                         "id": "c",
-                        "left": "Post hoc, ergo propter hoc – błąd logiczny polegający na błędnym wniosku, że istnieje związek przyczynowy między dwoma zdarzeniami, tylko dlatego, że jedno nastąpiło po drugim",
+                        "left": "<strong>Post hoc, ergo propter hoc – błąd logiczny polegający na błędnym wniosku, że istnieje związek przyczynowy między dwoma zdarzeniami, tylko dlatego, że jedno nastąpiło po drugim",
                         "right": "Podczas debaty publicznej na temat osiedlania uchodźców, mówca wskazuje na ostatni wzrost bezrobocia, który nastąpił krótko po przybyciu grupy uchodźców do miasta. Oświadcza: \"Odkąd przybyli, nasz wskaźnik bezrobocia wzrósł. To oczywiste, że zabierają pracę ciężko pracującym mieszkańcom.\""
                     },
                     {
                         "id": "d",
-                        "left": "Stronniczość przynależności – tendencja do faworyzowania własnej grupy kosztem innych",
+                        "left": "<strong>Stronniczość przynależności – tendencja do faworyzowania własnej grupy kosztem innych",
                         "right": "Podczas dyskusji online o ostatnim przestępstwie w wiadomościach, osoba pisze: \"Jako ktoś, kto całe życie mieszkał w tej okolicy, mogę powiedzieć, że to nowi imigranci powodują całe zamieszanie. My 'rdzenni' wiemy, co naprawdę się dzieje, a wcześniej było spokojnie.\""
                     },
                     {
                         "id": "e",
-                        "left": "Ślepy punkt – tendencja do postrzegania siebie jako mniej stronniczego niż inni",
+                        "left": "<strong>Ślepy punkt – tendencja do postrzegania siebie jako mniej stronniczego niż inni",
                         "right": "Podczas gorącej debaty o grupach religijnych, uczestnik stwierdza: \"W przeciwieństwie do tych ludzi, których przekonania są pełne uprzedzeń i nietolerancji, ja obiektywnie przeanalizowałem swoje poglądy. Moje przekonanie, że ich religia jest z natury zacofana i niebezpieczna, to nie jest stronniczość; to po prostu niewygodny fakt.\""
                     },
                     {
                         "id": "f",
-                        "left": "Błąd pochyłej równi (slippery slope) – pojawia się, gdy ktoś twierdzi, że jakaś decyzja lub stanowisko doprowadzi do serii niezamierzonych negatywnych konsekwencji",
+                        "left": "<strong>Błąd pochyłej równi (slippery slope) – pojawia się, gdy ktoś twierdzi, że jakaś decyzja lub stanowisko doprowadzi do serii niezamierzonych negatywnych konsekwencji",
                         "right": "Podczas debaty o pozwoleniu na budowę nowego centrum społeczności dla mniejszości, mówca argumentuje: \"Jeśli pozwolimy im zbudować to centrum, zaraz zażądają własnych praw. Wkrótce przejmą nasze dzielnice i narzucą swoją kulturę naszym dzieciom. Musimy to zatrzymać teraz, albo stracimy nasz sposób życia.\""
                     }
                 ],
