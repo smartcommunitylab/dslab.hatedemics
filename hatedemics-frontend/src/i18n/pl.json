@@ -8,7 +8,9 @@
         "close": "Zamknij",
         "ok": "OK",
         "yes": "Tak",
-        "no": "Nie"
+        "no": "Nie",
+                "showMore": "Pokaż więcej",
+        "showLess": "Pokaż mniej"
     },
     "menu": {
         "home": "Dom",

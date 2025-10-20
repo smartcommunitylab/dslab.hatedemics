@@ -8,7 +8,9 @@
         "close": "Chiudi",
         "ok": "OK",
         "yes": "Sì",
-        "no": "No"
+        "no": "No",
+        "showMore": "Mostra di più",
+        "showLess": "Mostra di meno"
     },
     "menu": {
         "home": "Home",
@@ -50,7 +52,7 @@
     },
     "home": {
         "title": "Combattere Odio e Disinformazione Online",
-        "description": "La piattaforma Hatedemics sfrutta l'intelligenza artificiale per analizzare i contenuti online, migliorare il pensiero critico e addestrare le risposte ai discorsi d'odio.",
+        "description": "La piattaforma Hatedemics sfrutta l'intelligenza artificiale per analizzare i contenuti online, migliorare il pensiero critico e la capacità di saper rispondere adeguatamente per contrastare i discorsi d'odio.",
         "network": "Esplora il Network di Telegram",
         "networkDescription": "Una mappa interattiva per osservare le connessioni tra canali, contenuti e dinamiche legate a odio e disinformazione online. Scopri cosa accade in rete, segui i flussi e individua i nodi chiave della comunicazione tossica.",
         "networkButton": "Vai alla rete",
@@ -133,15 +135,15 @@
         "steps": [
             {
                 "title": "Che cos’è Hatedemics",
-                "html": "<p><strong>Hatedemics</strong> è un progetto europeo che mira a sensibilizzare sul tema dell’odio online, della disinformazione e di come questi due fenomeni si intrecciano. L’obiettivo è dare strumenti a ONG, organizzazioni della società civile, fact-checker, autorità pubbliche e giovani per prevenire e contrastare efficacemente polarizzazione, intolleranza e teorie del complotto.</p><p>Visita il <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">sito web di Hatedemics</a> per saperne di più.</p>"
+                "html": "<p><strong>Hatedemics</strong> è un progetto europeo che mira a sensibilizzare sul tema dell’hate speech online (discorso d'odio online), della disinformazione e di come questi due fenomeni si intrecciano. L’obiettivo è dare strumenti a ONG, organizzazioni della società civile, fact-checker, autorità pubbliche e giovani per prevenire e contrastare efficacemente polarizzazione, intolleranza e teorie del complotto.</p><p>Visita il <a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">sito web di Hatedemics</a> per saperne di più.</p>"
             },
             {
                 "title": "Cosa include la piattaforma?",
-                "html": "<p style='margin-bottom:12px'>🎓 <strong>Attività educative:</strong> Metti alla prova le tue conoscenze su odio e disinformazione con esercizi interattivi dedicati!</p><p style='margin-bottom:12px'>🌐 <strong>Esplora i messaggi su Telegram:</strong> Scopri come migliaia di canali Telegram sono connessi con una mappa interattiva (<em>Network</em>), cosa dicono davvero (<em>Channel</em>) e come appaiono i contenuti d’odio e fuorvianti (<em>Conversation</em>).</p><p style='margin-bottom:12px'>💬 <strong>Scrittura di counterspeech:</strong> Quando e come rispondere all’odio basato sulla disinformazione? Qui trovi un modello di dialogo che simula l’interazione con un hater, generando risposte di <em>counterspeech</em> basate sui fatti.</p><p>🌍 <strong>Lingue:</strong> La piattaforma supporta 5 lingue: Inglese, Spagnolo, Italiano, Maltese e Polacco.</p>"
+                "html": "<p style='margin-bottom:12px'>🎓 <strong>Attività educative:</strong> Metti alla prova le tue conoscenze su odio e disinformazione con esercizi interattivi dedicati!</p><p style='margin-bottom:12px'>🌐 <strong>Esplora i messaggi su Telegram:</strong> Scopri come migliaia di canali Telegram sono connessi con una mappa interattiva (<em>Network</em>), cosa dicono davvero (<em>Channel</em>) e come appaiono i contenuti d’odio e fuorvianti (<em>Conversation</em>).</p><p style='margin-bottom:12px'>💬 <strong>Scrittura di contronarrazioni:</strong> Quando e come rispondere all’odio basato sulla disinformazione? Qui trovi un modello di dialogo che simula l’interazione con un hater, generando risposte di <em>counterspeech</em> basate sui fatti.</p><p>🌍 <strong>Lingue:</strong> La piattaforma supporta 5 lingue: Inglese, Spagnolo, Italiano, Maltese e Polacco.</p>"
             },
             {
                 "title": "Come usa l’IA Hatedemics?",
-                "html": "<ul style='padding-left:0; list-style:none'><li style='margin-bottom:12px'>📊 <strong>Analisi dei dati:</strong> Analizza grandi volumi di dati da Telegram per rivelare tendenze di odio e disinformazione. Gli insight sono generati dall’IA e potrebbero non essere sempre accurati: in caso di dubbio consulta gli educatori di riferimento.</li><li>🤖 <strong>Generazione di dialoghi di counterspeech:</strong> La piattaforma presenta un modello di dialogo che simula interazioni con haters, generando risposte di <em>counterspeech</em> modificabili dagli utenti per imparare quando e come rispondere con i fatti.</li></ul>"
+                "html": "<ul style='padding-left:0; list-style:none'><li style='margin-bottom:12px'>📊 <strong>Analisi dei dati:</strong> Analizza grandi volumi di dati da Telegram per rivelare tendenze di odio e disinformazione. Gli insight sono generati dall’IA e potrebbero non essere sempre accurati: in caso di dubbio consulta gli educatori di riferimento.</li><li>🤖 <strong>Generazione di dialoghi di contronarrazioni:</strong> La piattaforma presenta un modello di dialogo che simula interazioni con haters, generando risposte di <em>counterspeech</em> modificabili dagli utenti per imparare quando e come rispondere con i fatti.</li></ul>"
             },
             {
                 "title": "Avvertenza sui contenuti",
@@ -160,7 +162,7 @@
         "subtitle": "<p>In questa sezione troverai esercizi interattivi pensati per aiutarti a comprendere i meccanismi alla base della disinformazione e dei discorsi d'odio.</p><p>Potrai esplorare <b>bias cognitivi</b> e <b>fallacie logiche</b>, esercitarti con tecniche di <b>debunking</b>, conoscere i principi fondamentali della <b>Dichiarazione dei Diritti Umani</b> per capire come viene tutelata la dignità umana e applicare tecniche di <b>lettura laterale</b> per valutare criticamente i contenuti online.</p><p>Ogni attività è un’occasione per allenare il pensiero critico e diventare più resistente alla manipolazione e alla disinformazione.</p>",
         "eduCard1Title": "Dichiarazione dei Diritti Umani",
         "eduCard1Desc": "Scopri i principi fondamentali che tutelano la dignità umana.",
-        "eduCard1Button": "Esplora i diritti",
+        "eduCard1Button": "Inizia l’attività",
         "eduCardBiasTitle": "Bias e Fallacie",
         "eduCardBiasDesc": "Esplora i bias cognitivi e le fallacie logiche alla base dell'odio e della disinformazione.",
         "eduCardBiasButton": "Inizia l'attività",
@@ -178,7 +180,7 @@
             "humanRights": {
                 "title": "Diritti Umani",
                 "description": "I diritti umani fondamentali sanciti dalle Nazioni Unite nella <a href='https://www.un.org/en/about-us/universal-declaration-of-human-rights' target='_blank' rel='noopener'>Dichiarazione Universale dei Diritti Umani</a> tutelano e sostengono la dignità, l'uguaglianza e la libertà di tutte le persone. Alcuni di essi sono elencati di seguito in una versione semplificata.<br><br><iframe width='100%' height='315' src='https://www.youtube.com/embed/nDgIVseTkuE?si=Jomr_pVjQAdBgfGg' title='Video Diritti Umani' frameborder='0' allowfullscreen></iframe>",
-                "objectivesTitle": "Obiettivi",
+                "objectivesTitle": "Obiettivi dell'attività",
                 "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Sviluppare conoscenze sui diritti umani;</li><li>Aumentare la consapevolezza su come il tema dei diritti umani sia oggetto di incitamento all'odio e sia bersaglio anche della disinformazione;</li><li>Apprendere tecniche di argomentazione per ragire e contrastare l'incitamento all'odio e la disinformazione.</li></ul>",
                 "startButton": "Inizia",
                 "task": "Formate 12 gruppi. Ogni gruppo prende una carta. Ogni gruppo discute il significato del diritto umano scritto sulla propria carta. Dopo 5 minuti, il primo gruppo spiega cosa significhi questo diritto e come possa esere oggetto di incitamento all'odio. L'insegnante può aggiungere ulteriori spiegazioni se necessario. Quindi, il gruppo successivo, con la carta successiva, spiega il significato del proprio diritto e il suo potenziale collegamento al discorso d'odio. Questo processo si ripete finché tutti i gruppi non avranno condiviso la spiegazione della propria carta.",
@@ -377,10 +379,10 @@
                 "selectMultiple": "Puoi selezionare più di 1 screenshot",
                 "nextExercise": "Prossimo esercizio",
                 "conclusion": "Conclusione",
-                "title": "Lettura laterale",
+                "title": "Lateral reading - Lettura laterale",
                 "subtitle": "Qui sotto puoi vedere vari screenshot. Pensa a quale risponde meglio alla seguente domanda.",
                 "description": "<p>La lettura laterale è una tecnica che consente di valutare rapidamente se il contenuto di una pagina web proviene da fonti affidabili e si basa su dati, riferimenti e informazioni di qualità. In una ricerca condotta dallo <a href=\"https://cor.inquirygroup.org/research/lateral-reading-on-the-open-internet/\" target=\"_blank\" rel=\"noopener noreferrer\">Stanford History Education Group</a>, i ricercatori hanno scoperto che si tratta di una strategia efficiente per valutare la qualità di un sito web che non si conosce.</p><p>Questa strategia (<a href=\"https://cor.inquirygroup.org/curriculum/collections/teaching-lateral-reading/\" target=\"_blank\" rel=\"noopener noreferrer\">link alla strategia</a>), utilizzata dai fact-checker per valutare le informazioni online, prevede di leggere un sito web non &quot;verticalmente&quot;, come se fosse un documento stampato, per valutarne la qualità, ma di utilizzare un metodo chiamato &quot;lettura laterale&quot;. Ciò significa analizzare la pagina web aprendo diverse schede per rispondere a domande chiave sul contenuto.</p><ul><li>Chi è l'autore del contenuto? È una fonte esperta?</li><li>È possibile trovare prove? È basato su fatti e dati?</li><li>È pubblicato da altre fonti affidabili? Cosa ne dicono?</li></ul><p>Oltre alle domande chiave di cui sopra, la tecnica della lettura laterale ci invita a promuovere il pensiero critico e ad approfondire l'analisi di altri aspetti del contenuto, come:</p><ul><li>Chi finanzia o sponsorizza il sito su cui è stato pubblicato l'articolo originale?</li><li>Cosa dicono altre fonti autorevoli su quel sito?</li><li>Quando cercate l'argomento dell'articolo originale, i risultati principali provengono da organizzazioni di fact-checking?</li><li>Sono state sollevate domande su altri articoli scritti dall'autore?</li><li>Le informazioni che trovate altrove contraddicono l'articolo originale?</li><li>Le testate giornalistiche credibili riportano – o forse ancora più importante, non riportano – ciò che state leggendo?</li></ul><p>La lettura laterale ci aiuta a valutare meglio le nostre fonti di informazione, ovvero a distinguere tra verità e menzogna, e a esercitare consapevolmente il nostro diritto di scegliere come accedere alle informazioni.</p>",
-                "objectivesTitle": "Obiettivi",
+                "objectivesTitle": "Obiettivi dell'attività",
                 "objectives": "<ul><li>Apprendere le caratteristiche essenziali che rendono una fonte credibile e trasparente</li><li>Sviluppare competenze per identificare le fonti di informazione affidabili</li></ul>",
                 "startButton": "Inizia l'attività",
                 "task": "Prova! Devi valutare l'attendibilità della pagina web proposta utilizzando il metodo di lettura laterale. Controlla tutti gli screenshot e verifica se riesci a trovare prove che indichino se la pagina che stai guardando sia una fonte affidabile. Abbinale al tipo di informazione corrispondente che riesci a trovare oppure clicca su &quot;Non trovato&quot;.",

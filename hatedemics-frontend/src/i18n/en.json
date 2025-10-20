@@ -8,7 +8,9 @@
         "close": "Close",
         "ok": "OK",
         "yes": "Yes",
-        "no": "No"
+        "no": "No",
+                "showMore": "Show more",
+        "showLess": "Show less"
     },
     "menu": {
         "home": "Home",

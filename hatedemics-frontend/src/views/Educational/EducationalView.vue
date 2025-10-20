@@ -30,6 +30,7 @@ function acceptWarning() {
           <div class="d-flex align-center w-100">
             <!-- Titolo -->
             <h1 class="text-h5 font-weight-bold text-primary me-2">{{ msg }}</h1>
+            <span class="text-primary ms-5">      {{ expanded ? t("common.showLess") : t("common.showMore") }}</span>
 
             <!-- Freccia manuale vicino al titolo -->
             <v-icon

@@ -8,7 +8,9 @@
     "close": "Agħlaq",
     "ok": "OK",
     "yes": "Iva",
-    "no": "Le"
+    "no": "Le",
+    "showMore": "Mostra di piċ",
+    "showLess": "Mostra inqas"
   },
   "menu": {
     "home": "Dar",
@@ -238,7 +240,7 @@
       "debunking": {
         "title": "Konfutazzjoni",
         "back": "Lura",
-        "finalMessage":" L-attività intemm. Grazzi talli ħadt sehem!",
+        "finalMessage": " L-attività intemm. Grazzi talli ħadt sehem!",
         "description": "L-objettiv tal-verifika tal-fatti huwa li jipprovdi l-għodda liċ-ċittadini biex jiffurmaw opinjoni ibbażata fuq fatti u dejta, ħalli b’hekk jkunu jistgħu jieħdu deċiżjoni infurmata. Il-miżinformazzjoni tista’ tinfluwenza kif is-soċjetà taħseb, u kif tittrata problemi tà kuljum. Għalhekk il-fact-checkers għandhom missjoni ċentrali  li titfa' d-dawl u d-data dwar dawn il-kwistjonijiet. B'mod ġenerali, il-verifika tal-fatti tinvolvi  l-iskoperta ta' ingann, il-verifika tal-kontenut tagħhom, u t-tixrid taċ-ċaħda. Il-verifikaturi tal-fatti jaħdmu kuljum fuq il-konfutazzjoni: huma jivverifikaw il-kontenut u jispjegaw għaliex xi ħaġa hija falza wara li tkun ġiet kondiviża u viralizzata fil-midja soċjali. Huwa importanti għar-rekord pubbliku u biex jiġi evitat li aktar nies jaqraw, jaqsmu u jemmnu l-gideb. Xi konfutazzjonijiet huma diffiċli ħafna: jieħdu ħafna ħin u jeħtieġu l-użu ta' għodod speċifiċi. Oħrajn jeħtieġu biss ħafna osservazzjoni u tiftix għal informazzjoni speċifika affidabbli.  Ejja nippruvaw! F'dan l-eżerċizzju inti se titgħallem, kif tuża xi tekniki sabiex tkun taf kif tiċħad b’mod kritiku, waqt li tifhem dak li huwa importanti. B’dan il-metodu jkun possibbli li tuża għodda biex tidentifika kif il-viralizzazzjoni ta' xi frodi tista' toħloq u ssaħħaħ in-narrattiva tad-diżinformazzjoni.",
         "objectivesTitle": "L-Għan tal-Attività",
         "objectives": "Ikkonfuta u tgħallem dwar x'inhuma n-narrattivi ta' diżinformazzjoni. Dan huwa wkoll eżerċizzju ta’ qabel il-konfutazzjoni: skopri x’inhuma narrattivi ta’ diżinformazzjoni u dawk l-aktar mifruxa f’pajjiżhom. Int se titgħallem, b'mod iggwidat, xi metodi ta' konfutazzjoni u għaliex huwa importanti li tuża l-ħsieb kritiku u tidentifika kif il-viralizzazzjoni ta' xi ingann jista' joħloq u jssaħħaħ narrattivi ta' diżinformazzjoni.",
@@ -595,7 +597,7 @@
               }
             ],
             "conclusionTitle": "Konklużjoni",
-"conclusionQuestion": "Wieġeb il-mistoqsijiet li ġejjin skont il-kontenut ippreżentat fl-iskrinshots ipprovduti: Ingħatat informazzjoni dwar l-awturi, u setgħet tiġi vverifikata l-kompetenza tagħhom? Il-kontenut inkluda evidenza appoġġjata minn fatti u dejta? L-istess informazzjoni ġiet ippubblikata jew ikkonfermata minn sorsi affidabbli oħra?",
+            "conclusionQuestion": "Wieġeb il-mistoqsijiet li ġejjin skont il-kontenut ippreżentat fl-iskrinshots ipprovduti: Ingħatat informazzjoni dwar l-awturi, u setgħet tiġi vverifikata l-kompetenza tagħhom? Il-kontenut inkluda evidenza appoġġjata minn fatti u dejta? L-istess informazzjoni ġiet ippubblikata jew ikkonfermata minn sorsi affidabbli oħra?",
             "affidabile": true,
             "feedback": {
               "correct": "Korrett!",
@@ -748,7 +750,7 @@
               }
             ],
             "conclusionTitle": "Konklużjoni",
-"conclusionQuestion": "Wieġeb il-mistoqsijiet li ġejjin skont il-kontenut ippreżentat fl-iskrinshots ipprovduti: Ingħatat informazzjoni dwar l-awturi, u setgħet tiġi vverifikata l-kompetenza tagħhom? Il-kontenut inkluda evidenza appoġġjata minn fatti u dejta? L-istess informazzjoni ġiet ippubblikata jew ikkonfermata minn sorsi affidabbli oħra?",
+            "conclusionQuestion": "Wieġeb il-mistoqsijiet li ġejjin skont il-kontenut ippreżentat fl-iskrinshots ipprovduti: Ingħatat informazzjoni dwar l-awturi, u setgħet tiġi vverifikata l-kompetenza tagħhom? Il-kontenut inkluda evidenza appoġġjata minn fatti u dejta? L-istess informazzjoni ġiet ippubblikata jew ikkonfermata minn sorsi affidabbli oħra?",
             "affidabile": false,
             "feedback": {
               "correct": "Korrett!",
@@ -1002,7 +1004,6 @@
     "addFromGround": "Żid mill-art",
     "confirmTitle": "Ikkonferma",
     "confirmLeavePage": "Jekk titlaq minn din il-paġna, tista' titlef il-progress tiegħek. Int żgur?",
- 
     "tooltip": {
       "label": "Isem tal-kanal",
       "startEmpty": "Agħfas hawn biex toħloq dawra vojta.",
@@ -1020,7 +1021,7 @@
       "hs_percentage": "Perċentwal ta’ messaġġi meqjusa bħala Diskors ta’ Mibegħda",
       "cw_percentage": "Perċentwal ta’ messaġġi meqjusa bħala denji ta’ verifika",
       "degreeCentrality": "Ċentralità tal-grad tal-kanal fin-netwerk",
-      "louvain_community":"Il-komunità ta' Louvain tal-kanal"
+      "louvain_community": "Il-komunità ta' Louvain tal-kanal"
     }
   },
   "guide": {

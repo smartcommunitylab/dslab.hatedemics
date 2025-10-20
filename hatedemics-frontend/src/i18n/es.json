@@ -8,7 +8,9 @@
         "close": "Cerrar",
         "ok": "De acuerdo",
         "yes": "Sí",
-        "no": "No"
+        "no": "No",
+                "showMore": "Mostrar más",
+        "showLess": "Mostrar menos"
     },
     "menu": {
         "home": "Inicio",
