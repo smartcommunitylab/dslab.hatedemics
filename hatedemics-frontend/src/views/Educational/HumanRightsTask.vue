@@ -5,7 +5,7 @@
     <!-- Pulsante fine task -->
     <div class="mb-8 text-center">
       <v-btn
-        color="success"
+        color="primary"
         size="large"
         @click="openTaskCompleteDialog"
       >

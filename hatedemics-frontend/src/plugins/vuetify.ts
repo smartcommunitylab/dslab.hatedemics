@@ -20,20 +20,18 @@ async function initApp() {
   await loadFonts();
   const lightTheme = {
     dark: false,
-    // ...
   };
-  // il resto del codice...
 }
 initApp();
 
 /**
- * Definizione dei temi personalizzati
+ * Tema
  */
 const lightTheme = {
   dark: false, // Tema chiaro
   colors: {
-    primary: '#D32F2F', // Rosso principale
-    secondary: '#B71C1C', // Rosso scuro
+    primary: '#D1204c', // Rosso principale
+    secondary: '#113f67', // Rosso scuro
     background: '#F5F5F5', // Sfondo chiaro
     surface: '#FFFFFF', // Sfondo per card e altri elementi
     error: '#D50000', // Rosso brillante per errori
@@ -42,6 +40,7 @@ const lightTheme = {
     info: '#1976D2', // Blu per informazioni
     textPrimary: '#212121', // Testo principale
     textSecondary: '#757575', // Testo secondario
+    buttonColor: '#D1204c', // Colore dei bottoni
   },
 };
 
@@ -89,5 +88,4 @@ let vuetifyConfig: VuetifyOptions = {
 
 export default createVuetify(vuetifyConfig);
 
-// Export per test.
 export { components, directives };

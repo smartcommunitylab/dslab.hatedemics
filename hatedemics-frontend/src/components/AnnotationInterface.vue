@@ -8,6 +8,7 @@ import DynamicButton from "@/components/singleFileComponents/dynamic-button.vue"
 import { useNewTaskStore } from "@/store/DialogStore";
 import DialogDialogue from "@/components/dialogs/dialog-dialogue.vue";
 import { useI18n } from "vue-i18n";
+import CounterspeechGuideDialog from "./CounterspeechGuideDialog.vue";
 
 export default {
   components: {
@@ -17,6 +18,7 @@ export default {
     highlightable,
     Splitpanes,
     Pane,
+    CounterspeechGuideDialog
   },
   setup() {
     const { t } = useI18n();
@@ -58,6 +60,7 @@ export default {
       selectedActorForChoice: undefined,
       showChoiceDialog: false,
       useGroundForChoice: [],
+      showExploreGuide: false,
     };
   },
   unmounted: function () {
@@ -508,6 +511,7 @@ export default {
 
 <template>
   <v-container fluid>
+
     <v-row>
       <v-col cols="6">
         <ConfirmDialog ref="confirm"></ConfirmDialog>
@@ -528,8 +532,20 @@ export default {
         <!--        @refresh="addByChoice"-->
         <!--      ></DialogGeneric>-->
         <v-row>
-          <v-col>
-            <p class="ma-2 text-center" id="files-p">
+        <v-col cols="6">
+          <v-btn
+              color="primary"
+              variant="flat"
+              size="small"
+              @click.stop="showExploreGuide = true"
+              prepend-icon="mdi-book-open"
+              class="me-2"
+            >
+              {{ t("home.guideTitle") }}
+            </v-btn>
+            </v-col>
+          <v-col cols="6">
+            <p class="ma-2 " id="files-p">
               <v-icon icon="mdi-database-outline me-2"></v-icon>
               <span class="font-weight-bold">{{ t("dialog.dataSources") }}</span>
             </p>
@@ -620,6 +636,8 @@ export default {
                   <v-btn
                     prepend-icon="mdi-plus"
                     class="ma-1"
+                    color="primary"
+
                     @click="addRound(-1)"
                     :text="t('dialog.startEmpty')"
                     :disabled="this.showChoiceDialog"
@@ -647,6 +665,8 @@ export default {
                     <v-btn
                       v-bind="props"
                       class="ma-1"
+                                                  color="primary"
+
                       prepend-icon="mdi-auto-fix"
                       :text="t('dialog.addDynamicTurn')"
                       @click="callDynamic"
@@ -720,6 +740,8 @@ export default {
                         <template v-slot:activator="{ props }">
                           <v-btn
                             v-bind="props"
+                            color="primary"
+
                             v-if="
                               taskInfo.inside_type === 'choice' &&
                               index === annotation_data.length - 1
@@ -741,7 +763,7 @@ export default {
                         <template v-slot:activator="{ props }">
                           <v-btn
                             v-bind="props"
-                            color="red"
+                            color="primary"
                             class="ma-1"
                             icon="mdi-trash-can-outline"
                             @click="deleteRound(index)"
@@ -916,6 +938,8 @@ export default {
       </v-col>
     </v-row></v-container
   >
+  <CounterspeechGuideDialog v-model="showExploreGuide" />
+
 </template>
 
 <style>

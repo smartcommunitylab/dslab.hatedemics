@@ -137,7 +137,7 @@ watch(selectedChannelInfo, async (newVal) => {
           <v-tooltip>
             <template v-slot:activator="{ props }">
               <v-col cols="12" v-if="generic?.hs_percentage !== undefined" v-bind="props">
-                <v-icon class="mr-2" color="error">mdi-emoticon-angry</v-icon>
+                <v-icon class="mr-2" color="primary">mdi-emoticon-angry</v-icon>
                 <span class="font-weight-bold">{{ t("channelInfo.hs_percentage") }}</span>
                 {{ selectedChannelInfo.hs?.toFixed(2) }}%
               </v-col>
@@ -147,7 +147,7 @@ watch(selectedChannelInfo, async (newVal) => {
           <v-tooltip>
             <template v-slot:activator="{ props }">
               <v-col cols="12" v-if="generic?.cw_percentage !== undefined" v-bind="props">
-                <v-icon class="mr-2" color="error">mdi-magnify-close</v-icon>
+                <v-icon class="mr-2" color="primary">mdi-magnify-close</v-icon>
                 <span class="font-weight-bold">{{ t("channelInfo.cw_percentage") }}</span>
                 {{ selectedChannelInfo.cw?.toFixed(2) }}%
               </v-col>

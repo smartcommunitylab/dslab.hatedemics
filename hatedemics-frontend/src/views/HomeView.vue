@@ -35,9 +35,9 @@ function handleNeverShow() {
     <v-row justify="center" class="mb-8">
       <v-col cols="12" md="6" class="text-center">
         <v-img
-          src="@/assets/credits/hatedemics.png"
+          src="@/assets/credits/hatedemics_transparent.png"
           alt="Hatedemics Logo"
-          max-width="200"
+          max-width="150"
           class="mx-auto mb-4"
         />
         <h1 class="text-h4 font-weight-bold mb-2">
@@ -101,7 +101,7 @@ function handleNeverShow() {
             >
               <v-icon size="20">mdi-help</v-icon>
             </v-btn> -->
-            <v-btn color="primary" to="/dashboard/channels" variant="flat">
+            <v-btn color="buttonColor" to="/dashboard/channels" variant="flat">
               {{ t("home.networkButton") }}
             </v-btn>
           </div>
@@ -117,7 +117,7 @@ function handleNeverShow() {
         >
           <div>
             <div class="d-flex align-center mb-2">
-              <v-icon color="error" class="mr-2">mdi-message-text-outline</v-icon>
+              <v-icon color="primary" class="mr-2">mdi-message-text-outline</v-icon>
               <h2 class="text-h6 font-weight-bold mb-1">{{ t("home.counterspeech") }}</h2>
             </div>
             <p class="text-body-1 mb-4">
@@ -135,7 +135,7 @@ function handleNeverShow() {
             >
               <v-icon size="20">mdi-help</v-icon>
             </v-btn> -->
-            <v-btn color="error" to="/projects" variant="flat">
+            <v-btn color="buttonColor" to="/projects" variant="flat">
               {{ t("home.counterspeechButton") }}
             </v-btn>
           </div>

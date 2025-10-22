@@ -148,14 +148,14 @@ const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
         <v-expansion-panel-title expand-icon="" collapse-icon="" v-slot="{ expanded }">
           <div class="d-flex align-center w-100">
             <!-- Titolo -->
-            <h1 class="text-h5 font-weight-bold text-primary me-2">{{ msg }}</h1>
+            <h1 class="text-h5 font-weight-bold  me-2">{{ msg }}</h1>
 
             <!-- Freccia manuale vicino al titolo -->
-            <span class="text-primary ms-5">      {{ expanded ? t("common.showLess") : t("common.showMore") }}
+            <span class=" ms-5">      {{ expanded ? t("common.showLess") : t("common.showMore") }}
             </span>
             <v-icon
               :icon="expanded ? 'mdi-menu-up' : 'mdi-menu-down'"
-              class="me-2 text-primary"
+              class="me-2 "
             />
 
             <v-spacer />

@@ -117,7 +117,7 @@ const onWordClick = (word: string) => console.log(word);
       :label= "t('wordclouds.select')"
     />
     <div v-if="wordsPositive.length" class="wordcloud-container bordered">
-  <v-typography class="text-h5 title text-error">
+  <v-typography class="text-h5 title text-primary">
     {{ getTitle(selectedChannelView, false) }}
   </v-typography>
   <vue3-word-cloud
@@ -129,7 +129,7 @@ const onWordClick = (word: string) => console.log(word);
 </div>
 
 <div v-if="wordsNegative.length" class="wordcloud-container bordered">
-  <v-typography class="text-h5 title text-error">
+  <v-typography class="text-h5 title text-primary">
     {{ getTitle(selectedChannelView, true) }}
   </v-typography>
   <vue3-word-cloud

@@ -850,7 +850,7 @@
     "topicsTable": {
         "title": "Temas principales del chat",
         "header": {
-            "title": "Título",
+            "title": "Tema",
             "count": "% de mensajes",
             "hs": "% de discurso de odio",
             "cw": "% de susceptible de verificación",

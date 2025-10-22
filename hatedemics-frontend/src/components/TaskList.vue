@@ -198,7 +198,7 @@ export default {
     style="cursor: pointer;"
   >
     <template v-slot:prepend>
-      <v-avatar :color="task.is_active ? 'green-lighten-1' : 'red-lighten-1'">
+      <v-avatar :color="task.is_active ? 'secondary' : 'secondary'">
         <v-icon color="white">mdi-head-cog</v-icon>
       </v-avatar>
     </template>
@@ -211,7 +211,7 @@ export default {
         v-if="task.is_active"
         class="ms-3 responsive-btn"
         :text="t('buttons.startDialogue')"
-        color="blue-lighten-1"
+        color="primary"
         icon="mdi-text-box-plus"
         @click.stop="addAnnotation(task.id, 0)"
       ></DynamicButton>
@@ -221,7 +221,7 @@ export default {
           v-if="task.is_active"
           class="ms-3 responsive-btn"
           text="Disable"
-          color="red-lighten-1"
+          color="primary"
           icon="mdi-lock"
           @click.stop="deactivateTask(task.id)"
         ></DynamicButton>
@@ -229,7 +229,7 @@ export default {
           v-else
           class="ms-3 responsive-btn"
           text="Enable"
-          color="green-lighten-1"
+          color="primary"
           icon="mdi-lock-open-variant"
           @click.stop="activateTask(task.id)"
         ></DynamicButton>
