@@ -104,7 +104,7 @@ export default {
                   class="ms-3"
                   icon="mdi-trash-can-outline"
                   :text="t('buttons.delete')"
-                  color="error"
+                  color="primary"
                   @click.stop="deleteProject()"
                 />
               </v-card-actions>

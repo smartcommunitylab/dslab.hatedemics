@@ -29,13 +29,13 @@ function acceptWarning() {
         <v-expansion-panel-title expand-icon="" collapse-icon="" v-slot="{ expanded }">
           <div class="d-flex align-center w-100">
             <!-- Titolo -->
-            <h1 class="text-h5 font-weight-bold text-primary me-2">{{ msg }}</h1>
-            <span class="text-primary ms-5">      {{ expanded ? t("common.showLess") : t("common.showMore") }}</span>
+            <h1 class="text-h5 font-weight-bold  me-2">{{ msg }}</h1>
+            <span class=" ms-5">      {{ expanded ? t("common.showLess") : t("common.showMore") }}</span>
 
             <!-- Freccia manuale vicino al titolo -->
             <v-icon
               :icon="expanded ? 'mdi-menu-up' : 'mdi-menu-down'"
-              class="me-2 text-primary"
+              class="me-2 "
             />
 
             <v-spacer />
@@ -86,7 +86,7 @@ function acceptWarning() {
         >
           <div>
             <div class="d-flex align-center mb-2">
-              <v-icon color="success" class="mr-2">mdi-lightbulb-on-outline</v-icon>
+              <v-icon color="primary" class="mr-2">mdi-lightbulb-on-outline</v-icon>
               <h2 class="text-h6 font-weight-bold mb-1">
                 {{ t("educational.eduCardBiasTitle") }}
               </h2>
@@ -96,7 +96,7 @@ function acceptWarning() {
             </p>
           </div>
           <div class="text-right mt-6">
-            <v-btn color="success" size="small" to="/educational/bias" variant="flat">
+            <v-btn color="primary" size="small" to="/educational/bias" variant="flat">
               {{ t("educational.eduCardBiasButton") }}
             </v-btn>
           </div>
@@ -112,7 +112,7 @@ function acceptWarning() {
         >
           <div>
             <div class="d-flex align-center mb-2">
-              <v-icon color="info" class="mr-2">mdi-school-outline</v-icon>
+              <v-icon color="primary" class="mr-2">mdi-school-outline</v-icon>
               <h2 class="text-h6 font-weight-bold mb-1">
                 {{ t("educational.eduCard3Title") }}
               </h2>
@@ -122,7 +122,7 @@ function acceptWarning() {
             </p>
           </div>
           <div class="text-right mt-6">
-            <v-btn color="info" size="small" to="/educational/debunking" variant="flat">
+            <v-btn color="primary" size="small" to="/educational/debunking" variant="flat">
               {{ t("educational.eduCard3Button") }}
             </v-btn>
           </div>
@@ -137,7 +137,7 @@ function acceptWarning() {
   >
     <div>
       <div class="d-flex align-center mb-2">
-        <v-icon color="warning" class="mr-2">mdi-compass-outline</v-icon>
+        <v-icon color="primary" class="mr-2">mdi-compass-outline</v-icon>
         <h2 class="text-h6 font-weight-bold mb-1">
           {{ t("educational.eduCard4Title") }}
         </h2>
@@ -147,7 +147,7 @@ function acceptWarning() {
       </p>
     </div>
     <div class="text-right mt-6">
-      <v-btn color="warning" size="small" to="/educational/lateral-reading" variant="flat">
+      <v-btn color="primary" size="small" to="/educational/lateral-reading" variant="flat">
         {{ t("educational.eduCard4Button") }}
       </v-btn>
     </div>

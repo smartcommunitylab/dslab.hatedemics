@@ -108,13 +108,13 @@ const loadMore = (event: { target: any }) => {
         <v-expansion-panel-title expand-icon="" collapse-icon="" v-slot="{ expanded }">
           <div class="d-flex align-center w-100">
             <!-- Titolo -->
-            <h1 class="text-h5 font-weight-bold text-primary me-2">{{ msg }}</h1>
-            <span class="text-primary ms-5">      {{ expanded ? t("common.showLess") : t("common.showMore") }}</span>
+            <h1 class="text-h5 font-weight-bold  me-2">{{ msg }}</h1>
+            <span class=" ms-5">      {{ expanded ? t("common.showLess") : t("common.showMore") }}</span>
 
             <!-- Freccia manuale vicino al titolo -->
             <v-icon
               :icon="expanded ? 'mdi-menu-up' : 'mdi-menu-down'"
-              class="me-2 text-primary"
+              class="me-2 "
             />
 
             <v-spacer />
