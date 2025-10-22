@@ -8,10 +8,10 @@
             <v-img src="@/assets/credits/eu.jpg" max-height="80" contain class="mb-2" />
           </v-col>
           <v-col cols="6" md="4" class="text-center">
-            <v-img src="@/assets/credits/hatedemics.png" max-height="100" contain class="mb-2" />
+            <v-img src="@/assets/credits/hatedemics_transparent.png" max-height="100" contain class="mb-2" />
           </v-col>
         </v-row>
-        <h1 class="text-h4 font-weight-bold">HateDemics</h1>
+        <h1 class="text-h4 font-weight-bold">Hatedemics</h1>
         <p class="text-subtitle-1">HATEDEMICS is funded by the European Union (CERV-2023-CHAR-LITI-101143249))
         </p>
       </v-col>
@@ -48,15 +48,15 @@
     <!-- Contatti -->
     <v-row justify="center" class="mt-8">
       <v-col cols="12" md="6" class="text-center">
-        <h2 class="text-h5 font-weight-bold">Contatti</h2>
+        <h2 class="text-h5 font-weight-bold">Contact</h2>
         <p>
           <v-icon color="primary" class="mr-1">mdi-email</v-icon>
           <a href="mailto:info@hatedemics.eu">contact@hatedemics.eu</a>
         </p>
-        <p>
+        <!-- <p>
           <v-icon color="primary" class="mr-1">mdi-phone</v-icon>
           <a href="tel:+39 0461314 804">+39 0461314 804          </a>
-        </p>
+        </p> -->
 
       </v-col>
     </v-row>
