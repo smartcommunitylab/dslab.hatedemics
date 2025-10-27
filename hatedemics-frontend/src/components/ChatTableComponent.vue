@@ -125,10 +125,15 @@ const onPaginationChange = (options: any) => {
 const fetchMessages = async () => {
   loading.value = true; // Avvia il loading
   try {
-    const { success, status, total, content } = await messagesStore.dispatchGetMessages(
+    const { success, status, total, content } : {
+  success: boolean;
+  status: number;
+  total: number;
+  content: any[]; 
+}= await messagesStore.dispatchGetMessages(
       selectedChat.value!,
       {
-        page: pagination.page, // API parte da 0
+        page: pagination.page, 
         size: pagination.size,
         sort: pagination.sort,
       },
@@ -137,15 +142,15 @@ const fetchMessages = async () => {
       filters.hate ?? undefined
       // filters.topic ?? undefined
     );
+    
     if (success && total && content) {
       totalItems.value = total;
 
       // Normalizza i target per ogni messaggio
-      content!.forEach((msg: any) => {
-        msg.target_normalized = normalizeTarget(msg.target);
-      });
-
-      messages.value = content;
+      messages.value = content.map((msg) => ({
+        ...msg,
+        target_normalized: normalizeTarget(msg.target) ?? "",
+      }));
     }
   } finally {
     loading.value = false; // Disattiva il loading
