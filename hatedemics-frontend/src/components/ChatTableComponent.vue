@@ -397,11 +397,11 @@ const getReliabilityIcon = (value: number) => {
       <template v-slot:item.target="{ item }">
         <span v-if="!isEmptyOrSpaces(item?.target!)">
           <span
-            v-for="(target, idx) in item.target_normalized.split(',')"
-            :key="idx"
-            class="me-2"
-          >
-            {{ t(`message.filter.${target.trim()}`) }}
+          v-for="(target, idx) in (item.target_normalized ?? '').split(',')"
+  :key="idx"
+  class="me-2"
+>
+  {{ t(`message.filter.${target.trim()}`) }}
           </span>
         </span>
         <span v-else>NA</span>
