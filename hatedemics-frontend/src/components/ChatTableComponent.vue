@@ -6,8 +6,16 @@ import { useMessagesStore } from "@/store/MessageStore";
 import { storeToRefs } from "pinia";
 import { useChatsStore } from "@/store/ChatStore";
 import { useChannelsStore } from "@/store/ChannelStore";
-import { formatDate, isEmptyOrSpaces, cleanString } from "@/services/utility";
+import {
+  formatDate,
+  isEmptyOrSpaces,
+  cleanString,
+  normalizeTarget,
+  targetMap,
+  targetTranslations,
+} from "@/services/utility";
 import dialogApi from "@/services/dialog/dialogApi";
+
 import { useGlobal } from "@/store";
 const { t } = useI18n();
 const router = useRouter();
@@ -38,23 +46,23 @@ const itemsPerPageOptions = [
   { title: "150", value: 150 },
 ];
 const headers = computed(() => [
-  { title: t("message.header.date"), key: "date", sortable: true  },
+  { title: t("message.header.date"), key: "date", sortable: true },
   {
     title: t("message.header.message"),
     key: "preprocessed_message_number_media",
-    sortable: true 
+    sortable: true,
   },
-  { title: t("message.header.from"), key: "from_user", sortable: true  },
-  { title: t("message.header.nrReactions"), key: "nr_reactions", sortable: true  },
-  { title: t("message.header.hateLabel"), key: "hate_label", sortable: true  },
-  { title: t("message.header.checkLabel"), key: "checkworthy_label", sortable: true  },
+  { title: t("message.header.from"), key: "from_user", sortable: true },
+  { title: t("message.header.nrReactions"), key: "nr_reactions", sortable: true },
+  { title: t("message.header.hateLabel"), key: "hate_label", sortable: true },
+  { title: t("message.header.checkLabel"), key: "checkworthy_label", sortable: true },
   {
     title: t("message.header.averageReliability"),
     key: "average_reliability",
-    sortable: true 
+    sortable: true,
   },
   // { title: t("message.header.topic"), key: "topic_label", sortable: true },
-  { title: t("message.header.target"), key: "target", sortable: true  },
+  { title: t("message.header.target"), key: "target", sortable: true },
   // { title: t("message.header.counterspeech"), key: "actions", sortable: false },
 ]);
 
@@ -91,6 +99,14 @@ const openMenu = (event: MouseEvent, item: any) => {
   menuY.value = event.pageY;
   selectedMessage.value = item;
 };
+function getApiTarget(selectedTarget: string | null, language: string): string | null {
+  if (!selectedTarget) return null;
+
+  const normalized = normalizeTarget(selectedTarget);
+  if (!normalized) return selectedTarget;
+  const translation = targetTranslations[language.toUpperCase()]?.[normalized];
+  return translation ?? selectedTarget;
+}
 const onSortChange = (sort: any) => {
   if (sort.length > 0) {
     const { key, order } = sort[0]; // Estraggo il primo criterio di ordinamento
@@ -116,15 +132,20 @@ const fetchMessages = async () => {
         size: pagination.size,
         sort: pagination.sort,
       },
-      filters.target ?? undefined,
+      getApiTarget(filters.target, selectedLanguage.value || "EN") ?? undefined,
       filters.checkworthy ?? undefined,
       filters.hate ?? undefined
       // filters.topic ?? undefined
     );
-    if (success && total) {
-      totalItems.value = total; // Aggiorna il numero totale degli elementi
-    } else {
-      // alert("Oops, something went wrong!");
+    if (success && total && content) {
+      totalItems.value = total;
+
+      // Normalizza i target per ogni messaggio
+      content!.forEach((msg: any) => {
+        msg.target_normalized = normalizeTarget(msg.target);
+      });
+
+      messages.value = content;
     }
   } finally {
     loading.value = false; // Disattiva il loading
@@ -196,7 +217,8 @@ const getFooterText = () => {
     totalItems: totalItems.value,
   });
   // return `${pageStart}-${pageStop} of ${totalItems.value} retrieved messages`;
-};const getReliabilityText = (value: number) => {
+};
+const getReliabilityText = (value: number) => {
   if (value === -1) {
     return t("message.reliability.unknown");
   } else if (value >= 0 && value < 1) {
@@ -266,16 +288,11 @@ const getReliabilityIcon = (value: number) => {
           :label="t('message.filter.target')"
           :items="[
             { title: t('message.filter.all'), value: null },
-            { title: t('message.filter.DISABLED'), value: 'DISABLED' },
-            { title: t('message.filter.JEWS'), value: 'JEWS' },
-            { title: t('message.filter.LGBTQIA+'), value: 'LGBTQIA+' },
-            { title: t('message.filter.MIGRANTS'), value: 'MIGRANTS' },
-            { title: t('message.filter.MUSLIMS'), value: 'MUSLIMS' },
-            { title: t('message.filter.POC'), value: 'POC' },
-            { title: t('message.filter.WOMEN'), value: 'WOMEN' },
+            ...Object.keys(targetMap).map((key) => ({
+              title: t(`message.filter.${key}`),
+              value: t(`message.filter.${key}`),
+            })),
           ]"
-          item-value="value"
-          item-text="text"
           clearable
           dense
         />
@@ -302,7 +319,13 @@ const getReliabilityIcon = (value: number) => {
       @click:row="(event: MouseEvent, { item }: any) => openMenu(event, item)"
     >
       <template v-slot:item.date="{ item }">
-        <td class="text-left">    {{ new Date(item.date).toLocaleDateString(undefined, { day: "2-digit", month: "2-digit" }) }}
+        <td class="text-left">
+          {{
+            new Date(item.date).toLocaleDateString(undefined, {
+              day: "2-digit",
+              month: "2-digit",
+            })
+          }}
         </td>
       </template>
       <template v-slot:item.preprocessed_message_number_media="{ item }">
@@ -326,29 +349,33 @@ const getReliabilityIcon = (value: number) => {
       </template>
 
       <template v-slot:item.hate_label="{ item }">
-        <div >
+        <div>
           <v-icon
-            :icon="item.hate_label ? 'mdi-emoticon-angry' : 'mdi-emoticon-happy-outline'"
-            :color="item.hate_label ? 'red' : 'green'"
+            :icon="
+              item.hate_label === null || item.hate_label === undefined
+                ? 'mdi-help-circle-outline'
+                : item.hate_label
+                ? 'mdi-emoticon-angry'
+                : 'mdi-emoticon-happy-outline'
+            "
+            :color="
+              item.hate_label === null || item.hate_label === undefined
+                ? 'grey'
+                : item.hate_label
+                ? 'red'
+                : 'green'
+            "
           />
-          <!-- <div class="mt-1" :style="{ color: item.hate_label ? 'red' : 'green' }">
-            {{ item.hate_label ? t("message.hate") : t("message.notHate") }}
-          </div> -->
         </div>
       </template>
 
       <template v-slot:item.checkworthy_label="{ item }">
-        <div >
-          <v-icon v-if="item.checkworthy_label"
-            icon="mdi-alert-outline"
-            color="red"
-          />
+        <div>
+          <v-icon v-if="item.checkworthy_label" icon="mdi-alert-outline" color="red" />
           <!-- <div class="mt-1" :style="{ color: item.checkworthy_label ? 'red' : 'green' }">
             {{ item.checkworthy_label ? t("message.worthy") : t("message.notWorthy") }}
           </div> -->
-          <div class="mt-1" v-else>
-            -
-          </div>
+          <div class="mt-1" v-else>-</div>
         </div>
       </template>
       <template v-slot:item.average_reliability="{ item }">
@@ -366,12 +393,18 @@ const getReliabilityIcon = (value: number) => {
         </div>
       </template>
       <template v-slot:item.target="{ item }">
-        <span
-          v-if="!isEmptyOrSpaces(item?.target!)"
-          >{{ cleanString(item?.target!) }}</span
-        >
+        <span v-if="!isEmptyOrSpaces(item?.target!)">
+          <span
+            v-for="(target, idx) in item.target_normalized.split(',')"
+            :key="idx"
+            class="me-2"
+          >
+            {{ t(`message.filter.${target.trim()}`) }}
+          </span>
+        </span>
         <span v-else>NA</span>
       </template>
+
       <!-- <template v-slot:item.actions="{ item }">
         <v-tooltip v-if="!isEmptyOrSpaces(item?.target!)" :text="t('message.target')">
           <template #activator="{ props }">
@@ -403,44 +436,33 @@ const getReliabilityIcon = (value: number) => {
       absolute
       offset-y
     > -->
-      <v-list>
-        <!-- Itera su ogni target e crea una voce dinamica per ciascuno -->
-        <v-list-item
-          v-for="target in parsedTargets"
-          :key="target"
-          
-          :disabled="isEmptyOrSpaces(target) || target === 'OTHER'"
-          :class="{
-            'has-target': selectedMessage?.target,
-            'no-target': !selectedMessage?.target,
-          }"
-        >
-          <!-- <v-list-item-title>
+    <v-list>
+      <!-- Itera su ogni target e crea una voce dinamica per ciascuno -->
+      <v-list-item
+        v-for="target in parsedTargets"
+        :key="target"
+        :disabled="isEmptyOrSpaces(target) || target === 'OTHER'"
+        :class="{
+          'has-target': selectedMessage?.target,
+          'no-target': !selectedMessage?.target,
+        }"
+      >
+        <!-- <v-list-item-title>
             {{ t("message.dialog.start", { target }) }}
           </v-list-item-title> -->
-          <!-- <v-list-item-title v-if="target!== 'OTHER'">
+        <!-- <v-list-item-title v-if="target!== 'OTHER'">
         {{ t("message.dialog.start",{ target }) }}
       </v-list-item-title>
       <v-list-item-title v-else>
         {{ t("message.dialog.startOther") }}
       </v-list-item-title> -->
-        </v-list-item>
-      </v-list>
+      </v-list-item>
+    </v-list>
     <!-- </v-menu> -->
   </v-container>
 </template>
 
 <style scoped>
-/* Default hover */
-/* .v-data-table :deep(tbody tr:hover) {
-  background-color: rgba(0, 0, 0, 0.05);
-  cursor: pointer;
-}
-
-/* Hover su righe con target */
-/* .v-data-table :deep(tbody tr.has-target:hover) {
-  background-color: rgba(255, 0, 0, 0.2) !important; 
-} */
 .chat-message {
   margin: 8px 0;
   padding: 10px 15px;

@@ -29,7 +29,7 @@
     "guideTitle": "Gwida Mgħaġġla",
     "guideItems": {
       "counterspeech": {
-        "title": "Kontra-diskors",
+        "title": "Artiklu li jiċċekkja l-fatti",
         "description": "<p><strong>Il-kontra-diskors</strong> huwa definit bħala kull azzjoni komunikattiva mmirata biex tiċħad id-diskors ta’ mibegħda permezz ta’ raġunijiet konvinċenti u argumenti veri u bbażati fuq il-fatti (Schieb u Preuss, 2016).</p>"
       },
       "dataSources": {
@@ -41,12 +41,12 @@
         "description": "<p>Oħloq djalogu li jissimula l-interazzjoni bejn xi ħadd li jxandar mibegħda/dezinformazzjoni u operatur li jwieġeb b’argumenti bbażati fuq il-fatti.</p>"
       },
       "groundText": {
-        "title": "Evidenza ta' sostenn mill-artikolu",
-        "description": "<p>Tista’ żżid partijiet mill-artiklu ta’ verifika tal-fatti li jappoġġjaw it-tweġiba tal-operatur.</p><p>It-test ta’ referenza jiġi <em>miżjud awtomatikament</em> meta jinħoloq turn. Tista’ wkoll <strong>tħares manwalment</strong> parti mill-artiklu u tikklikkja l-buttuna “għaqqad”.</p>"
+        "title": "Evidenza ta' sostenn mill-artiklu",
+        "description": "<p>Tista’ żżid partijiet mill-artiklu li jiċċekkja l-fatti li jappoġġjaw it-tweġiba tal-operatur.</p><p>It-test ta’ referenza <em>jiżdied awtomatikament</em> meta jinħoloq turn. Tista’ wkoll <strong>iżżid manwalment</strong> parti mill-artiklu u tikklikkja l-buttuna “Orbot”.</p>"
       },
       "newTurn": {
         "title": "Turn ġdid",
-        "description": "<p>Tista’ żżid dawra ġdida b’diversi modi:</p><ul><li>Żid dawra vojta bil-buttuni “+”.</li><li>Iġġenera awtomatikament dawra bil-buttuna tal-virga maġika.</li><li>Agħżel parti mill-artiklu bħala evidenza ta’ sostenn, imbagħad ikklikkja “Żid mill-artiklu bażi”.</li></ul><p><strong>Nota:</strong> Anke d-dawriet iġġenerati awtomatikament u t-test bażiku jistgħu dejjem jiġu editjati.</p>"
+        "description": "<p>Tista’ żżid turn ġdid b’diversi modi:</p><ul><li>Żid turn vojt bil-buttuna “+”.</li><li>Iġġenera awtomatikament turn bil-buttuna tal-bakketta maġika.</li><li>Agħżel parti mill-artiklu bħala evidenza ta’ sostenn, imbagħad ikklikkja “Żid mill-bażi”.</li></ul><p><strong>Nota:</strong> Anke t-turns iġġenerati awtomatikament u t-test bażiku jistgħu dejjem jiġu editjati.</p>"
       }
     }
   },

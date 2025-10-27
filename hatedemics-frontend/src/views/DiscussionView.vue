@@ -11,7 +11,7 @@ import { useChannelsStore } from "@/store/ChannelStore";
 import { useChatsStore } from "@/store/ChatStore";
 import { useTopicsStore } from "@/store/TopicStore";
 import ExploreGuideDialog from "@/components/ExploreGuideDialog.vue";
-import { isEmptyOrSpaces } from "@/services/utility";
+import { isEmptyOrSpaces, targetTranslations } from "@/services/utility";
 import dialogApi from "@/services/dialog/dialogApi";
 import router from "@/router";
 import { useGlobal } from "@/store";
@@ -55,53 +55,7 @@ const startDialogue = async (target: string | null) => {
   const lang = currentI18nLocale.value.toUpperCase(); // IT, EN, PL, ES, MT
 
   // Mappa dei target tradotti
-  const targetTranslations: Record<string, Record<string, string>> = {
-    IT: {
-      DISABLED: "Persone con disabilità",
-      POC: "Persone nere",
-      MIGRANTS: "Migranti",
-      WOMEN: "Donne",
-      "LGBT+": "LGBTQIA+",
-      JEWS: "Ebrei",
-      MUSLIMS: "Musulmani",
-    },
-    PL: {
-      DISABLED: "Osoby z niepełnosprawnościami",
-      POC: "Czarnoskórzy",
-      MIGRANTS: "Migranci",
-      WOMEN: "Kobiety",
-      "LGBT+": "LGBTQIA+",
-      JEWS: "Żydzi",
-      MUSLIMS: "Muzułmanie",
-    },
-    ES: {
-      DISABLED: "Personas con discapacidad",
-      POC: "Personas negras",
-      MIGRANTS: "Migrantes",
-      WOMEN: "Mujeres",
-      "LGBT+": "LGBTQIA+",
-      JEWS: "Hebreos",
-      MUSLIMS: "Musulmanes",
-    },
-    MT: {
-      DISABLED: "Individwi b'diżabilità",
-      POC: "Nies suwed",
-      MIGRANTS: "Migranti",
-      WOMEN: "Nisa",
-      "LGBT+": "LGBTIQ+",
-      JEWS: "Lhud",
-      MUSLIMS: "Musulmani",
-    },
-    EN: {
-      DISABLED: "People with disabilities",
-      POC: "Black people",
-      MIGRANTS: "Migrants",
-      WOMEN: "Women",
-      "LGBT+": "LGBTQIA+",
-      JEWS: "Jews",
-      MUSLIMS: "Muslims",
-    },
-  };
+  
 
   const translatedTarget = targetTranslations[lang]?.[target];
 
@@ -308,7 +262,6 @@ const loadMore = (event: { target: any }) => {
 
       <v-divider class="my-4" />
 
-      <!-- Layout con Sidebar e Tabella -->
       <!-- Layout con Sidebar e Tabella -->
       <v-row>
         <!-- Colonna Tabella -->

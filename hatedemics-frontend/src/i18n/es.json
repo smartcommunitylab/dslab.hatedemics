@@ -931,9 +931,10 @@
             "yes": "Sí",
             "no": "No",
             "DISABLED": "Personas con discapacidad",
-            "JEWS": "Judíos",
+            "JEWS": "Hebreos",
             "MUSLIMS": "Musulmanes",
             "LGBTQIA+": "LGBTQIA+",
+            "LGBT+": "LGBTQIA+",
             "MIGRANTS": "Migrantes",
             "POC": "Personas negras",
             "WOMEN": "Mujer"

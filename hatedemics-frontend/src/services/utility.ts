@@ -24,7 +24,96 @@ export function processingChannelInfo(data: ChannelInfo[]) {
 
       };
   }
+  
+  export const targetTranslations: Record<string, Record<string, string>> = {
+    IT: {
+      DISABLED: "Persone con disabilità",
+      POC: "Persone nere",
+      MIGRANTS: "Migranti",
+      WOMEN: "Donne",
+      "LGBT+": "LGBTQIA+",
+      JEWS: "Ebrei",
+      MUSLIMS: "Musulmani",
+    },
+    PL: {
+      DISABLED: "Osoby z niepełnosprawnościami",
+      POC: "Czarnoskórzy",
+      MIGRANTS: "Migranci",
+      WOMEN: "Kobiety",
+      "LGBT+": "LGBTQIA+",
+      JEWS: "Żydzi",
+      MUSLIMS: "Muzułmanie",
+    },
+    ES: {
+      DISABLED: "Personas con discapacidad",
+      POC: "Personasnegras",
+      MIGRANTS: "Migrantes",
+      WOMEN: "Mujeres",
+      "LGBT+": "LGBTQIA+",
+      JEWS: "Hebreos",
+      MUSLIMS: "Musulmanes",
+    },
+    MT: {
+      DISABLED: "Individwi b'diżabilità",
+      POC: "Nies suwed",
+      MIGRANTS: "Migranti",
+      WOMEN: "Nisa",
+      "LGBT+": "LGBTIQ+",
+      JEWS: "Lhud",
+      MUSLIMS: "Musulmani",
+    },
+    EN: {
+      DISABLED: "People with disabilities",
+      POC: "Blackpeople",
+      MIGRANTS: "Migrants",
+      WOMEN: "Women",
+      "LGBT+": "LGBTQIA+",
+      JEWS: "Jews",
+      MUSLIMS: "Muslims",
+    },
+  };
 
+
+/* ---------------------------------------------------------------------- */
+/* 🧩 Creazione automatica della targetMap                                */
+/* ---------------------------------------------------------------------- */
+export const targetMap: Record<string, string[]> = Object.entries(targetTranslations).reduce(
+  (acc, [lang, translations]) => {
+    Object.entries(translations).forEach(([key, value]) => {
+      if (!acc[key]) acc[key] = [];
+      acc[key].push(value);
+    });
+    return acc;
+  },
+  {} as Record<string, string[]>
+);
+
+/* ---------------------------------------------------------------------- */
+/* 🧭 Funzione per normalizzare un target (indipendente dalla lingua)     */
+/* ---------------------------------------------------------------------- */export function normalizeTarget(target: string | undefined): string | null {
+  if (!target) return null;
+
+  const upper = target.trim().toUpperCase();
+
+  // Gestione speciale per "Black people" e sue varianti (senza considerare spazi)
+  const cleanedForPOC = upper.replace(/\s+/g, "");
+
+  for (const [key, variants] of Object.entries(targetMap)) {
+    if (key === "POC") {
+      // "Black people" e varianti: confronta ignorando gli spazi
+      if (variants.some(v => v.toUpperCase().replace(/\s+/g, "") === cleanedForPOC)) {
+        return key;
+      }
+    } else {
+      // Tutti gli altri confronti normali (rispettano spazi)
+      if (variants.some(v => v.toUpperCase() === upper)) {
+        return key;
+      }
+    }
+  }
+
+  return target;
+}
     export function toCamelCaseParams(params: Record<string, any>): Record<string, any> {
       const camelCaseParams: Record<string, any> = {};
     
