@@ -31,12 +31,14 @@ export const useMessagesStore = defineStore("messagesStore", () => {
   //     return { success: false, status: _error.response?.status, content: null };
   //   }
   // }
-  async function dispatchGetMessages(id: string, 
-    { page = 0, size = 10, sort = "date,desc" }, 
-    target?: string, 
+  async function dispatchGetMessages(
+    id: string,
+    { page = 0, size = 10, sort = "date,desc" },
+    target?: string,
     checkworthy?: number,
-    hate?: number, 
-    topic?: string): Promise<APIResponse<null>> {
+    hate?: number,
+    topic?: string
+  ): Promise<APIResponse<Message[]>> {
     try {
 
       const { status, data } = await API.chats.getChats(id!, {
@@ -49,20 +51,20 @@ export const useMessagesStore = defineStore("messagesStore", () => {
         }));
   
         initMessages(normalized);
-        return { success: true, total: data.totalElements, content: data.content };
+        return { success: true, status, total: data.totalElements, content: normalized };
       }
     } catch (error) {
       const _error = error as AxiosError<string>;
       return {
         success: false,
         status: _error.response?.status,
-        content: null,
+        content: [],
       };
     }
     return {
       success: false,
-      content: null,
-      status: 400,
+      content: [],
+        status: 400,
     };
   }
 
