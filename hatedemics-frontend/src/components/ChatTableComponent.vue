@@ -125,15 +125,10 @@ const onPaginationChange = (options: any) => {
 const fetchMessages = async () => {
   loading.value = true; // Avvia il loading
   try {
-    const { success, status, total, content } : {
-  success: boolean;
-  status: number;
-  total: number;
-  content: any[]; 
-}= await messagesStore.dispatchGetMessages(
+    const res = await messagesStore.dispatchGetMessages(
       selectedChat.value!,
       {
-        page: pagination.page, 
+        page: pagination.page,
         size: pagination.size,
         sort: pagination.sort,
       },
@@ -142,7 +137,9 @@ const fetchMessages = async () => {
       filters.hate ?? undefined
       // filters.topic ?? undefined
     );
-    
+    const success = res.success;
+    const total = res.total ?? 0;
+    const content = res.content ?? [];
     if (success && total && content) {
       totalItems.value = total;
 

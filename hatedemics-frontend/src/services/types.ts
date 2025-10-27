@@ -226,6 +226,7 @@ export type Message = {
   topic?: string,
   target?: string,
   keywords_match?: string,
+  target_normalized?: string;
 }
 
 export type PeerId = {
