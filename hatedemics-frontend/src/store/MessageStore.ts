@@ -1,6 +1,7 @@
 // store/channels/index.
 import { API } from "@/services";
 import type { APIResponse, Message } from "@/services/types";
+import { normalizeTarget } from "@/services/utility";
 import type { AxiosError } from "axios";
 import { defineStore } from "pinia";
 import { ref } from 'vue';
@@ -42,7 +43,12 @@ export const useMessagesStore = defineStore("messagesStore", () => {
         page, size, sort
       }, target, checkworthy, hate, topic);
       if (status === 200) {
-        initMessages(data.content);
+        const normalized = data.content.map((msg: Message) => ({
+          ...msg,
+          target_normalized: normalizeTarget(msg.target),
+        }));
+  
+        initMessages(normalized);
         return { success: true, total: data.totalElements, content: data.content };
       }
     } catch (error) {
