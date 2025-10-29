@@ -9,12 +9,10 @@ import { useChannelsStore } from "@/store/ChannelStore";
 import {
   formatDate,
   isEmptyOrSpaces,
-  cleanString,
   normalizeTarget,
   targetMap,
   targetTranslations,
 } from "@/services/utility";
-import dialogApi from "@/services/dialog/dialogApi";
 
 import { useGlobal } from "@/store";
 const { t } = useI18n();
@@ -406,24 +404,6 @@ const getReliabilityIcon = (value: number) => {
         </span>
         <span v-else>NA</span>
       </template>
-
-      <!-- <template v-slot:item.actions="{ item }">
-        <v-tooltip v-if="!isEmptyOrSpaces(item?.target!)" :text="t('message.target')">
-          <template #activator="{ props }">
-            <v-icon v-bind="props" color="primary" class="cursor-pointer">
-              mdi-arrow-right-bold-circle
-            </v-icon>
-          </template>
-        </v-tooltip>
-        <v-tooltip v-else :text="t('message.noTarget')">
-          <template #activator="{ props }">
-            <v-icon v-bind="props" color="grey" class="cursor-pointer">
-              mdi-arrow-right-bold-circle
-            </v-icon>
-          </template>
-        </v-tooltip>
-      </template> -->
-
       <template v-slot:no-data>
         <div class="text-center pa-4">
           <v-icon size="48" class="mb-2">mdi-database-off</v-icon>
@@ -449,15 +429,6 @@ const getReliabilityIcon = (value: number) => {
           'no-target': !selectedMessage?.target,
         }"
       >
-        <!-- <v-list-item-title>
-            {{ t("message.dialog.start", { target }) }}
-          </v-list-item-title> -->
-        <!-- <v-list-item-title v-if="target!== 'OTHER'">
-        {{ t("message.dialog.start",{ target }) }}
-      </v-list-item-title>
-      <v-list-item-title v-else>
-        {{ t("message.dialog.startOther") }}
-      </v-list-item-title> -->
       </v-list-item>
     </v-list>
     <!-- </v-menu> -->
