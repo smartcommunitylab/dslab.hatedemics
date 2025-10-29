@@ -142,10 +142,13 @@ const fetchMessages = async () => {
       totalItems.value = total;
 
       // Normalizza i target per ogni messaggio
-      messages.value = content.map((msg) => ({
-        ...msg,
-        target_normalized: normalizeTarget(msg.target) ?? "",
-      }));
+      messages.value = content.map((msg) => {
+        const firstTarget = msg.target?.split(",")[0]?.trim() ?? "";
+        return {
+          ...msg,
+          target_normalized: normalizeTarget(firstTarget) ?? "",
+        };
+      });
     }
   } finally {
     loading.value = false; // Disattiva il loading
@@ -395,11 +398,11 @@ const getReliabilityIcon = (value: number) => {
       <template v-slot:item.target="{ item }">
         <span v-if="!isEmptyOrSpaces(item?.target!)">
           <span
-          v-for="(target, idx) in (item.target_normalized ?? '').split(',')"
-  :key="idx"
-  class="me-2"
->
-  {{ t(`message.filter.${target.trim()}`) }}
+            v-for="(target, idx) in (item.target_normalized ?? '').split(',')"
+            :key="idx"
+            class="me-2"
+          >
+            {{ t(`message.filter.${target.trim()}`) }}
           </span>
         </span>
         <span v-else>NA</span>

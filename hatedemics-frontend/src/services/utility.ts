@@ -54,7 +54,7 @@ export function processingChannelInfo(data: ChannelInfo[]) {
       MUSLIMS: "Musulmanes",
     },
     MT: {
-      DISABLED: "Persuni b’diżabilità",
+      DISABLED: "Individwi b'diżabilità",
       POC: "Persuni b’ġilda skura",
       MIGRANTS: "Migranti",
       WOMEN: "Nisa",

@@ -52,10 +52,7 @@ const startDialogue = async (target: string | null) => {
   if (!target || target === "OTHER") return;
 
   // Prendi la lingua della piattaforma da vue-i18n
-  const lang = currentI18nLocale.value.toUpperCase(); // IT, EN, PL, ES, MT
-
-  // Mappa dei target tradotti
-  
+  const lang = currentI18nLocale.value.toUpperCase(); 
 
   const translatedTarget = targetTranslations[lang]?.[target];
 
@@ -69,31 +66,45 @@ const startDialogue = async (target: string | null) => {
     const projects = await dialogApi.getProjects();
     const matchedProjects = projects.data.filter((p: any) => p.name === translatedTarget);
 
-    // Se c'è un solo match, lo prendiamo direttamente
     let project: any;
 
-// Se c'è un solo match, lo prendiamo direttamente
-if (matchedProjects.length === 1) {
-  project = matchedProjects[0];
-} else {
-  // Ordine delle lingue: se la lingua corrente è presente nell'array, scegli quella
-  const langPriority: Record<string, number> = {
-    PL: 0,
-    IT: 1,
-    ES: 2,
-    EN: 3,
-  };
+    if (matchedProjects.length === 1) {
+      // ✅ Solo uno: prendilo direttamente
+      project = matchedProjects[0];
+    } else {
+      // Ordine delle lingue
+      const langPriority: Record<string, number> = {
+        PL: 0,
+        IT: 1,
+        ES: 2,
+        EN: 3,
+      };
 
-  // Se la lingua corrente esiste in langPriority e abbiamo un progetto corrispondente
-  const idx = langPriority[lang as keyof typeof langPriority];
-  if (idx !== undefined && matchedProjects[idx]) {
-    project = matchedProjects[idx];
-  } else {
-    // fallback: prendiamo il primo match
-    project = matchedProjects[0];
-  }
-}
+      const idx = langPriority[lang as keyof typeof langPriority];
 
+      // 🔧 Caso speciale: se abbiamo meno di 4 progetti e la lingua è IT → prendi quello con ID più basso
+      if (matchedProjects.length < 4 ) {
+        if (lang === "IT") {
+          // 🇮🇹 se italiano → prendi quello con ID più basso
+          project = matchedProjects.reduce((prev: any, curr: any) =>
+            prev.id < curr.id ? prev : curr
+          );
+        } else {
+          project = matchedProjects.reduce((prev: any, curr: any) =>
+            prev.id > curr.id ? prev : curr
+          );
+        }
+         
+      } 
+      // 🔧 Altrimenti, usa l’indice se valido
+      else if (idx !== undefined && matchedProjects[idx]) {
+        project = matchedProjects[idx];
+      } 
+      // 🔧 Fallback: prendi il primo
+      else {
+        project = matchedProjects[0];
+      }
+    }
 
     if (project) {
       router.push({ name: "tasks", params: { projectID: project.id } });
@@ -106,6 +117,7 @@ if (matchedProjects.length === 1) {
 
   showTopicsDialog.value = false;
 };
+
 
 // Mappa le chat con label "Chat 1", "Chat 2", ecc.
 const chatOptions = computed(() =>
