@@ -82,6 +82,26 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/views/Educational/LateralReadingTask.vue')
   },
   {
+    path: '/educational/spot-hate',
+    name: 'spotHateIntro',
+    component: () => import('@/views/Educational/SpotHateIntro.vue')
+  },
+  {
+    path: '/educational/spot-hate/task',
+    name: 'spotHateTask',
+    component: () => import('@/views/Educational/SpotHateTask.vue')
+  },
+  {
+    path: '/educational/counterspeech',
+    name: 'counterSpeechIntro',
+    component: () => import('@/views/Educational/CounterSpeechIntro.vue')
+  },
+  {
+    path: '/educational/counterspeech/task',
+    name: 'counterSpeechTask',
+    component: () => import('@/views/Educational/CounterSpeechTask.vue')
+  },
+  {
     path: '/dashboard',
     name: 'Dashboard',
     component: () => import('@/views/DashboardView.vue'),

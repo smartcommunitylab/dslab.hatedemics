@@ -6,7 +6,6 @@ import { onMounted, ref } from "vue";
 import { useUserStore } from "@/store/UserStore";
 import HomeStepperDialog from "@/components/HomeStepperDialog.vue";
 const showDialog = ref(false);
-// const neverShow = ref(false);
 const userStore = useUserStore();
 
 onMounted(() => {
@@ -16,13 +15,6 @@ onMounted(() => {
   }
 });
 
-// function closeDialog() {
-//   showDialog.value = false;
-//   if (neverShow.value) {
-//     userStore.setHideHomeStepperDialog(true);
-//     localStorage.setItem("hideHomeStepper", "1");
-//   }
-// }
 function handleNeverShow() {
   userStore.setHideHomeStepperDialog(true);
   localStorage.setItem("hideHomeStepper", "1");
@@ -91,16 +83,6 @@ function handleNeverShow() {
             </p>
           </div>
           <div class="text-right mt-6">
-            <!-- <v-btn
-              variant="outlined"
-              color="error"
-              size="small"
-              class="rounded-circle"
-              style="min-width: 36px; height: 36px; padding: 0"
-              @click="showExploreGuide = true"
-            >
-              <v-icon size="20">mdi-help</v-icon>
-            </v-btn> -->
             <v-btn color="buttonColor" to="/dashboard/channels" variant="flat">
               {{ t("home.networkButton") }}
             </v-btn>
@@ -125,23 +107,12 @@ function handleNeverShow() {
             </p>
           </div>
           <div class="text-right mt-6">
-            <!-- <v-btn
-              variant="outlined"
-              color="error"
-              size="small"
-              class="rounded-circle"
-              style="min-width: 36px; height: 36px; padding: 0"
-              @click="showCounterspeechGuide = true"
-            >
-              <v-icon size="20">mdi-help</v-icon>
-            </v-btn> -->
             <v-btn color="buttonColor" to="/projects" variant="flat">
               {{ t("home.counterspeechButton") }}
             </v-btn>
           </div>
         </v-card>
       </v-col>
-      <!-- Card 3: What to know before using the platform -->
     </v-row>
   </v-container>
   <HomeStepperDialog v-model="showDialog" @neverShow="handleNeverShow" />

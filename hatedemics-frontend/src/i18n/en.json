@@ -9,7 +9,7 @@
         "ok": "OK",
         "yes": "Yes",
         "no": "No",
-                "showMore": "Show more",
+        "showMore": "Show more",
         "showLess": "Show less"
     },
     "menu": {
@@ -172,6 +172,12 @@
         "eduCard4Title": "Lateral Reading",
         "eduCard4Desc": "Learn how to read and check online content.",
         "eduCard4Button": "Start Activity",
+        "eduCard5Title": "Spot The Hate",
+        "eduCard5Desc": "Identify hate speech and disinformation in online content.",
+        "eduCard5Button": "Start Activity",
+        "eduCard6Title": "Counterspeech Writing",
+        "eduCard6Desc": "Train your ability to respond to hate and disinformation content.",
+        "eduCard6Button": "Start Activity",
         "warningTitle": "Warning",
         "warningText": "These activities contain unobfuscated examples some readers may find offensive. If any activity or part of activity makes you feel uncomfortable or you feel triggered please refer to us or feel free to leave the room.",
         "warningButton": "I understand",
@@ -237,6 +243,97 @@
                         "text": "No-one has the right to take away any of these rights."
                     }
                 ]
+            },
+            "spothate": {
+                "title": "Spot The Hate",
+                "back": "Back",
+                "finalMessage": "You have completed the activity! You can now move to the next activity.",
+                "description": "Hate speech can be defined as the expression of offensive, discriminatory opinions, content or communications towards specific groups of people or individuals on the basis of their identity characteristics, such as gender, age, sexual orientation, nationality, ethnicity, religion, skin colour, disability or other. Disinformation is false content shared with the intention of causing harm. The creation of this type of content is most often motivated by the desire to earn money, gain publicity or increase political influence. The notion of disinformation is closely related to the concept of misinformation and malinformation. Misinformation is false or erroneous information shared out of a lack of knowledge and without the intent to cause harm. Finally, malinformation is when true information is shared in a different context, on different dates, or deliberately with the aim of causing harm, such as the publication of private data.  In this context, the objective of fact-checking is to provide citizens with tools and information that allow them to form opinions with all the data and verified facts at hand and, consequently, make informed decisions. False information can influence how society thinks and how it deals with everyday problems, and that's why fact-checkers' central mission is to shed light and data on these issues. Broadly speaking,  fact-checking involves detecting hoaxes, verifying their content, and spreading the denial. The first step in the fact-checking process is identifying check worthy content, i.e., claims that deserve verification. According to Nakov et al. 2022, a claim is considered check worthy if: 1) it is factual and verifiable: e.g., it may define concepts, mention quantities (past or present), make verifiable predictions, refer to laws, rules, or procedures, describe or interpret images or videos, or state correlations or causal relationships 2) it is not easily verified by a layperson (e.g., “The capital of Italy is Rome” is not check-worthy). 3) it has public relevance and potential social impact: i.e., it is likely to be false, it is of public interest and/or could be harmful",
+                "objectivesTitle": "Objectives of the activity",
+                "objectives": "Learn to distinguish between actual hate speech and expressions that may be offensive or controversial but do not meet the definition of hate speech.  - Practice appropriate reactions.",
+                "startButton": "Start activity",
+                "task": "1. Identify if the given situations are hate speech or not and choose the reaction you would undertake. You can also provide your own proposal for the reaction. <br>2. Create teams of 3-5 people and discuss your answers - focus on similarities and differences and explain your choices. The task is not to find common answers but rather to see the diversity of reactions. <br>3. Feedback and correction is given if there is any wrongly classified examples (e.g. you did not identify hate speech correctly). ",
+                "headers": {
+                    "message": "Messaggio",
+                    "category": "Tipo"
+                },
+                "questions": {
+                    "hate": "Questo messaggio è hate speech?",
+                    "checkworthy": "Questo messaggio è checkworthy?"
+                },
+                "answers": {
+                    "hate_yes": "Sì, è hate speech",
+                    "hate_no": "No, non è hate speech",
+                    "check_yes": "Sì, è checkworthy",
+                    "check_no": "No, non è checkworthy"
+                },
+                "feedback": {
+                    "correct": "Risposta corretta!",
+                    "incorrect": "Risposta errata."
+                },
+                "dataset": {
+"hs_example1": {
+        "text": "Migrants need to go back where they came from, they don't belong here!",
+        "label": "hate speech",
+        "explanation": "explanation hs_example1"
+      },
+      "hs_example2": {
+        "text": "Islam religion teaches Muslims to hate everyone else!",
+        "label": "hate speech",
+        "explanation": "explanation hs_example2"
+      },
+      "hs_example3": {
+        "text": "I'm tired of political correctness. Everyone's too sensitive these days.",
+        "label": "not hate speech",
+        "explanation": "explanation hs_example3"
+      },
+      "hs_example4": {
+        "text": "Let's all avoid Peter, he always slows the group down!",
+        "label": "not hate speech",
+        "explanation": "explanation hs_example4"
+      },
+      "hs_example5": {
+        "text": "Women are too emotional to be leaders!",
+        "label": "hate speech",
+        "explanation": "explanation hs_example5"
+      },
+      "hs_example6": {
+        "text": "We cannot allow migrants to settle here because they only want to take advantage of the social welfare system and do not want to work. We do not need people like that.",
+        "label": "hate speech",
+        "explanation": "explanation hs_example6"
+      },
+      "cw_example1": {
+        "text": "Breaking: Congress prepares to shutter Capitol Hill for coronavirus, opens telework center",
+        "label": "checkworthy",
+        "explanation": "verifiable, factual, of interest to society"
+      },
+      "cw_example2": {
+        "text": "China has 24 times more people than Italy",
+        "label": "not checkworthy",
+        "explanation": "verifiable, factual, but trivial to check"
+      },
+      "cw_example3": {
+        "text": "Lord, please protect my family and the philippines from the coronavirus",
+        "label": "not checkworthy",
+        "explanation": "Not factual, not checkworthy"
+      },
+      "cw_example4": {
+        "text": "The capital of Italy is Rome",
+        "label": "not checkworthy",
+        "explanation": "verifiable, factual, but trivial to check"
+      },
+      "cw_example5": {
+        "text": "Vaccines cause autism",
+        "label": "checkworthy",
+        "explanation": "verifiable, factual, of interest to society"
+      },
+      "cw_example6": {
+        "text": "I believe in ghosts!",
+        "label": "not checkworthy",
+        "explanation": "Not factual, not checkworthy"
+      }
+
+                }
             },
             "debunking": {
                 "title": "Debunking",
