@@ -239,6 +239,100 @@
                 ],
                 "summary": "¿Ya conocías todos los derechos humanos mencionados? ¿Cuáles eran nuevos para ti? ¿Te resultó fácil o difícil explicar el significado de estos derechos y relacionarlos con el discurso de odio? ¿Puedes nombrar otros derechos humanos que no se citaron?"
             },
+            "spothate": {
+                "title": "Spot The Hate",
+                "back": "Back",
+                "finalMessage": "¡Has completado la actividad! Ahora puedes pasar a la siguiente actividad.",
+                "description": "El discurso de odio se define como la expresión de opiniones, contenido o comunicaciones ofensivas y discriminatorias dirigidas a grupos específicos de personas o individuos, basándose en características de su identidad como el género, la edad, la orientación sexual, la nacionalidad, la etnia, la religión, el color de piel, la discapacidad u otras. La desinformación es contenido falso que se comparte con la intención de causar daño. La creación de este tipo de contenido suele estar motivada por el deseo de obtener dinero, publicidad o aumentar la influencia política. La noción de desinformación está estrechamente relacionada con los conceptos de información errónea y malinformación. La información errónea es información falsa o incorrecta que se comparte por desconocimiento y sin la intención de causar daño. Por último, la malinformación se produce cuando se comparte información veraz en un contexto diferente, en fechas distintas o deliberadamente con el objetivo de causar daño, como la publicación de datos privados. En este contexto, el objetivo de la verificación de datos es proporcionar a la ciudadanía herramientas e información que les permitan formarse opiniones con todos los datos y hechos verificados a su alcance y, en consecuencia, tomar decisiones informadas. La información falsa puede influir en la forma de pensar de la sociedad y en cómo aborda los problemas cotidianos, y por eso la misión principal de los verificadores de datos es esclarecer y aportar información sobre estos temas. En términos generales, la verificación de datos implica detectar bulos, verificar su contenido y difundir la desmentida. El primer paso en el proceso de verificación de datos es identificar el contenido que merece ser verificado, es decir, las afirmaciones que sí lo merecen. Según Nakov et al. (2022), una afirmación se considera verificable si:  1) es fáctica y verificable: por ejemplo, puede definir conceptos, mencionar cantidades (pasadas o presentes), hacer predicciones verificables, referirse a leyes, normas o procedimientos, describir o interpretar imágenes o vídeos, o establecer correlaciones o relaciones causales.  2) no es fácilmente verificable por una persona sin conocimientos especializados (por ejemplo, «El idioma hablado en Brasil es el portugués.» no es verificable).  3) Tiene relevancia pública y potencial impacto social: es decir, es probable que sea falso, es de interés público y/o podría ser perjudicial.",
+                "objectivesTitle": "Objetivos de la actividad",
+                "objectives": "- Aprende a distinguir entre el discurso de odio propiamente dicho y las expresiones que pueden resultar ofensivas o controvertidas, pero que no se ajustan a la definición de discurso de odio. - Practica reacciones adecuadas.",
+                "startButton": "Comenzar actividad",
+                "task": "1. Identifica si las situaciones presentadas constituyen discurso de odio o no, y elige la reacción que adoptarías. También puedes proponer tu propia reacción. 2. Forma equipos de 3 a 5 personas y discutan sus respuestas. Concéntrense en las similitudes y diferencias, y expliquen sus elecciones. El objetivo no es encontrar respuestas comunes, sino observar la diversidad de reacciones. 3. Se proporcionarán comentarios y correcciones si hay ejemplos mal clasificados (por ejemplo, si no identificaste correctamente el discurso de odio).",
+                "headers": {
+                    "message": "Mensaje",
+                    "category": "Categoría"
+                },
+                "questions": {
+                    "hate": "¿Es este mensaje un discurso de odio?",
+                    "checkworthy": "¿Es este mensaje digno de verificación?"
+                },
+                "answers": {
+                    "hate_yes": "Sí, es un discurso de odio",
+                    "hate_no": "No, no es un discurso de odio",
+                    "check_yes": "Sí, es digno de verificación",
+                    "check_no": "No, no es digno de verificación"
+                },
+                "feedback": {
+                    "correct": "¡Respuesta correcta!",
+                    "incorrect": "Respuesta incorrecta."
+                },
+                "dataset": {
+                    "hs_example1": {
+                        "text": "¡Los inmigrantes deben regresar a donde vinieron, no pertenecen aquí!",
+                        "label": "hate speech",
+                        "explanation": "Esta declaración es odiosa porque expresa hostilidad, rechazo y exclusión hacia todo un grupo protegido (los migrantes) en función de su origen nacional o estatus migratorio."
+                    },
+                    "hs_example2": {
+                        "text": "¡La religión islámica enseña a los musulmanes a odiar a todos los demás!",
+                        "label": "hate speech",
+                        "explanation": "Esta declaración constituye un discurso de odio porque ataca a toda una religión (el Islam) y a sus seguidores (los musulmanes) con una generalización falsa y hostil que los retrata como inherentemente odiosos o peligrosos."
+                    },
+                    "hs_example3": {
+                        "text": "Estoy harto de la corrección política. Hoy en día todo el mundo es demasiado susceptible.",
+                        "label": "not hate speech",
+                        "explanation": "Si bien la declaración puede ofender a algunas personas o reflejar una actitud desdeñosa hacia la sensibilidad social, la mera ofensa no convierte un discurso en discurso de odio. El discurso de odio requiere la intención y la dirección de dañar o humillar a otros en función de características de identidad como la raza, la religión, la etnia, el género, la orientación sexual o rasgos similares."
+                    },
+                    "hs_example4": {
+                        "text": "¡Las mujeres son demasiado emocionales para ser líderes!",
+                        "label": "hate speech",
+                        "explanation": "Este mensaje se considera discurso de odio (o al menos discurso discriminatorio) porque ataca y denigra a todo un grupo protegido —las mujeres— basándose en estereotipos de género."
+                    },
+                    "hs_example5": {
+                        "text": "¡Evitemos todos a Peter, siempre retrasa al grupo!",
+                        "label": "not hate speech",
+                        "explanation": "Este mensaje no constituye un discurso de odio porque se dirige a un individuo por una conducta percibida, no por pertenecer a un grupo protegido (como un grupo definido por raza, religión, género, orientación sexual, etnia, discapacidad o características similares)."
+                    },
+                    "hs_example6": {
+                        "text": "No podemos permitir que los inmigrantes se establezcan aquí porque solo quieren aprovecharse del sistema de asistencia social y no quieren trabajar. No necesitamos gente así.",
+                        "label": "hate speech",
+                        "explanation": "Esta declaración se considera discurso de odio porque ataca a un grupo protegido (los migrantes) y atribuye estereotipos negativos y dañinos a todos los miembros de ese grupo de una manera que promueve la exclusión y la hostilidad."
+                    },
+                    "cw_example1": {
+                        "text": "Última hora: El Congreso se prepara para cerrar el Capitolio por el coronavirus y abre un centro de teletrabajo.",
+                        "label": "checkworthy",
+                        "explanation": "Este mensaje puede considerarse digno de verificación, ya que es verificable, veraz y de interés para la sociedad."
+                    },
+                    "cw_example2": {
+                        "text": "China tiene 24 veces más habitantes que Italia.",
+                        "label": "not checkworthy",
+                        "explanation": "Si bien este mensaje es verificable y veraz, también es trivial de comprobar; por lo tanto, no se puede considerar digno de verificación."
+                    },
+                    "cw_example3": {
+                        "text": "Señor, por favor protege a mi familia y a Filipinas del coronavirus.",
+                        "label": "not checkworthy",
+                        "explanation": "Este mensaje no es veraz ni verificable; por lo tanto, no puede considerarse digno de comprobación."
+                    },
+                    "cw_example4": {
+                        "text": "La capital de Italia es Roma.",
+                        "label": "not checkworthy",
+                        "explanation": "Si bien este mensaje es verificable y veraz, también es trivial de comprobar; por lo tanto, no se puede considerar digno de verificación."
+                    },
+                    "cw_example5": {
+                        "text": "Las vacunas causan autismo",
+                        "label": "checkworthy",
+                        "explanation": "Este mensaje es verificable, veraz y de interés para la sociedad: por estas razones, puede considerarse digno de verificación."
+                    },
+                    "cw_example6": {
+                        "text": "¡Creo en fantasmas!",
+                        "label": "not checkworthy",
+                        "explanation": "Este mensaje no es veraz ni verificable; por lo tanto, no puede considerarse digno de comprobación."
+                    }
+                },
+                "completedTitle": "Actividad completada",
+                "completed": "¡Has completado la actividad! Ahora puedes comentar tus respuestas con tus compañeros y tu profesor.",
+                "score": "Puntaje",
+                "finish": "Finalizar"
+            },
             "debunking": {
                 "title": "Desmentir",
                 "back": "Atrás",

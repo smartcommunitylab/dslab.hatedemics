@@ -254,86 +254,89 @@
                 "startButton": "Start activity",
                 "task": "1. Identify if the given situations are hate speech or not and choose the reaction you would undertake. You can also provide your own proposal for the reaction. <br>2. Create teams of 3-5 people and discuss your answers - focus on similarities and differences and explain your choices. The task is not to find common answers but rather to see the diversity of reactions. <br>3. Feedback and correction is given if there is any wrongly classified examples (e.g. you did not identify hate speech correctly). ",
                 "headers": {
-                    "message": "Messaggio",
-                    "category": "Tipo"
+                    "message": "Message",
+                    "category": "Category"
                 },
                 "questions": {
-                    "hate": "Questo messaggio è hate speech?",
-                    "checkworthy": "Questo messaggio è checkworthy?"
+                    "hate": "Is this message hate speech?",
+                    "checkworthy": "Is this message checkworthy?"
                 },
                 "answers": {
-                    "hate_yes": "Sì, è hate speech",
-                    "hate_no": "No, non è hate speech",
-                    "check_yes": "Sì, è checkworthy",
-                    "check_no": "No, non è checkworthy"
+                    "hate_yes": "Yes, it is hate speech",
+                    "hate_no": "No, it is not hate speech",
+                    "check_yes": "Yes, it is checkworthy",
+                    "check_no": "No, it is not checkworthy"
                 },
                 "feedback": {
-                    "correct": "Risposta corretta!",
-                    "incorrect": "Risposta errata."
+                    "correct": "Correct answer!",
+                    "incorrect": "Wrong answer."
                 },
                 "dataset": {
-"hs_example1": {
-        "text": "Migrants need to go back where they came from, they don't belong here!",
-        "label": "hate speech",
-        "explanation": "explanation hs_example1"
-      },
-      "hs_example2": {
-        "text": "Islam religion teaches Muslims to hate everyone else!",
-        "label": "hate speech",
-        "explanation": "explanation hs_example2"
-      },
-      "hs_example3": {
-        "text": "I'm tired of political correctness. Everyone's too sensitive these days.",
-        "label": "not hate speech",
-        "explanation": "explanation hs_example3"
-      },
-      "hs_example4": {
-        "text": "Let's all avoid Peter, he always slows the group down!",
-        "label": "not hate speech",
-        "explanation": "explanation hs_example4"
-      },
-      "hs_example5": {
-        "text": "Women are too emotional to be leaders!",
-        "label": "hate speech",
-        "explanation": "explanation hs_example5"
-      },
-      "hs_example6": {
-        "text": "We cannot allow migrants to settle here because they only want to take advantage of the social welfare system and do not want to work. We do not need people like that.",
-        "label": "hate speech",
-        "explanation": "explanation hs_example6"
-      },
-      "cw_example1": {
-        "text": "Breaking: Congress prepares to shutter Capitol Hill for coronavirus, opens telework center",
-        "label": "checkworthy",
-        "explanation": "verifiable, factual, of interest to society"
-      },
-      "cw_example2": {
-        "text": "China has 24 times more people than Italy",
-        "label": "not checkworthy",
-        "explanation": "verifiable, factual, but trivial to check"
-      },
-      "cw_example3": {
-        "text": "Lord, please protect my family and the philippines from the coronavirus",
-        "label": "not checkworthy",
-        "explanation": "Not factual, not checkworthy"
-      },
-      "cw_example4": {
-        "text": "The capital of Italy is Rome",
-        "label": "not checkworthy",
-        "explanation": "verifiable, factual, but trivial to check"
-      },
-      "cw_example5": {
-        "text": "Vaccines cause autism",
-        "label": "checkworthy",
-        "explanation": "verifiable, factual, of interest to society"
-      },
-      "cw_example6": {
-        "text": "I believe in ghosts!",
-        "label": "not checkworthy",
-        "explanation": "Not factual, not checkworthy"
-      }
-
-                }
+                    "hs_example1": {
+                        "text": "Migrants need to go back where they came from, they don’t belong here!",
+                        "label": "hate speech",
+                        "explanation": "This statement is hateful because it expresses hostility, rejection, and exclusion toward an entire group (migrants) based on their national origin or immigration status."
+                    },
+                    "hs_example2": {
+                        "text": "Islam religion teaches Muslims to hate everyone else!",
+                        "label": "hate speech",
+                        "explanation": "This statement is hate speech because it targets an entire religion (Islam) and its followers (Muslims) with a false, hostile generalization that portrays them as inherently hateful or dangerous."
+                    },
+                    "hs_example3": {
+                        "text": "I'm tired of political correctness. Everyone's too sensitive these days.",
+                        "label": "not hate speech",
+                        "explanation": "Although the statement may offend some people or reflect a dismissive attitude toward social sensitivity, offensiveness alone does not make speech hateful. Hate speech requires intent and direction toward harming or demeaning others based on identity characteristics such as race, religion, ethnicity, gender, sexual orientation, or similar traits."
+                    },
+                    "hs_example4": {
+                        "text": "Women are too emotional to be leaders!",
+                        "label": "hate speech",
+                        "explanation": "This message is considered hate speech (or at least discriminatory speech) because it targets and demeans an entire group — women — based on gender stereotypes."
+                    },
+                    "hs_example5": {
+                        "text": "Let’s all avoid Peter, he always slows the group down!",
+                        "label": "not hate speech",
+                        "explanation": "This message is not hate speech because it targets an individual for a perceived behavior, not for belonging to a protected group (such as a group defined by race, religion, gender, sexual orientation, ethnicity, disability, or similar traits)."
+                    },
+                    "hs_example6": {
+                        "text": "We cannot allow migrants to settle here because they only want to take advantage of the social welfare system and do not want to work. We do not need people like that.",
+                        "label": "hate speech",
+                        "explanation": "This statement is considered hate speech because it targets a group (migrants) and attributes negative, harmful stereotypes to all members of that group in a way that promotes exclusion and hostility."
+                    },
+                    "cw_example1": {
+                        "text": "Breaking: Congress prepares to shutter Capitol Hill for coronavirus, opens telework center",
+                        "label": "checkworthy",
+                        "explanation": "This message can be considered check worthy as it is verifiable, factual and of interest to society."
+                    },
+                    "cw_example2": {
+                        "text": "China has 24 times more people than Italy",
+                        "label": "not checkworthy",
+                        "explanation": "While this message is verifiable and factual, it is also trivial to check: therefore, it can not be considered check worthy."
+                    },
+                    "cw_example3": {
+                        "text": "Lord, please protect my family and the philippines from the coronavirus",
+                        "label": "not checkworthy",
+                        "explanation": "This message is not factual or verifiable: thus, it can not be considered check worthy."
+                    },
+                    "cw_example4": {
+                        "text": "The capital of Italy is Rome",
+                        "label": "not checkworthy",
+                        "explanation": "While this message is verifiable and factual, it is also trivial to check: therefore, it can not be considered check worthy."
+                    },
+                    "cw_example5": {
+                        "text": "Vaccines cause autism",
+                        "label": "checkworthy",
+                        "explanation": "This message is verifiable, factual, and of interest to society: for these reasons, it can be considered check worthy."
+                    },
+                    "cw_example6": {
+                        "text": "I believe in ghosts!",
+                        "label": "not checkworthy",
+                        "explanation": "This message is not factual or verifiable: thus, it can not be considered check worthy."
+                    }
+                },
+                "completedTitle": "Activity completed",
+                "completed": "You have completed the activity! Now you can discuss your answers with your classmates and teacher.",
+                "score": "Score",
+                "finish": "Finish"
             },
             "debunking": {
                 "title": "Debunking",

@@ -238,6 +238,100 @@
           }
         ]
       },
+      "spothate": {
+                "title": "Sib id-diskors ta’ mibegħda u x’jiswa li jiġi ċċekkjat!",
+                "back": "Lura",
+                "finalMessage": "Intemmt l-attività! Issa tista’ tgħaddi għall-attività li jmiss.",
+                "description": "Diskors ta’ mibegħda jista’ jiġi definit bħala l-espressjoni ta’ opinjonijiet, kontenut jew komunikazzjonijiet offensivi u diskriminatorji lejn gruppi speċifiċi ta’ nies jew individwi abbażi tal-karatteristiċi tal-identità tagħhom, bħas-sess, l-età, l-orjentazzjoni sesswali, in-nazzjonalità, l-etniċità, ir-reliġjon, il-kulur tal-ġilda, id-diżabilità jew oħrajn. Diżinformazzjoni hija kontenut falz kondiviż bl-intenzjoni li jikkawża ħsara. Il-ħolqien ta’ dan it-tip ta’ kontenut ħafna drabi huwa motivat mix-xewqa li jaqilgħu l-flus, jiksbu pubbliċità jew iżidu l-influwenza politika. L-idea ta’ diżinformazzjoni hija relatata mill-qrib mal-kunċett ta’ misinformazzjoni u informazzjoni ħażina. Il-misinformazzjoni hija informazzjoni falza jew żbaljata kondiviża minħabba nuqqas ta’ għarfien u mingħajr l-intenzjoni li jikkawża ħsara. Fl-aħħar nett, informazzjoni ħażina hija meta informazzjoni vera tiġi kondiviża f’kuntest differenti, f’dati differenti, jew deliberatament bil-għan li tikkawża ħsara, bħall-pubblikazzjoni ta’ dejta privata. F’dan il-kuntest, l-objettiv tal-verifika tal-fatti huwa li jipprovdi liċ-ċittadini b’għodod u informazzjoni li jippermettulhom jiffurmaw opinjonijiet bid-dejta u l-fatti verifikati kollha disponibbli u, konsegwentement, jieħdu deċiżjonijiet infurmati. Informazzjoni falza tista' tinfluwenza kif is-soċjetà taħseb u kif tittratta l-problemi ta' kuljum, u huwa għalhekk li l-missjoni ċentrali tal-verifikaturi tal-fatti hija li jitfgħu dawl u dejta fuq dawn il-kwistjonijiet. B'mod ġenerali, il-verifika tal-fatti tinvolvi l-iskoperta ta' frodi, il-verifika tal-kontenut tagħhom, u t-tixrid taċ-ċaħda. L-ewwel pass fil-proċess tal-verifika tal-fatti huwa l-identifikazzjoni ta' kontenut li jistħoqqlu verifika, jiġifieri, stqarrijiet li jistħoqqilhom verifika. Skont Nakov et al. 2022, stqarrija titqies li tista' tiġi vverifikata jekk: 1) tkun fattwali u verifikabbli: eż., tista' tiddefinixxi kunċetti, issemmi kwantitajiet (tal-passat jew tal-preżent), tagħmel tbassir verifikabbli, tirreferi għal liġijiet, regoli, jew proċeduri, tiddeskrivi jew tinterpreta immaġni jew vidjows, jew tiddikjara korrelazzjonijiet jew relazzjonijiet kawżali 2) ma tkunx faċilment verifikata minn persuna komuni (eż., 'Il-lingwa mitkellma fil-Brażil hija l-Portugiż' ma tistax tiġi vverifikata). 3) ikollha rilevanza pubblika u impatt soċjali potenzjali: jiġifieri, x'aktarx li tkun falza, hija ta' interess pubbliku u/jew tista' tkun ta' ħsara",
+                "objectivesTitle": "L-għanijiet tal-attività",
+                "objectives": "- Tgħallem tiddistingwi bejn diskors ta’ mibegħda attwali u espressjonijiet li jistgħu jkunu offensivi jew kontroversjali iżda ma jissodisfawx id-definizzjoni ta’ diskors ta’ mibegħda.<br>- Ipprattika reazzjonijiet xierqa.",
+                "startButton": "Ibda l-attività",
+                "task": "1. Identifika jekk is-sitwazzjonijiet mogħtija humiex diskors ta’ mibegħda jew le u agħżel ir-reazzjoni li tieħu. Tista’ wkoll tipprovdi l-proposta tiegħek stess għar-reazzjoni.<br>2. Oħloq timijiet ta’ 3-5 persuni u ddiskuti t-tweġibiet tiegħek - iffoka fuq ix-xebh u d-differenzi u spjega l-għażliet tiegħek. Il-kompitu mhuwiex li ssib tweġibiet komuni iżda pjuttost li tara d-diversità tar-reazzjonijiet.<br>3. Jingħata feedback u korrezzjoni jekk ikun hemm xi eżempji kklassifikati ħażin (eż. ma identifikajtx id-diskors ta’ mibegħda b’mod korrett).",
+                "headers": {
+                    "message": "Messaġġ",
+                    "category": "Tip"
+                },
+                "questions": {
+                    "hate": "Dan il-messaġġ hu mibegħda?",
+                    "checkworthy": "Dan il-messaġġ jistħoqqlu jiġi vverifikat?"
+                },
+                "answers": {
+                    "hate_yes": "Iva, huwa messaġġ ta’ mibegħda.",
+                    "hate_no": "Le, mhuwiex diskors ta’ mibegħda.",
+                    "check_yes": "Iva, jistħoqqlu jiġi vverifikat.",
+                    "check_no": "Le, ma jistħoqqlux jiġi vverifikat."
+                },
+                "feedback": {
+                    "correct": "Tweġiba korretta!",
+                    "incorrect": "Tweġiba żbaljata."
+                },
+                "dataset": {
+                    "hs_example1": {
+                        "text": "L-immigranti jeħtieġ li jmorru lura minn fejn ġew, ma jappartjenux hawn!",
+                        "label": "diskors ta' mibegħda",
+                        "explanation": "Din id-dikjarazzjoni hija mimlija mibegħda għax tesprimi ostilità, ċaħda u esklużjoni lejn grupp protett sħiħ (migranti) abbażi tal-oriġini nazzjonali jew l-istatus ta' immigrazzjoni tagħhom."
+                    },
+                    "hs_example2": {
+                        "text": "Ir-reliġjon tal-Islam tgħallem lill-Musulmani biex jobogħdu lil kulħadd!",
+                        "label": "diskors ta' mibegħda",
+                        "explanation": "Din id-dikjarazzjoni hija diskors ta’ mibegħda għaliex timmira lejn reliġjon sħiħa (l-Islam) u s-segwaċi tagħha (il-Musulmani) b’ġeneralizzazzjoni falza u ostili li tpinġihom bħala intrinsikament mibegħda jew perikolużi."
+                    },
+                    "hs_example3": {
+                        "text": "Għajjejt mill-korrettezza politika. Kulħadd sensittiv wisq illum il-ġurnata.",
+                        "label": "mhux diskors ta' mibegħda",
+                        "explanation": "Għalkemm id-dikjarazzjoni tista’ toffendi lil xi nies jew tirrifletti attitudni ta’ disprezz lejn is-sensittività soċjali, l-offensività waħedha ma tagħmilx id-diskors mibegħda. Id-diskors ta’ mibegħda jeħtieġ intenzjoni u direzzjoni lejn il-ħsara jew id-degradazzjoni ta’ oħrajn abbażi ta’ karatteristiċi ta’ identità bħar-razza, ir-reliġjon, l-etniċità, is-sess, l-orjentazzjoni sesswali, jew karatteristiċi simili."
+                    },
+                    "hs_example4": {
+                        "text": "Ejjew nevitaw lil Peter ilkoll, hu dejjem inaqqas ir-ritmu tal-grupp!",
+                        "label": "mhux diskors ta' mibegħda",
+                        "explanation": "Dan il-messaġġ mhuwiex diskors ta’ mibegħda għax jimmira lejn individwu għal imġieba perċepita, mhux talli jappartjeni għal grupp protett (bħal grupp definit mir-razza, ir-reliġjon, is-sess, l-orjentazzjoni sesswali, l-etniċità, id-diżabilità, jew karatteristiċi simili)."
+                    },
+                    "hs_example5": {
+                        "text": "In-nisa huma emozzjonali wisq biex ikunu mexxejja!",
+                        "label": "diskors ta' mibegħda",
+                        "explanation": "Dan il-messaġġ huwa kkunsidrat bħala diskors ta’ mibegħda (jew għall-inqas diskors diskriminatorju) għaliex jimmira u jbaxxi grupp protett sħiħ — in-nisa — abbażi ta’ sterjotipi tal-ġeneru."
+                    },
+                    "hs_example6": {
+                        "text": "Ma nistgħux inħallu lill-migranti joqogħdu hawn għax iridu biss jieħdu vantaġġ mis-sistema tal-benesseri soċjali u ma jridux jaħdmu. M’għandniex bżonn nies bħal dawn.",
+                        "label": "diskors ta' mibegħda",
+                        "explanation": "Din id-dikjarazzjoni hija kkunsidrata bħala diskors ta’ mibegħda għaliex timmira lejn grupp protett (migranti) u tattribwixxi sterjotipi negattivi u ta’ ħsara lill-membri kollha ta’ dak il-grupp b’mod li jippromwovi l-esklużjoni u l-ostilità."
+                    },
+                    "cw_example1": {
+                        "text": "Aħbar l-aktar reċenti: Il-Kungress jipprepara biex jagħlaq Capitol Hill minħabba l-coronavirus, jiftaħ ċentru tat-teleworking",
+                        "label": "verifika denja",
+                        "explanation": "Dan il-messaġġ jista' jitqies li jistħoqqlu verifika peress li huwa verifikabbli, fattwali u ta' interess għas-soċjetà."
+                    },
+                    "cw_example2": {
+                        "text": "Iċ-Ċina għandha 24 darba aktar nies mill-Italja",
+                        "label": "mhux denju ta' verifika",
+                        "explanation": "Filwaqt li dan il-messaġġ huwa verifikabbli u fattwali, huwa wkoll faċli biex jiġi vverifikat: għalhekk, ma jistax jitqies li denju ta' verifika."
+                    },
+                    "cw_example3": {
+                        "text": "Mulej, jekk jogħġbok ipproteġi lill-familja tiegħi u lill-Filippini mill-coronavirus",
+                        "label": "mhux denju ta' verifika",
+                        "explanation": "Dan il-messaġġ mhuwiex fattwali jew verifikabbli: għalhekk, ma jistax jitqies li jistħoqqlu verifika."
+                    },
+                    "cw_example4": {
+                        "text": "Il-kapitali tal-Italja hija Ruma",
+                        "label": "mhux denju ta' verifika",
+                        "explanation": "Filwaqt li dan il-messaġġ huwa verifikabbli u fattwali, huwa wkoll faċli biex jiġi vverifikat: għalhekk, ma jistax jitqies li denju ta' verifika."
+                    },
+                    "cw_example5": {
+                        "text": "Il-vaċċini jikkawżaw l-awtiżmu",
+                        "label": "verifika denja",
+                        "explanation": "Dan il-messaġġ huwa verifikabbli, fattwali, u ta' interess għas-soċjetà: għal dawn ir-raġunijiet, jista' jitqies li jistħoqqlu jiġi vverifikat."
+                    },
+                    "cw_example6": {
+                        "text": "Jiena nemmen fil-fatati!",
+                        "label": "mhux denju ta' verifika",
+                        "explanation": "Dan il-messaġġ mhuwiex fattwali jew verifikabbli: għalhekk, ma jistax jitqies li jistħoqqlu verifika."
+                    }
+                },
+                "completedTitle": "Attività kompluta.",
+                "completed": "Intemmt l-attività! Issa tista’ tiddiskuti t-tweġibiet tiegħek mal-klassi tiegħek u mal-għalliem.",
+                "score": "Punteġġ",
+                "finish": "Imla"
+            },
       "debunking": {
         "title": "Il-kxif tal-falsità",
         "back": "Lura",
@@ -963,7 +1057,7 @@
       "MUSLIMS": "Musulmani",
       "LGBTQIA+": "LGBTQIA+",
       "MIGRANTS": "Migranti",
-      "POC": "Persuni b’ġilda skura",
+      "POC": "Czarnoskórzy",
       "WOMEN": "Nisa"
     },
     "footer": {
