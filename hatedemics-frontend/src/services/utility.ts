@@ -46,7 +46,7 @@ export function processingChannelInfo(data: ChannelInfo[]) {
     },
     ES: {
       DISABLED: "Personas con discapacidad",
-      POC: "Personasnegras",
+      POC: "Personas negras",
       MIGRANTS: "Migrantes",
       WOMEN: "Mujeres",
       "LGBT+": "LGBTQIA+",
@@ -55,7 +55,7 @@ export function processingChannelInfo(data: ChannelInfo[]) {
     },
     MT: {
       DISABLED: "Individwi b'diżabilità",
-      POC: "Persuni b’ġilda skura",
+      POC: "Czarnoskórzy",
       MIGRANTS: "Migranti",
       WOMEN: "Nisa",
       "LGBT+": "LGBTQIA+",
@@ -64,7 +64,7 @@ export function processingChannelInfo(data: ChannelInfo[]) {
     },
     EN: {
       DISABLED: "People with disabilities",
-      POC: "Blackpeople",
+      POC: "Black people",
       MIGRANTS: "Migrants",
       WOMEN: "Women",
       "LGBT+": "LGBTQIA+",
@@ -99,7 +99,7 @@ export const targetMap: Record<string, string[]> = Object.entries(targetTranslat
   const cleanedForPOC = upper.replace(/\s+/g, "");
 
   for (const [key, variants] of Object.entries(targetMap)) {
-    if (key === "POC") {
+    if (key === "POC" || key === "DISABLED") {
       // "Black people" e varianti: confronta ignorando gli spazi
       if (variants.some(v => v.toUpperCase().replace(/\s+/g, "") === cleanedForPOC)) {
         return key;

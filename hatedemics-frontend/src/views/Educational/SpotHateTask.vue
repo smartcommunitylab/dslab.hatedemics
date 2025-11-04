@@ -19,9 +19,19 @@
               <!-- Header della tabella -->
               <div class="message-header">
                 <div class="header-cell date-cell">{{ t("message.header.date") }}</div>
-                <div class="header-cell message-cell">{{ t("message.header.message") }}</div>
+                <div class="header-cell message-cell">
+                  {{ t("message.header.message") }}
+                </div>
                 <div class="header-cell from-cell">{{ t("message.header.from") }}</div>
-                <div class="header-cell reactions-cell">{{ t("message.header.nrReactions") }}</div>
+                <div class="header-cell reactions-cell">
+                  {{ t("message.header.nrReactions") }}
+                </div>
+                <div
+          class="header-cell status-cell"
+          :class="{ visible: showFeedback }"
+        >
+          {{ statusHeaderTitle }}
+        </div>
               </div>
 
               <!-- Riga del messaggio corrente -->
@@ -49,11 +59,24 @@
                   </div>
                 </div>
                 <div class="message-cell from-cell">
-                  {{ currentMessage.from_user || 'User' }}
+                  {{ currentMessage.from_user || "User" }}
                 </div>
                 <div class="message-cell reactions-cell">
                   {{ currentMessage.nr_reactions || 0 }}
                 </div>
+                <div
+          class="message-cell status-cell"
+          :class="{ visible: showFeedback }"
+        >
+          <transition name="fade">
+            <v-icon
+              v-if="showFeedback"
+              :icon="getStatusIcon(currentMessage.label)"
+              :color="getStatusColor(currentMessage.label)"
+              size="small"
+            />
+          </transition>
+        </div>
               </div>
             </div>
           </v-card-text>
@@ -132,7 +155,7 @@
 
         <!-- Progress bar -->
         <v-progress-linear
-          :model-value="(currentIndex + 1) / messages.length * 100"
+          :model-value="((currentIndex + 1) / messages.length) * 100"
           color="primary"
           class="mt-4"
           height="8"
@@ -143,7 +166,7 @@
         <v-dialog v-model="finalDialog" persistent max-width="500">
           <v-card>
             <v-card-title class="text-h6 font-weight-bold bg-success text-white pa-4">
-              {{ t("educational.tasks.debunking.completedTitle") }}
+              {{ t("educational.tasks.spothate.completedTitle") }}
             </v-card-title>
             <v-card-text class="pa-6">
               <div class="text-center mb-4">
@@ -153,14 +176,14 @@
               <v-divider class="my-4"></v-divider>
               <div class="text-center">
                 <p class="text-subtitle-1">
-                  {{ t("educational.tasks.spothate.score") }}: 
+                  {{ t("educational.tasks.spothate.score") }}:
                   <strong>{{ correctAnswers }} / {{ messages.length }}</strong>
                 </p>
               </div>
             </v-card-text>
             <v-card-actions class="justify-center pb-4">
               <v-btn color="success" size="large" @click="goToNextActivity">
-                {{ t("educational.tasks.debunking.finish") }}
+                {{ t("educational.tasks.spothate.finish") }}
               </v-btn>
             </v-card-actions>
           </v-card>
@@ -178,7 +201,14 @@ import { formatDate } from "@/services/utility";
 
 const { t } = useI18n();
 const router = useRouter();
-
+const statusHeaderTitle = computed(() => {
+  if (!currentMessage.value) return "";
+  if (currentMessage.value.type === "hate")
+    return t("message.header.hateLabel");
+  if (currentMessage.value.type === "checkworthy")
+    return t("message.header.checkLabel");
+  return "";
+});
 // === Definizione dataset IDs ===
 const messageIds = [
   { id: "hs_example1", type: "hate" },
@@ -210,22 +240,33 @@ onMounted(() => {
     const randomHour = Math.floor(Math.random() * 24);
     const randomMinute = Math.floor(Math.random() * 60);
     randomDate.setHours(randomHour, randomMinute);
-    
-    const userNames = ['Alice', 'Bob', 'Charlie', 'Diana', 'Eva', 'Frank', 'Grace', 'Henry'];
+
+    const userNames = [
+      "Alice",
+      "Bob",
+      "Charlie",
+      "Diana",
+      "Eva",
+      "Frank",
+      "Grace",
+      "Henry",
+    ];
     const randomUser = userNames[Math.floor(Math.random() * userNames.length)];
     const randomReactions = Math.floor(Math.random() * 15);
-    
+
     // Alcuni messaggi hanno media
     const hasMedia = Math.random() > 0.7;
-    const mediaTypes = ['photo', 'video', 'webpage'];
-    const randomMedia = hasMedia ? mediaTypes[Math.floor(Math.random() * mediaTypes.length)] : null;
+    const mediaTypes = ["photo", "video", "webpage"];
+    const randomMedia = hasMedia
+      ? mediaTypes[Math.floor(Math.random() * mediaTypes.length)]
+      : null;
 
     return {
       id: m.id,
       type: m.type,
-      message: t(`educational.dataset.${m.id}.text`),
-      label: t(`educational.dataset.${m.id}.label`),
-      explanation: t(`educational.dataset.${m.id}.explanation`),
+      message: t(`educational.tasks.spothate.dataset.${m.id}.text`),
+      label: t(`educational.tasks.spothate.dataset.${m.id}.label`),
+      explanation: t(`educational.tasks.spothate.dataset.${m.id}.explanation`),
       from_user: randomUser,
       date: randomDate.toISOString(),
       nr_reactions: randomReactions,
@@ -234,7 +275,34 @@ onMounted(() => {
   });
   messages.value = data.sort(() => 0.5 - Math.random());
 });
+function getStatusIcon(label: string) {
+  switch (label.toLowerCase()) {
+    case "hate speech":
+      return "mdi-emoticon-angry";
+    case "not hate speech":
+      return "mdi-emoticon-happy-outline";
+    case "checkworthy":
+      return "mdi-alert-outline";
+    case "not checkworthy":
+      return "mdi-check-circle-outline";
+    default:
+      return "mdi-help-circle-outline";
+  }
+}
 
+function getStatusColor(label: string) {
+  switch (label.toLowerCase()) {
+    case "hate speech":
+      return "red";
+    case "checkworthy":
+      return "orange";
+    case "not hate speech":
+    case "not checkworthy":
+      return "green";
+    default:
+      return "grey";
+  }
+}
 const currentMessage = computed(() => messages.value[currentIndex.value]);
 const isLast = computed(() => currentIndex.value === messages.value.length - 1);
 
@@ -242,8 +310,9 @@ const isLast = computed(() => currentIndex.value === messages.value.length - 1);
 const currentQuestion = computed(() => {
   const msg = currentMessage.value;
   if (!msg) return "";
-  if (msg.type === "hate") return t("educational.questions.hate");
-  if (msg.type === "checkworthy") return t("educational.questions.checkworthy");
+  if (msg.type === "hate") return t("educational.tasks.spothate.questions.hate");
+  if (msg.type === "checkworthy")
+    return t("educational.tasks.spothate.questions.checkworthy");
   return "";
 });
 
@@ -252,9 +321,15 @@ const options = computed(() => {
   const msg = currentMessage.value;
   if (!msg) return [];
   if (msg.type === "hate")
-    return [t("educational.answers.hate_yes"), t("educational.answers.hate_no")];
+    return [
+      t("educational.tasks.spothate.answers.hate_yes"),
+      t("educational.tasks.spothate.answers.hate_no"),
+    ];
   if (msg.type === "checkworthy")
-    return [t("educational.answers.check_yes"), t("educational.answers.check_no")];
+    return [
+      t("educational.tasks.spothate.answers.check_yes"),
+      t("educational.tasks.spothate.answers.check_no"),
+    ];
   return [];
 });
 
@@ -273,9 +348,16 @@ const isAnswerCorrect = computed(() => {
 const getColor = (user: string) => {
   if (!user) return "#f5f5f5";
   const colors = [
-    "#d1f0d1", "#ffdede", "#d1e0fa", "#fde6d3", 
-    "#f2d9e6", "#d3f8f2", "#fdf5c9", "#e3d7fc", 
-    "#d4eaff", "#e9f7d3"
+    "#d1f0d1",
+    "#ffdede",
+    "#d1e0fa",
+    "#fde6d3",
+    "#f2d9e6",
+    "#d3f8f2",
+    "#fdf5c9",
+    "#e3d7fc",
+    "#d4eaff",
+    "#e9f7d3",
   ];
 
   const hashCode = (str: string) => {
@@ -350,8 +432,8 @@ function goToNextActivity() {
 
 const feedbackMessage = computed(() =>
   isAnswerCorrect.value
-    ? t("educational.feedback.correct")
-    : t("educational.feedback.incorrect")
+    ? t("educational.tasks.spothate.feedback.correct")
+    : t("educational.tasks.spothate.feedback.incorrect")
 );
 
 function getOptionClass(index: number) {
@@ -372,16 +454,24 @@ const finalMessage = computed(() => t("educational.tasks.spothate.completed"));
   overflow: hidden;
 }
 
+.message-header,
+.message-row {
+  display: grid;
+  grid-template-columns: 10% 45% 20% 15% 10%;
+  align-items: center;
+}
+
 .message-header {
-  display: flex;
-  background-color: #f5f5f5;
   font-weight: 600;
   border-bottom: 2px solid #e0e0e0;
 }
 
 .message-row {
-  display: flex;
   border-bottom: 1px solid #e0e0e0;
+}
+
+.message-row:hover {
+  background-color: #fafafa;
 }
 
 .message-row:hover {
@@ -465,7 +555,22 @@ const finalMessage = computed(() => t("educational.tasks.spothate.completed"));
   opacity: 0.6;
   cursor: not-allowed;
 }
-
+.status-cell {
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.status-cell.visible {
+  opacity: 1;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 @keyframes fadeIn {
   from {
     opacity: 0;

@@ -238,6 +238,100 @@
                     }
                 ]
             },
+            "spothate": {
+                "title": "Spot The Hate",
+                "back": "Back",
+                "finalMessage": "Hai completato il compito! Puoi ora passare alla prossima attività.",
+                "description": "Il discorso d’odio (hate speech) può essere definito come l’espressione di opinioni, contenuti o comunicazioni offensive e discriminatorie nei confronti di specifici gruppi di persone o individui, sulla base delle loro caratteristiche identitarie, come genere, età, orientamento sessuale, nazionalità, etnia, religione, colore della pelle, disabilità o altre. La disinformazione è un contenuto falso condiviso con l’intenzione di fare del male. La creazione di questo tipo di contenuto è spesso motivata dal desiderio di guadagnare denaro, ottenere visibilità o aumentare l’influenza politica. Il concetto di disinformazione è strettamente legato a quello di misinformazione e malinformazione. La misinformazione è un’informazione falsa o errata condivisa per mancanza di conoscenza e senza l’intenzione di nuocere. La malinformazione, invece, si verifica quando informazioni vere vengono condivise in un contesto diverso, in date differenti o deliberatamente con l’obiettivo di causare un danno, come nel caso della pubblicazione di dati privati. In questo contesto, l’obiettivo del fact-checking è fornire ai cittadini strumenti e informazioni che permettano loro di formarsi un’opinione basata su dati e fatti verificati e, di conseguenza, prendere decisioni informate. Le false informazioni possono influenzare il modo in cui la società pensa e affronta i problemi quotidiani; per questo la missione principale dei fact-checker è fare luce su tali questioni, portando evidenze e dati verificabili. In senso ampio, il fact-checking consiste nel rilevare le false notizie, verificarne i contenuti e diffonderne la smentita. Il primo passo del processo di fact-checking è identificare i contenuti degni di verifica (“check worthy”), ossia le affermazioni che meritano una verifica. Secondo Nakov et al., 2022, un’affermazione è considerata check worthy se: 1) è fattuale e verificabile: ad esempio, può definire concetti, menzionare quantità (passate o presenti), fare previsioni verificabili, riferirsi a leggi, regole o procedure, descrivere o interpretare immagini o video, oppure dichiarare correlazioni o relazioni causali; 2) non è facilmente verificabile da una persona comune (ad esempio, “La lingua parlata in Brasile è il portoghese” non è un’affermazione check worthy); 3) ha rilevanza pubblica e potenziale impatto sociale, ossia è probabilmente falsa, di interesse pubblico e/o potenzialmente dannosa.",
+                "objectivesTitle": "Obiettivi dell'attività",
+                "objectives": "- Impara a distinguere tra incitamento all'odio vero e proprio ed espressioni che possono essere offensive o controverse ma che non rientrano nella definizione di hate speech.- Metti in pratica reazioni appropriate.",
+                "startButton": "Inizia l'attività",
+                "task": "1. Identifica se le situazioni proposte costituiscono o meno hate speech e scegli la reazione che adotteresti. Puoi anche dare una tua proposta per la reazione.2. Crea gruppi di 3-5 persone e discuti le tue risposte, concentrandoti su somiglianze e differenze e spiegando le tue scelte. L'obiettivo non è trovare risposte comuni, ma piuttosto osservare la diversità delle reazioni. 3. Feedback e correzioni vengono forniti se ci sono esempi classificati erroneamente (ad esempio, non hai identificato correttamente l'hate speech).",
+                "headers": {
+                    "message": "Messaggio",
+                    "category": "Tipo"
+                },
+                "questions": {
+                    "hate": "Questo messaggio è hate speech?",
+                    "checkworthy": "Questo messaggio è checkworthy?"
+                },
+                "answers": {
+                    "hate_yes": "Sì, è hate speech",
+                    "hate_no": "No, non è hate speech",
+                    "check_yes": "Sì, è checkworthy",
+                    "check_no": "No, non è checkworthy"
+                },
+                "feedback": {
+                    "correct": "Risposta corretta!",
+                    "incorrect": "Risposta errata."
+                },
+                "dataset": {
+                    "hs_example1": {
+                        "text": "I migranti devono tornare al loro paese, qui non sono i benvenuti!",
+                        "label": "hate speech",
+                        "explanation": "Questa affermazione è odiosa perché esprime ostilità, rifiuto ed esclusione nei confronti di un intero gruppo (i migranti) in base alla loro origine o al loro status di immigrazione."
+                    },
+                    "hs_example2": {
+                        "text": "La religione islamica insegna ai musulmani a odiare tutti gli altri!",
+                        "label": "hate speech",
+                        "explanation": "Questa affermazione costituisce un incitamento all'odio perché prende di mira un'intera religione (l'Islam) e i suoi fedeli (i musulmani) con una generalizzazione falsa e ostile che li dipinge come intrinsecamente pieni di odio o pericolosi."
+                    },
+                    "hs_example3": {
+                        "text": "Sono stanco del politicamente corretto. Al giorno d'oggi tutti sono troppo sensibili.",
+                        "label": "not hate speech",
+                        "explanation": "Sebbene l'affermazione possa offendere alcune persone o riflettere un atteggiamento sprezzante nei confronti della sensibilità sociale, l'offensività di per sé non rende un discorso necessariamente \"hate speech\". L'hate speech richiede l'intenzione di danneggiare o umiliare gli altri sulla base di caratteristiche identitarie come origine, religione, etnia, genere, orientamento sessuale o tratti simili."
+                    },
+                    "hs_example4": {
+                        "text": "Le donne sono troppo emotive per essere leader!",
+                        "label": "hate speech",
+                        "explanation": "Questo messaggio è considerato un incitamento all'odio (o quantomeno un incitamento alla discriminazione) perché prende di mira e umilia un intero gruppo, le donne, basandosi su stereotipi di genere."
+                    },
+                    "hs_example5": {
+                        "text": "Evitiamo tutti Peter, rallenta sempre il gruppo!",
+                        "label": "not hate speech",
+                        "explanation": "Questo messaggio non costituisce incitamento all'odio perché prende di mira un individuo per un comportamento percepito, non per la sua appartenenza a un gruppo protetto (come un gruppo definito da origine, religione, genere, orientamento sessuale, etnia, disabilità o tratti simili)."
+                    },
+                    "hs_example6": {
+                        "text": "Non possiamo permettere gli immigrati si stabiliscano qui perché vogliono solo usufruire del sistema di assistenza sociale e non vogliono lavorare. Non abbiamo bisogno di persone così.",
+                        "label": "hate speech",
+                        "explanation": "Questa affermazione è considerata un incitamento all'odio perché prende di mira un gruppo (i migranti) e attribuisce stereotipi negativi e dannosi a tutti i membri di quel gruppo, in un modo che promuove l'esclusione e l'ostilità."
+                    },
+                    "cw_example1": {
+                        "text": "Ultime notizie: il Congresso si prepara a chiudere Capitol Hill per il coronavirus e apre un centro per il telelavoro.",
+                        "label": "checkworthy",
+                        "explanation": "Questo messaggio può essere considerato check worthy in quanto verificabile, fattuale e di interesse per la società."
+                    },
+                    "cw_example2": {
+                        "text": "La Cina ha 24 volte più abitanti dell'Italia",
+                        "label": "not checkworthy",
+                        "explanation": "Sebbene questo messaggio sia verificabile e fattuale, è anche banale da controllare: pertanto, non può essere considerato check worthy."
+                    },
+                    "cw_example3": {
+                        "text": "Signore, ti prego proteggi la mia famiglia e le Filippine dal coronavirus.",
+                        "label": "not checkworthy",
+                        "explanation": "Questo messaggio non è fattuale né verificabile: pertanto, non può essere considerato check worthy."
+                    },
+                    "cw_example4": {
+                        "text": "La capitale d'Italia è Roma",
+                        "label": "not checkworthy",
+                        "explanation": "Sebbene questo messaggio sia verificabile e fattuale, è anche banale da controllare: pertanto, non può essere considerato check worthy."
+                    },
+                    "cw_example5": {
+                        "text": "I vaccini causano l'autismo",
+                        "label": "checkworthy",
+                        "explanation": "Questo messaggio è verificabile, fattuale e di interesse per la società: per queste ragioni può essere considerato check worthy."
+                    },
+                    "cw_example6": {
+                        "text": "Io credo nei fantasmi!",
+                        "label": "not checkworthy",
+                        "explanation": "Questo messaggio non è fattuale né verificabile: pertanto, non può essere considerato check worthy."
+                    }
+                },
+                "completedTitle": "Attività completata!",
+                "completed": "You have completed the activity! Now you can discuss your answers with your classmates and teacher.",
+                "score": "Score",
+                "finish": "Finish"
+            },        
             "debunking": {
                 "title": "Debunking",
                 "back": "Indietro",
