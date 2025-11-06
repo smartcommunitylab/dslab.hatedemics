@@ -329,6 +329,9 @@
                 },
                 "completedTitle": "Attività completata!",
                 "completed": "You have completed the activity! Now you can discuss your answers with your classmates and teacher.",
+                "finalMessagePart1": "<ul><li>Partecipa a una discussione rispettosa (se sicuro)</li><li>Contesta la disinformazione (se sicuro)</li><li>Segnala alla piattaforma/moderatore</li><li>Ignora il contenuto</li><li>Blocca l’utente</li><li>Prova a educare la persona (se appropriato e sicuro)</li><li>Cerca maggiori informazioni sul punto di vista dell’utente</li><li>Altra reazione: ………………………</li></ul>",
+                "finalMessagePart2": "<ul><li>Hai avuto difficoltà a identificare gli esempi di hate speech e check worthy? Cosa ha reso un'affermazione un vero e proprio incitamento all'odio o degna di verifica?</li><li>È difficile reagire? Quali competenze sono necessarie per farlo?</li><li>Perché è consigliabile reagire all'hate speech e alla misinformazione?</li></ul>",
+              "next":"Avanti",
                 "score": "Score",
                 "finish": "Finish"
             },        

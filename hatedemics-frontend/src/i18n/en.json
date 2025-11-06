@@ -335,6 +335,9 @@
                 },
                 "completedTitle": "Activity completed",
                 "completed": "You have completed the activity! Now you can discuss your answers with your classmates and teacher.",
+                "finalMessagePart1": "<ul><li>Engage in a respectful discussion (if safe)</li><li>Challenge the misinformation (if safe)</li><li>Report to the platform/moderator</li><li>Ignore it</li><li>Block the user</li><li>Educate the person (if appropriate and safe)</li><li>Seek more information about the user’s point of view</li><li>Other reaction: ……………………</li></ul>",
+                "finalMessagePart2": "<ul><li>Did you have problems in identifying the examples of hate speech? What made a statement cross the line into hate speech?</li><li>Is it difficult to react? What skills are needed to do it?</li><li>Why is it recommended to react to hate speech?</li></ul>",
+              "next":"Next",
                 "score": "Score",
                 "finish": "Finish"
             },
