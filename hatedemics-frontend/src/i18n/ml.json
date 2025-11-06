@@ -329,6 +329,9 @@
                 },
                 "completedTitle": "Attività kompluta.",
                 "completed": "Intemmt l-attività! Issa tista’ tiddiskuti t-tweġibiet tiegħek mal-klassi tiegħek u mal-għalliem.",
+                "finalMessagePart1": "<ul><li>Involvi ruħek f'diskussjoni rispettuża (jekk sikur)</li><li>Ikkontesta l-informazzjoni żbaljata (jekk sikur)</li><li>Irrapporta lill-pjattaforma/moderatur</li><li>Injorah</li><li>Imblokka lill-utent</li><li>Edukà lill-persuna (jekk xieraq u sikur)</li><li>Fittex aktar informazzjoni dwar il-perspettiva tal-utent</li><li>Reazzjoni oħra: ………………………</li></ul>",
+                "finalMessagePart2": "<ul><li>Kellek problemi biex tidentifika l-eżempji ta’ diskors ta’ mibegħda? X’wassal biex stqarrija taqbeż il-linja f’diskors ta’ mibegħda?</li><li>Huwa diffiċli li tirreaġixxi? Liema ħiliet huma meħtieġa biex tagħmel dan?</li><li>Għaliex huwa rakkomandat li tirreaġixxi għal diskors ta’ mibegħda?</li></ul>",
+                "next":"Li jmiss",
                 "score": "Punteġġ",
                 "finish": "Imla"
             },

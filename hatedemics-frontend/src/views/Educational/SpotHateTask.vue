@@ -163,31 +163,67 @@
         ></v-progress-linear>
 
         <!-- Dialog finale -->
-        <v-dialog v-model="finalDialog" persistent max-width="500">
-          <v-card>
-            <v-card-title class="text-h6 font-weight-bold bg-success text-white pa-4">
-              {{ t("educational.tasks.spothate.completedTitle") }}
-            </v-card-title>
-            <v-card-text class="pa-6">
-              <div class="text-center mb-4">
-                <v-icon size="64" color="success">mdi-check-circle-outline</v-icon>
-              </div>
-              <p class="text-center text-h6">{{ finalMessage }}</p>
-              <v-divider class="my-4"></v-divider>
-              <div class="text-center">
-                <p class="text-subtitle-1">
-                  {{ t("educational.tasks.spothate.score") }}:
-                  <strong>{{ correctAnswers }} / {{ messages.length }}</strong>
-                </p>
-              </div>
-            </v-card-text>
-            <v-card-actions class="justify-center pb-4">
-              <v-btn color="success" size="large" @click="goToNextActivity">
-                {{ t("educational.tasks.spothate.finish") }}
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-dialog>
+        <!-- Dialog finale -->
+<v-dialog v-model="finalDialog" persistent max-width="500">
+  <v-card>
+    <!-- Header -->
+    <v-card-title class="text-h6 font-weight-bold bg-success text-white pa-4">
+      {{ t("educational.tasks.spothate.completedTitle") }}
+    </v-card-title>
+
+    <!-- Contenuto -->
+    <v-card-text class="pa-6">
+      <transition name="fade" mode="out-in">
+        <div :key="finalStep">
+          <!-- STEP 1: Risultato -->
+          <div v-if="finalStep === 1" class="text-center">
+            <div class="mb-4">
+              <v-icon size="64" color="success">mdi-check-circle-outline</v-icon>
+            </div>
+            <p class="text-h6 mb-2 text-left" v-html="finalMessagePart1"></p>
+
+            <v-divider class="my-4"></v-divider>
+
+            <p class="text-subtitle-1">
+              {{ t("educational.tasks.spothate.score") }}:
+              <strong>{{ correctAnswers }} / {{ messages.length }}</strong>
+            </p>
+          </div>
+
+          <!-- STEP 2: Messaggio finale -->
+          <div v-else class="text-center">
+            <div class="mb-4">
+              <v-icon size="64" color="primary">mdi-flag-checkered</v-icon>
+            </div>
+            <p class="text-h6 mb-2 text-left" v-html="finalMessagePart2"></p>
+          </div>
+        </div>
+      </transition>
+    </v-card-text>
+
+    <!-- Azioni -->
+    <v-card-actions class="justify-center pb-4">
+      <v-btn
+        v-if="finalStep === 1"
+        color="primary"
+        size="large"
+        @click="nextFinalStep"
+      >
+        {{ t("educational.tasks.spothate.next") }}
+      </v-btn>
+
+      <v-btn
+        v-else
+        color="success"
+        size="large"
+        @click="goToNextActivity"
+      >
+        {{ t("educational.tasks.spothate.finish") }}
+      </v-btn>
+    </v-card-actions>
+  </v-card>
+</v-dialog>
+
       </v-col>
     </v-row>
   </v-container>
@@ -209,6 +245,22 @@ const statusHeaderTitle = computed(() => {
     return t("message.header.checkLabel");
   return "";
 });
+const finalStep = ref(1);
+
+const finalMessagePart1 = computed(() =>
+  t("educational.tasks.spothate.finalMessagePart1")
+);
+const finalMessagePart2 = computed(() =>
+  t("educational.tasks.spothate.finalMessagePart2")
+);
+
+function nextFinalStep() {
+  finalStep.value = 2;
+}
+function finishQuiz() {
+  finalStep.value = 1;
+  finalDialog.value = true;
+}
 // === Definizione dataset IDs ===
 const messageIds = [
   { id: "hs_example1", type: "hate" },
@@ -421,9 +473,9 @@ function prevMessage() {
   }
 }
 
-function finishQuiz() {
-  finalDialog.value = true;
-}
+// function finishQuiz() {
+//   finalDialog.value = true;
+// }
 
 function goToNextActivity() {
   finalDialog.value = false;

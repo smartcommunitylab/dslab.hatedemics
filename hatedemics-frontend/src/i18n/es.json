@@ -330,6 +330,9 @@
                 },
                 "completedTitle": "Actividad completada",
                 "completed": "¡Has completado la actividad! Ahora puedes comentar tus respuestas con tus compañeros y tu profesor.",
+                "finalMessagePart1": "<ul><li>Entablar una conversación respetuosa (si es seguro)</li><li>Cuestionar la información errónea (si es seguro)</li><li>Informar a la plataforma o al moderador</li><li>Ignorar</li><li>Bloquear al usuario</li><li>Informar a la persona (si es apropiado y seguro)</li><li>Buscar más información sobre el punto de vista del usuario</li><li>Otra reacción: ……………………</li></ul>",
+                "finalMessagePart2": "<ul><li>¿Tuviste problemas para identificar ejemplos de discurso de odio? ¿Qué hace que una declaración se considere discurso de odio?</li><li>¿Es difícil reaccionar? ¿Qué habilidades se necesitan para hacerlo?</li><li>¿Por qué se recomienda reaccionar ante el discurso de odio?</li></ul>",
+            "next":"Siguiente",
                 "score": "Puntaje",
                 "finish": "Finalizar"
             },

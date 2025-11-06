@@ -9,7 +9,7 @@
         "ok": "OK",
         "yes": "Tak",
         "no": "Nie",
-                "showMore": "Pokaż więcej",
+        "showMore": "Pokaż więcej",
         "showLess": "Pokaż mniej"
     },
     "menu": {
@@ -91,42 +91,42 @@
         }
     },
     "networkGuide": {
-  "guideTitle": "Glosariusz Eksploracji",
-  "guideItems": {
-    "telegramDataset": {
-      "title": "Zbiór danych Telegram",
-      "description": "<p><strong>Zbiór danych</strong> to uporządkowana kolekcja informacji. Platforma obejmuje około <strong>10 milionów wiadomości z Telegrama</strong>, pobranych z około <strong>500 kanałów</strong>, w <em>4 językach</em> (angielski, włoski, hiszpański i polski).</p><p>Wybrano Telegram, ponieważ oferuje <strong>darmowy dostęp do gromadzenia danych na dużą skalę</strong>, w przeciwieństwie do innych popularnych komunikatorów.</p>"
+        "guideTitle": "Glosariusz Eksploracji",
+        "guideItems": {
+            "telegramDataset": {
+                "title": "Zbiór danych Telegram",
+                "description": "<p><strong>Zbiór danych</strong> to uporządkowana kolekcja informacji. Platforma obejmuje około <strong>10 milionów wiadomości z Telegrama</strong>, pobranych z około <strong>500 kanałów</strong>, w <em>4 językach</em> (angielski, włoski, hiszpański i polski).</p><p>Wybrano Telegram, ponieważ oferuje <strong>darmowy dostęp do gromadzenia danych na dużą skalę</strong>, w przeciwieństwie do innych popularnych komunikatorów.</p>"
+            },
+            "telegramChannels": {
+                "title": "Kanały i czaty Telegram",
+                "description": "<p><strong>Kanał Telegram</strong> to przestrzeń, w której jeden lub kilku administratorów może publikować wiadomości dla szerokiej publiczności.</p><p>Kanał może mieć jeden lub więcej <strong>czatów</strong> o różnych ustawieniach: na przykład niektóre, w których tylko administratorzy mogą publikować wiadomości, i inne, w których wszyscy mogą brać udział.</p><p>Czaty lub rozmowy w kanale odnoszą się do wiadomości tam publikowanych i sposobu, w jaki reaguje publiczność.</p>"
+            },
+            "network": {
+                "title": "Sieć",
+                "description": "<p><strong>Sieć</strong> to struktura, która przedstawia podmioty jako punkty, a relacje między nimi jako linie.</p><p>W tej sieci pobrane kanały Telegram są wyświetlane jako <strong>punkty</strong>, a linie pokazują, jak są połączone. Kanał jest powiązany z innym, gdy Telegram automatycznie go <em>rekomenduje</em>, na podstawie liczby użytkowników wspólnych dla obu kanałów.</p>"
+            },
+            "disinformation": {
+                "title": "Dezinformacja",
+                "description": "<p><strong>Dezinformacja</strong> to fałszywe treści udostępniane w celu wyrządzenia szkody. Tworzenie tego typu treści jest najczęściej motywowane chęcią zarobku, zdobycia rozgłosu lub zwiększenia wpływów politycznych.</p>"
+            },
+            "reliability": {
+                "title": "Wiarygodność",
+                "description": "<p><strong>Wiarygodność</strong> mierzy, jak bardzo źródło lub link jest rzetelny i dokładny. Określana jest na podstawie <em>ręcznej oceny</em> strony internetowej.</p><p><strong>Wysoki wynik wiarygodności</strong> oznacza, że źródło można uznać za godne zaufania i dostarczające dobrze udokumentowanych informacji.</p>"
+            },
+            "infodemicRisk": {
+                "title": "Ryzyko Infodemii",
+                "description": "<p><strong>Ryzyko Infodemii</strong> wskazuje, jak bardzo kanał jest wiarygodny, w skali od <strong>0</strong> (całkowicie wiarygodny) do <strong>1</strong> (całkowicie niewiarygodny).</p><p>Opiera się na wiarygodności stron internetowych udostępnianych w kanale oraz na tym, w jakim stopniu użytkownicy są <em>narażeni</em> na te linki (uwzględnia liczbę wyświetleń).</p><p><strong>Niska wartość</strong> oznacza, że użytkownicy są narażeni na bardziej wiarygodne informacje.</p><p>Więcej szczegółów znajdziesz w <a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">tym artykule</a>.</p>"
+            },
+            "hateSpeech": {
+                "title": "Mowa nienawiści",
+                "description": "<p><strong>Mowa nienawiści</strong> jest definiowana jako wyrażanie obraźliwych lub dyskryminujących opinii, treści lub komunikatów skierowanych do określonych grup osób lub jednostek na podstawie ich cech tożsamości, takich jak płeć, wiek, orientacja seksualna, narodowość, pochodzenie etniczne, religia, kolor skóry, niepełnosprawność lub inne.</p>"
+            },
+            "checkWorthyness": {
+                "title": "Wartość sprawdzenia",
+                "description": "<p>Treść jest uznawana za <strong>wartą sprawdzenia</strong>, gdy ma <em>znaczenie publiczne</em> i może wymagać weryfikacji przez fact-checkerów.</p><p>Wiadomość jest warta sprawdzenia, gdy:</p><ul><li>Zawiera <strong>twierdzenie faktyczne</strong>, które można zweryfikować lub obalić,</li><li>Może <strong>wpływać na opinie, zachowania lub debatę publiczną</strong>,</li><li>Dotyczy <strong>tematów wrażliwych lub o dużym wpływie</strong> (np. polityka, zdrowie, bezpieczeństwo, migracja),</li><li>Wykazuje oznaki możliwej <em>dezinformacji</em> lub <em>misinformacji</em>.</li></ul>"
+            }
+        }
     },
-    "telegramChannels": {
-      "title": "Kanały i czaty Telegram",
-      "description": "<p><strong>Kanał Telegram</strong> to przestrzeń, w której jeden lub kilku administratorów może publikować wiadomości dla szerokiej publiczności.</p><p>Kanał może mieć jeden lub więcej <strong>czatów</strong> o różnych ustawieniach: na przykład niektóre, w których tylko administratorzy mogą publikować wiadomości, i inne, w których wszyscy mogą brać udział.</p><p>Czaty lub rozmowy w kanale odnoszą się do wiadomości tam publikowanych i sposobu, w jaki reaguje publiczność.</p>"
-    },
-    "network": {
-      "title": "Sieć",
-      "description": "<p><strong>Sieć</strong> to struktura, która przedstawia podmioty jako punkty, a relacje między nimi jako linie.</p><p>W tej sieci pobrane kanały Telegram są wyświetlane jako <strong>punkty</strong>, a linie pokazują, jak są połączone. Kanał jest powiązany z innym, gdy Telegram automatycznie go <em>rekomenduje</em>, na podstawie liczby użytkowników wspólnych dla obu kanałów.</p>"
-    },
-    "disinformation": {
-      "title": "Dezinformacja",
-      "description": "<p><strong>Dezinformacja</strong> to fałszywe treści udostępniane w celu wyrządzenia szkody. Tworzenie tego typu treści jest najczęściej motywowane chęcią zarobku, zdobycia rozgłosu lub zwiększenia wpływów politycznych.</p>"
-    },
-    "reliability": {
-      "title": "Wiarygodność",
-      "description": "<p><strong>Wiarygodność</strong> mierzy, jak bardzo źródło lub link jest rzetelny i dokładny. Określana jest na podstawie <em>ręcznej oceny</em> strony internetowej.</p><p><strong>Wysoki wynik wiarygodności</strong> oznacza, że źródło można uznać za godne zaufania i dostarczające dobrze udokumentowanych informacji.</p>"
-    },
-    "infodemicRisk": {
-      "title": "Ryzyko Infodemii",
-      "description": "<p><strong>Ryzyko Infodemii</strong> wskazuje, jak bardzo kanał jest wiarygodny, w skali od <strong>0</strong> (całkowicie wiarygodny) do <strong>1</strong> (całkowicie niewiarygodny).</p><p>Opiera się na wiarygodności stron internetowych udostępnianych w kanale oraz na tym, w jakim stopniu użytkownicy są <em>narażeni</em> na te linki (uwzględnia liczbę wyświetleń).</p><p><strong>Niska wartość</strong> oznacza, że użytkownicy są narażeni na bardziej wiarygodne informacje.</p><p>Więcej szczegółów znajdziesz w <a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">tym artykule</a>.</p>"
-    },
-    "hateSpeech": {
-      "title": "Mowa nienawiści",
-      "description": "<p><strong>Mowa nienawiści</strong> jest definiowana jako wyrażanie obraźliwych lub dyskryminujących opinii, treści lub komunikatów skierowanych do określonych grup osób lub jednostek na podstawie ich cech tożsamości, takich jak płeć, wiek, orientacja seksualna, narodowość, pochodzenie etniczne, religia, kolor skóry, niepełnosprawność lub inne.</p>"
-    },
-    "checkWorthyness": {
-      "title": "Wartość sprawdzenia",
-      "description": "<p>Treść jest uznawana za <strong>wartą sprawdzenia</strong>, gdy ma <em>znaczenie publiczne</em> i może wymagać weryfikacji przez fact-checkerów.</p><p>Wiadomość jest warta sprawdzenia, gdy:</p><ul><li>Zawiera <strong>twierdzenie faktyczne</strong>, które można zweryfikować lub obalić,</li><li>Może <strong>wpływać na opinie, zachowania lub debatę publiczną</strong>,</li><li>Dotyczy <strong>tematów wrażliwych lub o dużym wpływie</strong> (np. polityka, zdrowie, bezpieczeństwo, migracja),</li><li>Wykazuje oznaki możliwej <em>dezinformacji</em> lub <em>misinformacji</em>.</li></ul>"
-    }
-  }
-},
     "welcome": {
         "title": "Witamy w nienawidzących"
     },
@@ -159,7 +159,7 @@
     },
     "educational": {
         "title": "Działania Edukacyjne",
-        "subtitle": "<p>W tej sekcji znajdziesz interaktywne ćwiczenia zaprojektowane, aby pomóc Ci zrozumieć mechanizmy stojące za dezinformacją i mową nienawiści.</p><p>Możesz odkrywać <b>biasy poznawcze</b> i <b>błędy logiczne</b>, ćwiczyć techniki <b>demaskowania</b>, poznać podstawowe zasady <b>Deklaracji Praw Człowieka</b>, aby zrozumieć ochronę ludzkiej godności, oraz stosować <b>czytanie boczne</b>, aby krytycznie oceniać treści online.</p><p>Każde ćwiczenie to okazja do rozwijania myślenia krytycznego i budowania odporności na manipulację oraz dezinformację.</p>",      
+        "subtitle": "<p>W tej sekcji znajdziesz interaktywne ćwiczenia zaprojektowane, aby pomóc Ci zrozumieć mechanizmy stojące za dezinformacją i mową nienawiści.</p><p>Możesz odkrywać <b>biasy poznawcze</b> i <b>błędy logiczne</b>, ćwiczyć techniki <b>demaskowania</b>, poznać podstawowe zasady <b>Deklaracji Praw Człowieka</b>, aby zrozumieć ochronę ludzkiej godności, oraz stosować <b>czytanie boczne</b>, aby krytycznie oceniać treści online.</p><p>Każde ćwiczenie to okazja do rozwijania myślenia krytycznego i budowania odporności na manipulację oraz dezinformację.</p>",
         "eduCard1Title": "Deklaracja praw człowieka",
         "eduCard1Desc": "Odkryj podstawowe zasady chroniące ludzką godność.",
         "eduCard1Button": "Odkrywać prawa",
@@ -330,16 +330,19 @@
                 },
                 "completedTitle": "Aktywność ukończona",
                 "completed": "Ukończyłeś(-aś) aktywność! Teraz możesz omówić swoje odpowiedzi z kolegami z klasy i nauczycielem.",
+                "finalMessagePart1": "<ul><li>Weź udział w pełnej szacunku dyskusji (jeśli uważasz to za bezpieczne rozwiązanie)</li><li>Zwróć uwagę na nieprawdziwe informacje (jeśli to bezpieczne)</li><li>Zgłoś wiadomość administratorom platformy lub moderatorowi</li><li>Zignoruj wiadomość</li><li>Zablokuj użytkownika</li><li>Spróbuj wyjaśnić temat osobie, która napisała wiadomość (jeśli jest to dla Ciebie działanie odpowiednie i bezpieczne)</li><li>Poszukaj więcej informacji o punkcie widzenia rozmówcy</li><li>Inna reakcja: …………………</li></ul>",
+                "finalMessagePart2": "<ul><li>Czy wystąpiły jakieś trudności z rozpoznaniem przykładów mowy nienawiści? Co sprawia, że dana wypowiedź przekracza granicę i staje się mową nienawiści?</li><li>Czy trudno jest na nią reagować? Jakie umiejętności są potrzebne, żeby zrobić to w odpowiedni sposób?</li><li>Dlaczego reagowanie na mowę nienawiści jest ważne?</li></ul>",
+              "next":"Dalej",
                 "score": "Wynik",
                 "finish": "Zakończ"
             },
             "debunking": {
                 "title": "Debunking",
-                "back":"Wróć",
-                "finalMessage":"Udało Ci się ukończyć zadanie! Możesz teraz przejść do kolejnej aktywności.",
+                "back": "Wróć",
+                "finalMessage": "Udało Ci się ukończyć zadanie! Możesz teraz przejść do kolejnej aktywności.",
                 "description": "Celem weryfikacji faktów, nazywanej fact-checkingiem lub debunkingiem, jest zapewnienie obywatelom narzędzi i informacji, które pozwolą im formułować opinie w oparciu o wszystkie dostępne dane i potwierdzone fakty, a tym samym podejmować świadome decyzje. Dezinformacja może wpływać na sposób myślenia społeczeństwa i radzenia sobie z codziennymi problemami, dlatego głównym zadaniem weryfikatorów faktów (tzw. fact-checkerów) jest rzucanie światła na te kwestie i dostarczanie danych na ich temat. Weryfikacja faktów polega przede wszystkim na wykrywaniu fałszywych informacji, weryfikowaniu ich treści i rozpowszechnianiu informacji o ich nieprawdziwości.\nOsoby zajmujące się weryfikacją faktów na co dzień pracują nad obalaniem fałszywych informacji – analizują treści i wyjaśniają, dlaczego są one nieprawdziwe, najczęściej dopiero po tym, jak zostały udostępnione i zdobyły popularność w mediach społecznościowych. Działania te są niezwykle istotne z punktu widzenia opinii publicznej, ponieważ pomagają zapobiec temu, by kolejne osoby czytały, udostępniały i wierzyły w nieprawdziwe treści. Niektóre przypadki wymagają czasochłonnych analiz i użycia specjalistycznych narzędzi. Inne zaś opierają się głównie na uważnej obserwacji i dotarciu do konkretnych, wiarygodnych źródeł informacji.\nSpróbujmy! W tym ćwiczeniu nauczysz się pod okiem instruktora kilku technik wykrywania fałszywych twierdzeń oraz dowiesz się, dlaczego ważne jest, aby uruchomić krytyczne myślenie i zidentyfikować, w jaki sposób wiralowe rozprzestrzenianie się niektórych fałszywych informacji może tworzyć i wzmacniać narracje dezinformacyjne.",
                 "objectivesTitle": "Efekty kształcenia",
-                "objectives":"<p><strong>Obalanie mitów:</strong> nauka, w sposób prowadzony, niektórych technik obalania fałszywych informacji.</p><p><strong>Rozwijanie myślenia krytycznego za pomocą strategii pre-bunking:</strong> podczas ćwiczenia użytkownicy odkrywają, czym są narracje dezinformacyjne i mogą zastanowić się nad tymi najbardziej rozpowszechnionymi w swoim kraju.</p><p><strong>Aktywowanie myślenia krytycznego:</strong> poprzez zrozumienie, jak wirusowe rozprzestrzenianie niektórych oszustw może tworzyć i wzmacniać narracje dezinformacyjne.</p>",
+                "objectives": "<p><strong>Obalanie mitów:</strong> nauka, w sposób prowadzony, niektórych technik obalania fałszywych informacji.</p><p><strong>Rozwijanie myślenia krytycznego za pomocą strategii pre-bunking:</strong> podczas ćwiczenia użytkownicy odkrywają, czym są narracje dezinformacyjne i mogą zastanowić się nad tymi najbardziej rozpowszechnionymi w swoim kraju.</p><p><strong>Aktywowanie myślenia krytycznego:</strong> poprzez zrozumienie, jak wirusowe rozprzestrzenianie niektórych oszustw może tworzyć i wzmacniać narracje dezinformacyjne.</p>",
                 "task": "Wciel się w rolę fact-checkera i sprawdź podejrzane treści. Wybierz najlepszy sposób, by je zweryfikować. Czy potrafisz wskazać, jaka dezinformacyjna narracja za nią stoi?",
                 "startButton": "Rozpocznij aktywność",
                 "correct": "Poprawnie! Dobra robota.",
@@ -392,7 +395,6 @@
                             "correctImage": "/img/debunking/pl/answer2.png",
                             "incorrect": "Sztuczna inteligencja, jak ChatGPT, nie ma dostępu do pełnych, aktualnych baz danych ani treści chronionych za subskrypcją. Odpowiedzi mogą być niepełne lub błędne, co nie gwarantuje potwierdzenia autentyczności artykułu. Natomiast ręczne przeglądanie strony przy dużej liczbie publikacji i ograniczeniach technicznych utrudnia weryfikację i zajmie bardzo dużo czasu - na zrzucie ekranu nie mamy podanej informacji kiedy artykuł w Wall Street Journal został opublikowany.",
                             "incorrectImage": "/img/debunking/pl/answer2.png"
-
                         }
                     },
                     {
@@ -415,14 +417,13 @@
                             "correctImage": "/img/debunking/pl/answer3.png",
                             "incorrect": "Wnikliwy fact-checker sprawdza zawsze informacje w przynajmniej dwóch różnych i niezależnych od siebie źródłach. Dlatego nie poddawaj się, nawet jeżeli nie znajdziesz od razu odpowiedzi. Nasi koledzy i koleżanki nie zawsze mają wystarczającą wiedzę na dany temat, dlatego nie traktuj ich zdania jako ostatecznej odpowiedzi. Mogę się mylić. Link: <a href='https://demagog.org.pl/fake_news/zelenski-odmawia-przyjecia-6-tys-cial-poleglych-zolnierzy-to-rosyjska-propaganda/' target='_blank'>https://demagog.org.pl/fake_news/zelenski-odmawia-przyjecia-6-tys-cial-poleglych-zolnierzy-to-rosyjska-propaganda/</a>.",
                             "incorrectImage": "/img/debunking/pl/answer3.png"
-
                         }
                     }
                 ]
             },
             "bias": {
                 "title": "Błędy poznawcze i fałszywe rozumowania",
-  "description": "<strong>Błędy logiczne związane z mową nienawiści i dezinformacją</strong><br><br>Treści mowy nienawiści i dezinformacji mogą czasem wydawać się bardzo przekonujące. Wynika to z faktu, że osoby szerzące nienawiść często opierają się na błędach logicznych – konstrukcjach, które mają usprawiedliwiać ich narrację i sprawiać wrażenie wiarygodnych. Błędy logiczne mogą wynikać z fałszywych przesłanek, prawdziwych przesłanek prowadzących do błędnych wniosków, albo poprawnych przesłanek i wniosków, ale z argumentacją wprowadzającą w błąd. Niektóre błędy są tworzone celowo, by manipulować lub sprawić, że dezinformacja stanie się wirusowa.<br><br>Przykłady błędów logicznych często występujących w mowie nienawiści:<br><br><strong>Argumentum ad populum</strong> – odwołanie się do poglądów większości zamiast do dowodów (np. Większość ludzi w naszym kraju tak uważa, więc musimy tak postępować);<br><br><strong>Ipse dixit</strong> – argument bez dowodów (np. Partia polityczna to powiedziała, więc to prawda);<br><br><strong>Efekt równi pochyłej</strong> – twierdzenie, że decyzja nieuchronnie doprowadzi do katastrofalnych skutków (np. Nie możemy pozwolić migrantom zostać, bo sprowadzą rodziny, zabiorą pracę, system upadnie, a kraj stracimy);<br><br><strong>Fałszywa dychotomia</strong> – przedstawienie tylko dwóch rozwiązań (np. Albo głosujesz na tę partię, albo żyjesz w wiecznym zagrożeniu);<br><br><strong>Post hoc, ergo propter hoc</strong> – uznanie, że jedno wydarzenie spowodowało drugie tylko dlatego, że wystąpiło wcześniej (np. Od kiedy mamy nową nauczycielkę matematyki, mam gorsze oceny – to jej wina);<br><br><strong>Argumentum ad hominem</strong> – atak na osobę zamiast na jej argument (np. Nie słuchaj Marka w sprawie projektu, jest leniwy i nigdy nic dobrze nie robi);<br><br><strong>Cherry picking</strong> – wybieranie tylko dowodów potwierdzających własne zdanie (np. \"Mowa nienawiści nie szkodzi, bo jedno badanie tak mówi\" – ignorując dziesiątki innych badań pokazujących szkody);<br><br><strong>Odwołanie do tradycji</strong> – twierdzenie, że coś jest słuszne, bo zawsze tak było (np. Zawsze było więcej mężczyzn niż kobiet w radzie, i działało dobrze);<br><br><strong>Argument anegdotyczny</strong> – opieranie się na jednym doświadczeniu (np. Słyszałem obraźliwe żarty przez lata i nikomu nic się nie stało, więc mowa nienawiści nie szkodzi);<br><br><strong>Ad ignorantiam</strong> – uznanie, że coś jest prawdziwe lub fałszywe tylko dlatego, że nie udowodniono odwrotnego (np. Nikt nie udowodnił, że studenci ściągają na egzaminach online, więc to się nie zdarza).<br><br><strong>Błędy poznawcze</strong><br><br>Nasz mózg stosuje skróty myślowe, by szybko podejmować decyzje. Ułatwiają skupienie na najważniejszych informacjach, ale czasem prowadzą do błędów rozumowania. Osoby szerzące dezinformację dobrze to wykorzystują. Przykłady:<br><br><strong>Bias grupowy</strong> – faworyzowanie własnej grupy (np. Komitet sfinansował projekt kolegi, choć inny był lepszy, mówiąc: \"Ufamy swoim\");<br><br><strong>Bias dostępności</strong> – opieranie się na informacjach łatwo dostępnych w pamięci (np. Po materiale w TV o katastrofie lotniczej ktoś uważa, że latanie jest bardziej niebezpieczne niż jazda samochodem);<br><br><strong>Bias przyczynowości</strong> – wiara, że niezależne wydarzenia są powiązane (np. Zawsze gdy mam szczęśliwe skarpetki, drużyna wygrywa);<br><br><strong>Bias ślepej plamki</strong> – przekonanie, że jest się mniej podatnym na błędy poznawcze niż inni (np. Ja jestem obiektywny, inni się kierują emocjami);<br><br><strong>Bias potwierdzenia</strong> – szukanie tylko informacji potwierdzających własne poglądy (np. Ktoś wierzący, że szczepionki są niebezpieczne, czyta tylko artykuły potwierdzające to, ignorując badania naukowe);<br><br><strong>Bias autorytetu</strong> – większe zaufanie do opinii autorytetu (np. Skoro znany lekarz powiedział to w TV, to musi być prawda).",
+                "description": "<strong>Błędy logiczne związane z mową nienawiści i dezinformacją</strong><br><br>Treści mowy nienawiści i dezinformacji mogą czasem wydawać się bardzo przekonujące. Wynika to z faktu, że osoby szerzące nienawiść często opierają się na błędach logicznych – konstrukcjach, które mają usprawiedliwiać ich narrację i sprawiać wrażenie wiarygodnych. Błędy logiczne mogą wynikać z fałszywych przesłanek, prawdziwych przesłanek prowadzących do błędnych wniosków, albo poprawnych przesłanek i wniosków, ale z argumentacją wprowadzającą w błąd. Niektóre błędy są tworzone celowo, by manipulować lub sprawić, że dezinformacja stanie się wirusowa.<br><br>Przykłady błędów logicznych często występujących w mowie nienawiści:<br><br><strong>Argumentum ad populum</strong> – odwołanie się do poglądów większości zamiast do dowodów (np. Większość ludzi w naszym kraju tak uważa, więc musimy tak postępować);<br><br><strong>Ipse dixit</strong> – argument bez dowodów (np. Partia polityczna to powiedziała, więc to prawda);<br><br><strong>Efekt równi pochyłej</strong> – twierdzenie, że decyzja nieuchronnie doprowadzi do katastrofalnych skutków (np. Nie możemy pozwolić migrantom zostać, bo sprowadzą rodziny, zabiorą pracę, system upadnie, a kraj stracimy);<br><br><strong>Fałszywa dychotomia</strong> – przedstawienie tylko dwóch rozwiązań (np. Albo głosujesz na tę partię, albo żyjesz w wiecznym zagrożeniu);<br><br><strong>Post hoc, ergo propter hoc</strong> – uznanie, że jedno wydarzenie spowodowało drugie tylko dlatego, że wystąpiło wcześniej (np. Od kiedy mamy nową nauczycielkę matematyki, mam gorsze oceny – to jej wina);<br><br><strong>Argumentum ad hominem</strong> – atak na osobę zamiast na jej argument (np. Nie słuchaj Marka w sprawie projektu, jest leniwy i nigdy nic dobrze nie robi);<br><br><strong>Cherry picking</strong> – wybieranie tylko dowodów potwierdzających własne zdanie (np. \"Mowa nienawiści nie szkodzi, bo jedno badanie tak mówi\" – ignorując dziesiątki innych badań pokazujących szkody);<br><br><strong>Odwołanie do tradycji</strong> – twierdzenie, że coś jest słuszne, bo zawsze tak było (np. Zawsze było więcej mężczyzn niż kobiet w radzie, i działało dobrze);<br><br><strong>Argument anegdotyczny</strong> – opieranie się na jednym doświadczeniu (np. Słyszałem obraźliwe żarty przez lata i nikomu nic się nie stało, więc mowa nienawiści nie szkodzi);<br><br><strong>Ad ignorantiam</strong> – uznanie, że coś jest prawdziwe lub fałszywe tylko dlatego, że nie udowodniono odwrotnego (np. Nikt nie udowodnił, że studenci ściągają na egzaminach online, więc to się nie zdarza).<br><br><strong>Błędy poznawcze</strong><br><br>Nasz mózg stosuje skróty myślowe, by szybko podejmować decyzje. Ułatwiają skupienie na najważniejszych informacjach, ale czasem prowadzą do błędów rozumowania. Osoby szerzące dezinformację dobrze to wykorzystują. Przykłady:<br><br><strong>Bias grupowy</strong> – faworyzowanie własnej grupy (np. Komitet sfinansował projekt kolegi, choć inny był lepszy, mówiąc: \"Ufamy swoim\");<br><br><strong>Bias dostępności</strong> – opieranie się na informacjach łatwo dostępnych w pamięci (np. Po materiale w TV o katastrofie lotniczej ktoś uważa, że latanie jest bardziej niebezpieczne niż jazda samochodem);<br><br><strong>Bias przyczynowości</strong> – wiara, że niezależne wydarzenia są powiązane (np. Zawsze gdy mam szczęśliwe skarpetki, drużyna wygrywa);<br><br><strong>Bias ślepej plamki</strong> – przekonanie, że jest się mniej podatnym na błędy poznawcze niż inni (np. Ja jestem obiektywny, inni się kierują emocjami);<br><br><strong>Bias potwierdzenia</strong> – szukanie tylko informacji potwierdzających własne poglądy (np. Ktoś wierzący, że szczepionki są niebezpieczne, czyta tylko artykuły potwierdzające to, ignorując badania naukowe);<br><br><strong>Bias autorytetu</strong> – większe zaufanie do opinii autorytetu (np. Skoro znany lekarz powiedział to w TV, to musi być prawda).",
                 "objectivesTitle": "Cele",
                 "objectives": "<ul><li><strong>Rozwijać świadomość</strong> na temat mechanizmów społecznych, błędów poznawczych i fałszywych rozumowań</li><li><strong>Rozwijać kompetencje krytycznego myślenia</strong></li></ul><p>Mechanizmy społeczne, błędy poznawcze i fałszywe rozumowania są czynnikami pomagającymi w rozprzestrzenianiu mowy nienawiści i dezinformacji. Poznając je, możemy stać się na nie bardziej odporni i krytyczni wobec innych form manipulacji.</p>",
                 "startButton": "Rozpocznij aktywność",
@@ -667,8 +668,8 @@
                         "conclusionQuestion": "Odpowiedz na poniższe pytania zgodnie z treścią przedstawioną na załączonych zrzutach ekranu: Czy podano informacje o autorach i czy można zweryfikować ich wiedzę specjalistyczną? Czy treść zawierała dowody poparte faktami i danymi? Czy te same informacje zostały opublikowane lub potwierdzone przez inne wiarygodne źródła?",
                         "affidabile": true,
                         "feedback": {
-                        "correct": "Poprawnie! ",
-                        "incorrect": "Niepoprawnie! "
+                            "correct": "Poprawnie! ",
+                            "incorrect": "Niepoprawnie! "
                         },
                         "conclusion": "W ostatecznym rozrachunku strona szczepienia.pzh.gov.pl jest godna zaufania i można z niej czerpać wiarygodne informacje. Portal jest prowadzony przez Narodowy Instytut Zdrowia Publicznego PZH – Państwowy Instytut Badawczy, we współpracy z Polskim Towarzystwem Wakcynologii, posiada akredytację WHO i jest rekomendowany przez międzynarodowe oraz krajowe instytucje zdrowotne. Na stronie można znaleźć szczegółowe informacje o autorach i zespole redakcyjnym, którzy są uznanymi ekspertami z dziedziny zdrowia publicznego i wakcynologii, a ich kwalifikacje i publikacje są transparentnie udostępnione i można je zweryfikować w innych wiarygodnych źródłach. Treści są przygotowywane zgodnie z rzetelną metodologią, oparte na faktach i danych naukowych, a pod artykułami zamieszczane są źródła z autorytatywnych instytucji, takich jak WHO czy CDC. Strona dba również o bezpieczeństwo użytkowników – posiada certyfikat SSL, politykę prywatności, deklarację dostępności oraz formularz kontaktowy. Co więcej, publikowane na portalu treści są cytowane i rekomendowane przez inne wiarygodne źródła, w tym serwisy fact-checkingowe i oficjalne strony rządowe. Wszystko to sprawia, że szczepienia.pzh.gov.pl jest wiarygodnym i profesjonalnym źródłem informacji na temat szczepień i zdrowia publicznego."
                     },
@@ -747,8 +748,8 @@
                         "conclusionQuestion": "Odpowiedz na poniższe pytania zgodnie z treścią przedstawioną na załączonych zrzutach ekranu: Czy podano informacje o autorach i czy można zweryfikować ich wiedzę specjalistyczną? Czy treść zawierała dowody poparte faktami i danymi? Czy te same informacje zostały opublikowane lub potwierdzone przez inne wiarygodne źródła?",
                         "affidabile": false,
                         "feedback": {
-                        "correct": "Poprawnie! ",
-                        "incorrect": "Niepoprawnie! "
+                            "correct": "Poprawnie! ",
+                            "incorrect": "Niepoprawnie! "
                         },
                         "conclusion": "Strona globalna.info jest niewiarygodnym źródłem informacji i nie warto jej ufać.\n\nNa stronie nie ma podanych autorów ani zespołu redakcyjnego — wpisy są publikowane przez anonimowy profil „globalna świadomość”, który nie zawiera żadnych danych identyfikujących autorów ani informacji o ich wykształceniu czy kompetencjach.\n\nBrakuje jakichkolwiek informacji dotyczących zawartości strony, metodologii, celu działania czy sposobu doboru i weryfikacji treści. Nie ma też żadnych dowodów na rzetelność czy naukowe podejście do prezentowanych informacji.\n\nChoć strona posiada certyfikat SSL, nie ma innych danych dotyczących bezpieczeństwa, takich jak polityka prywatności czy informacje o administratorze. Dostępny jest jedynie regulamin sklepu z ofertą produktów, który nie jest powiązany z merytoryczną zawartością portalu.\n\nTreści publikowane na tej stronie nie są potwierdzane przez żadne wiarygodne źródła. Wręcz przeciwnie — organizacje fact-checkingowe, takie jak Stowarzyszenie Demagog, AFP Sprawdzam oraz fakenews.pl, wielokrotnie wskazują, że globalna.info rozpowszechnia liczne fałszywe informacje.\n\nNa stronie nie ma również żadnych dowodów opartych na faktach czy danych naukowych — brakuje podanych źródeł, a informacje nie bazują na wiarygodnych badaniach czy instytucjach naukowych.\n\nPodsumowując, globalna.info nie spełnia podstawowych kryteriów wiarygodności i rzetelności, dlatego nie powinna być traktowana jako źródło wartościowych czy sprawdzonych informacji."
                     }
@@ -766,7 +767,7 @@
         "infoTitle": "Informacje o kanale"
     },
     "conversation": {
-    "title": "Wewnątrz czatów",
+        "title": "Wewnątrz czatów",
         "subtitle": "Na tej stronie możesz przeglądać poszczególne wiadomości z kanału.<br><br>Każdy wiersz w tabeli pokazuje <b>tekst wiadomości</b>, jej <b>datę</b> oraz szczegóły, takie jak <b>liczba polubień</b>, czy zawiera <b>mowę nienawiści</b>, czy jest uznana za <i>„check-worthy”</i> oraz czy wspomniana jest jakaś <b>grupa docelowa</b>.<br><br>Te informacje pozwalają zobaczyć nie tylko jakie treści są publikowane, ale także jak reaguje na nie publiczność.<br>Możesz filtrować wiadomości według <b>mowy nienawiści</b>, <b>check-worthiness</b> lub <b>grupy docelowej</b>, aby skupić się na interesujących Cię rozmowach.<br><br>Możesz także zmienić kolejność wiadomości, klikając w <b>nagłówki kolumn</b>.<br>Na przykład, jeśli chcesz zobaczyć, jak rozmowa rozwijała się w czasie, uporządkuj tabelę według kolumny <b>Data</b>.<br><br>Najedź myszką na dowolną <b>etykietę</b> lub <b>przycisk</b>, aby zobaczyć krótkie wyjaśnienie jego funkcji."
     },
     "project": {
@@ -833,7 +834,7 @@
             "out_degree": "Out-stop ",
             "in_degree": "Na stopniu ",
             "label": "Kolor",
-            "degree_centrality":" Stopień centralności",
+            "degree_centrality": " Stopień centralności",
             "n_in_recommendation": "W zaleceń",
             "n_out_recommendation": "Zalecenia",
             "n_out_recommended": "Zalecenia",
@@ -848,20 +849,20 @@
             "in": "W zaleceń",
             "out": "Zalecenia",
             "label": "Rozmiar",
-            "degree_centrality":" Stopień centralności",
+            "degree_centrality": " Stopień centralności",
             "out_degree": "Out-stop ",
             "in_degree": "Na stopniu ",
             "n_in_recommendation": "W zaleceń",
             "n_out_recommendation": "Zalecenia",
             "n_out_recommended": "Zalecenia",
             "n_in_recommended": "W zaleceń",
-            "scale":"Waga"
+            "scale": "Waga"
         },
         "tooltip": {
             "label": "Etykieta",
             "message_count": "Liczba wiadomości",
             "partecipants_count": "Liczba użytkowników",
-            "degree_centrality":" Stopień centralności:",
+            "degree_centrality": " Stopień centralności:",
             "id": "Identyfikator kanału:",
             "iri": "Ryzyko infodemiczne:",
             "hs": "Mowa nienawiści:",
@@ -943,9 +944,9 @@
             "startConversationDescription": "Wybierz zadanie tematyczne, nad którym chcesz pracować."
         },
         "hate": "I hate",
-"notHate": "No hate",
-"worthy": "Verifiable",
-"notWorthy": "Not verifiable",
+        "notHate": "No hate",
+        "worthy": "Verifiable",
+        "notWorthy": "Not verifiable",
         "noData": "Brak dostępnych danych",
         "noTarget": "Nie zidentyfikowany cel",
         "target": "Kliknij tutaj, aby rozpocząć nową rozmowę",
@@ -1003,10 +1004,9 @@
         "addDynamicTurn": "Generuj obrót",
         "addFromGround": "Dodaj z ziemi",
         "confirmTitle": "Potwierdź",
-    "confirmLeavePage": "Jeśli opuścisz tę stronę, możesz stracić swoje postępy. Czy na pewno chcesz kontynuować?",
-
+        "confirmLeavePage": "Jeśli opuścisz tę stronę, możesz stracić swoje postępy. Czy na pewno chcesz kontynuować?",
         "tooltip": {
-            "label":"Nazwa kanału",
+            "label": "Nazwa kanału",
             "startEmpty": "Naciśnij tutaj, aby utworzyć pusty zakręt.",
             "addDynamicTurn": "Automatycznie generuj sugestię na początek.<br>Nadal możesz to później zmodyfikować.",
             "addRoundUp": "Dodaj pusty obrót <em>zanim</em> wybrany.",
@@ -1022,7 +1022,7 @@
             "hs_percentage": "Procent wiadomości uznanych za mowę nienawiści",
             "cw_percentage": "Procent wiadomości uznanych za warte sprawdzenia",
             "degreeCentrality": "Stopień centralności kanału w sieci",
-            "louvain_community":"Społeczność kanału Louvain"
+            "louvain_community": "Społeczność kanału Louvain"
         }
     },
     "guide": {
@@ -1110,10 +1110,10 @@
         }
     },
     "buttons": {
-    "startDialogue": "Rozpocznij dialog",
-    "delete": "Usuń"
-  },
-  "locale": {
-    "selectLanguage": "Wybierz język interfejsu"
-  }
+        "startDialogue": "Rozpocznij dialog",
+        "delete": "Usuń"
+    },
+    "locale": {
+        "selectLanguage": "Wybierz język interfejsu"
+    }
 }
