@@ -1,258 +1,331 @@
 <template>
   <v-container>
-    <h1 class="text-h4 font-weight-bold mb-4">{{ t("educational.tasks.bias.title") }}</h1>
-    <p class="mb-8">{{ t("educational.tasks.bias.task") }}</p>
+    <v-row justify="center">
+      <v-col cols="12" md="10">
+        <!-- Titolo -->
+        <h1 class="text-h5 font-weight-bold mb-4">
+          {{ t("educational.tasks.counterspeech.title") }}
+        </h1>
 
-    <v-row v-for="i in leftColumn.length" :key="i" class="mb-2">
-      <v-col cols="5">
+        <!-- Descrizione -->
+        <p class="mb-4">
+          <span v-html="t('educational.tasks.counterspeech.task')" />
+        </p>
+
+        <!-- Messaggio -->
+        <v-card class="mb-4 pa-4" elevation="2">
+          <div class="d-flex align-center justify-space-between">
+            <div class="flex-grow-1">
+              <div class="text-body-1 font-weight-medium mb-2">
+                {{ currentMessage?.from_user || "User" }}:
+              </div>
+              <div class="text-subtitle-1">
+                {{ currentMessage?.message }}
+              </div>
+            </div>
+
+            <!-- Icone che appaiono dopo la risposta -->
+            <transition name="fade">
+              <div v-if="showFeedback" class="d-flex align-center ml-4">
+                <!-- Hate speech -->
+                <v-icon
+                  :icon="
+                    currentMessage?.hate_label
+                      ? 'mdi-emoticon-angry'
+                      : 'mdi-emoticon-happy-outline'
+                  "
+                  :color="currentMessage?.hate_label ? 'red' : 'green'"
+                  size="28"
+                  class="mr-3"
+                />
+                <!-- Checkworthy -->
+                <v-icon
+                  v-if="currentMessage?.checkworthy_label"
+                  icon="mdi-alert-outline"
+                  color="orange"
+                  size="28"
+                />
+              </div>
+            </transition>
+          </div>
+        </v-card>
+
+        <!-- Domanda -->
+        <p class="mb-4 font-weight-medium text-h6">
+          {{ t("educational.tasks.counterspeech.question") }}
+        </p>
+
+        <!-- Opzioni -->
         <v-card
-          :style="getItemStyle(leftColumn[i - 1].id, 'left')"
-          :class="getItemClass(leftColumn[i - 1].id, 'left')"
-          @click="selectItem(leftColumn[i - 1], 'left')"
+          v-for="(option, index) in options"
+          :key="index"
+          class="mb-2 option-card"
+          :class="getOptionClass(index)"
+          @click="selectAnswer(index)"
         >
-          <v-card-text class="text-h7 text-center mt-4">
-            <!-- render HTML for left label -->
-            <div v-html="leftColumn[i - 1].label"></div>
+          <v-card-text class="d-flex align-center">
+            <v-icon
+              v-if="showFeedback && index === selectedIndex"
+              :icon="isAnswerCorrect ? 'mdi-check-circle' : 'mdi-close-circle'"
+              :color="isAnswerCorrect ? 'success' : 'error'"
+              class="me-3"
+            ></v-icon>
+            <span>{{ option }}</span>
           </v-card-text>
         </v-card>
-      </v-col>
-      <v-col cols="5">
-        <v-card
-          :style="getItemStyle(rightColumn[i - 1].id, 'right')"
-          :class="getItemClass(rightColumn[i - 1].id, 'right')"
-          @click="selectItem(rightColumn[i - 1], 'right')"
+
+        <!-- Feedback -->
+        <v-alert
+          v-if="showFeedback"
+          :type="isAnswerCorrect ? 'success' : 'error'"
+          class="mt-4"
+          border="start"
+          variant="tonal"
         >
-          <v-card-text class="mt-4">
-            <!-- render HTML for right label -->
-            <div v-html="rightColumn[i - 1].label"></div>
+          <div class="font-weight-bold mb-2">
+            {{ isAnswerCorrect
+              ? t("educational.tasks.counterspeech.feedback.correct")
+              : t("educational.tasks.counterspeech.feedback.incorrect") }}
+          </div>
+          <div class="text-body-2">{{ currentMessage?.explanation }}</div>
+        </v-alert>
 
-            <span v-if="getPairedLabel(rightColumn[i - 1].id)" class="paired-label">
-              <!-- paired label also as HTML -->
-              <span v-html="getPairedLabel(rightColumn[i - 1].id)"></span>
-            </span>
-          </v-card-text>
-        </v-card>
+        <!-- Navigazione -->
+        <div class="d-flex justify-space-between align-center mt-6">
+          <v-btn
+            color="secondary"
+            variant="outlined"
+            :disabled="currentIndex === 0"
+            @click="prevMessage"
+          >
+            <v-icon start>mdi-arrow-left</v-icon>
+            {{ t("educational.tasks.debunking.back") }}
+          </v-btn>
+
+          <v-chip color="primary" variant="elevated">
+            {{ currentIndex + 1 }} / {{ messages.length }}
+          </v-chip>
+
+          <v-btn
+            color="primary"
+            :disabled="selectedIndex === null"
+            @click="isLast ? finishQuiz() : nextMessage()"
+          >
+            {{ isLast
+              ? t("educational.tasks.debunking.finish")
+              : t("educational.tasks.debunking.next") }}
+            <v-icon end>mdi-arrow-right</v-icon>
+          </v-btn>
+        </div>
+
+        <!-- Barra progresso -->
+        <v-progress-linear
+          :model-value="((currentIndex + 1) / messages.length) * 100"
+          color="primary"
+          class="mt-4"
+          height="8"
+          rounded
+        ></v-progress-linear>
+
+        <!-- Dialog finale -->
+        <v-dialog v-model="finalDialog" persistent max-width="500">
+          <v-card>
+            <v-card-title class="text-h6 font-weight-bold bg-success text-white pa-4">
+              {{ t("educational.tasks.counterspeech.completedTitle") }}
+            </v-card-title>
+
+            <v-card-text class="pa-6">
+              <transition name="fade" mode="out-in">
+                <div :key="finalStep">
+                  <div v-if="finalStep === 1" class="text-center">
+                    <v-icon size="64" color="success" class="mb-4"
+                      >mdi-check-circle-outline</v-icon
+                    >
+                    <p class="text-h6 mb-2 text-left" v-html="finalMessagePart1"></p>
+                    <v-divider class="my-4"></v-divider>
+                    <p class="text-subtitle-1">
+                      {{ t("educational.tasks.counterspeech.score") }}:
+                      <strong>{{ correctAnswers }} / {{ messages.length }}</strong>
+                    </p>
+                  </div>
+
+                  <div v-else class="text-center">
+                    <v-icon size="64" color="primary" class="mb-4">mdi-flag-checkered</v-icon>
+                    <p class="text-h6 mb-2 text-left" v-html="finalMessagePart2"></p>
+                  </div>
+                </div>
+              </transition>
+            </v-card-text>
+
+            <v-card-actions class="justify-center pb-4">
+              <v-btn
+                v-if="finalStep === 1"
+                color="primary"
+                size="large"
+                @click="nextFinalStep"
+              >
+                {{ t("educational.tasks.counterspeech.next") }}
+              </v-btn>
+              <v-btn v-else color="success" size="large" @click="goToNextActivity">
+                {{ t("educational.tasks.counterspeech.finish") }}
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
       </v-col>
     </v-row>
-
-    <v-row justify="center" class="mt-4">
-      <v-col cols="12" class="text-center">
-        <v-btn color="primary" @click="checkPairs">{{ t('educational.tasks.bias.checkButton') }}</v-btn>
-        <v-btn color="secondary" class="ml-2" @click="resetAll">{{ t('educational.tasks.bias.resetButton') }}</v-btn>
-      </v-col>
-    </v-row>
-
-    <v-dialog v-model="showDialog" max-width="600">
-      <v-card>
-        <v-card-title class="text-h6 font-weight-bold">
-          {{ t("educational.tasks.bias.summaryTitle") }}
-        </v-card-title>
-        <v-card-text>
-          <p>
-            ✅ {{ t('educational.tasks.bias.correct') }}: {{ correctCount }}
-          </p>
-          <ul>
-            <li 
-              v-for="pair in matchedPairs.filter(p => p.left && p.right && p.left.id === p.right.id)" 
-              :key="pair.left.id"
-            >
-              <!-- render left.label as HTML in popup -->
-              <span class="paired-label-popup" v-html="pair.left.label"></span>
-            </li>
-          </ul>
-
-          <p>
-            ❌ {{ t('educational.tasks.bias.incorrect') }}: {{ incorrectCount }}
-          </p>
-          <ul>
-            <li 
-              v-for="pair in matchedPairs.filter(p => p.left && p.right && p.left.id !== p.right.id)" 
-              :key="pair.left.id + '-wrong'"
-            >
-              <span class="paired-label-popup" v-html="pair.left.label"></span>
-            </li>
-          </ul>
-          <v-divider class="my-4"></v-divider>
-
-          <p class="text-body-1" style="white-space: pre-line">
-            {{ t("educational.tasks.bias.reflectionText") }}
-          </p>
-        </v-card-text>
-
-        <v-card-actions class="justify-end">
-          <v-btn color="primary" @click="showDialog = false">{{ t('common.ok') }}</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
   </v-container>
 </template>
 
+
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { useI18n } from "vue-i18n";
+import { useRouter } from "vue-router";
 
+const { t } = useI18n();
+const router = useRouter();
 
-const { t, tm } = useI18n();
+const messages = ref<any[]>([]);
+const currentIndex = ref(0);
+const selectedIndex = ref<number | null>(null);
+const showFeedback = ref(false);
+const finalDialog = ref(false);
+const correctAnswers = ref(0);
+const finalStep = ref(1);
 
-function shuffleArray(array: Pair[]) {
-  return array
-    .map(value => ({ value, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value);
+const finalMessagePart1 = computed(() => t("educational.tasks.counterspeech.finalMessagePart1"));
+const finalMessagePart2 = computed(() => t("educational.tasks.counterspeech.finalMessagePart2"));
+
+function nextFinalStep() {
+  finalStep.value = 2;
+}
+function finishQuiz() {
+  finalStep.value = 1;
+  finalDialog.value = true;
+}
+function goToNextActivity() {
+  finalDialog.value = false;
+  router.replace("/educational");
 }
 
-interface Pair {
-  id: string;
-  left: string;
-  right: string;
+// === Dataset mock ===
+onMounted(() => {
+  const examples = ["cs_example1", "cs_example2", "cs_example3", "cs_example4"];
+  messages.value = examples.map((id) => ({
+    id,
+    message: t(`educational.tasks.counterspeech.dataset.${id}.text`),
+    explanation: t(`educational.tasks.counterspeech.dataset.${id}.explanation`),
+    correct: Number(t(`educational.tasks.counterspeech.dataset.${id}.correct`)), // 0 or 1
+    options: [
+      t(`educational.tasks.counterspeech.dataset.${id}.option1`),
+      t(`educational.tasks.counterspeech.dataset.${id}.option2`),
+    ],
+    from_user: "User",
+    date: new Date().toISOString(),
+    nr_reactions: Math.floor(Math.random() * 10),
+  }));
+});
+
+const currentMessage = computed(() => messages.value[currentIndex.value]);
+const options = computed(() => currentMessage.value?.options || []);
+const isLast = computed(() => currentIndex.value === messages.value.length - 1);
+const isAnswerCorrect = computed(() =>
+  selectedIndex.value === currentMessage.value?.correct
+);
+
+function selectAnswer(index: number) {
+  if (showFeedback.value) return;
+  selectedIndex.value = index;
+  showFeedback.value = true;
+  if (isAnswerCorrect.value) correctAnswers.value++;
 }
 
-interface MatchedPair {
-  left: PairItem;
-  right: PairItem;
-  color: { bg: string; border: string };
-}
-
-interface PairItem {
-  id: string;
-  label: string; // contains HTML
-}
-
-
-
-// State
-const showDialog = ref(false);
-const selectedLeft = ref<PairItem | null>(null);
-const selectedRight = ref<PairItem | null>(null);
-const matchedPairs = ref<MatchedPair[]>([]);
-const correctCount = ref(0);
-const incorrectCount = ref(0);
-
-// Select item
-function selectItem(item: PairItem, side: "left" | "right") {
-  if (side === "left") selectedLeft.value = item;
-  else selectedRight.value = item;
-
-  if (selectedLeft.value && selectedRight.value) {
-    matchedPairs.value.push({
-      left: selectedLeft.value,
-      right: selectedRight.value,
-      color: getNextColor(),
-    });
-    selectedLeft.value = null;
-    selectedRight.value = null;
+function nextMessage() {
+  if (currentIndex.value < messages.value.length - 1) {
+    currentIndex.value++;
+    selectedIndex.value = null;
+    showFeedback.value = false;
   }
 }
 
-
-const rawPairs: Pair[] = tm("educational.tasks.bias.pairs");
-// Columns
-const leftColumn = ref<PairItem[]>(
-  shuffleArray(rawPairs).map((p) => ({ id: p.id, label: p.left }))
-);
-const rightColumn = ref<PairItem[]>(
-  shuffleArray(rawPairs).map((p) => ({ id: p.id, label: p.right }))
-);
-
-
-// Color palette
-const colors = [
-  { bg: "#e3f2fd", border: "#1976d2" },
-  { bg: "#e8f5e9", border: "#388e3c" },
-  { bg: "#fff3e0", border: "#f57c00" },
-  { bg: "#fce4ec", border: "#c2185b" },
-  { bg: "#ede7f6", border: "#7e57c2" },
-  { bg: "#f3e5f5", border: "#8e24aa" },
-];
-let colorIndex = 0;
-const getNextColor = () => colors[colorIndex++ % colors.length];
-
-
-// Get style
-function getItemStyle(id: string, side: "left" | "right") {
-  const pair = matchedPairs.value.find(pair =>
-    side === "left" ? pair.left.id === id : pair.right.id === id
-  );
-  return pair ? { backgroundColor: pair.color.bg, borderColor: pair.color.border } : {};
+function prevMessage() {
+  if (currentIndex.value > 0) {
+    currentIndex.value--;
+    selectedIndex.value = null;
+    showFeedback.value = false;
+  }
 }
 
-// Get class
-function getItemClass(id: string, side: "left" | "right") {
-  const isSelected =
-    (side === "left" && selectedLeft.value?.id === id) ||
-    (side === "right" && selectedRight.value?.id === id);
-  const isMatched = matchedPairs.value.some(pair =>
-    side === "left" ? pair.left.id === id : pair.right.id === id
-  );
-  return { "selected-card": isSelected, "matched-card": isMatched };
-}
-
-// Get paired label
-const getPairedLabel = (id: string) => {
-  const pair = matchedPairs.value.find(p => p.right.id === id);
-  return pair ? pair.left.label : null;
+const getOptionClass = (index: number) => {
+  if (!showFeedback.value) return "";
+  if (index === selectedIndex.value) {
+    return isAnswerCorrect.value ? "correct-answer" : "wrong-answer";
+  }
+  return "disabled-option";
 };
 
-// Check results
-function checkPairs() {
-  correctCount.value = matchedPairs.value.filter(p => p.left.id === p.right.id).length;
-  incorrectCount.value = matchedPairs.value.length - correctCount.value;
-  showDialog.value = true;
-}
-
-// Reset
-function resetAll() {
-  matchedPairs.value = [];
-  selectedLeft.value = null;
-  selectedRight.value = null;
-  correctCount.value = 0;
-  incorrectCount.value = 0;
-  showDialog.value = false;
-
-  leftColumn.value = shuffleArray(rawPairs).map(p => ({ id: p.id, label: p.left }));
-  rightColumn.value = shuffleArray(rawPairs).map(p => ({ id: p.id, label: p.right }));
-}
 </script>
 
 <style scoped>
-.v-card {
-  cursor: pointer;
-  border: 2px solid transparent;
-  border-radius: 12px;
-  height: 100%;
-  transition: 0.3s;
-}
-.selected-card {
-  border: 2px solid #1976d2;
-  background-color: #e3f2fd;
-}
-.matched-card {
-  opacity: 0.85;
-  pointer-events: none;
-  filter: grayscale(0.3);
-}
-.paired-label {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  max-width: 90%;
-  font-size: 0.8rem;
-  padding: 2px 6px;
-  background-color: rgba(0, 0, 0, 0.1);
+.message-display-container {
+  border: 1px solid #e0e0e0;
   border-radius: 4px;
-  font-weight: bold;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
-  z-index: 10;
 }
-.paired-label-popup {
-  display: inline-block;
-  max-width: 90%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  vertical-align: middle;
+.message-header,
+.message-row {
+  display: grid;
+  grid-template-columns: 10% 50% 20% 10% 10%;
+  align-items: center;
 }
-
+.message-header {
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+}
+.message-row {
+  border-bottom: 1px solid #e0e0e0;
+}
+.header-cell,
+.message-cell {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+}
+.option-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.option-card:hover:not(.correct-answer):not(.wrong-answer):not(.disabled-option) {
+  transform: translateX(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.correct-answer {
+  background-color: #e0f7e9;
+  border-left: 5px solid #2e7d32;
+}
+.wrong-answer {
+  background-color: #ffebee;
+  border-left: 5px solid #c62828;
+}
+.disabled-option {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.status-cell {
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.status-cell.visible {
+  opacity: 1;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 </style>

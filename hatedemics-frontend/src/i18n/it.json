@@ -56,7 +56,7 @@
         "network": "Esplora il Network di Telegram",
         "networkDescription": "Una mappa interattiva per osservare le connessioni tra canali, contenuti e dinamiche legate a odio e disinformazione online. Scopri cosa accade in rete, segui i flussi e individua i nodi chiave della comunicazione tossica.",
         "networkButton": "Vai alla rete",
-        "counterspeech": "Counterspeech Writing",
+        "counterspeech": "Scrivi contro-narrative",
         "counterspeechDescription": "Allena la tua capacità di risposta a contenuti d’odio e disinformazione con esercizi di scrittura mirati. Impara come usare fonti attendibili per creare argomentazioni solide e sviluppa il tuo spirito critico per cambiare il tono del dibattito online.",
         "counterspeechButton": "Inizia a scrivere",
         "educational": "Attività Educative",
@@ -162,16 +162,19 @@
         "subtitle": "<p>In questa sezione troverai esercizi interattivi pensati per aiutarti a comprendere i meccanismi alla base della disinformazione e dei discorsi d'odio.</p><p>Potrai esplorare <b>bias cognitivi</b> e <b>fallacie logiche</b>, esercitarti con tecniche di <b>debunking</b>, conoscere i principi fondamentali della <b>Dichiarazione dei Diritti Umani</b> per capire come viene tutelata la dignità umana e applicare tecniche di <b>lettura laterale</b> per valutare criticamente i contenuti online.</p><p>Ogni attività è un’occasione per allenare il pensiero critico e diventare più resistente alla manipolazione e alla disinformazione.</p>",
         "eduCard1Title": "Dichiarazione dei Diritti Umani",
         "eduCard1Desc": "Scopri i principi fondamentali che tutelano la dignità umana.",
-        "eduCard1Button": "Inizia l’attività",
+        "eduCard1Button": "Inizia l'attività",
         "eduCardBiasTitle": "Bias e Fallacie",
         "eduCardBiasDesc": "Esplora i bias cognitivi e le fallacie logiche alla base dell'odio e della disinformazione.",
         "eduCardBiasButton": "Inizia l'attività",
         "eduCard3Title": "Debunking",
         "eduCard3Desc": "Impara a riconoscere e smascherare la disinformazione.",
-        "eduCard3Button": "Inizia l’attività",
+        "eduCard3Button": "Inizia l'attività",
         "eduCard4Title": "Lettura laterale",
         "eduCard4Desc": "Impara a leggere e comprendere i contenuti online.",
         "eduCard4Button": "Inizia l'attività",
+        "eduCard5Title": "Individua il discorso d'odio!",
+        "eduCard5Desc": "Individua il discorso d'odio nei contenuti online.",
+        "eduCard5Button": "Inizia l'attività",
         "warningTitle": "Avviso",
         "warningText": "Queste attività contengono esempi espliciti che potrebbero urtare la sensibilità di alcuni lettori. Se un’attività o una sua parte ti mette a disagio o ti fa sentire in difficoltà, ti invitiamo a parlarne con noi o a lasciare la stanza liberamente.",
         "warningButton": "Ho capito",
@@ -239,14 +242,14 @@
                 ]
             },
             "spothate": {
-                "title": "Spot The Hate",
-                "back": "Back",
+                "title": "Individua il discorso d'odio!",
+                "back": "Indietro",
                 "finalMessage": "Hai completato il compito! Puoi ora passare alla prossima attività.",
-                "description": "Il discorso d’odio (hate speech) può essere definito come l’espressione di opinioni, contenuti o comunicazioni offensive e discriminatorie nei confronti di specifici gruppi di persone o individui, sulla base delle loro caratteristiche identitarie, come genere, età, orientamento sessuale, nazionalità, etnia, religione, colore della pelle, disabilità o altre. La disinformazione è un contenuto falso condiviso con l’intenzione di fare del male. La creazione di questo tipo di contenuto è spesso motivata dal desiderio di guadagnare denaro, ottenere visibilità o aumentare l’influenza politica. Il concetto di disinformazione è strettamente legato a quello di misinformazione e malinformazione. La misinformazione è un’informazione falsa o errata condivisa per mancanza di conoscenza e senza l’intenzione di nuocere. La malinformazione, invece, si verifica quando informazioni vere vengono condivise in un contesto diverso, in date differenti o deliberatamente con l’obiettivo di causare un danno, come nel caso della pubblicazione di dati privati. In questo contesto, l’obiettivo del fact-checking è fornire ai cittadini strumenti e informazioni che permettano loro di formarsi un’opinione basata su dati e fatti verificati e, di conseguenza, prendere decisioni informate. Le false informazioni possono influenzare il modo in cui la società pensa e affronta i problemi quotidiani; per questo la missione principale dei fact-checker è fare luce su tali questioni, portando evidenze e dati verificabili. In senso ampio, il fact-checking consiste nel rilevare le false notizie, verificarne i contenuti e diffonderne la smentita. Il primo passo del processo di fact-checking è identificare i contenuti degni di verifica (“check worthy”), ossia le affermazioni che meritano una verifica. Secondo Nakov et al., 2022, un’affermazione è considerata check worthy se: 1) è fattuale e verificabile: ad esempio, può definire concetti, menzionare quantità (passate o presenti), fare previsioni verificabili, riferirsi a leggi, regole o procedure, descrivere o interpretare immagini o video, oppure dichiarare correlazioni o relazioni causali; 2) non è facilmente verificabile da una persona comune (ad esempio, “La lingua parlata in Brasile è il portoghese” non è un’affermazione check worthy); 3) ha rilevanza pubblica e potenziale impatto sociale, ossia è probabilmente falsa, di interesse pubblico e/o potenzialmente dannosa.",
+                "description": "Il discorso d’odio (hate speech) può essere definito come l’espressione di opinioni, contenuti o comunicazioni offensive e discriminatorie nei confronti di specifici gruppi di persone o individui, sulla base delle loro caratteristiche identitarie, come genere, età, orientamento sessuale, nazionalità, etnia, religione, colore della pelle, disabilità o altre.<br><br>Riconoscere il discorso d’odio è fondamentale per combatterlo efficacemente e proteggere i gruppi vulnerabili dai danni. Individuare il discorso d’odio aiuta a prevenirne l’escalation verso violenza o discriminazione, sostenendo così la pace sociale e il rispetto dei diritti umani.",
                 "objectivesTitle": "Obiettivi dell'attività",
-                "objectives": "- Impara a distinguere tra incitamento all'odio vero e proprio ed espressioni che possono essere offensive o controverse ma che non rientrano nella definizione di hate speech.- Metti in pratica reazioni appropriate.",
+                "objectives": "<ul><li>Impara a distinguere tra incitamento all'odio vero e proprio ed espressioni che possono essere offensive o controverse ma che non rientrano nella definizione di hate speech.</li><li> Metti in pratica reazioni appropriate.</li></ul>",
                 "startButton": "Inizia l'attività",
-                "task": "1. Identifica se le situazioni proposte costituiscono o meno hate speech e scegli la reazione che adotteresti. Puoi anche dare una tua proposta per la reazione.2. Crea gruppi di 3-5 persone e discuti le tue risposte, concentrandoti su somiglianze e differenze e spiegando le tue scelte. L'obiettivo non è trovare risposte comuni, ma piuttosto osservare la diversità delle reazioni. 3. Feedback e correzioni vengono forniti se ci sono esempi classificati erroneamente (ad esempio, non hai identificato correttamente l'hate speech).",
+                "task": "<ol><li> Identifica se le situazioni proposte costituiscono o meno hate speech e scegli la reazione che adotteresti. Puoi anche dare una tua proposta per la reazione.</li><li> Crea gruppi di 3-5 persone e discuti le tue risposte, concentrandoti su somiglianze e differenze e spiegando le tue scelte. L'obiettivo non è trovare risposte comuni, ma piuttosto osservare la diversità delle reazioni. </li><li> Feedback e correzioni vengono forniti se ci sono esempi classificati erroneamente (ad esempio, non hai identificato correttamente l'hate speech).</li></ol>",
                 "headers": {
                     "message": "Messaggio",
                     "category": "Tipo"
@@ -295,45 +298,16 @@
                         "text": "Non possiamo permettere gli immigrati si stabiliscano qui perché vogliono solo usufruire del sistema di assistenza sociale e non vogliono lavorare. Non abbiamo bisogno di persone così.",
                         "label": "hate speech",
                         "explanation": "Questa affermazione è considerata un incitamento all'odio perché prende di mira un gruppo (i migranti) e attribuisce stereotipi negativi e dannosi a tutti i membri di quel gruppo, in un modo che promuove l'esclusione e l'ostilità."
-                    },
-                    "cw_example1": {
-                        "text": "Ultime notizie: il Congresso si prepara a chiudere Capitol Hill per il coronavirus e apre un centro per il telelavoro.",
-                        "label": "checkworthy",
-                        "explanation": "Questo messaggio può essere considerato check worthy in quanto verificabile, fattuale e di interesse per la società."
-                    },
-                    "cw_example2": {
-                        "text": "La Cina ha 24 volte più abitanti dell'Italia",
-                        "label": "not checkworthy",
-                        "explanation": "Sebbene questo messaggio sia verificabile e fattuale, è anche banale da controllare: pertanto, non può essere considerato check worthy."
-                    },
-                    "cw_example3": {
-                        "text": "Signore, ti prego proteggi la mia famiglia e le Filippine dal coronavirus.",
-                        "label": "not checkworthy",
-                        "explanation": "Questo messaggio non è fattuale né verificabile: pertanto, non può essere considerato check worthy."
-                    },
-                    "cw_example4": {
-                        "text": "La capitale d'Italia è Roma",
-                        "label": "not checkworthy",
-                        "explanation": "Sebbene questo messaggio sia verificabile e fattuale, è anche banale da controllare: pertanto, non può essere considerato check worthy."
-                    },
-                    "cw_example5": {
-                        "text": "I vaccini causano l'autismo",
-                        "label": "checkworthy",
-                        "explanation": "Questo messaggio è verificabile, fattuale e di interesse per la società: per queste ragioni può essere considerato check worthy."
-                    },
-                    "cw_example6": {
-                        "text": "Io credo nei fantasmi!",
-                        "label": "not checkworthy",
-                        "explanation": "Questo messaggio non è fattuale né verificabile: pertanto, non può essere considerato check worthy."
+                    }
                     }
                 },
                 "completedTitle": "Attività completata!",
                 "completed": "You have completed the activity! Now you can discuss your answers with your classmates and teacher.",
-                "finalMessagePart1": "<ul><li>Partecipa a una discussione rispettosa (se sicuro)</li><li>Contesta la disinformazione (se sicuro)</li><li>Segnala alla piattaforma/moderatore</li><li>Ignora il contenuto</li><li>Blocca l’utente</li><li>Prova a educare la persona (se appropriato e sicuro)</li><li>Cerca maggiori informazioni sul punto di vista dell’utente</li><li>Altra reazione: ………………………</li></ul>",
+                "finalMessagePart1": "Come reagiresti a questi messaggi? Puoi scegliere più di una risposta:<ul><li>Partecipa a una discussione rispettosa (se sicuro)</li><li>Contesta la disinformazione (se sicuro)</li><li>Segnala alla piattaforma/moderatore</li><li>Ignora il contenuto</li><li>Blocca l’utente</li><li>Prova a educare la persona (se appropriato e sicuro)</li><li>Cerca maggiori informazioni sul punto di vista dell’utente</li><li>Altra reazione: ………………………</li></ul>",
                 "finalMessagePart2": "<ul><li>Hai avuto difficoltà a identificare gli esempi di hate speech e check worthy? Cosa ha reso un'affermazione un vero e proprio incitamento all'odio o degna di verifica?</li><li>È difficile reagire? Quali competenze sono necessarie per farlo?</li><li>Perché è consigliabile reagire all'hate speech e alla misinformazione?</li></ul>",
               "next":"Avanti",
-                "score": "Score",
-                "finish": "Finish"
+                "score": "Punteggio",
+                "finish": "Fine"
             },        
             "debunking": {
                 "title": "Debunking",
@@ -826,9 +800,8 @@
                     }
                 ]
             }
-        }
-    },
-    "inspect": {
+        },
+        "inspect": {
         "title": "Panoramica del Canale",
         "subtitle": "<p>In questa pagina puoi visualizzare nel dettaglio il contenuto di un singolo canale Telegram. La tabella mostra i temi principali del canale, quanto compaiono nei messaggi, la percentuale di discorsi d’odio e di verificabilità (check-worthiness) per ciascuno e il sentiment prevalente.</p><p>A destra troverai le informazioni chiave sul canale, mentre le word cloud visualizzano quali termini compaiono più spesso nei messaggi non di odio e in quelli di odio, e nei messaggi considerati verificabili e non verificabili.</p><p>Usa i filtri e i pulsanti per passare dalla visuale delle chat dei canali agli argomenti, o per regolare il tipo di word cloud che vedi. Se posizioni il mouse su un’etichetta o su un pulsante, vedrai una breve spiegazione della sua funzione.</p>"
     },

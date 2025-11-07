@@ -269,12 +269,6 @@ const messageIds = [
   { id: "hs_example4", type: "hate" },
   { id: "hs_example5", type: "hate" },
   { id: "hs_example6", type: "hate" },
-  { id: "cw_example1", type: "checkworthy" },
-  { id: "cw_example2", type: "checkworthy" },
-  { id: "cw_example3", type: "checkworthy" },
-  { id: "cw_example4", type: "checkworthy" },
-  { id: "cw_example5", type: "checkworthy" },
-  { id: "cw_example6", type: "checkworthy" },
 ];
 
 const messages = ref<any[]>([]);
