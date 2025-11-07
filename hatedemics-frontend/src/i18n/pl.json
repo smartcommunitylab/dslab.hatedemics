@@ -172,6 +172,9 @@
         "eduCard4Title": "Czytanie w poziomie",
         "eduCard4Desc": "Dowiedz się,  jak analizować treści online.",
         "eduCard4Button": "Rozpocznij aktywność",
+        "eduCard5Title": "Rozpoznaj mowę nienawiści!",
+        "eduCard5Desc": "Identyfikować mowę nienawiści w treściach online.",
+        "eduCard5Button": "Rozpocznij aktywność",
         "warningTitle": "Ostrzeżenie",
         "warningText": "Zajęcia te zawierają niezakłonne przykłady, które niektórzy czytelnicy mogą uznać za obraźliwe.",
         "warningButton": "Rozumiem",
@@ -240,14 +243,14 @@
                 "summary": "Czy znasz wszystkie wymienione prawa człowieka? Które z nich były dla Ciebie nowe? Jak łatwo lub trudno było wyjaśnić znaczenie tych praw i znaleźć związek między nimi a mową nienawiści? Czy możesz wymienić inne prawa człowieka, które nie zostały wymienione?"
             },
             "spothate": {
-                "title": "Rozpoznaj mowę nienawiści i dowiedz się, co warto sprawdzić!",
+                "title": "Rozpoznaj mowę nienawiści!",
                 "back": "Wstecz",
                 "finalMessage": "Ukończyłeś(-aś) ćwiczenie! Możesz teraz przejść do następnego ćwiczenia.",
-                "description": "Mowę nienawiści można zdefiniować jako wyrażanie obraźliwych lub dyskryminujących opinii, treści bądź komunikatów wobec określonych grup osób lub jednostek – ze względu na ich cechy tożsamościowe, takie jak płeć, wiek, orientacja seksualna, narodowość, pochodzenie etniczne, religia, kolor skóry, niepełnosprawność lub inne. Dezinformacja to fałszywe treści rozpowszechniane z zamiarem wyrządzenia szkody. Tego typu materiały są najczęściej tworzone z chęci zarobku, zdobycia rozgłosu lub zwiększenia wpływów politycznych. Pojęcie dezinformacji jest ściśle powiązane z terminami misinformacja i malinformacja. Misinformacja oznacza fałszywe lub błędne informacje, które są udostępniane z powodu braku wiedzy, bez zamiaru wyrządzenia szkody. Malinformacja natomiast pojawia się wtedy, gdy prawdziwe informacje są rozpowszechniane poza właściwym kontekstem, w innym czasie lub w sposób celowy, aby wyrządzić szkodę — na przykład poprzez ujawnienie prywatnych danych. W tym kontekście celem fact-checkingu jest dostarczenie obywatelom narzędzi i informacji, które pozwalają im kształtować opinie w oparciu o pełne dane i zweryfikowane fakty, a co za tym idzie — podejmować świadome decyzje.Fałszywe informacje mogą wpływać na sposób, w jaki społeczeństwo myśli i radzi sobie z codziennymi problemami — dlatego główną misją fact-checkerów jest rzucanie światła i dostarczanie danych dotyczących takich zagadnień. W ujęciu ogólnym fact-checking obejmuje wykrywanie fałszywych treści (hoaksów), weryfikację ich zawartości oraz upowszechnianie sprostowań. Pierwszym krokiem w procesie fact-checkingu jest zidentyfikowanie treści wartych sprawdzenia — czyli takich twierdzeń, które zasługują na weryfikację. Zgodnie z definicją Nakov i in. (2022), dane twierdzenie uznaje się za warte sprawdzenia (checkworthy), jeśli spełnia następujące warunki:  1) jest oparte na faktach i możliwe do zweryfikowania — np. definiuje pojęcia, podaje liczby (z przeszłości lub teraźniejszości), formułuje możliwe do sprawdzenia prognozy, odnosi się do przepisów prawa, zasad lub procedur, opisuje bądź interpretuje obrazy lub nagrania, albo wskazuje korelacje czy związki przyczynowo-skutkowe; 2) nie jest łatwe do samodzielnego zweryfikowania przez laika (np. stwierdzenie „Językiem używanym w Brazylii jest portugalski” nie jest warte sprawdzenia); 3) ma znaczenie publiczne i potencjalny wpływ społeczny — tzn. może być fałszywe, dotyczy kwestii istotnych społecznie i/lub może mieć szkodliwe skutki.",
+                "description": "Mowę nienawiści można zdefiniować jako wyrażanie obraźliwych lub dyskryminujących opinii, treści bądź komunikatów wobec określonych grup osób lub jednostek – ze względu na ich cechy tożsamościowe, takie jak płeć, wiek, orientacja seksualna, narodowość, pochodzenie etniczne, religia, kolor skóry, niepełnosprawność lub inne.<br><br>Rozpoznawanie mowy nienawiści jest kluczowe, aby skutecznie z nią walczyć i chronić osoby narażone na jej negatywne konsekwencje. Identyfikacja mowy nienawiści pomaga zapobiegać jej eskalacji do przemocy lub dyskryminacji, wspierając tym samym harmonię społeczną oraz poszanowanie praw człowieka.",
                 "objectivesTitle": "Cele aktywności",
-                "objectives": "- Naucz się odróżniać prawdziwą mowę nienawiści od wypowiedzi, które mogą być obraźliwe lub kontrowersyjne, ale nie spełniają definicji mowy nienawiści.  <br>- Ćwicz odpowiednie reakcje.",
+                "objectives": "<ul><li>Naucz się odróżniać mowę nienawiści od wypowiedzi, które mogą być obraźliwe lub kontrowersyjne, ale nie spełniają definicji mowy nienawiści.</li><li>Ćwicz odpowiednie reakcje.</li></ul>",
                 "startButton": "Rozpocznij aktywność",
-                "task": "1. Określ, czy przedstawione sytuacje stanowią mowę nienawiści, czy nie, i wybierz swoją reakcję. Możesz też zaproponować własny sposób reakcji. 2. Dołącz do zespołu składającego się z 3–5 osób, w którym porównacie swoje odpowiedzi – skupcie się na podobieństwach i różnicach oraz uzasadnijcie swoje wybory. Celem zadania nie jest znalezienie jednej wspólnej odpowiedzi, ale zrozumienie różnorodności możliwych reakcji. 3. Informacja zwrotna i ewentualna korekta zostaną udzielone w przypadku błędnej klasyfikacji przykładów (np. jeśli dana wypowiedź została niepoprawnie uznana za mowę nienawiści lub odwrotnie).",
+                "task": "<ol><li>Określ, czy w przedstawionych sytuacjach pojawia się mowa nienawiści i wybierz właściwą reakcję. Możesz też zaproponować własny sposób odpowiedzi.</li><li>Dołącz do zespołu składającego się z 3–5 osób, w którym porównacie swoje odpowiedzi – skupcie się na podobieństwach i różnicach oraz uzasadnijcie swoje wybory. Celem zadania nie jest znalezienie jednej wspólnej odpowiedzi, ale zrozumienie różnorodności możliwych reakcji.</li><li>Informacja zwrotna i ewentualna korekta zostaną udzielone w przypadku błędnej klasyfikacji przykładów (np. jeśli dana wypowiedź została niepoprawnie uznana za mowę nienawiści lub odwrotnie).</li></ol>",
                 "headers": {
                     "message": "Wiadomość",
                     "category": "Typ"
@@ -269,68 +272,38 @@
                 "dataset": {
                     "hs_example1": {
                         "text": "Migranci muszą wrócić tam, skąd przybyli, nie ma dla nich tutaj miejsca!",
-                        "label": "mowa nienawiści",
+                        "label": "hate speech",
                         "explanation": "To stwierdzenie ma charakter mowy nienawiści, ponieważ wyraża wrogość i odrzucenie wobec migrantów jako grupy, ze względu na ich pochodzenie narodowe lub status imigracyjny."
                     },
                     "hs_example2": {
-                        "text": "Religia islamu uczy muzułmanów nienawiści do wszystkich innych!",
-                        "label": "mowa nienawiści",
+                        "text": "Islam uczy muzułmanów nienawiści do wszystkich innych!",
+                        "label": "hate speech",
                         "explanation": "To stwierdzenie jest mową nienawiści, ponieważ zawiera fałszywe i wrogie uogólnienia dotyczące całej religii (islamu) i jej wyznawców (muzułmanów), przedstawiając ich jako z natury nienawistnych lub niebezpiecznych."
                     },
                     "hs_example3": {
                         "text": "Mam dość poprawności politycznej. W dzisiejszych czasach wszyscy są przewrażliwieni.",
-                        "label": "nie mowa nienawiści",
+                        "label": "not hate speech",
                         "explanation": "Nawet jeśli ta wypowiedź może kogoś urazić lub pokazuje brak wrażliwości społecznej, sama w sobie nie jest jeszcze mową nienawiści. Żeby uznać dane stwierdzenie za mowę nienawiści, musi mieć ono na celu skrzywdzenie lub poniżenie innych osób z powodu ich rasy, religii, pochodzenia etnicznego, płci czy orientacji seksualnej."
                     },
                     "hs_example4": {
-                        "text": "Unikajmy Piotra, on zawsze spowalnia naszą grupę!",
-                        "label": "nie mowa nienawiści",
-                        "explanation": "Ta wypowiedź nie stanowi mowy nienawiści, ponieważ dotyczy konkretnej osoby i odnosi się do jej zachowania, a nie do przynależności do chronionej grupy – na przykład ze względu na rasę, religię, płeć, orientację seksualną, pochodzenie etniczne czy niepełnosprawność."
+                        "text": "Kobiety są zbyt emocjonalne, żeby być liderkami!",
+                        "label": "hate speech",
+                        "explanation": "Ta wypowiedź jest uznawana za mowę nienawiści (lub przynajmniej za przejaw dyskryminacji), ponieważ obraża i poniża całą grupę – kobiety – opierając się na stereotypach płciowych."
                     },
                     "hs_example5": {
-                        "text": "Kobiety są zbyt emocjonalne, żeby być liderkami!",
-                        "label": "mowa nienawiści",
-                        "explanation": "Ta wypowiedź jest uznawana za mowę nienawiści (lub przynajmniej za przejaw dyskryminacji), ponieważ obraża i poniża całą grupę – kobiety – opierając się na stereotypach płciowych."
+                        "text": "Unikajmy Piotra, on zawsze spowalnia naszą grupę!",
+                        "label": "not hate speech",
+                        "explanation": "Ta wypowiedź nie jest mową nienawiści, ponieważ dotyczy konkretnej osoby i odnosi się do jej zachowania, a nie do przynależności do chronionej grupy – na przykład ze względu na rasę, religię, płeć, orientację seksualną, pochodzenie etniczne czy niepełnosprawność."
                     },
                     "hs_example6": {
                         "text": "Nie możemy pozwolić migrantom osiedlać się tutaj, bo oni chcą tylko skorzystać z naszego systemu opieki społecznej i nie zamierzają pracować. Nie potrzeba nam takich ludzi.",
-                        "label": "mowa nienawiści",
-                        "explanation": "To stwierdzenie jest uznawane za mowę nienawiści, ponieważ uderza w migrantów jako grupę i przypisuje wszystkim jej członkom negatywne, krzywdzące stereotypy, promując wykluczenie i wrogość."
-                    },
-                    "cw_example1": {
-                        "text": "Pilne: Kongres przygotowuje się do zamknięcia Kapitolu z powodu koronawirusa i otwiera centrum telepracy",
-                        "label": "Sprawdź godny",
-                        "explanation": "Wiadomość tą można uznać za wartą sprawdzenia, ponieważ jest oparta na faktach i budzi zainteresowanie społeczne."
-                    },
-                    "cw_example2": {
-                        "text": "Chiny mają 24 razy więcej mieszkańców niż Włochy",
-                        "label": "Niegodny sprawdzenia",
-                        "explanation": "Chociaż ta wypowiedź jest możliwa do zweryfikowania i oparta na faktach, jej sprawdzenie jest zbyt proste, więc nie można uznać jej za wartą sprawdzenia."
-                    },
-                    "cw_example3": {
-                        "text": "Panie, proszę chroń moją rodzinę i Filipiny przed koronawirusem",
-                        "label": "Niegodny sprawdzenia",
-                        "explanation": "Wiadomość ta nie jest oparta na faktach i nie można jej zweryfikować, dlatego nie można jej uznać za wartą sprawdzenia."
-                    },
-                    "cw_example4": {
-                        "text": "Stolicą Włoch jest Rzym",
-                        "label": "Niegodny sprawdzenia",
-                        "explanation": "Chociaż ta wypowiedź jest możliwa do zweryfikowania i oparta na faktach, jej sprawdzenie jest zbyt proste, więc nie można uznać jej za wartą sprawdzenia."
-                    },
-                    "cw_example5": {
-                        "text": "Szczepionki powodują autyzm",
-                        "label": "Sprawdź godny",
-                        "explanation": "Wiadomość tą można uznać za wartą sprawdzenia, ponieważ jest oparta na faktach i budzi zainteresowanie społeczne."
-                    },
-                    "cw_example6": {
-                        "text": "Wierzę w duchy!",
-                        "label": "Niegodny sprawdzenia",
-                        "explanation": "Wiadomość ta nie jest oparta na faktach i nie można jej zweryfikować, dlatego nie można jej uznać za wartą sprawdzenia."
+                        "label": "hate speech",
+                        "explanation": "To stwierdzenie uznajemy za mowę nienawiści, ponieważ uderza w migrantów jako grupę i przypisuje wszystkim jej członkom negatywne, krzywdzące stereotypy, promując wykluczenie i wrogość."
                     }
                 },
                 "completedTitle": "Aktywność ukończona",
                 "completed": "Ukończyłeś(-aś) aktywność! Teraz możesz omówić swoje odpowiedzi z kolegami z klasy i nauczycielem.",
-                "finalMessagePart1": "<ul><li>Weź udział w pełnej szacunku dyskusji (jeśli uważasz to za bezpieczne rozwiązanie)</li><li>Zwróć uwagę na nieprawdziwe informacje (jeśli to bezpieczne)</li><li>Zgłoś wiadomość administratorom platformy lub moderatorowi</li><li>Zignoruj wiadomość</li><li>Zablokuj użytkownika</li><li>Spróbuj wyjaśnić temat osobie, która napisała wiadomość (jeśli jest to dla Ciebie działanie odpowiednie i bezpieczne)</li><li>Poszukaj więcej informacji o punkcie widzenia rozmówcy</li><li>Inna reakcja: …………………</li></ul>",
+                "finalMessagePart1": "Jaka byłaby Twoja reakcja na poniższe wiadomości? Możesz wybrać więcej niż jedną opcję:<ul><li>Weź udział w pełnej szacunku dyskusji (jeśli uważasz to za bezpieczne rozwiązanie).</li><li>Zwróć uwagę na nieprawdziwe informacje (jeśli to bezpieczne).</li><li>Zgłoś wiadomość administratorom platformy lub moderatorowi.</li><li>Zignoruj wiadomość.</li><li>Zablokuj użytkownika.</li><li>Spróbuj wyjaśnić temat osobie, która napisała wiadomość (jeśli jest to dla Ciebie działanie odpowiednie i bezpieczne).</li><li>Poszukaj więcej informacji o punkcie widzenia rozmówcy.</li><li>Inna reakcja: …………………</li></ul>",
                 "finalMessagePart2": "<ul><li>Czy wystąpiły jakieś trudności z rozpoznaniem przykładów mowy nienawiści? Co sprawia, że dana wypowiedź przekracza granicę i staje się mową nienawiści?</li><li>Czy trudno jest na nią reagować? Jakie umiejętności są potrzebne, żeby zrobić to w odpowiedni sposób?</li><li>Dlaczego reagowanie na mowę nienawiści jest ważne?</li></ul>",
               "next":"Dalej",
                 "score": "Wynik",
@@ -618,8 +591,8 @@
                                     }
                                 ],
                                 "feedback": {
-                                    "correct": "Poprawnie! Tak, na stronie szczepienia.pzh.gov.pl można znaleźć informacje dotyczące bezpieczeństwa i wiarygodności serwisu.\n\nDostępne są m.in.:\n- Polityka prywatności, zawierająca informacje o przetwarzaniu danych osobowych,\n- Instrukcja użytkownika, ułatwiająca korzystanie z portalu,\n- Opis instytucji zarządzającej stroną – jest to Narodowy Instytut Zdrowia Publicznego PZH – Państwowy Instytut Badawczy,\n- Certyfikat SSL, zapewniający bezpieczne połączenie (strona używa protokołu HTTPS),\n- Deklaracja dostępności, potwierdzająca zgodność z wymogami WCAG,\n- Formularz kontaktowy, umożliwiający bezpośredni kontakt z administratorem lub zespołem redakcyjnym strony.",
-                                    "incorrect": "Niepoprawnie! Tak, na stronie szczepienia.pzh.gov.pl można znaleźć informacje dotyczące bezpieczeństwa i wiarygodności serwisu.\n\nDostępne są m.in.:\n- Polityka prywatności, zawierająca informacje o przetwarzaniu danych osobowych,\n- Instrukcja użytkownika, ułatwiająca korzystanie z portalu,\n- Opis instytucji zarządzającej stroną – jest to Narodowy Instytut Zdrowia Publicznego PZH – Państwowy Instytut Badawczy,\n- Certyfikat SSL, zapewniający bezpieczne połączenie (strona używa protokołu HTTPS),\n- Deklaracja dostępności, potwierdzająca zgodność z wymogami WCAG,\n- Formularz kontaktowy, umożliwiający bezpośredni kontakt z administratorem lub zespołem redakcyjnym strony."
+                                    "correct": "Poprawnie! Tak, na stronie szczepienia.pzh.gov.pl można znaleźć informacje dotyczące bezpieczeństwa i wiarygodności serwisu.\n\nDostępne są m.in.:<ul><li>Polityka prywatności, zawierająca informacje o przetwarzaniu danych osobowych,</li><li>Instrukcja użytkownika, ułatwiająca korzystanie z portalu,</li><li>Opis instytucji zarządzającej stroną – jest to Narodowy Instytut Zdrowia Publicznego PZH – Państwowy Instytut Badawczy,</li><li>Certyfikat SSL, zapewniający bezpieczne połączenie (strona używa protokołu HTTPS),</li><li>Deklaracja dostępności, potwierdzająca zgodność z wymogami WCAG,</li><li>Formularz kontaktowy, umożliwiający bezpośredni kontakt z administratorem lub zespołem redakcyjnym strony.</li></ul>",
+                                    "incorrect": "Niepoprawnie! Tak, na stronie szczepienia.pzh.gov.pl można znaleźć informacje dotyczące bezpieczeństwa i wiarygodności serwisu.\n\nDostępne są m.in.:<ul><li>Polityka prywatności, zawierająca informacje o przetwarzaniu danych osobowych,</li><li>Instrukcja użytkownika, ułatwiająca korzystanie z portalu,</li><li>Opis instytucji zarządzającej stroną – jest to Narodowy Instytut Zdrowia Publicznego PZH – Państwowy Instytut Badawczy,</li><li>Certyfikat SSL, zapewniający bezpieczne połączenie (strona używa protokołu HTTPS),</li><li>Deklaracja dostępności, potwierdzająca zgodność z wymogami WCAG,</li><li>Formularz kontaktowy, umożliwiający bezpośredni kontakt z administratorem lub zespołem redakcyjnym strony.</li></ul>"
                                 }
                             },
                             {

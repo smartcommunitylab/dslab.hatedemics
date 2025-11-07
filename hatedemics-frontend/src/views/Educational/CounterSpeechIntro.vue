@@ -14,7 +14,7 @@
         <v-btn
           color="primary"
           class="mt-6"
-          @click="$router.push({ name: 'speechintroTask' })"
+          @click="$router.push({ name: 'counterSpeechTask' })"
         >
           {{ t('educational.tasks.speechintro.startButton') }}
         </v-btn>
