@@ -175,8 +175,8 @@
         "eduCard5Title": "Spot The Hate Speech!",
         "eduCard5Desc": "Identify hate speech in online content.",
         "eduCard5Button": "Start Activity",
-        "eduCard6Title": "Counterspeech Writing",
-        "eduCard6Desc": "Train your ability to respond to hate and disinformation content.",
+        "eduCard6Title": "Spot the counterspeech!",
+        "eduCard6Desc": "Can you spot the proper counterspeech against hate and misinformation?",
         "eduCard6Button": "Start Activity",
         "warningTitle": "Warning",
         "warningText": "These activities contain unobfuscated examples some readers may find offensive. If any activity or part of activity makes you feel uncomfortable or you feel triggered please refer to us or feel free to leave the room.",
@@ -307,7 +307,7 @@
                 "completed": "You have completed the activity! Now you can discuss your answers with your classmates and teacher.",
                 "finalMessagePart1": "How would you react to these messages? You can choose more than one:<ul><li>Engage in a respectful discussion (if safe)</li><li>Challenge the misinformation (if safe)</li><li>Report to the platform/moderator</li><li>Ignore it</li><li>Block the user</li><li>Educate the person (if appropriate and safe)</li><li>Seek more information about the user’s point of view</li><li>Other reaction: ……………………</li></ul>",
                 "finalMessagePart2": "<ul><li>Did you have problems in identifying the examples of hate speech? What made a statement cross the line into hate speech?</li><li>Is it difficult to react? What skills are needed to do it?</li><li>Why is it recommended to react to hate speech?</li></ul>",
-              "next":"Next",
+                "next": "Next",
                 "score": "Score",
                 "finish": "Finish"
             },
@@ -833,6 +833,56 @@
                         "conclusion": "After applying the Lateral reading method, we found that ‘The People's Voice’ is not a reliable source. It has the appearance of a media website and publishes content with a ‘Fact Checked stamped’, but in fact, the website publishes misinformation that is shared as real."
                     }
                 ]
+            },
+            "counterspeech": {
+                "title": "Spot the counterspeech!",
+                "back": "Back",
+                "finalMessage": "<ul>\n  <li>Did you have problems in identifying the examples of counterspeech?</li>\n  <li>Which do you think would be the consequences of replying with the unsuitable counterspeech options?</li>\n</ul>",
+                "description": "Counterspeech is defined as all communicative actions aimed at refuting hate speech or misinformation through cogent reasons, and true and fact-bound arguments (Schieb and Preuss, 2016). Key aspects for succesful counterspeech include: \n<ul>\n  <li>Avoiding abusive and divisive language (e.g. \"racist\", \"fascist\").</li>\n  <li>Responding with kindness, empathy and respect.</li>\n  <li>Challenging the claim, not the person who wrote it.</li>\n  <li>Expressing support for the attacked group.</li>\n  <li>Avoid political partisanship.</li>\n  <li>Countering both stereotypes and misinformation with adequate and contextualised information, and accurate and verifiable facts.</li>\n</ul>",
+                "objectivesTitle": "Objectives of the activity",
+                "objectives": "<ul>\n  <li>Learn to distinguish between actual counterspeech and reactions that may be contrasting expressions of hate or misinformation but do not meet the definition of counterspeech.</li>\n  <li>Practice appropriate reactions.</li>\n</ul>\n",
+                "startButton": "Start activity",
+                "task": "<ol>\n  <li>Identify if the given messages are counterspeech or not.</li>\n  <li>Feedback and correction is given if there is any wrongly classified examples (e.g. you did not identify counterspeech correctly).</li>\n</ol>\n",
+                "feedback": {
+                    "correct": "Correct answer!",
+                    "incorrect": "Wrong answer."
+                },
+                "completedTitle": "Activity completed",
+                "completed": "You have completed the activity! Now you can discuss your answers with your classmates and teacher.",
+                "next": "Next",
+                "score": "Score",
+                "finish": "Finish",
+                "question": "Which of the following responses is the most appropriate counterspeech to the hateful/misinformative statement above?",
+                "dataset": {
+                    "cs_example_1": {
+                        "text": "The world would be a better place without Muslims. They are only killing and raping our children.\n",
+                        "option1": "You are truly one stupid backwards thinking idiot to comment on Muslims like that.",
+                        "option2": "On the contrary, most children abuse is operated by people they know: a relative, family friends, sports coach, someone in a position of trust and authority (source: Know Violence in\nChildhood, 2017).",
+                        "correct": "1",
+                        "explanation": "Option 1 can't be considered counterspeech, as it's challenging the person spreading hate and not their claim."
+                    },
+                    "cs_example_2": {
+                        "text": "Poland has the lowest number of terrorist attacks because they have a strict no-migrants policy. Migrants only bring trouble!",
+                        "option1": "It's a misconception that Poland's low number of recorded terrorist attacks is solely due to a strict no-migrants policy since the premise inaccurately overlooks incidents that have occurred there since 2016, including attacks with anti-migrant motives (source: https://fullfact.org/online/does-polands-migration-policy-explain-its-lack-terror-attacks/). Moreover, research shows that migrants are less likely to commit crimes than native populations, and often, they themselves are victims of violence, demonstrating that the narrative linking migrants to terrorism is deeply misleading and harmful (source: https://worldrelief.org/upblog-the-top-5-immigration-myths-debunked/).",
+                        "option2": "I get that migrants can be irritating, but you’re really exaggerating now! That’s such a racist and backward way of thinking. Honestly, you should consider talking to a therapist, if a few smelly people make you this nervous, you’re clearly oversensitive about the topic, and it shows.",
+                        "correct": "0",
+                        "explanation": "Option 2 uses divisive language (i.e., racist) and is not empathising with target group (\"I get that migrants can be irritating\"). For these reasons, it can't be considered appropriate counterspeech."
+                    },
+                    "cs_example_3": {
+                        "text": "Why are we wasting our money letting all refugees in when we can't even take care of our own seniors?",
+                        "option1": "It's important to recognize that refugees and immigrants make significant contributions to our economy, often paying more in taxes than they receive in support (source: https://iine.org/2024/04/dispelling-10-common-myths-about-immigrants-and-refugees/). By welcoming newcomers, we not only provide them with safety and hope, but we also support our economy, ensuring that we can take care of all members of our community, including our seniors.",
+                        "option2": "If you complain about immigrants draining our resources, you are just ignoring reality. Refugees and newcomers are doing more for the economy than half the locals who don’t even try. You should actually thank them if your pension is paid, since they pay more in taxes than they receive in benefits (source: https://iine.org/2024/04/dispelling-10-common-myths-about-immigrants-and-refugees/).",
+                        "correct": "0",
+                        "explanation": "Option 2 is not counterspeech: it is aggressive and challenges the person spreading hate rather than their claim."
+                    },
+                    "cs_example_4": {
+                        "text": "Migrant workers are taking jobs away from British people. We should prioritize UK citizens for employment!",
+                        "option1": "I don’t remember where I read it, but there are more people in work than ever, and unemployment has gone down, not up. Clearly, migrant workers aren’t taking anything away from Britons: blaming migrants for unemployment is just a lazy excuse for you Eurosceptics to push your agenda. ",
+                        "option2": "The claim that migrant workers are taking jobs away from British citizens misrepresents the employment landscape in the UK, where the number of Britons in work is at a record high, with around 32 million employed in the first quarter of this year. Additionally, there are around 216,000 fewer people unemployed since before the Brexit referendum, indicating that migrant workers have not negatively impacted job availability for UK citizens (source: https://fullfact.org/economy/whats-happened-employment-vote-leave-eu/).",
+                        "correct": "1",
+                        "explanation": "Option 1 recurs to political partisanship (\"you Eurosceptics\") and does not cite any verifiable data to contrast misinformation: it is not counterspeech."
+                    }
+                }
             }
         }
     },

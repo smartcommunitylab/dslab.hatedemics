@@ -180,7 +180,7 @@ function acceptWarning() {
 </v-col>
       <!-- Educational Card 4 - Lateral Reading -->
       <v-col cols="12" md="4">
-  <!-- <v-card
+  <v-card
     elevation="6"
     class="h-100 pa-5 d-flex flex-column justify-space-between"
     color="#f4f6fa"
@@ -201,7 +201,7 @@ function acceptWarning() {
         {{ t("educational.eduCard6Button") }}
       </v-btn>
     </div>
-  </v-card> -->
+  </v-card>
 </v-col>
 
     </v-row>
