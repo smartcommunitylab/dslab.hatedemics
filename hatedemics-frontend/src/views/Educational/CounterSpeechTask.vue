@@ -24,29 +24,6 @@
               </div>
             </div>
 
-            <!-- Icone che appaiono dopo la risposta -->
-            <transition name="fade">
-              <div v-if="showFeedback" class="d-flex align-center ml-4">
-                <!-- Hate speech -->
-                <v-icon
-                  :icon="
-                    currentMessage?.hate_label
-                      ? 'mdi-emoticon-angry'
-                      : 'mdi-emoticon-happy-outline'
-                  "
-                  :color="currentMessage?.hate_label ? 'red' : 'green'"
-                  size="28"
-                  class="mr-3"
-                />
-                <!-- Checkworthy -->
-                <v-icon
-                  v-if="currentMessage?.checkworthy_label"
-                  icon="mdi-alert-outline"
-                  color="orange"
-                  size="28"
-                />
-              </div>
-            </transition>
           </div>
         </v-card>
 
@@ -127,51 +104,32 @@
           rounded
         ></v-progress-linear>
 
-        <!-- Dialog finale -->
         <v-dialog v-model="finalDialog" persistent max-width="500">
-          <v-card>
-            <v-card-title class="text-h6 font-weight-bold bg-success text-white pa-4">
-              {{ t("educational.tasks.counterspeech.completedTitle") }}
-            </v-card-title>
+  <v-card>
+    <v-card-title class="text-h6 font-weight-bold bg-success text-white pa-4">
+      {{ t("educational.tasks.counterspeech.completedTitle") }}
+    </v-card-title>
 
-            <v-card-text class="pa-6">
-              <transition name="fade" mode="out-in">
-                <div :key="finalStep">
-                  <div v-if="finalStep === 1" class="text-center">
-                    <v-icon size="64" color="success" class="mb-4"
-                      >mdi-check-circle-outline</v-icon
-                    >
-                    <p class="text-h6 mb-2 text-left" v-html="finalMessagePart1"></p>
-                    <v-divider class="my-4"></v-divider>
-                    <p class="text-subtitle-1">
-                      {{ t("educational.tasks.counterspeech.score") }}:
-                      <strong>{{ correctAnswers }} / {{ messages.length }}</strong>
-                    </p>
-                  </div>
+    <v-card-text class="pa-6 text-left">
+      <div class="text-center mb-4">
+        <v-icon size="64" color="success" class="mb-4">mdi-check-circle-outline</v-icon>
+      </div>
 
-                  <div v-else class="text-center">
-                    <v-icon size="64" color="primary" class="mb-4">mdi-flag-checkered</v-icon>
-                    <p class="text-h6 mb-2 text-left" v-html="finalMessagePart2"></p>
-                  </div>
-                </div>
-              </transition>
-            </v-card-text>
+      <p class="text-subtitle-1 mb-4" v-html="finalMessage"></p>
 
-            <v-card-actions class="justify-center pb-4">
-              <v-btn
-                v-if="finalStep === 1"
-                color="primary"
-                size="large"
-                @click="nextFinalStep"
-              >
-                {{ t("educational.tasks.counterspeech.next") }}
-              </v-btn>
-              <v-btn v-else color="success" size="large" @click="goToNextActivity">
-                {{ t("educational.tasks.counterspeech.finish") }}
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-dialog>
+      <p class="text-subtitle-1">
+        {{ t("educational.tasks.counterspeech.score") }}:
+        <strong>{{ correctAnswers }} / {{ messages.length }}</strong>
+      </p>
+    </v-card-text>
+
+    <v-card-actions class="justify-center pb-4">
+      <v-btn color="success" size="large" @click="goToNextActivity">
+        {{ t("educational.tasks.counterspeech.finish") }}
+      </v-btn>
+    </v-card-actions>
+  </v-card>
+</v-dialog>
       </v-col>
     </v-row>
   </v-container>
@@ -192,16 +150,9 @@ const selectedIndex = ref<number | null>(null);
 const showFeedback = ref(false);
 const finalDialog = ref(false);
 const correctAnswers = ref(0);
-const finalStep = ref(1);
+const finalMessage = computed(() => t("educational.tasks.counterspeech.finalMessage"));
 
-const finalMessagePart1 = computed(() => t("educational.tasks.counterspeech.finalMessagePart1"));
-const finalMessagePart2 = computed(() => t("educational.tasks.counterspeech.finalMessagePart2"));
-
-function nextFinalStep() {
-  finalStep.value = 2;
-}
 function finishQuiz() {
-  finalStep.value = 1;
   finalDialog.value = true;
 }
 function goToNextActivity() {
@@ -211,7 +162,7 @@ function goToNextActivity() {
 
 // === Dataset mock ===
 onMounted(() => {
-  const examples = ["cs_example1", "cs_example2", "cs_example3", "cs_example4"];
+  const examples = ["cs_example_1", "cs_example_2", "cs_example_3", "cs_example_4"];
   messages.value = examples.map((id) => ({
     id,
     message: t(`educational.tasks.counterspeech.dataset.${id}.text`),

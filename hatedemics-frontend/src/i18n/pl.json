@@ -305,7 +305,7 @@
                 "completed": "Ukończyłeś(-aś) aktywność! Teraz możesz omówić swoje odpowiedzi z kolegami z klasy i nauczycielem.",
                 "finalMessagePart1": "Jaka byłaby Twoja reakcja na poniższe wiadomości? Możesz wybrać więcej niż jedną opcję:<ul><li>Weź udział w pełnej szacunku dyskusji (jeśli uważasz to za bezpieczne rozwiązanie).</li><li>Zwróć uwagę na nieprawdziwe informacje (jeśli to bezpieczne).</li><li>Zgłoś wiadomość administratorom platformy lub moderatorowi.</li><li>Zignoruj wiadomość.</li><li>Zablokuj użytkownika.</li><li>Spróbuj wyjaśnić temat osobie, która napisała wiadomość (jeśli jest to dla Ciebie działanie odpowiednie i bezpieczne).</li><li>Poszukaj więcej informacji o punkcie widzenia rozmówcy.</li><li>Inna reakcja: …………………</li></ul>",
                 "finalMessagePart2": "<ul><li>Czy wystąpiły jakieś trudności z rozpoznaniem przykładów mowy nienawiści? Co sprawia, że dana wypowiedź przekracza granicę i staje się mową nienawiści?</li><li>Czy trudno jest na nią reagować? Jakie umiejętności są potrzebne, żeby zrobić to w odpowiedni sposób?</li><li>Dlaczego reagowanie na mowę nienawiści jest ważne?</li></ul>",
-              "next":"Dalej",
+                "next": "Dalej",
                 "score": "Wynik",
                 "finish": "Zakończ"
             },
@@ -727,8 +727,61 @@
                         "conclusion": "Strona globalna.info jest niewiarygodnym źródłem informacji i nie warto jej ufać.\n\nNa stronie nie ma podanych autorów ani zespołu redakcyjnego — wpisy są publikowane przez anonimowy profil „globalna świadomość”, który nie zawiera żadnych danych identyfikujących autorów ani informacji o ich wykształceniu czy kompetencjach.\n\nBrakuje jakichkolwiek informacji dotyczących zawartości strony, metodologii, celu działania czy sposobu doboru i weryfikacji treści. Nie ma też żadnych dowodów na rzetelność czy naukowe podejście do prezentowanych informacji.\n\nChoć strona posiada certyfikat SSL, nie ma innych danych dotyczących bezpieczeństwa, takich jak polityka prywatności czy informacje o administratorze. Dostępny jest jedynie regulamin sklepu z ofertą produktów, który nie jest powiązany z merytoryczną zawartością portalu.\n\nTreści publikowane na tej stronie nie są potwierdzane przez żadne wiarygodne źródła. Wręcz przeciwnie — organizacje fact-checkingowe, takie jak Stowarzyszenie Demagog, AFP Sprawdzam oraz fakenews.pl, wielokrotnie wskazują, że globalna.info rozpowszechnia liczne fałszywe informacje.\n\nNa stronie nie ma również żadnych dowodów opartych na faktach czy danych naukowych — brakuje podanych źródeł, a informacje nie bazują na wiarygodnych badaniach czy instytucjach naukowych.\n\nPodsumowując, globalna.info nie spełnia podstawowych kryteriów wiarygodności i rzetelności, dlatego nie powinna być traktowana jako źródło wartościowych czy sprawdzonych informacji."
                     }
                 ]
+            },
+            "counterspeech": {
+                "title": "Wskaż kontrnarrację!",
+                "back": "Wstecz",
+                "finalMessage": "<ul>\n  <li>Czy wystąpiły jakieś problemy z rozpoznaniem przykładów kontrnarracji?</li>\n  <li>Jakie mogłyby być konsekwencje reagowania na powyższe twierdzenia w nieodpowiedni sposób?</li>\n</ul>\n",
+                "description": "Kontrnarracja (ang. counterspeech) jest definiowana jako wszelkie działania komunikacyjne, których celem jest przeciwdziałanie mowie nienawiści za pomocą logicznego rozumowania oraz argumentów opartych na faktach (Schieb i Preuss, 2016). Kluczowe cechy skutecznej kontrnarracji obejmują:\n\n<ul>\n  <li>Unikanie języka obraźliwego i takiego, który tworzy podziały (np. określeń typu „rasista” czy „faszysta”).</li>\n  <li>Reagowanie z życzliwością, empatią i szacunkiem.</li>\n  <li>Kwestionowanie samego twierdzenia, a nie krytykowanie osoby, która je napisała.</li>\n  <li>Wyrażanie poparcia dla atakowanej grupy.</li>\n  <li>Unikanie stronniczości politycznej.</li>\n  <li>Przeciwdziałanie stereotypom i dezinformacji poprzez dostarczanie rzetelnych, kontekstowych informacji oraz precyzyjnych, weryfikowalnych faktów.</li>\n</ul>",
+                "objectivesTitle": "Cele aktywności",
+                "objectives": "<ul>\n  <li>Dowiedz się, jak odróżniać konstruktywną kontrnarrację od reakcji, które – choć sprzeciwiają się mowie nienawiści lub dezinformacji – nie są oparte na faktach ani nie spełniają kryteriów kontrnarracji.</li>\n  <li>Ćwicz odpowiednie sposoby reagowania.</li>\n</ul>",
+                "startButton": "Rozpocznij aktywność",
+                "task": "<ol>\n  <li>Określ, czy podane wypowiedzi stanowią kontrnarrację.</li>\n  <li>W przypadku błędnego zaklasyfikowania przykładów (np. gdy kontrnarracja została nieprawidłowo rozpoznana), otrzymasz informację zwrotną wraz z ewentualnymi poprawkami.</li>\n</ol>",
+                "feedback": {
+                    "correct": "Poprawna odpowiedź!",
+                    "incorrect": "Niepoprawna odpowiedź."
+                },
+                "completedTitle": "Aktywność ukończona",
+                "completed": "Ukończyłeś(-aś) aktywność! Teraz możesz omówić swoje odpowiedzi z kolegami z klasy i nauczycielem.",
+                "next": "Dalej",
+                "score": "Wynik",
+                "finish": "Zakończ",
+                "question": "Która z poniższych odpowiedzi jest najbardziej odpowiednią kontr-narracją wobec nienawistnego lub dezinformującego stwierdzenia powyżej?",
+                "dataset": {
+                    "cs_example_1": {
+                        "text": "Świat byłby lepszy bez muzułmanów. Oni tylko zabijają i gwałcą nasze dzieci.",
+                        "option1": "Jesteś naprawdę głupim, zacofanym idiotą, skoro mówisz o muzułmanach w taki sposób.",
+                        "option2": "Wręcz przeciwnie, większość przypadków wykorzystywania dzieci ma miejsce w otoczeniu osób, które są im znane: krewnych, przyjaciół rodziny, trenerów sportowych, osób zajmujących pozycje zaufania publicznego i sprawujących władzę (źródło: Know Violence in Childhood, 2017).",
+                        "correct": 1,
+                        "explanation": "Opcja 1 nie może być uznana za kontrnarrację, ponieważ krytykuje autora wypowiedzi, a nie samo twierdzenie."
+                    },
+                    "cs_example_2": {
+                        "text": "Polska ma najmniejszą liczbę ataków terrorystycznych, ponieważ prowadzi surową politykę antyimigracyjną. Migranci przynoszą tylko kłopoty!",
+                        "option1": "Przekonanie, że niska liczba ataków terrorystycznych odnotowanych w Polsce wynika wyłącznie z surowej polityki antyimigracyjnej jest błędne, ponieważ pomija ono incydenty, które miały miejsce od 2016 roku, w tym ataki wymierzone przeciwko samym migrantom (źródło: https://fullfact.org/online/does-polands-migration-policy-explain-its-lack-terror-attacks/). Ponadto badania wskazują, że migranci popełniają przestępstwa rzadziej niż miejscowa ludność, częściej zaś padają ofiarami przemocy. Wynika z tego, że łączenie imigracji z zagrożeniem terrorystycznym jest nie tylko błędne, ale i szkodliwe społecznie (źródło: https://worldrelief.org/upblog-the-top-5-immigration-myths-debunked/).",
+                        "option2": "Rozumiem, że migranci potrafią być irytujący, ale teraz naprawdę przesadzasz! To bardzo rasistowski i zacofany sposób myślenia. Może rozważ rozmowę z terapeutą. Jeśli kilka osób, które trochę inaczej pachną tak Cię denerwuje, to ewidentnie masz z tym jakiś problem i to widać.",
+                        "correct": 0,
+                        "explanation": "Opcja 2 stosuje język, który pogłębia podziały (takie określenia jak „rasistowski”) i brakuje w niej zrozumienia dla sytuacji krytykowanej grupy (np. sformułowanie „Rozumiem, że migranci mogą być irytujący”). W związku z tym nie spełnia ona kryteriów skutecznej kontrnarracji."
+                    },
+                    "cs_example_3": {
+                        "text": "Dlaczego marnujemy pieniądze, przyjmując tych wszystkich uchodźców, skoro nie jesteśmy w stanie zadbać nawet o naszych własnych seniorów?",
+                        "option1": "Warto pamiętać, że uchodźcy i imigranci znacząco przyczyniają się do rozwoju naszej gospodarki, często wpłacając do budżetu w podatkach więcej niż otrzymują w formie pomocy (źródło: https://iine.org/2024/04/dispelling-10-common-myths-about-immigrants-and-refugees/). Przyjmując ich, nie tylko zapewniamy im bezpieczeństwo i szansę na lepsze życie, ale także wzmacniamy gospodarkę – co pozwala potem dbać o wszystkich obywateli, w tym osoby starsze.",
+                        "option2": "Jeśli twierdzisz, że imigranci wyczerpują nasze zasoby, to kompletnie ignorujesz fakty. Uchodźcy i nowi przybysze wnoszą większy wkład w gospodarkę niż wielu rodowitych obywateli, którzy często nawet nie próbują się przyczynić do jej rozwoju. W rzeczywistości powinniśmy im dziękować – zwłaszcza jeśli pobierasz emeryturę, bo to właśnie oni, płacąc więcej podatków niż otrzymują świadczeń, utrzymują nasz system społeczny (źródło: https://iine.org/2024/04/dispelling-10-common-myths-about-immigrants-and-refugees/).",
+                        "correct": 0,
+                        "explanation": "Opcja 2 nie jest kontrnarracją: jest agresywna i krytykuje osobę szerzącą nienawiść, a nie jej twierdzenia."
+                    },
+                    "cs_example_4": {
+                        "text": "Imigranci odbierają pracę Brytyjczykom. Powinniśmy priorytetowo traktować obywateli Wielkiej Brytanii w kontekście zatrudnienia!",
+                        "option1": "Nie pamiętam, gdzie to czytałem, ale wiem, że obecnie pracuje więcej osób niż kiedykolwiek wcześniej, a bezrobocie spadło, a nie wzrosło. Więc najwyraźniej zatrudnieni migranci nie zabierają Brytyjczykom pracy. Obwinianie ich za bezrobocie to po prostu wygodna wymówka dla was, eurosceptyków, żeby dalej przepychać swoją polityczną agendę.",
+                        "option2": "Twierdzenie, że migranci odbierają pracę brytyjskim obywatelom, jest sprzeczne z realnym stanem rynku pracy w Wielkiej Brytanii, gdzie liczba zatrudnionych Brytyjczyków osiągnęła rekordowy poziom – w pierwszym kwartale tego roku pracowało około 32 miliony osób. Ponadto, od czasu referendum w sprawie Brexitu, liczba osób bezrobotnych zmniejszyła się o około 216 tysięcy, co wyraźnie wskazuje, że migranci nie zmniejszyli dostępności miejsc pracy dla obywateli Wielkiej Brytanii (źródło: https://fullfact.org/economy/whats-happened-employment-vote-leave-eu/).",
+                        "correct": 1,
+                        "explanation": "Opcja 1 opiera się na politycznej stronniczości („wy, eurosceptycy”) i nie przedstawia żadnych weryfikowalnych danych, które mogłyby podważyć dezinformację – dlatego nie stanowi przykładu skutecznej kontrnarracji."
+                    }
+                }
             }
-        }
+        },
+        "eduCard6Title": "Wskaż kontrnarrację!",
+        "eduCard6Desc": "Czy potrafisz rozpoznać właściwą kontrmowę wobec nienawiści i dezinformacji?",
+        "eduCard6Button": "Rozpocznij aktywność"
     },
     "inspect": {
         "title": "Przegląd kanału",

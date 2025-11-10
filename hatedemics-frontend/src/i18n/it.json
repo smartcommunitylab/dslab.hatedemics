@@ -247,9 +247,9 @@
                 "finalMessage": "Hai completato il compito! Puoi ora passare alla prossima attività.",
                 "description": "Il discorso d’odio (hate speech) può essere definito come l’espressione di opinioni, contenuti o comunicazioni offensive e discriminatorie nei confronti di specifici gruppi di persone o individui, sulla base delle loro caratteristiche identitarie, come genere, età, orientamento sessuale, nazionalità, etnia, religione, colore della pelle, disabilità o altre.<br><br>Riconoscere il discorso d’odio è fondamentale per combatterlo efficacemente e proteggere i gruppi vulnerabili dai danni. Individuare il discorso d’odio aiuta a prevenirne l’escalation verso violenza o discriminazione, sostenendo così la pace sociale e il rispetto dei diritti umani.",
                 "objectivesTitle": "Obiettivi dell'attività",
-                "objectives": "<ul><li>Impara a distinguere tra incitamento all'odio vero e proprio ed espressioni che possono essere offensive o controverse ma che non rientrano nella definizione di hate speech.</li><li> Metti in pratica reazioni appropriate.</li></ul>",
+                "objectives": "<ul><li>Impara a distinguere tra incitamento all'odio vero e proprio ed espressioni che possono essere offensive o controverse ma che non rientrano nella definizione di hate speech.</li><li>Metti in pratica reazioni appropriate.</li></ul>",
                 "startButton": "Inizia l'attività",
-                "task": "<ol><li> Identifica se le situazioni proposte costituiscono o meno hate speech e scegli la reazione che adotteresti. Puoi anche dare una tua proposta per la reazione.</li><li> Crea gruppi di 3-5 persone e discuti le tue risposte, concentrandoti su somiglianze e differenze e spiegando le tue scelte. L'obiettivo non è trovare risposte comuni, ma piuttosto osservare la diversità delle reazioni. </li><li> Feedback e correzioni vengono forniti se ci sono esempi classificati erroneamente (ad esempio, non hai identificato correttamente l'hate speech).</li></ol>",
+                "task": "<ol><li>Identifica se le situazioni proposte costituiscono o meno hate speech e scegli la reazione che adotteresti. Puoi anche dare una tua proposta per la reazione.</li><li>Crea gruppi di 3-5 persone e discuti le tue risposte, concentrandoti su somiglianze e differenze e spiegando le tue scelte. L'obiettivo non è trovare risposte comuni, ma piuttosto osservare la diversità delle reazioni.</li><li>Feedback e correzioni vengono forniti se ci sono esempi classificati erroneamente (ad esempio, non hai identificato correttamente l'hate speech).</li></ol>",
                 "headers": {
                     "message": "Messaggio",
                     "category": "Tipo"
@@ -299,20 +299,19 @@
                         "label": "hate speech",
                         "explanation": "Questa affermazione è considerata un incitamento all'odio perché prende di mira un gruppo (i migranti) e attribuisce stereotipi negativi e dannosi a tutti i membri di quel gruppo, in un modo che promuove l'esclusione e l'ostilità."
                     }
-                    }
                 },
                 "completedTitle": "Attività completata!",
                 "completed": "You have completed the activity! Now you can discuss your answers with your classmates and teacher.",
                 "finalMessagePart1": "Come reagiresti a questi messaggi? Puoi scegliere più di una risposta:<ul><li>Partecipa a una discussione rispettosa (se sicuro)</li><li>Contesta la disinformazione (se sicuro)</li><li>Segnala alla piattaforma/moderatore</li><li>Ignora il contenuto</li><li>Blocca l’utente</li><li>Prova a educare la persona (se appropriato e sicuro)</li><li>Cerca maggiori informazioni sul punto di vista dell’utente</li><li>Altra reazione: ………………………</li></ul>",
                 "finalMessagePart2": "<ul><li>Hai avuto difficoltà a identificare gli esempi di hate speech e check worthy? Cosa ha reso un'affermazione un vero e proprio incitamento all'odio o degna di verifica?</li><li>È difficile reagire? Quali competenze sono necessarie per farlo?</li><li>Perché è consigliabile reagire all'hate speech e alla misinformazione?</li></ul>",
-              "next":"Avanti",
+                "next": "Avanti",
                 "score": "Punteggio",
                 "finish": "Fine"
-            },        
+            },
             "debunking": {
                 "title": "Debunking",
                 "back": "Indietro",
-                "finalMessage":"Hai completato il compito! Puoi ora passare alla prossima attività.",
+                "finalMessage": "Hai completato il compito! Puoi ora passare alla prossima attività.",
                 "description": "L'obiettivo del fact-checking è fornire ai cittadini strumenti e informazioni che consentano loro di formarsi un'opinione sulla base di dati e fatti verificati, in modo da prendere decisioni consapevoli. La disinformazione può influenzare il modo in cui la società pensa e affronta i problemi quotidiani, ed è per questo che la missione principale dei fact-checker è quella di far luce e raccogliere dati sui temi rilevanti per la società. In generale, il fact-checking consiste nell'individuare le bufale, verificarne il contenuto e diffonderne la smentita. Queste azioni compongono la cosiddetta attività di debunking (debunking dall'inglese smascherare, confutare, smentire).\nI fact-checker lavorano quotidianamente con il debunking: verificano i contenuti e spiegano perché qualcosa è falso dopo che è stato condiviso e reso virale sui social media. Questa attività è importante per la società, il dibattito pubblico, perfino per la sicurezza della società in generale, e per evitare che più persone leggano, condividano e credano alle bugie e ai contenuti manipolati che circolano in Internet. Alcune attività di debunking sono molto difficili: richiedono molto tempo e l'uso di strumenti specifici. Altre richiedono solo molta osservazione e la ricerca di informazioni specifiche e affidabili.<br><strong>Proviamoci! </strong>In questa attività imparerai, in modo guidato, alcune tecniche di debunking e perché è importante attivare il pensiero critico e riconoscere come la viralità di alcune bufale possa creare e rafforzare le narrazioni che sfrutta la disinformazione.",
                 "objectivesTitle": "Obiettivi dell'attività",
                 "objectives": "<p><strong> Debunk:</strong> imparare, in modo guidato, alcune tecniche di debunking.</p><p><strong>Sviluppare il pensiero critico usando la strategia del pre-bunking:</strong> durante l'esercizio, gli utenti scoprono cosa sono le narrative di disinformazione e possono riflettere su quelle più diffuse nel loro paese.</p><p><strong>Attivare il pensiero critico:</strong> comprendendo come la viralizzazione di alcune bufale possa creare e rafforzare le narrative di disinformazione.</p>",
@@ -653,9 +652,8 @@
                             }
                         ],
                         "conclusionTitle": "Conclusione",
-
                         "conclusionQuestion": "Rispondi alle seguenti domande in base al contenuto presentato negli screenshot forniti: sono state fornite informazioni sugli autori e la loro competenza è stata verificata? Il contenuto includeva prove supportate da fatti e dati? Le stesse informazioni sono state pubblicate o confermate da altre fonti affidabili?",
-                                                "affidabile": true,
+                        "affidabile": true,
                         "feedback": {
                             "correct": "Corretto! ",
                             "incorrect": "Sbagliato! "
@@ -789,9 +787,8 @@
                             }
                         ],
                         "conclusionTitle": "Conclusione",
-
                         "conclusionQuestion": "Rispondi alle seguenti domande in base al contenuto presentato negli screenshot forniti: sono state fornite informazioni sugli autori e la loro competenza è stata verificata? Il contenuto includeva prove supportate da fatti e dati? Le stesse informazioni sono state pubblicate o confermate da altre fonti affidabili?",
-                                                "affidabile": false,
+                        "affidabile": false,
                         "feedback": {
                             "correct": "Corretto! ",
                             "incorrect": "Sbagliato! "
@@ -799,9 +796,63 @@
                         "conclusion": "Possiamo concludere che il sito web \"ImolaOggi\" si presenta come un giornale online che potrebbe sembrare dal nome un quotidiano locale della città di Imola che pubblica anche notizie di livello nazionale e internazionale. Grazie alla tecnica del Lateral Reading si può chiaramente verificare che il sito ImolaOggi non è un sito web attendibile nè una testata giornalistica riconosciuta. Il sito web diffonde contenuti manipolati, distorti e di hate speech."
                     }
                 ]
+            },
+            "counterspeech": {
+                "title": "Individua la contro-narrativa!",
+                "back": "Indietro",
+                "finalMessage": "<ul>\n  <li>Hai avuto problemi nell'identificare le contro-narrative?</li>\n  <li>Quali pensi che sarebbero le conseguenze se rispondessi con contro-narrative inadeguate?</li>\n</ul>\n",
+                "description": "Una contro-narrativa è definita come l'insieme di azioni comunicative volte a confutare discorsi d'odio o disinformazione attraverso motivazioni convincenti e argomentazioni fondate sui fatti (Schieb e Preuss, 2016). Gli aspetti chiave per una contro-narrativa efficace includono:\n<ul>\n  <li>Evitare di ricorrere a linguaggio offensivo e divisivo (ad esempio, \"razzista\", \"fascista\").</li>\n  <li>Rispondere con gentilezza, empatia e rispetto.</li>\n  <li>Contestare l'affermazione, non la persona che l'ha scritta.</li>\n  <li>Esprimere sostegno al gruppo attaccato.</li>\n  <li>Evitare la faziosità politica.</li>\n  <li>Contrastare stereotipi e disinformazione con informazioni adeguate e contestualizzate, e fatti accurati e verificabili.</li>\n</ul>",
+                "objectivesTitle": "Obiettivi dell'attività",
+                "objectives": "<ul>\n  <li>Impara a distinguere tra contro-narrative efficaci e reazioni che potrebbero contrastare odio o disinformazione, ma che non rientrano nella definizione di contro-narrativa.</li>\n  <li>Metti in pratica reazioni appropriate.</li>\n</ul>\n",
+                "startButton": "Inizia l'attività",
+                "task": "<ol>\n  <li>Identifica se i messaggi mostrati sono contro-narrative o meno.</li>\n  <li>Feedback e correzioni vengono fornite se ci sono esempi classificati erroneamente (ad esempio, se non hai identificato correttamente una contro-narrativa come tale).</li>\n</ol>",
+                "feedback": {
+                    "correct": "Risposta corretta!",
+                    "incorrect": "Risposta errata."
+                },
+                "completedTitle": "Attività completata!",
+                "completed": "You have completed the activity! Now you can discuss your answers with your classmates and teacher.",
+                "next": "Avanti",
+                "score": "Punteggio",
+                "finish": "Fine",
+                "question": "Quale delle seguenti risposte rappresenta la contro-narrativa più appropriata al messaggio d’odio o disinformativo qui sopra?",
+                "dataset": {
+                    "cs_example_1": {
+                        "text": "Il mondo sarebbe un posto migliore senza i musulmani. Stanno solo uccidendo e violentando i nostri bambini.",
+                        "option1": "Sei davvero un idiota arretrato e stupido per parlare dei musulmani in questo modo.",
+                        "option2": "Al contrario, la maggior parte degli abusi sui minori è perpetrata da persone che conoscono: un parente, amici di famiglia, un allenatore sportivo, qualcuno in una posizione di fiducia e autorità (fonte: Know Violence in Childhood, 2017).",
+                        "correct": 1,
+                        "explanation": "L'opzione 1 non può essere considerata una contro-narrativa, poiché mette in discussione la persona che diffonde odio e non le sue affermazioni."
+                    },
+                    "cs_example_2": {
+                        "text": "La Polonia ha il minor numero di attacchi terroristici perché ha una rigida politica anti-immigrazione. Gli immigrati portano solo guai!",
+                        "option1": "È un errore di interpretazione ritenere che il basso numero di attacchi terroristici registrati in Polonia sia dovuto esclusivamente a una rigida politica “no migranti”, poiché questa premessa ignora in modo inesatto gli episodi avvenuti nel Paese dal 2016, inclusi attacchi con motivazioni anti-migranti (fonte: https://fullfact.org/online/does-polands-migration-policy-explain-its-lack-terror-attacks/). Inoltre, le ricerche mostrano che i migranti hanno meno probabilità di commettere reati rispetto alla popolazione nativa e che, spesso, sono essi stessi vittime di violenza (fonte: https://worldrelief.org/upblog-the-top-5-immigration-myths-debunked/). Ciò dimostra che la narrazione che collega i migranti al terrorismo è profondamente fuorviante e dannosa.",
+                        "option2": "Capisco che i migranti possano essere irritanti, ma stai davvero esagerando! Il tuo è un modo di pensare davvero razzista e retrogrado. Onestamente, dovresti considerare di parlarne con uno psicologo: se bastano poche persone puzzolenti a renderti così nervoso, è chiaro che sei ipersensibile all'argomento, e si vede.",
+                        "correct": 0,
+                        "explanation": "L'opzione 2 utilizza un linguaggio divisivo (ad esempio, \"razzista\") e non dimostra empatia per il gruppo attaccato (\"Capisco che i migranti possano essere irritanti\"). Per questi motivi, non può essere considerata una contro-narrativa appropriata."
+                    },
+                    "cs_example_3": {
+                        "text": "Perché stiamo sprecando i nostri soldi lasciando entrare tutti i rifugiati, quando non riusciamo nemmeno a prenderci cura dei nostri anziani?",
+                        "option1": "È importante riconoscere che rifugiati e immigrati contribuiscono in modo significativo alla nostra economia, spesso pagando più tasse di quanto ricevano in sussidi (fonte: https://iine.org/2024/04/dispelling-10-common-myths-about-immigrants-and-refugees/). Accogliendo i nuovi arrivati, non solo offriamo loro sicurezza e speranza, ma sosteniamo anche la nostra economia, garantendoci di poterci prendere cura di tutti i membri della nostra comunità, compresi gli anziani.",
+                        "option2": "Se ti lamenti degli immigrati che prosciugano le nostre risorse, stai semplicemente ignorando la realtà. I rifugiati e i nuovi arrivati stanno facendo più per l’economia della metà delle persone originarie di questo posto che nemmeno ci provano. Dovresti anzi ringraziarli se la tua pensione viene pagata, visto che versano più tasse di quante ne ricevano in benefici (fonte: https://iine.org/2024/04/dispelling-10-common-myths-about-immigrants-and-refugees/).",
+                        "correct": 0,
+                        "explanation": "L'opzione 2 non è una contro-narrativa: è aggressiva e mette in discussione la persona che diffonde odio, anziché le sue affermazioni."
+                    },
+                    "cs_example_4": {
+                        "text": "Gli immigrati rubano il lavoro a noi inglesi. Dovremmo dare priorità ai cittadini britannici per quanto riguarda l'occupazione!",
+                        "option1": "Non ricordo dove l’ho letto, ma ci sono più persone occupate che mai e la disoccupazione è diminuita, non aumentata. È chiaro che i lavoratori migranti non stanno togliendo nulla ai britannici: dare la colpa ai migranti per la disoccupazione è solo una scusa pigra per voi euroscettici per portare avanti la vostra agenda.",
+                        "option2": "L'affermazione secondo cui i lavoratori migranti stiano sottraendo posti di lavoro ai cittadini britannici travisa il panorama occupazionale del Regno Unito, dove il numero di britannici occupati ha raggiunto un livello record, con circa 32 milioni di occupati nel primo trimestre di quest'anno. Inoltre, ci sono circa 216.000 disoccupati in meno rispetto a prima del referendum sulla Brexit, il che indica che i lavoratori migranti non hanno avuto un impatto negativo sulla disponibilità di posti di lavoro per i cittadini britannici (fonte: https://fullfact.org/economy/whats-happened-employment-vote-leave-eu/).",
+                        "correct": 1,
+                        "explanation": "L'opzione 1 ricorre alla faziosità politica (\"voi euroscettici\") e non cita alcun dato verificabile per contrastare la disinformazione: non si tratta di una contro-narrativa."
+                    }
+                }
             }
         },
-        "inspect": {
+        "eduCard6Title": "Individua la contro-narrativa!",
+        "eduCard6Desc": "Sai riconoscere la contro-narrativa corretta contro l'odio e la disinformazione?",
+        "eduCard6Button": "Inizia l'attività"
+    },
+    "inspect": {
         "title": "Panoramica del Canale",
         "subtitle": "<p>In questa pagina puoi visualizzare nel dettaglio il contenuto di un singolo canale Telegram. La tabella mostra i temi principali del canale, quanto compaiono nei messaggi, la percentuale di discorsi d’odio e di verificabilità (check-worthiness) per ciascuno e il sentiment prevalente.</p><p>A destra troverai le informazioni chiave sul canale, mentre le word cloud visualizzano quali termini compaiono più spesso nei messaggi non di odio e in quelli di odio, e nei messaggi considerati verificabili e non verificabili.</p><p>Usa i filtri e i pulsanti per passare dalla visuale delle chat dei canali agli argomenti, o per regolare il tipo di word cloud che vedi. Se posizioni il mouse su un’etichetta o su un pulsante, vedrai una breve spiegazione della sua funzione.</p>"
     },
@@ -1039,7 +1090,6 @@
         "addFromGround": "Aggiungi da fonte",
         "confirmTitle": "Conferma",
         "confirmLeavePage": "Se lasci questa pagina, potresti perdere i tuoi progressi. Sei sicuro?",
-    
         "tooltip": {
             "label": "Nome del Canale",
             "startEmpty": "Premi qui per creare un turno vuoto.",
