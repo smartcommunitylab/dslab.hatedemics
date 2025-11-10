@@ -855,28 +855,28 @@
                         "text": "Id-dinja tkun aħjar mingħajr Musulmani. Dawn qegħdin sempliċiment joqtlu u jistupraw lil uliedna.",
                         "option1": "Int veru idjota stupidu li għadek lura biex tikkummenta b’dan il-mod fuq il-Musulmani.",
                         "option2": "Għall-kuntrarju, il-biċċa l-kbira tal-abbuż mit-tfal isir minn persuni li jafuhom: xi qarib, ħbieb tal-familja, xi kowċ tal-isport, jew xi ħadd f’pożizzjoni ta’ fiduċja u awtorità (sors: Know Violence in Childhood, 2017).",
-                        "correct": 1,
+                        "correct": "1",
                         "explanation": "Għażla 1 ma tistax titqies kontro-diskors, għax qed tisfida l-persuna li qed ixxerred il-mibegħda u mhux dak li qed tgħid."
                     },
                     "cs_example_2": {
                         "text": "Il-Polonja għandha l-iżgħar numru ta’ attakki terroristiċi għax għandha politika stretta kontra l-migranti. Il-migranti jġibu biss inkwiet!",
-                        "option1": "Hija idea żbaljata li n-numru ta’ attakki terroristiċi rreġistrati fil-Polonja huwa żgħir biss minħabba l-politika stretta li tipprojbixxi l-migranti, għax din l-idea tinjora – b’mod impreċiż – inċidenti li seħħew hemmhekk mill-2016 ’il hawn, inklużi attakki b’motivi kontra l-migranti (sors: https://fullfact.org/online/does-polands-migration-policy-explain-its-lack-terror-attacks/). Barra minn hekk ir-riċerka turi huwa inqas probabbli li l-migranti jwettqu ċerti reati mill-popolazzjonijiet nattivi, u ħafna drabi huma stess ikunu vittmi tal-vjolenza, fatt li juri li n-narrattiva li torbot il-migranti mat-terroriżmu hi għalkollox qarrieqa u ta’ ħsara kbira  (sors: https://worldrelief.org/upblog-the-top-5-immigration-myths-debunked/).",
+                        "option1": "Hija idea żbaljata li n-numru ta’ attakki terroristiċi rreġistrati fil-Polonja huwa żgħir biss minħabba l-politika stretta li tipprojbixxi l-migranti, għax din l-idea tinjora – b’mod impreċiż – inċidenti li seħħew hemmhekk mill-2016 ’il hawn, inklużi attakki b’motivi kontra l-migranti. Barra minn hekk ir-riċerka turi huwa inqas probabbli li l-migranti jwettqu ċerti reati mill-popolazzjonijiet nattivi, u ħafna drabi huma stess ikunu vittmi tal-vjolenza, fatt li juri li n-narrattiva li torbot il-migranti mat-terroriżmu hi għalkollox qarrieqa u ta’ ħsara kbira.",
                         "option2": "Nifhem li l-migranti jistgħu jdejqu lil xi wħud, imma issa tassew qed tesaġera! Dan il-mod ta’ ħsieb tassew razzist u għadu lura. Onestament imissek tikkunsidra li tkellem terapista, jekk ftit nies b’riħa mhux pjaċevoli jirritawk daqshekk. Tidher sew kemm int sensittiv iżżejjed dwar is-suġġett, għax qed turi biċ-ċar.",
-                        "correct": 0,
+                        "correct": "0",
                         "explanation": "Għażla 2 tuża lingwaġġ diviżiv (jiġifieri razzist) u ma turix empatija mal-grupp inkwistjoni (“Nifhem li l-migranti jistgħu jdejqu lil xi wħud”). Għal dawn ir-raġunijiet ma tistax titqies bħala kontro-diskors xieraq."
                     },
                     "cs_example_3": {
                         "text": "Għaliex qed naħlu flusna biex inħallu r-refuġjati kollha jidħlu meta lanqas biss għandna biex nieħdu ħsieb l-anzjani tagħna stess?",
                         "option1": "Importanti nirrikonoxxu li r-refuġjati u l-immigranti jikkontribwixxu b’mod sinifikanti għall-ekonomija tagħna, u ħafna drabi jħallsu aktar taxxa milli jirċievu f’sostenn (sors: https://iine.org/2024/04/dispelling-10-common-myths-about-immigrants-and-refugees/). Meta nilqgħu persuni ġodda ma nkunux biss qed nipprovdulhom sigurtà u tama, iżda nkunu wkoll insostnu l-ekonomija tagħna u niżguraw li jkollna biex nieħdu ħsieb il-membri kollha tal-komunità, inklużi l-anzjani tagħna.",
                         "option2": "Jekk tilmenta dwar l-immigranti għax jassorbu r-riżorsi tagħna tkun sempliċiment qed tinjora r-realtà. Ir-refuġjati u dawk li daħlu ġodda qed jagħmlu aktar għall-ekonomija minn nofs in-nies tal-post li lanqas biss jippruvaw. Fil-verità jmissek tirringrazzjahom jekk il-pensjoni tidħollok, għax iħallsu aktar taxxi milli jirċievu benefiċċji (sors: https://iine.org/2024/04/dispelling-10-common-myths-about-immigrants-and-refugees/).",
-                        "correct": 0,
+                        "correct": "0",
                         "explanation": "Għażla 2 mhix kontro-diskors: hija aggressiva u tisfida l-persuna li qed ixxerred il-mibegħda aktar milli l-argument li qiegħda tagħmel."
                     },
                     "cs_example_4": {
                         "text": "Il-ħaddiema migranti qed jieħdu x-xogħol tal-Brittaniċi. Għandna nagħtu prijorità liċ-ċittadini tar-Renju Unit għall-impjiegi!",
                         "option1": "Ma niftakarx fejn qrajtha, imma hemm aktar nies jaħdmu minn qatt qabel, u l-qgħad naqas, mhux żdied. Huwa ċar li l-ħaddiema migranti mhuma qed jisirqu xejn lill-Brittaniċi: li nwaħħlu fil-migranti għall-qgħad hi biss skuża banali tagħkom l-Ewroxettiċi biex timbuttaw l-aġenda tagħkom.",
-                        "option2": "L-argument li l-ħaddiema migranti qed jieħdu l-impjiegi taċ-ċittadini Brittaniċi ma jirrappreżentax ix-xenarju tal-impjiegi fir-Renju Unit, fejn in-numru ta’ Brittaniċi li jaħdmu laħaq livell rekord, b’madwar 32 miljun impjegat fl-ewwel kwart ta’ din is-sena. Barra minn hekk, hemm madwar 216,000 persuna inqas qiegħda minn qabel ir-referendum tal-Brexit, li jindika li l-ħaddiema migranti ma kellhomx impatt negattiv fuq id-disponibbiltà tal-impjiegi għaċ-ċittadini tar-Renju Unit (sors: https://fullfact.org/economy/whats-happened-employment-vote-leave-eu/).",
-                        "correct": 1,
+                        "option2": "L-argument li l-ħaddiema migranti qed jieħdu l-impjiegi taċ-ċittadini Brittaniċi ma jirrappreżentax ix-xenarju tal-impjiegi fir-Renju Unit, fejn in-numru ta’ Brittaniċi li jaħdmu laħaq livell rekord, b’madwar 32 miljun impjegat fl-ewwel kwart ta’ din is-sena. Barra minn hekk, hemm madwar 216,000 persuna inqas qiegħda minn qabel ir-referendum tal-Brexit, li jindika li l-ħaddiema migranti ma kellhomx impatt negattiv fuq id-disponibbiltà tal-impjiegi għaċ-ċittadini tar-Renju Unit (sors: FullFact).",
+                        "correct": "1",
                         "explanation": "Għażla 1 tmur lura għall-partiġġjaniżmu politiku (“intom l-Ewroxettiċi”) u ma tikkwota l-ebda dejta verifikabbli biex tikkuntrasta l-miżinformazzjoni: mhijiex kontro-diskors."
                     }
                 }
