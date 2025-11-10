@@ -752,28 +752,28 @@
                         "text": "Świat byłby lepszy bez muzułmanów. Oni tylko zabijają i gwałcą nasze dzieci.",
                         "option1": "Jesteś naprawdę głupim, zacofanym idiotą, skoro mówisz o muzułmanach w taki sposób.",
                         "option2": "Wręcz przeciwnie, większość przypadków wykorzystywania dzieci ma miejsce w otoczeniu osób, które są im znane: krewnych, przyjaciół rodziny, trenerów sportowych, osób zajmujących pozycje zaufania publicznego i sprawujących władzę (źródło: Know Violence in Childhood, 2017).",
-                        "correct": 1,
+                        "correct": "1",
                         "explanation": "Opcja 1 nie może być uznana za kontrnarrację, ponieważ krytykuje autora wypowiedzi, a nie samo twierdzenie."
                     },
                     "cs_example_2": {
                         "text": "Polska ma najmniejszą liczbę ataków terrorystycznych, ponieważ prowadzi surową politykę antyimigracyjną. Migranci przynoszą tylko kłopoty!",
-                        "option1": "Przekonanie, że niska liczba ataków terrorystycznych odnotowanych w Polsce wynika wyłącznie z surowej polityki antyimigracyjnej jest błędne, ponieważ pomija ono incydenty, które miały miejsce od 2016 roku, w tym ataki wymierzone przeciwko samym migrantom (źródło: https://fullfact.org/online/does-polands-migration-policy-explain-its-lack-terror-attacks/). Ponadto badania wskazują, że migranci popełniają przestępstwa rzadziej niż miejscowa ludność, częściej zaś padają ofiarami przemocy. Wynika z tego, że łączenie imigracji z zagrożeniem terrorystycznym jest nie tylko błędne, ale i szkodliwe społecznie (źródło: https://worldrelief.org/upblog-the-top-5-immigration-myths-debunked/).",
+                        "option1": "Przekonanie, że niska liczba ataków terrorystycznych odnotowanych w Polsce wynika wyłącznie z surowej polityki antyimigracyjnej jest błędne, ponieważ pomija ono incydenty, które miały miejsce od 2016 roku, w tym ataki wymierzone przeciwko samym migrantom. Ponadto badania wskazują, że migranci popełniają przestępstwa rzadziej niż miejscowa ludność, częściej zaś padają ofiarami przemocy. Wynika z tego, że łączenie imigracji z zagrożeniem terrorystycznym jest nie tylko błędne, ale i szkodliwe społecznie.",
                         "option2": "Rozumiem, że migranci potrafią być irytujący, ale teraz naprawdę przesadzasz! To bardzo rasistowski i zacofany sposób myślenia. Może rozważ rozmowę z terapeutą. Jeśli kilka osób, które trochę inaczej pachną tak Cię denerwuje, to ewidentnie masz z tym jakiś problem i to widać.",
-                        "correct": 0,
+                        "correct": "0",
                         "explanation": "Opcja 2 stosuje język, który pogłębia podziały (takie określenia jak „rasistowski”) i brakuje w niej zrozumienia dla sytuacji krytykowanej grupy (np. sformułowanie „Rozumiem, że migranci mogą być irytujący”). W związku z tym nie spełnia ona kryteriów skutecznej kontrnarracji."
                     },
                     "cs_example_3": {
                         "text": "Dlaczego marnujemy pieniądze, przyjmując tych wszystkich uchodźców, skoro nie jesteśmy w stanie zadbać nawet o naszych własnych seniorów?",
                         "option1": "Warto pamiętać, że uchodźcy i imigranci znacząco przyczyniają się do rozwoju naszej gospodarki, często wpłacając do budżetu w podatkach więcej niż otrzymują w formie pomocy (źródło: https://iine.org/2024/04/dispelling-10-common-myths-about-immigrants-and-refugees/). Przyjmując ich, nie tylko zapewniamy im bezpieczeństwo i szansę na lepsze życie, ale także wzmacniamy gospodarkę – co pozwala potem dbać o wszystkich obywateli, w tym osoby starsze.",
                         "option2": "Jeśli twierdzisz, że imigranci wyczerpują nasze zasoby, to kompletnie ignorujesz fakty. Uchodźcy i nowi przybysze wnoszą większy wkład w gospodarkę niż wielu rodowitych obywateli, którzy często nawet nie próbują się przyczynić do jej rozwoju. W rzeczywistości powinniśmy im dziękować – zwłaszcza jeśli pobierasz emeryturę, bo to właśnie oni, płacąc więcej podatków niż otrzymują świadczeń, utrzymują nasz system społeczny (źródło: https://iine.org/2024/04/dispelling-10-common-myths-about-immigrants-and-refugees/).",
-                        "correct": 0,
+                        "correct": "0",
                         "explanation": "Opcja 2 nie jest kontrnarracją: jest agresywna i krytykuje osobę szerzącą nienawiść, a nie jej twierdzenia."
                     },
                     "cs_example_4": {
                         "text": "Imigranci odbierają pracę Brytyjczykom. Powinniśmy priorytetowo traktować obywateli Wielkiej Brytanii w kontekście zatrudnienia!",
                         "option1": "Nie pamiętam, gdzie to czytałem, ale wiem, że obecnie pracuje więcej osób niż kiedykolwiek wcześniej, a bezrobocie spadło, a nie wzrosło. Więc najwyraźniej zatrudnieni migranci nie zabierają Brytyjczykom pracy. Obwinianie ich za bezrobocie to po prostu wygodna wymówka dla was, eurosceptyków, żeby dalej przepychać swoją polityczną agendę.",
-                        "option2": "Twierdzenie, że migranci odbierają pracę brytyjskim obywatelom, jest sprzeczne z realnym stanem rynku pracy w Wielkiej Brytanii, gdzie liczba zatrudnionych Brytyjczyków osiągnęła rekordowy poziom – w pierwszym kwartale tego roku pracowało około 32 miliony osób. Ponadto, od czasu referendum w sprawie Brexitu, liczba osób bezrobotnych zmniejszyła się o około 216 tysięcy, co wyraźnie wskazuje, że migranci nie zmniejszyli dostępności miejsc pracy dla obywateli Wielkiej Brytanii (źródło: https://fullfact.org/economy/whats-happened-employment-vote-leave-eu/).",
-                        "correct": 1,
+                        "option2": "Twierdzenie, że migranci odbierają pracę brytyjskim obywatelom, jest sprzeczne z realnym stanem rynku pracy w Wielkiej Brytanii, gdzie liczba zatrudnionych Brytyjczyków osiągnęła rekordowy poziom – w pierwszym kwartale tego roku pracowało około 32 miliony osób. Ponadto, od czasu referendum w sprawie Brexitu, liczba osób bezrobotnych zmniejszyła się o około 216 tysięcy, co wyraźnie wskazuje, że migranci nie zmniejszyli dostępności miejsc pracy dla obywateli Wielkiej Brytanii (źródło: FullFact).",
+                        "correct": "1",
                         "explanation": "Opcja 1 opiera się na politycznej stronniczości („wy, eurosceptycy”) i nie przedstawia żadnych weryfikowalnych danych, które mogłyby podważyć dezinformację – dlatego nie stanowi przykładu skutecznej kontrnarracji."
                     }
                 }

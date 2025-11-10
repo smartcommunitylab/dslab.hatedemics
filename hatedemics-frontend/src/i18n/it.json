@@ -821,28 +821,28 @@
                         "text": "Il mondo sarebbe un posto migliore senza i musulmani. Stanno solo uccidendo e violentando i nostri bambini.",
                         "option1": "Sei davvero un idiota arretrato e stupido per parlare dei musulmani in questo modo.",
                         "option2": "Al contrario, la maggior parte degli abusi sui minori è perpetrata da persone che conoscono: un parente, amici di famiglia, un allenatore sportivo, qualcuno in una posizione di fiducia e autorità (fonte: Know Violence in Childhood, 2017).",
-                        "correct": 1,
+                        "correct": "1",
                         "explanation": "L'opzione 1 non può essere considerata una contro-narrativa, poiché mette in discussione la persona che diffonde odio e non le sue affermazioni."
                     },
                     "cs_example_2": {
                         "text": "La Polonia ha il minor numero di attacchi terroristici perché ha una rigida politica anti-immigrazione. Gli immigrati portano solo guai!",
-                        "option1": "È un errore di interpretazione ritenere che il basso numero di attacchi terroristici registrati in Polonia sia dovuto esclusivamente a una rigida politica “no migranti”, poiché questa premessa ignora in modo inesatto gli episodi avvenuti nel Paese dal 2016, inclusi attacchi con motivazioni anti-migranti (fonte: https://fullfact.org/online/does-polands-migration-policy-explain-its-lack-terror-attacks/). Inoltre, le ricerche mostrano che i migranti hanno meno probabilità di commettere reati rispetto alla popolazione nativa e che, spesso, sono essi stessi vittime di violenza (fonte: https://worldrelief.org/upblog-the-top-5-immigration-myths-debunked/). Ciò dimostra che la narrazione che collega i migranti al terrorismo è profondamente fuorviante e dannosa.",
+                        "option1": "È un errore di interpretazione ritenere che il basso numero di attacchi terroristici registrati in Polonia sia dovuto esclusivamente a una rigida politica “no migranti”, poiché questa premessa ignora in modo inesatto gli episodi avvenuti nel Paese dal 2016, inclusi attacchi con motivazioni anti-migranti. Inoltre, le ricerche mostrano che i migranti hanno meno probabilità di commettere reati rispetto alla popolazione nativa e che, spesso, sono essi stessi vittime di violenza. Ciò dimostra che la narrazione che collega i migranti al terrorismo è profondamente fuorviante e dannosa.",
                         "option2": "Capisco che i migranti possano essere irritanti, ma stai davvero esagerando! Il tuo è un modo di pensare davvero razzista e retrogrado. Onestamente, dovresti considerare di parlarne con uno psicologo: se bastano poche persone puzzolenti a renderti così nervoso, è chiaro che sei ipersensibile all'argomento, e si vede.",
-                        "correct": 0,
+                        "correct": "0",
                         "explanation": "L'opzione 2 utilizza un linguaggio divisivo (ad esempio, \"razzista\") e non dimostra empatia per il gruppo attaccato (\"Capisco che i migranti possano essere irritanti\"). Per questi motivi, non può essere considerata una contro-narrativa appropriata."
                     },
                     "cs_example_3": {
                         "text": "Perché stiamo sprecando i nostri soldi lasciando entrare tutti i rifugiati, quando non riusciamo nemmeno a prenderci cura dei nostri anziani?",
                         "option1": "È importante riconoscere che rifugiati e immigrati contribuiscono in modo significativo alla nostra economia, spesso pagando più tasse di quanto ricevano in sussidi (fonte: https://iine.org/2024/04/dispelling-10-common-myths-about-immigrants-and-refugees/). Accogliendo i nuovi arrivati, non solo offriamo loro sicurezza e speranza, ma sosteniamo anche la nostra economia, garantendoci di poterci prendere cura di tutti i membri della nostra comunità, compresi gli anziani.",
                         "option2": "Se ti lamenti degli immigrati che prosciugano le nostre risorse, stai semplicemente ignorando la realtà. I rifugiati e i nuovi arrivati stanno facendo più per l’economia della metà delle persone originarie di questo posto che nemmeno ci provano. Dovresti anzi ringraziarli se la tua pensione viene pagata, visto che versano più tasse di quante ne ricevano in benefici (fonte: https://iine.org/2024/04/dispelling-10-common-myths-about-immigrants-and-refugees/).",
-                        "correct": 0,
+                        "correct": "0",
                         "explanation": "L'opzione 2 non è una contro-narrativa: è aggressiva e mette in discussione la persona che diffonde odio, anziché le sue affermazioni."
                     },
                     "cs_example_4": {
                         "text": "Gli immigrati rubano il lavoro a noi inglesi. Dovremmo dare priorità ai cittadini britannici per quanto riguarda l'occupazione!",
                         "option1": "Non ricordo dove l’ho letto, ma ci sono più persone occupate che mai e la disoccupazione è diminuita, non aumentata. È chiaro che i lavoratori migranti non stanno togliendo nulla ai britannici: dare la colpa ai migranti per la disoccupazione è solo una scusa pigra per voi euroscettici per portare avanti la vostra agenda.",
-                        "option2": "L'affermazione secondo cui i lavoratori migranti stiano sottraendo posti di lavoro ai cittadini britannici travisa il panorama occupazionale del Regno Unito, dove il numero di britannici occupati ha raggiunto un livello record, con circa 32 milioni di occupati nel primo trimestre di quest'anno. Inoltre, ci sono circa 216.000 disoccupati in meno rispetto a prima del referendum sulla Brexit, il che indica che i lavoratori migranti non hanno avuto un impatto negativo sulla disponibilità di posti di lavoro per i cittadini britannici (fonte: https://fullfact.org/economy/whats-happened-employment-vote-leave-eu/).",
-                        "correct": 1,
+                        "option2": "L'affermazione secondo cui i lavoratori migranti stiano sottraendo posti di lavoro ai cittadini britannici travisa il panorama occupazionale del Regno Unito, dove il numero di britannici occupati ha raggiunto un livello record, con circa 32 milioni di occupati nel primo trimestre di quest'anno. Inoltre, ci sono circa 216.000 disoccupati in meno rispetto a prima del referendum sulla Brexit, il che indica che i lavoratori migranti non hanno avuto un impatto negativo sulla disponibilità di posti di lavoro per i cittadini britannici (fonte: FullFact).",
+                        "correct": "1",
                         "explanation": "L'opzione 1 ricorre alla faziosità politica (\"voi euroscettici\") e non cita alcun dato verificabile per contrastare la disinformazione: non si tratta di una contro-narrativa."
                     }
                 }

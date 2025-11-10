@@ -821,28 +821,28 @@
                         "text": "El mundo sería un lugar mejor sin los musulmanes. Solo están matando y violando a nuestros hijos.",
                         "option1": "Eres un idiota retrógrado por hacer comentarios así sobre las personas musulmanas.",
                         "option2": "Para nada, la mayoría de los abusos infantiles son perpetrados por personas cercanas al menor: un familiar, amigos de la familia, entrenadores etc. Suelen ser personas con una posición de confianza y autoridad (fuente: Know Violence in Childhood, 2017).",
-                        "correct": 1,
+                        "correct": "1",
                         "explanation": "La opción 1 no puede considerarse un contraargumento, ya que cuestiona y ataca a la persona que difunde el odio y no a su mensaje."
                     },
                     "cs_example_2": {
                         "text": "Polonia tiene la cantidad más baja de ataques terroristas porque tiene una estricta política de no admisión de inmigrantes. ¡Los inmigrantes solo traen problemas!",
-                        "option1": "Es un error creer que el reducido número de atentados terroristas registrados en Polonia se deba únicamente a una política estricta de no admisión de personas migrantes, ya que esta premisa ignora los incidentes ocurridos desde 2016, que incluyen ataques xenófobos (fuente: https://fullfact.org/online/does-polands-migration-policy-explain-its-lack-terror-attacks/). Además, las investigaciones demuestran que las personas migrantes tienen menos probabilidades de cometer delitos que la población local (fuente: https://worldrelief.org/upblog-the-top-5-immigration-myths-debunked/). De hecho, a menudo, son víctimas de violencia, lo que demuestra que la narrativa que vincula a las personas migrantes con el terrorismo es incorrecta y muy perjudicial.",
+                        "option1": "Es un error creer que el reducido número de atentados terroristas registrados en Polonia se deba únicamente a una política estricta de no admisión de personas migrantes, ya que esta premisa ignora los incidentes ocurridos desde 2016, que incluyen ataques xenófobos. Además, las investigaciones demuestran que las personas migrantes tienen menos probabilidades de cometer delitos que la población local. De hecho, a menudo, son víctimas de violencia, lo que demuestra que la narrativa que vincula a las personas migrantes con el terrorismo es incorrecta y muy perjudicial.",
                         "option2": "Entiendo que las personas migrantes a veces pueden ser molestas, ¡pero estás exagerando! Esa es una forma de pensar racista y retrógrada. Sinceramente, deberías de mirártelo si te pones tan nervioso solamente por unos pocos ataques. Es más que evidente que eres demasiado sensible con este tema, no se puede hablar contigo. ",
-                        "correct": 0,
+                        "correct": "0",
                         "explanation": "La opción 2 utiliza un lenguaje que puede dividir (cuando llama a la otra persona racista) y no muestra empatía con el grupo atacado (\"Entiendo que las personas migrantes a veces pueden ser molestas\"). Por ello, esta opción no se considea un contraargumento. "
                     },
                     "cs_example_3": {
                         "text": "¿Por qué estamos malgastando nuestro dinero dejando entrar a todos los refugiados cuando ni siquiera podemos cuidar de nuestros propios mayores?",
                         "option1": "Es importante reconocer que las personas refugiadas y migrantes contribuyen significativamente a nuestra economía, a menudo pagando más impuestos de los que reciben en ayudas (fuente: https://iine.org/2024/04/dispelling-10-common-myths-about-immigrants-and-refugees/). Al acoger a estas personas, no solo les brindamos seguridad y esperanza, sino que también impulsamos nuestra economía, garantizando así el bienestar de todos los miembros de nuestra comunidad, incluyendo a las personas mayores. ",
                         "option2": "Si te quejas de que las personas migrantes agotan nuestros recursos, simplemente ignoras la realidad. Las personas refugiadas y migrantes aportan más a la economía que la mitad de las personas de aquí que ni siquiera lo intentan. Deberías agradecerles si recibes tu pensión, ya que pagan más impuestos de los que reciben en prestaciones (fuente: https://iine.org/2024/04/dispelling-10-common-myths-about-immigrants-and-refugees/).",
-                        "correct": 0,
+                        "correct": "0",
                         "explanation": "La opción 2 no es un contraargumento ya que emplea un tono agresivo contra la persona que difunde el odio en lugar de centrarse en refutar su afirmación."
                     },
                     "cs_example_4": {
                         "text": "Los trabajadores migrantes les están quitando el trabajo a los británicos. ¡Deberíamos dar prioridad a los ciudadanos del Reino Unido en la contratación!",
                         "option1": "No recuerdo dónde lo leí, pero hay más gente trabajando que nunca y el desempleo ha bajado, no subido. Está claro que los trabajadores migrantes no les quitan nada a los británicos: culpar a los migrantes del desempleo es solo una excusa barata que usan los euroescépticos para imponer su ideología.",
-                        "option2": "La afirmación de que los trabajadores migrantes les quitan el trabajo a los ciudadanos británicos distorsiona la realidad laboral del Reino Unido, donde el número de británicos empleados se encuentra en un máximo histórico, con alrededor de 32 millones de personas empleadas en el primer trimestre de este año. Además, hay aproximadamente 216 000 personas menos desempleadas desde antes del referéndum del Brexit, lo que indica que los trabajadores migrantes no han afectado negativamente la disponibilidad de empleo para los ciudadanos británicos (fuente: https://fullfact.org/economy/whats-happened-employment-vote-leave-eu/).",
-                        "correct": 1,
+                        "option2": "La afirmación de que los trabajadores migrantes les quitan el trabajo a los ciudadanos británicos distorsiona la realidad laboral del Reino Unido, donde el número de británicos empleados se encuentra en un máximo histórico, con alrededor de 32 millones de personas empleadas en el primer trimestre de este año. Además, hay aproximadamente 216 000 personas menos desempleadas desde antes del referéndum del Brexit, lo que indica que los trabajadores migrantes no han afectado negativamente la disponibilidad de empleo para los ciudadanos británicos (fuente: FullFact).",
+                        "correct": "1",
                         "explanation": "La opción 1 recurre al partidismo político (\"ustedes, euroescépticos\") y no cita ningún dato verificable para contrarrestar la desinformación: no es un contraargumento."
                     }
                 }
