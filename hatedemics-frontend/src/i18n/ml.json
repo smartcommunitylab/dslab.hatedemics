@@ -1,141 +1,141 @@
 {
-    "login": {
-        "success": "Irnexxielek tidħol fis-sistema",
-        "error": "Żball waqt il-login",
-        "button": "Idħol"
-    },
-    "common": {
-        "close": "Agħlaq",
-        "ok": "Owkej",
-        "yes": "Iva",
-        "no": "Le",
+  "login": {
+    "success": "Irnexxielek tidħol fis-sistema",
+    "error": "Żball waqt il-login",
+    "button": "Idħol"
+  },
+  "common": {
+    "close": "Agħlaq",
+    "ok": "Owkej",
+    "yes": "Iva",
+    "no": "Le",
         "showMore": "Mostra di piċ",
         "showLess": "Mostra inqas"
     },
-    "menu": {
-        "home": "Il-Bażi",
-        "educational": "Attivitajiet Edukattivi",
-        "explore": "Esplora d-dejta tat-Telegram",
-        "network": "Network",
-        "channel": "Kanal",
-        "conversation": "Chat",
-        "quickGuide": "Glossarju",
-        "counterspeech": "Kontro-diskors",
-        "projects": "Suġġetti",
-        "credits": "Ringrazzjamenti",
-        "logout": "Oħroġ"
+  "menu": {
+    "home": "Il-Bażi",
+    "educational": "Attivitajiet Edukattivi",
+    "explore": "Esplora d-dejta tat-Telegram",
+    "network": "Network",
+    "channel": "Kanal",
+    "conversation": "Chat",
+    "quickGuide": "Glossarju",
+    "counterspeech": "Kontro-diskors",
+    "projects": "Suġġetti",
+    "credits": "Ringrazzjamenti",
+    "logout": "Oħroġ"
     },
-    "counterspeechGuide": {
-        "guideTitle": "Glossarju",
-        "guideItems": {
-            "counterspeech": {
-                "title": "Kontro-diskors",
-                "description": "<p><strong>Il-kontro-diskors</strong> huwa definit bħala kull azzjoni komunikattiva mmirata biex ma taċċettax diskors ta’ mibegħda permezz ta’ raġunijiet konvinċenti u argumenti veri u bbażati fuq il-fatti (Schieb u Preuss, 2016).</p>"
-            },
-            "dataSources": {
-                "title": "Artiklu li jiċċekkja l-fatti",
-                "description": "<p>Jinkludi artiklu ta’ verifika tal-fatti minn pubblikatur iċċertifikat (firmatarju tal-<a href=\"https://ifcncodeofprinciples.poynter.org/\" target=\"_blank\">Kodiċi tal-Prinċipji tal-IFCN</a>).</p>"
-            },
-            "dialogue": {
-                "title": "Djalogu",
-                "description": "<p>Oħloq djalogu li jkun simulazzjoni tal-interazzjoni bejn xi ħadd li jxerred il-mibegħda/id-diżinformazzjoni u operatur li jwieġeb b’argumenti bbażati fuq il-fatti.</p>"
-            },
-            "groundText": {
-                "title": "Evidenza ta' sostenn mill-artiklu",
-                "description": "<p>Tista’ żżid partijiet mill-artiklu li jiċċekkja l-fatti li jappoġġjaw it-tweġiba tal-operatur.</p><p>It-test ta’ referenza <em>jiżdied awtomatikament</em> meta jinħoloq turn. Tista’ wkoll <strong>iżżid manwalment</strong> parti mill-artiklu u tikklikkja l-buttuna “Orbot”.</p>"
-            },
-            "newTurn": {
-                "title": "Turn ġdid",
-                "description": "<p>Tista’ żżid turn ġdid b’diversi modi:</p><ul><li>Żid turn vojt bil-buttuna “+”.</li><li>Iġġenera awtomatikament turn bil-buttuna tal-bakketta maġika.</li><li>Agħżel parti mill-artiklu bħala evidenza ta’ sostenn, imbagħad ikklikkja “Żid mill-bażi”.</li></ul><p><strong>Nota:</strong> Anke t-turns iġġenerati awtomatikament u t-test bażiku jistgħu dejjem jiġu editjati.</p>"
-            }
-        }
-    },
-    "home": {
-        "title": "Niġġieldu l-mibegħda u d-diżinformazzjoni online",
-        "description": "HATEDEMICS hija pjattaforma li tuża l-intelliġenza artifiċjali biex tanalizza l-kontenut online, issaħħaħ il-ħsieb kritiku u tħejji r-risposti għall-kliem ta’ mibegħda.",
-        "network": "Esplora n-Network ta’ Telegram",
-        "networkDescription": "Mappa interattiva li turi l-konnessjonijiet bejn il-kanali, il-kontenut u d-dinamika tal-mibegħda u d-diżinformazzjoni fuq l-internet. Ara x’qed iseħħ fuq l-internet, segwi l-flussi tal-informazzjoni u identifika l-punti ewlenin tal-komunikazzjoni tossika.",
-        "networkButton": "Mur fin-network",
-        "counterspeech": "Il-kitba tal-kontro-diskors",
-        "counterspeechDescription": "Tħarreġ fil-kapaċità li twieġeb għal kontenut ta’ mibegħda u diżinformazzjoni permezz ta' eżerċizzji apposta tal-kitba. Tgħallem uża sorsi affidabbli biex toħloq argumenti b’saħħithom u tiżviluppa ħsieb kritiku biex tbiddel it-ton ta' diskussjoni online.",
-        "counterspeechButton": "Ibda ikteb",
-        "educational": "Attivitajiet edukattivi",
-        "educationalDescription": "Skopri riżorsi u materjal edukattiv biex tifhem u tikkumbatti l-mibegħda online.",
-        "educationalButton": "Mur fis-Sezzjoni Edukattiva",
-        "guideDescription": "X’għandek tkun taf qabel tuża l-pjattaforma.",
-        "guideButton": "Iftaħ il-Glossarju",
-        "guideTitle": "Glossarju",
-        "guide": "Gwida",
-        "selectDataset": "Agħżel id-Dataset",
-        "guideItems": {
-            "network": {
-                "title": "Network",
-                "description": "In-network juri l-konnessjonijiet bejn il-kanali kollha tat-Telegram. Kanal huwa punt li jgħaqqad u jkun konness ma’ kanal ieħor jekk “jirrakkomandah”. Ir-rakkomandazzjonijiet huma ġġenerati awtomatikament minn Telegram skont l-utenti li jużaw l-istess kanali."
-            },
-            "inRec": {
-                "title": "Rakkomandazzjonijiet li daħlu",
-                "description": "Kemm hu rakkomandat kanal minn kanali oħra."
-            },
-            "outRec": {
-                "title": "Rakkomandazzjonijiet li ħarġu",
-                "description": "Kemm kanal jirrakkomanda kanali oħra."
-            },
-            "risk": {
-                "title": "Ir-riskju ta’ infodemija",
-                "description": "Kemm kanal hu affidabbli jew le. Din l-iskala hi minn 0 sa 1."
-            },
-            "check": {
-                "title": "Ivverifika",
-                "description": "Dan juri jekk messaġġ jistax jiġi vverifikat. Dan ifisser li l-messaġġ jinkludi l-fatti, mhux opinjonijiet, u hu relevanti biżżejjed biex jiġi vverifikat."
-            }
-        }
-    },
+  "counterspeechGuide": {
+    "guideTitle": "Glossarju",
+    "guideItems": {
+      "counterspeech": {
+        "title": "Kontro-diskors",
+        "description": "<p><strong>Il-kontro-diskors</strong> huwa definit bħala kull azzjoni komunikattiva mmirata biex ma taċċettax diskors ta’ mibegħda permezz ta’ raġunijiet konvinċenti u argumenti veri u bbażati fuq il-fatti (Schieb u Preuss, 2016).</p>"
+      },
+      "dataSources": {
+        "title": "Artiklu li jiċċekkja l-fatti",
+        "description": "<p>Jinkludi artiklu ta’ verifika tal-fatti minn pubblikatur iċċertifikat (firmatarju tal-<a href=\"https://ifcncodeofprinciples.poynter.org/\" target=\"_blank\">Kodiċi tal-Prinċipji tal-IFCN</a>).</p>"
+      },
+      "dialogue": {
+        "title": "Djalogu",
+        "description": "<p>Oħloq djalogu li jkun simulazzjoni tal-interazzjoni bejn xi ħadd li jxerred il-mibegħda/id-diżinformazzjoni u operatur li jwieġeb b’argumenti bbażati fuq il-fatti.</p>"
+      },
+      "groundText": {
+        "title": "Evidenza ta' sostenn mill-artiklu",
+        "description": "<p>Tista’ żżid partijiet mill-artiklu li jiċċekkja l-fatti li jappoġġjaw it-tweġiba tal-operatur.</p><p>It-test ta’ referenza <em>jiżdied awtomatikament</em> meta jinħoloq turn. Tista’ wkoll <strong>iżżid manwalment</strong> parti mill-artiklu u tikklikkja l-buttuna “Orbot”.</p>"
+      },
+      "newTurn": {
+        "title": "Turn ġdid",
+        "description": "<p>Tista’ żżid turn ġdid b’diversi modi:</p><ul><li>Żid turn vojt bil-buttuna “+”.</li><li>Iġġenera awtomatikament turn bil-buttuna tal-bakketta maġika.</li><li>Agħżel parti mill-artiklu bħala evidenza ta’ sostenn, imbagħad ikklikkja “Żid mill-bażi”.</li></ul><p><strong>Nota:</strong> Anke t-turns iġġenerati awtomatikament u t-test bażiku jistgħu dejjem jiġu editjati.</p>"
+      }
+    }
+  },
+  "home": {
+    "title": "Niġġieldu l-mibegħda u d-diżinformazzjoni online",
+    "description": "HATEDEMICS hija pjattaforma li tuża l-intelliġenza artifiċjali biex tanalizza l-kontenut online, issaħħaħ il-ħsieb kritiku u tħejji r-risposti għall-kliem ta’ mibegħda.",
+    "network": "Esplora n-Network ta’ Telegram",
+    "networkDescription": "Mappa interattiva li turi l-konnessjonijiet bejn il-kanali, il-kontenut u d-dinamika tal-mibegħda u d-diżinformazzjoni fuq l-internet. Ara x’qed iseħħ fuq l-internet, segwi l-flussi tal-informazzjoni u identifika l-punti ewlenin tal-komunikazzjoni tossika.",
+    "networkButton": "Mur fin-network",
+    "counterspeech": "Il-kitba tal-kontro-diskors",
+    "counterspeechDescription": "Tħarreġ fil-kapaċità li twieġeb għal kontenut ta’ mibegħda u diżinformazzjoni permezz ta' eżerċizzji apposta tal-kitba. Tgħallem uża sorsi affidabbli biex toħloq argumenti b’saħħithom u tiżviluppa ħsieb kritiku biex tbiddel it-ton ta' diskussjoni online.",
+    "counterspeechButton": "Ibda ikteb",
+    "educational": "Attivitajiet edukattivi",
+    "educationalDescription": "Skopri riżorsi u materjal edukattiv biex tifhem u tikkumbatti l-mibegħda online.",
+    "educationalButton": "Mur fis-Sezzjoni Edukattiva",
+    "guideDescription": "X’għandek tkun taf qabel tuża l-pjattaforma.",
+    "guideButton": "Iftaħ il-Glossarju",
+    "guideTitle": "Glossarju",
+    "guide": "Gwida",
+    "selectDataset": "Agħżel id-Dataset",
+    "guideItems": {
+      "network": {
+        "title": "Network",
+        "description": "In-network juri l-konnessjonijiet bejn il-kanali kollha tat-Telegram. Kanal huwa punt li jgħaqqad u jkun konness ma’ kanal ieħor jekk “jirrakkomandah”. Ir-rakkomandazzjonijiet huma ġġenerati awtomatikament minn Telegram skont l-utenti li jużaw l-istess kanali."
+      },
+      "inRec": {
+        "title": "Rakkomandazzjonijiet li daħlu",
+        "description": "Kemm hu rakkomandat kanal minn kanali oħra."
+      },
+      "outRec": {
+        "title": "Rakkomandazzjonijiet li ħarġu",
+        "description": "Kemm kanal jirrakkomanda kanali oħra."
+      },
+      "risk": {
+        "title": "Ir-riskju ta’ infodemija",
+        "description": "Kemm kanal hu affidabbli jew le. Din l-iskala hi minn 0 sa 1."
+      },
+      "check": {
+        "title": "Ivverifika",
+        "description": "Dan juri jekk messaġġ jistax jiġi vverifikat. Dan ifisser li l-messaġġ jinkludi l-fatti, mhux opinjonijiet, u hu relevanti biżżejjed biex jiġi vverifikat."
+      }
+    }
+  },
     "networkGuide": {
-        "guideTitle": "Glossarju tal-Esplorazzjoni",
-        "guideItems": {
-            "telegramDataset": {
-                "title": "Dataset ta’ Telegram",
-                "description": "<p><strong>Dataset</strong> hija ġabra strutturata ta’ dejta. Il-pjattaforma tinkludi madwar <strong>10 miljun messaġġ ta’ Telegram</strong>, miġbura minn madwar <strong>500 kanal</strong>, f’<em>4 lingwi</em> (l-Ingliż, it-Taljan, l-Ispanjol u l-Malti).</p><p>Telegram intgħażel għax jippermetti <strong>aċċess bla ħlas għal ġbir ta’ dejta fuq skala kbira</strong>, b’differenza minn pjattaformi oħra popolari tal-messaġġi.</p>"
-            },
-            "telegramChannels": {
-                "title": "Kanali u chats ta’ Telegram",
-                "description": "<p><strong>Kanal ta’ Telegram</strong> huwa spazju fejn amministratur wieħed jew grupp ta' amministraturi jistgħu jibagħtu messaġġ lil udjenza kbira.</p><p>Kanal jista’ jkollu chat jew grupp ta' <strong>chats</strong> b’settings differenti: pereżempju xi wħud li fihom l-amministraturi biss jistgħu jibagħtu l-messaġġi u oħrajn li fihom kulħadd jista’ jipparteċipa.</p><p>Iċ-chats jew il-konverżazzjonijiet ta’ kanal jirreferu għall-messaġġi mibgħuta fih u kif l-udjenza tirreaġixxi għalihom.</p>"
-            },
-            "network": {
-                "title": "Network",
-                "description": "<p><strong>Network</strong> huwa struttura li tirrappreżenta l-entitajiet bħala punti u r-relazzjonijiet bejniethom bħala linji.</p><p>F’dan in-network il-kanali mniżżla minn Telegram jidhru bħala <strong>punti</strong>, u l-linji juru kif inhuma konnessi. Kanal ikun marbut ma’ ieħor meta Telegram <em>jirrakkomandah</em> awtomatikament, skont kemm ikollhom utenti komuni ż-żewġ kanali.</p>"
-            },
-            "disinformation": {
-                "title": "Diżinformazzjoni",
-                "description": "<p><strong>Id-diżinformazzjoni</strong> hija informazzjoni falza jew qarrieqa li tinħoloq, titqassam jew tinxtered intenzjonalment bil-għan li <em>tqarraq</em> jew <em>timmanipula</em> n-nies.</p><p>Ħafna drabi tintuża biex <strong>tinfluwenza l-opinjonijiet</strong>, tiżra’ l-konfużjoni jew tikseb <em>għan politiku, soċjali jew finanzjarju</em>.</p>"
-            },
-            "reliability": {
-                "title": "Affidabbiltà",
-                "description": "<p><strong>L-affidabbiltà</strong> turi kemm ħolqa hi ta’ min jafdaha u preċiża. Dan jiġi determinat permezz ta’ <em>evalwazzjoni manwali</em> tas-sit.</p><p><strong>Riżultat għoli tal-affidabbiltà</strong> jindika li s-sors jista’ jitqies bħala wieħed ta’ min jafdah u li jipprovdi informazzjoni preċiża u bbażata fuq il-fatti.</p>"
-            },
-            "infodemicRisk": {
-                "title": "Ir-riskju ta’ infodemija",
-                "description": "<p><strong>Ir-riskju ta’ infodemija</strong> jindika kemm kanal hu affidabbli, fuq skala minn <strong>0</strong> (affidabbli għalkollox) sa <strong>1</strong> (assolutament mhux affidabbli).</p><p>Dan hu bbażat fuq kemm huma affidabbli s-siti f'dak il-kanal, u kemm l-utenti huma <em>esposti</em> għal dawk il-links (meta tqis in-numru ta’ views).</p><p><strong>Riżultat baxx</strong> ifisser li l-utenti huma esposti għal informazzjoni aktar affidabbli.</p><p>Għal aktar dettalji tista’ ara <a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">dan l-artiklu</a>.</p>"
-            },
-            "hateSpeech": {
-                "title": "Diskors ta’ mibegħda",
-                "description": "<p><strong>Diskors ta’ mibegħda</strong> jirreferi għal espressjonijiet li jinkoraġġixxu, jippromwovu, jiġġustifikaw jew ixerrdu <strong>l-mibegħda, il-vjolenza, id-diskriminazzjoni jew l-ostilità</strong> kontra persuna jew grupp minħabba karatteristiċi tal-identità, bħar-razza, ir-reliġjon, l-etniċità, is-sess, l-orjentazzjoni sesswali, diżabilità jew karatteristiċi simili.</p><p>Dan jinkludi kemm <em>inkoraġġiment dirett għall-vjolenza</em> kif ukoll forom aktar sottili ta’ <em>deumanizzazzjoni</em> jew <em>lingwaġġ dispreġġattiv</em>.</p>"
-            },
-            "checkWorthyness": {
-                "title": "Ta’ min jiġi vverifikat",
-                "description": "<p>Kontenut jitqies bħala <strong>ta’ min jiġi vverifikat</strong> meta jkun ta’ <em>importanza pubblika</em> u jista’ jkun li jkun jeħtieġ verifika mill-fact-checkers.</p><p>Messaġġ jitqies li hu ta’ min jiġi vverifikat meta:</p><ul><li>Jagħmel <strong>stqarrija fattwali</strong> li tista’ tiġi vverifikata jew miċħuda,</li><li>Ikollu l-potenzjal li <strong>jinfluwenza l-opinjonijiet, l-imġiba jew id-dibattitu pubbliku</strong>,</li><li>Jindirizza <strong>suġġetti sensittivi jew li jħallu impatt qawwi</strong> (eż. il-politika, is-saħħa, is-sigurtà, il-migrazzjoni),</li><li>Juri sinjali li jista’ jkun hemm <em>diżinformazzjoni</em> jew <em>miżinformazzjoni</em>.</li></ul>"
-            }
-        }
-    },
+    "guideTitle": "Glossarju tal-Esplorazzjoni",
+    "guideItems": {
+      "telegramDataset": {
+        "title": "Dataset ta’ Telegram",
+        "description": "<p><strong>Dataset</strong> hija ġabra strutturata ta’ dejta. Il-pjattaforma tinkludi madwar <strong>10 miljun messaġġ ta’ Telegram</strong>, miġbura minn madwar <strong>500 kanal</strong>, f’<em>4 lingwi</em> (l-Ingliż, it-Taljan, l-Ispanjol u l-Malti).</p><p>Telegram intgħażel għax jippermetti <strong>aċċess bla ħlas għal ġbir ta’ dejta fuq skala kbira</strong>, b’differenza minn pjattaformi oħra popolari tal-messaġġi.</p>"
+      },
+      "telegramChannels": {
+        "title": "Kanali u chats ta’ Telegram",
+        "description": "<p><strong>Kanal ta’ Telegram</strong> huwa spazju fejn amministratur wieħed jew grupp ta' amministraturi jistgħu jibagħtu messaġġ lil udjenza kbira.</p><p>Kanal jista’ jkollu chat jew grupp ta' <strong>chats</strong> b’settings differenti: pereżempju xi wħud li fihom l-amministraturi biss jistgħu jibagħtu l-messaġġi u oħrajn li fihom kulħadd jista’ jipparteċipa.</p><p>Iċ-chats jew il-konverżazzjonijiet ta’ kanal jirreferu għall-messaġġi mibgħuta fih u kif l-udjenza tirreaġixxi għalihom.</p>"
+      },
+      "network": {
+        "title": "Network",
+        "description": "<p><strong>Network</strong> huwa struttura li tirrappreżenta l-entitajiet bħala punti u r-relazzjonijiet bejniethom bħala linji.</p><p>F’dan in-network il-kanali mniżżla minn Telegram jidhru bħala <strong>punti</strong>, u l-linji juru kif inhuma konnessi. Kanal ikun marbut ma’ ieħor meta Telegram <em>jirrakkomandah</em> awtomatikament, skont kemm ikollhom utenti komuni ż-żewġ kanali.</p>"
+      },
+      "disinformation": {
+        "title": "Diżinformazzjoni",
+        "description": "<p><strong>Id-diżinformazzjoni</strong> hija informazzjoni falza jew qarrieqa li tinħoloq, titqassam jew tinxtered intenzjonalment bil-għan li <em>tqarraq</em> jew <em>timmanipula</em> n-nies.</p><p>Ħafna drabi tintuża biex <strong>tinfluwenza l-opinjonijiet</strong>, tiżra’ l-konfużjoni jew tikseb <em>għan politiku, soċjali jew finanzjarju</em>.</p>"
+      },
+      "reliability": {
+        "title": "Affidabbiltà",
+        "description": "<p><strong>L-affidabbiltà</strong> turi kemm ħolqa hi ta’ min jafdaha u preċiża. Dan jiġi determinat permezz ta’ <em>evalwazzjoni manwali</em> tas-sit.</p><p><strong>Riżultat għoli tal-affidabbiltà</strong> jindika li s-sors jista’ jitqies bħala wieħed ta’ min jafdah u li jipprovdi informazzjoni preċiża u bbażata fuq il-fatti.</p>"
+      },
+      "infodemicRisk": {
+        "title": "Ir-riskju ta’ infodemija",
+        "description": "<p><strong>Ir-riskju ta’ infodemija</strong> jindika kemm kanal hu affidabbli, fuq skala minn <strong>0</strong> (affidabbli għalkollox) sa <strong>1</strong> (assolutament mhux affidabbli).</p><p>Dan hu bbażat fuq kemm huma affidabbli s-siti f'dak il-kanal, u kemm l-utenti huma <em>esposti</em> għal dawk il-links (meta tqis in-numru ta’ views).</p><p><strong>Riżultat baxx</strong> ifisser li l-utenti huma esposti għal informazzjoni aktar affidabbli.</p><p>Għal aktar dettalji tista’ ara <a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">dan l-artiklu</a>.</p>"
+      },
+      "hateSpeech": {
+        "title": "Diskors ta’ mibegħda",
+        "description": "<p><strong>Diskors ta’ mibegħda</strong> jirreferi għal espressjonijiet li jinkoraġġixxu, jippromwovu, jiġġustifikaw jew ixerrdu <strong>l-mibegħda, il-vjolenza, id-diskriminazzjoni jew l-ostilità</strong> kontra persuna jew grupp minħabba karatteristiċi tal-identità, bħar-razza, ir-reliġjon, l-etniċità, is-sess, l-orjentazzjoni sesswali, diżabilità jew karatteristiċi simili.</p><p>Dan jinkludi kemm <em>inkoraġġiment dirett għall-vjolenza</em> kif ukoll forom aktar sottili ta’ <em>deumanizzazzjoni</em> jew <em>lingwaġġ dispreġġattiv</em>.</p>"
+      },
+      "checkWorthyness": {
+        "title": "Ta’ min jiġi vverifikat",
+        "description": "<p>Kontenut jitqies bħala <strong>ta’ min jiġi vverifikat</strong> meta jkun ta’ <em>importanza pubblika</em> u jista’ jkun li jkun jeħtieġ verifika mill-fact-checkers.</p><p>Messaġġ jitqies li hu ta’ min jiġi vverifikat meta:</p><ul><li>Jagħmel <strong>stqarrija fattwali</strong> li tista’ tiġi vverifikata jew miċħuda,</li><li>Ikollu l-potenzjal li <strong>jinfluwenza l-opinjonijiet, l-imġiba jew id-dibattitu pubbliku</strong>,</li><li>Jindirizza <strong>suġġetti sensittivi jew li jħallu impatt qawwi</strong> (eż. il-politika, is-saħħa, is-sigurtà, il-migrazzjoni),</li><li>Juri sinjali li jista’ jkun hemm <em>diżinformazzjoni</em> jew <em>miżinformazzjoni</em>.</li></ul>"
+      }
+    }
+  },
     "welcome": {
-        "title": "Merħba fil-Hatedemics"
+       "title": "Merħba fil-Hatedemics"
     },
     "onboarding": {
         "language": "Lingwa",
         "steps": [
             {
-                "title": "X’inhu Hatedemics?",
-                "html": "<p><strong>Hatedemics</strong> huwa proġett Ewropew bil-ħsieb li jqajjem kuxjenza dwar diskors ta’ mibegħda, diżinformazzjoni u kif dawn iż-żewġ problemi jidħlu f’xulxin. Il-proġett għandu l-għan li jsaħħaħ l-NGOs, l-organizzazzjonijiet tas-soċjetà ċivili, il-fact-checkers, l-awtoritajiet pubbliċi u ż-żgħażagħ, biex jipprevjeni u jiġġieled b’mod effettiv kontra l-polarizzazzjoni, l-intolleranza u t-teoriji konspiratorji.</p><p>Żur is-<a href=\"https://hatedemics.eu\" target=\"_blank\" rel=\"noopener\">sit ta’ Hatedemics</a> biex issir taf aktar.</p>"
+                "title": "X’inhu l-Hatedemics?",
+                "html": "<p><strong>Hatedemics</strong> huwa proġett Ewropew bil-ħsieb li jqajjem kuxjenza dwar diskors ta’ mibegħda, diżinformazzjoni u kif dawn iż-żewġ problemi jidħlu f’xulxin. Il-proġett għandu l-għan li jsaħħaħ l-NGOs, l-organizzazzjonijiet tas-soċjetà ċivili, il-fact-checkers, l-awtoritajiet pubbliċi u ż-żgħażagħ, biex jipprevjeni u jiġġieled b’mod effettiv kontra l-polarizzazzjoni, l-intolleranza u t-teoriji konspiratorji.</p><p>Żur is-<a href='https://hatedemics.eu' target='_blank' rel='noopener'>sit ta’ Hatedemics</a> biex issir taf aktar.</p>"
             },
             {
                 "title": "X’tinkludi l-pjattaforma?",
@@ -150,46 +150,46 @@
                 "html": "<p>⚠️ <strong>Twissija:</strong> Il-pjattaforma fiha eżempji mhux iċċensurati li xi qarrejja jistgħu jħossuhom offiżi bihom.</p>"
             }
         ],
-        "chooseLanguage": "Agħżel il-lingwa tiegħek għall-pjattaforma",
-        "continue": "Kompli",
-        "prev": "Lura",
-        "next": "Li jmiss",
-        "close": "Agħlaq",
-        "neverShow": "Terġax turi"
+    "chooseLanguage": "Agħżel il-lingwa tiegħek għall-pjattaforma",
+    "continue": "Kompli",
+    "prev": "Lura",
+    "next": "Li jmiss",
+    "close": "Agħlaq",
+    "neverShow": "Terġax turi"
     },
-    "educational": {
-        "title": "Attivitajiet Edukattivi",
-        "subtitle": "<p>F’din is-sezzjoni se ssib eżerċizzji interattivi mfassla biex jgħinuk tifhem il-mekkaniżmi wara d-diżinformazzjoni u d-diskors ta’ mibegħda.</p><p>Tista’ tesplora <b>preġudizzji konjittivi</b> u <b>twemmin loġiku żbaljat</b>, tipprattika tekniki li <b>jikxfu l-falsità</b>, titgħallem il-prinċipji fundamentali tad-<b>Dikjarazzjoni tad-Drittijiet tal-Bniedem</b> biex tifhem kif id-drittijiet fundamentali jipproteġu d-dinjità umana, u <b>taqra b’mod laterali</b> biex tevalwa b’mod kritiku l-kontenut online.</p><p>Kull attività hija opportunità biex titħarreġ fil-ħsieb kritiku u tissaħħaħ kontra l-manipulazzjoni u d-diżinformazzjoni.</p>",
-        "eduCard1Title": "Dikjarazzjoni tad-Drittijiet tal-Bniedem",
-        "eduCard1Desc": "Skopri l-prinċipji ewlenin li jipproteġu d-dinjità tal-bniedem.",
-        "eduCard1Button": "Skopri d-drittijiet",
-        "eduCardBiasTitle": "Preġudizzji u twemmin żbaljat",
-        "eduCardBiasDesc": "Esplora t-twemmin loġiku żbaljat u l-preġudizzji konjittivi wara d-diskors ta’ mibegħda u d-diżinformazzjoni.",
-        "eduCardBiasButton": "Ibda l-attività",
-        "eduCard3Title": "Kif tikxef il-falsità",
-        "eduCard3Desc": "Tgħallem kif tikxef il-falsità tad-diżinformazzjoni b’mod effettiv.",
-        "eduCard3Button": "Ibda l-attività",
-        "eduCard4Title": "Qari b’mod laterali",
-        "eduCard4Desc": "Tgħallem kif taqra u tifhem il-kontenut online.",
-        "eduCard4Button": "Ibda l-attività",
-        "eduCard5Title": "Agħraf id-diskors ta’ mibegħda!",
-        "eduCard5Desc": "Identifika diskors ta’ mibegħda f’kontenut online",
-        "eduCard5Button": "Ibda l-attività",
-        "warningTitle": "Twissija",
-        "warningText": "Dawn l-attivitajiet fihom eżempji mhux iċċensurati li xi qarrejja jistgħu jħossuhom offiżi bihom. Jekk xi attività, jew parti minn attività, iġġiegħlek tħossok skomdu, jew tħossha tinstigak, jekk jogħġbok għidilna, jew kun liberu li toħroġ mill-kamra.",
-        "warningButton": "Qed nifhem",
-        "warningCheckbox": "Terġax turi dan il-messaġġ",
-        "tasks": {
-            "humanRights": {
-                "title": "Drittijiet tal-Bniedem",
-                "description": "Id-drittijiet fundamentali tal-bniedem deskritti min-Nazzjonijiet Uniti fid-<a href='https://www.un.org/en/about-us/universal-declaration-of-human-rights' target='_blank' rel='noopener'>Dikjarazzjoni Universali tad-Drittijiet tal-Bniedem</a> jipproteġu u jsaħħu d-dinjità, l-ugwaljanza u l-libertà tan-nies kollha. Xi wħud minnhom huma mniżżla hawn taħt, f’verżjoni ssimplifikata <br><br><iframe width='100%' height='315' src='https://www.youtube.com/embed/nDgIVseTkuE?si=Jomr_pVjQAdBgfGg' title='Human Rights video' frameborder='0' allowfullscreen></iframe>",
-                "objectivesTitle": "Għanijiet",
-                "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Tisħiħ tal-għarfien dwar id-drittijiet tal-bniedem;</li><li>Żieda fl-għarfien dwar il-konnessjoni bejn id-drittijiet tal-bniedem u d-diskors ta’ mibegħda u d-diżinformazzjoni;</li><li>Tagħlim ta’ argument possibbli bħala reazzjoni għad-diskors ta’ mibegħda u d-diżinformazzjoni.</li></ul>",
-                "startButton": "Ibda l-attività",
-                "task": "Għaqqad 12-il grupp. Kull grupp jagħżel kard. Kull grupp jiddiskuti s-sinifikat tad-dritt uman miktub fuq il-kard tiegħu. Wara 5 minuti l-ewwel grupp jispjega xi jfisser għalih dak id-dritt u kif jintrabat mad-diskors ta’ mibegħda. L-għalliem jista’ jżid mal-ispjega, jekk ikun hemm bżonn. Imbagħad, il-grupp li jkollu l-kard li jkun imiss jispjega s-sinifikat tad-dritt tiegħu u r-rab ta tiegħu mad-diskors ta’ mibegħda. Irrepeti dan il-proċess sakemm il-gruppi kollha jkunu qasmu ħsibijiethom.",
-                "completetask": "Jien lestejt l-attività",
-                "taskCompleteTitle": "L-attività lesta",
-                "taskCompleteText": "Kont taf diġà d-drittijiet tal-bniedem kollha msemmija? Liema huma ġodda għalik? Kien faċli jew diffiċli għalik li tispjega xi jfissru dawn id-drittijiet u ssib rabta bejniethom u d-diskors ta’ mibegħda? Tista’ ssemmi xi drittijiet oħra tal-bniedem li ma ssemmewx?",
+  "educational": {
+    "title": "Attivitajiet Edukattivi",
+    "subtitle": "<p>F’din is-sezzjoni se ssib eżerċizzji interattivi mfassla biex jgħinuk tifhem il-mekkaniżmi wara d-diżinformazzjoni u d-diskors ta’ mibegħda.</p><p>Tista’ tesplora <b>preġudizzji konjittivi</b> u <b>twemmin loġiku żbaljat</b>, tipprattika tekniki li <b>jikxfu l-falsità</b>, titgħallem il-prinċipji fundamentali tad-<b>Dikjarazzjoni tad-Drittijiet tal-Bniedem</b> biex tifhem kif id-drittijiet fundamentali jipproteġu d-dinjità umana, u <b>taqra b’mod laterali</b> biex tevalwa b’mod kritiku l-kontenut online.</p><p>Kull attività hija opportunità biex titħarreġ fil-ħsieb kritiku u tissaħħaħ kontra l-manipulazzjoni u d-diżinformazzjoni.</p>",
+    "eduCard1Title": "Dikjarazzjoni tad-Drittijiet tal-Bniedem",
+    "eduCard1Desc": "Skopri l-prinċipji ewlenin li jipproteġu d-dinjità tal-bniedem.",
+    "eduCard1Button": "Skopri d-drittijiet",
+    "eduCardBiasTitle": "Preġudizzji u twemmin żbaljat",
+    "eduCardBiasDesc": "Esplora t-twemmin loġiku żbaljat u l-preġudizzji konjittivi wara d-diskors ta’ mibegħda u d-diżinformazzjoni.",
+    "eduCardBiasButton": "Ibda l-attività",
+    "eduCard3Title": "Kif tikxef il-falsità",
+    "eduCard3Desc": "Tgħallem kif tikxef il-falsità tad-diżinformazzjoni b’mod effettiv.",
+    "eduCard3Button": "Ibda l-attività",
+    "eduCard4Title": "Qari b’mod laterali",
+    "eduCard4Desc": "Tgħallem kif taqra u tifhem il-kontenut online.",
+    "eduCard4Button": "Ibda l-attività",
+    "eduCard5Title": "Agħraf id-diskors ta’ mibegħda!",
+    "eduCard5Desc": "Identifika diskors ta’ mibegħda f’kontenut online",
+    "eduCard5Button": "Ibda l-attività",
+    "warningTitle": "Twissija",
+    "warningText": "Dawn l-attivitajiet fihom eżempji mhux iċċensurati li xi qarrejja jistgħu jħossuhom offiżi bihom. Jekk xi attività, jew parti minn attività, iġġiegħlek tħossok skomdu, jew tħossha tinstigak, jekk jogħġbok għidilna, jew kun liberu li toħroġ mill-kamra.",
+    "warningButton": "Qed nifhem",
+    "warningCheckbox": "Terġax turi dan il-messaġġ",
+    "tasks": {
+        "humanRights": {
+            "title": "Drittijiet tal-Bniedem",
+            "description": "Id-drittijiet fundamentali tal-bniedem deskritti min-Nazzjonijiet Uniti fid-<a href='https://www.un.org/en/about-us/universal-declaration-of-human-rights' target='_blank' rel='noopener'>Dikjarazzjoni Universali tad-Drittijiet tal-Bniedem</a> jipproteġu u jsaħħu d-dinjità, l-ugwaljanza u l-libertà tan-nies kollha. Xi wħud minnhom huma mniżżla hawn taħt, f’verżjoni ssimplifikata <br><br><iframe width='100%' height='315' src='https://www.youtube.com/embed/nDgIVseTkuE?si=Jomr_pVjQAdBgfGg' title='Human Rights video' frameborder='0' allowfullscreen></iframe>",
+            "objectivesTitle": "Għanijiet",
+            "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Tisħiħ tal-għarfien dwar id-drittijiet tal-bniedem;</li><li>Żieda fl-għarfien dwar il-konnessjoni bejn id-drittijiet tal-bniedem u d-diskors ta’ mibegħda u d-diżinformazzjoni;</li><li>Tagħlim ta’ argument possibbli bħala reazzjoni għad-diskors ta’ mibegħda u d-diżinformazzjoni.</li></ul>",
+            "startButton": "Ibda l-attività",
+            "task": "Għaqqad 12-il grupp. Kull grupp jagħżel kard. Kull grupp jiddiskuti s-sinifikat tad-dritt uman miktub fuq il-kard tiegħu. Wara 5 minuti l-ewwel grupp jispjega xi jfisser għalih dak id-dritt u kif jintrabat mad-diskors ta’ mibegħda. L-għalliem jista’ jżid mal-ispjega, jekk ikun hemm bżonn. Imbagħad, il-grupp li jkollu l-kard li jkun imiss jispjega s-sinifikat tad-dritt tiegħu u r-rab ta tiegħu mad-diskors ta’ mibegħda. Irrepeti dan il-proċess sakemm il-gruppi kollha jkunu qasmu ħsibijiethom.",
+            "completetask": "Jien lestejt l-attività",
+            "taskCompleteTitle": "L-attività lesta",
+            "taskCompleteText": "Kont taf diġà d-drittijiet tal-bniedem kollha msemmija? Liema huma ġodda għalik? Kien faċli jew diffiċli għalik li tispjega xi jfissru dawn id-drittijiet u ssib rabta bejniethom u d-diskors ta’ mibegħda? Tista’ ssemmi xi drittijiet oħra tal-bniedem li ma ssemmewx?",
                 "articles": [
                     {
                         "title": "Art. 1",
@@ -229,7 +229,7 @@
                     },
                     {
                         "title": "Art. 19 ",
-                        "text": "Kulħadd għandu d-dritt li jgħid dak li jaħseb u li jagħti u jirċievi l-informazzjoni b’mod liberu. "
+                        "text": "Kulħadd għandu d-dritt li jgħid dak li jaħseb u li jagħti u jirċievi l-informazzjoni b’mod liberu."
                     },
                     {
                         "title": "Art. 29 ",
@@ -314,7 +314,7 @@
                 "finalMessage": "Lestejt l-attività! Issa tista’ timxi għall-attività li jmiss.",
                 "description": "L-objettiv tal-verifika tal-fatti hu li jipprovdi liċ-ċittadini għodda u informazzjoni li jippermettulhom li jiffurmaw opinjoni permezz tad-dejta u l-fatti verifikati, biex b’hekk ikunu jistgħu jieħdu deċiżjoni infurmata. Il-miżinformazzjoni tista’ tinfluwenza l-mod kif taħseb is-soċjetà u kif tiffaċċja l-problemi ta’ kuljum, u għalhekk il-missjoni prinċipali tal-fact-checkers hi li jitfgħu d-dawl u d-data dwar dawn il-kwistjonijiet. B’mod ġenerali l-verifika tal-fatti tinvolvi li jinkixef l-ingann, ikun verifikat il-kontenut u tixtered il-verità dwar dan. Il-verifikaturi tal-fatti jaħdmu kuljum biex jikxfu l-falsità: huma jivverifikaw il-kontenut u jispjegaw għaliex xi ħaġa tkun falza wara li tkun xterdet b’mod virali fil-midja soċjali. Dan huwa importanti għar-rekord pubbliku u biex jiġi evitat li aktar nies jaqraw, ixerrdu u jemmnu l-gideb. Ċertu kxif tal-falsità huwa diffiċli ħafna, jieħu ħafna ħin u jeħtieġ li jintużaw għodod speċifiċi. Oħrajn jeħtieġu biss ħafna osservazzjoni u tiftix għal informazzjoni speċifika affidabbli. Ejja nippruvaw! F’dan l-eżerċizzju se titgħallem, b’mod iggiwidat, kif tuża xi tekniki biex tkun taf kif tikxef il-falsità u għaliex hu importanti li tħaddem il-ħsieb kritiku u tidentifika kif it-tixrid tal-gideb b’mod virali jista’ joħloq jew isaħħaħ in-narrattiva tad-diżinformazzjoni.",
                 "objectivesTitle": "L-għanijiet tal-attività",
-                "objectives": "<p><strong>Ikxef il-falsità: </strong> tgħallem, b’mod iggwidat, xi tekniki biex tikxef il-falsità. </p><p><strong>Żviluppa l-ħsieb kritiku billi tuża l-istrateġija li twasslek biex tikxef il-falsità:</strong> waqt l-eżerċizzju, l-utenti jiskopru x’inhuma n-narrattivi tad-diżinformazzjoni u jistgħu jirriflettu dwar dawk li huma l-iktar imxerrda f’pajjiżhom. </p><p><strong>Ħaddem il-ħsieb kritiku: </strong> billi tidhem kif u tidentifika kif it-tixrid tal-gideb b’mod virali jista’ joħloq jew isaħħaħ in-narrattiva tad-diżinformazzjoni.</p>",
+                "objectives": "<p><strong>Ikxef il-falsità: </strong> tgħallem, b’mod iggwidat, xi tekniki biex tikxef il-falsità. </p><p><strong>Żviluppa l-ħsieb kritiku billi tuża l-istrateġija li twasslek biex tikxef il-falsità: waqt l-eżerċizzju, l-utenti jiskopru x’inhuma n-narrattivi tad-diżinformazzjoni u jistgħu jirriflettu dwar dawk li huma l-iktar imxerrda f’pajjiżhom. </p><p><strong>Ħaddem il-ħsieb kritiku: </strong> billi tidhem kif u tidentifika kif it-tixrid tal-gideb b’mod virali jista’ joħloq jew isaħħaħ in-narrattiva tad-diżinformazzjoni.</p>",
                 "startButton": "Ibda l-attività",
                 "task": "Issimula dak li jagħmel verifikatur tal-fatti billi tagħżel l-aktar mod effettiv biex tikxef il-falsità ta’ kontenut suspettuż. Tista’ tidentifika wkoll in-narrattiva relatata tad-diżinformazzjoni?",
                 "correct": "Tajjeb! Prosit.",
@@ -364,7 +364,7 @@
                         ],
                         "correct": 2,
                         "feedback": {
-                            "correct": "Tajjeb: din hija l-istampa oriġinali li kienet ippubblikata fl-2012. Huwa ingann li din l-istampa turi n-Navy Awstraljana timblokka vapur tal-merkanzija \"mimli immigranti illegali\". L-istampa turi kunflitt bejn iċ-Ċina u l-Ġappun fil-15 ta’ Awwissu 2012.",
+                            "correct": "Tajjeb: din hija l-istampa oriġinali li kienet ippubblikata fl-2012. Huwa ingann li din l-istampa turi n-Navy Awstraljana timblokka vapur tal-merkanzija 'mimli immigranti illegali'. L-istampa turi kunflitt bejn iċ-Ċina u l-Ġappun fil-15 ta’ Awwissu 2012.",
                             "incorrect": "Ħażin: din hija l-istampa oriġinali. B’mod partikolari, din l-istampa kienet ippubblikata oriġinarjament fl-2012. Għalhekk nistgħu nikkonkludu li l-ewwel stampa li rajt kienet l-istess stampa meħuda barra mill-kuntest: intużat biex jinħoloq ingann dwar allegati migranti jippruvaw jaslu l-Awstralja. Jekk tħares sew lejn iż-żewġ ritratti jidher ċar li huwa l-istess ritratt f’żewġ kuntesti differenti."
                         }
                     },
@@ -391,41 +391,41 @@
                 ]
             },
             "bias": {
-                "title": "Preġudizzji u twemmin żbaljat",
-                "description": "Twemmin loġiku żbaljat assoċjat mad-diskors ta’ mibegħda u d-diżinformazzjoni<br><br>Il-kontenut tad-diskors ta’ mibegħda u d-diżinformazzjoni kultant jista’ jidher konvinċenti ħafna. <br><br>Dan għaliex dawk li jxerrdu diskors ta’ mibegħda spiss jiddependu minn twemmin loġiku żbaljat – jużaw il-gruppi ta’ mibegħda biex jiġġustifikaw il-kawża tagħhom u t-twemmin li dawk li jiltaqgħu ma’ dan il-kontenut iqisuh bħala raġonevoli u veritier.<br><br>It-twemmin loġiku żbaljat jista’ juża premessi foloz, premessi veri iżda b’konklużjonijiet foloz, jew premessi u konklużjonijiet veri iżda b’argument falz. Ċertu twemmin żbaljat jinħoloq bl-intenzjoni li jqarraq jew li jagħmel il-miżinformazzjoni virali.<br><br>Hemm ħafna twemmin żbaljat li joħroġ fid-diskors ta’ mibegħda. Dawn huma ftit eżempji:<br><br><strong>Argumentum ad populum</strong> – argument bla sustanza li bih il-kelliem jappella għall-gosti, il-preferenzi u l-preġudizzji tal-massa. <br><br>Ibbażat fuq l-egoiżmu nazzjonali, l-istinti, l-isterjotipi jew il-preġudizzji, il-kelliem jipprova jikkonvinċi lill-massa li t-twemmin tiegħu huwa ġust. (eż. Il-maġġoranza tan-nies f’pajjiżna jaħsbuha hekk, allura hekk għandna naġixxu);<br><br><strong>Ipse dixit</strong> – argument mingħajr prova valida (eż. Il-partit qalha, mela żgur vera);<br><br><strong>Twemmin żbaljat b’inklinazzjoni qarrieqa</strong> – meta xi ħadd isostni li pożizzjoni jew deċiżjoni se twassal għal sensiela ta’ konsegwenzi negattivi mhux intenzjonati (eż. Ma nistgħux inħallu lill-immigranti jibqgħu f’pajjiżna għax se jġibu l-familji tagħhom hawn u jkollhom it-tfal, li jwassal biex nitilfu l-impjieg tagħna u tikkollassa s-sistema tas-sigurtà soċjali, u b’hekk niftaqru u nitilfu l-kontroll ta’ pajjiżna);<br><br><strong>Twemmin żbaljat ta’ jew hekk jew hekk</strong> – meta xi ħadd isostni li hemm biss żewġ modi kif tiġi indirizzata l-kwistjoni, filwaqt li jkun hemm ħafna għażliet oħra (eż. Jew tivvota għal dan il-partit jew tgħix ħajtek f’periklu kontinwu);<br><br><strong>Post hoc, ergo propter hoc</strong> – żball loġiku li jikkonkludi b’mod ħażin li hemm konnessjoni kawżali bejn żewġ avvenimenti sempliċiment għax wieħed seħħ qabel l-ieħor (eż. Minn mindu ġiet l-għalliema l-ġdida tal-Matematika beda jkolli marki ħżiena. Mela bilfors hi r-raġuni għala sejjer ħażin);<br><br><strong>Argumentum Ad Hominem</strong> – meta xi ħadd jattakka l-persuna li tagħmel l-argument aktar milli l-argument innifsu (eż. Tagħtix kas l-opinjoni ta’ Peter dwar il-proġett tal-grupp – dak għażżien u qatt ma jagħmel xejn tajjeb);<br><br><strong>Cherry picking</strong> – meta wieħed b’mod selettiv jippreżenta evidenza li ssostni l-argument tiegħu waqt li jinjora jew iwarrab evidenza kontradittorja (eż. “Id-diskors ta’ mibegħda mhux ta’ ħsara. Dan l-istudju jgħid li hu biss offensiv, mhux perikoluż” – waqt li jinjora għexieren ta’ studji oħra li juru l-ħsara psikoloġika u soċjali tad-diskors ta’ mibegħda);<br><br><strong>Appell għat-tradizzjoni</strong> – meta argument jassumi li xi ħaġa hija tajba jew vera sempliċiment għax qed issir bħala tradizzjoni, għax dejjem hekk sar jew ġie emmnut, mingħajr ma jitqies jekk għadhiex valida fil-kuntest preżenti (eż. Fl-iskola tagħna dejjem kellna aktar irġiel milli nisa fil-kunsill tal-iskola, u dan il-mudell dejjem ħadem tajjeb).<br><br><strong>Argument minn aneddotu</strong> – meta wieħed juża esperjenza jew storja waħda, ħafna drabi personali, biex isostni konklużjoni jew ħsieb ġenerali (eż. Ma naħsibx li d-diskors ta’ mibegħda jwassal għal ħsara reali. Il-ħin kollu nisma’ ’l min jagħmel ċajt offensiv, u ħadd minn dawk li naf qatt ma ġie affettwat serjament);<br><br><strong>l-iżbali Ad ignorantiam </strong> – meta wieħed jargumenta li ħaġa hija vera jew falza sempliċiment għax ma ġiex ippruvat l-oppost (eż. Ħadd qatt ma wera prova li l-istudenti jqarrqu fl-eżamijiet online, għalhekk żgur li ma jiġrix hekk).<br><br><strong>Preġudizzji Konjittivi</strong><br>Moħħna juża x-shortcuts biex jgħinna nieħdu deċiżjonijiet malajr fil-ħajja ta’ kuljum. Dawn ix-shortcuts jgħinuna niffukaw biss fuq l-informazzjoni l-aktar importanti, biex ma nħossuniex ibbumbardjati b’dak kollu li naraw u nisimgħu. Dan jgħin lil moħħna biex jaħdem b’mod iktar effiċjenti. Madankollu, l-iżvantaġġ ta’ dawn ix-shortcuts hu li xi drabi jistgħu jwassluna biex nagħmlu l-iżbalji jew nifhmu l-affarijiet ħażin minħabba l-preġudizzji tal-mod kif naħsbuha (konjittivi). Aħna lkoll affettwati minn dawn il-preġudizzji konjittivi fil-proċess li bih nieħdu d-deċiżjonijiet, u dawk li jxerrdu d-diżinformazzjoni jifhmu dawn il-preġudizzji tajjeb ħafna. Dawn huma xi eżempji ta’ preġudizzji konjittivi:<br><br><strong>il-preġudizzju tas-sħubija</strong> – it-tendenza li tiffavorixxi l-grupp tiegħek stess fuq gruppi oħra (Il-kumitat għażel li jiffinanzja l-proġett immexxi mill-kollega, minkejja li proposta oħra kienet aħjar, għal qalu, “Aħna nafu u nafdaw in-nies tagħna.”);<br><strong>il-preġudizzju tad-disponibbiltà</strong> – it-tendenza li wieħed iserraħ fuq informazzjoni li tiġi f’moħħu malajr (eż. Meta jisma’ rapport fl-aħbarijiet dwar kemm jaqgħu ajruplani, wieħed jinsisti li l-ivvjaġġar bl-ajru hu iktar perikoluż mis-sewqan, minkejja statistika li turi l-kuntrarju);<br><strong>il-preġudizzju tal-kawżalità</strong> – meta wieħed jemmen li hemm konnessjoni bejn avvenimenti li fil-fatt m’għandhomx x’jaqsmu ma’ xulxin (eż. Kull darba li nilbes dan il-par kalzetti, li jġibli l-fortuna, it-tim tiegħi jirbaħ – mela bilfors huma r-raġuni.);<br><strong>il-preġudizzju tal-elementi li ma jidhrux</strong> – it-tendenza li wieħed iqis lilu nnifsu inqas preġudikat minn ħaddieħor (eż. Jien ġust u oġġettiv, mhux bħal dawk li jirraġunaw skont xi jħossu minflok bil-fatti.);<br><strong>il-preġudizzju tal-konferma</strong> – it-tendenza li tfittex, tinterpreta, tiffavorixxi u tfakkar l-informazzjoni b’mod li tikkonferma twemmin preċedenti (eż. Min jemmen li l-vaċċini huma perikolużi jaqra biss artikli li jsostnu din l-opinjoni, u ma jagħtix importanza ir-riċerka xjantifika li tmerih.);<br><strong>il-preġudizzju tal-awtorità</strong> – it-tendenza li tkun aktar influwenzat mill-opinjonijiet tan-nies fl-awtorità (eż. Bilfors li vera – qalha tabib magħruf fuq it-televixin – anki jekk m’hemmx evidenza tagħha.).",
-                "objectivesTitle": "L-għanijiet",
-                "objectives": "<ul><li>Rawwem għarfien dwar mekkaniżmi soċjali, preġudizzji konjittivi u twemmin loġiku żbaljat</li><li>Rawwem il-kompetenza tal-ħsieb kritiku</li></ul><p>Il-mekkaniżmi soċjali, il-preġudizzji konjittivi u t-twemmin loġiku żbaljat huma fatturi li jgħinu fit-tixrid tad-diskors ta' mibegħda u d-diżinformazzjoni. Billi nsiru nafu xi ftit minnhom nistgħu nipproteġu lilna nfusna u nkunu aktar kritiċi ta’ forom oħra ta’ manipulazzjoni.</p>",
-                "startButton": "Ibda l-attività",
-                "task": "- Qabbel is-sitwazzjoni mat-twemmin loġiku żbaljat/mal-preġudizzju relevanti. - Din is-sitwazzjoni hi eżempju ta' diskors ta’ mibegħda/diżinformazzjoni/miżinformazzjoni? Jekk iva, għaliex?",
-                "checkButton": "Iċċekkja l-pari",
-                "resetButton": "Irrisettja",
-                "correct": "Pari korretti",
-                "incorrect": "Pari żbaljati",
+            "title": "Preġudizzji u twemmin żbaljat",
+            "description": "Twemmin loġiku żbaljat assoċjat mad-diskors ta’ mibegħda u d-diżinformazzjoni<br><br>Il-kontenut tad-diskors ta’ mibegħda u d-diżinformazzjoni kultant jista’ jidher konvinċenti ħafna. <br><br>Dan għaliex dawk li jxerrdu diskors ta’ mibegħda spiss jiddependu minn twemmin loġiku żbaljat – jużaw il-gruppi ta’ mibegħda biex jiġġustifikaw il-kawża tagħhom u t-twemmin li dawk li jiltaqgħu ma’ dan il-kontenut iqisuh bħala raġonevoli u veritier.<br><br>It-twemmin loġiku żbaljat jista’ juża premessi foloz, premessi veri iżda b’konklużjonijiet foloz, jew premessi u konklużjonijiet veri iżda b’argument falz. Ċertu twemmin żbaljat jinħoloq bl-intenzjoni li jqarraq jew li jagħmel il-miżinformazzjoni virali.<br><br>Hemm ħafna twemmin żbaljat li joħroġ fid-diskors ta’ mibegħda. Dawn huma ftit eżempji:<br><br><strong>Argumentum ad populum</strong> – argument bla sustanza li bih il-kelliem jappella għall-gosti, il-preferenzi u l-preġudizzji tal-massa. <br><br>Ibbażat fuq l-egoiżmu nazzjonali, l-istinti, l-isterjotipi jew il-preġudizzji, il-kelliem jipprova jikkonvinċi lill-massa li t-twemmin tiegħu huwa ġust. (eż. Il-maġġoranza tan-nies f’pajjiżna jaħsbuha hekk, allura hekk għandna naġixxu);<br><br><strong>Ipse dixit</strong> – argument mingħajr prova valida (eż. Il-partit qalha, mela żgur vera);<br><br><strong>Twemmin żbaljat b’inklinazzjoni qarrieqa</strong> – meta xi ħadd isostni li pożizzjoni jew deċiżjoni se twassal għal sensiela ta’ konsegwenzi negattivi mhux intenzjonati (eż. Ma nistgħux inħallu lill-immigranti jibqgħu f’pajjiżna għax se jġibu l-familji tagħhom hawn u jkollhom it-tfal, li jwassal biex nitilfu l-impjieg tagħna u tikkollassa s-sistema tas-sigurtà soċjali, u b’hekk niftaqru u nitilfu l-kontroll ta’ pajjiżna);<br><br><strong>Twemmin żbaljat ta’ jew hekk jew hekk</strong> – meta xi ħadd isostni li hemm biss żewġ modi kif tiġi indirizzata l-kwistjoni, filwaqt li jkun hemm ħafna għażliet oħra (eż. Jew tivvota għal dan il-partit jew tgħix ħajtek f’periklu kontinwu);<br><br><strong>Post hoc, ergo propter hoc</strong> – żball loġiku li jikkonkludi b’mod ħażin li hemm konnessjoni kawżali bejn żewġ avvenimenti sempliċiment għax wieħed seħħ qabel l-ieħor (eż. Minn mindu ġiet l-għalliema l-ġdida tal-Matematika beda jkolli marki ħżiena. Mela bilfors hi r-raġuni għala sejjer ħażin);<br><br><strong>Argumentum Ad Hominem</strong> – meta xi ħadd jattakka l-persuna li tagħmel l-argument aktar milli l-argument innifsu (eż. Tagħtix kas l-opinjoni ta’ Peter dwar il-proġett tal-grupp – dak għażżien u qatt ma jagħmel xejn tajjeb);<br><br><strong>Cherry picking</strong> – meta wieħed b’mod selettiv jippreżenta evidenza li ssostni l-argument tiegħu waqt li jinjora jew iwarrab evidenza kontradittorja (eż. “Id-diskors ta’ mibegħda mhux ta’ ħsara. Dan l-istudju jgħid li hu biss offensiv, mhux perikoluż” – waqt li jinjora għexieren ta’ studji oħra li juru l-ħsara psikoloġika u soċjali tad-diskors ta’ mibegħda);<br><br><strong>Appell għat-tradizzjoni</strong> – meta argument jassumi li xi ħaġa hija tajba jew vera sempliċiment għax qed issir bħala tradizzjoni, għax dejjem hekk sar jew ġie emmnut, mingħajr ma jitqies jekk għadhiex valida fil-kuntest preżenti (eż. Fl-iskola tagħna dejjem kellna aktar irġiel milli nisa fil-kunsill tal-iskola, u dan il-mudell dejjem ħadem tajjeb).<br><br><strong>Argument minn aneddotu</strong> – meta wieħed juża esperjenza jew storja waħda, ħafna drabi personali, biex isostni konklużjoni jew ħsieb ġenerali (eż. Ma naħsibx li d-diskors ta’ mibegħda jwassal għal ħsara reali. Il-ħin kollu nisma’ ’l min jagħmel ċajt offensiv, u ħadd minn dawk li naf qatt ma ġie affettwat serjament);<br><br><strong>l-iżbali Ad ignorantiam </strong> – meta wieħed jargumenta li ħaġa hija vera jew falza sempliċiment għax ma ġiex ippruvat l-oppost (eż. Ħadd qatt ma wera prova li l-istudenti jqarrqu fl-eżamijiet online, għalhekk żgur li ma jiġrix hekk).<br><br><strong>Preġudizzji Konjittivi</strong><br>Moħħna juża x-shortcuts biex jgħinna nieħdu deċiżjonijiet malajr fil-ħajja ta’ kuljum. Dawn ix-shortcuts jgħinuna niffukaw biss fuq l-informazzjoni l-aktar importanti, biex ma nħossuniex ibbumbardjati b’dak kollu li naraw u nisimgħu. Dan jgħin lil moħħna biex jaħdem b’mod iktar effiċjenti. Madankollu, l-iżvantaġġ ta’ dawn ix-shortcuts hu li xi drabi jistgħu jwassluna biex nagħmlu l-iżbalji jew nifhmu l-affarijiet ħażin minħabba l-preġudizzji tal-mod kif naħsbuha (konjittivi). Aħna lkoll affettwati minn dawn il-preġudizzji konjittivi fil-proċess li bih nieħdu d-deċiżjonijiet, u dawk li jxerrdu d-diżinformazzjoni jifhmu dawn il-preġudizzji tajjeb ħafna. Dawn huma xi eżempji ta’ preġudizzji konjittivi:<br><br><strong>il-preġudizzju tas-sħubija</strong> – it-tendenza li tiffavorixxi l-grupp tiegħek stess fuq gruppi oħra (Il-kumitat għażel li jiffinanzja l-proġett immexxi mill-kollega, minkejja li proposta oħra kienet aħjar, għal qalu, “Aħna nafu u nafdaw in-nies tagħna.”);<br><strong>il-preġudizzju tad-disponibbiltà</strong> – it-tendenza li wieħed iserraħ fuq informazzjoni li tiġi f’moħħu malajr (eż. Meta jisma’ rapport fl-aħbarijiet dwar kemm jaqgħu ajruplani, wieħed jinsisti li l-ivvjaġġar bl-ajru hu iktar perikoluż mis-sewqan, minkejja statistika li turi l-kuntrarju);<br><strong>il-preġudizzju tal-kawżalità</strong> – meta wieħed jemmen li hemm konnessjoni bejn avvenimenti li fil-fatt m’għandhomx x’jaqsmu ma’ xulxin (eż. Kull darba li nilbes dan il-par kalzetti, li jġibli l-fortuna, it-tim tiegħi jirbaħ – mela bilfors huma r-raġuni.);<br><strong>il-preġudizzju tal-elementi li ma jidhrux</strong> – it-tendenza li wieħed iqis lilu nnifsu inqas preġudikat minn ħaddieħor (eż. Jien ġust u oġġettiv, mhux bħal dawk li jirraġunaw skont xi jħossu minflok bil-fatti.);<br><strong>il-preġudizzju tal-konferma</strong> – it-tendenza li tfittex, tinterpreta, tiffavorixxi u tfakkar l-informazzjoni b’mod li tikkonferma twemmin preċedenti (eż. Min jemmen li l-vaċċini huma perikolużi jaqra biss artikli li jsostnu din l-opinjoni, u ma jagħtix importanza ir-riċerka xjantifika li tmerih.);<br><strong>il-preġudizzju tal-awtorità</strong> – it-tendenza li tkun aktar influwenzat mill-opinjonijiet tan-nies fl-awtorità (eż. Bilfors li vera – qalha tabib magħruf fuq it-televixin – anki jekk m’hemmx evidenza tagħha.).",
+            "objectivesTitle": "L-għanijiet",
+            "objectives": "<ul><li>Rawwem għarfien dwar mekkaniżmi soċjali, preġudizzji konjittivi u twemmin loġiku żbaljat</li><li>Rawwem il-kompetenza tal-ħsieb kritiku</li></ul><p>Il-mekkaniżmi soċjali, il-preġudizzji konjittivi u t-twemmin loġiku żbaljat huma fatturi li jgħinu fit-tixrid tad-diskors ta' mibegħda u d-diżinformazzjoni. Billi nsiru nafu xi ftit minnhom nistgħu nipproteġu lilna nfusna u nkunu aktar kritiċi ta’ forom oħra ta’ manipulazzjoni.</p>",
+            "startButton": "Ibda l-attività",
+            "task": "- Qabbel is-sitwazzjoni mat-twemmin loġiku żbaljat/mal-preġudizzju relevanti. - Din is-sitwazzjoni hi eżempju ta' diskors ta’ mibegħda/diżinformazzjoni/miżinformazzjoni? Jekk iva, għaliex?",
+            "checkButton": "Iċċekkja l-pari",
+            "resetButton": "Irrisettja",
+            "correct": "Pari korretti",
+            "incorrect": "Pari żbaljati",
                 "pairs": [
                     {
                         "id": "a",
-                        "left": "<strong>Argumentum ad populum  </strong>– argument bla sustanza li bih il-kelliem jappella għall-gosti, il-preferenzi u l-preġudizzji tal-massa. Ibbażat fuq l-egoiżmu nazzjonali, l-istinti, l-isterjotipi jew il-preġudizzji, il-kelliem jipprova jdawwar in-nies favur il-ħsieb tiegħu.",
+                        "left": "<strong>Argumentum ad populum</strong>– argument bla sustanza li bih il-kelliem jappella għall-gosti, il-preferenzi u l-preġudizzji tal-massa. Ibbażat fuq l-egoiżmu nazzjonali, l-istinti, l-isterjotipi jew il-preġudizzji, il-kelliem jipprova jdawwar in-nies favur il-ħsieb tiegħu.",
                         "right": "Waqt diskussjoni taħraq online dwar l-immigrazzjoni, utent jikteb: “Kulħadd jaf li dawn in-nies huma perikolużi u jġibu l-kriminalità. Biżżejjed tara kemm nies hawn, ir-raħal, jaqblu miegħi. Irridu nkeċċuhom biex nipproteġu l-komunità tagħna.”"
                     },
                     {
                         "id": "b",
-                        "left": "<strong>Appell għat-tradizzjoni </strong> – meta argument jassumi li xi ħaġa hija tajba jew vera sempliċiment għax qed issir bħala tradizzjoni, għax dejjem hekk sar jew ġie emmnut, mingħajr ma jitqies jekk għadhiex valida fil-kuntest preżenti",
+                        "left": "<strong>Appell għat-tradizzjoni</strong>– meta argument jassumi li xi ħaġa hija tajba jew vera sempliċiment għax qed issir bħala tradizzjoni, għax dejjem hekk sar jew ġie emmnut, mingħajr ma jitqies jekk għadhiex valida fil-kuntest preżenti",
                         "right": "Waqt laqgħa tal-komunità dwar kif il-politika tal-iskejjel lokali qed tiġi aġġornata biex tkun aktar inklużiva mal-istudenti LGBTQ+, resident anzjan iqum u jgħid: “Ilna ġenerazzjonijiet sħaħ ngħallmu li ż-żwieġ iseħħ biss bejn raġel u mara. Dejjem hekk kien u għandu jibqa’ hekk. Il-promozzjoni ta’ dawn l-ideat ġodda fl-iskejjel tagħna huwa attakk fuq il-valuri tagħna.”"
                     },
                     {
                         "id": "ċ",
-                        "left": "<strong>Post hoc, ergo propter hoc </strong> – żball loġiku li jikkonkludi b’mod ħażin li hemm konnessjoni kawżali bejn żewġ avvenimenti sempliċiment għax wieħed seħħ qabel l-ieħor",
+                        "left": "<strong>Post hoc, ergo propter hoc</strong>– żball loġiku li jikkonkludi b’mod ħażin li hemm konnessjoni kawżali bejn żewġ avvenimenti sempliċiment għax wieħed seħħ qabel l-ieħor",
                         "right": "Waqt dibattitu pubbliku dwar ir-risistemazzjoni tar-refuġjati, kelliem jsemmi żieda riċenti fil-qgħad li seħħet ftit wara li wasal grupp ta’ refuġjati f’dik il-lokalità. Dan jiddikjara, “Mindu waslu, ir-rati tal-qgħad żdiedu bil-kbir. Hija ovvja li qed jieħdu x-xogħol kollu tan-nies tal-lokal li jaħdmu iebes.”"
                     },
                     {
                         "id": "d",
-                        "left": "<strong>Preġudizzju tas-sħubija </strong>– it-tendenza li tiffavorixxi l-grupp tiegħek stess fuq gruppi oħra",
+                        "left": "<strong>Preġudizzju tas-sħubija</strong>– it-tendenza li tiffavorixxi l-grupp tiegħek stess fuq gruppi oħra",
                         "right": "Waqt diskussjoni online dwar reat riċenti li kien irrapportat fl-aħbarijiet, persuna tikteb, “Bħala wieħed li għext f’dawn l-akkwati ħajti kollha, nista’ ngħid li dan l-inkwiet kollu qed jikkawżawh l-immigranti l-ġodda. Aħna l-‘oriġinali’ nafu x’qed jiġri tassew, u l-affarijiet kienu kwieti qabel ma ġew huma.”"
                     },
                     {
                         "id": "e",
-                        "left": "<strong>Il-preġudizzju tal-elementi li ma jidhrux </strong>hu t-tendenza li wieħed iqis lilu nnifsu inqas preġudikat minn ħaddieħor",
-                        "right": "Waqt dibattitu jaħraq dwar gruppi reliġjużi, wieħed mill-parteċipanti qal, “B’differenza minn dawk li għandhom twemmin mimli preġudizzji u intolleranza, jien xtarrejt l-opinjonijiet tiegħi b’mod oġġettiv. Il-konklużjoni tiegħi li r-reliġjon tagħhom għadha għalkollox lura u hi perikoluża mhix preġudizzju; hija biss fatt skomdu.”"
+                        "left": "<strong>Il-preġudizzju tal-elementi li ma jidhrux</strong>- hu t-tendenza li wieħed iqis lilu nnifsu inqas preġudikat minn ħaddieħor",
+                        "right": "Waqt dibattitu jaħraq dwar gruppi reliġjużi, wieħed mill-parteċipanti qal, “B’differenza minn dawk li għandhom twemmin mimli preġudizzji u intolleranza, jien xtarrejt l-opinjonijiet tiegħi b’mod oġġettiv. Il-konklużjoni tiegħi li r-reliġjon tagħhom għadha għalkollox lura u hi perikoluża mhix preġudizzju; hija biss fatt skomdu.””"
                     },
                     {
                         "id": "f",
@@ -443,13 +443,13 @@
             "lateralreading": {
                 "submit": "Ibgħat",
                 "nextQuestion": "Il-mistoqsija li jmiss",
-                "prevQuestion": "Il-mistoqsija preċedenti",
                 "showConclusion": "Uri l-konklużjoni",
+                "prevQuestion": "Il-mistoqsija preċedenti",
                 "nextExercise": "L-eżerċizzju li jmiss",
                 "conclusion": "Konklużjoni",
+                "selectMultiple": "Tista’ tagħżel aktar minn screenshot wieħed",
                 "title": "Qari laterali",
                 "subtitle": "Iktar ’l isfel tista’ tara diversi screenshots. Aħseb dwar liema wieħed iwieġeb l-aħjar il-mistoqsija ta’ wara.",
-                "selectMultiple": "Tista’ tagħżel aktar minn screenshot wieħed",
                 "description": "Il-qari laterali huwa teknika li tippermettilna nevalwaw f’ħin qasir jekk il-kontenut ta’ website hux ġej minn sorsi affidabbli u hux ibbażat fuq dejta, referenzi u informazzjoni ta’ kwalità. F’riċerka mmexxija mill-<a href=\"https://cor.inquirygroup.org/research/lateral-reading-on-the-open-internet/\" target=\"_blank\" rel=\"noopener noreferrer\">iStanford History Education Group</a> l-edukaturi skoprew li dan hu mod effiċjenti biex tiġi evalwata l-kwalità ta’ website mhux familjari.<br/><br/>Din l-istrateġija b’saħħitha (<a href=\"https://cor.inquirygroup.org/curriculum/collections/teaching-lateral-reading/\" target=\"_blank\" rel=\"noopener noreferrer\">sors</a>) biex nevalwaw l-informazzjoni online tinvolvi li ma naqrawx website ‘b’mod vertikali’ bħallikieku kienet dokument stampat, imma minflok nużaw metodu msejjaħ ‘qari laterali. Dan ifisser li nanalizzaw il-website billi niftħu diversi tabs biex inwieġbu mistoqsijiet importanti dwar il-kontenut:<br/><ul><li><strong>Min hu l-awtur tal-kontenut?</strong> Huwa sors espert?</li><li><strong>Nistgħu nsibu evidenza?</strong> Huwa bbażat fuq fatti u dejta?</li><li><strong>Huwa ppubblikat minn sorsi affidabbli oħra?</strong> X’jgħidu dwaru?</li></ul><br/>Minbarra l-mistoqsijiet importanti t’hawn fuq, it-teknika tal-qari laterali tistedinna nippromwovu l-ħsieb kritiku u ninżlu aktar fil-fond billi nanalizzaw aspetti oħra tal-kontenut, bħal:<br/><ul><li><strong>Min jiffinanzja jew jisponsorja s-sit fejn ġiet ippubblikata l-kitba oriġinali?</strong></li><li><strong>X’jgħidu sorsi awtorevoli oħra dwar dak is-sit?</strong></li><li><strong>Meta tfittex dwar is-suġġett tal-kitba oriġinali, l-ewwel riżultati jkunu minn organizzazzjonijiet li jivverifikaw il-fatti?</strong></li><li><strong>Qamu xi mistoqsijiet dwar artikli oħra li kiteb l-awtur?</strong></li><li><strong>L-informazzjoni li ssib bnadi oħra tikkontradixxi l-kitba oriġinali?</strong></li><li><strong>Il-kmamar tal-aħbarijiet kredibbli qegħdin jirrappurtaw – jew forsi, iktar importanti, mhumiex qed jirrappurtaw – dwar dak li qed taqra?</strong></li></ul>Il-qari laterali</strong> jgħinna nevalwaw aħjar is-sorsi tagħna tal-informazzjoni – jiġifieri biex niddistingwu bejn il-verità u l-gideb – u biex neżerċitaw b’mod konxju d-dritt tagħna li nagħżlu kif naċċessaw l-informazzjoni.",
                 "objectivesTitle": "L-għanijiet",
                 "objectives": "<br/><ul><li>It-tagħlim dwar it-trasparenza u l-fatturi tal-kredibilità tas-sors</li><li>L-iżvilupp tal-kompetenza li tidentifika sorsi affidabbli tal-informazzjoni</li></ul>",
@@ -564,8 +564,8 @@
                                     }
                                 ],
                                 "feedback": {
-                                    "correct": "Tajjeb! Il-paġna tippubblika l-metodoloġija tagħha, li tinkludi l-konsultazzjoni ta’ diversi sorsi governattivi bħall-Amministrazzjoni tal-Ikel u l-Mediċina (FDA) u sorsi xjentifiċi oħra rikonoxxuti. L-informazzjoni minn dawn is-sorsi hija riveduta u aġġornata f’ħinijiet differenti. Jindikaw ukoll lista ta’ reviżuri esperti. ",
-                                    "incorrect": "Ħażin! Il-paġna tippubblika l-metodoloġija tagħha, li tinkludi l-konsultazzjoni ta’ diversi sorsi governattivi bħall-Amministrazzjoni tal-Ikel u l-Mediċina (FDA) u sorsi xjentifiċi oħra rikonoxxuti. L-informazzjoni minn dawn is-sorsi hija riveduta u aġġornata f’ħinijiet differenti. Jindikaw ukoll lista ta’ reviżuri esperti. "
+                                    "correct": "Tajjeb! Il-paġna tippubblika l-metodoloġija tagħha, li tinkludi l-konsultazzjoni ta’ diversi sorsi governattivi bħall-Amministrazzjoni tal-Ikel u l-Mediċina (FDA) u sorsi xjentifiċi oħra rikonoxxuti. L-informazzjoni minn dawn is-sorsi hija riveduta u aġġornata f’ħinijiet differenti. Jindikaw ukoll lista ta’ reviżuri esperti.",
+                                    "incorrect": "Ħażin! Il-paġna tippubblika l-metodoloġija tagħha, li tinkludi l-konsultazzjoni ta’ diversi sorsi governattivi bħall-Amministrazzjoni tal-Ikel u l-Mediċina (FDA) u sorsi xjentifiċi oħra rikonoxxuti. L-informazzjoni minn dawn is-sorsi hija riveduta u aġġornata f’ħinijiet differenti. Jindikaw ukoll lista ta’ reviżuri esperti."
                                 }
                             },
                             {
@@ -886,8 +886,8 @@
         "eduCard6Button": "Ibda l-attività"
     },
     "inspect": {
-        "title": "Ħarsa ġenerali lejn il-kanal",
-        "subtitle": "<p>F’din il-paġna tista’ tara fid-dettall il-kontenut ta’ kanal wieħed ta’ Telegram. It-tabella turi s-suġġetti ewlenin tal-kanal, kemm-il jidhru fil-messaġġi, il-persentaġġ tad-diskors ta’ mibegħda u l-verifikabbiltà (check-worthiness) ta’ kull wieħed, u s-sentiment prevalenti.</p><p>Fil-lemin issib informazzjoni importanti dwar il-kanal, filwaqt li l-word clouds juru liema termini jidhru l-iktar ta’ spiss f’messaġġi li mhumiex ta’ mibegħda u f’dawk ta’ mibegħda, kif ukoll f’messaġġi li jistgħu jkunu verifikati u f’oħrajn li le.</p><p>Uża l-filtri u l-buttuni biex taqleb bejn iċ-chats u s-suġġetti tal-kanali, jew biex taġġusta t-tip ta’ word cloud li tara. Jekk tmexxi l-mouse fuq kwalunkwe label jew buttuna tara spjegazzjoni qasira ta’ x’tagħmel biha.</p>"
+    "title": "Ħarsa ġenerali lejn il-kanal",
+    "subtitle": "<p>F’din il-paġna tista’ tara fid-dettall il-kontenut ta’ kanal wieħed ta’ Telegram. It-tabella turi s-suġġetti ewlenin tal-kanal, kemm-il jidhru fil-messaġġi, il-persentaġġ tad-diskors ta’ mibegħda u l-verifikabbiltà (check-worthiness) ta’ kull wieħed, u s-sentiment prevalenti.</p><p>Fil-lemin issib informazzjoni importanti dwar il-kanal, filwaqt li l-word clouds juru liema termini jidhru l-iktar ta’ spiss f’messaġġi li mhumiex ta’ mibegħda u f’dawk ta’ mibegħda, kif ukoll f’messaġġi li jistgħu jkunu verifikati u f’oħrajn li le.</p><p>Uża l-filtri u l-buttuni biex taqleb bejn iċ-chats u s-suġġetti tal-kanali, jew biex taġġusta t-tip ta’ word cloud li tara. Jekk tmexxi l-mouse fuq kwalunkwe label jew buttuna tara spjegazzjoni qasira ta’ x’tagħmel biha.</p>"
     },
     "channel": {
         "title": "Network tal-kanali ta’ Telegram",
@@ -916,15 +916,15 @@
             "title": "Network tat-Telegram - Statistika tal-punti (nodes)",
             "date": "Data",
             "id": "ID",
-            "messages": "Numru ta 'messaġġi",
+            "messages": "Numru ta’ messaġġi",
             "degree_centrality": "Ċentralità tal-grad",
-            "partecipants": "Numru ta 'utenti",
+            "partecipants": "Numru ta’ utenti",
             "IRI": "Riskju ta’ infodemija",
             "CW": "Jista’ jiġi verifikat",
             "hs": "Diskors ta’ mibegħda",
             "nInRecommendations": "Rakkomandazzjonijiet li daħlu",
             "nOutRecommendations": "Rakkomandazzjonijiet li ħarġu",
-            "expandable": "Li jista’ jiżdied jew jikberi",
+            "expandable": "Li jista’ jiżdied jew jikber",
             "label": "Isem il-kanal"
         }
     },
@@ -932,25 +932,26 @@
         "en": "Ingliż",
         "it": "Taljan",
         "es": "Spanjol",
-        "pl": "Pollakk"
+        "pl": "Pollakk",
+        "mt": "Malti"
     },
     "graphInteraction": {
-        "collapseLegend": "Agħlaq il-leġġenda",
+        "collapseLegend": "Agħlaq it-tifsira",
         "expandLegend": "Kabbar it-tifsira",
         "collapseInfo": "Agħlaq l-informazzjoni dwar il-kanal",
         "expandInfo": "Kabbar l-informazzjoni dwar il-kanal",
         "legend": {
-            "title": "Tifsira",
-            "color": "Kulur",
-            "size": "Dimensjoni",
-            "low": "Baxx",
-            "medium": "Medju",
-            "high": "Għoli",
-            "small": "Żgħir",
-            "large": "Kbir",
-            "defaultColor": "Il-kulur awtomatiku għan-nodi kollha",
-            "defaultSize": "Id-daqs awtomatiku għan-nodi kollha",
-            "nonExpandable": "Valur mhux definit"
+        "title": "Tifsira",
+        "color": "Kulur",
+        "size": "Dimensjoni",
+        "low": "Baxx",
+        "medium": "Medju",
+        "high": "Għoli",
+        "small": "Żgħir",
+        "large": "Kbir",
+        "defaultColor": "Il-kulur awtomatiku għan-nodi kollha",
+        "defaultSize": "Id-daqs awtomatiku għan-nodi kollha",
+        "nonExpandable": "Valur mhux definit"
         },
         "resetView": "Irrisettja l-mod kif jidher",
         "color": {
@@ -961,51 +962,51 @@
             "out": "Rakkomandazzjonijiet li ħarġu",
             "out_degree": "Grad ’il barra",
             "in_degree": "Grad ’il ġewwa",
-            "degree_centrality": "Ċentralità tal-grad",
-            "label": "Kulur",
-            "n_out_recommended": "Rakkomandazzjonijiet li ħarġu",
             "n_in_recommended": "Rakkomandazzjonijiet li daħlu",
+            "n_out_recommended": "Rakkomandazzjonijiet li ħarġu",
             "community": "Komunità",
-            "louvain_community": "Kull kulur jirrappreżenta komunità differenti"
+            "label": "Kulur",
+            "louvain_community": "Kull kulur jirrappreżenta komunità differenti",
+            "degree_centrality": "Ċentralità tal-grad"
         },
         "size": {
-            "disable": "Itfi d-daqs",
-            "iri": "Riskju ta’ infodemija",
-            "hs": "Diskors ta’ mibegħda",
-            "in": "Rakkomandazzjonijiet li daħlu",
-            "out": "Rakkomandazzjonijiet li ħarġu",
-            "label": "Daqs",
-            "degree_centrality": "Ċentralità tal-grad",
-            "out_degree": "Grad ’il barra",
-            "in_degree": "Grad ’il ġewwa",
-            "n_out_recommended": "Rakkomandazzjonijiet li ħarġu",
-            "n_in_recommended": "Rakkomandazzjonijiet li daħlu",
-            "scale": "Miżien"
+        "disable": "Itfi d-daqs",
+        "iri": "Riskju ta’ infodemija",
+        "hs": "Diskors ta’ mibegħda",
+        "in": "Rakkomandazzjonijiet li daħlu",
+        "out": "Rakkomandazzjonijiet li ħarġu",
+        "label": "Daqs",
+        "out_degree": "Grad ’il barra",
+        "in_degree": "Grad ’il ġewwa",
+        "n_in_recommended": "Rakkomandazzjonijiet li daħlu",
+        "n_out_recommended": "Rakkomandazzjonijiet li ħarġu",
+        "scale": "Miżien",
+        "degree_centrality": "Ċentralità tal-grad"
         },
         "tooltip": {
-            "label": "Isem il-kanal",
-            "message_count": "Numru ta’ messaġġi",
-            "partecipants_count": "Numru ta’ utenti",
-            "id": "ID tal-kanal:",
-            "iri": "Riskju ta’ infodemija:",
-            "hs": "Diskors ta’ mibegħda:",
-            "cw": "Jista’ jiġi verifikat:",
-            "degree_centrality": "Ċentralità tal-grad:",
-            "in": "Rakkomandazzjonijiet li daħlu:",
-            "out": "Rakkomandazzjonijiet li ħarġu:"
+        "label": "Isem il-kanal",
+        "message_count": "Numru ta’ messaġġi",
+        "partecipants_count": "Numru ta’ utenti",
+        "id": "ID tal-kanal:",
+        "iri": "Riskju ta’ infodemija:",
+        "hs": "Diskors ta’ mibegħda:",
+        "cw": "Jista’ jiġi verifikat:",
+        "in": "Rakkomandazzjonijiet li daħlu:",
+        "out": "Rakkomandazzjonijiet li ħarġu:",
+        "degree_centrality": "Ċentralità tal-grad:"
         },
         "fs": {
             "exit": "Ħruġ",
             "go": "Skrin sħiħ"
         }
     },
-    "topicsTable": {
-        "title": "Is-suġġetti ewlenin taċ-chat",
-        "header": {
-            "title": "Titlu",
-            "count": "% tal-messaġġi",
-            "hs": "% tad-diskors ta’ mibegħda",
-            "cw": "% ta’ jekk jistax jiġi verifikat"
+  "topicsTable": {
+    "title": "Is-suġġetti ewlenin taċ-chat",
+    "header": {
+      "title": "Titlu",
+      "count": "% tal-messaġġi",
+      "hs": "% tad-diskors ta’ mibegħda",
+      "cw": "% ta’ jekk jistax jiġi verifikat"
         }
     },
     "channelInfo": {
@@ -1013,8 +1014,8 @@
         "channelId": "ID tal-kanal:",
         "title": "Titlu",
         "description": "Deskrizzjoni:",
-        "nMessages": "Numru ta' messaġġi:",
-        "nUsers": "Numru ta 'Utenti:",
+        "nMessages": "Numru ta’ messaġġi:",
+        "nUsers": "Numru ta’ utenti:",
         "languages": "Lingwi:",
         "iri": "Riskju ta’ infodemija:",
         "hateSpeech": "Riskju tad-diskors ta’ mibegħda:",
@@ -1034,36 +1035,36 @@
     "message": {
         "title": "Tagħrif miċ-chats",
         "reliability": {
-            "reliable": "Affidabbli",
-            "unreliable": "Mhux affidabbli",
-            "unknown": "Mhux magħruf"
+        "unknown": "Mhux magħruf",
+        "reliable": "Affidabbli",
+        "unreliable": "Mhux affidabbli"
         },
-        "header": {
-            "id": "ID",
-            "date": "Data",
-            "message": "Messaġġ",
-            "from": "Minn",
-            "mediaType": "Tip",
-            "reactions": "Reazzjonijiet",
-            "nrViews": "Veduti",
-            "hateLabel": "Diskors ta ’mibegħda",
-            "checkLabel": "Jista’ jiġi vverifikat",
-            "topic": "Suġġett",
-            "target": "Mira",
-            "nrReactions": "Numru ta 'reazzjonijiet",
-            "keywordsMatch": "Il-keywords jaqblu",
-            "counterspeech": "Ikteb Kontro-diskors",
-            "averageReliability": "Affidabbiltà tal-URLs"
+    "header": {
+      "id": "ID",
+      "date": "Data",
+      "message": "Messaġġ",
+      "from": "Minn",
+      "mediaType": "Tip",
+      "reactions": "Reazzjonijiet",
+      "nrViews": "Kemm-il darba rawh",
+      "nrReactions": "Reazzjonijiet",
+      "hateLabel": "Diskors ta’ mibegħda",
+      "checkLabel": "Jista’ jiġi vverifikat",
+      "topic": "Suġġett",
+      "target": "Mira",
+      "keywordsMatch": "Il-keywords jaqblu",
+      "counterspeech": "Ikteb Kontro-diskors",
+      "averageReliability": "Affidabbiltà tal-URLs"
         },
-        "dialog": {
-            "start": "Ibda konverżazzjoni ġdida b’Target = {Target}",
-            "jump": "Mur għall-konverżazzjoni",
-            "noProject": "M’hemmx proġetti disponibbli",
-            "noData": "M’hemmx dejta disponibbli",
-            "error": "Żball waqt li jġib id-dejta",
-            "startConversation": "Ikteb kontro-diskors",
-            "startConversationTitle": "Ikteb kontro-diskors",
-            "startConversationDescription": "Agħżel it-task tat-tema li tixtieq taħdem fuqha."
+    "dialog": {
+      "start": "Ibda konverżazzjoni ġdida b’Target = {Target}",
+      "jump": "Mur għall-konverżazzjoni",
+      "noProject": "M’hemmx proġetti disponibbli",
+      "noData": "M’hemmx dejta disponibbli",
+      "startConversation": "Ikteb kontro-diskors",
+      "error": "Żball waqt il-ġbir tad-dejta",
+      "startConversationTitle": "Ikteb kontro-diskors",
+      "startConversationDescription": "Agħżel it-task tat-tema li tixtieq taħdem fuqha."
         },
         "hate": "Nobgħod",
         "notHate": "M’hemmx mibegħda",
@@ -1073,40 +1074,40 @@
         "noTarget": "Ma ġiet identifikata l-ebda mira",
         "target": "Ikklikkja hawn biex tibda konverżazzjoni ġdida",
         "filter": {
-            "target": "Iffiltra bil-mira",
-            "topic": "Iffiltra bis-suġġett",
-            "hate": "Diskors ta’ mibegħda",
-            "checkworthy": "Jista’ jiġi vverifikat",
-            "all": "Kollha",
-            "yes": "IVA",
-            "no": "LE",
-            "DISABLED": "Individwi b'diżabilità",
-            "JEWS": "Lhud",
-            "MUSLIMS": "Musulmani",
-            "LGBTQIA+": "LGBTQIA+",
-            "MIGRANTS": "Migranti",
-            "POC": "Czarnoskórzy",
-            "WOMEN": "Nisa"
+        "target": "Iffiltra bil-mira",
+        "topic": "Iffiltra bis-suġġett",
+        "hate": "Diskors ta’ mibegħda",
+        "checkworthy": "Jista’ jiġi vverifikat",
+        "all": "Kollha",
+        "yes": "Iva",
+        "no": "Le",
+        "DISABLED": "Persuni b’diżabilità",
+        "JEWS": "Lhud",
+        "MUSLIMS": "Musulmani",
+        "LGBTQIA+": "LGBTQIA+",
+        "MIGRANTS": "Migranti",
+        "POC": "Persuni b’ġilda skura",
+        "WOMEN": "Nisa"
         },
         "footer": {
             "pagination": {
-                "range": "{pagestart} - {pagestop} ta '{totalItems} messaġġi estratti"
+                "range": "{pagestart} - {pagestop} ta’ {totalItems} messaġġi estratti"
             }
         }
     },
-    "wordclouds": {
-        "hate": "Mibegħda vs mhux mibegħda",
-        "checkworthy": "Jista’ jiġi vverifikat vs Ma jistax jiġi vverifikat",
-        "generic": "Ġeneriku",
-        "select": "Agħżel it-tip ta’ WordCloud",
-        "selectTopic": "Agħżel suġġett",
-        "channel": "Chat",
-        "titles": {
-            "hate": "Diskors ta’ mibegħda",
-            "is_checkworthy": "Jista’ jiġi vverifikat",
-            "wordcloud": "Ġeneriku",
-            "isnot_checkworthy": "Ma jistax jiġi vverifikat",
-            "non_hate": "Mhux mibegħda"
+  "wordclouds": {
+    "hate": "Mibegħda vs mhux mibegħda",
+    "checkworthy": "Jista’ jiġi vverifikat vs Ma jistax jiġi vverifikat",
+    "generic": "Ġeneriku",
+    "select": "Agħżel it-tip ta’ WordCloud",
+    "selectTopic": "Agħżel suġġett",
+    "channel": "Chat",
+    "titles": {
+      "hate": "Diskors ta’ mibegħda",
+      "is_checkworthy": "Jista’ jiġi vverifikat",
+      "wordcloud": "Ġeneriku",
+      "isnot_checkworthy": "Ma jistax jiġi vverifikat",
+      "non_hate": "Mhux mibegħda"
         }
     },
     "error": {
@@ -1128,108 +1129,108 @@
         "confirmTitle": "Ikkonferma",
         "confirmLeavePage": "Jekk titlaq minn din il-paġna, tista' titlef il-progress tiegħek. Int żgur?",
         "tooltip": {
-            "label": "Isem il-kanal",
-            "startEmpty": "Agħfas hawn biex toħloq turn vojta.",
-            "addDynamicTurn": "B’mod awtomatiku ġġenera suġġeriment biex tibda minnu.<br>Wara xorta tkun tista’ tibdlu.",
-            "addRoundUp": "Żid turn vojta <em>qabel</em> dik magħżula.",
-            "addRoundDown": "Żid turn vojta <em>wara</em> dik magħżula.",
-            "magic": "B’mod awtomatiku tiġġenera tweġiba u tagħżel il-medda relatata tat-test.<br><em>Xorta tkun tista’ teditjaha.</em>",
-            "delete": "Ħassar din it-turn b’mod permanenti.",
-            "about": "Deskrizzjoni qasira tal-kanal",
-            "channelId": "ID uniku anonimizzat tal-kanal",
-            "nMessages": "Kemm fih messaġġi l-kanal",
-            "nUsers": "Kemm għandu utenti l-kanal",
-            "languages": "Lingwi użati fil-kanal",
-            "iri": "Indiċi tar-riskju ta’ infodemija tal-kanal",
-            "hs_percentage": "Il-persentaġġ tal-messaġġi meqjusa bħala diskors ta’ mibegħda",
-            "cw_percentage": "Il-persentaġġ tal-messaġġi meqjusa li jistgħu jiġu vverifikati",
-            "degreeCentrality": "Iċ-ċentralità tal-grad tan-network tal-kanal",
+        "label": "Isem il-kanal",
+        "startEmpty": "Agħfas hawn biex toħloq turn vojta.",
+        "addDynamicTurn": "B’mod awtomatiku ġġenera suġġeriment biex tibda minnu.<br>Wara xorta tkun tista’ tibdlu.",
+        "addRoundUp": "Żid turn vojta <em>qabel</em> dik magħżula.",
+        "addRoundDown": "Żid turn vojta <em>wara</em> dik magħżula.",
+        "magic": "B’mod awtomatiku tiġġenera tweġiba u tagħżel il-medda relatata tat-test.<br><em>Xorta tkun tista’ teditjaha.</em>",
+        "delete": "Ħassar din it-turn b’mod permanenti.",
+        "about": "Deskrizzjoni qasira tal-kanal",
+        "channelId": "ID uniku anonimizzat tal-kanal",
+        "nMessages": "Kemm fih messaġġi l-kanal",
+        "nUsers": "Kemm għandu utenti l-kanal",
+        "languages": "Lingwi użati fil-kanal",
+        "iri": "Indiċi tar-riskju ta’ infodemija tal-kanal",
+        "hs_percentage": "Il-persentaġġ tal-messaġġi meqjusa bħala diskors ta’ mibegħda",
+        "cw_percentage": "Il-persentaġġ tal-messaġġi meqjusa li jistgħu jiġu vverifikati",
+        "degreeCentrality": "Iċ-ċentralità tal-grad tan-network tal-kanal",
             "louvain_community": "Il-komunità ta' Louvain tal-kanal"
         }
     },
     "guide": {
-        "network": {
-            "title": "Gwida tan-Network",
-            "networkNavigation": {
-                "title": "Navigazzjoni fin-network",
-                "description": "Dan in-network juri l-ġabra tal-<b>kanali ta’ Telegram</b> u l-konnessjonijiet tagħhom.<br><br>Uża l-mouse biex <b>tmexxi u tiżżumja</b> fuq in-network tal-kanal, u kklikkja fuq kanal biex tara d-dettalji tiegħu.<br><br>Meta tikklikkja, il-konnessjoni tal-kanal tixgħel, tidher tabella bl-informazzjoni fuq il-lemin, u l-buttuna <i>‘Esplora l-kanal’</i> tkun attivata jekk il-messaġġi tiegħu jistgħu jidhru (jiġifieri jekk il-kanal jista’ jinfetaħ)."
-            },
-            "datasetLanguage": {
-                "title": "Għażla tal-lingwa tad-dataset",
-                "description": "Uża l-<b>menu li jiftaħ</b> biex tagħżel id-dataset ta’ Telegram li tixtieq tesplora.<br><br>In-network jaġġorna awtomatikament biex juri d-dejta tal-għażla tiegħek, u l-lingwa magħżula tinżamm fuq it-tliet tabs (<i>Network, Ħarsa Ġenerali lejn il-Kanal, u Konverżazzjoni</i>)."
-            },
-            "colorSize": {
-                "title": "Għażla tal-Kulur u d-Daqs",
-                "description": "Uża l-għażliet tal-<b>kulur</b> u d-<b>daqs</b> biex tesplora n-network. Settings differenti juru karatteristiċi importanti u jikxfu ċerti xejriet.<br><br>Pereżempju, jekk tissettja <b>kulur = Riskju ta’ Infodemija</b> u <b>daqs = Diskors ta’ mibegħda</b>, jidhru kanali ta’ riskju għoli <span style='color:red;'>ħomor</span>, bil-kanali li fihom aktar diskors ta’ mibegħda jidhru ikbar."
-            },
-            "nodeStats": {
-                "title": "Statistika tan-nodi",
-                "description": "Din it-tabella turi d-dejta għal kull kanal fin-network. Għandek żewġ interazzjonijiet prinċipali:<br><ul><li><b>Issortja t-tabella:</b> Ikklikkja fuq kwalunkwe titlu ta’ kolonna (eż. <i>Numru ta’ messaġġi</i>) biex terġa’ tqassam id-dejta.</li><li><b>Sib Kanal:</b> Ikklikkja fuq kwalunkwe ringiela biex timmarka dak il-kanal fuq il-mappa tan-network u tiftaħ it-tabella tal-informazzjoni tiegħu.</li></ul>"
-            },
-            "explored": {
-                "title": "Jista’ jiżdied jew jikber",
-                "description": "Kanal <b>jikber</b> jekk niġbru l-messaġġi kollha tiegħu, murija fil-paġna tal-<i>Konverżazzjoni</i>.<br><br>Kanali li ma jikbrux jidhru <span style='color:blue;'>blu</span> fin-network."
-            },
-            "exploreChannel": {
-                "title": "Il-buttuna ‘Esplora l-kanal’",
-                "description": "Ikklikkja l-buttuna <b>‘Esplora l-kanal’</b> biex tmur fil-paġna tat-<i>temi taċ-chats</i> u tara aktar informazzjoni u analiżi dettaljata tat-temi diskussi fiċ-chats ta’ dak il-kanal."
-            },
-            "degreeCentrality": {
-                "title": "Ċentralità tad-Grad",
-                "description": "Juri kemm hemm <b>konnessjonijiet diretti</b> għandu punt (li għalina hu kanal ta’ Telegram) fin-network.<br><br>Dan jgħin biex wieħed jifhem kemm hu <i>“importanti”</i> — aħseb fil-popolarità: <b>ħafna ħbieb!</b>"
-            },
-            "communities": {
-                "title": "Komunitajiet",
-                "description": "Fix-xjenza tan-networks il-komunitajiet huma <b>gruppi</b> naturali fin-networks.<br><br>Biex insibuhom nużaw il-metodu tal-<b> Louvain community detection</b>, li jfittex gruppi li jkun fihom ħafna konnessjonijiet interni.<br>(Bħal grupp ta’ ħbieb li fih kulħadd jaf sew lil xulxin!)<br><br>Għal iktar dettalji tista’ tiċċekkja <a href='https://en.wikipedia.org/wiki/Louvain_method' target='_blank'>this article</a>."
-            }
-        },
+    "network": {
+      "title": "Gwida tan-Network",
+      "networkNavigation": {
+        "title": "Navigazzjoni fin-network",
+        "description": "Dan in-network juri l-ġabra tal-<b>kanali ta’ Telegram</b> u l-konnessjonijiet tagħhom.<br><br>Uża l-mouse biex <b>tmexxi u tiżżumja</b> fuq in-network tal-kanal, u kklikkja fuq kanal biex tara d-dettalji tiegħu.<br><br>Meta tikklikkja, il-konnessjoni tal-kanal tixgħel, tidher tabella bl-informazzjoni fuq il-lemin, u l-buttuna <i>‘Esplora l-kanal’</i> tkun attivata jekk il-messaġġi tiegħu jistgħu jidhru (jiġifieri jekk il-kanal jista’ jinfetaħ)."
+      },
+      "datasetLanguage": {
+        "title": "Għażla tal-lingwa tad-dataset",
+        "description": "Uża l-<b>menu li jiftaħ</b> biex tagħżel id-dataset ta’ Telegram li tixtieq tesplora.<br><br>In-network jaġġorna awtomatikament biex juri d-dejta tal-għażla tiegħek, u l-lingwa magħżula tinżamm fuq it-tliet tabs (<i>Network, Ħarsa Ġenerali lejn il-Kanal, u Konverżazzjoni</i>)."
+      },
+      "colorSize": {
+        "title": "Għażla tal-Kulur u d-Daqs",
+        "description": "Uża l-għażliet tal-<b>kulur</b> u d-<b>daqs</b> biex tesplora n-network. Settings differenti juru karatteristiċi importanti u jikxfu ċerti xejriet.<br><br>Pereżempju, jekk tissettja <b>kulur = Riskju ta’ Infodemija</b> u <b>daqs = Diskors ta’ mibegħda</b>, jidhru kanali ta’ riskju għoli <span style='color:red;'>ħomor</span>, bil-kanali li fihom aktar diskors ta’ mibegħda jidhru ikbar."
+      },
+      "nodeStats": {
+        "title": "Statistika tan-nodi",
+        "description": "Din it-tabella turi d-dejta għal kull kanal fin-network. Għandek żewġ interazzjonijiet prinċipali:<br><ul><li><b>Issortja t-tabella:</b> Ikklikkja fuq kwalunkwe titlu ta’ kolonna (eż. <i>Numru ta’ messaġġi</i>) biex terġa’ tqassam id-dejta.</li><li><b>Sib Kanal:</b> Ikklikkja fuq kwalunkwe ringiela biex timmarka dak il-kanal fuq il-mappa tan-network u tiftaħ it-tabella tal-informazzjoni tiegħu.</li></ul>"
+      },
+      "explored": {
+        "title": "Jista’ jiżdied jew jikber",
+        "description": "Kanal <b>jikber</b> jekk niġbru l-messaġġi kollha tiegħu, murija fil-paġna tal-<i>Konverżazzjoni</i>.<br><br>Kanali li ma jikbrux jidhru <span style='color:blue;'>blu</span> fin-network."
+      },
+      "exploreChannel": {
+        "title": "Il-buttuna ‘Esplora l-kanal’",
+        "description": "Ikklikkja l-buttuna <b>‘Esplora l-kanal’</b> biex tmur fil-paġna tat-<i>temi taċ-chats</i> u tara aktar informazzjoni u analiżi dettaljata tat-temi diskussi fiċ-chats ta’ dak il-kanal."
+      },
+      "degreeCentrality": {
+        "title": "Ċentralità tad-Grad",
+        "description": "Juri kemm hemm <b>konnessjonijiet diretti</b> għandu punt (li għalina hu kanal ta’ Telegram) fin-network.<br><br>Dan jgħin biex wieħed jifhem kemm hu <i>“importanti”</i> — aħseb fil-popolarità: <b>ħafna ħbieb!</b>"
+      },
+      "communities": {
+        "title": "Komunitajiet",
+        "description": "Fix-xjenza tan-networks il-komunitajiet huma <b>gruppi</b> naturali fin-networks.<br><br>Biex insibuhom nużaw il-metodu tal-<b> Louvain community detection</b>, li jfittex gruppi li jkun fihom ħafna konnessjonijiet interni.<br>(Bħal grupp ta’ ħbieb li fih kulħadd jaf sew lil xulxin!)<br><br>Għal iktar dettalji tista’ tiċċekkja <a href='https://en.wikipedia.org/wiki/Louvain_method' target='_blank'>this article</a>."
+      }
+    },
         "channel": {
-            "title": "Gwida tal-Kanali",
-            "topic": {
-                "title": "Suġġett",
-                "description": "Billi nibdew mill-messaġġi kollha fiċ-chat magħżula, is-suġġetti l-aktar sinifikanti jiġu estratti bl-użu ta’<b>topic modeling ibbażat fuq l-IA</b>: il-messaġġi jitqassmu fi gruppi skont is-similaritajiet fil-kontenut tagħhom. Dawn il-gruppi jikxfu l-aktar temi relevanti tad-diskussjoni, u jgħinu biex nidentifikaw dwar xiex ikunu qed jitkellmu n-nies fil-kanal."
-            },
-            "hateSpeechPercent": {
-                "title": "% Diskors ta’ mibegħda",
-                "description": "Billi nużaw<b>klassifikazzjoni bbażata fuq l-IA</b>, kull messaġġ f’kanal jiġi analizzat biex jiġi identifikat jekk fihx diskors ta’ mibegħda (ara l-<i>Glossarju</i> għal aktar informazzjoni dwar id-definizzjoni tad-Diskors ta’ Mibegħda). Billi nikkalkulaw il-<b>medja tad-diskors ta’ mibegħda</b> fil-messaġġi relatati ma’ kull suġġett, nistgħu nimmarkaw il-prevalenza tad-diskors ta’ mibegħda fil-konverżazzjonijiet."
-            },
-            "checkWorthinessPercent": {
-                "title": "% Jista’ jiġi vverifikat",
-                "description": "Permezz ta’ <b>klassifikazzjoni bbażata fuq l-IA</b>, kull messaġġ f’kanal jiġi analizzat biex isir magħruf <b>jistax jiġi vverifikat</b> (check-worthy), jiġifieri jekk fihx stqarrijiet li jeħtieġ li jkunu vverifikati (ara l-<i>Glossarju</i> għal iktar tagħrif dwar l-ivverifikar tal-fatti). Billi nikkalkulaw il-<b>livell medju ta’ kontenut li jeħtieġ verifika</b> f’kull suġġett, nuru kemm huma prevalenti stqarrijiet potenzjalment żbaljati jew dubjużi."
-            },
-            "prevalentSentiment": {
-                "title": "Sentiment prevalenti",
-                "description": "Bl-<b>analiżi tas-sentiment ibbażat fuq l-IA</b>, kull messaġġ f’kanal jiġi kklassifikat bħala <i>newtrali</i>, <i>pożittiv</i> jew <i>negattiv</i>. Meta niġbru flimkien is-sentimenti tal-messaġġi kollha relatati ma’ suġġett, nidentifikaw is-<b>sentiment prevalenti</b> ta’ dak is-suġġett."
-            },
-            "wordCloud": {
-                "title": "Word Cloud",
-                "description": "Word cloud hija rappreżentazzjoni viżwali tal-aktar kliem frekwenti f’test: iktar ma tidher kelma, iktar tidher <b>kbira</b> fil-cloud.<br><br>Użaha biex tara liema termini jidhru l-aktar ta’ spiss fil-messaġġi <b>mingħajr mibegħda</b> u fid-<b>diskors ta’ mibegħda</b>, kif ukoll f’messaġġi <b>li jieħtieġu verifika</b> u f’dawk <b>li ma jeħtiġux verifika</b>, kemm fil-livell ta’ <i>chat</i> kif ukoll ta’ <i>suġġett</i>."
-            }
-        },
-        "chats": {
-            "title": "Gwida Rapida - Chats",
-            "reactions": {
-                "title": "Reazzjonijiet",
-                "description": "It-total ta’ reazzjonijiet (<b>likes</b>, <b>dislikes</b>, <b>qlub</b> u oħrajn) li rċieva messaġġ. Huwa indikazzjoni tal-<b>popolarità</b> ta’ messaġġ."
-            },
-            "reliability": {
-                "title": "Affidabbiltà",
-                "description": "Jindika l-<b>affidabbiltà medja</b> tal-URLs inklużi fil-messaġġ. Jiġi evalwat awtomatikament skont id-domain tal-URL: jista’ jkun <b>affidabbli</b>, <b>mhux affidabbli</b> jew <b>mhux magħruf</b>."
-            },
-            "target": {
-                "title": "Mira",
-                "description": "Il-mira tirreferi għal <b>individwu</b> jew <b>grupp ta’ nies</b> imsemmija f’messaġġ. F’dan il-proġett nidentifikaw jekk messaġġ ikunx fih referenza għal xi grupp minn dawn: <b>persuni b’ġilda skura</b>, <b>LGBTQIA+</b>, <b>Lhud</b>, <b>migranti</b>, <b>Musulmani</b>, <b>persuni b’diżabilità</b>, <b>nisa</b>.<br><br>Li jkun hemm mira fih innifsu ma jfissirx li jkun hemm il-mibegħda, iżda jippermetti aktar filtrazzjoni biex wieħed jara liema messaġġi li jsemmu lil dawn il-gruppi huma wkoll <b>ta’ mibegħda</b>, <b>jeħtieġu verifika</b> jew fihom <b>ħoloq mhux affidabbli</b>."
-            },
-            "filtersTable": {
-                "title": "Filtri u titli tat-tabelli",
-                "description": "Uża t-tliet filtri (<b>Diskors ta’ mibegħda</b>, <b>Jeħtieġ verifika</b> u <b>Iffiltra skont il-mira</b>) biex turi biss ir-ringieli relatati.<br>Tista’ wkoll tikklikkja fuq it-<b>titli tat-tabelli</b> biex tqassam mill-ġdid ir-ringieli skont il-preżenza jew l-assenza ta’ varjabbli speċifiku."
-            },
-            "startConversation": {
-                "title": "Ibda konverżazzjoni",
-                "description": "Ikteb kontro-diskors",
-                "details": "Agħfas din il-buttuna biex tagħżel suġġett għall-kitba ta’ kontro-diskors. Imbagħad tittieħed mill-ġdid fil-<b>paġna tal-kitba tal-kontro-diskors</b>."
-            }
-        }
+      "title": "Gwida tal-Kanali",
+      "topic": {
+        "title": "Suġġett",
+        "description": "Billi nibdew mill-messaġġi kollha fiċ-chat magħżula, is-suġġetti l-aktar sinifikanti jiġu estratti bl-użu ta’<b>topic modeling ibbażat fuq l-IA</b>: il-messaġġi jitqassmu fi gruppi skont is-similaritajiet fil-kontenut tagħhom. Dawn il-gruppi jikxfu l-aktar temi relevanti tad-diskussjoni, u jgħinu biex nidentifikaw dwar xiex ikunu qed jitkellmu n-nies fil-kanal."
+      },
+      "hateSpeechPercent": {
+        "title": "% Diskors ta’ mibegħda",
+        "description": "Billi nużaw<b>klassifikazzjoni bbażata fuq l-IA</b>, kull messaġġ f’kanal jiġi analizzat biex jiġi identifikat jekk fihx diskors ta’ mibegħda (ara l-<i>Glossarju</i> għal aktar informazzjoni dwar id-definizzjoni tad-Diskors ta’ Mibegħda). Billi nikkalkulaw il-<b>medja tad-diskors ta’ mibegħda</b> fil-messaġġi relatati ma’ kull suġġett, nistgħu nimmarkaw il-prevalenza tad-diskors ta’ mibegħda fil-konverżazzjonijiet."
+      },
+      "checkWorthinessPercent": {
+        "title": "% Jista’ jiġi vverifikat",
+        "description": "Permezz ta’ <b>klassifikazzjoni bbażata fuq l-IA</b>, kull messaġġ f’kanal jiġi analizzat biex isir magħruf <b>jistax jiġi vverifikat</b> (check-worthy), jiġifieri jekk fihx stqarrijiet li jeħtieġ li jkunu vverifikati (ara l-<i>Glossarju</i> għal iktar tagħrif dwar l-ivverifikar tal-fatti). Billi nikkalkulaw il-<b>livell medju ta’ kontenut li jeħtieġ verifika</b> f’kull suġġett, nuru kemm huma prevalenti stqarrijiet potenzjalment żbaljati jew dubjużi."
+      },
+      "prevalentSentiment": {
+        "title": "Sentiment prevalenti",
+        "description": "Bl-<b>analiżi tas-sentiment ibbażat fuq l-IA</b>, kull messaġġ f’kanal jiġi kklassifikat bħala <i>newtrali</i>, <i>pożittiv</i> jew <i>negattiv</i>. Meta niġbru flimkien is-sentimenti tal-messaġġi kollha relatati ma’ suġġett, nidentifikaw is-<b>sentiment prevalenti</b> ta’ dak is-suġġett."
+      },
+      "wordCloud": {
+        "title": "Word Cloud",
+        "description": "Word cloud hija rappreżentazzjoni viżwali tal-aktar kliem frekwenti f’test: iktar ma tidher kelma, iktar tidher <b>kbira</b> fil-cloud.<br><br>Użaha biex tara liema termini jidhru l-aktar ta’ spiss fil-messaġġi <b>mingħajr mibegħda</b> u fid-<b>diskors ta’ mibegħda</b>, kif ukoll f’messaġġi <b>li jieħtieġu verifika</b> u f’dawk <b>li ma jeħtiġux verifika</b>, kemm fil-livell ta’ <i>chat</i> kif ukoll ta’ <i>suġġett</i>."
+      }
+    },
+       "chats": {
+      "title": "Gwida Rapida - Chats",
+      "reactions": {
+        "title": "Reazzjonijiet",
+        "description": "It-total ta’ reazzjonijiet (<b>likes</b>, <b>dislikes</b>, <b>qlub</b> u oħrajn) li rċieva messaġġ. Huwa indikazzjoni tal-<b>popolarità</b> ta’ messaġġ."
+      },
+      "reliability": {
+        "title": "Affidabbiltà",
+        "description": "Jindika l-<b>affidabbiltà medja</b> tal-URLs inklużi fil-messaġġ. Jiġi evalwat awtomatikament skont id-domain tal-URL: jista’ jkun <b>affidabbli</b>, <b>mhux affidabbli</b> jew <b>mhux magħruf</b>."
+      },
+      "target": {
+        "title": "Mira",
+        "description": "Il-mira tirreferi għal <b>individwu</b> jew <b>grupp ta’ nies</b> imsemmija f’messaġġ. F’dan il-proġett nidentifikaw jekk messaġġ ikunx fih referenza għal xi grupp minn dawn: <b>persuni b’ġilda skura</b>, <b>LGBTQIA+</b>, <b>Lhud</b>, <b>migranti</b>, <b>Musulmani</b>, <b>persuni b’diżabilità</b>, <b>nisa</b>.<br><br>Li jkun hemm mira fih innifsu ma jfissirx li jkun hemm il-mibegħda, iżda jippermetti aktar filtrazzjoni biex wieħed jara liema messaġġi li jsemmu lil dawn il-gruppi huma wkoll <b>ta’ mibegħda</b>, <b>jeħtieġu verifika</b> jew fihom <b>ħoloq mhux affidabbli</b>."
+      },
+      "filtersTable": {
+        "title": "Filtri u titli tat-tabelli",
+        "description": "Uża t-tliet filtri (<b>Diskors ta’ mibegħda</b>, <b>Jeħtieġ verifika</b> u <b>Iffiltra skont il-mira</b>) biex turi biss ir-ringieli relatati.<br>Tista’ wkoll tikklikkja fuq it-<b>titli tat-tabelli</b> biex tqassam mill-ġdid ir-ringieli skont il-preżenza jew l-assenza ta’ varjabbli speċifiku."
+      },
+      "startConversation": {
+        "title": "Ibda konverżazzjoni",
+        "description": "Ikteb kontro-diskors",
+        "details": "Agħfas din il-buttuna biex tagħżel suġġett għall-kitba ta’ kontro-diskors. Imbagħad tittieħed mill-ġdid fil-<b>paġna tal-kitba tal-kontro-diskors</b>."
+      }
+    }
     },
     "buttons": {
         "startDialogue": "Ibda djalogu",
