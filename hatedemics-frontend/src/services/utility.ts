@@ -55,7 +55,7 @@ export function processingChannelInfo(data: ChannelInfo[]) {
     },
     MT: {
       DISABLED: "Individwi b'diżabilità",
-      POC: "Czarnoskórzy",
+      POC: "Nies suwed",
       MIGRANTS: "Migranti",
       WOMEN: "Nisa",
       "LGBT+": "LGBTIQ+",
