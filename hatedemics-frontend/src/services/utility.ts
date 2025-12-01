@@ -58,7 +58,7 @@ export function processingChannelInfo(data: ChannelInfo[]) {
       POC: "Czarnoskórzy",
       MIGRANTS: "Migranti",
       WOMEN: "Nisa",
-      "LGBT+": "LGBTQIA+",
+      "LGBT+": "LGBTIQ+",
       JEWS: "Lhud",
       MUSLIMS: "Musulmani",
     },
