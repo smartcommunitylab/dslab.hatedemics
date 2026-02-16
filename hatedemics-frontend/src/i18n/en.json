@@ -191,8 +191,8 @@
                 "startButton": "Start Activity",
                 "task": "Form 12 groups. Each group picks up one card. Each group discusses the meaning of the human right written on their card. After 5 minutes, the first group explains what the right means to them and how it connects to hate speech. The teacher may add to their explanation if needed.\nThen, the next group with the following card explains the meaning of their right and its connection to hate speech. Repeat this process until all groups have shared.",
                 "completetask": "I have completed the activity",
-                "taskCompleteTitle": "Activity completed",
-                "taskCompleteText": "Did you already know all the human rights mentioned? Which ones are new to you? Was it easy or difficult to explain the meaning of these rights and find a link between them and hate speech? Can you name other human rights that were not mentioned?",
+                "taskCompleteTitle": "Debriefing",
+                "taskCompleteText": "<ul><li>Did you already know all the human rights mentioned?</li><li>Which ones are new to you?</li><li>Was it easy or difficult to explain the meaning of these rights and find a link between them and hate speech?</li><li>Can you name other human rights that were not mentioned?</li></ul>",
                 "articles": [
                     {
                         "title": "Art. 1",
@@ -315,11 +315,11 @@
                 "title": "Debunking",
                 "back": "Back",
                 "finalMessage": "You have completed the activity! You can now move to the next activity.",
-                "description": "The objective of fact-checking is to provide citizens with tools and information that allow them to form opinions with all the data and verified facts at hand and, consequently, make informed decisions. Misinformation can influence how society thinks and how it deals with everyday problems, and that's why fact-checkers' central mission is to shed light and data on these issues. Broadly speaking, fact-checking involves detecting hoaxes, verifying their content, and spreading the denial.<br>Fact-checkers work daily on debunking: they verify content and explain why something is false after it’s been shared and viralized in social media. It’s important for the public record and to avoid that more people read, share and believe lies. Some debunkings are very difficult: take lots of time and require the use of specific tools. Others just require a lot of observation and searching for specific reliable information. <br><strong>Let´s try!</strong> In this exercise you will learn, in a guided way, some debunk techniques and why it's important to activate critical thinking and identify how the viralizing of some hoaxes can create and strengthen disinformation narratives.",
+                "description": "Fact-checkers work daily on debunking: they verify content and explain why something is false after it’s been shared and viralized in social media. It’s important for the public record and to avoid that more people read, share and believe lies. Some debunkings are very difficult: take lots of time and require the use of specific tools. Others just require a lot of observation and searching for specific reliable information.<br><br>In order to learn how to debunk like a fact-checker, you can consult a toolbox designed to teach the basic tools of verification from <a href='https://firstdraftnews.org/verification-toolbox/ '>First Draftnews</a>. In this toolkit you can learn, for example, how to use a Reverse Image Search: an easy way of getting information about a picture and verifying its context. You can also practice verifying videos using <a href='https://www.invid-project.eu/'>Invid</a>, a great tool to save time and be more efficient especially when verifying videos.<br><br><strong>Let´s try!</strong> In this exercise you will learn, in a guided way, some debunk techniques and why it's important to activate critical thinking and identify how the viralizing of some hoaxes can create and strengthen disinformation narratives.",
                 "objectivesTitle": "Objectives of the activity",
                 "objectives": "<p><strong>Debunk:</strong> learn, in a guided way, some debunk techniques.</p><p><strong>Develop critical thinking using the pre-bunking strategy:</strong> during the exercise, the users discover what are disinformation narratives and can reflect about the most spread ones in their country.</p><p><strong>Activate critical thinking:</strong> by understanding how the viralizing of some hoaxes can create and strengthen disinformation narratives.</p>",
                 "startButton": "Start activity",
-                "task": "Simulate the actions of a fact-checker by selecting the most effective way to debunk a suspicious content. Can you also identify the related disinformation narrative?",
+                "task": "Simulate the actions of a fact-checker by selecting the most effective way to debunk a suspicious content. Can you also identify the related disinformation narrative?<br><br>First, some context about the verification tools:<ul><li><strong>Reverse image search:</strong> A <a href='https://www.youtube.com/watch?v=linGPlWGcDw'>reverse image search</a> is a search engine technology that allows users to find information, sources, or similar versions of an image by uploading a picture or pasting its URL instead of using text keywords. You can use different browsers like bing.com, yandex.com, or google.com. This tool is particularly useful for tracing the original source of an image and checking if it has been published before but is now being used in a different context. It allows us to search for an entire image or part of it.</li><li><strong>Advanced search in X (Twitter):</strong> <a href='https://help.x.com/en/using-x/x-advanced-search'>Advanced Search in X</a> is a tool for searching for content on this social media platform in an efficient way. Use it to search for a tweet or post you have seen before, to find out what was published on specific dates, or to check if a particular profile has posted a tweet that is being shared on social media as if it were their own.</li><li><strong>AI tool:</strong> Tools like <a href='https://hivemoderation.com/'>Hive Moderation</a> and <a href='https://deepware.ai/'>Deepware</a> can help us recognize images, videos, and text created with artificial intelligence. They are not 100% infallible, and most of them analyze the likelihood that content was created using artificial intelligence.</li></ul>",
                 "correct": "Correct! Well done.",
                 "incorrect": "Incorrect answer. Try again.",
                 "completedTitle": "Activity completed",
@@ -328,7 +328,7 @@
                 "questions": [
                     {
                         "title": "Question 1",
-                        "scenario_description": "You have received this picture that shows a photo of a boat with illegal immigrants trying to get to Australia. It says the boat was blocked and the immigrants were all returned back.",
+                        "scenario_description": "It's 2020, and you have received a picture showing a boat with illegal immigrants attempting to reach Australia. It says the boat was blocked and the immigrants were all sent back.",
                         "question": "How would you verify?",
                         "image": "/img/debunking/en/question1.jpg",
                         "options": [
@@ -367,7 +367,7 @@
                         ],
                         "correct": 2,
                         "feedback": {
-                            "correct": "Correct: this is the original image that was published in 2012. It is a hoax that this image shows the Australian Navy blocking a cargo ship `full of illegal immigrants.` The image shows a conflict between China and Japan on August 15, 2012.",
+                            "correct": "This is the original image published in 2012. It is false that the image shows the Australian Navy blocking a cargo ship 'full of illegal immigrants.' The image actually depicts a conflict between China and Japan on August 15, 2012.",
                             "incorrect": "Inorrect: this is the original image. In particular, this image was originally published in 2012. We can therefore conclude that the first image you saw was the same picture taken out of context: it was used to create a hoax about alleged migrants trying to reach Australia. If you look closely at the two photos, it is clear that it is the same photo in two different contexts."
                         }
                     },
@@ -453,14 +453,14 @@
                 "selectMultiple": "You can select more than 1 screenshot",
                 "title": "Lateral reading",
                 "subtitle": "Below you can see various screenshots. Think about which one best answers the following question.",
-                "description": "<strong>Lateral reading</strong> is a technique that allows us to quickly assess whether a web page's content comes from reliable sources and is based on quality data, references, and information.<br><br>In a research conducted by the <a href=\"https://cor.inquirygroup.org/research/lateral-reading-on-the-open-internet/\" target=\"_blank\" rel=\"noopener\" >Stanford History Education Group</a>, educators discovered that it is an efficient way to assess the quality of an unfamiliar website.<br><br>This powerful strategy (<a href=\"https://cor.inquirygroup.org/curriculum/collections/teaching-lateral-reading/\" target=\"_blank\" rel=\"noopener\">used by fact-checkers</a>) to evaluate information online involves not reading a website ‘vertically’, as if it were a printed document, but instead using a method called ‘lateral reading’.<br><br>This means analysing the webpage by opening several tabs to answer key questions about the content:<br><ul><li>Who is the author of the content? Is it an expert source?</li><li>Can we find evidence? Is it based on facts and data?</li><li>Is it published by other reliable sources? What do they say about it?</li></ul><br>In addition to the above key questions, the lateral reading technique invites us to promote critical thinking and go deeper by analysing other aspects of the content, such as:<br><ul><li>Who funds or sponsors the site where the original piece was published?</li><li>What do other authoritative sources say about that site?</li><li>When you search for the topic of the original piece, are the top results from fact-checking organisations?</li><li>Have any questions been raised about other articles the author has written?</li><li>Does the information you find elsewhere contradict the original piece?</li><li>Are credible news outlets reporting on — or perhaps more importantly, not reporting on — what you are reading?</li></ul><br><strong>Lateral reading</strong> helps us better evaluate our sources of information — that is, to distinguish between truth and lies — and to consciously exercise our right to choose how we access information.",
+                "description": "<strong>Lateral reading</strong> is a technique that allows us to quickly assess whether a web page's content comes from reliable sources and is based on quality data, references, and information.<br><br><iframe width='792' height='1224' src='/img/lateralReading/en/lateral_reading_intro_EN.png' title='Lateral reading infographic' frameborder='0' allowfullscreen></iframe>",
                 "objectivesTitle": "Objectives",
                 "objectives": "<ul><li>Learning about transparency and source credibility factors</li><li>Developing competence in identifying trustworthy sources of information</li></ul>",
                 "startButton": "Start activity",
                 "task": "<strong>Let’s try!</strong> You have to evaluate the credibility of the proposed news page using the lateral reading method. Check all the screenshots and verify if you can find evidence that indicates this page is a reliable source. Match them with the corresponding type of information you can find, or click on <em>Not Found</em>.",
                 "sections": [
                     {
-                        "intro": "https://medlineplus.gov",
+                        "intro": "<p>You can check out the website by clicking here: <a href='https://medlineplus.gov'>https://medlineplus.gov</a></p>",
                         "images": [
                             "/img/lateralReading/en/medline/1.png",
                             "/img/lateralReading/en/medline/2.png",
@@ -680,7 +680,7 @@
                         "conclusion": "We can conclude that MedlinePlus is a website that offers high-quality, easy-to-understand health information. Its methodology is clear and transparent, based on multiple sources. Its authors are correctly identified and traceable. Therefore, it is a suitable source for information on health-related topics."
                     },
                     {
-                        "intro": "<p>https://thepeoplesvoice.tv</p>",
+                        "intro": "<p>You can check out the website by clicking here: <a href='https://thepeoplesvoice.tv'>https://thepeoplesvoice.tv</a></p>",
                         "images": [
                             "/img/lateralReading/en/voice/0.png",
                             "/img/lateralReading/en/voice/1.png",
@@ -1149,10 +1149,10 @@
             "nMessages": "How many messages are in the channel",
             "nUsers": "How many users are in the channel",
             "languages": "Languages used in the channel",
-            "iri": "Infodemic Risk Index of the channel",
+            "iri": "Infodemic Risk Index of the channel (0-1)",
             "hs_percentage": "Percentage of messages that are considered Hate Speech",
             "cw_percentage": "Percentage of messages that are considered Check Worthy",
-            "degreeCentrality": "Network degree centrality of the channel",
+            "degreeCentrality": "Network degree centrality of the channel (0-1)",
             "louvain_community": "Louvain community of the channel"
         }
     },
