@@ -1,8 +1,8 @@
 {
     "login": {
-        "success": "Iniciar sesión exitoso",
+        "success": "Sesión iniciada correctamente",
         "error": "Error durante el inicio de sesión",
-        "button": "Acceso"
+        "button": "Iniciar sesión"
     },
     "common": {
         "close": "Cerrar",
@@ -15,53 +15,53 @@
     "menu": {
         "home": "Inicio",
         "educational": "Actividades educativas",
-        "explore": "Explorar Telegram",
+        "explore": "Explorar la Red de Telegram",
         "network": "Red",
         "channel": "Canal",
-        "conversation": "Explora los chats",
+        "conversation": "Chat",
         "quickGuide": "Glosario",
         "counterspeech": "Contranarrativa",
         "projects": "Temas",
         "credits": "Créditos",
-        "logout": "Cierre de sesión"
+        "logout": "Cerrar sesión"
     },
     "counterspeechGuide": {
         "guideTitle": "Glosario",
         "guideItems": {
             "counterspeech": {
                 "title": "Contranarrativa",
-                "description": "<p><strong>Contranarrativa</strong> se define como todas las acciones comunicativas destinadas a refutar el discurso de odio a través de razones convincentes, y argumentos verídicos y ligados a los hechos (Schieb y Preuss, 2016).</p>"
+                "description": "<p><strong>Una contranarrativa</strong> se refiere a todas las acciones comunicativas destinadas a refutar el discurso de odio a través de razones convincentes, y argumentos verídicos y ligados a hechos (Schieb y Preuss, 2016).</p>"
             },
             "dataSources": {
-                "title": "Fuentes de fact-checking",
-                "description": "<p>Contiene un artículo de verificación de hechos de un editor certificado (firmante del <a href=\"https://ifcncodeofprinciples.poynter.org/\" target=\"_blank\">Código de Principios de IFCN</a>).</p>"
+                "title": "Artículo de fact-checking",
+                "description":"<p>Contiene un artículo de fact-checking de un medio certificado (firmante del <a href=\"https://ifcncodeofprinciples.poynter.org/\" target=\"_blank\">Código de Principios del IFCN</a>).</p>"
             },
             "dialogue": {
                 "title": "Diálogo",
-                "description": "<p>Cree un diálogo que simule la interacción entre alguien que difunde odio/desinformación errónea y un operador que responde con argumentos basados en hechos.</p>"
+                "description": "<p>Crea un diálogo que simula la interacción entre alguien que difunde odio/desinformación y un operador que responde con argumentos basados en hechos.</p>"
             },
             "groundText": {
                 "title": "Evidencia extraída del artículo",
-                "description": "<p>Puedes agregar partes del artículo verificado para que apoyen la respuesta del operador.</p><p>El texto de apoyo (“ground text” <em>se incorpora automáticamente</em> al generar una respuesta. Puedes también <strong>resaltar manualmente</strong>una parte del artículo y pulsar el botón \"Enlace\".</p>"
+                "description": "<p>Puedes agregar partes del artículo verificado para que apoyen la respuesta del operador.</p><p>El texto de apoyo (“ground text”)<em>se incorpora automáticamente</em> al generar una respuesta. Puedes también <strong>resaltar manualmente</strong>una parte del artículo y pulsar el botón \"Enlace\".</p>"
             },
             "newTurn": {
-                "title": "Nueva respuesta",
-                "description": "<p>Puedes añadir un nuevo turno de diferentes maneras:</p><ul><li>Añade un turno vacío con los botones “+”.</li><li>Genera automáticamente un turno con el botón de la varita mágica.</li><li>Selecciona una parte del artículo como evidencia de apoyo y haz clic en “Añadir desde el texto base”.</li></ul><p><strong>Nota:</strong> Incluso los turnos generados automáticamente y el texto base siempre se pueden editar.</p>"
+                "title": "Nuevo turno",
+                "description": "<p>Puedes añadir un nuevo turno de diferentes maneras:</p><ul><li>Añade un turno vacío con los botones “+”.</li><li>Genera automáticamente un turno con el botón de la varita mágica.</li><li>Selecciona una parte del artículo como texto de apoyo y haz clic en “Añadir desde el texto base”.</li></ul><p><strong>Nota:</strong> Tanto los turnos generados automáticamente como el texto base siempre se pueden editar.</p>"
             }
         }
     },
     "home": {
         "title": "Luchar Contra el Odio y la Desinformación en Línea",
-        "description": "La plataforma Hatedemias utiliza inteligencia artificial para analizar contenido en línea, potenciar el pensamiento crítico y preparar respuestas al discurso de odio.",
+        "description": "La plataforma Hatedemias utiliza inteligencia artificial para analizar contenido en línea, potenciar el pensamiento crítico y preparar respuestas frente al discurso de odio.",
         "network": "Explora la Red de Telegram",
-        "networkDescription": "Un mapa interactivo para observar las conexiones entre canales, contenido y dinámica relacionada con el odio y la desinformación en línea. ",
+        "networkDescription":"Un mapa interactivo para observar las conexiones entre canales, contenidos y dinámicas relacionadas con el odio y la desinformación en línea. Descubre qué ocurre en la red, sigue los flujos e identifica los nodos clave de mensajes.",
         "networkButton": "Ir a la red",
-        "counterspeech": "Escribir contranarrativa",
-        "counterspeechDescription": "Entrena tu capacidad para responder al contenido de odio y desinformación con ejercicios de escritura específicos. ",
+        "counterspeech": "Redacción de contranarrativas",
+        "counterspeechDescription": "Entrena tu capacidad para responder a contenidos de odio y desinformación con ejercicios de redacción adaptados. Aprende a usar fuentes fiables para construir argumentos sólidos y a desarrollar tu pensamiento crítico para mejorar el tono de los debates en línea.",
         "counterspeechButton": "Empezar a escribir",
         "educational": "Actividades educativas",
-        "educationalDescription": "Explore recursos y materiales educativos para comprender y contrarrestar el odio en línea.",
-        "educationalButton": "Ir a la sección educativa",
+        "educationalDescription": "Explora recursos y materiales educativos para comprender y contrarrestar el discurso de odio en línea.",
+        "educationalButton": "Ir a las actividades educativas",
         "guideDescription": "Qué saber antes de usar la plataforma.",
         "guideButton": "Guía",
         "guideTitle": "Glosario",
@@ -70,28 +70,28 @@
         "guideItems": {
             "network": {
                 "title": "Red",
-                "description": "La red muestra las conexiones entre los canales de Telegram recopilados. Un canal es un nodo y está conectado con otro canal si este \"lo recomienda\". Las recomendaciones se generan automáticamente por Telegram basado en el solapamiento de usuarios comunes entre ambos canales. "
+                "description": "La red muestra las conexiones entre los canales de Telegram recopilados. Un canal es un nodo y está conectado con otro canal si este \"lo recomienda\". Las recomendaciones se generan automáticamente en Telegram en función del solapamiento de usuarios entre los canales. "
             },
             "inRec": {
                 "title": "Recomendaciones entrantes",
-                "description": "Cuánto es recomendado un canal por otros canales."
+                "description": "Cómo de recomendado es un canal por otros. "
             },
             "outRec": {
-                "title": "Recomendaciones",
+                "title": "Recomendaciones salientes",
                 "description": "Cuánto recomienda un canal otros canales."
             },
             "risk": {
                 "title": "Riesgo infodémico",
-                "description": "Cuánto de confiable es el canal. Este indicador va de 0 a 1."
+                "description": "Cómo de confiable es el canal. Este indicador va de 0 a 1."
             },
             "check": {
                 "title": "Susceptible de verificación",
-                "description": "Indica si se puede verificar un mensaje. Esto significa que el mensaje contiene hechos en lugar de opiniones y que es relevante que sean verificados."
+                "description": "Indica si se puede verificar un mensaje. Esto significa que el mensaje contiene hechos en lugar de opiniones y que es lo suficientemente relevante para ser verificado. "
             }
         }
     },
     "networkGuide": {
-        "guideTitle": "Glosario de Exploración",
+        "guideTitle": "Glosario de términos de exploración",
         "guideItems": {
             "telegramDataset": {
                 "title": "Conjunto de datos de Telegram",
@@ -99,7 +99,7 @@
             },
             "telegramChannels": {
                 "title": "Canales y chats de Telegram",
-                "description": "<p>Un <strong>canal de Telegram</strong> es un espacio donde uno o varios administradores pueden publicar mensajes para una gran audiencia.</p><p>Un canal puede tener uno o más <strong>chats</strong> con configuraciones diferentes: por ejemplo, algunos en los que solo los administradores pueden publicar mensajes y otros donde todos pueden participar.</p><p>Los chats o conversaciones de un canal se refieren a los mensajes publicados allí y a la forma en que las audiencias reaccionan.</p>"
+                "description": "<p>Un <strong>canal de Telegram</strong> es un espacio donde uno o varios administradores pueden publicar mensajes para una gran audiencia.</p><p>Un canal puede tener uno o más <strong>chats</strong> con configuraciones diferentes: por ejemplo, algunos en los que solo los administradores pueden publicar mensajes y otros donde todos pueden participar.</p><p>Los chats o conversaciones de un canal se refiere a los mensajes publicados allí y a la forma en que las audiencias reaccionan.</p>"
             },
             "network": {
                 "title": "Red",
@@ -107,28 +107,28 @@
             },
             "disinformation": {
                 "title": "Desinformación",
-                "description": "<p><strong>Desinformación</strong> es contenido falso compartido con la intención de causar daño. La creación de este tipo de contenido se motiva con mayor frecuencia por el deseo de ganar dinero, obtener publicidad o aumentar la influencia política.</p>"
+                "description": "<p>La <strong>desinformación</strong> es información falsa o engañosa que se crea, comparte o difunde deliberadamente con la intención de <em>engañar</em> o <em>manipular</em> a las personas.</p><p>A menudo se utiliza para <strong>influir en opiniones</strong>, generar confusión o lograr objetivos <em>políticos, sociales o económicos</em>.</p>"
             },
             "reliability": {
                 "title": "Fiabilidad",
-                "description": "<p>La <strong>fiabilidad</strong> mide cuán confiable y precisa es una fuente o un enlace. Se determina mediante una <em>evaluación manual</em> del sitio web.</p><p>Un <strong>puntaje de fiabilidad alto</strong> indica que la fuente puede considerarse confiable y proporcionar información bien fundamentada.</p>"
+                "description": "<p>La <strong>fiabilidad</strong> mide cómo de confiable y precisa es una fuente o un enlace. Se determina mediante una <em>evaluación manual</em> del sitio web.</p><p>Una <strong>puntuación de fiabilidad alta</strong> indica que la fuente puede considerarse confiable y proporcionar información bien fundamentada.</p>"
             },
             "infodemicRisk": {
                 "title": "Riesgo Infodémico",
-                "description": "<p>El <strong>Riesgo Infodémico</strong> indica el grado de fiabilidad de un canal, variando entre <strong>0</strong> (completamente fiable) y <strong>1</strong> (totalmente no fiable).</p><p>Se calcula en función de la fiabilidad de los sitios compartidos en el canal y de cuánto los usuarios están <em>expuestos</em> a esos enlaces (considerando el número de visualizaciones).</p><p>Un <strong>valor bajo</strong> significa que los usuarios están expuestos a información más confiable.</p><p>Para más detalles, consulta <a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">este artículo</a>.</p>"
+                "description": "<p>El <strong>Riesgo Infodémico</strong> indica el grado de fiabilidad de un canal, variando entre <strong>0</strong> (totalmente fiable) y <strong>1</strong> (nada fiable).</p><p>Se calcula en función de la fiabilidad de los sitios compartidos en el canal y de cuántos usuarios están <em>expuestos</em> a esos enlaces (considerando el número de visualizaciones).</p><p>¡Un <strong>valor bajo</strong> significa que los usuarios están expuestos a información más confiable!</p><p>Para más detalles, puedes consultar el siguienet enlace<a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">este artículo</a>.</p>"
             },
             "hateSpeech": {
                 "title": "Discurso de odio",
-                "description": "<p><strong>Discurso de odio</strong> se define como la expresión de opiniones ofensivas o discriminatorias, contenidos o comunicaciones hacia grupos específicos de personas o individuos, en base a sus características de identidad, como género, edad, orientación sexual, nacionalidad, etnia, religión, color de piel, discapacidad u otras.</p>"
+                "description": "<p>El <strong>discurso de odio</strong> se refiere a expresiones que incitan, promueven, justifican o difunden <strong>odio, violencia, discriminación u hostilidad</strong> contra una persona o grupo en función de rasgos identitarios como raza, religión, etnia, género, orientación sexual, discapacidad u otras características similares.</p><p>Incluye tanto formas explícitas de <em>incitación a la violencia</em> como formas más sutiles de <em>deshumanización</em> o <em>lenguaje despectivo</em>.</p>"
             },
             "checkWorthyness": {
                 "title": "Susceptible de verificación",
-                "description": "<p>Un contenido se considera <strong>verificable</strong> cuando es de <em>interés público</em> y puede requerir comprobación por parte de los verificadores de hechos.</p><p>Un mensaje es verificable cuando:</p><ul><li>Hace una <strong>afirmación factual</strong> que puede verificarse o refutarse,</li><li>Tiene el potencial de <strong>influir en opiniones, comportamientos o el debate público</strong>,</li><li>Aborda <strong>temas sensibles o de alto impacto</strong> (p. ej., política, salud, seguridad, migración),</li><li>Muestra signos de posible <em>misinformación</em> o <em>desinformación</em>.</li></ul>"
+                "description": "<p>Susceptible de verificación<strong>se refiere a un mensaje, afirmación, o contenido que es probable que resulte</strong>de interés público<em>y que pueda requerir comprobación por parte de verificadores de contenido.</p><p>Un mensaje es susceptible de ser verificado cuando:</p><ul><li>Hace una <strong>afirmación factual</strong> que puede verificarse o refutarse,</li><li>Tiene el potencial de <strong>influenciar opiniones, comportamientos o el debate público</strong>,</li><li>Aborda <strong>temas sensibles o de alto impacto</strong> (ej., política, salud, seguridad, migración),</li><li>O muestra signos de posible <em>desinformación no intencional (misinformation)</em> o <em>desinformación</em>.</li></ul>"
             }
         }
     },
     "welcome": {
-        "title": "Bienvenido a Hatedemics"
+        "title": "Bienvenido/a a Hatedemics"
     },
     "onboarding": {
         "language": "Idioma",
@@ -147,7 +147,7 @@
             },
             {
                 "title": "Advertencia de contenido",
-                "html": "<p>⚠️ <strong>Atención:</strong> la plataforma contiene ejemplos no ocultados que algunos lectores pueden encontrar ofensivos.</p>"
+                "html": "<p>⚠️ <strong>Atención:</strong> la plataforma contiene ejemplos sin censurar que algunos lectores pueden encontrar ofensivos.</p>"
             }
         ],
         "chooseLanguage": "Selecciona el idioma de la plataforma",
@@ -155,23 +155,23 @@
         "prev": "Atrás",
         "next": "Siguiente",
         "close": "Cerrar",
-        "neverShow": "No te muestres de nuevo"
+        "neverShow": "No mostrar de nuevo"
     },
     "educational": {
         "title": "Actividades Educativas",
-        "subtitle": "<p>En esta sección encontrarás ejercicios interactivos diseñados para ayudarte a comprender los mecanismos detrás de la desinformación y el discurso de odio.</p><p>Podrás explorar <b>sesgos cognitivos</b> y <b>falacias lógicas</b>, practicar técnicas de <b>verificación y desmentido</b>, aprender los principios fundamentales de la <b>Declaración de Derechos Humanos</b> para entender la protección de la dignidad humana y aplicar la <b>lectura lateral</b> para evaluar críticamente los contenidos en línea.</p><p>Cada actividad es una oportunidad para entrenar el pensamiento crítico y volverse más resistente a la manipulación y la desinformación.</p>",
+        "subtitle": "<p>En esta sección encontrarás ejercicios interactivos diseñados para ayudarte a comprender los mecanismos detrás de la desinformación y el discurso de odio.</p><p>Podrás explorar <b>sesgos cognitivos</b> y <b>falacias lógicas</b>, practicar técnicas de <b>verificación y debunking</b>, aprender los principios fundamentales de la <b>Declaración de Derechos Humanos</b> para entender los derechos fundamentales que protegen la dignidad humana y aplicar la <b>lectura lateral</b> para evaluar críticamente los contenidos en línea.</p><p>Cada actividad es una oportunidad para entrenar tu pensamiento crítico y volverte más resiliente frente a la manipulación y la desinformación.</p>",
         "eduCard1Title": "Declaración de Derechos Humanos",
         "eduCard1Desc": "Descubre los principios centrales que protegen la dignidad humana.",
-        "eduCard1Button": "Explora los derechos",
+        "eduCard1Button": "Explorar los derechos",
         "eduCardBiasTitle": "Sesgos y falacias",
         "eduCardBiasDesc": "Explora las falacias lógicas y los sesgos cognitivos detrás del discurso de odio y la desinformación.",
         "eduCardBiasButton": "Empezar actividad",
-        "eduCard3Title": "Desmentir",
+        "eduCard3Title": "Debunking",
         "eduCard3Desc": "Aprende a desmentir la desinformación de manera efectiva.",
-        "eduCard3Button": "Empezar actividad",
+        "eduCard3Button": "Empezar la actividad",
         "eduCard4Title": "Lectura lateral",
-        "eduCard4Desc": "Aprende a leer y verificar contenido en línea.",
-        "eduCard4Button": "Empezar actividad",
+        "eduCard4Desc": "Aprende a leer y comprender el contenido en línea.",
+        "eduCard4Button": "Empezar la actividad",
         "eduCard5Title": "Identifica el discurso de odio!",
         "eduCard5Desc": "Identifica el discurso de odio en contenido en línea.",
         "eduCard5Button": "Empezar actividad",
@@ -184,12 +184,12 @@
                 "title": "Derechos Humanos",
                 "description": "Los Derechos Humanos fundamentales establecidos por las Naciones Unidas en la <a href='https://www.un.org/en/about-us/universal-declaration-of-human-rights' target='_blank' rel='noopener'>Declaración Universal de los Derechos Humanos</a> protegen y defienden la dignidad, la igualdad y la libertad de todas las personas. Algunos de ellos se enumeran a continuación en una versión simplificada.<br><br><iframe width='100%' height='315' src='https://www.youtube.com/embed/nDgIVseTkuE?si=Jomr_pVjQAdBgfGg' title='Vídeo sobre Derechos Humanos' frameborder='0' allowfullscreen></iframe>",
                 "objectivesTitle": "Objetivos de la actividad",
-                "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Desarrollar conocimientos sobre derechos humanos;</li><li>Concienciar sobre la conexión entre los derechos humanos, el discurso de odio y la desinformación;</li><li>Aprender posibles argumentos para reaccionar ante el discurso de odio y la desinformación.</li></ul>",
-                "startButton": "Comenzar",
+                "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Desarrollar conocimientos sobre los derechos humanos;</li><li>Concienciar sobre la conexión entre los derechos humanos, el discurso de odio y la desinformación;</li><li>Aprender posibles argumentos para reaccionar ante el discurso de odio y la desinformación.</li></ul>",
+                "startButton": "Comenzar actividad",
                 "task": "Formamos 12 grupos. Cada grupo coge una tarjeta y debate sobre el significado del derecho humano escrito en ella. Después de 5 minutos, el primer grupo explica qué significa este derecho para ellos y cómo se relaciona con el discurso de odio. El profesor puede ampliar su explicación si es necesario. Luego, el siguiente grupo, con la siguiente tarjeta, explica el significado de su derecho y su relación con el discurso de odio. Repetimos este proceso hasta que todos los grupos hayan hablado.",
                 "completetask": "He completado la actividad",
-                "taskCompleteTitle": "Actividad completada",
-                "taskCompleteText": "¿Ya conocías todos los derechos humanos mencionados?¿Cuáles son nuevos para ti? ¿Te resultó fácil o difícil explicar el significado de estos derechos y encontrar una relación entre ellos y el discurso de odio? ¿Puedes nombrar otros Derechos Humanos que no se mencionaron?",
+                "taskCompleteTitle": "Reflexión/Evaluación final de la tarea",
+                "taskCompleteText": "<ul><li>¿Ya conocías todos los derechos humanos mencionados?</li><li>¿Cuáles son nuevos para ti?</li><li>¿Te resultó fácil o difícil explicar el significado de estos derechos y encontrar una relación entre ellos y el discurso de odio?</li><li>¿Puedes nombrar otros Derechos Humanos que no se mencionaron?</li></ul>",
                 "articles": [
                     {
                         "title": "Art. 1",
@@ -310,13 +310,13 @@
                 "finish": "Finalizar"
             },
             "debunking": {
-                "title": "Desmentir",
-                "back": "Atrás",
-                "finalMessage": "Has completado la actividad! Ahora puedes pasar a la siguiente actividad.",
-                "description": "<strong>Qué es la debunking:</strong> Cuando algunas personas piensan en un verificador de hechos (fact‑checker), solo ven a un periodista que investiga una afirmación, la verifica y confirma si es verdadera o no, el proceso de desmitificación. Sin embargo, luchar contra la desinformación eficazmente hoy en día exige mucho más: detectar rápidamente posibles bulos antes de que se vuelvan virales y afecten a más personas; explicar que no todo es blanco o negro, ayudar a las personas a estar bien preparadas frente a falsedades mediante la alfabetización mediática o regulación; crear herramientas que dificulten que nos engañen o combatir juntos contra la manipulación: esto es lo que llamamos pre‑bunking.<br><br><strong>Qué es una narrativa de desinformación:</strong> Lo que los creadores de desinformación quieren que creas. Cuando una idea se repite muchas veces, la gente tiende a creerla. Además, un solo bulo puede contener varias narrativas.",
+                "title": "Debunking",
+                "back": "Volver",
+                "finalMessage": "¡Has completado la actividad! Ahora puedes pasar al siguiente ejercicio.",
+                "description": "<strong>Qué es debunking:</strong> Cuando algunas personas piensan en un/a verificador/a de contenido o fact-checker, solo imaginan a un/a periodista que investiga una afirmación, la comprueba y confirma si es verdadera o no: el proceso de verificación o desmentido. Sin embargo, combatir la desinformación de forma eficaz hoy en día requiere mucho más que eso: detectar rápidamente posibles bulos antes de que se hagan virales y afecten a más personas; explicar que no todo es blanco o negro, ayudando a la ciudadanía a estar biern preparada frente a la desinformación a través de la educación mediática o de la regulación; crear herramientas para dificultar que otras personas nos engañen; o luchar conjuntamente contra la manipulación, a todo esto lo llamamos prebunking.<br><br>Para aprender a desmentir como un fact-checker, puedes consultar la <a href='https://maldita.es/herramientas-de-verificacion/'>caja de herramientas de Maldita.es</a>, diseñada para que conozcas y aprendas a utilizar las herramientas básicas de verificación. En esta caja de herramientas puedes aprender, por ejemplo, a usar la búsqueda inversa de imágenes: una forma sencilla de obtener información sobre una imagen y verificar su contexto. También puedes practicar la verificación de vídeos con <a href='https://www.invid-project.eu/'>Invid</a>, una excelente herramienta para ahorrar tiempo y ser más eficiente, especialmente a la hora de verificar vídeos.<br><br><strong>Qué es una narrativa desinformadora:</strong>Es lo que quienes crean desinformación quieren que creas. Cuando una idea se repite muchas veces, la gente tiende a creerla más. Además, un solo bulo puede contener varias narrativas al mismo tiempo.",
                 "objectivesTitle": "Objetivos de la actividad",
-                "objectives": "<p><strong>Debunk:</strong> aprender, de una forma guiada, algunas técnicas de debunking.</p><p><strong>Desarrollar pensamiento crítico usando la estrategia de pre-bunking:</strong> durante el ejercicio, los usuarios aprenden lo que son las narrativas desinformadoras y reflexionan sobre las más extendidas en su país.</p><p><strong>Activar el pensamiento crítico:</strong> comprendiendo cómo la viralización de algunos bulos pueden crear y reforzar narrativas desinformadoras.</p>",
-                "task": "<strong>Simula las acciones de un fact‑checker</strong> seleccionando la forma más eficaz de desmentir un evento afirmado. ¿Puedes también identificar la narrativa de desinformación relacionada?",
+                "objectives": "<p><strong>Debunk:</strong> aprender, de una forma guiada, algunas técnicas de debunking.</p><p><strong>Desarrollar pensamiento crítico usando la estrategia de prebunking:</strong> durante el ejercicio, los usuarios aprenden lo que son las narrativas desinformadoras y reflexionan sobre las más extendidas en su país.</p><p><strong>Activar el pensamiento crítico:</strong> comprendiendo cómo la viralización de algunos bulos pueden crear y reforzar narrativas desinformadoras.</p>",
+                "task": "<strong>Simula las acciones de un fact-checker</strong> seleccionando la forma más efectiva de desmentir contenido sospechoso. ¿Puedes identificar también cuál es la narrativa desinformadora relacionada?<br><br>Primero, algo de contexto sobre las herramientas de verificación:<ul><li><strong>Búsqueda inversa de imágenes:</strong> ¿Cómo puedo saber si una foto es verdadera? Lo primero que tienes que hacer es observar bien la imagen y buscar inconsistencias. Luego puedes hacer una búsqueda inversa de imagen: utilizar un buscador para encontrar la misma foto u otras similares.<br>Si en los resultados descubrimos la misma foto en contenidos publicados en una fecha anterior a la del suceso o en otros contextos, ya sabemos que se trata de un bulo.<br>En <a href='https://bit.ly/BusquedaInv'>En este vídeo</a> te explicamos paso a paso cómo hacerlo.</li><li><strong>Búsqueda avanzada en X (Twitter):</strong> <a href='https://help.x.com/es/using-x/x-advanced-search'>La búsqueda avanzada</a> es la herramienta de X (antes Twitter) para buscar contenido en esta red social de manera eficiente.<br>Úsala para buscar un tuit o una publicación que hayas visto antes, para averiguar qué se publicó en fechas específicas o para comprobar si un perfil en particular ha publicado un tuit que se está compartiendo como si fuera suyo.</li><li><strong>Herramientas para reconocer IA:</strong> Herramientas como <a href='https://hivemoderation.com/'>Hive Moderation</a> y <a href='https://deepware.ai/'>Deepware</a> nos pueden ayudar a reconocer imágenes, vídeos y textos creados por inteligencia artificial, pero ¡ojo!, estas herramientas NO son 100% fiables. La mayoría de ellas muestran la probabilidad de que el contenido analizado haya sido creado por IA y no son prueba definitiva.</li></ul>",
                 "startButton": "Comenzar actividad",
                 "correct": "¡Correcto! Bien hecho.",
                 "incorrect": "Respuesta incorrecta. Inténtalo de nuevo.",
@@ -326,7 +326,7 @@
                 "questions": [
                     {
                         "title": "Pregunta 1",
-                        "scenario_description": "Has recibido una imagen que muestra una fotografía de una manifestación feminista, en la que una participante sostiene un cartel con el mensaje: “Quiero que mi hija tenga el derecho a abortar que yo no tuve”. No estás seguro/a de si la imagen es real o ha sido manipulada.",
+                        "scenario_description": "Te acaba de llegar al WhatsApp una fotografía de una manifestación feminista. La imagen enseña una participante que sostiene un cartel con el mensaje: “Quiero que mi hija tenga el derecho a abortar que yo no tuve”. No estás seguro/a de si la imagen es real.",
                         "question": "¿Cómo la verificarías?",
                         "image": "/img/debunking/es/question1.jpg",
                         "options": [
@@ -385,23 +385,23 @@
                         ],
                         "correct": 1,
                         "feedback": {
-                            "correct": "¡Correcto!<br><br>Las narrrativas desinformadoras pueden manipularnos y distorsionar nuestra percepción de la realidad para que apoyemos una ideología o fomentar el discurso de odio. Estas se difunden a través de la creciente circulación de bulos y contenidos desinformadores que las respaldan. No compartir contenidos sospechosos y reconocer esas narrativas ayuda a frenar las mentiras y el discurso de odio. Aquí puedes ver cómo los verificadores profesionales desmintieron esta desinformación: <br><br>Consulta cómo los fact‑checkers profesionales refutaron esta desinformación: <a href='https://maldita.es/malditobulo/20250310/cartel-derechoalaborto-manipulado/' target='_blank'>análisis de Maldita.es</a>",
-                            "incorrect": "Incorrecto.<br><br>Las narrrativas desinformadoras pueden manipularnos y distorsionar nuestra percepción de la realidad para que apoyemos una ideología o fomentar el discurso de odio. Estas se difunden a través de la creciente circulación de bulos y contenidos desinformadores que las respaldan. No compartir contenidos sospechosos y reconocer esas narrativas ayuda a frenar las mentiras y el discurso de odio. Aquí puedes ver cómo los verificadores profesionales desmintieron esta desinformación: <br><br>Consulta cómo los fact‑checkers profesionales refutaron esta desinformación: <a href='https://maldita.es/malditobulo/20250310/cartel-derechoalaborto-manipulado/' target='_blank'>análisis de Maldita.es</a>"
+                            "correct": "¡Correcto!<br><br>Las narrativas desinformadoras pueden manipularnos y distorsionar nuestra percepción de la realidad para que apoyemos una ideología o fomentar el discurso de odio. Estas se difunden a través de la creciente circulación de bulos y contenidos desinformadores que las respaldan. No compartir contenidos sospechosos y reconocer esas narrativas ayuda a frenar las mentiras y el discurso de odio. Aquí puedes ver cómo los verificadores profesionales desmintieron esta desinformación: <br><br>Consulta cómo los fact‑checkers profesionales refutaron esta desinformación: <a href='https://maldita.es/malditobulo/20250310/cartel-derechoalaborto-manipulado/' target='_blank'>análisis de Maldita.es</a>",
+                            "incorrect": "Incorrecto.<br><br>Las narrativas desinformadoras pueden manipularnos y distorsionar nuestra percepción de la realidad para que apoyemos una ideología o fomentar el discurso de odio. Estas se difunden a través de la creciente circulación de bulos y contenidos desinformadores que las respaldan. No compartir contenidos sospechosos y reconocer esas narrativas ayuda a frenar las mentiras y el discurso de odio. Aquí puedes ver cómo los verificadores profesionales desmintieron esta desinformación: <br><br>Consulta cómo los fact‑checkers profesionales refutaron esta desinformación: <a href='https://maldita.es/malditobulo/20250310/cartel-derechoalaborto-manipulado/' target='_blank'>análisis de Maldita.es</a>"
                         }
                     }
                 ]
             },
             "bias": {
                 "title": "Sesgos cognitivos y falacias lógicas",
-                "description": "<strong>Falacias lógicas asociadas con el discurso de odio y la desinformación</strong><br><br>El contenido del discurso de odio y la desinformación puede, en ocasiones, parecer muy convincente. Esto se debe a que quienes difunden odio suelen apoyarse en falacias lógicas – argumentos/construcciones que utilizan los grupos de odio para justificar sus causas buscando que quienes se encuentren con ese contenido lo consideren razonable y verdadero. Las falacias lógicas pueden basarse en premisas falsas, en premisas verdaderas pero con conclusiones erróneas, o en argumentos que parecen coherentes pero que en realidad no lo son. Algunas de estas falacias se generan con la intención deliberada de engañar o de hacer que la desinformación se vuelva viral.<br><br>Existen muchas falacias que aparecen con frecuencia en el discurso de odio. Algunos ejemplos son:<br><br><strong>Argumentum ad populum (apelación al pueblo)</strong> – forma de argumentar no sustantiva en la que se apela a gustos, prejuicios o creencias del público. Se basa en el egoísmo nacional, estereotipos o prejuicios, y busca que la mayoría apoye una tesis por ser popular (ej.: La mayoría de la gente en nuestro país piensa así, por lo tanto, debemos actuar en consecuencia);<br><br><strong>Ipse dixit (él lo dijo)</strong> – forma de argumentar sin ofrecer una prueba válida (ej.: Lo ha dicho este partido político, así que debe ser cierto);<br><br><strong>Pendiente resbaladiza (slippery slope)</strong> – ocurre cuando alguien afirma que un posicionamiento o decisión llevará inevitablemente a una serie de consecuencias negativas exageradas (ej.: Si dejamos que los migrantes se queden, traerán a sus familias, colapsará el sistema de seguridad social, y finalmente seremos pobres y perderemos el control del país);<br><br><strong>Falacia del «o esto o lo otro»</strong> – presentar solo dos opciones posibles, cuando en realidad existen muchas más (ej.:O votas a este partido o vivirás con peligro para siempre);<br><br><strong>Post hoc, ergo propter hoc</strong> – error lógico que asume una relación de causa entre dos hechos solo porque uno ocurre antes que el otro (ej.:Desde que tenemos una nueva profesora de matemáticas, saca malas notas. Seguro que es culpa suya);<br><br><strong>Argumentum Ad Hominem</strong> –atacar a la persona en lugar de rebatir su argumento (ej.: No escuches la opinión de Pedro sobre el proyecto en grupo, es un vago y nunca hace nada bien);<br><br><strong>Cherry Picking (Falacia de evidencia incompleta)</strong> – seleccionar solo las evidencias que apoyan una idea y omitir las que la contradicen (ej.: El discurso de odio no hace daño. Este estudio dice que solo es ofensivo no peligroso, ignorando docenas de estudios que prueban sus efectos negativos.);<br><br><strong>Apelación a la tradición</strong> – justificar algo como verdad o bueno solo porque siempre se ha hecho o pensado así, sin cuestionar si sigue siendo válido (ej.: En nuestra escuela siempre ha habido más hombres que mujeres en el consejo, y ha funcionado bien).<br><br><strong>Argumento anecdótico</strong> – usar una experiencia o historia aislada, normalmente personal, para justificar una afirmación general (ej.: No creo que el discurso de odio haga daño. He escuchado bromas ofensivas toda la vida y nadie que conozco ha salido perjudicado);<br><br><strong>Falacia ad ignorantiam</strong> – afirmar que algo es verdadero o falso solo porque no se ha demostrado lo contrario (ej.: Nadie ha demostrado que los estudiantes hagan trampa en los exámenes online, así que no ocurre).<br><br><strong>Sesgos Cognitivos</strong><br><br>Nuestro cerebro utiliza atajos mentales para ayudarnos a tomar decisiones rápidas en la vida cotidiana: los sesgos cognitivos. Estos atajos nos permiten centrarnos solo en la información más relevante, evitando sentirnos abrumadas/os por todo lo que vemos y escuchamos. Esto hace que el cerebro funcione de manera más eficiente. Sin embargo, la desventaja es que estos atajos pueden llevarnos a cometer errores o malinterpretar situaciones debido a nuestros sesgos cognitivos.<br><br>Todas las personas estamos afectadas por los sesgos cognitivos en nuestro proceso de toma de decisiones, y quienes difunden desinformación conocen muy bien estos sesgos. A continuación, se presentan algunos ejemplos de sesgos cognitivos:<br><br><strong>Sesgo de grupo</strong> – tendencia a favorecer a nuestro propio grupo frente a otros (ej.:  El comité decidió financiar el proyecto dirigido por su colega, aunque otra propuesta era más sólida, diciendo: “Conocemos y confiamos en nuestra gente”);<br><strong>Sesgo de disponibilidad</strong> – tendencia a dar más valor a la información que nos viene a la mente rápidamente (ej.: “Después de ver un reportaje sobre accidentes de avión, alguien insiste en que volar es más peligroso que conducir, a pesar de que las estadísticas muestran lo contrario”);<br><strong>Sesgo de causalidad</strong> – ocurre cuando la gente cree que hay una relación de causa y efecto entre hechos que no están conectados (ej.: “Cada vez que me pongo mis calcetines de la suerte, mi equipo gana, así que deben ser la razón del triunfo”);<br><strong>Sesgo del punto ciego</strong> – es la tendencia a pensar que uno mismo es menos susceptible a los sesgos que los demás  (ej.: Soy justa y objetiva, a diferencia de otras personas que dejan que sus sentimientos interfieran con los hechos);<br><strong>Sesgo de confirmación</strong> – tendencia a buscar, interpretar o recordar información que confirma nuestras creencias previas (ej.: Alguien que cree que las vacunas son peligrosas solo lee artículos que apoyan esa idea y descarta investigaciones científicas que la refutan);<br><strong>Sesgo de autoridad</strong> – tendencia a ser más influenciable por las opiniones de personas con autoridad (ej.: Debe ser cierto, un doctor famoso lo dijo en la televisión”, aunque no haya evidencia que lo respalde).",
+                "description":  "<strong>Falacias lógicas asociadas con el discurso de odio y la desinformación</strong><br><br>El contenido del discurso de odio y la desinformación puede parecer muy convincente. Esto se debe a que quienes difunden estos mensajes suelen basarse en falacias lógicas: argumentos que los grupos de odio utilizan para justificar sus causas y creencias, buscando que quienes se encuentren con ese contenido lo consideren razonable y verdadero. Las falacias lógicas pueden basarse en premisas falsas, en premisas verdaderas pero con conclusiones erróneas, o en argumentos que parecen coherentes pero que en realidad no lo son. Algunas de estas falacias se generan con la intención de engañar o de hacer que la desinformación se vuelva viral. Existen muchas falacias comunes en el discurso de odio. Algunos ejemplos son: argumentum ad populum (apelación al pueblo), ipse dixit (él lo dijo) y pendiente resbaladiza.<br><br><strong>Sesgos Cognitivos</strong><br><br>Nuestro cerebro utiliza atajos mentales para ayudarnos a tomar decisiones rápidas en la vida cotidiana: los sesgos cognitivos. Estos atajos nos permiten centrarnos solo en la información más relevante, evitando sentirnos abrumadas/os por todo lo que vemos y escuchamos. Esto hace que el cerebro funcione de manera más eficiente. Sin embargo, la desventaja es que estos atajos pueden llevarnos a cometer errores o malinterpretar situaciones debido a nuestros sesgos cognitivos.<br><br>Todas las personas estamos expuestas a estos sesgos cuando tomamos decisiones. Quienes difunden desinformación conocen muy bien cómo funcionan y los aprovechan para manipularnos. Algunos ejemplos de sesgos cognitivos son: sesgo de grupo, sesgo de disponibilidad y sesgo de causalidad.<br><br>Puedes aprender más sobre falacias lógicas y sesgos cognitivos en el <a href='https://drive.google.com/file/d/1aR1xqdXacMUifbxFn4mK2Vi6Wa1hURKA/view?usp=drive_link'>kit educativo de Hatedemics</a>.",
                 "objectivesTitle": "Objetivos de la actividad",
                 "objectives": "<ul><li><strong>Desarrollar conciencia</strong> sobre los mecanismos sociales, los sesgos cognitivos y las falacias lógicas.</li><li><strong>Fortalecer la competencia de pensamiento crítico</strong></li></ul><p>los mecanismos sociales, los sesgos cognitivos y las falacias lógicas son factores que contribuyen a la propagación del discurso de odio y la desinformación. Al conocer algunos de ellos, podemos ser más inmunes a ellos y más críticos ante otras formas de manipulación.</p>",
                 "startButton": "Comenzar actividad",
-                "task": "- Relaciona la situación con la falacia lógica o sesgo cognitivo correspondiente- ¿Es la situación un ejemplo de discurso de odio / desinformación / información errónea? En caso afirmativo, ¿por qué?",
-                "checkButton": "Verificar parejas",
+                "task": "<ul><li> Relaciona la situación con la falacia lógica o sesgo cognitivo correspondiente.</li><li>¿Es la situación un ejemplo de discurso de odio / desinformación / información errónea? En caso afirmativo, ¿por qué?</li></ul>",
+                "checkButton": "Comprobar las parejas",
                 "resetButton": "Reiniciar",
-                "correct": "Parejas correctas",
-                "incorrect": "Parejas incorrectas",
+                "correct": "Respuestas correctas",
+                "incorrect": "Respuestas incorrectas",
                 "pairs": [
                     {
                         "id": "a",
@@ -431,19 +431,19 @@
                     {
                         "id": "f",
                         "left": "<strong>Pendiente resbaladiza (slippery slope)</strong>: ocurre cuando alguien afirma que un posicionamiento o decisión llevará inevitablemente a una serie de consecuencias negativas exageradas",
-                        "right": "En el debate sobre la apertura de un nuevo centro comunitario que ha solicitado un grupo religioso minoritario en una barriada, un participante comenta en su intervención:“Si les permitimos construir este centro, lo siguiente será que exijan sus propias leyes. Pronto estarán controlando nuestros barrios e imponiendo su cultura a nuestros hijos. Debemos detener esto ahora o perderemos por completo nuestra forma de vida.”"
+                        "right": "En el debate sobre la apertura de un nuevo centro comunitario que ha solicitado un grupo religioso minoritario en una barriada, un participante comenta en su intervención:<br>“Si les permitimos construir este centro, lo siguiente será que exijan sus propias leyes. Pronto estarán controlando nuestros barrios e imponiendo su cultura a nuestros hijos. Debemos detener esto ahora o perderemos por completo nuestra forma de vida.”"
                     }
                 ],
                 "feedback": {
-                    "correct": "✅ ¡Pareja correcta!",
-                    "wrong": "❌ ¡Pareja incorrecta!"
+                    "correct": "✅ ¡Parejas correctas!",
+                    "wrong": "❌ ¡Parejas incorrectas!"
                 },
                 "summaryTitle": "Análisis de tus resultados",
-                "reflectionText": "¿Te resultó fácil o difícil relacionar las situaciones con las falacias, los sesgos o los mecanismos sociales?¿Conocías ya algunos de ellos? ¿Cuáles? ¿Y cuáles han sido nuevos para ti?¿Puedes aportar ejemplos concretos de tu entorno que reflejen algunas de estas falacias, sesgos o mecanismos?¿Se te ocurren otros ejemplos distintos? ¿De qué manera crees que conocer estas falacias, sesgos y mecanismos sociales puede ayudarte a enfrentar el discurso de odio y la desinformación?"
+                "reflectionText": "¿Te resultó fácil o difícil relacionar las situaciones con las falacias, los sesgos o los mecanismos sociales?<br><br>¿Conocías ya algunos de ellos? ¿Cuáles? ¿Y cuáles han sido nuevos para ti?<br><br>¿Puedes aportar ejemplos concretos de tu entorno que reflejen algunas de estas falacias, sesgos o mecanismos?<br><br>¿Se te ocurren otros ejemplos distintos?<br><br>¿De qué manera crees que conocer estas falacias, sesgos y mecanismos sociales puede ayudarte a enfrentar el discurso de odio y la desinformación?"
             },
             "lateralreading": {
                 "submit": "Enviar",
-                "nextQuestion": " Siguiente pregunta",
+                "nextQuestion": "Siguiente pregunta",
                 "prevQuestion": "Pregunta anterior",
                 "showConclusion": "Continuar",
                 "conclusion": "Conclusión",
@@ -451,14 +451,14 @@
                 "nextExercise": "Siguiente ejercicio",
                 "title": "Lectura lateral",
                 "subtitle": "A continuación puedes ver varias capturas de pantalla. Piensa cuál responde mejor a la siguiente pregunta.",
-                "description": "<strong>La lectura lateral</strong> es una técnica que nos permite evaluar rápidamente si el contenido de una página web proviene de fuentes fiables y está basado en datos, referencias e información de calidad.<br><br>En una investigación realizada por el <a href=\"https://cor.inquirygroup.org/research/lateral-reading-on-the-open-internet/\" target=\"_blank\" rel=\"noopener\">Stanford History Education Group</a>, profesionales de la educación descubrieron que se trata de un método muy eficaz para evaluar la calidad de un sitio web desconocido. <br><br>Esta poderosa estrategia (<a href=\"https://cor.inquirygroup.org/curriculum/collections/teaching-lateral-reading/\" target=\"_blank\" rel=\"noopener\">utilizada habitualmente por quienes se dedican a la verificación de datos</a>) consiste en no leer un sitio web de manera “vertical”, como si fuese un documento impreso para evaluar su calidad, sino en aplicar un método denominado “lectura lateral”.<br><br>Esto significa analizar la página web abriendo varias pestañas para responder a preguntas clave sobre su contenido:<br><ul><li>¿Quién es el autor o la autora del contenido? ¿Se trata de una fuente experta?</li><li>¿Podemos encontrar evidencias? ¿Está basado en hechos y datos?</li><li>¿Está publicado por otras fuentes confiables? ¿Qué dicen sobre ello?</li></ul><br>Además de estas preguntas iniciales, la técnica de lectura lateral nos invita a fomentar el pensamiento crítico y profundizar analizando otros aspectos del contenido, como:<br><ul><li>¿Quién financia o patrocina el sitio donde se publicó el artículo original?</li><li>¿Qué dicen otras fuentes autorizadas sobre este sitio webn?</li><li>Cuando buscas el tema del artículo original, ¿aparecen en los primeros resultados organizaciones de fact-checking?</li><li>¿Se han planteado dudas sobre otros artículos escritos por el autor?</li><li>¿La información que encuentras en otros lugares contradice el artículo original?</li><li>¿Medios de comunicación fiables están informando sobre lo que lees o, - quizás más importante - no lo están haciendo?</li></ul><br><strong>La lectura lateral</strong> nos ayuda a evaluar mejor nuestras fuentes de información —es decir, a distinguir entre la verdad y la mentira— y a ejercer de manera consciente nuestro derecho a elegir cómo accedemos a la información.",
+                "description": "<strong>La lectura lateral</strong> es una técnica que nos permite evaluar rápidamente si el contenido de una página web proviene de fuentes fiables y está basado en datos, referencias e información de calidad.<br><br><iframe width='792' height='1224' src='/img/lateralReading/es/lateral_reading_intro_ES.png' title='Infografía sobre lectura lateral' frameborder='0' allowfullscreen></iframe>",
                 "objectivesTitle": "Objetivos",
                 "objectives": "<ul><li>Aprender a reconocer factores de transparencia y credibilidad de las fuentes.</li><li>Desarrollar la competencia para identificar fuentes de información fiables.</li></ul>",
                 "startButton": "Comenzar la actividad",
                 "task": "<strong>¡Vamos a probarlo!</strong> Debes evaluar la credibilidad de la página de noticias propuesta utilizando el método de lectura lateral. Revisa todas las capturas de pantalla y comprueba si puedes encontrar evidencias que indiquen que esta página es una fuente fiable. Relaciónalas con el tipo de información correspondiente o haz clic en <em>No encontrado</em>.",
                 "sections": [
                     {
-                        "intro": "<p>https://medlineplus.gov/spanish/</p>",
+                        "intro": "<p>Puedes visitar el sitio web haciendo clic aquí: <a href='https://medlineplus.gov/spanish/'>https://medlineplus.gov/spanish/</a></p>",
                         "images": [
                             "/img/lateralReading/es/medline/1.png",
                             "/img/lateralReading/es/medline/2.png",
@@ -644,7 +644,7 @@
                         "conclusion": "MedlinePlus es un sitio web que ofrece información de salud de alta calidad y fácil de entender. Su metodología es clara y transparente, basada en múltiples fuentes. Sus autores están correctamente identificados y localizables. Por lo tanto es una fuente adecuada para informarse sobre temas relacionados al ámbito de la salud."
                     },
                     {
-                        "intro": "<p>https://ramblalibre.com/</p>",
+                        "intro": "<p>Puedes visitar el sitio web haciendo clic aquí: <a href='https://ramblalibre.com/'>https://ramblalibre.com/</a></p>",
                         "images": [
                             "/img/lateralReading/es/rambla/1.png",
                             "/img/lateralReading/es/rambla/2.png",
@@ -748,8 +748,8 @@
                                     }
                                 ],
                                 "feedback": {
-                                    "correct": "¡Correcto! No hay información específica sobre la seguridad de la página. Sin embargo hay una cláusula en el apartado `Términos de uso` que indica que no hay cualquier tipo de garantía sobre `la información` expuesta.",
-                                    "incorrect": "¡Incorrecto! No hay información específica sobre la seguridad de la página. Sin embargo hay una cláusula en el apartado `Términos de uso` que indica que no hay cualquier tipo de garantía sobre `la información` expuesta."
+                                    "correct": "¡Correcto! Un aviso nada más entrar en la página indica que se trata de una página segura y que pertenece al gobierno de EUA.",
+                                    "incorrect": "¡Incorrecto! Un aviso nada más entrar en la página indica que se trata de una página segura y que pertenece al gobierno de EUA."
                                 }
                             },
                             {
@@ -854,51 +854,52 @@
     },
     "inspect": {
         "title": "Descripción general del canal",
-        "subtitle": "<p>En esta página puedes ver en detalle el contenido de un solo canal de Telegram. La tabla muestra los temas principales del canal, con qué frecuencia aparecen en los mensajes, el porcentaje de discurso de odio y la verificabilidad (check-worthiness) dentro de cada tema y el sentimiento predominante.</p><p>A la derecha encontrarás información clave del canal, mientras que las nubes de palabras (word clouds) visualizan qué términos aparecen con más frecuencia en los mensajes no de odio y en los de odio, así como en los mensajes que merecen verificación y los que no.</p><p>Utiliza los filtros y los botones para cambiar entre las vistas de los chats de los canales y los temas, o para ajustar el tipo de nube de palabras que ves. Si pasas el ratón por encima de cualquier etiqueta o botón, verás una breve explicación de lo que hace.</p>"
+        "subtitle": "<p>En esta página puedes ver en detalle el contenido de un solo canal de Telegram. La tabla muestra los temas principales del canal, con qué frecuencia aparecen en los mensajes, el porcentaje de discurso de odio y de mensajes que merecen verificación en cada caso, así como el sentimiento predominante.</p><p>A la derecha encontrarás información clave del canal, mientras que en las nubes de palabras (word clouds) se visualizan qué términos aparecen con más frecuencia en los mensajes con y sin discurso de odio, así como en los mensajes que merecen verificación y los que no.</p><p>Utiliza los filtros y los botones para cambiar entre las vistas de los chats de los canales y los temas, o para ajustar el tipo de nube de palabras que ves. Si pasas el ratón por encima de cualquier botón, verás una breve explicación de lo que hace.</p>"
     },
     "channel": {
         "title": "Explora la red",
-        "subtitle": "<p>A continuación, puedes ver una red de canales de Telegram donde cada canal es un punto ('nodo'). Estos canales están conectados cuando Telegram recomienda automáticamente uno a otro, normalmente porque comparten muchos de los mismos usuarios.</p><p>Puedes explorar la red y la tabla para descubrir canales reales que podrían estar difundiendo desinformación o discursos de odio.</p><p>Ajusta el color y el tamaño de los canales, filtra y reordena sus características para encontrar los que más te interesen.</p> <p>Selecciona un canal para ver más detalles sobre sus temas principales y los mensajes que se han compartido en él.</p>",
-        "infoTitle": "Información de canal"
+        "subtitle": "<p>A continuación, puedes ver una red de canales de Telegram donde cada canal es un punto ('nodo'). Estos canales están conectados cuando Telegram recomienda automáticamente uno a otro, normalmente porque comparten muchos de los usuarios.</p><p>Puedes explorar la red y la tabla para descubrir canales reales que podrían estar difundiendo desinformación o discursos de odio.</p><p>Ajusta el color y el tamaño de los canales, filtra y reordena sus características para encontrar los que más te interesen.</p> <p>Selecciona un canal para ver más detalles sobre sus temas principales y los mensajes que se han compartido en él.</p>",
+        "infoTitle": "Información del canal"
     },
     "conversation": {
         "title": "Dentro de los chats",
-        "subtitle": "En esta página puedes explorar los mensajes individuales del canal.<br><br>Cada fila de la tabla muestra el <b>texto del mensaje</b>, su <b>fecha</b> y detalles como el <b>número de me gusta</b>, si contiene <b>discurso de odio</b>, si se considera <i>“digno de verificación”</i>, y si se menciona algún <b>grupo objetivo</b>.<br><br>Estos datos te permiten ver no solo qué tipo de contenido se publica, sino también cómo interactúa la audiencia con él.<br>Puedes filtrar los mensajes por <b>discurso de odio</b>, <b>digno de verificación</b> o <b>grupo objetivo</b> para centrarte en las conversaciones que más te interesen.<br><br>También puedes reordenar los mensajes haciendo clic en los <b>encabezados de las columnas</b>.<br>Por ejemplo, si deseas ver cómo se desarrolló una conversación a lo largo del tiempo, reordena la tabla por la columna <b>Fecha</b>.<br><br>Pasa el ratón sobre cualquier <b>etiqueta</b> o <b>botón</b> para ver una breve explicación de su función."
+        "subtitle": "En esta página puedes explorar los mensajes individuales del canal.<br><br>Cada fila de la tabla muestra el <b>texto del mensaje</b>, su <b>fecha</b> y detalles como el <b>número de me gusta</b>, si contiene <b>discurso de odio</b>, si se considera <i>“susceptible de verificación”</i>, y si se menciona algún <b>grupo objetivo</b>.<br><br>Estos datos te permiten ver no solo qué tipo de contenido se publica, sino también cómo interactúa la audiencia con él.<br>Puedes filtrar los mensajes por <b>discurso de odio</b>, <b>susceptible de verificación</b> o <b>grupo objetivo</b> para centrarte en las conversaciones que más te interesen.<br><br>También puedes reordenar los mensajes pulsando en los <b>encabezados de las columnas</b>.<br>Por ejemplo, si deseas ver cómo se desarrolló una conversación a lo largo del tiempo, reordena la tabla por la columna <b>Fecha</b>.<br><br>Pasa el ratón sobre cualquier <b>etiqueta</b> o <b>botón</b> para ver una breve explicación de su función."
     },
     "project": {
         "noProject": "No hay proyectos disponibles",
         "noData": "No hay datos disponibles",
-        "dialoguesTitle": "Proyecto Diálogos \"{name}\""
+        "dialoguesTitle": "Diálogos del proyecto \"{name}\""
     },
     "projects": {
-        "title": "Redacción de counterspeech",
-        "subtitle": "Elija el idioma en el que desea capacitar a sus habilidades para responder al contenido de odio y desinformación."
+        "title": "Redacción de contranarrativas",
+        "subtitle": "Elije el idioma en el que deseas mejorar tus habilidades para responder al contenido de odio y la desinformación."
     },
     "tasks": {
         "title": "Temas",
-        "subtitle": "Seleccione el tema en el que desea centrarse para crear respuestas y argumentos efectivos contra la desinformación."
+        "subtitle": "Selecciona el tema en el que deseas centrarte para crear respuestas y argumentos efectivos contra la desinformación."
     },
     "channelTable": {
         "header": {
-            "title": "Red de telegrama: estadísticas de nodo",
+            "title": "Red de Telegram - Estadísticas de los nodos",
             "date": "Fecha",
             "id": "IDENTIFICACIÓN",
             "messages": "Número de mensajes",
             "degreeCentrality": "Nivel de conexiones",
             "partecipants": "Número de usuarios",
-            "IRI": "Riesgo infodémico",
-            "CW": "Cheque digno",
+            "IRI": "Riesgo Infodémico",
+            "CW": "Susceptible de verificación",
             "hs": "Discurso de odio",
-            "nInRecommendations": "En recomendaciones",
-            "nOutRecommendations": "Recomendaciones",
-            "expandable": "Expandible",
+            "nInRecommendations": "Recomendaciones entrantes",
+            "nOutRecommendations": "Recomendaciones salientes",
+            "expandable": "Ampliable",
             "label": "Nombre del canal"
         }
     },
     "language": {
         "en": "Inglés",
-        "it": "italiano",
         "es": "Español",
+        "it": "Italiano",
+        "mt": "Maltés",
         "pl": "Polaco"
     },
     "graphInteraction": {
@@ -917,7 +918,7 @@
             "large": "Grande",
             "defaultColor": "Color predeterminado para todos los nodos",
             "defaultSize": "Tamaño predeterminado para todos los nodos",
-            "nonExpandable": "Valor nulo"
+            "nonExpandable": "Sin valor definido"
         },
         "resetView": "Reiniciar vista",
         "color": {
@@ -926,7 +927,7 @@
             "hs": "Discurso de odio",
             "in": "Recomendaciones entrantes",
             "out": "Recomendaciones salientes",
-            "out_degree": "Grado de salida ",
+            "out_degree": "Grado de salida",
             "in_degree": "Grado de entrada",
             "degree_centrality": "Centralidad de grado",
             "label": "Color",
@@ -939,7 +940,7 @@
         },
         "size": {
             "disable": "Deshabilitar el tamaño",
-            "iri": "Riesgo infodémico",
+            "iri": "Riesgo Infodémico",
             "hs": "Discurso de odio",
             "in": "Recomendaciones entrantes",
             "out": "Recomendaciones salientes",
@@ -951,7 +952,7 @@
             "n_out_recommendation": "Recomendaciones salientes",
             "n_out_recommended": "Recomendaciones salientes",
             "n_in_recommended": "Recomendaciones entrantes",
-            "scale": "Ponderación"
+            "scale": "Escala ponderada"
         },
         "tooltip": {
             "label": "Etiqueta",
@@ -973,10 +974,10 @@
     "topicsTable": {
         "title": "Temas principales del chat",
         "header": {
-            "title": "Tema",
+            "title": "Título",
             "count": "% de mensajes",
             "hs": "% de discurso de odio",
-            "cw": "% de susceptible de verificación",
+            "cw":"% de contenido que merece verificación",
             "sentiment_percentage": "Sentimiento principal"
         }
     },
@@ -1005,14 +1006,14 @@
         "degreeCentrality": "Centralidad de grado:"
     },
     "message": {
-        "title": "Aprendizajes del chat",
+        "title": "Análisis de los chats",
         "reliability": {
             "reliable": "Fiable",
             "unreliable": "No fiable",
             "unknown": "Desconocido"
         },
         "header": {
-            "id": "IDENTIFICACIÓN",
+            "id": "ID",
             "date": "Fecha",
             "message": "Mensaje",
             "from": "De",
@@ -1025,17 +1026,17 @@
             "topic": "Tema",
             "target": "Objetivo",
             "keywordsMatch": "Las palabras clave coinciden",
-            "counterspeech": "Escribir contranarrativa",
-            "averageReliability": "Fiabilidad de las URL"
+            "counterspeech": "Escribir contranarrativas",
+            "averageReliability": "Fiabilidad de la(s) URL"
         },
         "dialog": {
-            "start": "Inicie una nueva conversación con Target = {Target}",
+            "start": "Inicie una nueva conversación con Objetivo = {Target}",
             "jump": "Ir a la conversación",
             "noProject": "No hay proyectos disponibles",
             "noData": "No hay datos disponibles",
-            "error": "Error mientras se buscaban datos",
-            "startConversation": "Escribir contranarrativa",
-            "startConversationTitle": "Escribir contranarrativa",
+            "error": "Error al cargar los datos",
+            "startConversation": "Escribir contranarrativas",
+            "startConversationTitle": "Escribir contranarrativas",
             "startConversationDescription": "Selecciona el tema que deseas utilizar para iniciar la conversación."
         },
         "hate": "Odio",
@@ -1044,12 +1045,12 @@
         "notWorthy": "No verificable",
         "noData": "No hay datos disponibles",
         "noTarget": "No hay objetivo identificado",
-        "target": "Haga clic aquí para comenzar una nueva conversación",
+        "target": "Haz clic aquí para comenzar una nueva conversación",
         "filter": {
             "target": "Filtrar por objetivo",
             "topic": "Filtrar por tema",
             "hate": "Discurso de odio",
-            "checkworthy": "Cheque digno",
+            "checkworthy": "Susceptible de verificación",
             "all": "Todo",
             "yes": "Sí",
             "no": "No",
@@ -1069,22 +1070,22 @@
         }
     },
     "wordclouds": {
-        "hate": "Odio vs no odio",
+        "hate": "Discurso de odio vs sin odio",
         "checkworthy": "Susceptible de verificación vs no susceptible de verificación",
         "generic": "Genérico",
-        "select": "Seleccione Tipo de nube de palabras",
-        "selectTopic": "Seleccione un tema",
+        "select": "Selecciona el tipo de nube de palabras",
+        "selectTopic": "Selecciona un tema",
         "channel": "Chat",
         "titles": {
             "hate": "Discurso de odio",
             "is_checkworthy": "Susceptible de verificación",
             "wordcloud": "Genérico",
             "isnot_checkworthy": "No susceptible de verificación",
-            "non_hate": "No odio"
+            "non_hate": "Sin odio"
         }
     },
     "error": {
-        "api": "Error mientras busca datos",
+        "api": "Error al cargar los datos",
         "noData": "No hay datos disponibles"
     },
     "dialog": {
@@ -1095,29 +1096,29 @@
         "text": "Texto",
         "confirm": "Confirmar",
         "dialogue": "Diálogo",
-        "groundTextSpans": "Evidencia de apoyo del artículo",
-        "startEmpty": "Escribe respuesta",
-        "addDynamicTurn": "Generar respuesta",
-        "addFromGround": "Agregar desde la fuente",
+        "groundTextSpans": "Información del artículo que lo respalda",
+        "startEmpty": "Redactar turno",
+        "addDynamicTurn": "Generar turni",
+        "addFromGround": "Añadir desde el texto de origen",
         "confirmTitle": "Confirmar",
         "confirmLeavePage": "Si abandonas esta página, podrías perder tu progreso. ¿Estás seguro?",
         "tooltip": {
             "label": "Nombre del canal",
-            "startEmpty": "Presione aquí para crear una respuesta vacía.",
-            "addDynamicTurn": "Genera automáticamente una sugerencia para comenzar.<br>Todavía puedes modificarla después.",
-            "addRoundUp": "Agregar una respuesta vacía <em>antes</em> de la seleccionada.",
-            "addRoundDown": "Agregar una respuesta vacía <em>después</em> de la seleccionada.",
-            "magic": "Genera automáticamente una respuesta y selecciona el fragmento de texto relacionado.<br><em>Todavía puedes editarla si quieres.</em>",
-            "delete": "Elimina esta respuesta permanentemente.",
+            "startEmpty": "Pulsa aquí para crear un turno vacio",
+            "addDynamicTurn": "Genera automáticamente una sugerencia para comenzar.<br>Puedes modificarla después.",
+            "addRoundUp": "Agrega un turno vacío<em>antes</em> del seleccionado.",
+            "addRoundDown": "Agrega un turno vacío <em>después</em> del seleccionado.",
+            "magic": "Genera automáticamente una respuesta y selecciona el fragmento de texto relacionado.<br><em>Puedes editarla si quieres.</em>",
+            "delete": "Eliminar esta respuesta permanentemente.",
             "about": "Breve descripción del canal",
             "channelId": "ID único anonimizado del canal",
             "nMessages": "Cuántos mensajes hay en el canal",
             "nUsers": "Cuántos usuarios hay en el canal",
             "languages": "Idiomas utilizados en el canal",
-            "iri": "Índice de Riesgo de Infodemia del canal",
+            "iri": "Índice de Riesgo de Infodemia del canal (0-1)",
             "hs_percentage": "Porcentaje de mensajes considerados discurso de odio",
             "cw_percentage": "Porcentaje de mensajes considerados susceptibles de verificación",
-            "degreeCentrality": "Centralidad de grado del canal",
+            "degreeCentrality": "Centralidad de grado del canal (0-1)",
             "louvain_community": "Comunidad de Lovaina del canal"
         }
     },
@@ -1169,7 +1170,7 @@
             },
             "checkWorthinessPercent": {
                 "title": "Susceptible de verificación (%)",
-                "description": "Con <b>clasificación basada en IA</b>, se analiza cada mensaje para determinar si es <b>digno de verificación</b> (check-worthy), es decir, si contiene afirmaciones que podrían requerir verificación de hechos (consulta el <i>Glosario</i>). Al calcular el <b>nivel medio de contenido digno de verificación</b> en cada tema, destacamos la prevalencia de posibles afirmaciones engañosas o cuestionables."
+                "description": "Con <b>clasificación basada en IA</b>, se analiza cada mensaje para determinar si debería<b>verificarse</b> (check-worthy), es decir, si contiene afirmaciones que podrían requerir verificación de contenidos (consulta el <i>Glosario</i>). Al calcular el <b>nivel medio de contenido digno de verificación</b> en cada tema, destacamos la prevalencia de posibles afirmaciones engañosas o cuestionables."
             },
             "prevalentSentiment": {
                 "title": "Sentimiento predominante",
@@ -1192,11 +1193,11 @@
             },
             "target": {
                 "title": "Grupo objetivo",
-                "description": "Un grupo objetivo se refiere al <b>individuo</b> o <b>grupo de personas</b> mencionado en un mensaje. En este proyecto identificamos si un mensaje contiene referencia a uno de los siguientes grupos: <b>personas negras</b>, <b>LGBTQIA+</b>, <b>judíos</b>, <b>migrantes</b>, <b>musulmanes</b>, <b>personas con discapacidad</b>, <b>mujeres</b>.<br><br>La presencia de un grupo objetivo no implica por sí misma odio, pero permite filtrar para ver qué mensajes que mencionan estos grupos también son <b>odiosos</b>, <b>checkworthy</b> o contienen <b>enlaces no fiables</b>."
+                "description": "Un grupo objetivo se refiere al <b>individuo</b> o <b>grupo de personas</b> mencionado en un mensaje. En este proyecto identificamos si un mensaje contiene referencia a uno de los siguientes grupos: <b>personas negras</b>, <b>LGBTQIA+</b>, <b>judíos</b>, <b>migrantes</b>, <b>musulmanes</b>, <b>personas con discapacidad</b>, <b>mujeres</b>.<br><br>La presencia de un grupo objetivo no implica por sí misma odio, pero permite filtrar para ver qué mensajes que mencionan estos grupos también son <b>odiosos</b>, <b>susceptibles de verificación</b> o contienen <b>enlaces de fuentes no fiables</b>."
             },
             "filtersTable": {
                 "title": "Filtros y encabezados de tabla",
-                "description": "Usa los tres filtros (<b>Hate Speech</b>, <b>Check Worthy</b> y <b>Filtrar por grupo objetivo</b>) para mostrar solo las filas relacionadas.<br>También puedes hacer clic en los <b>encabezados de columna</b> para ordenar las filas según la presencia o ausencia de una variable específica."
+                "description": "Usa los tres filtros (<b>Hate Speech</b>, <b>Susceptible de verificación</b> y <b>Filtrar por grupo objetivo</b>) para mostrar solo las filas relacionadas.<br>También puedes hacer clic en los <b>encabezados de columna</b> para ordenar las filas según la presencia o ausencia de una variable específica."
             },
             "startConversation": {
                 "title": "Iniciar conversación",
