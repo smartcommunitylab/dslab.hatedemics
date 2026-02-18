@@ -88,7 +88,7 @@ const partners = ref([
   { name: 'Facta', logo: logoFacta, link: 'https://www.facta.news/' },
   { name: 'Fbk', logo: logoFbk, link: 'https://www.fbk.eu/en/' },
   { name: 'Fundea', logo: logoFundea, link: 'https://www.fundea.org', email: 'ppd@fundea.org' },
-  { name: 'Maldita', logo: logoMaldita, link: 'https://maldita.es', email: 'proyectos@maldita.es' },
+  { name: 'Maldita', logo: logoMaldita, link: 'https://fundacionmaldita.es/es/', email: 'proyectos@maldita.es' },
   { name: 'Mg', logo: logoMg, link: 'https://www.centrodeestudiosandaluces.es/', email: 'dpd.cpidssa@juntadeandalucia.es' },
   { name: 'nask', logo: logoNask, link: 'https://www.nask.pl/', email: 'nask@nask.pl' },
   { name: 'pp', logo: logoPp, link: 'https://pagellapolitica.it/', email: 'matters.privacy@pagellapolitica.it' },
