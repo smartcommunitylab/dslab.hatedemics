@@ -160,6 +160,11 @@
     "educational": {
         "title": "Educational Activities",
         "subtitle": "<p>In this section you will find interactive exercises designed to help you understand the mechanisms behind disinformation and hate speech.</p><p>You can explore <b>cognitive biases</b> and <b>logical fallacies</b>, practice <b>debunking techniques</b>, learn the principles of the <b>Human Rights Declaration</b> to understand the fundamental rights protecting human dignity, and apply <b>lateral reading</b> skills to critically evaluate online content.</p><p>Each activity is an opportunity to train your critical thinking and become more resilient against manipulation and misinformation.</p>",
+        "difficulty": {
+            "easy": "Easy",
+            "medium": "Medium",
+            "difficult": "Difficult"
+          },
         "eduCard1Title": "Human Rights Declaration",
         "eduCard1Desc": "Discover the core principles protecting human dignity.",
         "eduCard1Button": "Explore Rights",

@@ -160,6 +160,11 @@
     "educational": {
         "title": "Attività Educative",
         "subtitle": "<p>In questa sezione troverai esercizi interattivi pensati per aiutarti a comprendere i meccanismi alla base della disinformazione e dei discorsi d'odio.</p><p>Potrai esplorare <b>bias cognitivi</b> e <b>fallacie logiche</b>, esercitarti con tecniche di <b>debunking</b>, conoscere i principi fondamentali della <b>Dichiarazione dei Diritti Umani</b> per capire come viene tutelata la dignità umana e applicare tecniche di <b>lettura laterale</b> per valutare criticamente i contenuti online.</p><p>Ogni attività è un’occasione per allenare il pensiero critico e diventare più resistente alla manipolazione e alla disinformazione.</p>",
+        "difficulty": {
+    "easy": "Facile",
+    "medium": "Medio",
+    "difficult": "Difficile"
+  },
         "eduCard1Title": "Dichiarazione dei Diritti Umani",
         "eduCard1Desc": "Scopri i principi fondamentali che tutelano la dignità umana.",
         "eduCard1Button": "Inizia l'attività",

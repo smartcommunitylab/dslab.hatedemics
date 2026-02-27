@@ -160,6 +160,11 @@
     "educational": {
         "title": "Attivitajiet Edukattivi",
         "subtitle": "<p>F’din is-sezzjoni se ssib eżerċizzji interattivi mfassla biex jgħinuk tifhem il-mekkaniżmi wara d-diżinformazzjoni u d-diskors ta’ mibegħda.</p><p>Tista’ tesplora <b>preġudizzji konjittivi</b> u <b>twemmin loġiku żbaljat</b>, tipprattika tekniki li <b>jikxfu l-falsità</b>, titgħallem il-prinċipji fundamentali tad-<b>Dikjarazzjoni tad-Drittijiet tal-Bniedem</b> biex tifhem kif id-drittijiet fundamentali jipproteġu d-dinjità umana, u <b>taqra b’mod laterali</b> biex tevalwa b’mod kritiku l-kontenut online.</p><p>Kull attività hija opportunità biex titħarreġ fil-ħsieb kritiku u tissaħħaħ kontra l-manipulazzjoni u d-diżinformazzjoni.</p>",
+        "difficulty": {
+            "easy": "Faċli",
+            "medium": "Medju",
+            "difficult": "Diffiċli"
+          },
         "eduCard1Title": "Dikjarazzjoni tad-Drittijiet tal-Bniedem",
         "eduCard1Desc": "Skopri l-prinċipji ewlenin li jipproteġu d-dinjità tal-bniedem.",
         "eduCard1Button": "Skopri d-drittijiet",

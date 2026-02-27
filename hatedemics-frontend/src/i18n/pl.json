@@ -160,6 +160,11 @@
   "educational": {
     "title": "Ćwiczenia edukacyjne",
     "subtitle": "<p>W tej sekcji znajdziesz interaktywne ćwiczenia zaprojektowane, aby pomóc Ci zrozumieć mechanizmy stojące za dezinformacją i mową nienawiści.</p><p>Możesz odkrywać <b>biasy poznawcze</b> i <b>błędy logiczne</b>, ćwiczyć techniki <b>demaskowania</b>, poznać podstawowe zasady <b>Deklaracji Praw Człowieka</b>, aby zrozumieć ochronę ludzkiej godności, oraz stosować <b>czytanie boczne</b>, aby krytycznie oceniać treści online.</p><p>Każde ćwiczenie to okazja do rozwijania myślenia krytycznego i budowania odporności na manipulację oraz dezinformację.</p>",
+    "difficulty": {
+      "easy": "Łatwy",
+      "medium": "Średni",
+      "difficult": "Trudny"
+    },
     "eduCard1Title": "Deklaracja praw człowieka",
     "eduCard1Desc": "Odkryj podstawowe zasady chroniące ludzką godność.",
     "eduCard1Button": "Odkryj prawa człowieka",

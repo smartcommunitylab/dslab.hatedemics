@@ -160,6 +160,11 @@
     "educational": {
         "title": "Actividades Educativas",
         "subtitle": "<p>En esta sección encontrarás ejercicios interactivos diseñados para ayudarte a comprender los mecanismos detrás de la desinformación y el discurso de odio.</p><p>Podrás explorar <b>sesgos cognitivos</b> y <b>falacias lógicas</b>, practicar técnicas de <b>verificación y debunking</b>, aprender los principios fundamentales de la <b>Declaración de Derechos Humanos</b> para entender los derechos fundamentales que protegen la dignidad humana y aplicar la <b>lectura lateral</b> para evaluar críticamente los contenidos en línea.</p><p>Cada actividad es una oportunidad para entrenar tu pensamiento crítico y volverte más resiliente frente a la manipulación y la desinformación.</p>",
+        "difficulty": {
+            "easy": "Fácil",
+            "medium": "Medio",
+            "difficult": "Difícil"
+          },
         "eduCard1Title": "Declaración de Derechos Humanos",
         "eduCard1Desc": "Descubre los principios centrales que protegen la dignidad humana.",
         "eduCard1Button": "Explorar los derechos",
