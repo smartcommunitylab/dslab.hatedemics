@@ -400,6 +400,8 @@
                 "resetButton": "Reset",
                 "correct": "Coppie corrette",
                 "incorrect": "Coppie errate",
+                      "leftColumn": "Fallacie/Pregiudizi",
+      "rightColumn": "Situazioni",
                 "task": "- Abbina la situazione alla fallacia logica/alla distorsione pertinente.- La situazione è un esempio di incitamento all'odio/disinformazione/misinformazione (condivisione inconsapevole di contenuti disinformativi)? Se sì, perché?",
                 "pairs": [
                     {
