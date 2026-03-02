@@ -63,7 +63,7 @@
     <!-- Modal for expanded content -->
     <v-dialog v-model="showExpandModal" max-width="600">
       <v-card>
-        <v-card-title>{{ t("educational.tasks.bias.fullContent") }}</v-card-title>
+        <!-- <v-card-title>{{ t("educational.tasks.bias.fullContent") }}</v-card-title> -->
         <v-card-text>
           <div v-html="expandedItem?.label"></div>
         </v-card-text>
