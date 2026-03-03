@@ -62,7 +62,7 @@
     "educational": "Ćwiczenia edukacyjne",
     "educationalDescription": "Przeglądaj zasoby i materiały edukacyjne, aby zrozumieć nienawiść internetową i nauczyć się jej przeciwdziałać.",
     "educationalButton": "Przejdź do sekcji edukacyjnej",
-    "guideDescription": "Co należy wiedzieć przed użyciem platformy?",
+    "guideDescription": "Co należy wiedzieć przed skorzystaniem z platformy?",
     "guideButton": "Przewodnik",
     "guideTitle": "Słowniczek",
     "guide": "Przewodnik",
@@ -74,7 +74,7 @@
       },
       "inRec": {
         "title": "Rekomendacje przychodzące",
-        "description": "Jak bardzo kanał jest rekomendowany przez inne kanały."
+        "description": "Stopień, w jakim kanał jest rekomendowany przez inne kanały."
       },
       "outRec": {
         "title": "Rekomendacje wychodzące",
@@ -82,16 +82,16 @@
       },
       "risk": {
         "title": "Ryzyko infodemiczne",
-        "description": "Jak wiarygodny jest kanał. Ocena w skali od 0 do 1."
+        "description": "Wiarygodność kanału. Ocena w skali od 0 do 1."
       },
       "check": {
         "title": "Checkworthiness",
-        "description": "Wskazuje, czy wiadomość można zweryfikować pod kątem/ z uwagi na obecność faktów. Oznacza to, że wiadomość zawiera fakty, a nie tylko opinie, oraz że jest wystarczająco istotna, by poddać ją fact-checkingowi."
+        "description": "Wskazuje, czy wiadomość można zweryfikować z uwagi na obecność faktów. Oznacza to, że wiadomość zawiera fakty, a nie tylko opinie, oraz że jest wystarczająco istotna, by poddać ją fact-checkingowi."
       }
     }
   },
     "networkGuide": {
-    "guideTitle": "Słowniczek eksploracji",
+    "guideTitle": "Słowniczek pojęć związanych z eksploracją",
     "guideItems": {
       "telegramDataset": {
         "title": "Zbiór danych z Telegramu",
@@ -99,23 +99,23 @@
       },
       "telegramChannels": {
         "title": "Kanały i czaty z Telegramu",
-        "description": "<p><strong>Kanał Telegramu</strong> to przestrzeń, w której jeden lub kilku administratorów może publikować wiadomości dla szerokiej publiczności.</p><p>Kanał może mieć jeden lub więcej <strong>czatów</strong> o różnych ustawieniach: na niektórych wiadomości publikować mogą tylko administratorzy, a inne otwarte są dla wszystkich.</p><p>Czaty lub rozmowy na kanale odnoszą się do publikowanych tam wiadomości i reakcji odbiorców. Czaty lub rozmowy na kanale odnoszą się do publikowanych tam wiadomości i reakcji odbiorców.</p>"
+        "description": "<p><strong>Kanał Telegramu</strong> to przestrzeń, w której jeden lub kilku administratorów może publikować wiadomości dla szerokiej publiczności.</p><p>Kanał może mieć jeden lub więcej <strong>czatów</strong> o różnych ustawieniach: na niektórych wiadomości publikować mogą tylko administratorzy, a inne otwarte są dla wszystkich.</p><p>Czaty lub rozmowy na kanale odnoszą się do publikowanych tam wiadomości i reakcji odbiorców.</p>"
       },
       "network": {
         "title": "Sieć",
-        "description": "<p><strong>Sieć</strong> to struktura, która przedstawia podmioty jako punkty, a relacje między nimi jako linie.</p><p>W tej sieci pobrane kanały Telegram są wyświetlane jako <strong>punkty</strong>, a linie pokazują, jak są połączone. Kanał jest powiązany z innym, gdy Telegram automatycznie go <em>rekomenduje</em>, na podstawie liczby użytkowników wspólnych dla obu kanałów.</p>"
+        "description": "<p><strong>Sieć</strong> to struktura, która przedstawia podmioty jako punkty, a relacje między nimi jako linie.</p><p>W tej sieci pobrane kanały Telegramu są wyświetlane jako <strong>punkty</strong>, a linie pokazują, jak są połączone. Kanał jest powiązany z innym, gdy Telegram automatycznie go <em>rekomenduje</em>, na podstawie liczby użytkowników wspólnych dla obu kanałów.</p>"
       },
       "disinformation": {
         "title": "Dezinformacja",
-        "description": "<p><strong>Dezinformacja</strong> to fałszywe lub wprowadzające w błąd informacje tworzone, udostępniane lub rozpowszechniane celowo, aby <em>oszukać</em> lub <em>manipulować</em> ludźmi.</p><p>Często używana jest do <strong>wpływania na opinie</strong>, siania zamętu czy osiągania celów <em>politycznych, społecznych lub finansowych</em>.</p>"
+        "description": "<p><strong>Dezinformacja</strong> to fałszywe lub wprowadzające w błąd informacje tworzone, udostępniane lub rozpowszechniane celowo, aby <em>oszukać</em> lub <em>manipulować</em> ludźmi.</p><p>Często używana jest do <strong>wpływania na opinie</strong>, wprowadzania informacyjnego chaosu czy osiągania celów <em>politycznych, społecznych lub finansowych</em>.</p>"
       },
       "reliability": {
         "title": "Wiarygodność",
-        "description": "<p><strong>Wiarygodność</strong> mierzy, jak bardzo źródło lub link jest rzetelny i dokładny. Określana jest na podstawie <em>ręcznej oceny</em> strony internetowej.</p><p><strong>Wysoki wynik wiarygodności</strong> oznacza, że źródło można uznać za godne zaufania i dostarczające dobrze udokumentowane informacje</p>"
+        "description": "<p><strong>Wiarygodność</strong> mierzy, jak bardzo źródło lub link jest rzetelny i dokładny. Określana jest na podstawie <em>ręcznej oceny</em> strony internetowej.</p><p><strong>Wysoki wynik wiarygodności</strong> oznacza, że źródło można uznać za godne zaufania i dostarczające dobrze udokumentowane informacje.</p>"
       },
       "infodemicRisk": {
         "title": "Ryzyko infodemii",
-        "description": "<p><strong>Ryzyko infodemiczne</strong> określa, jak bardzo kanał jest wiarygodny – w skali od <strong>0</strong> (całkowicie wiarygodny) do <strong>1</strong> (całkowicie niewiarygodny).</p><p>Opiera się na wiarygodności stron internetowych udostępnianych w kanale oraz na tym, w jakim stopniu użytkownicy są <em>narażeni</em> na te linki (uwzględnia liczbę wyświetleń).</p><p><strong>Niska wartość</strong> oznacza, że użytkownicy mają ekspozycję na bardziej wiarygodne informacje.</p><p>Więcej szczegółów znajdziesz w <a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">tym artykule</a>.</p>"
+        "description": "<p><strong>Ryzyko infodemiczne</strong> określa wiarygodność kanału w skali od <strong>0</strong> (całkowicie wiarygodny) do <strong>1</strong> (całkowicie niewiarygodny).</p><p>Opiera się na wiarygodności stron internetowych udostępnianych w kanale oraz na tym, w jakim stopniu użytkownicy są <em>narażeni</em> na te linki (uwzględnia liczbę wyświetleń).</p><p><strong>Niska wartość</strong> oznacza, że użytkownicy mają ekspozycję na bardziej wiarygodne informacje.</p><p>Więcej szczegółów znajdziesz w <a href=\"https://www.nature.com/articles/s41562-020-00994-6\" target=\"_blank\">tym artykule</a>.</p>"
       },
       "hateSpeech": {
         "title": "Mowa nienawiści",
@@ -159,27 +159,27 @@
     },
   "educational": {
     "title": "Ćwiczenia edukacyjne",
-    "subtitle": "<p>W tej sekcji znajdziesz interaktywne ćwiczenia zaprojektowane, aby pomóc Ci zrozumieć mechanizmy stojące za dezinformacją i mową nienawiści.</p><p>Możesz odkrywać <b>biasy poznawcze</b> i <b>błędy logiczne</b>, ćwiczyć techniki <b>demaskowania</b>, poznać podstawowe zasady <b>Deklaracji Praw Człowieka</b>, aby zrozumieć ochronę ludzkiej godności, oraz stosować <b>czytanie boczne</b>, aby krytycznie oceniać treści online.</p><p>Każde ćwiczenie to okazja do rozwijania myślenia krytycznego i budowania odporności na manipulację oraz dezinformację.</p>",
+    "subtitle": "<p>W tej sekcji znajdziesz interaktywne ćwiczenia zaprojektowane, aby pomóc Ci zrozumieć mechanizmy stojące za dezinformacją i mową nienawiści.</p><p>Możesz odkrywać <b>biasy poznawcze</b> i <b>błędy logiczne</b>, ćwiczyć techniki <b>demaskowania</b>, poznać podstawowe zasady <b>Deklaracji Praw Człowieka</b>, aby zrozumieć ochronę ludzkiej godności, oraz stosować <b>czytanie w poziomie</b>, aby krytycznie oceniać treści online.</p><p>Każde ćwiczenie to okazja do rozwijania myślenia krytycznego i budowania odporności na manipulację oraz dezinformację.</p>",
     "difficulty": {
-      "easy": "Łatwy",
-      "medium": "Średni",
-      "difficult": "Trudny"
+      "easy": "Łatwe",
+      "medium": "Średnie",
+      "difficult": "Trudne"
     },
     "eduCard1Title": "Deklaracja praw człowieka",
     "eduCard1Desc": "Odkryj podstawowe zasady chroniące ludzką godność.",
-    "eduCard1Button": "Odkryj prawa człowieka",
-    "eduCardBiasTitle": "Uprzedzenia i błędy",
+    "eduCard1Button": "Poznaj prawa człowieka",
+    "eduCardBiasTitle": "Uprzedzenia i błędy poznawcze",
     "eduCardBiasDesc": "Przeglądaj logiczne błędy i uprzedzenia poznawcze stojące za mową nienawiści i dezinformacją.",
-    "eduCardBiasButton": "Rozpocznij aktywność",
+    "eduCardBiasButton": "Rozpocznij ćwiczenie",
     "eduCard3Title": "Debunking",
     "eduCard3Desc": "Dowiedz się, jak skutecznie demaskować dezinformację.",
-    "eduCard3Button": "Rozpocznij aktywność",
+    "eduCard3Button": "Rozpocznij ćwiczenie",
     "eduCard4Title": "Czytanie w poziomie",
     "eduCard4Desc": "Dowiedz się,  jak analizować treści online.",
-    "eduCard4Button": "Rozpocznij aktywność",
+    "eduCard4Button": "Rozpocznij ćwiczenie",
     "eduCard5Title": "Rozpoznaj mowę nienawiści!",
-    "eduCard5Desc": "Identyfikować mowę nienawiści w treściach online.",
-    "eduCard5Button": "Rozpocznij aktywność",
+    "eduCard5Desc": "Rozpoznaj mowę nienawiści w treściach online.",
+    "eduCard5Button":"Rozpocznij ćwiczenie",
     "warningTitle": "Ostrzeżenie",
     "warningText": "Te ćwiczenia zawierają nieocenzurowane przykłady, które mogą być uznane za obraźlwe. Jeśli jakiekolwiek ćwiczenie lub jego część sprawia, że czujesz się niekomfortowo, zgłoś się do nas lub bez obaw wyjdź z modułu ćwiczeń.",
     "warningButton": "Rozumiem",
@@ -188,13 +188,13 @@
         "humanRights": {
             "title": "Prawa Człowieka",
             "description": "Podstawowe prawa człowieka określone przez Organizację Narodów Zjednoczonych w <a href='https://www.un.org/en/about-us/universal-declaration-of-human-rights' target='_blank' rel='noopener'>Powszechnej Deklaracji Praw Człowieka</a> chronią i stoją na straży godności, równości i wolności wszystkich ludzi. Niektóre z nich zostały wymienione poniżej w wersji uproszczonej.<br><br><iframe width='100%' height='315' src='https://www.youtube.com/embed/nDgIVseTkuE?si=Jomr_pVjQAdBgfGg' title='Wideo o Prawach Człowieka' frameborder='0' allowfullscreen></iframe>",
-            "objectivesTitle": "Cele aktywności",
+            "objectivesTitle": "Cel tego ćwiczenia",
             "objectives": "<ul style='padding-left: 1.2rem; list-style-type: disc;'><li>Poszerzanie wiedzy na temat praw człowieka;</li><li>Zwiększanie świadomości na temat związku między prawami człowieka a mową nienawiści i dezinformacją;</li><li>Poznawanie możliwych sposobów reagowania na mowę nienawiści i dezinformację.</li></ul>",
             "startButton": "Rozpocznij",
             "task": "Utwórzcie 12 grup. Każda grupa bierze jedną kartę i omawia znaczenie prawa człowieka, które jest na niej napisane. Po 5 minutach pierwsza grupa wyjaśnia, co oznacza dla niej dane prawo i jaki jest jego związek z mową nienawiści. W razie potrzeby nauczyciel może uzupełnić wyjaśnienia. Następnie kolejna grupa z następną kartą wyjaśnia znaczenie wylosowanego prawa i jego związek z mową nienawiści. Czynność tę powtarza się, dopóki wszystkie grupy nie przedstawią swoich odpowiedzi.",
             "completetask": "Ukończyłem/ukończyłam zadanie",
             "taskCompleteTitle": "Omówienie ćwiczenia:",
-            "taskCompleteText": "Czy znałeś/znałaś już wszystkie wymienione prawa człowieka? Które z nich są dla Ciebie nowe? Czy było łatwo czy trudno wyjaśnić znaczenie tych praw i znaleźć powiązanie między nimi a mową nienawiści? Czy potrafisz wymienić inne prawa człowieka, które nie zostały wspomniane?",
+            "taskCompleteText": "Czy znaliście już wszystkie wymienione prawa człowieka? Które z nich są dla Was nowe? Czy było łatwo czy trudno wyjaśnić znaczenie tych praw i znaleźć powiązanie między nimi a mową nienawiści? Czy potraficie wymienić inne prawa człowieka, które nie zostały wspomniane?",
             "articles": [
                 {
                     "title": "Art.  1",
@@ -250,11 +250,11 @@
         "spothate": {
             "title": "Rozpoznaj mowę nienawiści!",
             "back": "Wstecz",
-            "finalMessage": "Ukończyłeś(-aś) ćwiczenie! Możesz teraz przejść do następnego ćwiczenia.",
-            "description": "Mowę nienawiści można zdefiniować jako wyrażanie obraźliwych lub dyskryminujących opinii, treści bądź komunikatów wobec określonych grup osób lub jednostek – ze względu na ich cechy tożsamościowe, takie jak płeć, wiek, orientacja seksualna, narodowość, pochodzenie etniczne, religia, kolor skóry, niepełnosprawność lub inne.<br><br>Rozpoznawanie mowy nienawiści jest kluczowe, aby skutecznie z nią walczyć i chronić osoby narażone na jej negatywne konsekwencje. Identyfikacja mowy nienawiści pomaga zapobiegać jej eskalacji do przemocy lub dyskryminacji, wspierając tym samym harmonię społeczną oraz poszanowanie praw człowieka.",
-            "objectivesTitle": "Cele aktywności",
+            "finalMessage": "Ćwiczenie ukończone! Możesz teraz przejść do następnego zadania.",
+            "description": "Mowę nienawiści (hate speech) można zdefiniować jako wyrażanie obraźliwych lub dyskryminujących opinii, treści bądź komunikatów wobec określonych grup osób lub jednostek – ze względu na ich cechy tożsamościowe, takie jak płeć, wiek, orientacja seksualna, narodowość, pochodzenie etniczne, religia, kolor skóry, niepełnosprawność lub inne.<br><br>Rozpoznawanie mowy nienawiści jest kluczowe, aby skutecznie z nią walczyć i chronić osoby narażone na jej negatywne konsekwencje. Identyfikacja mowy nienawiści pomaga zapobiegać jej eskalacji do przemocy lub dyskryminacji, wspierając tym samym harmonię społeczną oraz poszanowanie praw człowieka.",
+            "objectivesTitle": "Cel tego ćwiczenia",
             "objectives": "<ul><li>Naucz się odróżniać mowę nienawiści od wypowiedzi, które mogą być obraźliwe lub kontrowersyjne, ale nie spełniają definicji mowy nienawiści.</li><li>Ćwicz odpowiednie reakcje.</li></ul>",
-            "startButton": "Rozpocznij aktywność",
+            "startButton": "Rozpocznij ćwiczenie",
             "task": "<ol><li>Określ, czy w przedstawionych sytuacjach pojawia się mowa nienawiści i wybierz właściwą reakcję. Możesz też zaproponować własny sposób odpowiedzi.</li><li>Dołącz do zespołu składającego się z 3–5 osób, w którym porównacie swoje odpowiedzi – skupcie się na podobieństwach i różnicach oraz uzasadnijcie swoje wybory. Celem zadania nie jest znalezienie jednej wspólnej odpowiedzi, ale zrozumienie różnorodności możliwych reakcji.</li><li>Informacja zwrotna i ewentualna korekta zostaną udzielone w przypadku błędnej klasyfikacji przykładów (np. jeśli dana wypowiedź została niepoprawnie uznana za mowę nienawiści lub odwrotnie).</li></ol>",
             "headers": {
                 "message": "Wiadomość",
@@ -306,8 +306,8 @@
                     "explanation": "To stwierdzenie uznajemy za mowę nienawiści, ponieważ uderza w migrantów jako grupę i przypisuje wszystkim jej członkom negatywne, krzywdzące stereotypy, promując wykluczenie i wrogość."
                 }
             },
-            "completedTitle": "Aktywność ukończona",
-            "completed": "Ukończyłeś(-aś) aktywność! Teraz możesz omówić swoje odpowiedzi z kolegami z klasy i nauczycielem.",
+            "completedTitle": "Ćwiczenie ukończone!",
+            "completed": "Ćwiczenie ukończone! Teraz możesz omówić swoje odpowiedzi z kolegami z klasy i nauczycielem.",
             "finalMessagePart1": "Jaka byłaby Twoja reakcja na poniższe wiadomości? Możesz wybrać więcej niż jedną opcję:<ul><li>Weź udział w pełnej szacunku dyskusji (jeśli uważasz to za bezpieczne rozwiązanie).</li><li>Zwróć uwagę na nieprawdziwe informacje (jeśli to bezpieczne).</li><li>Zgłoś wiadomość administratorom platformy lub moderatorowi.</li><li>Zignoruj wiadomość.</li><li>Zablokuj użytkownika.</li><li>Spróbuj wyjaśnić temat osobie, która napisała wiadomość (jeśli jest to dla Ciebie działanie odpowiednie i bezpieczne).</li><li>Poszukaj więcej informacji o punkcie widzenia rozmówcy.</li><li>Inna reakcja: …………………</li></ul>",
             "finalMessagePart2": "<ul><li>Czy wystąpiły jakieś trudności z rozpoznaniem przykładów mowy nienawiści? Co sprawia, że dana wypowiedź przekracza granicę i staje się mową nienawiści?</li><li>Czy trudno jest na nią reagować? Jakie umiejętności są potrzebne, żeby zrobić to w odpowiedni sposób?</li><li>Dlaczego reagowanie na mowę nienawiści jest ważne?</li></ul>",
             "next": "Dalej",
@@ -317,7 +317,7 @@
         "debunking": {
             "title": "Debunking",
             "back": "Wróć",
-            "finalMessage": "Udało Ci się ukończyć zadanie! Możesz teraz przejść do kolejnej aktywności.",
+            "finalMessage": "Udało Ci się ukończyć zadanie! Możesz teraz przejść do kolejnego zadania.",
             "description": "Osoby zajmujące się weryfikacją faktów na co dzień pracują nad obalaniem fałszywych informacji – analizują treści i wyjaśniają, dlaczego są one nieprawdziwe, najczęściej dopiero po tym, jak zostały udostępnione i zdobyły popularność w mediach społecznościowych. Działania te są niezwykle istotne z punktu widzenia opinii publicznej, ponieważ pomagają zapobiec temu, by kolejne osoby czytały, udostępniały i wierzyły w nieprawdziwe treści. Niektóre przypadki wymagają czasochłonnych analiz i użycia specjalistycznych narzędzi. Inne zaś opierają się głównie na uważnej obserwacji i dotarciu do konkretnych, wiarygodnych źródeł informacji.<br><br>Aby nauczyć się weryfikować informacje jak fact-checker, możesz skorzystać z zestawu narzędzi zaprojektowanego do nauki podstawowych metod weryfikacji od <a href='https://firstdraftnews.org/verification-toolbox/ '>First Draftnews</a>. W tym zestawie możesz na przykład nauczyć się korzystać z Wyszukiwania Obrazu Odwrotnego: prostego sposobu na uzyskanie informacji o zdjęciu i sprawdzenie jego kontekstu. Możesz też ćwiczyć weryfikację filmów za pomocą <a href='https://www.invid-project.eu/'>Invid</a>, świetnego narzędzia pozwalającego oszczędzać czas i działać wydajniej, szczególnie przy weryfikacji materiałów wideo.<br><br>Spróbujmy! W tym ćwiczeniu nauczysz się pod okiem instruktora kilku technik wykrywania fałszywych twierdzeń oraz dowiesz się, dlaczego ważne jest, aby uruchomić krytyczne myślenie i zidentyfikować, w jaki sposób wiralowe rozprzestrzenianie się niektórych fałszywych informacji może tworzyć i wzmacniać narracje dezinformacyjne.",
             "objectivesTitle": "Efekty kształcenia",
             "objectives": "<p><strong>Debunking:</strong> nauka niektórych technik demaskowania fałszywych informacji.</p><p><strong>Rozwijanie myślenia krytycznego za pomocą strategii pre-bunking:</strong> podczas ćwiczenia użytkownicy odkrywają, czym są narracje dezinformacyjne i mogą zastanowić się nad tymi najbardziej rozpowszechnionymi w swoim kraju.</p><p><strong>Aktywowanie myślenia krytycznego:</strong> poprzez zrozumienie, jak rozprzestrzenianie się niektórych oszustw może tworzyć i wzmacniać narracje dezinformacyjne.</p>",
@@ -400,12 +400,12 @@
             ]
         },
         "bias": {
-            "title": "Błędy poznawcze i fałszywe rozumowania",
+            "title": "Błędy logiczne i poznawcze",
                   "leftColumn": "Błędy logiczne/Uprzedzenia",
       "rightColumn": "Sytuacje",
             "description": "<br><br><strong>Błędy logiczne związane z mową nienawiści i dezinformacją</strong><br>Treści mowy nienawiści i dezinformacji mogą czasami wydawać się bardzo przekonujące. Dzieje się tak, ponieważ osoby propagujące mowę nienawiści często opierają się na błędach logicznych – konstrukcjach stosowanych przez grupy hejterskie w celu uzasadnienia prowadzonych przez nie działań oraz żywionego przez nie przekonaniach, że osoby, które zetkną się z tymi treściami, uznają je za rozsądne i prawdziwe. Błędy logiczne mogą opierać się na fałszywych przesłankach, prawdziwych przesłankach, ale fałszywych wnioskach lub prawdziwych przesłankach i wnioskach, ale fałszywym rozumowaniu. Niektóre błędy logiczne są tworzone z zamiarem wprowadzenia w błąd lub rozpowszechnienia dezinformacji. W mowie nienawiści pojawia się wiele błędów logicznych. Oto niektóre z nich: argumentum ad populum, ipse dixit, błąd śliskiego zbocza.<br><br><strong>Błędy poznawcze</strong><br>Nasz mózg stosuje skróty, aby pomóc nam w podejmowaniu szybkich decyzji w życiu codziennym. Skróty te pomagają nam skupić się tylko na najważniejszych informacjach, dzięki czemu nie jesteśmy przytłoczeni wszystkim, co widzimy i słyszymy. Dzięki temu mózg pracuje wydajniej. Jednak wadą tych skrótów jest to, że czasami mogą one prowadzić do niewłaściwych rozwiązań lub nieporozumień z powodu naszych błędów poznawczych (kognitywnych).Wszyscy podlegamy ryzyku popełniania błędów poznawczych w procesie podejmowania decyzji, a osoby rozpowszechniające dezinformację doskonale te błędy rozumieją. Oto kilka przykładów błędów poznawczych: stronniczość związana z członkostwem, pułapka dostępności, błąd atrybucji przyczynowej. Jeśli chcesz dowiedzieć się więcej, rzuć okiem na <a href='https://drive.google.com/file/d/1rYxJPQyWnh7iJS2f5ur4muOoDtWZlIH7/view?usp=sharing'>materiały edukacyjne Hatedemics</a>.",
             "objectivesTitle": "Cele",
-            "objectives": "<ul><li><strong>Rozwijać świadomość</strong> na temat mechanizmów społecznych, błędów poznawczych i fałszywych rozumowań</li><li><strong>Rozwijać kompetencje krytycznego myślenia</strong></li></ul><p>Mechanizmy społeczne, błędy poznawcze i fałszywe rozumowania są czynnikami pomagającymi w rozprzestrzenianiu mowy nienawiści i dezinformacji. Poznając je, możemy stać się na nie bardziej odporni i krytyczni wobec innych form manipulacji.</p>",
+            "objectives": "<ul><li><strong>Rozwój świadomości</strong> na temat mechanizmów społecznych, błędów logicznych i poznawczych</li><li><strong>Rozwój kompetencji krytycznego myślenia</strong></li></ul><p>Mechanizmy społeczne, błędy logiczne i poznawcze są czynnikami pomagającymi w rozprzestrzenianiu mowy nienawiści i dezinformacji. Poznając je, możemy stać się na nie bardziej odporni i krytyczni wobec innych form manipulacji.</p>",
             "startButton": "Rozpocznij aktywność",
             "task": "- Dopasuj sytuację do odpowiedniego błędu logicznego / błędu poznawczego\n- Czy sytuacja jest przykładem mowy nienawiści / dezinformacji / fałszywych informacji? Jeśli tak, dlaczego?",
             "checkButton": "Sprawdź dopasowania",
@@ -441,7 +441,7 @@
                 {
                     "id": "f",
                     "left": "<strong>Błąd pochyłej równi (slippery slope) – pojawia się, gdy ktoś twierdzi, że jakaś decyzja lub stanowisko doprowadzi do serii niezamierzonych negatywnych konsekwencji",
-                    "right": "Podczas debaty o pozwoleniu na budowę nowego centrum społeczności dla mniejszości, mówca argumentuje: \"Jeśli pozwolimy im zbudować to centrum, zaraz zażądają własnych praw. Wkrótce przejmą nasze dzielnice i narzucą swoją kulturę naszym dzieciom. Musimy to zatrzymać teraz, albo stracimy nasz sposób życia.\""
+                    "right": "Podczas debaty o pozwoleniu na budowę nowego centrum społeczności dla mniejszości, mówca argumentuje: \"Jeśli pozwolimy im zbudować to centrum, zaraz zażądają własnych praw. Wkrótce przejmą nasze dzielnice i narzucą swoją kulturę naszym dzieciom. Musimy zareagować teraz, inaczej nasze dotychczasowe życie w tej społeczności będzie zagrożone.\""
                 }
             ],
             "feedback": {
@@ -449,7 +449,7 @@
                 "wrong": "❌ Niepoprawne dopasowanie!"
             },
             "summaryTitle": "Podsumowanie Twoich dopasowań",
-            "reflectionText": "Czy łatwo czy trudno było dopasować sytuacje do błędów logicznych / błędów poznawczych?\n\nCzy znałeś niektóre z nich? Które? Które były dla Ciebie zupełnie nowe?\n\nCzy możesz podać konkretne przykłady z Twojej rzeczywistości, które reprezentują niektóre z tych błędów i uprzedzeń?\n\nCzy znasz inne przykłady błędów logicznych / błędów poznawczych?\n\nJak znajomość tych błędów / błędów poznawczych może nam pomóc w działaniu przeciwko mowie nienawiści i dezinformacji?"
+            "reflectionText": "Czy dopasowanie sytuacji do błędów logicznych i uprzedzeń było łatwe, czy trudne?\n\nCzy znałeś niektóre z nich? Które? Które były dla Ciebie zupełnie nowe?\n\nCzy możesz podać konkretne przykłady z Twojej rzeczywistości, które reprezentują niektóre z tych błędów i uprzedzeń?\n\nCzy znasz inne przykłady błędów logicznych / błędów poznawczych?\n\nJak znajomość tych błędów / błędów poznawczych może nam pomóc w działaniu przeciwko mowie nienawiści i dezinformacji?"
         },
         "lateralreading": {
             "submit": "Zatwierdź",
@@ -461,7 +461,7 @@
             "selectMultiple": "Możesz wybrać więcej niż jeden zrzut ekranu",
             "title": "Czytanie w poziomie",
             "subtitle": "Poniżej możesz zobaczyć różne zrzuty ekranu. Zastanów się, który z nich najlepiej odpowiada na poniższe pytanie.",
-            "description": "Czytanie w poziomie (ang. <strong>lateral reading</strong>) to metoda, która pozwala nam szybko ocenić, czy treść strony internetowej pochodzi z wiarygodnych źródeł i opiera się na rzetelnych danych informacjach czy literaturze przedmiotu.<br><br><iframe width='792' height='1224' src='/img/lateralReading/pl/lateral_reading_intro_PL.png' title='Infografika o czytaniu lateralnym' frameborder='0' allowfullscreen></iframe>",
+            "description": "Czytanie w poziomie lub czytanie boczne (ang. <strong>lateral reading</strong>) to metoda, która pozwala nam szybko ocenić, czy treść strony internetowej pochodzi z wiarygodnych źródeł i opiera się na rzetelnych danych informacjach czy literaturze przedmiotu.<br><br><iframe width='792' height='1224' src='/img/lateralReading/pl/lateral_reading_intro_PL.png' title='Infografika o czytaniu lateralnym' frameborder='0' allowfullscreen></iframe>",
             "objectivesTitle": "Efekty kształcenia",
             "objectives": "<ul><li>Poznawanie zasad przejrzystości i czynników pozwalających ocenić wiarygodność źródeł</li><li>Rozwijanie umiejętności identyfikowania godnych zaufania źródeł informacji</li></ul>",
             "startButton": "Rozpocznij",
@@ -740,20 +740,20 @@
             "back": "Wstecz",
             "finalMessage": "<ul>\n  <li>Czy wystąpiły jakieś problemy z rozpoznaniem przykładów kontrnarracji?</li>\n  <li>Jakie mogłyby być konsekwencje reagowania na powyższe twierdzenia w nieodpowiedni sposób?</li>\n</ul>\n",
             "description": "Kontrnarracja (ang. counterspeech) jest definiowana jako wszelkie działania komunikacyjne, których celem jest przeciwdziałanie mowie nienawiści za pomocą logicznego rozumowania oraz argumentów opartych na faktach (Schieb i Preuss, 2016). Kluczowe cechy skutecznej kontrnarracji obejmują:\n\n<ul>\n  <li>Unikanie języka obraźliwego i takiego, który tworzy podziały (np. określeń typu „rasista” czy „faszysta”).</li>\n  <li>Reagowanie z życzliwością, empatią i szacunkiem.</li>\n  <li>Kwestionowanie samego twierdzenia, a nie krytykowanie osoby, która je napisała.</li>\n  <li>Wyrażanie poparcia dla atakowanej grupy.</li>\n  <li>Unikanie stronniczości politycznej.</li>\n  <li>Przeciwdziałanie stereotypom i dezinformacji poprzez dostarczanie rzetelnych, kontekstowych informacji oraz precyzyjnych, weryfikowalnych faktów.</li>\n</ul>",
-            "objectivesTitle": "Cele aktywności",
-            "objectives": "<ul>\n  <li>Dowiedz się, jak odróżniać konstruktywną kontrnarrację od reakcji, które – choć sprzeciwiają się mowie nienawiści lub dezinformacji – nie są oparte na faktach ani nie spełniają kryteriów kontrnarracji.</li>\n  <li>Ćwicz odpowiednie sposoby reagowania.</li>\n</ul>",
-            "startButton": "Rozpocznij aktywność",
+            "objectivesTitle": "Cele zadania",
+            "objectives": "<ul>\n  <li>Dowiedz się, jak odróżniać konstruktywną kontrnarrację od reakcji, które – choć sprzeciwiają się mowie nienawiści lub dezinformacji – nie są oparte na faktach, ani nie spełniają kryteriów kontrnarracji.</li>\n  <li>Ćwicz odpowiednie sposoby reagowania.</li>\n</ul>",
+            "startButton": "Rozpocznij ćwiczenie",
             "task": "<ol>\n  <li>Określ, czy podane wypowiedzi stanowią kontrnarrację.</li>\n  <li>W przypadku błędnego zaklasyfikowania przykładów (np. gdy kontrnarracja została nieprawidłowo rozpoznana), otrzymasz informację zwrotną wraz z ewentualnymi poprawkami.</li>\n</ol>",
             "feedback": {
                 "correct": "Poprawna odpowiedź!",
                 "incorrect": "Niepoprawna odpowiedź."
             },
-            "completedTitle": "Aktywność ukończona",
-            "completed": "Ukończyłeś(-aś) aktywność! Teraz możesz omówić swoje odpowiedzi z kolegami z klasy i nauczycielem.",
+            "completedTitle": "Zadanie ukończone",
+            "completed": "Zadanie ukończone! Teraz możesz omówić swoje odpowiedzi z kolegami z klasy i nauczycielem.",
             "next": "Dalej",
             "score": "Wynik",
             "finish": "Zakończ",
-            "question": "Która z poniższych odpowiedzi jest najbardziej odpowiednią kontr-narracją wobec nienawistnego lub dezinformującego stwierdzenia powyżej?",
+            "question": "Która z poniższych odpowiedzi jest najbardziej odpowiednią kontrnarracją wobec nienawistnego lub dezinformującego stwierdzenia powyżej?",
             "dataset": {
                 "cs_example_1": {
                     "text": "Świat byłby lepszy bez muzułmanów. Oni tylko zabijają i gwałcą nasze dzieci.",
@@ -774,12 +774,12 @@
                     "option1": "Warto pamiętać, że uchodźcy i imigranci znacząco przyczyniają się do rozwoju naszej gospodarki, często wpłacając do budżetu w podatkach więcej niż otrzymują w formie pomocy (źródło: https://iine.org/2024/04/dispelling-10-common-myths-about-immigrants-and-refugees/). Przyjmując ich, nie tylko zapewniamy im bezpieczeństwo i szansę na lepsze życie, ale także wzmacniamy gospodarkę – co pozwala potem dbać o wszystkich obywateli, w tym osoby starsze.",
                     "option2": "Jeśli twierdzisz, że imigranci wyczerpują nasze zasoby, to kompletnie ignorujesz fakty. Uchodźcy i nowi przybysze wnoszą większy wkład w gospodarkę niż wielu rodowitych obywateli, którzy często nawet nie próbują się przyczynić do jej rozwoju. W rzeczywistości powinniśmy im dziękować – zwłaszcza jeśli pobierasz emeryturę, bo to właśnie oni, płacąc więcej podatków niż otrzymują świadczeń, utrzymują nasz system społeczny (źródło: https://iine.org/2024/04/dispelling-10-common-myths-about-immigrants-and-refugees/).",
                     "correct": "0",
-                    "explanation": "Opcja 2 nie jest kontrnarracją: jest agresywna i krytykuje osobę szerzącą nienawiść, a nie jej twierdzenia."
+                    "explanation": "Opcja 2 nie jest kontrnarracją – ma agresywny charakter i atakuje osobę szerzącą nienawiść, zamiast odnosić się do jej twierdzeń."
                 },
                 "cs_example_4": {
-                    "text": "Imigranci odbierają pracę Brytyjczykom. Powinniśmy priorytetowo traktować obywateli Wielkiej Brytanii w kontekście zatrudnienia!",
+                    "text": "Imigranci odbierają pracę Brytyjczykom. Powinniśmy w pierwszej kolejności zatrudniać obywateli Wielkiej Brytanii!",
                     "option1": "Nie pamiętam, gdzie to czytałem, ale wiem, że obecnie pracuje więcej osób niż kiedykolwiek wcześniej, a bezrobocie spadło, a nie wzrosło. Więc najwyraźniej zatrudnieni migranci nie zabierają Brytyjczykom pracy. Obwinianie ich za bezrobocie to po prostu wygodna wymówka dla was, eurosceptyków, żeby dalej przepychać swoją polityczną agendę.",
-                    "option2": "Twierdzenie, że migranci odbierają pracę brytyjskim obywatelom, jest sprzeczne z realnym stanem rynku pracy w Wielkiej Brytanii, gdzie liczba zatrudnionych Brytyjczyków osiągnęła rekordowy poziom – w pierwszym kwartale tego roku pracowało około 32 miliony osób. Ponadto, od czasu referendum w sprawie Brexitu, liczba osób bezrobotnych zmniejszyła się o około 216 tysięcy, co wyraźnie wskazuje, że migranci nie zmniejszyli dostępności miejsc pracy dla obywateli Wielkiej Brytanii (źródło: FullFact).",
+                    "option2": "Twierdzenie, że migranci odbierają miejsca pracy obywatelom Wielkiej Brytanii, zniekształca obraz rynku zatrudnienia w UK. Liczba pracujących Brytyjczyków jest obecnie rekordowo wysoka — w pierwszym kwartale tego roku wynosiła około 32 miliony. Ponadto, od czasu referendum w sprawie Brexitu, liczba osób bezrobotnych zmniejszyła się o około 216 tysięcy, co wyraźnie wskazuje, że migranci nie zmniejszyli dostępności miejsc pracy dla obywateli Wielkiej Brytanii (źródło: FullFact).",
                     "correct": "1",
                     "explanation": "Opcja 1 opiera się na politycznej stronniczości („wy, eurosceptycy”) i nie przedstawia żadnych weryfikowalnych danych, które mogłyby podważyć dezinformację – dlatego nie stanowi przykładu skutecznej kontrnarracji."
                 }
@@ -788,14 +788,14 @@
     },
     "eduCard6Title": "Wskaż kontrnarrację!",
     "eduCard6Desc": "Czy potrafisz rozpoznać właściwą kontrmowę wobec nienawiści i dezinformacji?",
-    "eduCard6Button": "Rozpocznij aktywność"
+    "eduCard6Button": "Rozpocznij ćwiczenie"
 },
 "inspect": {
     "title": "Opis kanału",
-    "subtitle": "<p>Na tej stronie możesz szczegółowo przejrzeć zawartość pojedynczego kanału Telegram. Tabela pokazuje główne tematy kanału, ich procentowy udział we wszystkich wiadomościach, procent mowy nienawiści oraz wartość do weryfikacji (checkworthiness) dla każdego z nich oraz dominujący sentyment.</p><p>Po prawej stronie znajdziesz kluczowe informacje o kanale, natomiast chmury słów (word clouds) wizualizują, które terminy pojawiają się najczęściej w wiadomościach niezawierających mowy nienawiści i w tych zawierających mowę nienawiści oraz w wiadomościach nadających się do weryfikacji i nie nadających się do weryfikacji.</p><p>Użyj filtrów i przycisków, aby przełączać widoki między czatami kanałów a tematami albo aby dostosować typ wyświetlanej chmury słów. Jeśli najedziesz kursorem myszy na jakąkolwiek etykietę lub przycisk, zobaczysz krótkie wyjaśnienie jego działania.</p>"
+    "subtitle": "<p>Na tej stronie możesz szczegółowo przejrzeć zawartość pojedynczego kanału komunikatora Telegram. Tabela pokazuje główne tematy kanału, ich procentowy udział we wszystkich wiadomościach, procent mowy nienawiści oraz wartość do weryfikacji (checkworthiness) dla każdego z nich oraz dominujący sentyment.</p><p>Po prawej stronie znajdziesz kluczowe informacje o kanale, natomiast chmury słów (word clouds) wizualizują, które terminy pojawiają się najczęściej w wiadomościach niezawierających mowy nienawiści i w tych zawierających mowę nienawiści oraz w wiadomościach nadających się do weryfikacji i nie nadających się do weryfikacji.</p><p>Użyj filtrów i przycisków, aby przełączać widoki między czatami kanałów a tematami albo aby dostosować typ wyświetlanej chmury słów. Jeśli najedziesz kursorem myszy na jakąkolwiek etykietę lub przycisk, zobaczysz krótkie wyjaśnienie jego działania.</p>"
   },
   "channel": {
-    "title": "Eksploracja sieci",
+    "title": "Eksploracja sieci kanałów komunikatora Telegram",
     "subtitle": "<p>Poniżej możesz zobaczyć sieć kanałów Telegram, w której każdy kanał jest punktem („węzłem”). Kanały te są połączone, gdy Telegram automatycznie poleca jeden kanał innemu, zazwyczaj dlatego, że mają wielu wspólnych użytkowników.</p><p>Możesz zagłębić się w sieć i tabelę, aby odkryć prawdziwe kanały, które mogą rozpowszechniać dezinformację lub mowę nienawiści.</p><p>Dostosuj kolor i rozmiar kanałów, filtruj i zmieniaj kolejność ich cech, aby znaleźć te, które najbardziej Cię interesują.</p> <p>Kliknij na kanał, aby zobaczyć więcej informacji o nim, w tym jego zakres tematyczny.</p>",
     "infoTitle": "Informacje o kanale"
   },
@@ -864,16 +864,16 @@
       "hs": "Mowa nienawiści",
       "in": "Rekomendacje przychodzące",
       "out": "Rekomendacje wychodzące",
-      "out_degree": "Out-stop ",
+      "out_degree": "Stopień wychodzący",
       "in_degree": "Na stopniu ",
-      "n_in_recommendation": "W zaleceń",
-      "n_out_recommendation": "Zalecenia",
-      "n_in_recommended": "W zaleceń",
-      "n_out_recommended": "Zalecenia",
+      "n_in_recommendation": "Rekomendacje przychodzące",
+      "n_out_recommendation": "Rekomendacje wychodzące",
+      "n_in_recommended": "Rekomendacje przychodzące",
+      "n_out_recommended": "Rekomendacje wychodzące",
       "community": "Społeczność",
       "label": "Kolor",
       "louvain_community": "Każdy kolor reprezentuje inną społeczność",
-      "degree_centrality": "Stopień centralności"
+      "degree_centrality": "Centralność stopnia"
     },
     "size": {
       "disable": "Wyłącz rozmiar",
@@ -882,14 +882,14 @@
       "in": "Rekomendacje przychodzące",
       "out": "Rekomendacje wychodzące",
       "label": "Rozmiar",
-      "out_degree": "Out-stop ",
+      "out_degree": "Stopień wychodzący",
       "in_degree": "Na stopniu ",
       "n_in_recommendation": "Rekomendacje przychodzące",
       "n_out_recommendation": "Rekomendacje wychodzące",
       "n_in_recommended": "Rekomendacje przychodzące",
       "n_out_recommended": "Rekomendacje wychodzące",
       "scale": "Waga",
-      "degree_centrality": "Stopień centralności"
+      "degree_centrality": "Centralność stopnia"
     },
     "tooltip": {
       "label": "Etykieta",
@@ -901,7 +901,7 @@
       "cw": "Checkworthy",
       "in": "Rekomendacje przychodzące",
       "out": "Rekomendacje wychodzące",
-      "degree_centrality": "Stopień centralności:"
+      "degree_centrality": "Centralność stopnia:"
     },
     "fs": {
       "exit": "Wyjście",
@@ -914,7 +914,7 @@
       "title": "Tytuł",
       "count": "% wiadomości",
       "hs": "% mowy nienawiści",
-      "cw": "% checkwortiness",
+      "cw": "% checkworthiness",
       "sentiment_percentage": "Główny wydźwięk:"
     }
   },
@@ -940,14 +940,14 @@
     "chats": "Rozmowy",
     "hs_percentage": "Mowa nienawiści:",
     "cw_percentage": "Checkworthy:",
-    "degreeCentrality": "Stopień centralności:"
+    "degreeCentrality": "Centralność stopnia:"
   },
   "message": {
-    "title": "Spostrzeżenia czatu",
+    "title": "Wgląd w czaty",
     "reliability": {
-      "unknown": "nieznany",
-      "reliable": "wiarygodny",
-      "unreliable": "niewiarygodny"
+      "unknown": "Nieznany",
+      "reliable": "Wiarygodny",
+      "unreliable": "Niewiarygodny"
     },
     "header": {
       "id": "ID",
@@ -962,7 +962,7 @@
       "checkLabel": "Check worthy",
       "topic": "Temat",
       "target": "Obiekt",
-      "keywordsMatch": "Słowa kluczowe pasują",
+      "keywordsMatch": "Dopasowanie słów kluczowych",
       "counterspeech": "Tworzenie kontrnarracji",
       "averageReliability": "Wiarygodność adresów URL"
     },
@@ -974,19 +974,19 @@
       "startConversation": "Napisz kontrmowę",
       "error": "Błąd podczas pobierania danych",
       "startConversationTitle": "Napisz kontrmowę",
-      "startConversationDescription": "Wybierz zadanie tematyczne, nad którym chcesz pracować."
+      "startConversationDescription": "Wybierz temat zadania, nad którym chcesz pracować."
     },
-    "hate": "I hate",
+    "hate": "Hate",
     "notHate": "No hate",
-    "worthy": "Verifiable",
-    "notWorthy": "Not verifiable",
+    "worthy": "Weryfikowalny",
+    "notWorthy": "Nieweryfikowalny",
     "noData": "Brak dostępnych danych",
-    "noTarget": "Nie zidentyfikowany cel",
+    "noTarget": "Niezidentyfikowany cel",
     "target": "Kliknij tutaj, aby rozpocząć nową rozmowę",
     "filter": {
       "target": "Filtr według celu",
       "topic": "Filtr według tematu",
-      "hate": "Nienawiść mowa",
+      "hate": "Mowa nienawiści",
       "checkworthy": "Checkworthy",
       "all": "Wszystko",
       "yes": "Tak",
@@ -1017,7 +1017,7 @@
       "is_checkworthy": "Checkworthy",
       "wordcloud": "Ogólny",
       "isnot_checkworthy": "Non checkworthy",
-      "non_hate": "Brak nienawiści"
+      "non_hate": "Non hate"
     }
   },
   "error": {
@@ -1030,7 +1030,7 @@
     "documentName": "Nazwa dokumentu",
     "externalLink": "Link zewnętrzny",
     "text": "Tekst",
-    "confirm": "Potwierdzać",
+    "confirm": "Potwierdź",
     "dialogue": "Dialog",
     "groundTextSpans": "Dowody pomocnicze z artykułu",
     "startEmpty": "Napisz turę",
@@ -1041,8 +1041,8 @@
     "tooltip": {
       "label": "Nazwa kanału",
       "startEmpty": "Naciśnij tutaj, aby utworzyć pustą turę.",
-      "addDynamicTurn": "Automatycznie generuj sugestię na początek.<br>Nadal możesz to później zmodyfikować.",
-      "addRoundUp": "Dodaj pustą turę <em>zanim</em> przed turą wybraną.",
+      "addDynamicTurn": "Zacznij od automatycznie wygenerowanej propozycji.<br>W razie potrzeby możesz ją zmodyfikować.",
+      "addRoundUp": "Dodaj pustą turę <em>przed</em> wybraną.",
       "addRoundDown": "\nDodaj pustą turę <em>po</em> turze wybranej.",
       "magic": "Automatycznie generuje odpowiedź i wybiera powiązany tekst.<br><em>Nadal możesz to edytować.</em>",
       "delete": "Usuń tę turę na stałe.",
@@ -1054,7 +1054,7 @@
       "iri": "Wskaźnik ryzyka infodemii kanału (0-1)",
       "hs_percentage": "Procent wiadomości uznanych za mowę nienawiści",
       "cw_percentage": "Procent wiadomości uznanych za warte sprawdzenia",
-      "degreeCentrality": "Stopień centralności kanału w sieci (0-1)",
+      "degreeCentrality": "Centralność stopnia kanału w sieci (0-1)",
       "louvain_community": "Społeczność kanału Louvain"
     }
 },
@@ -1063,7 +1063,7 @@
       "title": "Przewodnik po sieci",
       "networkNavigation": {
         "title": "Nawigacja w sieci",
-        "description": "Ta sieć pokazuje zebrane <b>kanały Telegram</b> i ich połączenia.<br><br>Użyj myszy, aby <b>przeciągać i powiększać</b> sieć kanałów i kliknij kanał, aby zobaczyć jego szczegóły.<br><br>Po kliknięciu połączenie kanału się podświetli, po prawej stronie pojawi się panel informacyjny, a przycisk <i>‘Przeglądaj kanał’</i> zostanie aktywowany, jeśli jego wiadomości mogą być wyświetlone (tj. jeśli kanał jest rozszerzalny)."
+        "description": "Ta sieć pokazuje zebrane <b>kanały Telegram</b> i ich połączenia.<br><br>Użyj myszy, aby <b>przeciągać i powiększać</b> sieć kanałów i kliknij kanał, aby zobaczyć jego szczegóły.<br><br>Po kliknięciu połączenie kanału się podświetli, po prawej stronie pojawi się panel informacyjny, a przycisk <i>Przeglądaj kanał</i> zostanie aktywowany, jeśli jego wiadomości mogą być wyświetlone (tj. jeśli kanał jest rozszerzalny)."
       },
       "datasetLanguage": {
         "title": "Wybór języka zbioru danych",
@@ -1095,17 +1095,17 @@
       }
     },
     "channel": {
-      "title": "Przewodnik kanału",
+      "title": "Przewodnik po kanale",
       "topic": {
         "title": "Temat",
-        "description": "Począwszy od wszystkich wiadomości w wybranym czacie, najważniejsze tematy są wydobywane przy użyciu <b>modelowania tematów opartego na AI</b>: wiadomości są grupowane na podstawie podobieństw treści. Te klastry ujawniają najistotniejsze wątki dyskusji, pomagając zrozumieć, o czym mówi się na kanale."
+        "description": "Począwszy od wszystkich wiadomości w wybranym czacie, najważniejsze tematy są wydobywane przy użyciu <b>modelowania tematów opartego na AI</b>: wiadomości są grupowane na podstawie podobieństw treści. Klastry te ujawniają najistotniejsze wątki dyskusji, pomagając zrozumieć, o czym mówi się na kanale."
       },
       "hateSpeechPercent": {
-        "title": "Mowa nienawiści %",
+        "title": "Mowa nienawiści (%)",
         "description": "Przy użyciu <b>klasyfikacji opartej na AI</b> każda wiadomość jest analizowana pod kątem występowania mowy nienawiści (zob. <i>Glossary</i> po definicję). Obliczając <b>średni poziom mowy nienawiści</b> w wiadomościach powiązanych z danym tematem, pokazujemy, jak bardzo mowa nienawiści jest obecna w rozmowach."
       },
       "checkWorthinessPercent": {
-        "title": "Checkworthiness %",
+        "title": "Checkworthiness (%)",
         "description": "Dzięki <b>klasyfikacji opartej na AI</b> każdą wiadomość oceniamy, czy jest <b>warta weryfikacji</b> (check-worthy), tzn. czy zawiera twierdzenia wymagające fact-checkingu (szczegóły w <i>Glossary</i>). Obliczając <b>średni poziom treści wartych weryfikacji</b> w ramach tematu, podkreślamy rozpowszechnienie potencjalnie wprowadzających w błąd lub wątpliwych twierdzeń."
       },
       "prevalentSentiment": {
@@ -1129,7 +1129,7 @@
       },
       "target": {
         "title": "Grupa docelowa",
-        "description": "Grupa docelowa odnosi się do <b>osoby</b> lub <b>grupy osób</b> wspomnianych w wiadomości. W tym projekcie identyfikujemy, czy wiadomość zawiera odniesienie do jednej z następujących grup: <b>czarnoskórzy</b>, <b>LGBTQIA+</b>, <b>Żydzi</b>, <b>migranci</b>, <b>muzułmanie</b>, <b>osoby niepełnosprawne</b>, <b>kobiety</b>.<br><br>Obecność grupy docelowej sama w sobie nie oznacza nienawiści, ale pozwala na dalsze filtrowanie, aby zobaczyć, które wiadomości odnoszące się do tych grup są również <b>nienawistne</b>, <b>checkworthy</b> lub zawierają <b>niewiarygodne linki</b>."
+        "description": "Grupa docelowa odnosi się do <b>osoby</b> lub <b>grupy osób</b> wspomnianych w wiadomości. W tym projekcie sprawdzamy, czy wiadomość zawiera odniesienie do jednej z następujących grup: <b>czarnoskórzy</b>, <b>LGBTQIA+</b>, <b>Żydzi</b>, <b>migranci</b>, <b>muzułmanie</b>, <b>osoby niepełnosprawne</b>, <b>kobiety</b>.<br><br>Obecność grupy docelowej sama w sobie nie oznacza nienawiści, ale pozwala na dalsze filtrowanie, aby zobaczyć, które wiadomości odnoszące się do tych grup są również <b>nienawistne</b>, <b>checkworthy (warte sprawdzenia)</b> lub zawierają <b>niewiarygodne linki</b>."
       },
       "filtersTable": {
         "title": "Filtry i nagłówki tabel",
@@ -1138,7 +1138,7 @@
       "startConversation": {
         "title": "Rozpocznij rozmowę",
         "description": "Tworzenie kontrnarracji",
-        "details": "Naciśnij ten przycisk, aby wybrać temat do napisania counterspeech. Następnie zostaniesz przekierowany na <b>stronę pisania counterspeech</b>."
+        "details": "Kliknij ten przycisk, aby wybrać temat do tworzenia kontrnarracji (counterspeech). Następnie zostaniesz przekierowany na <b>stronę umożliwiającą tworzenie kontrnarracji</b>."
       }
     }
 },
