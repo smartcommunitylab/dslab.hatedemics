@@ -160,6 +160,11 @@
     "educational": {
         "title": "Actividades Educativas",
         "subtitle": "<p>En esta sección encontrarás ejercicios interactivos diseñados para ayudarte a comprender los mecanismos detrás de la desinformación y el discurso de odio.</p><p>Podrás explorar <b>sesgos cognitivos</b> y <b>falacias lógicas</b>, practicar técnicas de <b>verificación y debunking</b>, aprender los principios fundamentales de la <b>Declaración de Derechos Humanos</b> para entender los derechos fundamentales que protegen la dignidad humana y aplicar la <b>lectura lateral</b> para evaluar críticamente los contenidos en línea.</p><p>Cada actividad es una oportunidad para entrenar tu pensamiento crítico y volverte más resiliente frente a la manipulación y la desinformación.</p>",
+        "difficulty": {
+            "easy": "Fácil",
+            "medium": "Medio",
+            "difficult": "Difícil"
+          },
         "eduCard1Title": "Declaración de Derechos Humanos",
         "eduCard1Desc": "Descubre los principios centrales que protegen la dignidad humana.",
         "eduCard1Button": "Explorar los derechos",
@@ -393,6 +398,8 @@
             },
             "bias": {
                 "title": "Sesgos cognitivos y falacias lógicas",
+                "leftColumn": "Falacias/Sesgos",
+                "rightColumn": "Situaciones",
                 "description":  "<br><br><strong>Falacias lógicas asociadas con el discurso de odio y la desinformación</strong><br>El contenido del discurso de odio y la desinformación puede parecer muy convincente. Esto se debe a que quienes difunden estos mensajes suelen basarse en falacias lógicas: argumentos que los grupos de odio utilizan para justificar sus causas y creencias, buscando que quienes se encuentren con ese contenido lo consideren razonable y verdadero. Las falacias lógicas pueden basarse en premisas falsas, en premisas verdaderas pero con conclusiones erróneas, o en argumentos que parecen coherentes pero que en realidad no lo son. Algunas de estas falacias se generan con la intención de engañar o de hacer que la desinformación se vuelva viral. Existen muchas falacias comunes en el discurso de odio. Algunos ejemplos son: argumentum ad populum (apelación al pueblo), ipse dixit (él lo dijo) y pendiente resbaladiza.<br><br><strong>Sesgos Cognitivos</strong><br>Nuestro cerebro utiliza atajos mentales para ayudarnos a tomar decisiones rápidas en la vida cotidiana: los sesgos cognitivos. Estos atajos nos permiten centrarnos solo en la información más relevante, evitando sentirnos abrumadas/os por todo lo que vemos y escuchamos. Esto hace que el cerebro funcione de manera más eficiente. Sin embargo, la desventaja es que estos atajos pueden llevarnos a cometer errores o malinterpretar situaciones debido a nuestros sesgos cognitivos. Todas las personas estamos expuestas a estos sesgos cuando tomamos decisiones. Quienes difunden desinformación conocen muy bien cómo funcionan y los aprovechan para manipularnos. Algunos ejemplos de sesgos cognitivos son: sesgo de grupo, sesgo de disponibilidad y sesgo de causalidad. Puedes aprender más sobre falacias lógicas y sesgos cognitivos en el <a href='https://drive.google.com/file/d/1aR1xqdXacMUifbxFn4mK2Vi6Wa1hURKA/view?usp=drive_link'>kit educativo de Hatedemics</a>.",
                 "objectivesTitle": "Objetivos de la actividad",
                 "objectives": "<ul><li><strong>Desarrollar conciencia</strong> sobre los mecanismos sociales, los sesgos cognitivos y las falacias lógicas.</li><li><strong>Fortalecer la competencia de pensamiento crítico</strong></li></ul><p>los mecanismos sociales, los sesgos cognitivos y las falacias lógicas son factores que contribuyen a la propagación del discurso de odio y la desinformación. Al conocer algunos de ellos, podemos ser más inmunes a ellos y más críticos ante otras formas de manipulación.</p>",

@@ -3,37 +3,75 @@
     <h1 class="text-h4 font-weight-bold mb-4">{{ t("educational.tasks.bias.title") }}</h1>
     <p class="mb-8">{{ t("educational.tasks.bias.task") }}</p>
 
-    <v-row v-for="i in leftColumn.length" :key="i" class="mb-2">
-      <v-col cols="5">
-        <v-card
-          :style="getItemStyle(leftColumn[i - 1].id, 'left')"
-          :class="getItemClass(leftColumn[i - 1].id, 'left')"
-          @click="selectItem(leftColumn[i - 1], 'left')"
-        >
-          <v-card-text class="text-h7 text-center mt-4">
-            <!-- render HTML for left label -->
-            <div v-html="leftColumn[i - 1].label"></div>
-          </v-card-text>
-        </v-card>
-      </v-col>
-      <v-col cols="5">
-        <v-card
-          :style="getItemStyle(rightColumn[i - 1].id, 'right')"
-          :class="getItemClass(rightColumn[i - 1].id, 'right')"
-          @click="selectItem(rightColumn[i - 1], 'right')"
-        >
-          <v-card-text class="mt-4">
-            <!-- render HTML for right label -->
-            <div v-html="rightColumn[i - 1].label"></div>
+    <div class="cards-container">
+      <div class="column-wrapper">
+        <h3 class="mb-2">{{ t("educational.tasks.bias.leftColumn") }}</h3>
+        <div class="scrollable-column">
+          <v-card
+            v-for="item in leftColumn"
+            :key="item.id"
+            :style="getItemStyle(item.id, 'left')"
+            :class="getItemClass(item.id, 'left')"
+            @click="selectItem(item, 'left')"
+            class="mb-2"
+          >
+            <v-card-text class="card-content">
+              <div v-html="item.label" class="truncated-text"></div>
+              <v-btn
+                icon
+                size="x-small"
+                @click.stop="openModal(item)"
+                class="expand-btn"
+              >
+                <v-icon size="16">mdi-arrow-expand</v-icon>
+              </v-btn>
+            </v-card-text>
+          </v-card>
+        </div>
+      </div>
 
-            <span v-if="getPairedLabel(rightColumn[i - 1].id)" class="paired-label">
-              <!-- paired label also as HTML -->
-              <span v-html="getPairedLabel(rightColumn[i - 1].id)"></span>
-            </span>
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
+      <div class="column-wrapper">
+        <h3 class="mb-2">{{ t("educational.tasks.bias.rightColumn") }}</h3>
+        <div class="scrollable-column">
+          <v-card
+            v-for="item in rightColumn"
+            :key="item.id"
+            :style="getItemStyle(item.id, 'right')"
+            :class="getItemClass(item.id, 'right')"
+            @click="selectItem(item, 'right')"
+            class="mb-2"
+          >
+          <v-card-text class="card-content" :class="{ 'has-paired-label': getPairedLabel(item.id) }">
+  <span v-if="getPairedLabel(item.id)" class="paired-label">
+    <span v-html="getPairedLabel(item.id)"></span>
+  </span>
+  <div v-html="item.label" class="truncated-text"></div>
+  <v-btn
+    icon
+    size="x-small"
+    @click.stop="openModal(item)"
+    class="expand-btn"
+  >
+    <v-icon size="16">mdi-arrow-expand</v-icon>
+  </v-btn>
+</v-card-text>
+          </v-card>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for expanded content -->
+    <v-dialog v-model="showExpandModal" max-width="600">
+      <v-card>
+        <!-- <v-card-title>{{ t("educational.tasks.bias.fullContent") }}</v-card-title> -->
+        <v-card-text>
+          <div v-html="expandedItem?.label"></div>
+        </v-card-text>
+        <v-card-actions>
+          <v-btn color="primary" @click="showExpandModal = false">{{ t('common.close') }}</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
 
     <v-row justify="center" class="mt-4">
       <v-col cols="12" class="text-center">
@@ -127,12 +165,52 @@ const selectedRight = ref<PairItem | null>(null);
 const matchedPairs = ref<MatchedPair[]>([]);
 const correctCount = ref(0);
 const incorrectCount = ref(0);
+const showExpandModal = ref(false);
+const expandedItem = ref<PairItem | null>(null);
 
+function openModal(item: PairItem) {
+  expandedItem.value = item;
+  showExpandModal.value = true;
+}
+// Select item
 // Select item
 function selectItem(item: PairItem, side: "left" | "right") {
-  if (side === "left") selectedLeft.value = item;
-  else selectedRight.value = item;
+  // Check if item is already paired
+  const existingPairIndex = matchedPairs.value.findIndex(pair =>
+    side === "left" ? pair.left.id === item.id : pair.right.id === item.id
+  );
 
+  // If already paired, unpair it
+  if (existingPairIndex !== -1) {
+    const removedPair = matchedPairs.value.splice(existingPairIndex, 1)[0];
+    
+    // Set the clicked item as selected
+    if (side === "left") {
+      selectedLeft.value = removedPair.left;
+    } else {
+      selectedRight.value = removedPair.right;
+    }
+    return;
+  }
+
+  // Normal selection logic
+  if (side === "left") {
+    // If clicking the same left item again and no right selected, deselect it
+    if (selectedLeft.value?.id === item.id && !selectedRight.value) {
+      selectedLeft.value = null;
+      return;
+    }
+    selectedLeft.value = item;
+  } else {
+    // If clicking the same right item again, deselect it
+    if (selectedRight.value?.id === item.id) {
+      selectedRight.value = null;
+      return;
+    }
+    selectedRight.value = item;
+  }
+
+  // If both selected, create pair
   if (selectedLeft.value && selectedRight.value) {
     matchedPairs.value.push({
       left: selectedLeft.value,
@@ -228,7 +306,6 @@ function resetAll() {
 }
 .matched-card {
   opacity: 0.85;
-  pointer-events: none;
   filter: grayscale(0.3);
 }
 .paired-label {
@@ -254,5 +331,125 @@ function resetAll() {
   text-overflow: ellipsis;
   vertical-align: middle;
 }
+.cards-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
 
+.column-wrapper {
+  flex: 1;
+  max-width: 45%;
+}
+
+.scrollable-column {
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.scrollable-column::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-column::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.v-card {
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  transition: 0.3s;
+  min-height: 80px;
+}
+
+.card-content {
+  position: relative;
+  padding-right: 40px;
+}
+
+.truncated-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.expand-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.selected-card {
+  border: 2px solid #1976d2;
+  background-color: #e3f2fd;
+}
+
+.matched-card {
+  opacity: 0.85;
+}
+
+.paired-label {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  font-weight: bold;
+}
+.has-paired-label {
+  padding-top: 36px !important; /* Spazio per la label */
+}
+
+.paired-label {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  background-color: rgba(25, 118, 210, 0.1);
+  border: 1px solid rgba(25, 118, 210, 0.3);
+  border-radius: 4px;
+  font-weight: bold;
+  max-width: calc(100% - 56px); /* Lascia spazio al bottone expand */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.scrollable-column {
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* Scrollbar sempre visibile */
+.scrollable-column::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollable-column::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.scrollable-column::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.scrollable-column::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Per Firefox */
+.scrollable-column {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
 </style>
