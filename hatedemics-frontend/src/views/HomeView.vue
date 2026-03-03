@@ -52,7 +52,7 @@ function handleNeverShow() {
         >
           <div>
             <div class="d-flex align-center mb-2">
-              <v-icon color="primary" class="mr-2">mdi-web</v-icon>
+              <v-icon color="primary" class="mr-2">mdi-school-outline</v-icon>
               <h2 class="text-h6 font-weight-bold mb-1">{{ t("home.educational") }}</h2>
             </div>
             <p class="text-body-1 mb-4">
