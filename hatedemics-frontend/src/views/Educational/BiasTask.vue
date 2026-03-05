@@ -235,12 +235,12 @@ const rightColumn = ref<PairItem[]>(
 
 // Color palette
 const colors = [
-  { bg: "#e3f2fd", border: "#1976d2" },
-  { bg: "#e8f5e9", border: "#388e3c" },
-  { bg: "#fff3e0", border: "#f57c00" },
-  { bg: "#fce4ec", border: "#c2185b" },
-  { bg: "#ede7f6", border: "#7e57c2" },
-  { bg: "#f3e5f5", border: "#8e24aa" },
+  { bg: "#e3f2ff", border: "#8EC5FF" }, // clear pastel blue
+  { bg: "#f3e5ff", border: "#D6A4FF" }, // pastel violet
+  { bg: "#ffe6f7", border: "#FFB3E6" }, // light magenta-pink
+  { bg: "#fff8e0", border: "#FFE28A" }, // strong pastel yellow
+  { bg: "#ffeedf", border: "#FFC09F" }, // soft orange-peach
+  { bg: "#e8e9ff", border: "#B7B9FF" },
 ];
 let colorIndex = 0;
 const getNextColor = () => colors[colorIndex++ % colors.length];

@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
-
-import { ref, onMounted } from 'vue';
-const { t } = useI18n();
+import { ref, onMounted,computed } from 'vue';
+const { t,locale } = useI18n();
 
 const showWarning = ref(false);
 const dontShowAgain = ref(false);
@@ -13,7 +12,10 @@ onMounted(() => {
     showWarning.value = true;
   }
 });
-
+const guidePdf = computed(() => {
+  const lang = locale.value.split("-")[0];
+  return `/toolkit/toolkit_${lang}.pdf`;
+});
 function acceptWarning() {
   if (dontShowAgain.value) {
     localStorage.setItem('edu-warning-accepted', 'true');
@@ -32,6 +34,17 @@ function acceptWarning() {
             <span class="ms-5">{{ expanded ? t("common.showLess") : t("common.showMore") }}</span>
             <v-icon :icon="expanded ? 'mdi-menu-up' : 'mdi-menu-down'" class="me-2" />
             <v-spacer />
+            <v-btn
+              color="primary"
+              variant="flat"
+              size="large"
+              :href="guidePdf"
+              target="_blank"
+              prepend-icon="mdi-book-open"
+              class="me-2"
+            >
+              {{ t("educational.toolkit") }}
+            </v-btn>
           </div>
         </v-expansion-panel-title>
         <v-expansion-panel-text>

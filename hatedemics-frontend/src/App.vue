@@ -13,7 +13,7 @@ import {
 import { useTheme } from 'vuetify';
 
 // Components
-import logo from '@/assets/logo.svg';
+import logo from '@/assets/credits/hatedemics_transparent.png';
 import AppBarMenuComponent from '@/components/AppBarMenuComponent.vue';
 import DrawerComponent from '@/components/DrawerComponent.vue';
 import { useRouter, useRoute } from 'vue-router'
@@ -22,7 +22,6 @@ const router = useRouter()
 const route = useRoute()
 /** Vuetify Theme */
 const theme = useTheme();
-
 /** Global Store */
 const globalStore = useGlobal();
 
@@ -105,7 +104,11 @@ onMounted(() => {
         <v-icon>mdi-arrow-left</v-icon>
       </v-btn>
       
-      <v-app-bar-title tag="h1" class="font-weight-bold">{{ title }}</v-app-bar-title>
+      <v-app-bar-title tag="h1" class="font-weight-bold ">
+      <div class="header-bar">
+        <v-img :src="logo" class="mr-2 img-logo" max-height="30" max-width="30"  />{{ title }}
+        </div>
+      </v-app-bar-title>
       <v-spacer />
       <app-bar-menu-component />
       <v-progress-linear
@@ -137,7 +140,7 @@ onMounted(() => {
     </v-snackbar>
     <v-footer app elevation="3" color="primary">
   <span class="text-white mr-4">2025 &copy; 
-    <a href="https://hatedemics.eu" class="text-white" target="_blank" rel="noopener noreferrer">Hatedemics</a>
+    <a href="https://hatedemics.eu" class="text-white" target="_blank" rel="noopener noreferrer">Hatedemics</a> is a Project Funded by the European Union CERV-2023-CHAR-LITI-SPEECH 🇪🇺
   </span>
 </v-footer>
   </v-app>
@@ -174,7 +177,14 @@ html {
   background-color: map-get(settings.$grey, "base");
   box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.1);
 }
-
+.header-bar{
+  display:flex;
+ 
+}
+.img-logo{
+  background:white;
+  border-radius:2px;
+}
 // Fixed a bug that the theme color is interrupted when scrolling
 .v-application {
   overflow-y: auto;

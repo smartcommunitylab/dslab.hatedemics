@@ -536,7 +536,7 @@ export default {
           <v-btn
               color="primary"
               variant="flat"
-              size="small"
+              size="large"
               @click.stop="showExploreGuide = true"
               prepend-icon="mdi-book-open"
               class="me-2"
