@@ -891,6 +891,7 @@
             "title": "Rete Telegram – Statistiche dei Nodi",
             "date": "Data",
             "id": "ID",
+            "maintopic":"Argomento principale",
             "messages": "Messaggi",
             "partecipants": "Utenti",
             "IRI": "Infodemic Risk",
@@ -986,6 +987,7 @@
     "channelInfo": {
         "about": "Informazioni:",
         "channelId": "ID Canale:",
+        "maintopic":"Argomento principale:",
         "label": "Nome del Canale:",
         "title": "Titolo",
         "description": "Descrizione:",

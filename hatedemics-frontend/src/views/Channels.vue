@@ -41,8 +41,9 @@ const languages = [
 ];
 
 const headers = computed(() => [
-  { title: t("channelTable.header.label"), key: "label", sortable: true   },
-  { title: t("channelTable.header.messages"), key: "message_count", sortable: true   },
+  { title: t("channelTable.header.label"), key: "label", sortable: true, align:'center'   },
+  { title: t("channelTable.header.maintopic"), key: "maintopic", sortable: true ,align:'center'  },
+  { title: t("channelTable.header.messages"), key: "message_count", sortable: true,align:'center'   },
   {
     title: t("channelTable.header.partecipants"),
     key: "participants_count",
@@ -259,8 +260,9 @@ const safeNumberOrDash = (val: number | null | undefined, decimals = 2) => {
                   :class="{ selected: item.id === selectedChannelInfo?.id }"
                   class="hover-row"
                 >
-                  <td class="text-center">{{ safeText(item.label) }}</td>
-                  <td class="text-center">{{ safeNumber(item.message_count) }}</td>
+                <td class="text-center">{{ safeText(item.label) }}</td>
+                <td class="text-center">{{ safeText(item.maintopic) }}</td>
+                <td class="text-center">{{ safeNumber(item.message_count) }}</td>
                   <td class="text-center">{{ safeNumber(item.participants_count) }}</td>
                   <td class="text-center">{{ safeNumberOrDash(item.degree_centrality) }}</td>
                   <td class="text-center">{{ safeNumberOrDash(item.iri) }}</td>

@@ -922,6 +922,7 @@
     "channelTable": {
         "header": {
             "title": "Network tat-Telegram - Statistika tal-punti (nodes)",
+            "maintopic": "Suġġett ewlieni",
             "date": "Data",
             "id": "ID",
             "messages": "Numru ta’ messaġġi",
@@ -1020,6 +1021,7 @@
     "channelInfo": {
         "about": "Dwar:",
         "channelId": "ID tal-kanal:",
+        "maintopic": "Suġġett ewlieni:",
         "title": "Titlu",
         "description": "Deskrizzjoni:",
         "nMessages": "Numru ta’ messaġġi:",

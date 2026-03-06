@@ -889,6 +889,7 @@
     "channelTable": {
         "header": {
             "title": "Red de Telegram - Estadísticas de los nodos",
+            "maintopic": "Tema principal",
             "date": "Fecha",
             "id": "IDENTIFICACIÓN",
             "messages": "Número de mensajes",
@@ -992,6 +993,7 @@
     "channelInfo": {
         "about": "Acerca de:",
         "channelId": "ID de canal:",
+        "maintopic": "Tema principal:",
         "label": "Nombre del canal",
         "title": "Título",
         "description": "Descripción:",

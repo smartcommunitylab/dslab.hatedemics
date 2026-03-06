@@ -923,6 +923,7 @@
     "channelTable": {
         "header": {
             "title": "Telegram Network - Node Statistics",
+            "maintopic": "Main topic",
             "date": "Date",
             "id": "ID",
             "messages": "Number of messages",
@@ -1026,6 +1027,7 @@
     "channelInfo": {
         "about": "About:",
         "channelId": "Channel ID:",
+        "maintopic": "Main topic:",
         "label": "Channel Name:",
         "title": "Title",
         "description": "Description:",

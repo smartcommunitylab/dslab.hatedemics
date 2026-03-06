@@ -820,6 +820,7 @@
   "channelTable": {
     "header": {
       "title": "Sieć platformy Telegram – statystyka węzłów",
+      "maintopic": "Główny temat",
       "date": "Data",
       "id": "ID",
       "messages": "Liczba wiadomości",
@@ -922,6 +923,7 @@
   "channelInfo": {
     "about": "Opis:",
     "channelId": "Identyfikator kanału:",
+    "maintopic": "Główny temat:",
     "label": "Nazwa kanału:",
     "title": "Tytuł",
     "description": "Opis:",
