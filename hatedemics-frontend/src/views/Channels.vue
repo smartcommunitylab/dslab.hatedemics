@@ -41,9 +41,9 @@ const languages = [
 ];
 
 const headers = computed(() => [
-  { title: t("channelTable.header.label"), key: "label", sortable: true, align:'center'   },
-  { title: t("channelTable.header.maintopic"), key: "maintopic", sortable: true ,align:'center'  },
-  { title: t("channelTable.header.messages"), key: "message_count", sortable: true,align:'center'   },
+  { title: t("channelTable.header.label"), key: "label", sortable: true, align:'center' as const   },
+  { title: t("channelTable.header.maintopic"), key: "maintopic", sortable: true ,align:'center' as const },
+  { title: t("channelTable.header.messages"), key: "message_count", sortable: true,align:'center' as const  },
   {
     title: t("channelTable.header.partecipants"),
     key: "participants_count",
