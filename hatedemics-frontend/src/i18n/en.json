@@ -22,7 +22,7 @@
         "quickGuide": "Glossary",
         "counterspeech": "Counterspeech",
         "projects": "Topics",
-        "credits": "Credits",
+        "credits": "Who we are",
         "logout": "Logout"
     },
     "counterspeechGuide": {
@@ -158,6 +158,7 @@
         "neverShow": "Don't show again"
     },
     "educational": {
+        "toolkit":"Toolkit",
         "title": "Educational Activities",
         "subtitle": "<p>In this section you will find interactive exercises designed to help you understand the mechanisms behind disinformation and hate speech.</p><p>You can explore <b>cognitive biases</b> and <b>logical fallacies</b>, practice <b>debunking techniques</b>, learn the principles of the <b>Human Rights Declaration</b> to understand the fundamental rights protecting human dignity, and apply <b>lateral reading</b> skills to critically evaluate online content.</p><p>Each activity is an opportunity to train your critical thinking and become more resilient against manipulation and misinformation.</p>",
         "difficulty": {
@@ -922,6 +923,7 @@
     "channelTable": {
         "header": {
             "title": "Telegram Network - Node Statistics",
+            "maintopic": "Main topic",
             "date": "Date",
             "id": "ID",
             "messages": "Number of messages",
@@ -1025,6 +1027,7 @@
     "channelInfo": {
         "about": "About:",
         "channelId": "Channel ID:",
+        "maintopic": "Main topic:",
         "label": "Channel Name:",
         "title": "Title",
         "description": "Description:",

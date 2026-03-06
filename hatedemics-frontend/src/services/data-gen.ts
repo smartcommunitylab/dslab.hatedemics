@@ -8,6 +8,7 @@ import axiosInstance from './api';
 export type Node = {
     id: string;
     label: string;
+    maintopic:string;
     message_count: number;
     participants_count: number;
     name: string;
@@ -52,6 +53,7 @@ async function initData() {
         nodes.push({
             id: `${nodesData.data[node].channel_int}`,
             label: `${nodesData.data[node].label}`,
+            maintopic:`${nodesData.data[node].maintopic}`,
             message_count: nodesData.data[node].message_count,
             participants_count: nodesData.data[node].participants_count,
             name: `${nodesData.data[node].channel_id}`,

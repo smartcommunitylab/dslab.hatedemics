@@ -22,7 +22,7 @@
         "quickGuide": "Glossario",
         "counterspeech": "Contro-narrativa",
         "projects": "Argomenti",
-        "credits": "Crediti",
+        "credits": "Chi siamo",
         "logout": "Esci"
     },
     "counterspeechGuide": {
@@ -158,6 +158,7 @@
         "neverShow": "Non mostrare più questo messaggio"
     },
     "educational": {
+        "toolkit":"Toolkit",
         "title": "Attività Educative",
         "subtitle": "<p>In questa sezione troverai esercizi interattivi pensati per aiutarti a comprendere i meccanismi alla base della disinformazione e dei discorsi d'odio.</p><p>Potrai esplorare <b>bias cognitivi</b> e <b>fallacie logiche</b>, esercitarti con tecniche di <b>debunking</b>, conoscere i principi fondamentali della <b>Dichiarazione dei Diritti Umani</b> per capire come viene tutelata la dignità umana e applicare tecniche di <b>lettura laterale</b> per valutare criticamente i contenuti online.</p><p>Ogni attività è un’occasione per allenare il pensiero critico e diventare più resistente alla manipolazione e alla disinformazione.</p>",
         "difficulty": {
@@ -890,6 +891,7 @@
             "title": "Rete Telegram – Statistiche dei Nodi",
             "date": "Data",
             "id": "ID",
+            "maintopic":"Argomento principale",
             "messages": "Messaggi",
             "partecipants": "Utenti",
             "IRI": "Infodemic Risk",
@@ -985,6 +987,7 @@
     "channelInfo": {
         "about": "Informazioni:",
         "channelId": "ID Canale:",
+        "maintopic":"Argomento principale:",
         "label": "Nome del Canale:",
         "title": "Titolo",
         "description": "Descrizione:",

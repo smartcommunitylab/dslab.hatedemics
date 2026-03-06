@@ -196,7 +196,7 @@ const loadMore = (event: { target: any }) => {
             <v-btn
               color="primary"
               variant="flat"
-              size="small"
+              size="large"
               @click.stop="showExploreGuide = true"
               prepend-icon="mdi-book-open"
               class="me-2"
@@ -207,7 +207,7 @@ const loadMore = (event: { target: any }) => {
             <v-btn
               color="primary"
               variant="flat"
-              size="small"
+              size="large"
               @click.stop="showTutorialDiscussion = true"
               prepend-icon="mdi-help"
               class="me-2"

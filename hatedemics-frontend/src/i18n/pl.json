@@ -22,7 +22,7 @@
     "quickGuide": "Słowniczek",
     "counterspeech": "Kontrnarracje",
     "projects": "Tematy",
-    "credits": "Twórcy",
+    "credits": "Kim jesteśmy",
     "logout": "Wyloguj"
   },
   "counterspeechGuide": {
@@ -158,6 +158,7 @@
     "neverShow": "Nie pokazuj ponownie"
     },
   "educational": {
+    "toolkit":"Toolkit",
     "title": "Ćwiczenia edukacyjne",
     "subtitle": "<p>W tej sekcji znajdziesz interaktywne ćwiczenia zaprojektowane, aby pomóc Ci zrozumieć mechanizmy stojące za dezinformacją i mową nienawiści.</p><p>Możesz odkrywać <b>biasy poznawcze</b> i <b>błędy logiczne</b>, ćwiczyć techniki <b>demaskowania</b>, poznać podstawowe zasady <b>Deklaracji Praw Człowieka</b>, aby zrozumieć ochronę ludzkiej godności, oraz stosować <b>czytanie w poziomie</b>, aby krytycznie oceniać treści online.</p><p>Każde ćwiczenie to okazja do rozwijania myślenia krytycznego i budowania odporności na manipulację oraz dezinformację.</p>",
     "difficulty": {
@@ -819,6 +820,7 @@
   "channelTable": {
     "header": {
       "title": "Sieć platformy Telegram – statystyka węzłów",
+      "maintopic": "Główny temat",
       "date": "Data",
       "id": "ID",
       "messages": "Liczba wiadomości",
@@ -921,6 +923,7 @@
   "channelInfo": {
     "about": "Opis:",
     "channelId": "Identyfikator kanału:",
+    "maintopic": "Główny temat:",
     "label": "Nazwa kanału:",
     "title": "Tytuł",
     "description": "Opis:",

@@ -45,7 +45,12 @@ onMounted(async () => {
             <span class="text-wrap">{{ selectedChannelInfo.preprocessed_about }}</span>
             
           </v-col>
-
+          <v-col cols="12" >
+            <v-icon class="mr-2" color="primary">mdi-information</v-icon>
+            <span class="font-weight-bold">{{ t("channelInfo.maintopic") }}</span>
+            <span class="text-wrap">{{ selectedChannelInfo.maintopic }}</span>
+          </v-col>
+          
           <v-col cols="12" v-if="selectedChannelInfo?.message_count">
             <v-icon class="mr-2" color="primary">mdi-message</v-icon>
             <span class="font-weight-bold">{{ t("channelInfo.nMessages") }}</span>

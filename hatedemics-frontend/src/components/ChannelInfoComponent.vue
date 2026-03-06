@@ -76,6 +76,22 @@ watch(selectedChannelInfo, async (newVal) => {
           </v-tooltip>
           <v-tooltip>
             <template v-slot:activator="{ props }">
+              <v-col
+                cols="12"
+                v-if="selectedChannelInfo?.maintopic"
+                v-bind="props"
+              >
+                <v-icon class="mr-2" color="primary">mdi-information</v-icon>
+                <span class="font-weight-bold">{{ t("channelInfo.maintopic") }}</span>
+                <span class="text-wrap">{{
+                  selectedChannelInfo.maintopic
+                }}</span>
+              </v-col>
+            </template>
+            <div class="tooltip-html" v-html="t('dialog.tooltip.about')"></div>
+          </v-tooltip>
+          <v-tooltip>
+            <template v-slot:activator="{ props }">
               <v-col cols="12" v-if="selectedChannelInfo?.message_count" v-bind="props">
                 <v-icon class="mr-2" color="primary">mdi-message</v-icon>
                 <span class="font-weight-bold">{{ t("channelInfo.nMessages") }}</span>
