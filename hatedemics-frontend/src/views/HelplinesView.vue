@@ -60,8 +60,8 @@
               lg="4"
             >
               <v-card elevation="2" class="h-100 pa-4" color="#f4f6fa">
-                <v-card-title class="text-subtitle-1 font-weight-bold pb-1">
-                  {{ item.name }}
+                <v-card-title class="text-subtitle-1 font-weight-bold pb-1 text-wrap">
+                    {{ item.name }}
                 </v-card-title>
                 <v-card-text>
                   <p class="text-body-2 mb-3">{{ item.description }}</p>
