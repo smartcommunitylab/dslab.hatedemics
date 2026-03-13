@@ -23,6 +23,7 @@
         "counterspeech": "Counterspeech",
         "projects": "Topics",
         "credits": "Who we are",
+        "helplines": "Helplines",
         "logout": "Logout"
     },
     "counterspeechGuide": {
@@ -158,7 +159,7 @@
         "neverShow": "Don't show again"
     },
     "educational": {
-        "toolkit":"Toolkit",
+        "toolkit": "Toolkit",
         "title": "Educational Activities",
         "subtitle": "<p>In this section you will find interactive exercises designed to help you understand the mechanisms behind disinformation and hate speech.</p><p>You can explore <b>cognitive biases</b> and <b>logical fallacies</b>, practice <b>debunking techniques</b>, learn the principles of the <b>Human Rights Declaration</b> to understand the fundamental rights protecting human dignity, and apply <b>lateral reading</b> skills to critically evaluate online content.</p><p>Each activity is an opportunity to train your critical thinking and become more resilient against manipulation and misinformation.</p>",
         "difficulty": {
@@ -1259,5 +1260,195 @@
     },
     "locale": {
         "selectLanguage": "Select interface language"
+    },
+    "helplines": {
+        "title": "Helplines",
+        "description": "Support services for victims of hate speech, discrimination, or related crimes.",
+        "items": [
+            {
+                "country": "Europe",
+                "name": "Victim support Europe",
+                "phone": "116006",
+                "email": "",
+                "website": "https://victim-support.eu",
+                "description": "Through trained professionals, the 116006 helpline provides initial information and care for all victims of general crimes (including hate crimes) who request it anonymously and confidentially: in social, legal, and psychological matters, before, during, and after seeking redress."
+            },
+            {
+                "country": "Europe",
+                "name": "Child Helpline International",
+                "phone": "116 111",
+                "email": "",
+                "website": "https://childhelplineinternational.org/helplines/116-111-eu/",
+                "description": "Child helplines are free and confidential services for children (18 years and under) and/or young people (25 years and under), where they can talk about anything they want, via phone, chat and other methods of communication. 116 111 is the number specially reserved for child helplines in Europe. In the website you can see which members of Child Helpline International are the operators of the 116 111 number in their countries."
+            },
+            {
+                "country": "Europe",
+                "name": "Cyber Rights Organization Helpline",
+                "phone": "0031 70 5690518",
+                "email": "mail: info@cyberights.org \nphone:  ",
+                "website": "https://cyberights.org/helpline/",
+                "description": "A direct and active 24/7 line that combines the legal and IT technical support activities of a team of experts for victims of digital violence.\nThe helpline provides legal assistance from the early stages of the complaint to the removal of harmful content published on the Internet.\n"
+            },
+            {
+                "country": "Europe",
+                "name": "European Union Agency for Fundamental Rights",
+                "phone": "",
+                "email": "",
+                "website": "https://fra.europa.eu/en/about-fundamental-rights/where-to-turn",
+                "description": "A dedicated tool to choose the authority where to seek help to in every European country. "
+            },
+            {
+                "country": "Italy",
+                "name": "Polizia Postale",
+                "phone": "112 or 113",
+                "email": "",
+                "website": "https://www.commissariatodips.it/segnalazioni/segnala-online/index.html ",
+                "description": "National police for encountering computer crime and online illegal activities. Online reporting at the link. In serious cases, contact the phone number."
+            },
+            {
+                "country": "Italy",
+                "name": "UNAR  - Ufficio nazionale antidiscriminazioni razziali",
+                "phone": "800 901010 from monday to friday (8 am - 5 pm)",
+                "email": "contactcenter@unar.it",
+                "website": "https://unar.it/portale/fai-una-segnalazione",
+                "description": "Online reporting of discriminatory acts of which you are a victim, witness, or reporter."
+            },
+            {
+                "country": "Italy",
+                "name": "OSCAD - Osservatorio per la sicurezza contro gli atti discriminatori",
+                "phone": "",
+                "email": "oscad@dcpc.interno.it",
+                "website": "https://www.carabinieri.it/arma/partners/osservatorio-per-la-sicurezza-contro-gli-atti-discriminatori-oscad",
+                "description": "It provides valuable support to people who are victims of discriminatory crimes (hate crimes)."
+            },
+            {
+                "country": "Spain",
+                "name": "Oficina Nacional de Lucha Contra los Delitos de Odio",
+                "phone": "Policía Nacional: 900 100 091\n\nGuardia Civil: 900 101 062",
+                "email": "asistencia.ondod@interior.es",
+                "website": "https://oficinanacional-delitosdeodio.ses.mir.es/publico/ONDOD/en/denunciar.html",
+                "description": "Call emergency services (091 or 062) if police intervention is necessary, checking first if you need medical attention. Report the incident to law enforcement with all relevant evidence and support, requesting an interpreter if necessary. Provide detailed information about the event and perpetrator, the authorities will inform you of your rights and available legal and psychological support services."
+            },
+            {
+                "country": "Spain",
+                "name": "Teléfono ANAR",
+                "phone": "900202010",
+                "email": "",
+                "website": "https://www.anar.org/que-hacemos/telefono-chat-anar/",
+                "description": "Immediate support for any issue that may affect a minor, including relationship difficulties, different forms of violence, psychological problems, among others. Free and confidential helpline."
+            },
+            {
+                "country": "Poland",
+                "name": "Telefon zaufania dla dzieci i młodzieży",
+                "phone": "phone: 116 111\nchat: https://116111.pl/czatuj/",
+                "email": "https://116111.pl/napisz/",
+                "website": "https://116111.pl",
+                "description": "Helpline for children and young adults in Poland, open 24/7. You can also email consultants (psychologists, lawyers, educators) or use a chat."
+            },
+            {
+                "country": "Poland",
+                "name": "Fundacja Dajemy Dzieciom Siłę",
+                "phone": "800 100 100",
+                "email": "",
+                "website": "800100100.pl \n\n\nhttps://fdds.pl/dzialania/centrum-pomocy-dzieciom ",
+                "description": "Support and information for parents and teachers on how to prevent and help children experiencing problems and difficulties resulting from risky behaviors such as aggression and violence at school, cyberbullying and threats related to new technologies, sexual abuse, contact with psychoactive substances, addictions, depression, suicidal thoughts, and eating disorders. Main activities: telephone and online psychological, therapeutic, and legal support for parents and teachers."
+            },
+            {
+                "country": "Poland",
+                "name": "Dziecięcy Telefon Zaufania Rzecznika Praw Dziecka",
+                "phone": "800 12 12 12",
+                "email": "",
+                "website": "https://czat.brpd.gov.pl",
+                "description": "Anonymous, free, 24/7, fully confidential helpline where specialists provide support to children and adolescents. Support is also available via live chat on the website."
+            },
+            {
+                "country": "Poland",
+                "name": "DYŻURNET.PL",
+                "phone": "",
+                "email": "dyzurnet@dyzurnet.pl",
+                "website": "https://dyzurnet.pl/",
+                "description": "It operates as a national contact point within NASK and has been active since 2005. The Dyżurnet.pl team responds to anonymous reports from internet users concerning potentially illegal online content, primarily related to the sexual abuse of children. Illegal content can be reported using the online reporting form available on the https://en.dyzurnet.pl/report-illegal-content "
+            },
+            {
+                "country": "Poland",
+                "name": "Lambda Warsaw",
+                "phone": "0048 22 628 52 220",
+                "email": "telefonzaufania@lambdawarszawa.org",
+                "website": "https://www.lambdawarszawa.org/",
+                "description": "Lambda Warsaw runs a confidential helpline for LGBT+ people, their families, and loved ones. Qualified volunteers provide anonymous emotional support by phone from Monday to Friday, 6:00–9:00 PM: +48 22 628 52 22. Support is also available via email."
+            },
+            {
+                "country": "Poland",
+                "name": "Sexed.pl",
+                "phone": "720 720 020",
+                "email": "kontakt@sexed.pl",
+                "website": "https://sexed.pl/antyprzemocowa-linia/",
+                "description": "Sexed.pl runs an anonymous and free anti-violence helpline for adults and young people. Experienced specialists provide support by phone from Monday to Sunday, 10:00 AM–10:00 PM. The helpline is available to people experiencing or having experienced violence in intimate relationships, those who use violence, and witnesses of violence."
+            },
+            {
+                "country": "Malta",
+                "name": "Malta Gay Rights Movement (MGRM)",
+                "phone": "00356 99255559 or 00356 794300006",
+                "email": "support@maltagayrights.org",
+                "website": "https://maltagayrights.org/",
+                "description": "Support and information about contexts which can include hate speech/harassment."
+            },
+            {
+                "country": "Malta",
+                "name": "Support line 179",
+                "phone": "179",
+                "email": "",
+                "website": "https://stopviolence.gov.mt/",
+                "description": "A national helpline offering 24/7 free support and information on local social services and other agencies. It also provides referrals for people in crisis or experiencing abuse. The service is run by 12 full-time trained operators, supervised by social workers who are available 24/7 to assist during difficult calls."
+            },
+            {
+                "country": "Malta",
+                "name": "Childwebalert Hotline",
+                "phone": "",
+                "email": "",
+                "website": "www.childwebalert.gov.mt",
+                "description": "It provides a source of support where the general public can report child sexual abuse material found over the internet. It also aims to create awareness about the safer use of the internet.​ "
+            },
+            {
+                "country": "Malta",
+                "name": "kellimni.com",
+                "phone": "",
+                "email": "",
+                "website": "https://kellimni.com/",
+                "description": "This project aims for all individuals to have the opportunity to voice their concerns, express and realise their rights granted in the United Nations Convention on the Rights of the Child. The Kellimni.com team can be contacted through online Chat, Email, Whatsapp, Messenger, Instagram and Telegram All services are completely free and confidential."
+            },
+            {
+                "country": "Malta",
+                "name": "Richmond foundation helpline",
+                "phone": "1770",
+                "email": "",
+                "website": "website: https://www.richmond.org.mt/our-services/get-help-now/ \nchat: https://olli.chat/",
+                "description": "The 1770 helpline is free and available to anyone experiencing mental health challenges. Professionals will provide both emotional support and practical guidance, Monday to Friday from 8 AM to 8 PM, and on Saturdays until 4 PM. After this time, you can contact 1579, the mental health services helpline.\n\nRichmond’s OLLI Chat is free and able to offer you emotional support as well as practical guidance to help you find your way forward. If you want to reach out for help but find it difficult to talk to someone face to face or over the phone, try OLLI Chat."
+            },
+            {
+                "country": "Malta",
+                "name": "1579 Mental Health Helpline",
+                "phone": "1579",
+                "email": "",
+                "website": "https://health.gov.mt/mental-health-helpline1579/",
+                "description": "The 1579 Mental Health Helpline is a 24hr national telephone helpline, providing immediate and free emotional support, advice and practical guidance for anyone in need.\nA number of Psychology Professionals, all working within Mental Health Services have undergone training geared towards preparing them to man the Helpline. They work on shifts in order to keep the service going on a 24/7 basis."
+            },
+            {
+                "country": "Malta",
+                "name": "LGBTI+ Gozo",
+                "phone": "00356 9935 6622",
+                "email": "",
+                "website": "",
+                "description": "LGBTI+ Gozo offers a range of services as a means of support for Gozo-based residents. Through collaboration and connection, we seek to promote inclusion, accessibility, and acceptance to our members, their families, and professionals working with LGBTQIA+ individuals. These free services are available to all members and allies of our community, and include free psychosocial support, referrals, and trainings"
+            },
+            {
+                "country": "Malta",
+                "name": "National Contact Point for Victims of Crime – Victim Support Agency",
+                "phone": "",
+                "email": "",
+                "website": "http://www.victimsupportagency.com/",
+                "description": "The Victim Support Agency offers emotional support, case information, and court guidance to victims, including accompaniment during proceedings and updates on offenders. It also promotes victims’ rights, encourages reporting, and provides outreach to support recovery. Services are delivered through a coordinated, multiagency approach to ensure ongoing, holistic care."
+            }
+        ]
     }
 }

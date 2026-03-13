@@ -72,6 +72,11 @@ const items = computed<DrawerMenuItem[]>(() => [
     ]
   },
   {
+    title: t('menu.helplines'),
+    icon: 'mdi-phone-in-talk',
+    to: '/helplines'
+  },
+  {
     title: t('menu.credits'),
     icon: 'mdi-information',
     to: { name: 'Credits' }

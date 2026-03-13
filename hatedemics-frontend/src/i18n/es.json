@@ -23,6 +23,7 @@
         "counterspeech": "Contranarrativa",
         "projects": "Temas",
         "credits": "Quienes somos",
+        "helplines": "Líneas de ayuda",
         "logout": "Cerrar sesión"
     },
     "counterspeechGuide": {
@@ -34,7 +35,7 @@
             },
             "dataSources": {
                 "title": "Artículo de fact-checking",
-                "description":"<p>Contiene un artículo de fact-checking de un medio certificado (firmante del <a href=\"https://ifcncodeofprinciples.poynter.org/\" target=\"_blank\">Código de Principios del IFCN</a>).</p>"
+                "description": "<p>Contiene un artículo de fact-checking de un medio certificado (firmante del <a href=\"https://ifcncodeofprinciples.poynter.org/\" target=\"_blank\">Código de Principios del IFCN</a>).</p>"
             },
             "dialogue": {
                 "title": "Diálogo",
@@ -54,7 +55,7 @@
         "title": "Luchar Contra el Odio y la Desinformación en Línea",
         "description": "La plataforma Hatedemias utiliza inteligencia artificial para analizar contenido en línea, potenciar el pensamiento crítico y preparar respuestas frente al discurso de odio.",
         "network": "Explora la Red de Telegram",
-        "networkDescription":"Un mapa interactivo para observar las conexiones entre canales, contenidos y dinámicas relacionadas con el odio y la desinformación en línea. Descubre qué ocurre en la red, sigue los flujos e identifica los nodos clave de mensajes.",
+        "networkDescription": "Un mapa interactivo para observar las conexiones entre canales, contenidos y dinámicas relacionadas con el odio y la desinformación en línea. Descubre qué ocurre en la red, sigue los flujos e identifica los nodos clave de mensajes.",
         "networkButton": "Ir a la red",
         "counterspeech": "Redacción de contranarrativas",
         "counterspeechDescription": "Entrena tu capacidad para responder a contenidos de odio y desinformación con ejercicios de redacción adaptados. Aprende a usar fuentes fiables para construir argumentos sólidos y a desarrollar tu pensamiento crítico para mejorar el tono de los debates en línea.",
@@ -158,14 +159,14 @@
         "neverShow": "No mostrar de nuevo"
     },
     "educational": {
-        "toolkit":"Toolkit",
+        "toolkit": "Toolkit",
         "title": "Actividades Educativas",
         "subtitle": "<p>En esta sección encontrarás ejercicios interactivos diseñados para ayudarte a comprender los mecanismos detrás de la desinformación y el discurso de odio.</p><p>Podrás explorar <b>sesgos cognitivos</b> y <b>falacias lógicas</b>, practicar técnicas de <b>verificación y debunking</b>, aprender los principios fundamentales de la <b>Declaración de Derechos Humanos</b> para entender los derechos fundamentales que protegen la dignidad humana y aplicar la <b>lectura lateral</b> para evaluar críticamente los contenidos en línea.</p><p>Cada actividad es una oportunidad para entrenar tu pensamiento crítico y volverte más resiliente frente a la manipulación y la desinformación.</p>",
         "difficulty": {
             "easy": "Fácil",
             "medium": "Medio",
             "difficult": "Difícil"
-          },
+        },
         "eduCard1Title": "Declaración de Derechos Humanos",
         "eduCard1Desc": "Descubre los principios centrales que protegen la dignidad humana.",
         "eduCard1Button": "Explorar los derechos",
@@ -401,7 +402,7 @@
                 "title": "Sesgos cognitivos y falacias lógicas",
                 "leftColumn": "Falacias/Sesgos",
                 "rightColumn": "Situaciones",
-                "description":  "<br><br><strong>Falacias lógicas asociadas con el discurso de odio y la desinformación</strong><br>El contenido del discurso de odio y la desinformación puede parecer muy convincente. Esto se debe a que quienes difunden estos mensajes suelen basarse en falacias lógicas: argumentos que los grupos de odio utilizan para justificar sus causas y creencias, buscando que quienes se encuentren con ese contenido lo consideren razonable y verdadero. Las falacias lógicas pueden basarse en premisas falsas, en premisas verdaderas pero con conclusiones erróneas, o en argumentos que parecen coherentes pero que en realidad no lo son. Algunas de estas falacias se generan con la intención de engañar o de hacer que la desinformación se vuelva viral. Existen muchas falacias comunes en el discurso de odio. Algunos ejemplos son: argumentum ad populum (apelación al pueblo), ipse dixit (él lo dijo) y pendiente resbaladiza.<br><br><strong>Sesgos Cognitivos</strong><br>Nuestro cerebro utiliza atajos mentales para ayudarnos a tomar decisiones rápidas en la vida cotidiana: los sesgos cognitivos. Estos atajos nos permiten centrarnos solo en la información más relevante, evitando sentirnos abrumadas/os por todo lo que vemos y escuchamos. Esto hace que el cerebro funcione de manera más eficiente. Sin embargo, la desventaja es que estos atajos pueden llevarnos a cometer errores o malinterpretar situaciones debido a nuestros sesgos cognitivos. Todas las personas estamos expuestas a estos sesgos cuando tomamos decisiones. Quienes difunden desinformación conocen muy bien cómo funcionan y los aprovechan para manipularnos. Algunos ejemplos de sesgos cognitivos son: sesgo de grupo, sesgo de disponibilidad y sesgo de causalidad. Puedes aprender más sobre falacias lógicas y sesgos cognitivos en el <a href='https://drive.google.com/file/d/1aR1xqdXacMUifbxFn4mK2Vi6Wa1hURKA/view?usp=drive_link'>kit educativo de Hatedemics</a>.",
+                "description": "<br><br><strong>Falacias lógicas asociadas con el discurso de odio y la desinformación</strong><br>El contenido del discurso de odio y la desinformación puede parecer muy convincente. Esto se debe a que quienes difunden estos mensajes suelen basarse en falacias lógicas: argumentos que los grupos de odio utilizan para justificar sus causas y creencias, buscando que quienes se encuentren con ese contenido lo consideren razonable y verdadero. Las falacias lógicas pueden basarse en premisas falsas, en premisas verdaderas pero con conclusiones erróneas, o en argumentos que parecen coherentes pero que en realidad no lo son. Algunas de estas falacias se generan con la intención de engañar o de hacer que la desinformación se vuelva viral. Existen muchas falacias comunes en el discurso de odio. Algunos ejemplos son: argumentum ad populum (apelación al pueblo), ipse dixit (él lo dijo) y pendiente resbaladiza.<br><br><strong>Sesgos Cognitivos</strong><br>Nuestro cerebro utiliza atajos mentales para ayudarnos a tomar decisiones rápidas en la vida cotidiana: los sesgos cognitivos. Estos atajos nos permiten centrarnos solo en la información más relevante, evitando sentirnos abrumadas/os por todo lo que vemos y escuchamos. Esto hace que el cerebro funcione de manera más eficiente. Sin embargo, la desventaja es que estos atajos pueden llevarnos a cometer errores o malinterpretar situaciones debido a nuestros sesgos cognitivos. Todas las personas estamos expuestas a estos sesgos cuando tomamos decisiones. Quienes difunden desinformación conocen muy bien cómo funcionan y los aprovechan para manipularnos. Algunos ejemplos de sesgos cognitivos son: sesgo de grupo, sesgo de disponibilidad y sesgo de causalidad. Puedes aprender más sobre falacias lógicas y sesgos cognitivos en el <a href='https://drive.google.com/file/d/1aR1xqdXacMUifbxFn4mK2Vi6Wa1hURKA/view?usp=drive_link'>kit educativo de Hatedemics</a>.",
                 "objectivesTitle": "Objetivos de la actividad",
                 "objectives": "<ul><li><strong>Desarrollar conciencia</strong> sobre los mecanismos sociales, los sesgos cognitivos y las falacias lógicas.</li><li><strong>Fortalecer la competencia de pensamiento crítico</strong></li></ul><p>los mecanismos sociales, los sesgos cognitivos y las falacias lógicas son factores que contribuyen a la propagación del discurso de odio y la desinformación. Al conocer algunos de ellos, podemos ser más inmunes a ellos y más críticos ante otras formas de manipulación.</p>",
                 "startButton": "Comenzar actividad",
@@ -986,7 +987,7 @@
             "title": "Título",
             "count": "% de mensajes",
             "hs": "% de discurso de odio",
-            "cw":"% de contenido que merece verificación",
+            "cw": "% de contenido que merece verificación",
             "sentiment_percentage": "Sentimiento principal"
         }
     },
@@ -1222,5 +1223,195 @@
     },
     "locale": {
         "selectLanguage": "Selecciona el idioma de la interfaz"
+    },
+    "helplines": {
+        "title": "Líneas de ayuda",
+        "description": "Servicios de apoyo para víctimas de discurso de odio, discriminación o delitos relacionados.",
+        "items": [
+            {
+                "country": "Europa",
+                "name": "Victim support Europe",
+                "phone": "116006",
+                "email": "",
+                "website": "https://victim-support.eu",
+                "description": "A través de profesionales capacitados, la línea de ayuda 116006 brinda información inicial y atención a todas las víctimas de delitos en general (incluidos los delitos de odio). La ayuda, anónima y confidencial, incluye cuestiones sociales, legales y psicológicas, antes, durante y después de buscar compensaciones."
+            },
+            {
+                "country": "Europa",
+                "name": "Child Helpline International",
+                "phone": "116 111",
+                "email": "",
+                "website": "https://childhelplineinternational.org/helplines/116-111-eu/",
+                "description": "Las líneas de ayuda para niños son servicios gratuitos y confidenciales para niños (18 años o menos) y/o jóvenes (hasta 25 años), donde pueden hablar de lo que quieran por teléfono, chat y otros medios de comunicación. El 116 111 es el número reservado para líneas de ayuda para niños en Europa. En el sitio web puede ver qué miembros de Child Helpline International operan el número 116 111 en sus países."
+            },
+            {
+                "country": "Europa",
+                "name": "Cyber Rights Organization Helpline",
+                "phone": "0031 70 5690518",
+                "email": "mail: info@cyberights.org \nphone:  ",
+                "website": "https://cyberights.org/helpline/",
+                "description": "Una línea directa y activa  las 24 horas del día, los 7 días de la semana, que combina las actividades de soporte técnico legal y de TI de nuestro equipo de expertos para víctimas de violencia digital.\nEsta línea de ayuda ofrece asistencia legal desde las primeras etapas de la denuncia hasta la eliminación de contenido dañino publicado en internet."
+            },
+            {
+                "country": "Europa",
+                "name": "European Union Agency for Fundamental Rights",
+                "phone": "",
+                "email": "",
+                "website": "https://fra.europa.eu/en/about-fundamental-rights/where-to-turn",
+                "description": "Una herramienta dedicada a identificar la autoridad más adecuada a la que acudir para solicitar ayuda en cada país europeo."
+            },
+            {
+                "country": "Italia",
+                "name": "Polizia Postale",
+                "phone": "112 or 113",
+                "email": "",
+                "website": "https://www.commissariatodips.it/segnalazioni/segnala-online/index.html ",
+                "description": "Policía Nacional para combatir delitos informáticos y actividades ilegales en línea. Denuncia en línea en el enlace. En casos graves, contacte al número de teléfono."
+            },
+            {
+                "country": "Italia",
+                "name": "UNAR  - Ufficio nazionale antidiscriminazioni razziali",
+                "phone": "800 901010 from monday to friday (8 am - 5 pm)",
+                "email": "contactcenter@unar.it",
+                "website": "https://unar.it/portale/fai-una-segnalazione",
+                "description": "Denuncia en línea de actos discriminatorios de los que usted sea víctima, testigo o denunciante."
+            },
+            {
+                "country": "Italia",
+                "name": "OSCAD - Osservatorio per la sicurezza contro gli atti discriminatori",
+                "phone": "",
+                "email": "oscad@dcpc.interno.it",
+                "website": "https://www.carabinieri.it/arma/partners/osservatorio-per-la-sicurezza-contro-gli-atti-discriminatori-oscad",
+                "description": "Proporciona un apoyo valioso a las personas que son víctimas de delitos discriminatorios (delitos de odio)."
+            },
+            {
+                "country": "España",
+                "name": "Oficina Nacional de Lucha Contra los Delitos de Odio",
+                "phone": "Policía Nacional: 900 100 091\n\nGuardia Civil: 900 101 062",
+                "email": "asistencia.ondod@interior.es",
+                "website": "https://oficinanacional-delitosdeodio.ses.mir.es/publico/ONDOD/en/denunciar.html",
+                "description": "Llame a los servicios de emergencia (091 o 062) si es necesaria la intervención policial, verificando primero si necesita atención médica. Denuncie el incidente a las fuerzas del orden con todas las pruebas y el apoyo pertinentes, solicitando un intérprete si es necesario. Proporcione información detallada sobre el incidente y el agresor. Las autoridades le informarán sobre sus derechos y los servicios de apoyo legal y psicológico disponibles.   \r\n\r\n"
+            },
+            {
+                "country": "España",
+                "name": "Teléfono ANAR",
+                "phone": "900202010",
+                "email": "",
+                "website": "https://www.anar.org/que-hacemos/telefono-chat-anar/",
+                "description": "Apoyo inmediato para cualquier problema que pueda afectar a un menor, incluyendo dificultades en las relaciones, diferentes formas de violencia, problemas psicológicos, entre otros. Línea de ayuda gratuita y confidencial."
+            },
+            {
+                "country": "Polonia",
+                "name": "Telefon zaufania dla dzieci i młodzieży",
+                "phone": "phone: 116 111\nchat: https://116111.pl/czatuj/",
+                "email": "https://116111.pl/napisz/",
+                "website": "https://116111.pl",
+                "description": "Línea de ayuda para niños y jóvenes en Polonia, disponible 24/7. También puede contactar con asesores (psicólogos, abogados, educadores) por correo electrónico o usar el chat."
+            },
+            {
+                "country": "Polonia",
+                "name": "Fundacja Dajemy Dzieciom Siłę",
+                "phone": "800 100 100",
+                "email": "",
+                "website": "800100100.pl \n\n\nhttps://fdds.pl/dzialania/centrum-pomocy-dzieciom ",
+                "description": "Apoyo e información para padres y docentes sobre cómo prevenir y ayudar a los niños que experimentan problemas y dificultades derivados de conductas de riesgo como la agresión y la violencia en la escuela, el ciberacoso y las amenazas relacionadas con las nuevas tecnologías, el abuso sexual, el contacto con sustancias psicoactivas, las adicciones, la depresión, los pensamientos suicidas y los trastornos alimentarios. Actividades principales: apoyo psicológico, terapéutico y legal telefónico y en línea para padres y docentes."
+            },
+            {
+                "country": "Polonia",
+                "name": "Dziecięcy Telefon Zaufania Rzecznika Praw Dziecka",
+                "phone": "800 12 12 12",
+                "email": "",
+                "website": "https://czat.brpd.gov.pl",
+                "description": "Línea de ayuda anónima, gratuita, disponible las 24 horas y totalmente confidencial, donde especialistas brindan apoyo a niños, niñas y adolescentes. También se ofrece soporte a través del chat en vivo en el sitio web."
+            },
+            {
+                "country": "Polonia",
+                "name": "DYŻURNET.PL",
+                "phone": "",
+                "email": "dyzurnet@dyzurnet.pl",
+                "website": "https://dyzurnet.pl/",
+                "description": "Funciona como punto de contacto nacional dentro de NASK (Instituto de investigación nacional de Polonia) y lleva activo desde 2005. El equipo de Dyżurnet.pl responde a denuncias anónimas de usuarios de internet sobre contenido en línea potencialmente ilegal, principalmente relacionado con el abuso sexual infantil. El contenido ilegal puede denunciarse mediante el formulario de denuncia en línea disponible en https://en.dyzurnet.pl/report-illegal-content"
+            },
+            {
+                "country": "Polonia",
+                "name": "Lambda Warsaw",
+                "phone": "0048 22 628 52 220",
+                "email": "telefonzaufania@lambdawarszawa.org",
+                "website": "https://www.lambdawarszawa.org/",
+                "description": "Lambda Varsovia gestiona una línea de ayuda confidencial para personas LGBT+, sus familias y seres queridos. Voluntarios cualificados ofrecen apoyo emocional anónimo por teléfono de lunes a viernes, de 18:00 a 21:00 h: +48 22 628 52 22. También se ofrece apoyo por correo electrónico."
+            },
+            {
+                "country": "Polonia",
+                "name": "Sexed.pl",
+                "phone": "720 720 020",
+                "email": "kontakt@sexed.pl",
+                "website": "https://sexed.pl/antyprzemocowa-linia/",
+                "description": "Sexed.pl ofrece una línea de ayuda anónima y gratuita contra la violencia para adultos y jóvenes. Especialistas con experiencia ofrecen apoyo telefónico de lunes a domingo, de 10:00 a 22:00. La línea está disponible para personas que sufren o han sufrido violencia en sus relaciones íntimas, quienes ejercen la violencia y testigos de actos violentos."
+            },
+            {
+                "country": "Malta",
+                "name": "Malta Gay Rights Movement (MGRM)",
+                "phone": "00356 99255559 or 00356 794300006",
+                "email": "support@maltagayrights.org",
+                "website": "https://maltagayrights.org/",
+                "description": "Apoyo e información sobre contextos que pueden incluir discursos de odio/acoso."
+            },
+            {
+                "country": "Malta",
+                "name": "Support line 179",
+                "phone": "179",
+                "email": "",
+                "website": "https://stopviolence.gov.mt/",
+                "description": "Una línea de ayuda nacional que ofrece apoyo gratuito las 24 horas, los 7 días de la semana, e información sobre servicios sociales locales y otras agencias. También ofrece derivaciones para personas en crisis o víctimas de abuso. El servicio está gestionado por 12 operadores capacitados a tiempo completo, supervisados ​​por trabajadores sociales disponibles las 24 horas, los 7 días de la semana, para asistir en llamadas difíciles."
+            },
+            {
+                "country": "Malta",
+                "name": "Childwebalert Hotline",
+                "phone": "",
+                "email": "",
+                "website": "www.childwebalert.gov.mt",
+                "description": "Proporciona una fuente de apoyo donde el público en general puede denunciar material de abuso sexual infantil encontrado en internet.\nTambién busca crear conciencia sobre el uso seguro de internet."
+            },
+            {
+                "country": "Malta",
+                "name": "kellimni.com",
+                "phone": "",
+                "email": "",
+                "website": "https://kellimni.com/",
+                "description": "Este proyecto tiene como objetivo que todas las personas tengan la oportunidad de expresar sus preocupaciones, así como de ejercer y hacer valer los derechos otorgados en la Convención de las Naciones Unidas sobre los Derechos del Niño. El equipo de Kellimni.com se puede contactar a través de chat en línea, correo electrónico, WhatsApp, Messenger, Instagram y Telegram. Todos los servicios son completamente gratuitos y confidenciales."
+            },
+            {
+                "country": "Malta",
+                "name": "Richmond foundation helpline",
+                "phone": "1770",
+                "email": "",
+                "website": "website: https://www.richmond.org.mt/our-services/get-help-now/ \nchat: https://olli.chat/",
+                "description": "La línea de ayuda 1770 es gratuita y está disponible para cualquier persona con problemas de salud mental. Profesionales brindarán apoyo emocional y orientación práctica de lunes a viernes de 8:00 a 20:00 y los sábados hasta las 16:00. Después de este horario, puede contactar al 1579, la línea de ayuda para servicios de salud mental.\n\nEl Chat OLLI de Richmond es gratuito y ofrece apoyo emocional y orientación práctica para ayudarle a encontrar su camino. Si desea buscar ayuda, pero le resulta difícil hablar con alguien en persona o por teléfono, pruebe el Chat OLLI."
+            },
+            {
+                "country": "Malta",
+                "name": "1579 Mental Health Helpline",
+                "phone": "1579",
+                "email": "",
+                "website": "https://health.gov.mt/mental-health-helpline1579/",
+                "description": "La Línea de Ayuda de Salud Mental 1579 es una línea telefónica nacional disponible las 24 horas, que ofrece apoyo emocional, asesoramiento y orientación inmediatos y gratuitos a cualquier persona que lo necesite.\nVarios profesionales de la psicología, todos ellos en Servicios de Salud Mental, han recibido formación para atender la línea de ayuda. Trabajan por turnos para mantener el servicio disponible las 24 horas, los 7 días de la semana."
+            },
+            {
+                "country": "Malta",
+                "name": "LGBTI+ Gozo",
+                "phone": "00356 9935 6622",
+                "email": "",
+                "website": "",
+                "description": "LGBTI+ Gozo ofrece una gama de servicios de apoyo a los residentes de Gozo. A través de la colaboración y la conexión, buscamos promover la inclusión, la accesibilidad y la aceptación de nuestros miembros, sus familias y los profesionales que trabajan con personas LGBTQIA+. Estos servicios gratuitos están disponibles para todos los miembros y aliados de nuestra comunidad e incluyen apoyo psicosocial, derivaciones y capacitaciones gratuitas."
+            },
+            {
+                "country": "Malta",
+                "name": "National Contact Point for Victims of Crime – Victim Support Agency",
+                "phone": "",
+                "email": "",
+                "website": "http://www.victimsupportagency.com/",
+                "description": "La Agencia de Apoyo a las Víctimas ofrece apoyo emocional, información sobre los casos y orientación judicial, incluyendo acompañamiento durante los procedimientos y actualizaciones sobre los agresores. También promueve los derechos de las víctimas, fomenta la denuncia y brinda apoyo para la recuperación. Los servicios se prestan mediante un enfoque coordinado y multidisciplinar para garantizar una atención integral y continua."
+            }
+        ]
     }
 }

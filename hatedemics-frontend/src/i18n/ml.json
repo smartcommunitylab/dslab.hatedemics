@@ -23,6 +23,7 @@
         "counterspeech": "Kontro-diskors",
         "projects": "Suġġetti",
         "credits": "Min aħna",
+        "helplines": "Helplines",
         "logout": "Oħroġ"
     },
     "counterspeechGuide": {
@@ -158,7 +159,7 @@
         "neverShow": "Terġax turi"
     },
     "educational": {
-        "toolkit":"Toolkit",
+        "toolkit": "Toolkit",
         "title": "Attivitajiet Edukattivi",
         "subtitle": "<p>F’din is-sezzjoni se ssib eżerċizzji interattivi mfassla biex jgħinuk tifhem il-mekkaniżmi wara d-diżinformazzjoni u d-diskors ta’ mibegħda.</p><p>Tista’ tesplora <b>preġudizzji konjittivi</b> u <b>twemmin loġiku żbaljat</b>, tipprattika tekniki li <b>jikxfu l-falsità</b>, titgħallem il-prinċipji fundamentali tad-<b>Dikjarazzjoni tad-Drittijiet tal-Bniedem</b> biex tifhem kif id-drittijiet fundamentali jipproteġu d-dinjità umana, u <b>taqra b’mod laterali</b> biex tevalwa b’mod kritiku l-kontenut online.</p><p>Kull attività hija opportunità biex titħarreġ fil-ħsieb kritiku u tissaħħaħ kontra l-manipulazzjoni u d-diżinformazzjoni.</p>",
         "difficulty": {
@@ -1248,5 +1249,195 @@
     },
     "locale": {
         "selectLanguage": "Agħżel il-lingwa tal-interface"
+    },
+    "helplines": {
+        "title": "Helplines",
+        "description": "Servizzi ta’ appoġġ għal vittmi ta’ diskors ta’ mibegħda, diskriminazzjoni jew reati relatati.",
+        "items": [
+            {
+                "country": "Ewropa",
+                "name": "Victim support Europe",
+                "phone": "116006",
+                "email": "",
+                "website": "https://victim-support.eu",
+                "description": "Permezz ta’ professjonisti mħarrġa, il-linja tal-għajnuna 116006 tipprovdi informazzjoni inizjali u kura lill-vittmi kollha ta’ reati ġenerali (inklużi reati ta’ mibegħda) li jitolbuha b’mod anonimu u kunfidenzjali: fi kwistjonijiet soċjali, legali u psikoloġiċi, qabel, waqt u wara li jfittxu rimedju."
+            },
+            {
+                "country": "Ewropa",
+                "name": "Child Helpline International",
+                "phone": "116 111",
+                "email": "",
+                "website": "https://childhelplineinternational.org/helplines/116-111-eu/",
+                "description": "Il-linji tal-għajnuna għat-tfal huma servizzi bla ħlas u kunfidenzjali għat-tfal (18-il sena u taħt) u/jew ż-żgħażagħ (ta’ 25 sena jew inqas), li bihom jistgħu jitkellmu dwar dak kollu li jridu, permezz tat-telefown, iċ-chats u metodi oħra ta’ komunikazzjoni. 116 111 huwa n-numru apposta għal-linji tal-għajnuna għat-tfal fl-Ewropa. Fuq il-website tista’ tara liema membri taċ-Child Helpline International huma l-operaturi tan-numru 116 111 f’pajjiżhom."
+            },
+            {
+                "country": "Ewropa",
+                "name": "Cyber Rights Organization Helpline",
+                "phone": "0031 70 5690518",
+                "email": "mail: info@cyberights.org \nphone:  ",
+                "website": "https://cyberights.org/helpline/",
+                "description": "Linja diretta u attiva 24/7 li tgħaqqad l-attivitajiet tal-appoġġ tekniku legali u tal-IT tat-tim ta’ esperti tagħna għall-vittmi tal-vjolenza diġitali.\nIl-linja tal-għajnuna tipprovdi assistenza legali mill-istadji bikrija tal-ilment sat-tneħħija tal-kontenut ta’ ħsara ppubblikat fuq l-internet."
+            },
+            {
+                "country": "Ewropa",
+                "name": "European Union Agency for Fundamental Rights",
+                "phone": "",
+                "email": "",
+                "website": "https://fra.europa.eu/en/about-fundamental-rights/where-to-turn",
+                "description": "Għodda apposta biex tagħżel l-awtorità fejn wieħed jista’ tfittex l-għajnuna f’kull pajjiż Ewropew."
+            },
+            {
+                "country": "Italja",
+                "name": "Polizia Postale",
+                "phone": "112 or 113",
+                "email": "",
+                "website": "https://www.commissariatodips.it/segnalazioni/segnala-online/index.html ",
+                "description": "Pulizija nazzjonali għal dawk li jiltaqgħu ma’ kriminalità bil-kompjuter u attivitajiet illegali online. Irrapporta online permezz tal-link. F’każijiet serji ċempel in-numru tat-telefown."
+            },
+            {
+                "country": "Italja",
+                "name": "UNAR  - Ufficio nazionale antidiscriminazioni razziali",
+                "phone": "800 901010 from monday to friday (8 am - 5 pm)",
+                "email": "contactcenter@unar.it",
+                "website": "https://unar.it/portale/fai-una-segnalazione",
+                "description": "Rappurtar online ta’ atti diskriminatorji li inti vittma jew xhud tagħhom jew li qed tirrapportahom."
+            },
+            {
+                "country": "Italja",
+                "name": "OSCAD - Osservatorio per la sicurezza contro gli atti discriminatori",
+                "phone": "",
+                "email": "oscad@dcpc.interno.it",
+                "website": "https://www.carabinieri.it/arma/partners/osservatorio-per-la-sicurezza-contro-gli-atti-discriminatori-oscad",
+                "description": "Jipprovdi appoġġ siewi lil persuni li huma vittmi ta’ reati diskriminatorji (reati ta’ mibegħda)."
+            },
+            {
+                "country": "Spanja",
+                "name": "Oficina Nacional de Lucha Contra los Delitos de Odio",
+                "phone": "Policía Nacional: 900 100 091\n\nGuardia Civil: 900 101 062",
+                "email": "asistencia.ondod@interior.es",
+                "website": "https://oficinanacional-delitosdeodio.ses.mir.es/publico/ONDOD/en/denunciar.html",
+                "description": "Ċempel lis-servizzi tal-emerġenza (091 jew 062) jekk ikun meħtieġ intervent tal-pulizija, filwaqt li l-ewwel tiċċekkja jekk teħtieġx attenzjoni medika. Irrapporta l-inċident lill-forzi tal-liġi u agħihom l-evidenza relevanti u s-sostenn kollu meħtieġ, u itlob interpretu jekk ikun hemm bżonn. Agħti informazzjoni dettaljata dwar x'ġara u min wettaq ir-reat; l-awtoritajiet jinfurmawk dwar id-drittijiet tiegħek u s-servizzi disponibbli ta’ għajnuna legali u psikoloġika."
+            },
+            {
+                "country": "Spanja",
+                "name": "Teléfono ANAR",
+                "phone": "900202010",
+                "email": "",
+                "website": "https://www.anar.org/que-hacemos/telefono-chat-anar/",
+                "description": "Appoġġ immedjat għal kwalunkwe kwistjoni li tista’ taffettwa lill-minorenni, inklużi diffikultajiet fir-relazzjonijiet, forom differenti ta’ vjolenza u problemi psikoloġiċi fost l-oħrajn. Linja tal-għajnuna bla ħlas u kunfidenzjali."
+            },
+            {
+                "country": "Polonja",
+                "name": "Telefon zaufania dla dzieci i młodzieży",
+                "phone": "phone: 116 111\nchat: https://116111.pl/czatuj/",
+                "email": "https://116111.pl/napisz/",
+                "website": "https://116111.pl",
+                "description": "Linja tal-għajnuna għat-tfal u ż-żgħażagħ fil-Polonja, miftuħa 24/7. Tista’ wkoll tibgħat email lill-konsulenti (psikologi, avukati, edukaturi) jew tuża ċ-chat."
+            },
+            {
+                "country": "Polonja",
+                "name": "Fundacja Dajemy Dzieciom Siłę",
+                "phone": "800 100 100",
+                "email": "",
+                "website": "800100100.pl \n\n\nhttps://fdds.pl/dzialania/centrum-pomocy-dzieciom ",
+                "description": "Appoġġ u informazzjoni għall-ġenituri u l-għalliema dwar kif jipprevjenu u jgħinu lit-tfal li jesperjenzaw problemi u diffikultajiet li jirriżultaw minn imġiba riskjuża, bħall-aggressjoni u l-vjolenza fl-iskola, is-cyberbullying u t-theddid relatat ma’ teknoloġiji ġodda, l-abbuż sesswali, il-kuntatt ma’ sustanzi psikoattivi, il-vizzji, id-dipressjoni, ħsibijiet suwiċidali u disturbi fl-ikel. Attivitajiet ewlenin: appoġġ psikoloġiku, terapewtiku u legali bit-telefown u online għall-ġenituri u l-għalliema."
+            },
+            {
+                "country": "Polonja",
+                "name": "Dziecięcy Telefon Zaufania Rzecznika Praw Dziecka",
+                "phone": "800 12 12 12",
+                "email": "",
+                "website": "https://czat.brpd.gov.pl",
+                "description": "Linja tal-għajnuna anonima, bla ħlas, 24/7 u kompletament kunfidenzjali, li biha l-ispeċjalisti jipprovdu appoġġ lit-tfal u l-adolexxenti. L-appoġġ huwa disponibbli wkoll permezz ta’ live chat fuq il-website."
+            },
+            {
+                "country": "Polonja",
+                "name": "DYŻURNET.PL",
+                "phone": "",
+                "email": "dyzurnet@dyzurnet.pl",
+                "website": "https://dyzurnet.pl/",
+                "description": "Jopera bħala punt nazzjonali ta’ kuntatt fi ħdan l-NASK u ilu attiv mill-2005. It-tim ta’ Dyżurnet.pl jirrispondi għal rapporti anonimi minn utenti tal-internet dwar kontenut online potenzjalment illegali, primarjament relatat mal-abbuż sesswali tat-tfal. Il-kontenut illegali jista’ jiġi rrappurtat permezz tal-formola tar-rappurtar online disponibbli minn https://en.dyzurnet.pl/report-illegal-content"
+            },
+            {
+                "country": "Polonja",
+                "name": "Lambda Warsaw",
+                "phone": "0048 22 628 52 220",
+                "email": "telefonzaufania@lambdawarszawa.org",
+                "website": "https://www.lambdawarszawa.org/",
+                "description": "Lambda Warsaw tmexxi linja tal-għajnuna kunfidenzjali għal persuni LGBT+, għall-familji tagħhom u l-maħbubin tagħhom. Voluntiera kwalifikati jipprovdu appoġġ emozzjonali anonimu bit-telefown mit-Tnejn sal-Ġimgħa, mis-6:00 PM sad-9:00 PM: +48 22 628 52 22. L-appoġġ jista’ jingħata wkoll permezz tal-email."
+            },
+            {
+                "country": "Polonja",
+                "name": "Sexed.pl",
+                "phone": "720 720 020",
+                "email": "kontakt@sexed.pl",
+                "website": "https://sexed.pl/antyprzemocowa-linia/",
+                "description": "Sexed.pl tmexxi linja tal-għajnuna anonima u bla ħlas kontra l-vjolenza għall-adulti u ż-żgħażagħ. Speċjalisti bl-esperjenza jipprovdu appoġġ bit-telefown mit-Tnejn sal-Ħadd, mill-10:00 AM sal-10:00 PM. Il-linja tal-għajnuna hija disponibbli għal persuni li jesperjenzaw jew li esperjenzaw il-vjolenza f’relazzjonijiet intimi, għal dawk li jużaw il-vjolenza u għax-xhieda tal-vjolenza."
+            },
+            {
+                "country": "Malta",
+                "name": "Malta Gay Rights Movement (MGRM)",
+                "phone": "00356 99255559 or 00356 794300006",
+                "email": "support@maltagayrights.org",
+                "website": "https://maltagayrights.org/",
+                "description": "Appoġġ u informazzjoni dwar kuntesti li jistgħu jinkludu diskors ta’ mibegħda/fastidju."
+            },
+            {
+                "country": "Malta",
+                "name": "Support line 179",
+                "phone": "179",
+                "email": "",
+                "website": "https://stopviolence.gov.mt/",
+                "description": "Linja nazzjonali tal-għajnuna li toffri appoġġ bla ħlas 24/7 u informazzjoni dwar servizzi soċjali lokali u aġenziji oħra. Tipprovdi wkoll riferimenti għal nies fi kriżi jew li jkunu qed jesperjenzaw abbuż. Is-servizz jitmexxa minn 12-il operatur imħarreġ full-time, sorveljati minn ħaddiema soċjali li huma disponibbli 24/7 biex jgħinu waqt telefonati diffiċli."
+            },
+            {
+                "country": "Malta",
+                "name": "Childwebalert Hotline",
+                "phone": "",
+                "email": "",
+                "website": "www.childwebalert.gov.mt",
+                "description": "Jipprovdi sors ta’ appoġġ fejn il-pubbliku ġenerali jista’ jirrapporta materjal ta’ abbuż sesswali mit-tfal li jkun jinsab fuq l-internet. Għandu wkoll l-għan li joħloq kuxjenza dwar l-użu aktar sikur tal-internet."
+            },
+            {
+                "country": "Malta",
+                "name": "kellimni.com",
+                "phone": "",
+                "email": "",
+                "website": "https://kellimni.com/",
+                "description": "Dan il-proġett għandu l-għan li kull individwu jkollu l-opportunità li jesprimi t-tħassib tiegħu u jesprimi u jirrealizza d-drittijiet mogħtija fil-Konvenzjoni tan-Nazzjonijiet Uniti dwar id-Drittijiet tat-Tfal. It-tim ta’ Kellimni.com jista’ jkun ikkuntattjat permezz taċ-chat online, l-email, WhatsApp, Messenger, Instagram u Telegram. Is-servizzi kollha huma kompletament b’xejn u kunfidenzjali."
+            },
+            {
+                "country": "Malta",
+                "name": "Richmond foundation helpline",
+                "phone": "1770",
+                "email": "",
+                "website": "website: https://www.richmond.org.mt/our-services/get-help-now/ \nchat: https://olli.chat/",
+                "description": "Il-linja tal-għajnuna 1770 hija bla ħlas u disponibbli għal kull min jesperjenza sfidi tas-saħħa mentali. Il-professjonisti se jipprovdu kemm appoġġ emozzjonali kif ukoll gwida prattika, mit-Tnejn sal-Ġimgħa mit-8 AM sat-8 PM u nhar ta’ Sibt sal-4 PM. Wara dan il-ħin tista’ ċċempel 1579, il-linja tal-għajnuna tas-servizzi tas-saħħa mentali.\n\nL-OLLI Chat ta’ Richmond hija bla ħlas u tista’ toffrilek appoġġ emozzjonali kif ukoll gwida prattika biex tgħinek issib triqtek ’il quddiem. Jekk trid titlob l-għajnuna imma ssibha diffiċli li titkellem ma’ xi ħadd wiċċ imb wiċċ jew bit-telefown ipprova l-OLLI Chat."
+            },
+            {
+                "country": "Malta",
+                "name": "1579 Mental Health Helpline",
+                "phone": "1579",
+                "email": "",
+                "website": "https://health.gov.mt/mental-health-helpline1579/",
+                "description": "Il-Linja tal-Għajnuna tas-Saħħa Mentali 1579 hija linja nazzjonali tat-telefown disponibbli 24 siegħa, li tipprovdi appoġġ emozzjonali immedjat u bla ħlas, pariri u gwida prattika lil kull min ikollu bżonnha.\n\nGħadd ta’ professjonisti tal-psikoloġija, li kollha jaħdmu fis-servizzi tas-saħħa mentali, għaddew minn taħriġ immirat biex jippreparahom biex jaħdmu mal-linja tal-għajnuna. Huma jaħdmu bix-xift sabiex is-servizz jibqa’ għaddej 24 siegħa kuljum, sebat ijiem fil-ġimgħa."
+            },
+            {
+                "country": "Malta",
+                "name": "LGBTI+ Gozo",
+                "phone": "00356 9935 6622",
+                "email": "",
+                "website": "",
+                "description": "LGBTI+ Għawdex toffri firxa ta’ servizzi bħala mezz ta’ appoġġ għar-residenti bbażati f’Għawdex. Permezz tal-kollaborazzjoni u l-konnessjoni nfittxu li nippromwovu l-inklużjoni, l-aċċessibbiltà u l-aċċettazzjoni għall-membri tagħna, il-familji tagħhom u l-professjonisti li jaħdmu ma’ individwi LGBTQIA+. Dawn is-servizzi bla ħlas huma disponibbli għall-membri u l-alleati kollha tal-komunità tagħna, u jinkludu appoġġ psikosoċjali bla ħlas, riferimenti u taħriġ."
+            },
+            {
+                "country": "Malta",
+                "name": "National Contact Point for Victims of Crime – Victim Support Agency",
+                "phone": "",
+                "email": "",
+                "website": "http://www.victimsupportagency.com/",
+                "description": "L-Aġenzija ta’ Appoġġ għall-Vittmi tipprovdi appoġġ emozzjonali, informazzjoni dwar il-każijiet u gwida dwar il-proċeduri fil-qorti, inkluż akkumpanjament waqt il-proċeduri u aġġornamenti dwar l-aggressuri. Tippromwovi wkoll id-drittijiet tal-vittmi, tinkoraġġixxi r-rappurtar u toffri appoġġ għall-irkupru. Is-servizzi jingħataw permezz ta’ approċċ koordinat u multidixxiplinari biex tiġi żgurata kura ħolistika u kontinwa."
+            }
+        ]
     }
 }

@@ -11,6 +11,7 @@ import CounterspeechWriting from '@/views/CounterspeechWriting.vue';
 import Login from '@/views/LoginView.vue';
 import annotationInterface from '@/components/AnnotationInterface.vue'
 import tasks from '@/components/TaskList.vue'
+import helpLines from '@/views/HelplinesView.vue';
 import loginApi from './services/login/loginApi';
 import AboutView from './views/AboutView.vue';
 
@@ -152,6 +153,12 @@ const routes: RouteRecordRaw[] = [
     path: '/projects/writing/:projectID/tasks/',
     name: 'tasks',
     component: tasks
+  },
+  {
+    path: '/helplines',
+    name: 'helplines',
+    component: helpLines,
+    meta: { requiresAuth: true }
   },
   {
     path: '/about',
