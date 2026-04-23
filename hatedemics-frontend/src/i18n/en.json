@@ -1,8 +1,12 @@
 {
     "login": {
+        "advancedFeatures": "Hatedemics Platform",
+        "subtitle": "Log in to use advanced features",
         "success": "Login successful",
-        "error": "Error during login",
-        "button": "Login"
+        "error": "Login error",
+        "button": "Login",
+        "username": "Username",
+        "password": "Password"
     },
     "common": {
         "close": "Close",

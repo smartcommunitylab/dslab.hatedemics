@@ -1,8 +1,12 @@
 {
     "login": {
-        "success": "Sesión iniciada correctamente",
-        "error": "Error durante el inicio de sesión",
-        "button": "Iniciar sesión"
+        "advancedFeatures": "Plataforma Hatedemics",
+        "subtitle": "Inicia sesión para utilizar funciones avanzadas",
+        "success": "Inicio de sesión exitoso",
+        "error": "Error al iniciar sesión",
+        "button": "Acceder",
+        "username": "Nombre de usuario",
+        "password": "Contraseña"
     },
     "common": {
         "close": "Cerrar",

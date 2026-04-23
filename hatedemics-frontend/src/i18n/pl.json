@@ -1,8 +1,12 @@
 {
     "login": {
-        "success": "Zalogowano pomyślnie",
+        "advancedFeatures": "Platforma Hatedemics",
+        "subtitle": "Zaloguj się, aby korzystać z zaawansowanych funkcji",
+        "success": "Logowanie zakończone sukcesem",
         "error": "Błąd podczas logowania",
-        "button": "Login"
+        "button": "Zaloguj się",
+        "username": "Nazwa użytkownika",
+        "password": "Hasło"
     },
     "common": {
         "close": "Zamknij",

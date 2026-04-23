@@ -1,8 +1,12 @@
 {
     "login": {
-        "success": "Login effettuato con successo",
-        "error": "Errore durante il login",
-        "button": "Login"
+        "advancedFeatures": "Piattaforma Hatedemics",
+        "subtitle": "Accedi per utilizzare le funzioni avanzate",
+        "success": "Accesso effettuato con successo",
+        "error": "Errore durante l'accesso",
+        "button": "Accedi",
+        "username": "Username",
+        "password": "Password"
     },
     "common": {
         "close": "Chiudi",

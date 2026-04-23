@@ -55,7 +55,7 @@ const snackbarText: ComputedRef<string> = computed(() => globalStore.message);
     const canGoBack = ref(false);
 
 const updateCanGoBack = () => {
-  canGoBack.value = route.path !== "/home" && router.options.history.state.back !== null;
+  canGoBack.value = (route.path !== "/home" && route.path !== "/") && router.options.history.state.back !== null;
 
 };
 

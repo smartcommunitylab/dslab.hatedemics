@@ -1,8 +1,12 @@
 {
     "login": {
-        "success": "Irnexxielek tidħol fis-sistema",
-        "error": "Żball waqt il-login",
-        "button": "Idħol"
+        "advancedFeatures": "Pjattaforma Hatedemics",
+        "subtitle": "Idħol biex tuża karatteristiċi avvanzati",
+        "success": "Aċċess b'suċċess",
+        "error": "Żball waqt l-aċċess",
+        "button": "Idħol",
+        "username": "Isem tal-utent",
+        "password": "Password"
     },
     "common": {
         "close": "Agħlaq",
